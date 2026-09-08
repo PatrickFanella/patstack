@@ -35,3 +35,8 @@ actionable existence check.
 **Exact limit:** this is a one-time/rebuild reproducibility failure in
 `build_collection.py`; the already-generated candidate files are present and
 the installer does not call this builder.
+
+
+## Resolution verified by the primary agent
+
+The initial source commit resolved the unborn-HEAD planning prerequisite. The historical importer now reads versioned draft inputs from catalog/import-inputs; current authoring and installation do not invoke the one-time importer. The finalized installer plan and all batches completed.

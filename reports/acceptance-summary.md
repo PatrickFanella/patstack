@@ -1,6 +1,6 @@
 # Acceptance and rollout record
 
-The curated collection is active at source revision `e2972b9f3a6800183b53a276f041e61aed0a0828`. All three installation batches completed; the journal verifies 150 operations and five protected trees/links. Batch readbacks verified 6, 122, then 150 completed operations.
+The curated collection is active at source revision `c0b0eb189a180f5620a05de8fd25d3bf7aa58743`. All three installation batches completed; the journal verifies 150 operations and five protected trees/links. Batch readbacks verified 6, 122, then 150 completed operations.
 
 ## Structure and ownership
 
@@ -10,7 +10,7 @@ The curated collection is active at source revision `e2972b9f3a6800183b53a276f04
 - Personal descriptions total 7,660 source characters (limit 8,000). All managed entrypoint bodies are below 4,000 except hatch-pet, whose 4,541-character body preserves its shared v2 acceptance contract (limit 8,000).
 - Shared supporting resources were unioned without missing files. The richer interview section remains. The personal review-agent entrypoint and UI metadata match the system owner; its extra Blacktower notice is preserved under authoring/retired-review-agent.
 - The original snapshot trees were checked against their recorded baseline after testing. Task-generated Python caches were removed with established provenance. Plugin-cache hash is unchanged; system and OS-owned targets remain unchanged.
-- Blacktower's existing status and HEAD are preserved. Task-created evaluation artifacts accidentally placed under its `.runtime` were relocated to this repository. The private local skill is excluded through the local Git exclude file only.
+- Blacktower's existing status and HEAD are preserved. Task-created evaluation artifacts accidentally placed under its `.runtime` were relocated to this repository. The private local skill is excluded through the local Git exclude file only. A concurrent unrelated untracked scripts/verify-study-evidence.ts appeared during final checks and was left untouched.
 
 ## Deterministic verification
 
@@ -58,10 +58,10 @@ Runtime descriptions are two characters shorter than parsed source totals becaus
 
 Original archive: `/home/onnwee/.codex/skill-backups/20260908T034154Z-before-consolidation`.
 
-Active transaction: `/home/onnwee/.codex/skill-installations/codex-skills/run-50a42765dd6e4d63a3b4c960a813df61`.
+Active transaction: `/home/onnwee/.codex/skill-installations/codex-skills/run-605d2e5b908a415ca1dc7242c9946083`.
 
 ```sh
-python /home/onnwee/Work/tools/codex-skills/scripts/install.py rollback --run /home/onnwee/.codex/skill-installations/codex-skills/run-50a42765dd6e4d63a3b4c960a813df61
+python /home/onnwee/Work/tools/codex-skills/scripts/install.py rollback --run /home/onnwee/.codex/skill-installations/codex-skills/run-605d2e5b908a415ca1dc7242c9946083
 ```
 
-The rollback journal and verified backup locations are retained outside discovery. Rehearsals used temporary directories, including interrupted rollback; the active installed collection was verified without destructively rolling it back. The local repository has no remote and was not pushed.
+The rollback journal and verified backup locations are retained outside discovery. Fault-injection rehearsals used temporary directories, including interrupted rollback. A complete live rollback also restored and verified all 150 original destinations before the corrected final revision was reinstalled in three verified batches. The local repository has no remote and was not pushed.
