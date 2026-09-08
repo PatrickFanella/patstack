@@ -1,0 +1,24 @@
+{
+  "run": "/home/onnwee/.codex/skill-installations/codex-skills/run-605d2e5b908a415ca1dc7242c9946083",
+  "sourceRevision": "c0b0eb189a180f5620a05de8fd25d3bf7aa58743",
+  "batches": [
+    {
+      "through": 1,
+      "verifiedOperations": 6
+    },
+    {
+      "through": 2,
+      "verifiedOperations": 122
+    },
+    {
+      "through": 3,
+      "verifiedOperations": 150,
+      "protectedPaths": 5
+    }
+  ],
+  "freshDiscovery": "passed in Blacktower and unrelated repository",
+  "pluginCacheUnchanged": true,
+  "blacktowerExistingStatusPreserved": true,
+  "idempotentPlanUnchangedOperations": 150,
+  "liveRollbackRehearsal": "reports/live-rollback-rehearsal.json"
+}

@@ -1,0 +1,4 @@
+diff --git a/retry.mjs b/retry.mjs
+@@
+-export async function retryOnce(op) { return op(); }
++export async function retryOnce(op) { try { return await op(); } catch { return op(); } }
