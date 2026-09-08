@@ -1,0 +1,32 @@
+{
+  "requirements-interview": {
+    "missing": [],
+    "changed": [
+      "SKILL.md"
+    ]
+  },
+  "session-handoff": {
+    "missing": [],
+    "changed": [
+      "SKILL.md",
+      "references/context-management.md"
+    ]
+  },
+  "review-agent": {
+    "resources": [
+      {
+        "path": "SKILL.md",
+        "identical": true
+      },
+      {
+        "path": "agents/openai.yaml",
+        "identical": true
+      },
+      {
+        "path": "notices/blacktower-mit.md",
+        "identical": false
+      }
+    ],
+    "personalOnlyNoticePreserved": "authoring/retired-review-agent/notices/blacktower-mit.md"
+  }
+}

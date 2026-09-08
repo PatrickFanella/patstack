@@ -1,0 +1,10 @@
+{
+  "name": "test / unit",
+  "status": "completed",
+  "conclusion": "failure",
+  "details_url": "https://github.example.invalid/acme/eval/actions/runs/42/job/7",
+  "output": {
+    "title": "unit test failed",
+    "summary": "AssertionError: expected status 200, received 500\\n  at tests/api.test.ts:18:5"
+  }
+}

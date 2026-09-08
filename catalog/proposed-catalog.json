@@ -1,0 +1,562 @@
+[
+  {
+    "name": "agent-workspace-linux",
+    "description": "Isolated agent desktop/browser workspace operations and QA; use its MCP surface rather than host desktop control.",
+    "scope": "personal",
+    "sources": [
+      "agent-workspace-linux"
+    ]
+  },
+  {
+    "name": "api-development",
+    "description": "API contracts and backend protocols: REST/GraphQL, OpenAPI, Node services, and WebSocket lifecycle design.",
+    "scope": "personal",
+    "sources": [
+      "api-design-principles",
+      "nodejs-backend-patterns",
+      "openapi-spec-generation",
+      "websocket-engineer"
+    ]
+  },
+  {
+    "name": "architecture-patterns",
+    "description": "Architecture and domain modeling: module boundaries, dependency cycles, CQRS, and domain vocabulary.",
+    "scope": "personal",
+    "sources": [
+      "architecture-patterns",
+      "codebase-design",
+      "cqrs-implementation",
+      "domain-modeling",
+      "ubiquitous-language"
+    ]
+  },
+  {
+    "name": "auth-implementation-patterns",
+    "description": "Implement or debug authentication and authorization: sessions, OAuth, tokens, roles, and access checks.",
+    "scope": "personal",
+    "sources": [
+      "auth-implementation-patterns"
+    ]
+  },
+  {
+    "name": "blacktower-development",
+    "description": "Blacktower plugin, session lifecycle, control UI, and release changes; use only in the Blacktower repository.",
+    "scope": "repository",
+    "sources": [
+      "control-surface-designer",
+      "plugin-integrator",
+      "release-engineer",
+      "session-warden"
+    ]
+  },
+  {
+    "name": "ci-maintenance",
+    "description": "CI failures, pipelines, pre-commit hooks, and code scanning; distinguish local checks from hosted run results.",
+    "scope": "personal",
+    "sources": [
+      "deployment-pipeline-design",
+      "loop-on-ci",
+      "sast-configuration",
+      "setup-pre-commit"
+    ]
+  },
+  {
+    "name": "cli-developer",
+    "description": "CLI design and implementation: flags, subcommands, completions, interactive fallback, and automation contracts.",
+    "scope": "personal",
+    "sources": [
+      "cli-developer",
+      "cli-for-agents"
+    ]
+  },
+  {
+    "name": "clonedeps",
+    "description": "Inspect dependency source at the lockfile-resolved version; obtain only the repositories needed for the investigation.",
+    "scope": "personal",
+    "sources": [
+      "clonedeps"
+    ]
+  },
+  {
+    "name": "cloudflare-deploy",
+    "description": "Cloudflare Workers and Pages deployment; follow the selected product and verify the deployed artifact.",
+    "scope": "personal",
+    "sources": [
+      "cloudflare-deploy"
+    ]
+  },
+  {
+    "name": "code-review",
+    "description": "Review code changes for actionable defects or requested maintainability concerns; keep repository audits separate.",
+    "scope": "personal",
+    "sources": [
+      "local-change-quality-gate",
+      "multi-reviewer-patterns",
+      "review-quality",
+      "thermo-nuclear-code-quality-review",
+      "thermo-nuclear-review"
+    ]
+  },
+  {
+    "name": "codemap",
+    "description": "Map repository structure and update existing code maps incrementally using the bundled inventory helper.",
+    "scope": "personal",
+    "sources": [
+      "codemap"
+    ]
+  },
+  {
+    "name": "codemod-surgeon",
+    "description": "Automate widespread source edits with structural transforms, bounded scope, repeatability, and semantic checks.",
+    "scope": "personal",
+    "sources": [
+      "codemod-surgeon"
+    ]
+  },
+  {
+    "name": "database-migration",
+    "description": "Database schema and data migrations: compatibility, backfills, validation, cutover, and rollback.",
+    "scope": "personal",
+    "sources": [
+      "database-migration"
+    ]
+  },
+  {
+    "name": "dependency-upgrade",
+    "description": "Upgrade dependencies with lockfile evidence, breaking-change analysis, proportional testing, and rollback.",
+    "scope": "personal",
+    "sources": [
+      "dependency-upgrade"
+    ]
+  },
+  {
+    "name": "develop-userscripts",
+    "description": "Userscript implementation and debugging: page lifecycle, browser permissions, injection, and update behavior.",
+    "scope": "personal",
+    "sources": [
+      "develop-userscripts"
+    ]
+  },
+  {
+    "name": "diagnose-crash",
+    "description": "Diagnose a local Linux process crash from systemd-coredump evidence and debugger inspection.",
+    "scope": "personal",
+    "sources": [
+      "diagnose-crash"
+    ]
+  },
+  {
+    "name": "frontend-design",
+    "description": "Implement or refine web interface visuals, responsive layouts, and interaction states within the product design.",
+    "scope": "personal",
+    "sources": [
+      "frontend-design"
+    ]
+  },
+  {
+    "name": "gdpr-data-handling",
+    "description": "Implement requested personal-data controls: consent, retention, deletion, portability, and auditability.",
+    "scope": "personal",
+    "sources": [
+      "gdpr-data-handling"
+    ]
+  },
+  {
+    "name": "git-advanced-workflows",
+    "description": "Git conflicts, worktrees, history repair, and PR preparation; hosted operations follow the configured remote.",
+    "scope": "personal",
+    "sources": [
+      "changelog-automation",
+      "fix-merge-conflicts",
+      "git-advanced-workflows",
+      "github-pro",
+      "make-pr-easy-to-review"
+    ]
+  },
+  {
+    "name": "gitea-repo-overhaul",
+    "description": "Audit or modernize Gitea/Forgejo repository settings, issues, workflows, and release organization.",
+    "scope": "personal",
+    "sources": [
+      "gitea-repo-overhaul"
+    ]
+  },
+  {
+    "name": "golang-pro",
+    "description": "Go concurrency, interfaces, errors, profiling, and tests; use relevant patterns for the existing application.",
+    "scope": "personal",
+    "sources": [
+      "golang-pro"
+    ]
+  },
+  {
+    "name": "hatch-pet",
+    "description": "Create or repair Codex v2 animated pets; validate atlas geometry, directions, transparency, and packaging.",
+    "scope": "personal",
+    "sources": [
+      "hatch-pet"
+    ]
+  },
+  {
+    "name": "implementation-plan",
+    "description": "Plan or implement a bounded feature from a spec; map acceptance criteria to changes and executable verification.",
+    "scope": "personal",
+    "sources": []
+  },
+  {
+    "name": "interface-originality-audit",
+    "description": "Audit UI originality, product credibility, and missing interaction states; report evidence-backed design findings.",
+    "scope": "personal",
+    "sources": [
+      "interface-originality-audit"
+    ]
+  },
+  {
+    "name": "kubernetes-development",
+    "description": "Kubernetes manifests, Helm charts, and cluster workload policies; validate the requested deployment artifact.",
+    "scope": "personal",
+    "sources": [
+      "helm-chart-scaffolding",
+      "k8s-manifest-generator",
+      "k8s-security-policies"
+    ]
+  },
+  {
+    "name": "lightweight-charts",
+    "description": "TradingView Lightweight Charts implementation: series, time scales, live updates, plugins, and framework integration.",
+    "scope": "personal",
+    "sources": [
+      "lightweight-charts"
+    ]
+  },
+  {
+    "name": "llm-evaluation",
+    "description": "Evaluate LLM behavior with representative datasets, baselines, task metrics, and reproducible results.",
+    "scope": "personal",
+    "sources": [
+      "llm-evaluation"
+    ]
+  },
+  {
+    "name": "mcp-builder",
+    "description": "Build MCP servers with explicit tool contracts, transports, errors, and executable interoperability checks.",
+    "scope": "personal",
+    "sources": [
+      "mcp-builder"
+    ]
+  },
+  {
+    "name": "mcp-integration-lifecycle",
+    "description": "Diagnose MCP registration, transport, initialization, catalog, auth, and reload boundaries in the active client.",
+    "scope": "personal",
+    "sources": [
+      "mcp-integration-lifecycle"
+    ]
+  },
+  {
+    "name": "mtls-configuration",
+    "description": "Configure and diagnose mutual TLS: certificate identity, trust chains, rotation, and service authentication.",
+    "scope": "personal",
+    "sources": [
+      "mtls-configuration"
+    ]
+  },
+  {
+    "name": "observability",
+    "description": "Metrics, traces, dashboards, and SLOs; implement telemetry or diagnose a specific monitoring gap.",
+    "scope": "personal",
+    "sources": [
+      "distributed-tracing",
+      "grafana-dashboards",
+      "prometheus-configuration",
+      "slo-implementation"
+    ]
+  },
+  {
+    "name": "omarchy",
+    "description": "Customize the Omarchy Linux desktop through supported commands and user configuration.",
+    "scope": "personal",
+    "sources": [
+      "omarchy"
+    ]
+  },
+  {
+    "name": "opentui",
+    "description": "Build OpenTUI terminal interfaces with the correct renderer lifecycle, input handling, and framework bindings.",
+    "scope": "personal",
+    "sources": [
+      "opentui"
+    ]
+  },
+  {
+    "name": "performance-investigation",
+    "description": "Diagnose measured latency, CPU, memory, or throughput regressions using comparable profiles and benchmarks.",
+    "scope": "personal",
+    "sources": [
+      "performance-investigation"
+    ]
+  },
+  {
+    "name": "playwright",
+    "description": "Automate a browser with Playwright CLI for navigation, interaction, inspection, and evidence capture.",
+    "scope": "personal",
+    "sources": [
+      "playwright"
+    ]
+  },
+  {
+    "name": "postgres-pro",
+    "description": "PostgreSQL query plans, indexes, locks, replication, and data-quality checks against the real schema.",
+    "scope": "personal",
+    "sources": [
+      "postgres-data-quality",
+      "postgres-pro"
+    ]
+  },
+  {
+    "name": "prototype",
+    "description": "Prototype a state model or competing UI designs in a disposable runnable artifact to answer a specific question.",
+    "scope": "personal",
+    "sources": [
+      "prototype"
+    ]
+  },
+  {
+    "name": "python-development",
+    "description": "Python tooling, packaging, settings, uv environments, and pytest; select the procedure for the requested change.",
+    "scope": "personal",
+    "sources": [
+      "python-configuration",
+      "python-packaging",
+      "python-testing-patterns",
+      "python-tooling-patterns",
+      "uv-package-manager"
+    ]
+  },
+  {
+    "name": "rag-implementation",
+    "description": "Retrieval systems: ingestion, vector/keyword search, ranking, citations, and retrieval-quality measurement.",
+    "scope": "personal",
+    "sources": [
+      "hybrid-search-implementation",
+      "rag-implementation"
+    ]
+  },
+  {
+    "name": "react-native-pro",
+    "description": "React Native/Expo implementation: navigation, native integration, offline behavior, lists, and mobile performance.",
+    "scope": "personal",
+    "sources": [
+      "react-native-pro"
+    ]
+  },
+  {
+    "name": "react-pro",
+    "description": "React/Next.js state, rendering, data loading, component APIs, and performance within the existing application.",
+    "scope": "personal",
+    "sources": [
+      "react-pro"
+    ]
+  },
+  {
+    "name": "refactor",
+    "description": "Behavior-preserving refactoring and code simplification; plan changes when requested and verify public contracts.",
+    "scope": "personal",
+    "sources": [
+      "deslop",
+      "refactor",
+      "request-refactor-plan",
+      "simplify"
+    ]
+  },
+  {
+    "name": "repository-delivery-review",
+    "description": "Audit a repository against its intended capabilities; separate implemented, incomplete, planned, and unverified work.",
+    "scope": "personal",
+    "sources": [
+      "repository-delivery-review"
+    ]
+  },
+  {
+    "name": "repository-test-maintenance",
+    "description": "Maintain an oversized or brittle repository test suite while preserving crucial behavior and removing obsolete work.",
+    "scope": "personal",
+    "sources": [
+      "repository-test-maintenance"
+    ]
+  },
+  {
+    "name": "reverse-engineering",
+    "description": "Analyze executable binaries or network protocols; select disassembly or packet-analysis procedures as needed.",
+    "scope": "personal",
+    "sources": [
+      "binary-analysis-patterns",
+      "protocol-reverse-engineering"
+    ]
+  },
+  {
+    "name": "rust-pro",
+    "description": "Rust ownership, async execution, errors, concurrency, and systems integration within the existing crate design.",
+    "scope": "personal",
+    "sources": [
+      "rust-pro"
+    ]
+  },
+  {
+    "name": "scaffold-exercises",
+    "description": "Scaffold coding exercises, solution directories, and explanatory material in the existing course format.",
+    "scope": "personal",
+    "sources": [
+      "scaffold-exercises"
+    ]
+  },
+  {
+    "name": "secrets-management",
+    "description": "Implement CI/runtime secret storage, delivery, and rotation using the environment’s existing secret provider.",
+    "scope": "personal",
+    "sources": [
+      "secrets-management"
+    ]
+  },
+  {
+    "name": "security-best-practices",
+    "description": "Requested security review or secure coding guidance for Python, JavaScript/TypeScript, and Go.",
+    "scope": "personal",
+    "sources": [
+      "security-best-practices"
+    ]
+  },
+  {
+    "name": "security-ownership-map",
+    "description": "Requested security ownership and bus-factor analysis from Git history; identify sensitive-code ownership gaps.",
+    "scope": "personal",
+    "sources": [
+      "security-ownership-map"
+    ]
+  },
+  {
+    "name": "security-threat-model",
+    "description": "Requested repository threat model: assets, trust boundaries, attacker paths, and prioritized mitigations.",
+    "scope": "personal",
+    "sources": [
+      "security-threat-model"
+    ]
+  },
+  {
+    "name": "shell-development",
+    "description": "Shell scripting, ShellCheck linting, and Bats tests; preserve exit status, quoting, cleanup, and portability.",
+    "scope": "personal",
+    "sources": [
+      "bash-defensive-patterns",
+      "bats-testing-patterns",
+      "shellcheck-configuration"
+    ]
+  },
+  {
+    "name": "solidity-security",
+    "description": "Implement or audit Solidity contracts for exploitable behavior, authorization, state transitions, and fund safety.",
+    "scope": "personal",
+    "sources": [
+      "solidity-security"
+    ]
+  },
+  {
+    "name": "systematic-debugging",
+    "description": "Reproduce and diagnose a defect; choose a tight failing check, isolate the cause, and verify the repair.",
+    "scope": "personal",
+    "sources": [
+      "diagnosing-bugs",
+      "failure-anthropologist",
+      "systematic-debugging"
+    ]
+  },
+  {
+    "name": "tdd",
+    "description": "Test-first implementation when requested: red-green-refactor, test boundaries, fixtures, and meaningful assertions.",
+    "scope": "personal",
+    "sources": [
+      "tdd"
+    ]
+  },
+  {
+    "name": "technical-writing",
+    "description": "Technical docs, RFCs, README localization, and docs-versus-code checks; preserve source meaning and working links.",
+    "scope": "personal",
+    "sources": [
+      "readme-i18n",
+      "review-doc-consistency",
+      "technical-writing"
+    ]
+  },
+  {
+    "name": "temporal-python-testing",
+    "description": "Test Temporal Python workflows with replay, time skipping, activities, mocks, and determinism checks.",
+    "scope": "personal",
+    "sources": [
+      "temporal-python-testing"
+    ]
+  },
+  {
+    "name": "terraform-module-library",
+    "description": "Create reusable Terraform modules with explicit inputs, provider constraints, examples, and validation.",
+    "scope": "personal",
+    "sources": [
+      "terraform-module-library"
+    ]
+  },
+  {
+    "name": "typescript-pro",
+    "description": "TypeScript type design, compiler configuration, and migrations; load framework guidance only for framework-specific work.",
+    "scope": "personal",
+    "sources": [
+      "migrate-to-shoehorn",
+      "setup-ts-deep-modules",
+      "typescript-best-practices",
+      "typescript-pro"
+    ]
+  },
+  {
+    "name": "verify-behavior",
+    "description": "Verify UI, CLI, API, build, or performance claims using runnable evidence; distinguish smoke checks from regressions.",
+    "scope": "personal",
+    "sources": [
+      "check-compiler-errors",
+      "control-cli",
+      "control-ui",
+      "verify-this",
+      "webapp-testing"
+    ]
+  },
+  {
+    "name": "vscode-extension-development",
+    "description": "VS Code extension commands, menus, contribution visibility, and localized user-facing strings.",
+    "scope": "personal",
+    "sources": [
+      "vscode-extension-development"
+    ]
+  },
+  {
+    "name": "wcag-audit-patterns",
+    "description": "Audit or repair web accessibility using keyboard, semantics, contrast, and assistive-technology evidence.",
+    "scope": "personal",
+    "sources": [
+      "wcag-audit-patterns"
+    ]
+  },
+  {
+    "name": "wizard",
+    "description": "Build an interactive setup script for steps requiring human input; keep secrets hidden and actions reviewable.",
+    "scope": "personal",
+    "sources": [
+      "wizard"
+    ]
+  },
+  {
+    "name": "workflow-orchestration-patterns",
+    "description": "Design Temporal workflows and activities with durable state, deterministic execution, and failure recovery.",
+    "scope": "personal",
+    "sources": [
+      "workflow-orchestration-patterns"
+    ]
+  }
+]

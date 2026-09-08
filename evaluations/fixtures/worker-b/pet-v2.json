@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "moth",
+  "sprites": {
+    "idle": "assets/moth-idle.png",
+    "wave": "assets/moth-wave.png"
+  }
+}

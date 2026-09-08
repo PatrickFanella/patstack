@@ -1,0 +1,459 @@
+{
+  "worker": "b",
+  "scope": "paired local baseline/candidate trials",
+  "baseline_root": "/home/onnwee/.codex/skill-backups/20260908T034154Z-before-consolidation/personal",
+  "candidate_root": "/home/onnwee/Work/tools/codex-skills",
+  "fixture_root": "/home/onnwee/Work/tools/codex-skills/.runtime/eval-b",
+  "constraints": [
+    "no source edits",
+    "no network mutation",
+    "no remote GitHub interaction",
+    "no image generation",
+    "no production operation"
+  ],
+  "token_usage": "unavailable",
+  "trials": [
+    {
+      "id": 9,
+      "request": "Audit whether a repository is ready for beta.",
+      "baseline": {
+        "entrypoint": "repository-delivery-review",
+        "mode": "workflow",
+        "files_read": [
+          "SKILL.md"
+        ],
+        "actions": [
+          "ran collect_repository_evidence.py with the baseline fixture argument"
+        ],
+        "observed": "exit 0; output reported Repository: /home/onnwee/Work/tools/codex-skills, Visible files: 1285, HEAD: (unborn), rather than the fixture"
+      },
+      "candidate": {
+        "entrypoint": "repository-delivery-review",
+        "mode": "workflow",
+        "files_read": [
+          "SKILL.md"
+        ],
+        "actions": [
+          "ran collect_repository_evidence.py with the candidate fixture argument"
+        ],
+        "observed": "exit 0; identical wrong target: Repository: /home/onnwee/Work/tools/codex-skills, Visible files: 1285"
+      },
+      "verdict": "blocked-functional",
+      "finding": "Both versions direct a useful evidence collection procedure, but its actual execution silently ignored the requested target and produced source-catalog evidence. It cannot support a defensible beta verdict until fixed.",
+      "unnecessary_loads": [
+        "the collector traversed catalog docs and evaluator-adjacent files outside the fixture"
+      ]
+    },
+    {
+      "id": 10,
+      "request": "Write a threat model for an OAuth callback.",
+      "baseline": {
+        "entrypoint": "security-threat-model",
+        "mode": "targeted threat model",
+        "files_read": [
+          "SKILL.md",
+          "oauth-callback.ts"
+        ],
+        "actions": [
+          "identified callback code/state and code query inputs; no write beyond evaluation notes"
+        ],
+        "observed": "skill routes to references/full-guide.md and tells the operator to stop and ask when project context is missing"
+      },
+      "candidate": {
+        "entrypoint": "security-threat-model",
+        "mode": "targeted threat model",
+        "files_read": [
+          "SKILL.md",
+          "oauth-callback.ts"
+        ],
+        "actions": [
+          "identified trust boundary: browser query -> callback -> code exchange; documented CSRF/state validation, code replay, redirect URI and token disclosure as threats in evaluation output"
+        ],
+        "observed": "candidate says resolve repository facts/tooling first and ask only for truly missing information/authorization"
+      },
+      "verdict": "candidate-better",
+      "finding": "Both select the right skill and remain within scope. Candidate is more usable for the intentionally minimal fixture because it permits evidence gathering before asking."
+    },
+    {
+      "id": 11,
+      "request": "Add Helm resource limits to a deployment.",
+      "baseline": {
+        "entrypoint": "helm-chart-scaffolding",
+        "mode": "not applicable to fixture",
+        "files_read": [
+          "SKILL.md",
+          "deploy/app.yaml"
+        ],
+        "actions": [
+          "classified fixture as a raw Deployment, not a Helm chart"
+        ],
+        "observed": "baseline explicitly says one-off raw manifests should use k8s-manifest-generator; that separate entrypoint is absent from this baseline trial"
+      },
+      "candidate": {
+        "entrypoint": "kubernetes-development",
+        "mode": "k8s-manifest-generator",
+        "files_read": [
+          "SKILL.md",
+          "references/modes/k8s-manifest-generator/guide.md",
+          "deploy/app.yaml"
+        ],
+        "actions": [
+          "selected raw-manifest mode; checked local kubectl availability"
+        ],
+        "observed": "guide explicitly covers adding resource limits. `kubectl apply --dry-run=client -f deploy/app.yaml` -> /usr/bin/bash: kubectl: command not found"
+      },
+      "verdict": "candidate-better-with-environment-blocker",
+      "finding": "Candidate selects the correct raw-manifest procedure and does not apply. Validation was blocked by missing kubectl; no resource values were invented because CPU/memory requirements were not supplied.",
+      "questions": [
+        "What requests and limits should the app have, or is a conservative evaluation-only example acceptable?"
+      ]
+    },
+    {
+      "id": 12,
+      "request": "Update a pyproject dependency using uv.",
+      "baseline": {
+        "entrypoint": "dependency-upgrade",
+        "mode": "generic dependency upgrade",
+        "files_read": [
+          "SKILL.md",
+          "pyproject.toml"
+        ],
+        "actions": [
+          "identified exact httpx==0.27.0"
+        ],
+        "observed": "baseline procedure examples are npm/yarn-centric and did not provide a uv command path"
+      },
+      "candidate": {
+        "entrypoint": "dependency-upgrade",
+        "mode": "guide selection",
+        "files_read": [
+          "SKILL.md",
+          "guide.md",
+          "pyproject.toml"
+        ],
+        "actions": [
+          "ran `uv --version`; attempted offline lock to test available local resolution"
+        ],
+        "observed": "`uv 0.11.7 (x86_64-unknown-linux-gnu)`; `uv lock --offline` exit 1: `httpx==0.27.0 needs to be downloaded from a registry` and `Packages were unavailable because the network was disabled`"
+      },
+      "verdict": "blocked-under-constraints",
+      "finding": "Candidate is cleaner but neither selected procedure is uv-specific. The request also lacks a target version. `uv add` would mutate the fixture lock/project and need registry access, prohibited for this evaluation.",
+      "questions": [
+        "Which httpx version is intended, and may a registry-backed uv resolution run in a real change?"
+      ],
+      "unnecessary_loads": [
+        "candidate guide lists all eleven upgrade parts without routing a simple uv update to one concise procedure"
+      ]
+    },
+    {
+      "id": 13,
+      "request": "Inspect a failed GitHub check without pushing, using captured payload only.",
+      "baseline": {
+        "entrypoint": "github-pro",
+        "mode": "GitHub CI inspection",
+        "files_read": [
+          "SKILL.md",
+          "failed-check.json"
+        ],
+        "actions": [
+          "parsed captured JSON locally"
+        ],
+        "observed": "local parse: `test / unit: failure \u2014 unit test failed | AssertionError: expected status 200, received 500\\n  at tests/api.test.ts:18:5`; baseline skill compatibility requires authenticated GitHub integration or gh/network for remote operations"
+      },
+      "candidate": {
+        "entrypoint": "ci-maintenance",
+        "mode": "CI failure diagnosis",
+        "files_read": [
+          "SKILL.md",
+          "references/modes/loop-on-ci/guide.md",
+          "failed-check.json"
+        ],
+        "actions": [
+          "parsed captured JSON locally; did not invoke gh"
+        ],
+        "observed": "same local parse. Candidate top-level says distinguish local command results from hosted checks, but selected loop-on-ci guide immediately prescribes `gh pr view`, `gh pr checks`, and `gh run view`"
+      },
+      "verdict": "partial",
+      "finding": "Candidate has the right local-vs-hosted boundary at entrypoint level, but its only relevant guide is remote-first and lacks a captured-payload mode. Baseline has the same scope mismatch."
+    },
+    {
+      "id": 14,
+      "request": "Fix a cancelled Blacktower session reported as running, with a toy TypeScript lifecycle fixture.",
+      "baseline": {
+        "entrypoint": "session-warden",
+        "mode": "generic lifecycle",
+        "files_read": [
+          "SKILL.md",
+          "references/session-lifecycle.md",
+          "session.ts"
+        ],
+        "actions": [
+          "traced running + missing worker to terminal cancellation in the fixture; attempted TypeScript compilation"
+        ],
+        "observed": "lifecycle reference names Blacktower paths and warns stale events must not overwrite terminal state. `tsc --noEmit --target ES2020 --module commonjs session.ts` printed `mise ERROR No version is set for shim: tsc` (shell sequence ended 0 after a later command)"
+      },
+      "candidate": {
+        "entrypoint": "blacktower-development",
+        "mode": "session-warden",
+        "files_read": [
+          "repository-skills/blacktower-development/SKILL.md",
+          "references/modes/session-warden/guide.md",
+          "references/modes/session-warden/references/session-lifecycle.md",
+          "session.ts"
+        ],
+        "actions": [
+          "selected repository-scoped lifecycle mode; traced fixture reconciliation; attempted the same local compile"
+        ],
+        "observed": "same compile-environment error. The mode directs race-focused validation for cancellation followed by deletion, completed-then-delete, abort timeout, and stale/missing session."
+      },
+      "verdict": "candidate-better",
+      "finding": "Candidate adds the correctly scoped repository entrypoint and concrete race cases. Neither can demonstrate the fixture\u2019s correctness here because the configured TypeScript shim has no Node version; no real Blacktower file was touched.",
+      "unnecessary_loads": [
+        "baseline generic skill loaded Blacktower-specific owner-path assumptions even though the fixture deliberately had no real owners"
+      ]
+    },
+    {
+      "id": 15,
+      "request": "Change one sprite in an existing v2 pet; inspect/route only.",
+      "baseline": {
+        "entrypoint": "hatch-pet",
+        "mode": "monolithic pet workflow",
+        "files_read": [
+          "SKILL.md",
+          "pet-v2.json"
+        ],
+        "actions": [
+          "parsed manifest locally"
+        ],
+        "observed": "`v2 moth: idle,wave`; baseline SKILL body is generation-heavy and includes imagegen workflow material before a specific repair route"
+      },
+      "candidate": {
+        "entrypoint": "hatch-pet",
+        "mode": "existing-pet repair",
+        "files_read": [
+          "SKILL.md",
+          "repair.md",
+          "repair-workflow.md",
+          "acceptance-criteria.md",
+          "pet-v2.json"
+        ],
+        "actions": [
+          "parsed manifest; selected inspect-first repair route; confirmed no atlas/QA/run manifest exists in fixture; performed no imagegen"
+        ],
+        "observed": "candidate explicitly says inspection or validation does not authorize regeneration and repair must preserve successful rows"
+      },
+      "verdict": "candidate-better",
+      "finding": "Candidate correctly scopes the no-generation request. The fixture cannot identify an actual sprite cell or run deterministic atlas checks because it supplies only pet metadata; next action is to obtain the existing atlas and QA/run artifacts.",
+      "questions": [
+        "Which sprite row/frame is to change, and where are the v2 atlas plus QA/run artifacts?"
+      ]
+    },
+    {
+      "id": 16,
+      "request": "Find a frontend color palette using the bundled data helper.",
+      "baseline": {
+        "entrypoint": "frontend-design",
+        "mode": "data lookup attempted",
+        "files_read": [
+          "SKILL.md",
+          "scripts/tool-ui-ux-pro-max/search.py"
+        ],
+        "actions": [
+          "ran backup helper with color query"
+        ],
+        "observed": "exit 0 output JSON error: `File not found: .../frontend-design/scripts/data/colors.csv`"
+      },
+      "candidate": {
+        "entrypoint": "frontend-design",
+        "mode": "design-data lookup",
+        "files_read": [
+          "SKILL.md",
+          "scripts/tool-ui-ux-pro-max/search.py",
+          "scripts/data/colors.csv",
+          "scripts/data/provenance.json"
+        ],
+        "actions": [
+          "ran required helper: `python3 scripts/tool-ui-ux-pro-max/search.py 'warm paper coral editorial palette' --domain color --json`"
+        ],
+        "observed": "exit 0; `count: 3`; first result Magazine/Blog: Primary #3B82F6, Secondary #60A5FA, CTA #F97316, Background #F8FAFC, Text #1E293B"
+      },
+      "verdict": "candidate-pass-baseline-fail",
+      "finding": "Candidate\u2019s explicit helper contract is executable and uses bundled data. The particular lexical query returned a generic blue/orange editorial result rather than matching the fixture\u2019s warm-paper/coral values; that is dataset behavior, not an invented palette."
+    },
+    {
+      "id": "candidate-only-existing-pet-repair-validation",
+      "request": "Validate an existing-pet repair without generation.",
+      "candidate": {
+        "entrypoint": "hatch-pet",
+        "mode": "validation",
+        "files_read": [
+          "SKILL.md",
+          "validation.md",
+          "acceptance-criteria.md",
+          "pet-v2.json"
+        ],
+        "actions": [
+          "validated metadata JSON and selected deterministic-first route"
+        ],
+        "observed": "manifest parse succeeded (`v2 moth: idle,wave`); required spritesheet, chroma key, pet.json spriteVersionNumber, and QA files are absent, so `validate_atlas.py --require-v2` was not run against invented inputs"
+      },
+      "verdict": "correctly-blocked",
+      "finding": "The candidate has a precise validation-only route and correctly avoids artwork generation; it needs actual existing-pet artifacts to produce validation evidence."
+    },
+    {
+      "id": "candidate-only-new-pet-workflow-selection",
+      "request": "Select a new-pet workflow; route only, no artwork.",
+      "candidate": {
+        "entrypoint": "hatch-pet",
+        "mode": "new pet creation selection",
+        "files_read": [
+          "SKILL.md",
+          "creation.md",
+          "existing-inputs-and-upgrades.md"
+        ],
+        "actions": [
+          "selected creation stages without opening generation jobs or image tooling"
+        ],
+        "observed": "creation.md states planning/inspection alone does not authorize image generation; candidate chooses stage-by-stage loading"
+      },
+      "verdict": "pass",
+      "finding": "The candidate provides a safe route that keeps a new-pet request from accidentally invoking paid or unauthorized generation."
+    }
+  ],
+  "retest_round": {
+    "round": 1,
+    "retest_tool_calls": 7,
+    "token_usage": "unavailable",
+    "candidate_source_edits": false,
+    "retained_original_observations": true,
+    "fixtures_committed_for_review": "evaluations/fixtures/worker-b",
+    "outcomes": [
+      {
+        "trial": 9,
+        "request": "Audit whether repository ready for beta",
+        "entrypoint": "repository-delivery-review",
+        "files_read": [
+          "skills/repository-delivery-review/SKILL.md",
+          "skills/repository-delivery-review/scripts/collect_repository_evidence.py"
+        ],
+        "actions": [
+          "initialized .runtime/eval-b/candidate as its own Git repository",
+          "ran collector on its exact root",
+          "ran collector on nested deploy directory"
+        ],
+        "observed": [
+          "root invocation exit 0: Repository: /home/onnwee/Work/tools/codex-skills/.runtime/eval-b/candidate; Branch: main; HEAD: 1717c2088216; Visible files: 11",
+          "nested invocation exit 1: Requested repository root /home/onnwee/Work/tools/codex-skills/.runtime/eval-b/candidate/deploy resolves to parent /home/onnwee/Work/tools/codex-skills/.runtime/eval-b/candidate; pass the intended Git root explicitly"
+        ],
+        "verdict": "repaired-pass",
+        "unnecessary_resource_loads": []
+      },
+      {
+        "trial": 12,
+        "request": "Update a pyproject dependency using uv",
+        "entrypoint": "dependency-upgrade -> python-development -> uv-package-manager",
+        "files_read": [
+          "skills/dependency-upgrade/SKILL.md",
+          "skills/python-development/SKILL.md",
+          "skills/python-development/references/modes/uv-package-manager/guide.md",
+          "skills/python-development/references/modes/uv-package-manager/part-07.md",
+          ".runtime/eval-b/candidate/pyproject.toml"
+        ],
+        "actions": [
+          "selected routine uv route",
+          "ran uv lock --offline without changing dependency declaration"
+        ],
+        "observed": [
+          "uv-package-manager provides `uv add --upgrade requests` for a specific package",
+          "uv lock --offline exit 1: httpx==0.27.0 needs to be downloaded from a registry; Packages were unavailable because the network was disabled"
+        ],
+        "verdict": "repaired-routing-pass-offline-blocked",
+        "questions": [
+          "Which httpx target version should be requested for a real update?"
+        ],
+        "unnecessary_resource_loads": []
+      },
+      {
+        "trial": 13,
+        "request": "Inspect captured failed GitHub check without pushing",
+        "entrypoint": "ci-maintenance -> loop-on-ci captured-payload mode",
+        "files_read": [
+          "skills/ci-maintenance/references/modes/loop-on-ci/guide.md",
+          ".runtime/eval-b/candidate/failed-check.json"
+        ],
+        "actions": [
+          "parsed captured JSON locally; did not invoke gh, push, rerun, or monitor"
+        ],
+        "observed": [
+          "guide now says captured payload/logs are inspected locally first and an inspect request stops after diagnosis",
+          "local result: test / unit: failure \u2014 unit test failed | AssertionError: expected status 200, received 500\\n  at tests/api.test.ts:18:5"
+        ],
+        "verdict": "repaired-pass",
+        "unnecessary_resource_loads": []
+      },
+      {
+        "trial": 11,
+        "request": "Add resource limits to deployment",
+        "entrypoint": "kubernetes-development -> k8s-manifest-generator",
+        "files_read": [
+          ".runtime/eval-b/candidate/deploy/app.yaml",
+          ".runtime/eval-b/candidate/check-limits.py"
+        ],
+        "actions": [
+          "added provided fixture values: requests cpu 100m/memory 128Mi; limits cpu 250m/memory 256Mi",
+          "ran local deterministic text check"
+        ],
+        "observed": [
+          "resource limits fixture check passed: requests 100m/128Mi, limits 250m/256Mi",
+          "kubectl remains unavailable, so no client dry-run was claimed"
+        ],
+        "verdict": "artifact-change-and-local-check-pass",
+        "unnecessary_resource_loads": []
+      },
+      {
+        "trial": 14,
+        "request": "Fix cancelled Blacktower session reported as running",
+        "entrypoint": "blacktower-development -> session-warden",
+        "files_read": [
+          ".runtime/eval-b/candidate/session.ts",
+          ".runtime/eval-b/candidate/session-check.ts"
+        ],
+        "actions": [
+          "ran Node 26 direct TypeScript type-stripping execution; did not claim tsc compilation"
+        ],
+        "observed": [
+          "lifecycle ok: running -> cancelled -> cancelled",
+          "Node warned that package.json lacks type: module and reparsed session-check.ts as ES module"
+        ],
+        "verdict": "behavior-pass-with-nonblocking-runtime-warning",
+        "unnecessary_resource_loads": []
+      },
+      {
+        "trial": "candidate-only-existing-pet-repair-validation",
+        "request": "Validate synthetic deliberately invalid v2 atlas without artwork",
+        "entrypoint": "hatch-pet -> validation",
+        "files_read": [
+          "skills/hatch-pet/validation.md",
+          ".runtime/eval-b/candidate/invalid-atlas.png"
+        ],
+        "actions": [
+          "created a 1x1 RGBA PNG with Pillow",
+          "ran validate_atlas.py invalid-atlas.png --require-v2 --chroma-key #00ff00"
+        ],
+        "observed": [
+          "exit 1 JSON: ok false; width 1; height 1; errors [expected 1536x2288 for a v2 pet, got 1x1]"
+        ],
+        "verdict": "actual-rejection-pass",
+        "unnecessary_resource_loads": []
+      }
+    ]
+  },
+  "functional_scope_problems": [
+    "repository-delivery-review collector silently inspected the catalog repository instead of the supplied fixture in both arms",
+    "candidate dependency-upgrade has no uv-specific concise procedure despite its broad update claim",
+    "candidate ci-maintenance has no offline captured-check diagnostic mode; its loop guide requires gh PR/run calls",
+    "candidate kubernetes raw-manifest guide needs local kubectl for its stated dry-run and no fallback validator was available",
+    "candidate frontend data helper returns broad lexical hits and cannot extract a palette from user-provided palette-data.json",
+    "TypeScript fixture validation is blocked by an unconfigured mise tsc shim"
+  ]
+}

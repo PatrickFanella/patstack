@@ -1,0 +1,330 @@
+{
+  "api-design-principles": {
+    "owner": "api-development",
+    "procedure": "skills/api-development/references/modes/api-design-principles/guide.md"
+  },
+  "nodejs-backend-patterns": {
+    "owner": "api-development",
+    "procedure": "skills/api-development/references/modes/nodejs-backend-patterns/guide.md"
+  },
+  "openapi-spec-generation": {
+    "owner": "api-development",
+    "procedure": "skills/api-development/references/modes/openapi-spec-generation/guide.md"
+  },
+  "websocket-engineer": {
+    "owner": "api-development",
+    "procedure": "skills/api-development/references/modes/websocket-engineer/guide.md"
+  },
+  "codebase-design": {
+    "owner": "architecture-patterns",
+    "procedure": "skills/architecture-patterns/references/modes/codebase-design/guide.md"
+  },
+  "cqrs-implementation": {
+    "owner": "architecture-patterns",
+    "procedure": "skills/architecture-patterns/references/modes/cqrs-implementation/guide.md"
+  },
+  "domain-modeling": {
+    "owner": "architecture-patterns",
+    "procedure": "skills/architecture-patterns/references/modes/domain-modeling/guide.md"
+  },
+  "ubiquitous-language": {
+    "owner": "architecture-patterns",
+    "procedure": "skills/architecture-patterns/references/modes/ubiquitous-language/guide.md"
+  },
+  "control-surface-designer": {
+    "owner": "blacktower-development",
+    "procedure": "repository-skills/blacktower-development/references/modes/control-surface-designer/guide.md"
+  },
+  "plugin-integrator": {
+    "owner": "blacktower-development",
+    "procedure": "repository-skills/blacktower-development/references/modes/plugin-integrator/guide.md"
+  },
+  "release-engineer": {
+    "owner": "blacktower-development",
+    "procedure": "repository-skills/blacktower-development/references/modes/release-engineer/guide.md"
+  },
+  "session-warden": {
+    "owner": "blacktower-development",
+    "procedure": "repository-skills/blacktower-development/references/modes/session-warden/guide.md"
+  },
+  "deployment-pipeline-design": {
+    "owner": "ci-maintenance",
+    "procedure": "skills/ci-maintenance/references/modes/deployment-pipeline-design/guide.md"
+  },
+  "loop-on-ci": {
+    "owner": "ci-maintenance",
+    "procedure": "skills/ci-maintenance/references/modes/loop-on-ci/guide.md"
+  },
+  "sast-configuration": {
+    "owner": "ci-maintenance",
+    "procedure": "skills/ci-maintenance/references/modes/sast-configuration/guide.md"
+  },
+  "setup-pre-commit": {
+    "owner": "ci-maintenance",
+    "procedure": "skills/ci-maintenance/references/modes/setup-pre-commit/guide.md"
+  },
+  "cli-for-agents": {
+    "owner": "cli-developer",
+    "procedure": "skills/cli-developer/references/modes/cli-for-agents/guide.md"
+  },
+  "local-change-quality-gate": {
+    "owner": "code-review",
+    "procedure": "skills/code-review/references/modes/local-change-quality-gate/guide.md"
+  },
+  "multi-reviewer-patterns": {
+    "owner": "code-review",
+    "procedure": "skills/code-review/references/modes/multi-reviewer-patterns/guide.md"
+  },
+  "review-quality": {
+    "owner": "code-review",
+    "procedure": "skills/code-review/references/modes/review-quality/guide.md"
+  },
+  "thermo-nuclear-code-quality-review": {
+    "owner": "code-review",
+    "procedure": "skills/code-review/references/modes/thermo-nuclear-code-quality-review/guide.md"
+  },
+  "thermo-nuclear-review": {
+    "owner": "code-review",
+    "procedure": "skills/code-review/references/modes/thermo-nuclear-review/guide.md"
+  },
+  "changelog-automation": {
+    "owner": "git-advanced-workflows",
+    "procedure": "skills/git-advanced-workflows/references/modes/changelog-automation/guide.md"
+  },
+  "fix-merge-conflicts": {
+    "owner": "git-advanced-workflows",
+    "procedure": "skills/git-advanced-workflows/references/modes/fix-merge-conflicts/guide.md"
+  },
+  "github-pro": {
+    "owner": "git-advanced-workflows",
+    "procedure": "skills/git-advanced-workflows/references/modes/github-pro/guide.md"
+  },
+  "make-pr-easy-to-review": {
+    "owner": "git-advanced-workflows",
+    "procedure": "skills/git-advanced-workflows/references/modes/make-pr-easy-to-review/guide.md"
+  },
+  "helm-chart-scaffolding": {
+    "owner": "kubernetes-development",
+    "procedure": "skills/kubernetes-development/references/modes/helm-chart-scaffolding/guide.md"
+  },
+  "k8s-manifest-generator": {
+    "owner": "kubernetes-development",
+    "procedure": "skills/kubernetes-development/references/modes/k8s-manifest-generator/guide.md"
+  },
+  "k8s-security-policies": {
+    "owner": "kubernetes-development",
+    "procedure": "skills/kubernetes-development/references/modes/k8s-security-policies/guide.md"
+  },
+  "distributed-tracing": {
+    "owner": "observability",
+    "procedure": "skills/observability/references/modes/distributed-tracing/guide.md"
+  },
+  "grafana-dashboards": {
+    "owner": "observability",
+    "procedure": "skills/observability/references/modes/grafana-dashboards/guide.md"
+  },
+  "prometheus-configuration": {
+    "owner": "observability",
+    "procedure": "skills/observability/references/modes/prometheus-configuration/guide.md"
+  },
+  "slo-implementation": {
+    "owner": "observability",
+    "procedure": "skills/observability/references/modes/slo-implementation/guide.md"
+  },
+  "postgres-data-quality": {
+    "owner": "postgres-pro",
+    "procedure": "skills/postgres-pro/references/modes/postgres-data-quality/guide.md"
+  },
+  "python-configuration": {
+    "owner": "python-development",
+    "procedure": "skills/python-development/references/modes/python-configuration/guide.md"
+  },
+  "python-packaging": {
+    "owner": "python-development",
+    "procedure": "skills/python-development/references/modes/python-packaging/guide.md"
+  },
+  "python-testing-patterns": {
+    "owner": "python-development",
+    "procedure": "skills/python-development/references/modes/python-testing-patterns/guide.md"
+  },
+  "python-tooling-patterns": {
+    "owner": "python-development",
+    "procedure": "skills/python-development/references/modes/python-tooling-patterns/guide.md"
+  },
+  "uv-package-manager": {
+    "owner": "python-development",
+    "procedure": "skills/python-development/references/modes/uv-package-manager/guide.md"
+  },
+  "hybrid-search-implementation": {
+    "owner": "rag-implementation",
+    "procedure": "skills/rag-implementation/references/modes/hybrid-search-implementation/guide.md"
+  },
+  "deslop": {
+    "owner": "refactor",
+    "procedure": "skills/refactor/references/modes/deslop/guide.md"
+  },
+  "request-refactor-plan": {
+    "owner": "refactor",
+    "procedure": "skills/refactor/references/modes/request-refactor-plan/guide.md"
+  },
+  "simplify": {
+    "owner": "refactor",
+    "procedure": "skills/refactor/references/modes/simplify/guide.md"
+  },
+  "binary-analysis-patterns": {
+    "owner": "reverse-engineering",
+    "procedure": "skills/reverse-engineering/references/modes/binary-analysis-patterns/guide.md"
+  },
+  "protocol-reverse-engineering": {
+    "owner": "reverse-engineering",
+    "procedure": "skills/reverse-engineering/references/modes/protocol-reverse-engineering/guide.md"
+  },
+  "bash-defensive-patterns": {
+    "owner": "shell-development",
+    "procedure": "skills/shell-development/references/modes/bash-defensive-patterns/guide.md"
+  },
+  "bats-testing-patterns": {
+    "owner": "shell-development",
+    "procedure": "skills/shell-development/references/modes/bats-testing-patterns/guide.md"
+  },
+  "shellcheck-configuration": {
+    "owner": "shell-development",
+    "procedure": "skills/shell-development/references/modes/shellcheck-configuration/guide.md"
+  },
+  "diagnosing-bugs": {
+    "owner": "systematic-debugging",
+    "procedure": "skills/systematic-debugging/references/modes/diagnosing-bugs/guide.md"
+  },
+  "failure-anthropologist": {
+    "owner": "systematic-debugging",
+    "procedure": "skills/systematic-debugging/references/modes/failure-anthropologist/guide.md"
+  },
+  "readme-i18n": {
+    "owner": "technical-writing",
+    "procedure": "skills/technical-writing/references/modes/readme-i18n/guide.md"
+  },
+  "review-doc-consistency": {
+    "owner": "technical-writing",
+    "procedure": "skills/technical-writing/references/modes/review-doc-consistency/guide.md"
+  },
+  "migrate-to-shoehorn": {
+    "owner": "typescript-pro",
+    "procedure": "skills/typescript-pro/references/modes/migrate-to-shoehorn/guide.md"
+  },
+  "setup-ts-deep-modules": {
+    "owner": "typescript-pro",
+    "procedure": "skills/typescript-pro/references/modes/setup-ts-deep-modules/guide.md"
+  },
+  "typescript-best-practices": {
+    "owner": "typescript-pro",
+    "procedure": "skills/typescript-pro/references/modes/typescript-best-practices/guide.md"
+  },
+  "check-compiler-errors": {
+    "owner": "verify-behavior",
+    "procedure": "skills/verify-behavior/references/modes/check-compiler-errors/guide.md"
+  },
+  "control-cli": {
+    "owner": "verify-behavior",
+    "procedure": "skills/verify-behavior/references/modes/control-cli/guide.md"
+  },
+  "control-ui": {
+    "owner": "verify-behavior",
+    "procedure": "skills/verify-behavior/references/modes/control-ui/guide.md"
+  },
+  "verify-this": {
+    "owner": "verify-behavior",
+    "procedure": "skills/verify-behavior/references/modes/verify-this/guide.md"
+  },
+  "webapp-testing": {
+    "owner": "verify-behavior",
+    "procedure": "skills/verify-behavior/references/modes/webapp-testing/guide.md"
+  },
+  "principle-boundary-discipline": {
+    "owner": "architecture-patterns",
+    "procedure": "skills/architecture-patterns/references/principles/boundary-discipline.md"
+  },
+  "principle-exhaust-the-design-space": {
+    "owner": "architecture-patterns",
+    "procedure": "skills/architecture-patterns/references/principles/exhaust-the-design-space.md"
+  },
+  "principle-experience-first": {
+    "owner": "architecture-patterns",
+    "procedure": "skills/architecture-patterns/references/principles/experience-first.md"
+  },
+  "principle-foundational-thinking": {
+    "owner": "architecture-patterns",
+    "procedure": "skills/architecture-patterns/references/principles/foundational-thinking.md"
+  },
+  "principle-model-the-domain": {
+    "owner": "architecture-patterns",
+    "procedure": "skills/architecture-patterns/references/principles/model-the-domain.md"
+  },
+  "principle-redesign-from-first-principles": {
+    "owner": "architecture-patterns",
+    "procedure": "skills/architecture-patterns/references/principles/redesign-from-first-principles.md"
+  },
+  "principle-separate-before-serializing-shared-state": {
+    "owner": "architecture-patterns",
+    "procedure": "skills/architecture-patterns/references/principles/separate-before-serializing-shared-state.md"
+  },
+  "principle-laziness-protocol": {
+    "owner": "refactor",
+    "procedure": "skills/refactor/references/principles/laziness-protocol.md"
+  },
+  "principle-migrate-callers-then-delete-legacy-apis": {
+    "owner": "refactor",
+    "procedure": "skills/refactor/references/principles/migrate-callers-then-delete-legacy-apis.md"
+  },
+  "principle-minimize-reader-load": {
+    "owner": "refactor",
+    "procedure": "skills/refactor/references/principles/minimize-reader-load.md"
+  },
+  "principle-subtract-before-you-add": {
+    "owner": "refactor",
+    "procedure": "skills/refactor/references/principles/subtract-before-you-add.md"
+  },
+  "principle-build-the-lever": {
+    "owner": "codemod-surgeon",
+    "procedure": "skills/codemod-surgeon/references/principles/build-the-lever.md"
+  },
+  "principle-encode-lessons-in-structure": {
+    "owner": "codemod-surgeon",
+    "procedure": "skills/codemod-surgeon/references/principles/encode-lessons-in-structure.md"
+  },
+  "principle-guard-the-context-window": {
+    "owner": "implementation-plan",
+    "procedure": "skills/implementation-plan/references/principles/guard-the-context-window.md"
+  },
+  "principle-never-block-on-the-human": {
+    "owner": "implementation-plan",
+    "procedure": "skills/implementation-plan/references/principles/never-block-on-the-human.md"
+  },
+  "principle-outcome-oriented-execution": {
+    "owner": "implementation-plan",
+    "procedure": "skills/implementation-plan/references/principles/outcome-oriented-execution.md"
+  },
+  "principle-sequence-verifiable-units": {
+    "owner": "implementation-plan",
+    "procedure": "skills/implementation-plan/references/principles/sequence-verifiable-units.md"
+  },
+  "principle-fix-root-causes": {
+    "owner": "systematic-debugging",
+    "procedure": "skills/systematic-debugging/references/principles/fix-root-causes.md"
+  },
+  "principle-prove-it-works": {
+    "owner": "verify-behavior",
+    "procedure": "skills/verify-behavior/references/principles/prove-it-works.md"
+  },
+  "principle-make-operations-idempotent": {
+    "owner": "verify-behavior",
+    "procedure": "skills/verify-behavior/references/principles/make-operations-idempotent.md"
+  },
+  "principle-type-system-discipline": {
+    "owner": "typescript-pro",
+    "procedure": "skills/typescript-pro/references/principles/type-system-discipline.md"
+  },
+  "writing-for-agents": {
+    "owner": "authoring reference",
+    "procedure": "authoring/writing-for-agents/guide.md"
+  }
+}

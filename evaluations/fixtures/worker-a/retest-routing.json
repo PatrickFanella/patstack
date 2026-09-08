@@ -1,0 +1,10 @@
+{
+  "catalog_method": "frontmatter-only name and description extraction from every candidate skills/*/SKILL.md before route selection",
+  "requests": {
+    "2": {"candidate": "architecture-patterns", "reason": "description explicitly includes domain modeling"},
+    "4": {"candidate": "implementation-plan", "reason": "description explicitly covers implementing a bounded feature from a spec"},
+    "5": {"candidate": "api-development", "reason": "description explicitly covers API contracts"},
+    "6": {"candidate": "systematic-debugging", "reason": "description explicitly covers reproducing and verifying a defect repair"},
+    "7": {"candidate": "systematic-debugging", "reason": "a zero-exit error envelope is unexpected behavior requiring semantic verification"}
+  }
+}

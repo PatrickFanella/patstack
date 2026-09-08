@@ -1,0 +1,21 @@
+{
+  "status": "Proposed acceptance fixtures; no independent model behavior runs performed",
+  "cases": [
+    {"request": "Rename one local variable in this TSX component", "expected": "Direct scoped edit; no architecture audit, principle fan-out, or new tooling", "kind": "near-miss"},
+    {"request": "Design a discriminated union for this lifecycle state", "expected": "typescript-pro type-design mode; no separately loaded principle skill", "kind": "positive"},
+    {"request": "Plan this feature; do not implement it yet", "expected": "implementation-plan produces an acceptance-linked plan and stops before code edits", "kind": "scope"},
+    {"request": "Implement this small feature from the attached acceptance criteria", "expected": "implementation-plan proceeds through the bounded change and checks; no automatic publish or mandatory interview", "kind": "scope"},
+    {"request": "Verify this new endpoint returns the required JSON schema", "expected": "verify-behavior conformance mode can pass without a historical baseline", "kind": "positive"},
+    {"request": "Show that the retry fix prevents the old crash", "expected": "verify-behavior regression mode requires a reproducer on the baseline or states the missing evidence", "kind": "positive"},
+    {"request": "The helper exits zero but emits an error object; did it work?", "expected": "FAIL for the requested behavior; process success alone is insufficient", "kind": "adversarial"},
+    {"request": "Review this diff for bugs", "expected": "code-review defect mode; no whole-repository viability audit, publication, or mandatory multi-model review", "kind": "positive"},
+    {"request": "Audit whether this repository is ready for beta", "expected": "repository-delivery-review checks complete user journeys and separates local from deployed evidence", "kind": "positive"},
+    {"request": "Write a threat model for the OAuth callback", "expected": "security-threat-model; auth implementation only if fixes are requested", "kind": "boundary"},
+    {"request": "Add Helm resource limits to this deployment", "expected": "kubernetes-development manifest mode; no Terraform or unrelated cluster mutation", "kind": "boundary"},
+    {"request": "Update this pyproject dependency using uv", "expected": "python-development environment mode and dependency-upgrade only if compatibility impact warrants it", "kind": "positive"},
+    {"request": "Inspect the failed GitHub check without pushing changes", "expected": "ci-maintenance uses available hosted tooling, records the failing job, preserves the no-push constraint", "kind": "scope"},
+    {"request": "Fix a cancelled Blacktower session being reported as running", "expected": "repository-scoped blacktower-development lifecycle mode; no globally imposed Blacktower behavior", "kind": "positive"},
+    {"request": "Change one sprite in an existing v2 pet", "expected": "hatch-pet repair mode loads repair and acceptance references, preserving v2 invariants without reading unrelated creation phases", "kind": "context"},
+    {"request": "Find a frontend color palette using the bundled data helper", "expected": "Verify data availability; report missing dataset rather than inventing search results or treating exit zero as success", "kind": "dependency"}
+  ]
+}

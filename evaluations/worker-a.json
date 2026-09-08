@@ -1,0 +1,131 @@
+{
+  "worker": "a",
+  "scope": "paired baseline/candidate evaluator",
+  "independence": "Independent from acceptance outcomes, but not completely blind: the assignment named the candidate root, baseline root, requests, required evidence locations, and the prior frontend probe context. I did not read evaluations/acceptance.json, audit conclusions, or builder scripts.",
+  "fixtures": ".runtime/eval-a/{baseline,candidate}",
+  "environment": {
+    "network": "not used",
+    "external_mutations": "none",
+    "tool_call_count": "not available as a reliable evaluator metric",
+    "token_usage": "not available"
+  },
+  "trials": [
+    {
+      "id": 1,
+      "request": "Rename one local variable in a TSX component.",
+      "baseline": {"entrypoint": "react-pro", "resources_read": ["SKILL.md"], "action": "Renamed fixture-local total to visibleTotal without changing the rendered expression.", "result": "pass"},
+      "candidate": {"entrypoint": "react-pro", "resources_read": ["SKILL.md"], "action": "Same bounded local rename.", "result": "pass"},
+      "check": "node cases.mjs asserts new binding and rejects const total.",
+      "questions": [],
+      "unnecessary_loads": []
+    },
+    {
+      "id": 2,
+      "request": "Design a discriminated union for a lifecycle state.",
+      "baseline": {"entrypoint": "domain-modeling", "resources_read": ["SKILL.md"], "action": "Produced idle/running/failed/complete variants with state-specific payloads.", "result": "pass"},
+      "candidate": {"entrypoint": "architecture-patterns", "resources_read": ["SKILL.md", "references/modes/domain-modeling/guide.md"], "action": "Routed to domain-modeling mode and produced the same union boundary.", "result": "pass"},
+      "check": "node cases.mjs asserts the failed discriminant carries a message.",
+      "questions": [],
+      "unnecessary_loads": []
+    },
+    {
+      "id": 3,
+      "request": "Plan a feature; do not implement yet.",
+      "baseline": {"entrypoint": "request-refactor-plan", "resources_read": ["SKILL.md"], "action": "Created a non-implementation plan outline; its documented final GitHub-issue step was not run because external mutation was disallowed.", "result": "partial", "material_limit": "The closest baseline skill is refactor-specific and prescribes issue creation, so it is a poor semantic match for a generic plan-only request."},
+      "candidate": {"entrypoint": "implementation-plan", "resources_read": ["SKILL.md"], "action": "Mapped acceptance criteria to boundaries and focused checks; stopped before implementation.", "result": "pass"},
+      "check": "No implementation artifact was added for this request.",
+      "questions": [],
+      "unnecessary_loads": ["Baseline workflow's GitHub issue publication step is unnecessary and unauthorized for this local plan-only trial."]
+    },
+    {
+      "id": 4,
+      "request": "Implement a small feature from supplied acceptance criteria.",
+      "baseline": {"entrypoint": "tdd", "resources_read": ["SKILL.md"], "action": "Implemented normalizeLabel for trim and blank rejection with direct behavior assertions.", "result": "pass"},
+      "candidate": {"entrypoint": "tdd", "resources_read": ["SKILL.md", "guide.md"], "action": "Implemented the same narrow public behavior and ran the direct fixture assertions.", "result": "pass"},
+      "check": "node cases.mjs checks trimmed success and blank-input rejection.",
+      "questions": [],
+      "unnecessary_loads": []
+    },
+    {
+      "id": 5,
+      "request": "Verify a new endpoint returns required JSON schema.",
+      "baseline": {"entrypoint": "api-design-principles", "resources_read": ["SKILL.md"], "action": "Checked status and exact JSON object from the endpoint fixture.", "result": "pass"},
+      "candidate": {"entrypoint": "api-development", "resources_read": ["SKILL.md", "references/modes/api-design-principles/guide.md"], "action": "Routed to API-contract mode and checked the exact public response object.", "result": "pass"},
+      "check": "node cases.mjs deep-equals {status:200, body:{ok:true, version:'1.0.0'}}.",
+      "questions": [],
+      "unnecessary_loads": []
+    },
+    {
+      "id": 6,
+      "request": "Show a retry fix prevents the old crash.",
+      "baseline": {"entrypoint": "systematic-debugging", "resources_read": ["SKILL.md"], "action": "Used a reproducer that fails once, then succeeds on the sole retry.", "result": "pass"},
+      "candidate": {"entrypoint": "systematic-debugging", "resources_read": ["SKILL.md", "references/modes/systematic-debugging/guide.md"], "action": "Used the same reproducer before validating retry-once behavior.", "result": "pass"},
+      "check": "node cases.mjs verifies return 'ok' and attempts === 2.",
+      "questions": [],
+      "unnecessary_loads": []
+    },
+    {
+      "id": 7,
+      "request": "Helper exits zero but emits error object; did it work?",
+      "baseline": {"entrypoint": "systematic-debugging", "resources_read": ["SKILL.md"], "action": "Classified the error envelope as an application failure despite process exit 0.", "result": "pass"},
+      "candidate": {"entrypoint": "systematic-debugging", "resources_read": ["SKILL.md", "references/modes/systematic-debugging/guide.md"], "action": "Classified it as failure; exit code alone was insufficient evidence.", "result": "pass"},
+      "check": "node cases.mjs asserts helperSucceeded(...) is false for stdout.error.",
+      "questions": [],
+      "unnecessary_loads": []
+    },
+    {
+      "id": 8,
+      "request": "Review a diff for bugs.",
+      "baseline": {"entrypoint": "review-quality", "resources_read": ["SKILL.md"], "action": "Reviewed the retry diff read-only; found no defect in the one-retry behavior represented by the fixture.", "result": "pass-with-limit"},
+      "candidate": {"entrypoint": "code-review", "resources_read": ["SKILL.md", "references/modes/local-change-quality-gate/guide.md"], "action": "Applied defect-first, read-only review; found no actionable defect in the isolated diff.", "result": "pass-with-limit"},
+      "check": "git diff --no-index --check baseline/review.diff candidate/review.diff exited 0.",
+      "questions": [],
+      "unnecessary_loads": ["No full-repository inventory was appropriate because the target was an isolated diff fixture."]
+    }
+  ],
+  "candidate_only": {
+    "readme_localization": {"entrypoint": "technical-writing", "mode": "readme-i18n", "resources_read": ["SKILL.md", "references/modes/readme-i18n/guide.md"], "check": "Node check passed: relative link, inline code, code fence, and selector markers are present in both README variants.", "material_failure": "The fixture selector does not emphasize the current language as required by the loaded mode; preservation passed but complete mode compliance was not demonstrated."},
+    "routing": {"shell": {"entrypoint": "shell-development", "mode": "shellcheck-configuration", "resources_read": ["SKILL.md", "references/modes/shellcheck-configuration/guide.md"]}, "kubernetes": {"entrypoint": "kubernetes-development", "mode": "k8s-manifest-generator", "resources_read": ["SKILL.md", "references/modes/k8s-manifest-generator/guide.md"]}, "check": "Node check confirmed both intended mode names in route-fixtures.md.", "material_limit": "This is routing evidence only; no shell script or Kubernetes manifest was created or applied."}
+  },
+  "retest": {
+    "purpose": "Repair the README selector fixture and reroute requests 2, 4, 5, 6, and 7 after a frontmatter-only catalog pass.",
+    "catalog": {
+      "method": "Extracted only name and description frontmatter from every candidate skills/*/SKILL.md before routing.",
+      "artifact": "evaluations/fixtures/worker-a/retest-routing.json",
+      "candidate_routes": {"2": "architecture-patterns", "4": "implementation-plan", "5": "api-development", "6": "systematic-debugging", "7": "systematic-debugging"}
+    },
+    "actual_artifact": "evaluations/fixtures/worker-a/retest.mjs",
+    "baseline_routes": {"2": "domain-modeling", "4": "tdd", "5": "api-design-principles", "6": "systematic-debugging", "7": "systematic-debugging"},
+    "candidate_resources_read": {
+      "2": ["skills/architecture-patterns/SKILL.md", "references/modes/domain-modeling/guide.md"],
+      "4": ["skills/implementation-plan/SKILL.md"],
+      "5": ["skills/api-development/SKILL.md", "references/modes/api-design-principles/guide.md"],
+      "6": ["skills/systematic-debugging/SKILL.md", "references/modes/systematic-debugging/guide.md"],
+      "7": ["skills/systematic-debugging/SKILL.md", "references/modes/systematic-debugging/guide.md"]
+    },
+    "results": {
+      "task_2": "Lifecycle fixture contains idle/running/failed/complete discriminants.",
+      "task_4": "normalizeLabel trims accepted input and rejects blank input.",
+      "task_5": "Endpoint fixture returns 200 and validates boolean ok plus string version fields.",
+      "task_6": "Same transient reproducer: oldRetryOnce rejects with transient crash; newRetryOnce returns {value:'ok', attempts:2}.",
+      "task_7": "exitCode 0 plus stdout.error is classified as semantic failure.",
+      "readme": "Preservation and current-language selector emphasis both pass after repair. English README has **English** and a Spanish link; Spanish README has an English link and **Español**.",
+      "routing": "Frontmatter routes confirm the candidate expanded entrypoints are semantically selected; task 4 changed from tdd to implementation-plan. The other four candidate selections remained the same after fair routing."
+    },
+    "verification": [
+      "node evaluations/fixtures/worker-a/retest.mjs",
+      "node .runtime/eval-a/baseline/retest.mjs",
+      "node .runtime/eval-a/candidate/retest.mjs",
+      "README Node preservation/emphasis validator",
+      "jq candidate route validator",
+      "git diff --check -- .runtime/eval-a evaluations/fixtures/worker-a"
+    ],
+    "manual_tool_count_this_retest": {"top_level_tool_invocations": 7, "functions_exec_invocations": 3, "nested_local_command_invocations": 9, "apply_patch_invocations": 4, "note": "Count includes the failed first patch attempt and all report/fixture patches through retest completion; it excludes every initial evaluation and frontend-probe call. Token usage remains unavailable."},
+    "limitations": [
+      "The task 2 TypeScript discriminated union is represented as runtime discriminant fixtures because this isolated fixture has no TypeScript compiler configuration.",
+      "Task 5 checks the named required fields and types in an in-process endpoint fixture; it does not exercise an HTTP server or an OpenAPI validator.",
+      "No shell script or Kubernetes manifest was created or applied; their candidate-only case remains routing evidence."
+    ]
+  },
+  "earlier_frontend_probe": {"created_bytecode": ["/home/onnwee/.codex/skills/frontend-design/scripts/tool-ui-ux-pro-max/__pycache__/core.cpython-314.pyc"], "containing_directory": "/home/onnwee/.codex/skills/frontend-design/scripts/tool-ui-ux-pro-max/__pycache__", "removed": true, "removal_provenance": "Removed by parent after the initial report; retest filesystem check found no active frontend-design __pycache__ directory or files."}
+}

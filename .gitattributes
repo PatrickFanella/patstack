@@ -1,0 +1,6 @@
+# Imported Markdown retains intentional hard breaks and upstream spacing.
+*.md whitespace=-blank-at-eol,-blank-at-eof
+# Preserve byte-exact upstream license notices and pinned dataset hashes.
+**/notices/** -whitespace
+**/LICENSE.txt -whitespace
+skills/frontend-design/scripts/data/** -whitespace

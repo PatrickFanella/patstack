@@ -1,0 +1,208 @@
+{
+  "personalSource": {
+    "entries": 138,
+    "descriptionChars": 34392,
+    "nameDescriptionChars": 37190,
+    "bodyChars": 487397
+  },
+  "sharedPersonal": {
+    "entries": 5,
+    "descriptionChars": 1200,
+    "nameDescriptionChars": 1270,
+    "bodyChars": 12356
+  },
+  "system": {
+    "entries": 6,
+    "descriptionChars": 2060,
+    "nameDescriptionChars": 2133,
+    "bodyChars": 54751
+  },
+  "pluginMetadata": {
+    "entries": 70,
+    "descriptionChars": 24089,
+    "nameDescriptionChars": 25258,
+    "bodyChars": 910364
+  },
+  "proposedPersonal": {
+    "entries": 63,
+    "descriptionChars": 6774,
+    "nameDescriptionChars": 7829,
+    "bodyChars": 0
+  },
+  "proposedBlacktowerRepo": {
+    "entries": 64,
+    "descriptionChars": 6883,
+    "nameDescriptionChars": 7960,
+    "bodyChars": 0
+  },
+  "allSourceMetadata": {
+    "entries": 219,
+    "descriptionChars": 61741,
+    "nameDescriptionChars": 65851,
+    "bodyChars": 1464868
+  },
+  "legacyFlagsWithoutCodexPolicy": [
+    "principle-boundary-discipline",
+    "principle-build-the-lever",
+    "principle-encode-lessons-in-structure",
+    "principle-exhaust-the-design-space",
+    "principle-experience-first",
+    "principle-fix-root-causes",
+    "principle-foundational-thinking",
+    "principle-guard-the-context-window",
+    "principle-laziness-protocol",
+    "principle-make-operations-idempotent",
+    "principle-migrate-callers-then-delete-legacy-apis",
+    "principle-minimize-reader-load",
+    "principle-model-the-domain",
+    "principle-never-block-on-the-human",
+    "principle-outcome-oriented-execution",
+    "principle-prove-it-works",
+    "principle-redesign-from-first-principles",
+    "principle-separate-before-serializing-shared-state",
+    "principle-sequence-verifiable-units",
+    "principle-subtract-before-you-add",
+    "principle-type-system-discipline",
+    "thermo-nuclear-code-quality-review",
+    "thermo-nuclear-review"
+  ],
+  "duplicates": [
+    {
+      "name": "requirements-interview",
+      "paths": [
+        "/home/onnwee/.codex/skills/requirements-interview/SKILL.md",
+        "/home/onnwee/.agents/skills/requirements-interview/SKILL.md"
+      ],
+      "sameEntrypoint": false
+    },
+    {
+      "name": "review-agent",
+      "paths": [
+        "/home/onnwee/.codex/skills/review-agent/SKILL.md",
+        "/home/onnwee/.codex/skills/.system/review-agent/SKILL.md"
+      ],
+      "sameEntrypoint": true
+    },
+    {
+      "name": "session-handoff",
+      "paths": [
+        "/home/onnwee/.codex/skills/session-handoff/SKILL.md",
+        "/home/onnwee/.agents/skills/session-handoff/SKILL.md"
+      ],
+      "sameEntrypoint": true
+    }
+  ],
+  "repeatedParagraphs": [
+    {
+      "text": "1. Confirm the request matches this skill's stated intent; do not activate it for a keyword-only near miss. 2. Inspect the user's inputs, repository conventions, and available tools before selecting an approach. 3. Load only the relevant section of the detailed guide when the task needs domain-specific patterns or edge cases. 4. Perform the smallest complete unit of work and preserve existing behavior or user data unless change is explicitly requested. 5. Validate the result with the project's own checks plus any skill-specific verification described in the detailed guide.",
+      "skills": [
+        "api-design-principles",
+        "architecture-patterns",
+        "bash-defensive-patterns",
+        "bats-testing-patterns",
+        "binary-analysis-patterns",
+        "clonedeps",
+        "cloudflare-deploy",
+        "cqrs-implementation",
+        "database-migration",
+        "distributed-tracing",
+        "gdpr-data-handling",
+        "git-advanced-workflows",
+        "gitea-repo-overhaul",
+        "hybrid-search-implementation",
+        "lightweight-charts",
+        "mcp-builder",
+        "openapi-spec-generation",
+        "prometheus-configuration",
+        "python-testing-patterns",
+        "rag-implementation",
+        "refactor",
+        "security-best-practices",
+        "security-ownership-map",
+        "shellcheck-configuration",
+        "systematic-debugging",
+        "workflow-orchestration-patterns"
+      ],
+      "copies": 26,
+      "charsPerCopy": 579,
+      "redundantChars": 14475
+    },
+    {
+      "text": "- Prefer the project's existing stack and conventions over generic examples. - State required credentials, network access, CLIs, and destructive side effects before relying on them. - Use current authoritative documentation when provider or framework behavior is version-sensitive. - Report concrete evidence, remaining risks, and any unverified assumptions.",
+      "skills": [
+        "api-design-principles",
+        "architecture-patterns",
+        "bash-defensive-patterns",
+        "bats-testing-patterns",
+        "binary-analysis-patterns",
+        "clonedeps",
+        "cloudflare-deploy",
+        "cqrs-implementation",
+        "database-migration",
+        "distributed-tracing",
+        "gdpr-data-handling",
+        "git-advanced-workflows",
+        "gitea-repo-overhaul",
+        "hybrid-search-implementation",
+        "lightweight-charts",
+        "mcp-builder",
+        "openapi-spec-generation",
+        "prometheus-configuration",
+        "python-testing-patterns",
+        "rag-implementation",
+        "refactor",
+        "security-best-practices",
+        "security-ownership-map",
+        "shellcheck-configuration",
+        "systematic-debugging",
+        "workflow-orchestration-patterns"
+      ],
+      "copies": 26,
+      "charsPerCopy": 358,
+      "redundantChars": 8950
+    },
+    {
+      "text": "1. Use this skill only when the request matches the frontmatter description. 2. Keep the main context short: read only the relevant reference file for the exact subtask. 3. Prefer existing scripts/templates/assets in this skill before writing ad hoc code. 4. Stop and ask when required credentials, CLIs, project context, or user confirmation are missing.",
+      "skills": [
+        "llm-evaluation",
+        "review-quality",
+        "security-threat-model"
+      ],
+      "copies": 3,
+      "charsPerCopy": 355,
+      "redundantChars": 710
+    },
+    {
+      "text": "- `references/detailed-guide.md` — detailed framework and edge cases; load only the sections needed for the task. - `scripts/` — deterministic helpers; inspect --help and side effects before use.",
+      "skills": [
+        "mcp-builder",
+        "security-ownership-map",
+        "systematic-debugging"
+      ],
+      "copies": 3,
+      "charsPerCopy": 195,
+      "redundantChars": 390
+    },
+    {
+      "text": "- `references/` — curated resources extracted from prior merged skill material. - `scripts/` — curated resources extracted from prior merged skill material. - `assets/` — curated resources extracted from prior merged skill material.",
+      "skills": [
+        "frontend-design",
+        "github-pro"
+      ],
+      "copies": 2,
+      "charsPerCopy": 232,
+      "redundantChars": 232
+    },
+    {
+      "text": "- `references/detailed-guide.md` — detailed framework and edge cases; load only the sections needed for the task. - `assets/` — static inputs and reusable source material.",
+      "skills": [
+        "api-design-principles",
+        "cloudflare-deploy"
+      ],
+      "copies": 2,
+      "charsPerCopy": 171,
+      "redundantChars": 171
+    }
+  ],
+  "measurementNote": "Characters measured from local source, not billed tokens or the already-truncated live prompt. Proposal reductions are projected, not applied. Plugin entrypoints correspond to this task catalog, excluding unadvertised subskills in the three router packages. Plugin metadata is inventoried; plugin bodies are not behaviorally audited. Presence on disk is distinct from implicit discovery: explicit-only skills and system precedence can reduce the live count."
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "MCP Integration Lifecycle"
+  short_description: "Add and diagnose MCP server integrations"
+  default_prompt: "Use $mcp-integration-lifecycle to add or diagnose this MCP server and verify its complete client lifecycle."
