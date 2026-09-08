@@ -21,6 +21,14 @@ def main():
                 if folder=='skills':
                     metrics['authoredPersonal']+=1;metrics['personalDescriptions']+=len(meta['description']);metrics['personalBodies']+=len(body)
             except Exception as e:errors.append(f'{p}: {e}')
+        for p in (ROOT/folder).rglob('agents/openai.yaml'):
+            try:
+                meta=yaml.safe_load(p.read_text())
+                if not isinstance(meta,dict) or set(meta)-{'interface','dependencies','policy'}:errors.append(f'unsupported UI metadata: {p}')
+                if 'interface' in meta and not isinstance(meta['interface'],dict):errors.append(f'UI interface: {p}')
+                policy=meta.get('policy',{})
+                if 'allow_implicit_invocation' in policy and not isinstance(policy['allow_implicit_invocation'],bool):errors.append(f'invocation policy: {p}')
+            except Exception as e:errors.append(f'UI metadata {p}: {e}')
         for p in (ROOT/folder).rglob('*.md'):
             # Examples and code fences are illustrative, not resource links.
             text=re.sub(r'(?ms)^(```|~~~).*?^\1[^\n]*','',p.read_text())
