@@ -1,9 +1,11 @@
 ---
 name: unslop
-description: Edit prose to remove AI filler, vague claims, inflated language, and repetitive framing while preserving meaning, evidence, and the author's voice. Use for unslop, natural-language rewrites, and polishing documentation or agent responses.
+description: "Required for user-facing prose and documentation: remove filler, vague claims, inflated language, and repetitive framing while preserving meaning, evidence, uncertainty, and voice."
 ---
 
 # Unslop
+
+Apply to every user-facing prose response and documentation edit. Read this skill once per session and apply it before sending or saving text; do not reread it on every turn.
 
 Read the supplied text and its intended audience. Preserve facts, uncertainty, citations, technical identifiers, quoted material, and the author's meaning.
 

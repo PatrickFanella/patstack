@@ -561,7 +561,7 @@
   },
   {
     "name": "unslop",
-    "description": "Edit prose to remove AI filler, vague claims, inflated language, and repetitive framing while preserving meaning, evidence, and the author's voice. Use for unslop, natural-language rewrites, and polishing documentation or agent responses.",
+    "description": "Required for user-facing prose and documentation: remove filler, vague claims, inflated language, and repetitive framing while preserving meaning, evidence, uncertainty, and voice.",
     "scope": "personal",
     "sources": [
       "pstack/unslop"

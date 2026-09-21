@@ -1,0 +1,31 @@
+{
+  "source_revision_installed": "3c5107c819620c6047029a12152460a6472bfa64",
+  "skill_install_run": "/home/onnwee/.codex/skill-installations/codex-skills/run-5a611328417943f8a31000db8939f344",
+  "source_links_run": "/home/onnwee/.codex/skill-installations/codex-source-links/run-10889b06becb4e8da85e1b0061d54a12",
+  "validation": "structure passes; 14 unit tests pass; authored-source diff check passes; imported optional library preserved without whitespace rewriting",
+  "installer_verification": {
+    "paths": 151,
+    "protected": 5
+  },
+  "source_links_verified": 5,
+  "fresh_discovery": {
+    "home": 84,
+    "blacktower": 85,
+    "errors": [],
+    "duplicate_names": []
+  },
+  "live_profile_activation": "core: 5 shared skills; managed skill verification remains passing",
+  "homelab": {
+    "generated_bytes": 10876,
+    "history": "/home/onnwee/.homelab/HISTORY-kvant-20260920.md",
+    "canonical_revision": "a7ab6300",
+    "other_five_hosts": "already-current; no skill deployment to those hosts"
+  },
+  "limitations": [
+    "Video reviewed through automatic English captions, not frame-by-frame visuals.",
+    "85 upstream entrypoints catalog-triaged; detailed body review focused on the selected workflows.",
+    "Content behavior cases were manual walkthroughs, not independent model evaluations.",
+    "Documentation source pushed; website deployment of this new note not rechecked.",
+    "Source repository remains local-only; no cross-host personal-skill rollout or graphical applet change."
+  ]
+}

@@ -32,7 +32,7 @@ rtk proxy ~/.agents/bin/skill-profile deactivate
 
 These profiles change the optional shared skills, not the curated Codex base or plugin skills. Start a fresh agent session after changing discovery. The current conversation retains the catalog loaded at its start.
 
-Use `requirements-interview` for a requested `grill-me` or `grill-with-docs`; its named mode supports deeper rounds without turning ordinary tasks into interviews. `unslop` handles prose editing. `code-review` owns blast-radius review. `implementation-plan` owns a reviewable decision trail for long efforts.
+Use `requirements-interview` for a requested `grill-me` or `grill-with-docs`; its named mode supports deeper rounds without turning ordinary tasks into interviews. `unslop` is required for every user-facing prose response and documentation edit. Load it once per session; preserve facts and uncertainty. `code-review` owns blast-radius review. `implementation-plan` owns a reviewable decision trail for long efforts.
 
 ## Maintenance
 

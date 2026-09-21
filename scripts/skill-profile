@@ -278,7 +278,7 @@ def show_status() -> None:
         for name, path in active.items()
         if name not in library or folder_digest(path) != folder_digest(library[name])
     ]
-    print(f"Library: {len(library)} skills")
+    print(f"Library: {len(skill_dirs(LIBRARY))} preserved skills ({len(library)} eligible shared owners)")
     print(f"Active:  {len(active)} skills")
     print(f"Profiles: {', '.join(state.get('profiles', [])) or 'unmanaged/unknown'}")
     print(f"Unpromoted changes: {', '.join(changed) if changed else 'none'}")

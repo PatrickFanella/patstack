@@ -7,4 +7,4 @@ Read both files before workspace work when the client has not expanded these ref
 
 For skill, profile, or global-instruction changes, use `/home/onnwee/Work/Tools/codex-skills` as the authoring source and read its AGENTS.md and `docs/OPERATING-MODEL.md`. Installed skills and global instruction links are deployment targets. System, OS, and plugin-owned skills retain their own owners.
 
-For a requested `grill-me` or `grill-with-docs`, use the corresponding mode in requirements-interview. Use unslop for prose polishing while preserving evidence and uncertainty.
+For a requested `grill-me` or `grill-with-docs`, use the corresponding mode in requirements-interview. For every user-facing prose response and documentation edit, load the `unslop` skill once per session and apply it before sending or saving text. This is required, including short responses; preserve evidence, uncertainty, code, quotations, and required formats.

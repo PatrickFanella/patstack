@@ -1,8 +1,8 @@
 {
   "metrics": {
     "authoredPersonal": 62,
-    "personalDescriptions": 7898,
-    "personalBodies": 102306,
+    "personalDescriptions": 7840,
+    "personalBodies": 102482,
     "personalEntrypoints": 64,
     "retiredNames": 82,
     "mappedOriginals": 138

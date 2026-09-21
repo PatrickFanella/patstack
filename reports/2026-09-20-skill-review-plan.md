@@ -1,6 +1,6 @@
 # Skill and instruction consolidation
 
-Status: implementation in progress. Source repository was clean before this review.
+Status: workstation implementation and verification complete. Source repository was clean before this review. Fleet distribution and a unified graphical UI remain documented proposals, not claimed deployments.
 
 1. Review the supplied video captions and pinned upstream Matt Pocock/Pstack sources.
 2. Preserve direct installed testing-skill improvements in this repository.
