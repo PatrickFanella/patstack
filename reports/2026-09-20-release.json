@@ -26,6 +26,12 @@
     "85 upstream entrypoints catalog-triaged; detailed body review focused on the selected workflows.",
     "Content behavior cases were manual walkthroughs, not independent model evaluations.",
     "Documentation source pushed; website deployment of this new note not rechecked.",
-    "Source repository remains local-only; no cross-host personal-skill rollout or graphical applet change."
-  ]
+    "Source repository remains local-only; no full cross-host personal-skill rollout or graphical applet change."
+  ],
+  "required_unslop": {
+    "policy_revision": "290c8afe",
+    "skill_install_run": "/home/onnwee/.codex/skill-installations/codex-skills/run-f88cf300bc4344bda13f04876831e420",
+    "scope": "All user-facing prose and documentation; read skill once per session",
+    "fleet": "New personal copies installed on Almaz, Dozor, NUC; existing Soyuz and Sputnik owners preserved; Kvant managed copy updated"
+  }
 }

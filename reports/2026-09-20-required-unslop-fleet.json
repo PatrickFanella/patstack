@@ -1,0 +1,42 @@
+{
+  "new_installations": {
+    "almaz": {
+      "destination": "/home/onnwee/.codex/skills/unslop",
+      "source": "Kvant ~/Work/Tools/codex-skills/skills/unslop",
+      "revision": "d308786ebf9fe8895c9fe263c0963bde7d809ea7",
+      "files": {
+        "SKILL.md": "c13faeebe214ced08e4fb5365e1616aca47efea2dc599a8d98e0850cc8b18c68",
+        "notices/pstack-MIT.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+        "references/upstream.md": "c6d2572294d933a428211921069e9a248490e9b466ca59437cb4d9de248600ca"
+      },
+      "result": "installed-new"
+    },
+    "dozor": {
+      "destination": "/home/onnwee/.codex/skills/unslop",
+      "source": "Kvant ~/Work/Tools/codex-skills/skills/unslop",
+      "revision": "d308786ebf9fe8895c9fe263c0963bde7d809ea7",
+      "files": {
+        "SKILL.md": "c13faeebe214ced08e4fb5365e1616aca47efea2dc599a8d98e0850cc8b18c68",
+        "references/upstream.md": "c6d2572294d933a428211921069e9a248490e9b466ca59437cb4d9de248600ca",
+        "notices/pstack-MIT.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+      },
+      "result": "installed-new"
+    },
+    "nuc": {
+      "destination": "/home/onnwee/.codex/skills/unslop",
+      "source": "Kvant ~/Work/Tools/codex-skills/skills/unslop",
+      "revision": "d308786ebf9fe8895c9fe263c0963bde7d809ea7",
+      "files": {
+        "SKILL.md": "c13faeebe214ced08e4fb5365e1616aca47efea2dc599a8d98e0850cc8b18c68",
+        "references/upstream.md": "c6d2572294d933a428211921069e9a248490e9b466ca59437cb4d9de248600ca",
+        "notices/pstack-MIT.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+      },
+      "result": "installed-new"
+    }
+  },
+  "existing_owners": {
+    "soyuz": "~/.codex/skills/unslop/SKILL.md",
+    "sputnik": "~/.agents/skills/unslop/SKILL.md",
+    "kvant": "managed personal installation"
+  }
+}

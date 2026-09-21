@@ -1,0 +1,943 @@
+{
+  "server": {
+    "userAgent": "personal-skill-audit/0.155.1 (Arch Linux Rolling Release; x86_64) dumb (personal-skill-audit; 1.0.0)",
+    "codexHome": "/home/onnwee/.codex",
+    "platformFamily": "unix",
+    "platformOs": "linux"
+  },
+  "skills": {
+    "data": [
+      {
+        "cwd": "/home/onnwee",
+        "skills": [
+          {
+            "name": "agent-workspace-linux",
+            "description": "Isolated agent desktop/browser workspace operations and QA; use its MCP surface rather than host desktop control.",
+            "path": "/home/onnwee/.codex/skills/agent-workspace-linux/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "api-development",
+            "description": "API contracts and backend protocols: REST/GraphQL, OpenAPI, Node services, and WebSocket lifecycle design.",
+            "path": "/home/onnwee/.codex/skills/api-development/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "architecture-patterns",
+            "description": "Architecture and domain modeling: module boundaries, dependency cycles, CQRS, and domain vocabulary.",
+            "path": "/home/onnwee/.codex/skills/architecture-patterns/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "auth-implementation-patterns",
+            "description": "Implement or debug authentication and authorization: sessions, OAuth, tokens, roles, and access checks.",
+            "path": "/home/onnwee/.codex/skills/auth-implementation-patterns/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "ci-maintenance",
+            "description": "CI failures, pipelines, pre-commit hooks, and code scanning; distinguish local checks from hosted run results.",
+            "path": "/home/onnwee/.codex/skills/ci-maintenance/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "cli-developer",
+            "description": "CLI design and implementation: flags, subcommands, completions, interactive fallback, and automation contracts.",
+            "path": "/home/onnwee/.codex/skills/cli-developer/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "clonedeps",
+            "description": "Inspect dependency source at the lockfile-resolved version; obtain only the repositories needed for the investigation.",
+            "path": "/home/onnwee/.codex/skills/clonedeps/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "cloudflare-deploy",
+            "description": "Cloudflare Workers and Pages deployment; follow the selected product and verify the deployed artifact.",
+            "interface": {
+              "displayName": "Cloudflare Deploy",
+              "shortDescription": "Deploy Workers, Pages, and platform services on Cloudflare",
+              "iconSmall": "/home/onnwee/.codex/skills/cloudflare-deploy/assets/cloudflare-small.svg",
+              "iconLarge": "/home/onnwee/.codex/skills/cloudflare-deploy/assets/cloudflare.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Deploy this app to Cloudflare (Workers or Pages) and return URL, config, and required env vars."
+            },
+            "path": "/home/onnwee/.codex/skills/cloudflare-deploy/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "code-review",
+            "description": "Review code changes for actionable defects or requested maintainability concerns; keep repository audits separate.",
+            "path": "/home/onnwee/.codex/skills/code-review/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "codemap",
+            "description": "Map repository structure and update existing code maps incrementally using the bundled inventory helper.",
+            "path": "/home/onnwee/.codex/skills/codemap/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "codemod-surgeon",
+            "description": "Automate widespread source edits with structural transforms, bounded scope, repeatability, and semantic checks.",
+            "interface": {
+              "displayName": "Codemod Surgeon",
+              "shortDescription": "Plan and verify repo-wide mechanical migrations and rewrites.",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use the codemod-surgeon skill to inventory, transform, and prove completion for broad mechanical changes."
+            },
+            "path": "/home/onnwee/.codex/skills/codemod-surgeon/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "database-migration",
+            "description": "Database schema and data migrations: compatibility, backfills, validation, cutover, and rollback.",
+            "path": "/home/onnwee/.codex/skills/database-migration/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "dependency-upgrade",
+            "description": "Upgrade dependencies with lockfile evidence, breaking-change analysis, proportional testing, and rollback.",
+            "path": "/home/onnwee/.codex/skills/dependency-upgrade/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "develop-userscripts",
+            "description": "Userscript implementation and debugging: page lifecycle, browser permissions, injection, and update behavior.",
+            "path": "/home/onnwee/.codex/skills/develop-userscripts/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "diagnose-crash",
+            "description": "Diagnose why a program crashed on this machine, from a systemd-coredump core dump. Use when a process has segfaulted, aborted, or otherwise dumped core, when asked why an application crashed or disappeared, or when a \"Process crashed:\" desktop notification is acted on. Triggers: crash, segfault, SIGSEGV, SIGABRT, core dump, coredumpctl, \"why did X crash\", \"X keeps crashing\", backtrace symbolization. Covers reporting a confirmed Omarchy bug upstream \u2014 see reporting.md.",
+            "path": "/usr/share/omarchy/default/agents/skills/diagnose-crash/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "documents:documents",
+            "description": "Create, edit, redline, and comment on `.docx`, Word, and Google Docs-targeted document artifacts inside the container, with a strict render-and-verify workflow. Use `render_docx.py` to generate page PNGs (and optional PDF) for visual QA, then iterate until layout is flawless before delivering the final document.",
+            "interface": {
+              "displayName": "Documents",
+              "shortDescription": "Create and edit Word and Google Docs files",
+              "iconSmall": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/documents/26.904.11930/skills/documents/assets/file-document.png",
+              "iconLarge": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/documents/26.904.11930/skills/documents/assets/file-document.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": "#2563EB",
+              "defaultPrompt": "Use $documents to create, edit, redline, or review a Word file or Google Doc."
+            },
+            "path": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/documents/26.904.11930/skills/documents/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": "documents@openai-primary-runtime"
+          },
+          {
+            "name": "fact-check",
+            "description": "Verify claims in generated output against sources. Use as a separate pass AFTER content generation to catch hallucinations. Critical constraint - cannot be reliably combined with generation in a single pass.",
+            "path": "/home/onnwee/.agents/skills/fact-check/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "frontend-design",
+            "description": "Implement or refine web interface visuals, responsive layouts, and interaction states within the product design.",
+            "path": "/home/onnwee/.codex/skills/frontend-design/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "gdpr-data-handling",
+            "description": "Implement requested personal-data controls: consent, retention, deletion, portability, and auditability.",
+            "path": "/home/onnwee/.codex/skills/gdpr-data-handling/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "git-advanced-workflows",
+            "description": "Git conflicts, worktrees, history repair, and PR preparation; hosted operations follow the configured remote.",
+            "path": "/home/onnwee/.codex/skills/git-advanced-workflows/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "gitea-repo-overhaul",
+            "description": "Audit or modernize Gitea/Forgejo repository settings, issues, workflows, and release organization.",
+            "path": "/home/onnwee/.codex/skills/gitea-repo-overhaul/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "golang-pro",
+            "description": "Go concurrency, interfaces, errors, profiling, and tests; use relevant patterns for the existing application.",
+            "path": "/home/onnwee/.codex/skills/golang-pro/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "hatch-pet",
+            "description": "Create or repair Codex v2 animated pets; validate atlas geometry, directions, transparency, and packaging.",
+            "interface": {
+              "displayName": "Hatch Pet",
+              "shortDescription": "Hatch style-flexible Codex pets",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $hatch-pet to create a Codex-compatible v2 pet with all standard animations and 16 look directions."
+            },
+            "path": "/home/onnwee/.codex/skills/hatch-pet/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "implementation-plan",
+            "description": "Plan or implement a bounded feature from a spec; map acceptance criteria to changes and executable verification.",
+            "path": "/home/onnwee/.codex/skills/implementation-plan/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "interface-originality-audit",
+            "description": "Audit UI originality, product credibility, and missing interaction states; report evidence-backed design findings.",
+            "path": "/home/onnwee/.codex/skills/interface-originality-audit/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "kubernetes-development",
+            "description": "Kubernetes manifests, Helm charts, and cluster workload policies; validate the requested deployment artifact.",
+            "path": "/home/onnwee/.codex/skills/kubernetes-development/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "lightweight-charts",
+            "description": "TradingView Lightweight Charts implementation: series, time scales, live updates, plugins, and framework integration.",
+            "path": "/home/onnwee/.codex/skills/lightweight-charts/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "llm-evaluation",
+            "description": "Evaluate LLM behavior with representative datasets, baselines, task metrics, and reproducible results.",
+            "path": "/home/onnwee/.codex/skills/llm-evaluation/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "mcp-builder",
+            "description": "Build MCP servers with explicit tool contracts, transports, errors, and executable interoperability checks.",
+            "path": "/home/onnwee/.codex/skills/mcp-builder/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "mcp-integration-lifecycle",
+            "description": "Diagnose MCP registration, transport, initialization, catalog, auth, and reload boundaries in the active client.",
+            "interface": {
+              "displayName": "MCP Integration Lifecycle",
+              "shortDescription": "Add and diagnose MCP server integrations",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $mcp-integration-lifecycle to add or diagnose this MCP server and verify its complete client lifecycle."
+            },
+            "path": "/home/onnwee/.codex/skills/mcp-integration-lifecycle/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "mtls-configuration",
+            "description": "Configure and diagnose mutual TLS: certificate identity, trust chains, rotation, and service authentication.",
+            "path": "/home/onnwee/.codex/skills/mtls-configuration/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "observability",
+            "description": "Metrics, traces, dashboards, and SLOs; implement telemetry or diagnose a specific monitoring gap.",
+            "path": "/home/onnwee/.codex/skills/observability/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "omarchy",
+            "description": "REQUIRED for end-user customization of Linux desktop, window manager, or system config. Use when editing ~/.config/hypr/, ~/.config/omarchy/, ~/.config/alacritty/, ~/.config/foot/, ~/.config/kitty/, or ~/.config/ghostty/. Triggers: Hyprland, window rules, animations, keybindings, monitors, gaps, borders, blur, opacity, omarchy-shell, bar, terminal config, themes, background, night light, idle, lock screen, screenshots, reminders, layer rules, workspace settings, display config, and user-facing omarchy commands. Excludes Omarchy source development through `omarchy dev link` workflows.",
+            "path": "/usr/share/omarchy/default/agents/skills/omarchy/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "opentui",
+            "description": "Build OpenTUI terminal interfaces with the correct renderer lifecycle, input handling, and framework bindings.",
+            "path": "/home/onnwee/.codex/skills/opentui/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "pdf:pdf",
+            "description": "Read, create, inspect, render, and verify PDF files where visual layout matters, including fillable AcroForms. Use Poppler rendering plus Python tools such as reportlab, pdfplumber, and pypdf for generation and extraction.",
+            "interface": {
+              "displayName": "PDF",
+              "shortDescription": "Read, create, render, and verify PDF files",
+              "iconSmall": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/pdf/26.904.11930/skills/pdf/assets/file-document.png",
+              "iconLarge": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/pdf/26.904.11930/skills/pdf/assets/file-document.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": "#DC2626",
+              "defaultPrompt": "Use $pdf to read, create, render, or visually verify a PDF file."
+            },
+            "path": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/pdf/26.904.11930/skills/pdf/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": "pdf@openai-primary-runtime"
+          },
+          {
+            "name": "performance-investigation",
+            "description": "Diagnose measured latency, CPU, memory, or throughput regressions using comparable profiles and benchmarks.",
+            "path": "/home/onnwee/.codex/skills/performance-investigation/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "playwright",
+            "description": "Automate a browser with Playwright CLI for navigation, interaction, inspection, and evidence capture.",
+            "interface": {
+              "displayName": "Playwright CLI Skill",
+              "shortDescription": "Automate real browsers from the terminal",
+              "iconSmall": "/home/onnwee/.codex/skills/playwright/assets/playwright-small.svg",
+              "iconLarge": "/home/onnwee/.codex/skills/playwright/assets/playwright.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Automate this browser workflow with Playwright and produce a reliable script with run steps."
+            },
+            "path": "/home/onnwee/.codex/skills/playwright/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "postgres-pro",
+            "description": "PostgreSQL query plans, indexes, locks, replication, and data-quality checks against the real schema.",
+            "path": "/home/onnwee/.codex/skills/postgres-pro/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "presentations:Presentations",
+            "description": "Read, create or edit PowerPoint or Google Slides decks. Use for presentation, slide deck, PowerPoint, PPT, PPTX, or Google Slides requests.",
+            "interface": {
+              "displayName": "Presentations",
+              "shortDescription": "Create polished PowerPoint and Google Slides decks",
+              "iconSmall": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/presentations/26.904.11930/skills/presentations/assets/file-presentation.png",
+              "iconLarge": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/presentations/26.904.11930/skills/presentations/assets/file-presentation.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": "#C43E1C",
+              "defaultPrompt": "Create a presentation slide deck with $Presentations."
+            },
+            "path": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/presentations/26.904.11930/skills/presentations/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": "presentations@openai-primary-runtime"
+          },
+          {
+            "name": "prototype",
+            "description": "Prototype a state model or competing UI designs in a disposable runnable artifact to answer a specific question.",
+            "path": "/home/onnwee/.codex/skills/prototype/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "python-development",
+            "description": "Python tooling, packaging, settings, uv environments, and pytest; select the procedure for the requested change.",
+            "path": "/home/onnwee/.codex/skills/python-development/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "rag-implementation",
+            "description": "Retrieval systems: ingestion, vector/keyword search, ranking, citations, and retrieval-quality measurement.",
+            "path": "/home/onnwee/.codex/skills/rag-implementation/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "react-native-pro",
+            "description": "React Native/Expo implementation: navigation, native integration, offline behavior, lists, and mobile performance.",
+            "path": "/home/onnwee/.codex/skills/react-native-pro/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "react-pro",
+            "description": "React/Next.js state, rendering, data loading, component APIs, and performance within the existing application.",
+            "path": "/home/onnwee/.codex/skills/react-pro/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "refactor",
+            "description": "Behavior-preserving refactoring and code simplification; plan changes when requested and verify public contracts.",
+            "path": "/home/onnwee/.codex/skills/refactor/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "repository-delivery-review",
+            "description": "Audit a repository against its intended capabilities; separate implemented, incomplete, planned, and unverified work.",
+            "interface": {
+              "displayName": "Repository Delivery Review",
+              "shortDescription": "Assess repository readiness with evidence",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $repository-delivery-review to assess this repository's implementation status, verification evidence, risks, and delivery readiness."
+            },
+            "path": "/home/onnwee/.codex/skills/repository-delivery-review/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "repository-test-maintenance",
+            "description": "Maintain an oversized or brittle repository test suite while preserving crucial behavior and removing obsolete work.",
+            "interface": {
+              "displayName": "Repository & Test Maintenance",
+              "shortDescription": "Prune dead code and keep crucial test coverage",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $repository-test-maintenance to update this checkout, remove obsolete artifacts and unused code, and simplify the test suite while preserving crucial behavior and maintainable gates."
+            },
+            "path": "/home/onnwee/.codex/skills/repository-test-maintenance/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "requirements-interview",
+            "description": "Clarify ambiguous work or run a grill-me / grill-with-docs design interview. Use when the requested outcome, constraints, acceptance criteria, or tradeoffs would materially change the implementation; skip it when repository evidence already makes the task clear.",
+            "path": "/home/onnwee/.agents/skills/requirements-interview/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "reverse-engineering",
+            "description": "Analyze executable binaries or network protocols; select disassembly or packet-analysis procedures as needed.",
+            "path": "/home/onnwee/.codex/skills/reverse-engineering/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "rust-pro",
+            "description": "Rust ownership, async execution, errors, concurrency, and systems integration within the existing crate design.",
+            "path": "/home/onnwee/.codex/skills/rust-pro/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "scaffold-exercises",
+            "description": "Scaffold coding exercises, solution directories, and explanatory material in the existing course format.",
+            "interface": {
+              "displayName": "Scaffold Exercises",
+              "shortDescription": "Scaffold lint-ready course exercises",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/home/onnwee/.codex/skills/scaffold-exercises/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "secrets-management",
+            "description": "Implement CI/runtime secret storage, delivery, and rotation using the environment\u2019s existing secret provider.",
+            "path": "/home/onnwee/.codex/skills/secrets-management/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "security-best-practices",
+            "description": "Requested security review or secure coding guidance for Python, JavaScript/TypeScript, and Go.",
+            "interface": {
+              "displayName": "Security Best Practices",
+              "shortDescription": "Security reviews and secure-by-default guidance",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Review this codebase for security best practices and suggest secure-by-default improvements."
+            },
+            "path": "/home/onnwee/.codex/skills/security-best-practices/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "security-ownership-map",
+            "description": "Requested security ownership and bus-factor analysis from Git history; identify sensitive-code ownership gaps.",
+            "interface": {
+              "displayName": "Security Ownership Map",
+              "shortDescription": "Map maintainers, bus factor, and sensitive code ownership",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Build a security ownership map for this repository and identify bus-factor risks in sensitive code."
+            },
+            "path": "/home/onnwee/.codex/skills/security-ownership-map/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "security-threat-model",
+            "description": "Requested repository threat model: assets, trust boundaries, attacker paths, and prioritized mitigations.",
+            "interface": {
+              "displayName": "Security Threat Model",
+              "shortDescription": "Repo-grounded threat modeling and abuse-path analysis",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Create a repository-grounded threat model for this codebase with prioritized abuse paths and mitigations."
+            },
+            "path": "/home/onnwee/.codex/skills/security-threat-model/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "session-handoff",
+            "description": "Preserve progress, decisions, blockers, and continuation steps when work will continue in another agent session or agent. Use before a context reset, ownership transfer, or long pause; do not trigger for an ordinary final summary.",
+            "path": "/home/onnwee/.agents/skills/session-handoff/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "shell-development",
+            "description": "Shell scripting, ShellCheck linting, and Bats tests; preserve exit status, quoting, cleanup, and portability.",
+            "path": "/home/onnwee/.codex/skills/shell-development/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "sites:sites-building",
+            "description": "Use Sites to build websites, including landing pages, portfolios, dashboards, portals, trackers, hubs, and internal tools. Always use Sites when the project contains `.openai/hosting.json`.",
+            "path": "/home/onnwee/.codex/plugins/cache/openai-bundled/sites/0.1.70/skills/sites-building/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": "sites@openai-bundled"
+          },
+          {
+            "name": "sites:sites-hosting",
+            "description": "Host websites with Sites. Use after `sites-building` to privately publish a Site created in this flow or for requested publishing or deployment, and for hosting management or projects containing `.openai/hosting.json`.",
+            "path": "/home/onnwee/.codex/plugins/cache/openai-bundled/sites/0.1.70/skills/sites-hosting/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": "sites@openai-bundled"
+          },
+          {
+            "name": "solidity-security",
+            "description": "Implement or audit Solidity contracts for exploitable behavior, authorization, state transitions, and fund safety.",
+            "path": "/home/onnwee/.codex/skills/solidity-security/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "spreadsheets:Spreadsheets",
+            "description": "Create, edit, analyze, and verify standalone spreadsheet files or Google Sheets-ready workbooks, including .xlsx, .xls, .csv, and .tsv. Do not use for live controlling Microsoft Excel app or a live Excel session.",
+            "interface": {
+              "displayName": "Spreadsheets",
+              "shortDescription": "Create and edit spreadsheet or Google Sheets-ready files",
+              "iconSmall": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/spreadsheets/26.904.11930/skills/spreadsheets/assets/file-spreadsheet.png",
+              "iconLarge": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/spreadsheets/26.904.11930/skills/spreadsheets/assets/file-spreadsheet.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": "#107C41",
+              "defaultPrompt": "Use $Spreadsheets to build or update a spreadsheet artifact with formulas, formatting, and verification."
+            },
+            "path": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/spreadsheets/26.904.11930/skills/spreadsheets/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": "spreadsheets@openai-primary-runtime"
+          },
+          {
+            "name": "spreadsheets:excel-live-control",
+            "description": "Control an open or active Microsoft Excel workbook through the ChatGPT add-in or connected session. Use when the user tags the Microsoft Excel app in Codex or follows up on an established live Excel task. Do not use for standalone spreadsheet files or Google Sheets.",
+            "interface": {
+              "displayName": "Excel Live Control",
+              "shortDescription": "Control an open Microsoft Excel workbook using Microsoft Excel desktop app live control",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": "#107C41",
+              "defaultPrompt": "Use $excel-live-control to update and verify my open Microsoft Excel workbook."
+            },
+            "path": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/spreadsheets/26.904.11930/skills/excel-live-control/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": "spreadsheets@openai-primary-runtime"
+          },
+          {
+            "name": "summarization",
+            "description": "Create effective summaries by matching summarization type to purpose, audience, and context. Use when asked to summarize, create TLDR, condense content, or create executive summaries. Keywords: summary, TLDR, condense, executive summary, abstract.",
+            "path": "/home/onnwee/.agents/skills/summarization/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "systematic-debugging",
+            "description": "Reproduce and diagnose a defect; choose a tight failing check, isolate the cause, and verify the repair.",
+            "path": "/home/onnwee/.codex/skills/systematic-debugging/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "tdd",
+            "description": "Test-first implementation when requested: red-green-refactor, test boundaries, fixtures, and meaningful assertions.",
+            "path": "/home/onnwee/.codex/skills/tdd/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "technical-writing",
+            "description": "Technical docs, RFCs, README localization, and docs-versus-code checks; preserve source meaning and working links.",
+            "path": "/home/onnwee/.codex/skills/technical-writing/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "template-creator:template-creator",
+            "description": "Create or update a reusable personal Codex artifact-template skill. Use when the user invokes $template-creator or asks in natural language to create a reusable template from a reference document, presentation, spreadsheet, Google Docs, Slides, or Sheets link, ImageGen or Product Design image, email, Slack message, or Site project, or explicitly asks to edit or update a passed artifact-template skill. Do not use for one-off creation from an existing template.",
+            "interface": {
+              "displayName": "Template Creator",
+              "shortDescription": "Create or update personal reference-backed templates",
+              "iconSmall": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/template-creator/26.904.11930/assets/icon.png",
+              "iconLarge": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/template-creator/26.904.11930/assets/logo.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $template-creator to create a template from my documents, presentations, spreadsheets, Google Docs, Slides, or Sheets links, ImageGen or Product Design images, emails, Slack messages, and Site projects or update the artifact template skill I pass."
+            },
+            "path": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/template-creator/26.904.11930/skills/template-creator/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": "template-creator@openai-primary-runtime"
+          },
+          {
+            "name": "temporal-python-testing",
+            "description": "Test Temporal Python workflows with replay, time skipping, activities, mocks, and determinism checks.",
+            "path": "/home/onnwee/.codex/skills/temporal-python-testing/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "terraform-module-library",
+            "description": "Create reusable Terraform modules with explicit inputs, provider constraints, examples, and validation.",
+            "path": "/home/onnwee/.codex/skills/terraform-module-library/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "typescript-pro",
+            "description": "TypeScript type design, compiler configuration, and migrations; load framework guidance only for framework-specific work.",
+            "path": "/home/onnwee/.codex/skills/typescript-pro/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "unslop",
+            "description": "Required for user-facing prose and documentation: remove filler, vague claims, inflated language, and repetitive framing while preserving meaning, evidence, uncertainty, and voice.",
+            "path": "/home/onnwee/.codex/skills/unslop/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "verify-behavior",
+            "description": "Verify UI, CLI, API, build, or performance claims using runnable evidence; distinguish smoke checks from regressions.",
+            "path": "/home/onnwee/.codex/skills/verify-behavior/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "visualize:visualize",
+            "description": "Create visualizations and interactive tools directly in conversation. Proactively use to show how something works; explore 'what happens when', 'what changes', or 'help me understand'; compare or inspect; create simulations, maps, charts, graphs, and mockups. Use standard tools for static scientific figures.",
+            "interface": {
+              "displayName": "Visualize",
+              "shortDescription": "Turn ideas and data into interactive visuals",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $visualize to create an interactive visual when a chart, map, diagram, simulation, 3D model, data explorer, or UI preview would make the result easier to understand or adjust."
+            },
+            "path": "/home/onnwee/.codex/plugins/cache/openai-bundled/visualize/1.0.37/skills/visualize/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": "visualize@openai-bundled"
+          },
+          {
+            "name": "vscode-extension-development",
+            "description": "VS Code extension commands, menus, contribution visibility, and localized user-facing strings.",
+            "path": "/home/onnwee/.codex/skills/vscode-extension-development/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "wcag-audit-patterns",
+            "description": "Audit or repair web accessibility using keyboard, semantics, contrast, and assistive-technology evidence.",
+            "path": "/home/onnwee/.codex/skills/wcag-audit-patterns/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "web-search",
+            "description": "Search the web using the available search backend. Prefer built-in/Exa websearch for general current information; use Brave or Tavily only if configured and specifically needed for localization, freshness, domain filtering, or AI-optimized summaries.",
+            "path": "/home/onnwee/.agents/skills/web-search/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "wizard",
+            "description": "Build an interactive setup script for steps requiring human input; keep secrets hidden and actions reviewable.",
+            "interface": {
+              "displayName": "Wizard",
+              "shortDescription": "Generate an interactive setup wizard",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/home/onnwee/.codex/skills/wizard/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "workflow-orchestration-patterns",
+            "description": "Design Temporal workflows and activities with durable state, deterministic execution, and failure recovery.",
+            "path": "/home/onnwee/.codex/skills/workflow-orchestration-patterns/SKILL.md",
+            "scope": "user",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "imagegen",
+            "description": "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas.",
+            "interface": {
+              "displayName": "Image Gen",
+              "shortDescription": "Generate or edit images for websites, games, and more",
+              "iconSmall": "/home/onnwee/.codex/skills/.system/imagegen/assets/imagegen-small.svg",
+              "iconLarge": "/home/onnwee/.codex/skills/.system/imagegen/assets/imagegen.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $imagegen to make or edit an image for this project."
+            },
+            "path": "/home/onnwee/.codex/skills/.system/imagegen/SKILL.md",
+            "scope": "system",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "openai-docs",
+            "description": "Use for Codex models/pricing, scheduled tasks, skills, settings, setup, troubleshooting, customization, automations, and self-knowledge\u2014including 'you,' 'your,' 'this app,' or 'this coding agent' when they refer to Codex\u2014and for OpenAI APIs/products and ChatGPT Work. Also use for model choice/migration, prompting, SDKs, Responses, Realtime, agents, evals, and Chat/Work/Codex comparisons. Do not use for generic app/software tasks that merely mention Codex.",
+            "shortDescription": "Codex models/pricing, scheduled tasks, skills, settings, setup, troubleshooting, and self-knowledge; OpenAI APIs and ChatGPT Work. 'You'/'this app' means Codex only.",
+            "interface": {
+              "displayName": "OpenAI Docs",
+              "shortDescription": "OpenAI and Codex docs for models, skills, tasks, and setup",
+              "iconSmall": "/home/onnwee/.codex/skills/.system/openai-docs/assets/openai-small.svg",
+              "iconLarge": "/home/onnwee/.codex/skills/.system/openai-docs/assets/openai.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use OpenAI Docs for official docs lookup, questions about Codex itself or Codex surfaces, model selection, model migration, and prompt-upgrade work."
+            },
+            "path": "/home/onnwee/.codex/skills/.system/openai-docs/SKILL.md",
+            "scope": "system",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "plugin-creator",
+            "description": "Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, valid manifest defaults, and personal-marketplace entries by default. Use when Codex needs to create a new personal plugin, add optional plugin structure, generate or update marketplace entries for plugin ordering and availability metadata, or update an existing local plugin during development with the CLI-driven cachebuster and reinstall flow.",
+            "interface": {
+              "displayName": "Plugin Creator",
+              "shortDescription": "Scaffold plugins and marketplace entries",
+              "iconSmall": "/home/onnwee/.codex/skills/.system/plugin-creator/assets/plugin-creator-small.svg",
+              "iconLarge": "/home/onnwee/.codex/skills/.system/plugin-creator/assets/plugin-creator.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $plugin-creator to scaffold a valid plugin in the personal marketplace, then validate it before handing it back."
+            },
+            "path": "/home/onnwee/.codex/skills/.system/plugin-creator/SKILL.md",
+            "scope": "system",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "review-agent",
+            "description": "Perform a read-only, defect-first review of a specified code change and return every actionable finding. Use when another agent delegates review of uncommitted changes, a base-branch diff, a commit, or custom review instructions.",
+            "interface": {
+              "displayName": "Review Agent",
+              "shortDescription": "Find actionable bugs in code changes",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $review-agent to review the requested code changes and return actionable findings."
+            },
+            "path": "/home/onnwee/.codex/skills/.system/review-agent/SKILL.md",
+            "scope": "system",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "skill-creator",
+            "description": "Create or update a Codex skill with appropriately scoped instructions and any needed supporting resources.",
+            "shortDescription": "Create or update a skill",
+            "interface": {
+              "displayName": "Skill Creator",
+              "shortDescription": "Create or update a skill",
+              "iconSmall": "/home/onnwee/.codex/skills/.system/skill-creator/assets/skill-creator-small.svg",
+              "iconLarge": "/home/onnwee/.codex/skills/.system/skill-creator/assets/skill-creator.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/home/onnwee/.codex/skills/.system/skill-creator/SKILL.md",
+            "scope": "system",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "skill-installer",
+            "description": "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).",
+            "shortDescription": "Install curated skills from openai/skills or other repos",
+            "interface": {
+              "displayName": "Skill Installer",
+              "shortDescription": "Install curated skills from openai/skills or other repos",
+              "iconSmall": "/home/onnwee/.codex/skills/.system/skill-installer/assets/skill-installer-small.svg",
+              "iconLarge": "/home/onnwee/.codex/skills/.system/skill-installer/assets/skill-installer.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/home/onnwee/.codex/skills/.system/skill-installer/SKILL.md",
+            "scope": "system",
+            "enabled": true,
+            "pluginId": null
+          }
+        ],
+        "errors": []
+      }
+    ]
+  }
+}
