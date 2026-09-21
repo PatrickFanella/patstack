@@ -30,3 +30,5 @@ Report which acceptance criteria are verified, which remain unverified, and why.
 - [never block on the human](references/principles/never-block-on-the-human.md) — consult only for this specific design or execution concern.
 - [outcome oriented execution](references/principles/outcome-oriented-execution.md) — consult only for this specific design or execution concern.
 - [sequence verifiable units](references/principles/sequence-verifiable-units.md) — consult only for this specific design or execution concern.
+
+For requested “show me your work” or a long unattended effort, use the [decision trail](references/decision-trail.md) beside the existing plan.

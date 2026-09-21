@@ -1,0 +1,18 @@
+# Research, documentation, structured artifacts, technical writing, and knowledge capture.
+create-learning-path
+deep-research
+doc
+docs-canvas
+github-pro
+openai-docs
+pdf
+pptx-generator
+readme-i18n
+review-doc-consistency
+run-learning-retrospective
+spreadsheet
+technical-writing
+to-prd
+to-questionnaire
+writing-for-agents
+writing-plans

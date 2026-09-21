@@ -1,0 +1,21 @@
+# APIs, services, authentication, databases, search, payments, and data quality.
+api-design-principles
+architecture-patterns
+auth-implementation-patterns
+cli-developer
+cqrs-implementation
+database-migration
+develop-userscripts
+gdpr-data-handling
+hybrid-search-implementation
+nodejs-backend-patterns
+openapi-spec-generation
+postgres-data-quality
+postgres-pro
+python-configuration
+rag-implementation
+security-best-practices
+stripe
+stripe-integration
+websocket-engineer
+workflow-orchestration-patterns

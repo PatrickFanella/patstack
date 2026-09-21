@@ -1,0 +1,4 @@
+interface:
+  display_name: "Local Change Quality Gate"
+  short_description: "Review local changes before handoff"
+  default_prompt: "Use $local-change-quality-gate to review my local changes, run targeted checks, and report handoff risks without publishing them."

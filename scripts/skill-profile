@@ -1,0 +1,332 @@
+#!/usr/bin/env python3
+"""Activate bounded skill profiles from the canonical ~/.agents skill library."""
+
+from __future__ import annotations
+
+import argparse
+import fcntl
+import hashlib
+import json
+import os
+import shutil
+import sys
+import time
+from contextlib import contextmanager
+from pathlib import Path
+
+
+ROOT = Path(os.environ.get("AGENT_SKILLS_HOME", "~/.agents")).expanduser()
+ACTIVE = ROOT / "skills"
+LIBRARY = ROOT / "skill-library" / "skills"
+PROFILES = ROOT / "skill-profiles"
+SOURCE = Path(os.environ.get("AGENT_SKILLS_SOURCE", str(Path(__file__).resolve().parents[1])))
+STATE = ROOT / ".skill-profile-state.json"
+LOCK = ROOT / ".skill-profile.lock"
+
+
+def fail(message: str) -> None:
+    raise SystemExit(f"skill-profile: {message}")
+
+
+@contextmanager
+def process_lock():
+    ROOT.mkdir(parents=True, exist_ok=True)
+    with LOCK.open("a+") as handle:
+        fcntl.flock(handle, fcntl.LOCK_EX)
+        yield
+
+
+def skill_dirs(root: Path) -> dict[str, Path]:
+    if not root.is_dir():
+        return {}
+    return {
+        path.name: path
+        for path in root.iterdir()
+        if path.is_dir() and (path / "SKILL.md").is_file()
+    }
+
+
+def managed_shared() -> dict[str, Path]:
+    return skill_dirs(SOURCE / "shared")
+
+
+def reserved_names() -> set[str]:
+    catalog = json.loads((SOURCE / "catalog/proposed-catalog.json").read_text())
+    retired = json.loads((SOURCE / "catalog/retired-names.json").read_text())
+    system = skill_dirs(Path.home() / ".codex/skills/.system")
+    return {item["name"] for item in catalog} | set(retired) | set(managed_shared()) | set(system)
+
+
+def sources() -> dict[str, Path]:
+    result = {name: path for name, path in skill_dirs(LIBRARY).items() if name not in reserved_names()}
+    result.update(managed_shared())
+    return result
+
+
+def folder_digest(root: Path) -> str:
+    digest = hashlib.sha256()
+    for path in sorted(root.rglob("*")):
+        relative = path.relative_to(root).as_posix().encode()
+        digest.update(relative + b"\0")
+        if path.is_symlink():
+            digest.update(b"L" + os.readlink(path).encode())
+        elif path.is_file():
+            digest.update(b"F" + str(path.stat().st_mode & 0o777).encode() + path.read_bytes())
+        elif path.is_dir():
+            digest.update(b"D")
+    return digest.hexdigest()
+
+
+def manifest_path(name: str) -> Path:
+    if not name.replace("-", "").isalnum():
+        fail(f"invalid profile name: {name}")
+    return PROFILES / f"{name}.txt"
+
+
+def read_manifest(name: str) -> set[str]:
+    path = manifest_path(name)
+    if not path.is_file():
+        fail(f"unknown profile: {name}")
+    return {
+        line.strip()
+        for line in path.read_text(encoding="utf-8").splitlines()
+        if line.strip() and not line.lstrip().startswith("#")
+    }
+
+
+def profile_names() -> list[str]:
+    if not PROFILES.is_dir():
+        return []
+    return sorted(path.stem for path in PROFILES.glob("*.txt") if path.stem != "core")
+
+
+def write_state(payload: dict) -> None:
+    temporary = STATE.with_suffix(".tmp")
+    temporary.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    os.replace(temporary, STATE)
+
+
+def validate_active_clean() -> None:
+    library = sources()
+    problems: list[str] = []
+    for name, active_path in skill_dirs(ACTIVE).items():
+        library_path = library.get(name)
+        if library_path is None:
+            problems.append(f"new active skill {name!r} is not in the library")
+        elif folder_digest(active_path) != folder_digest(library_path):
+            problems.append(f"active skill {name!r} differs from its library copy")
+    if problems:
+        details = "\n  - ".join(problems)
+        fail(
+            f"refusing to discard unpromoted changes:\n  - {details}\n"
+            "Edit the canonical source repository; preserve and reconcile installed edits before switching."
+        )
+
+
+def recover_interrupted_switch() -> None:
+    previous = sorted(ROOT.glob(".skills.previous-*"), key=lambda p: p.stat().st_mtime)
+    stages = sorted(ROOT.glob(".skills.stage-*"), key=lambda p: p.stat().st_mtime)
+    if not ACTIVE.exists() and previous:
+        os.replace(previous[-1], ACTIVE)
+        previous = previous[:-1]
+    for path in previous + stages:
+        shutil.rmtree(path)
+
+
+def selection_for(names: list[str], activate_all: bool) -> set[str]:
+    library = set(sources())
+    if not library:
+        fail(f"canonical library is missing or empty: {LIBRARY}")
+    selected = set(skill_dirs(LIBRARY)) if activate_all else read_manifest("core")
+    for name in names:
+        selected |= read_manifest(name)
+    missing = selected - set(skill_dirs(LIBRARY)) - set(managed_shared())
+    if missing:
+        fail(f"profile manifests reference missing skills: {', '.join(sorted(missing))}")
+    return (selected - reserved_names()) | set(managed_shared())
+
+
+def preview(names: list[str], activate_all: bool = False) -> dict:
+    validate_active_clean()
+    selected = selection_for(names, activate_all)
+    requested = set(skill_dirs(LIBRARY)) if activate_all else read_manifest("core")
+    for name in names:
+        requested |= read_manifest(name)
+    return {"source": str(SOURCE), "profiles": ["all"] if activate_all else names or ["core"],
+            "skills": sorted(selected), "managed_shared": sorted(managed_shared()),
+            "excluded_duplicate_or_retired": sorted((requested & reserved_names()) - set(managed_shared())),
+            "restart_session": True}
+
+
+def inventory_text(selected: set[str], profiles: list[str]) -> str:
+    mode = ", ".join(profiles) if profiles else "core only"
+    lines = [
+        "# Active Skill Inventory",
+        "",
+        f"Managed by `~/.agents/bin/skill-profile`; active mode: **{mode}**.",
+        "",
+        f"**Active skills:** {len(selected)}",
+        "",
+    ]
+    lines.extend(f"- [`{name}`](./{name}/)" for name in sorted(selected))
+    lines.append("")
+    return "\n".join(lines)
+
+
+def activate(names: list[str], activate_all: bool = False) -> None:
+    recover_interrupted_switch()
+    validate_active_clean()
+    selected = selection_for(names, activate_all)
+    library = sources()
+    stamp = f"{int(time.time())}-{os.getpid()}"
+    stage = ROOT / f".skills.stage-{stamp}"
+    previous = ROOT / f".skills.previous-{stamp}"
+    stage.mkdir()
+    try:
+        for name in sorted(selected):
+            shutil.copytree(library[name], stage / name, symlinks=True)
+        effective_profiles = ["all"] if activate_all else (names or ["core"])
+        (stage / "INVENTORY.md").write_text(
+            inventory_text(selected, effective_profiles), encoding="utf-8"
+        )
+        (stage / ".profile-state.json").write_text(
+            json.dumps(
+                {"profiles": effective_profiles, "skills": sorted(selected)},
+                indent=2,
+                sort_keys=True,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        write_state({"phase": "staged", "profiles": effective_profiles, "stage": str(stage)})
+        if ACTIVE.exists():
+            os.replace(ACTIVE, previous)
+        os.replace(stage, ACTIVE)
+        installed = skill_dirs(ACTIVE)
+        if set(installed) != selected:
+            fail("post-activation skill set verification failed")
+        for name in selected:
+            if folder_digest(installed[name]) != folder_digest(library[name]):
+                fail(f"post-activation hash verification failed for {name}")
+        if previous.exists():
+            shutil.rmtree(previous)
+        write_state(
+            {
+                "phase": "active",
+                "profiles": effective_profiles,
+                "skills": sorted(selected),
+                "activated_at": int(time.time()),
+            }
+        )
+        print(f"Activated {len(selected)} skills ({', '.join(effective_profiles) or 'core only'}).")
+    except BaseException:
+        if ACTIVE.exists() and previous.exists():
+            failed = ROOT / f".skills.failed-{stamp}"
+            os.replace(ACTIVE, failed)
+            os.replace(previous, ACTIVE)
+            shutil.rmtree(failed)
+        elif not ACTIVE.exists() and previous.exists():
+            os.replace(previous, ACTIVE)
+        if stage.exists():
+            shutil.rmtree(stage)
+        raise
+
+
+def write_manifest(name: str, skills: set[str]) -> None:
+    path = manifest_path(name)
+    heading = "# Always active" if name == "core" else f"# Profile: {name}"
+    path.write_text(heading + "\n" + "\n".join(sorted(skills)) + "\n", encoding="utf-8")
+
+
+def promote(name: str, profiles: list[str]) -> None:
+    if name in reserved_names():
+        fail(f"{name} belongs to the curated collection; edit its source under {SOURCE}")
+    active = skill_dirs(ACTIVE)
+    source = active.get(name)
+    if source is None:
+        fail(f"active skill not found: {name}")
+    if not profiles:
+        fail("promote requires at least one destination profile (or `core`)")
+    valid = set(profile_names()) | {"core"}
+    unknown = set(profiles) - valid
+    if unknown:
+        fail(f"unknown destination profiles: {', '.join(sorted(unknown))}")
+    destination = LIBRARY / name
+    temporary = LIBRARY.parent / f".{name}.promote-{os.getpid()}"
+    backup = ROOT / "skill-library" / "backups" / f"{name}-{int(time.time())}"
+    shutil.copytree(source, temporary, symlinks=True)
+    if destination.exists():
+        backup.parent.mkdir(parents=True, exist_ok=True)
+        os.replace(destination, backup)
+    os.replace(temporary, destination)
+    for profile in profiles:
+        members = read_manifest(profile)
+        members.add(name)
+        write_manifest(profile, members)
+    print(f"Promoted {name} to the canonical library and: {', '.join(profiles)}")
+
+
+def show_status() -> None:
+    library = sources()
+    active = skill_dirs(ACTIVE)
+    try:
+        state = json.loads(STATE.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        state = {}
+    changed = [
+        name
+        for name, path in active.items()
+        if name not in library or folder_digest(path) != folder_digest(library[name])
+    ]
+    print(f"Library: {len(library)} skills")
+    print(f"Active:  {len(active)} skills")
+    print(f"Profiles: {', '.join(state.get('profiles', [])) or 'unmanaged/unknown'}")
+    print(f"Unpromoted changes: {', '.join(changed) if changed else 'none'}")
+
+
+def list_profiles() -> None:
+    core = read_manifest("core")
+    print(f"core: {len(selection_for([], False))}")
+    for name in profile_names():
+        members = read_manifest(name)
+        print(f"{name}: {len(selection_for([name], False))} shared skills after duplicate filtering")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    commands = parser.add_subparsers(dest="command", required=True)
+    activate_parser = commands.add_parser("activate", help="activate core plus one or more profiles")
+    activate_parser.add_argument("profiles", nargs="*")
+    plan_parser = commands.add_parser("plan", help="preview a profile without changing discovery")
+    plan_parser.add_argument("profiles", nargs="*")
+    plan_parser.add_argument("--all", action="store_true")
+    activate_parser.add_argument("--all", action="store_true", help="activate the entire library")
+    commands.add_parser("deactivate", help="return to the universal core only")
+    commands.add_parser("list", help="list available profiles and counts")
+    commands.add_parser("status", help="show active profiles and unpromoted edits")
+    promote_parser = commands.add_parser("promote", help="promote an active skill into the library")
+    promote_parser.add_argument("name")
+    promote_parser.add_argument("profiles", nargs="+")
+    args = parser.parse_args()
+    if args.command == "plan":
+        if args.all and args.profiles:
+            parser.error("use profile names or --all, not both")
+        print(json.dumps(preview(args.profiles, args.all), indent=2))
+        return
+    with process_lock():
+        if args.command == "activate":
+            if args.all and args.profiles:
+                fail("use profile names or --all, not both")
+            activate(args.profiles, args.all)
+        elif args.command == "deactivate":
+            activate([])
+        elif args.command == "list":
+            list_profiles()
+        elif args.command == "status":
+            show_status()
+        elif args.command == "promote":
+            promote(args.name, args.profiles)
+
+
+if __name__ == "__main__":
+    main()

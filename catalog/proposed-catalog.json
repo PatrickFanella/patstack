@@ -9,7 +9,7 @@
   },
   {
     "name": "api-development",
-    "description": "API contracts and backend protocols: REST/GraphQL, OpenAPI, Node services, and WebSocket lifecycle design.",
+    "description": "'API contracts and backend protocols: REST/GraphQL, OpenAPI, Node services, and WebSocket lifecycle design.'",
     "scope": "personal",
     "sources": [
       "api-design-principles",
@@ -20,7 +20,7 @@
   },
   {
     "name": "architecture-patterns",
-    "description": "Architecture and domain modeling: module boundaries, dependency cycles, CQRS, and domain vocabulary.",
+    "description": "'Architecture and domain modeling: module boundaries, dependency cycles, CQRS, and domain vocabulary.'",
     "scope": "personal",
     "sources": [
       "architecture-patterns",
@@ -32,7 +32,7 @@
   },
   {
     "name": "auth-implementation-patterns",
-    "description": "Implement or debug authentication and authorization: sessions, OAuth, tokens, roles, and access checks.",
+    "description": "'Implement or debug authentication and authorization: sessions, OAuth, tokens, roles, and access checks.'",
     "scope": "personal",
     "sources": [
       "auth-implementation-patterns"
@@ -62,7 +62,7 @@
   },
   {
     "name": "cli-developer",
-    "description": "CLI design and implementation: flags, subcommands, completions, interactive fallback, and automation contracts.",
+    "description": "'CLI design and implementation: flags, subcommands, completions, interactive fallback, and automation contracts.'",
     "scope": "personal",
     "sources": [
       "cli-developer",
@@ -115,7 +115,7 @@
   },
   {
     "name": "database-migration",
-    "description": "Database schema and data migrations: compatibility, backfills, validation, cutover, and rollback.",
+    "description": "'Database schema and data migrations: compatibility, backfills, validation, cutover, and rollback.'",
     "scope": "personal",
     "sources": [
       "database-migration"
@@ -131,7 +131,7 @@
   },
   {
     "name": "develop-userscripts",
-    "description": "Userscript implementation and debugging: page lifecycle, browser permissions, injection, and update behavior.",
+    "description": "'Userscript implementation and debugging: page lifecycle, browser permissions, injection, and update behavior.'",
     "scope": "personal",
     "sources": [
       "develop-userscripts"
@@ -155,7 +155,7 @@
   },
   {
     "name": "gdpr-data-handling",
-    "description": "Implement requested personal-data controls: consent, retention, deletion, portability, and auditability.",
+    "description": "'Implement requested personal-data controls: consent, retention, deletion, portability, and auditability.'",
     "scope": "personal",
     "sources": [
       "gdpr-data-handling"
@@ -223,7 +223,7 @@
   },
   {
     "name": "lightweight-charts",
-    "description": "TradingView Lightweight Charts implementation: series, time scales, live updates, plugins, and framework integration.",
+    "description": "'TradingView Lightweight Charts implementation: series, time scales, live updates, plugins, and framework integration.'",
     "scope": "personal",
     "sources": [
       "lightweight-charts"
@@ -255,7 +255,7 @@
   },
   {
     "name": "mtls-configuration",
-    "description": "Configure and diagnose mutual TLS: certificate identity, trust chains, rotation, and service authentication.",
+    "description": "'Configure and diagnose mutual TLS: certificate identity, trust chains, rotation, and service authentication.'",
     "scope": "personal",
     "sources": [
       "mtls-configuration"
@@ -335,7 +335,7 @@
   },
   {
     "name": "rag-implementation",
-    "description": "Retrieval systems: ingestion, vector/keyword search, ranking, citations, and retrieval-quality measurement.",
+    "description": "'Retrieval systems: ingestion, vector/keyword search, ranking, citations, and retrieval-quality measurement.'",
     "scope": "personal",
     "sources": [
       "hybrid-search-implementation",
@@ -344,7 +344,7 @@
   },
   {
     "name": "react-native-pro",
-    "description": "React Native/Expo implementation: navigation, native integration, offline behavior, lists, and mobile performance.",
+    "description": "'React Native/Expo implementation: navigation, native integration, offline behavior, lists, and mobile performance.'",
     "scope": "personal",
     "sources": [
       "react-native-pro"
@@ -412,7 +412,7 @@
   },
   {
     "name": "secrets-management",
-    "description": "Implement CI/runtime secret storage, delivery, and rotation using the environment’s existing secret provider.",
+    "description": "Implement CI/runtime secret storage, delivery, and rotation using the environment\u2019s existing secret provider.",
     "scope": "personal",
     "sources": [
       "secrets-management"
@@ -436,7 +436,7 @@
   },
   {
     "name": "security-threat-model",
-    "description": "Requested repository threat model: assets, trust boundaries, attacker paths, and prioritized mitigations.",
+    "description": "'Requested repository threat model: assets, trust boundaries, attacker paths, and prioritized mitigations.'",
     "scope": "personal",
     "sources": [
       "security-threat-model"
@@ -472,7 +472,7 @@
   },
   {
     "name": "tdd",
-    "description": "Test-first implementation when requested: red-green-refactor, test boundaries, fixtures, and meaningful assertions.",
+    "description": "'Test-first implementation when requested: red-green-refactor, test boundaries, fixtures, and meaningful assertions.'",
     "scope": "personal",
     "sources": [
       "tdd"
@@ -557,6 +557,14 @@
     "scope": "personal",
     "sources": [
       "workflow-orchestration-patterns"
+    ]
+  },
+  {
+    "name": "unslop",
+    "description": "Edit prose to remove AI filler, vague claims, inflated language, and repetitive framing while preserving meaning, evidence, and the author's voice. Use for unslop, natural-language rewrites, and polishing documentation or agent responses.",
+    "scope": "personal",
+    "sources": [
+      "pstack/unslop"
     ]
   }
 ]

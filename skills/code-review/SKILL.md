@@ -9,6 +9,8 @@ Default to read-only, defect-first review of the requested change. Pin the compa
 
 ## Select a mode
 
+- Assess downstream consequences or “what could this break?” with [blast-radius review](references/blast-radius.md).
+
 - Review a local Git working tree before commit, handoff, or pull-request preparation. Read [the procedure](references/modes/local-change-quality-gate/guide.md).
 - Coordinate parallel code reviews across multiple quality dimensions with finding deduplication, severity calibration, and consolidated reporting. Read [the procedure](references/modes/multi-reviewer-patterns/guide.md).
 - Unified codebase quality review: merge readiness verdict + maintainability (Clean Code) + docs-vs-code consistency. Read [the procedure](references/modes/review-quality/guide.md).

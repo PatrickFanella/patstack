@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repository Delivery Review"
+  short_description: "Assess repository readiness with evidence"
+  default_prompt: "Use $repository-delivery-review to assess this repository's implementation status, verification evidence, risks, and delivery readiness."

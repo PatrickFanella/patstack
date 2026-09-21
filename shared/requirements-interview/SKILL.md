@@ -1,6 +1,6 @@
 ---
 name: requirements-interview
-description: Clarify ambiguous or high-risk work through a bounded requirements interview. Use when the requested outcome, constraints, acceptance criteria, or tradeoffs would materially change the implementation; skip it when repository evidence already makes the task clear.
+description: Clarify ambiguous work or run a grill-me / grill-with-docs design interview. Use when the requested outcome, constraints, acceptance criteria, or tradeoffs would materially change the implementation; skip it when repository evidence already makes the task clear.
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow
@@ -14,6 +14,10 @@ metadata:
 
 Resolve only the ambiguity that blocks a safe decision. This workflow combines
 the former `grill-me`, `grill-with-docs`, and requirements-interview skills.
+
+## Requested grilling
+
+When the user says `grill-me`, `grill-with-docs`, or asks to stress-test a plan, read [the grilling procedure](references/grilling.md). Use the bounded workflow below for ordinary clarification. The named mode stays here so it shares one owner with requirements discovery.
 
 ## Workflow
 

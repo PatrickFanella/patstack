@@ -1,0 +1,17 @@
+# Application, infrastructure, identity, secrets, threat modeling, and compliance overlay.
+auth-implementation-patterns
+bash-defensive-patterns
+gdpr-data-handling
+github-pro
+k8s-security-policies
+memory-forensics
+mtls-configuration
+pci-compliance
+sast-configuration
+secrets-management
+secure-linux-web-hosting
+security-best-practices
+security-ownership-map
+security-threat-model
+solidity-security
+stripe-integration

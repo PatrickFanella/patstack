@@ -1,0 +1,41 @@
+{
+  "version": 3,
+  "skills": {
+    "karakeep": {
+      "source": "karakeep-app/karakeep",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/karakeep-app/karakeep.git",
+      "skillPath": "skills/SKILL.md",
+      "skillFolderHash": "86e510bc13800ea03262683cb5e72f06e0922dca",
+      "installedAt": "2026-08-19T02:38:08.165Z",
+      "updatedAt": "2026-08-19T02:38:08.165Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
+      "installedAt": "2026-08-19T02:38:10.891Z",
+      "updatedAt": "2026-08-19T02:38:10.891Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "antigravity-cli",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed"
+  ]
+}

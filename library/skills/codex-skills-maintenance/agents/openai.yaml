@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Skills Maintenance"
+  short_description: "Audit and improve the complete skill catalog"
+  default_prompt: "Use $codex-skills-maintenance to audit my Codex skills and safely improve user-owned skills."

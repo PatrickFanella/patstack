@@ -8268,7 +8268,7 @@
     "entries": {
       ".codex-system-skills.marker": {
         "type": "file",
-        "sha256": "af2d6853e26c9bf6a4ad2e9588586dba9f06fdc4b91864861b9866921abe98ac",
+        "sha256": "0364a0277a83943bb7c0c457ad8097e97ef8b6720d895cea15024d92fc426285",
         "mode": 420
       },
       "imagegen": {
@@ -8372,7 +8372,7 @@
           },
           "SKILL.md": {
             "type": "file",
-            "sha256": "7cb8fa1b2a0c635b5c61ffe1da7b8594a7ea0fce5b71e8d523e2025d88b2a05e",
+            "sha256": "aa6829e21df2223167c85d2e49b6337a7345c84c1033f1ec10182c7882b36d45",
             "mode": 420
           },
           "agents": {
@@ -8413,7 +8413,7 @@
               },
               "latest-model.md": {
                 "type": "file",
-                "sha256": "f25e351e522dd6e30e82d482f31f44c992e794b11031cdcb6ac7c0e6b20c9d5d",
+                "sha256": "bdf241d505eb071b1c7b0b732f842b701348cf6eab95d1c36fd97edac64dd158",
                 "mode": 420
               },
               "mcp-diagnostics.md": {
@@ -8423,7 +8423,7 @@
               },
               "model-migration.md": {
                 "type": "file",
-                "sha256": "5f20c38fbbb10319767b216d91ba74bae49c68fc1bfd6d1abd7c9b4cc9cb9ab0",
+                "sha256": "bef46671036c8e483b7f65df931171217d55a8d26098851c2f89784db8edca2f",
                 "mode": 420
               },
               "model-selection.md": {
@@ -8438,17 +8438,17 @@
               },
               "prompting-guide.md": {
                 "type": "file",
-                "sha256": "db913884cfe0fabf29bee1a139918f56e299decfa0a14d61c48596f23f76621d",
+                "sha256": "548d4ca73a34cd4b0041ef05a899592e8c50772b8f3a76c579ec941e403e19f6",
                 "mode": 420
               },
               "upgrade-guide.md": {
                 "type": "file",
-                "sha256": "ed1b75a89b8ec4d67787774ef6c4e8b98eace16c63348f42e969e6ffa67cb656",
+                "sha256": "ecac89155f910f064fd306e89c74585cabdb2142aba4f2acc0cead092ae1d1a5",
                 "mode": 420
               },
-              "upgrading-to-gpt-5p6-sol.md": {
+              "upgrading-to-gpt-6-astra.md": {
                 "type": "file",
-                "sha256": "9a918a0c8dd051d574f2fd0309201afa8a9b9c08241c11ca1fb0ac2f4724e7ac",
+                "sha256": "62ef6d22684662a019d203834fe1205a07e4ca4c65dddcbabe1bb51efe1aa840",
                 "mode": 420
               }
             }
@@ -8532,6 +8532,17 @@
             "type": "directory",
             "mode": 493,
             "entries": {
+              "__pycache__": {
+                "type": "directory",
+                "mode": 493,
+                "entries": {
+                  "identifier_validation.cpython-314.pyc": {
+                    "type": "file",
+                    "sha256": "e7790a05f2d80642dc27b4d891921b3abf12f7a0a675b5d9c8ef1d29c9a4e377",
+                    "mode": 420
+                  }
+                }
+              },
               "create_basic_plugin.py": {
                 "type": "file",
                 "sha256": "272cb14e02ad7c76ac40777443c49cfecfa333ee28ab7f6214210b72c8fd02ae",
@@ -8639,17 +8650,6 @@
             "type": "directory",
             "mode": 493,
             "entries": {
-              "__pycache__": {
-                "type": "directory",
-                "mode": 493,
-                "entries": {
-                  "generate_openai_yaml.cpython-314.pyc": {
-                    "type": "file",
-                    "sha256": "df711838b63743d0360b2099f0b3cd5a54bd9728e8a0f413eb41b782b2363bfc",
-                    "mode": 420
-                  }
-                }
-              },
               "generate_openai_yaml.py": {
                 "type": "file",
                 "sha256": "816df12072d74faf924d802a6599a139997e1441e90bfe4869ec304f2e5e2851",

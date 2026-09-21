@@ -1,0 +1,24 @@
+# Product strategy, finance, customer research, SEO, marketing, sales, and conversion.
+ab-test-setup
+book-marketing
+competitive-landscape
+competitor-alternatives
+competitor-profiling
+content-strategy
+copywriting
+customer-research
+data-storytelling
+deep-research
+email-sequence
+internal-comms
+launch-strategy
+marketing-psychology
+page-cro
+paid-ads
+patreon-manager
+presentation-design
+revops
+sales-enablement
+seo-pro
+social-content
+startup-finance

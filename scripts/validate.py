@@ -43,7 +43,7 @@ def main():
         p=pathlib.Path.home()/'.codex/skills'/name/'SKILL.md';_,front,body=p.read_text().split('---',2)
         metrics['personalDescriptions']+=len(yaml.safe_load(front)['description']);metrics['personalBodies']+=len(body)
     metrics['personalEntrypoints']=len(actual)
-    if len(actual)!=63 or metrics['personalDescriptions']>8000:errors.append(f'budget {metrics}')
+    if len(actual)!=64 or metrics['personalDescriptions']>8000:errors.append(f'budget {metrics}')
     caps=json.loads((ROOT/'catalog/capabilities.json').read_text())
     if len(caps)!=138 or len({x['original'] for x in caps})!=138:errors.append('incomplete capability mapping')
     for c in caps:

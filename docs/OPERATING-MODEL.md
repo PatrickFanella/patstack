@@ -1,0 +1,54 @@
+# Agent configuration source of truth
+
+Author personal Codex skills, optional skill profiles, and Kvant's Codex bootstrap in this repository. Installed copies are deployments. Edit a source once, validate, commit, preview, apply, and verify. Keep the source repository private until redistribution and publication scope are reviewed.
+
+## Ownership
+
+| Material | Authority | Deployment |
+|---|---|---|
+| Curated personal skills | `skills/` and `catalog/proposed-catalog.json` | `~/.codex/skills/` via `scripts/install.py` |
+| Shared interview and handoff | `shared/` | `~/.agents/skills/`; preserved by profile switching |
+| Optional reservoir | `library/skills/` | Eligible skills copied to `~/.agents/skills/` by the profile command |
+| Optional profile membership | `profiles/*.txt` | `~/.agents/skill-profiles` links here |
+| Profile command | `scripts/skill-profile` | `~/.agents/bin/skill-profile` links here |
+| Global Codex context and RTK | `instructions/` | `~/.codex/AGENTS.md` and `RTK.md` link here |
+| Shared docs policy and HOMELAB | Ars Malefica canonical policy/host briefings | Guarded `sync-briefings.py` generates `~/.homelab/HOMELAB.md` |
+| Blacktower package and fleet enablement | Blacktower source and Estate Config `skills/hosts.json` | Estate Config's host-selected deployment |
+| OS/system/plugin skills | Their owning package or plugin | Their managed directories; never edit their caches |
+
+The 322-skill reservoir is preserved for selection and research, not a blanket endorsement. Some entries have been superseded by curated owners. Profiles filter curated and retired names, so old entrypoints cannot silently undo consolidation. Keep substantial optional procedures behind references in the owning skill.
+
+Blacktower and personal Codex are separate distributions. Do not copy one over the other. Sputnik's `codex-skills` command uses Estate Config and toggles Codex configuration; Kvant's profile command manages optional shared copies. A future shared UI should call these explicit backends and show ownership, pending changes, and restart requirements. It must never edit package caches directly or pretend one profile applies identically to all clients.
+
+## Daily use
+
+```sh
+rtk proxy ~/.agents/bin/skill-profile status
+rtk proxy ~/.agents/bin/skill-profile list
+rtk proxy ~/.agents/bin/skill-profile plan docs-research
+rtk proxy ~/.agents/bin/skill-profile activate docs-research
+rtk proxy ~/.agents/bin/skill-profile deactivate
+```
+
+These profiles change the optional shared skills, not the curated Codex base or plugin skills. Start a fresh agent session after changing discovery. The current conversation retains the catalog loaded at its start.
+
+Use `requirements-interview` for a requested `grill-me` or `grill-with-docs`; its named mode supports deeper rounds without turning ordinary tasks into interviews. `unslop` handles prose editing. `code-review` owns blast-radius review. `implementation-plan` owns a reviewable decision trail for long efforts.
+
+## Maintenance
+
+Read the repository AGENTS.md, then the relevant `authoring/writing-for-agents/` reference when editing agent instructions. Define a specific trigger, an observable result, and nearby cases that should not trigger it. Preserve existing invocation policies; upstream Cursor/Claude frontmatter is not automatically Codex policy.
+
+1. Check Git status and installed drift. Preserve intentional installed changes back into their source after reviewing the diff. Never rewrite the installer baseline just to obtain a pass.
+2. Edit source files and any changed catalog ownership. Keep upstream URL, exact revision, file hash, license, and adaptation notes in the review ledger.
+3. Run `rtk proxy python scripts/validate.py` and `rtk proxy python -m unittest discover -s tests -v`. Use behavioral trials for changed workflows and report which were simulated versus run in a new model session.
+4. Commit reviewed source. Run `rtk proxy python scripts/install.py plan` and inspect changed destinations, then `apply` and `verify`. The install journal records verified backups and supports `rollback --run PATH`.
+5. For source links, use `scripts/link-workstation.py plan`, inspect, then `apply`. Its recorded before-state guards replacements and its journal supports rollback.
+6. Capture fresh discovery with `scripts/discovery.py`. Check owners appear once, retired names stay absent, and repo-local skills remain local.
+
+To update an optional skill already active, edit its canonical library source and reconcile the active copy deliberately; drift is a stop, not a reason to overwrite. `promote` exists for an intentional active edit/new skill, preserves the replaced library version, and refuses curated owners. Review and commit its repository diff afterward.
+
+## Instruction chain
+
+The client supplies its runtime rules, conversation, available tools, and selected skill metadata. User-controlled Codex context starts at the global AGENTS.md; nearest project instructions add local scope. RTK is required shell guidance. HOMELAB supplies host and documentation policy, with dated history loaded only when relevant. Skills expose names/descriptions for selection; procedures and references are loaded when needed. Exact expansion and context packing depend on the client; filesystem inventory is not a complete runtime prompt trace.
+
+Keep infrastructure history and operating notes in Ars Malefica. Keep executable configuration in its owning repository. Documentation should link to the owner instead of copying editable skill bodies. Fleet rollout of this personal repository requires host inventories, destination mappings, preview, and guarded application; this workstation release does not claim fleet parity.

@@ -1,6 +1,6 @@
 # Personal Codex skills
 
-This repository authors the personal collection independently of Blacktower’s package catalog. It contains 61 managed personal entrypoints, two shared-personal overrides, and one repository-local Blacktower entrypoint. Two externally owned OS symlinks complete the 63-entrypoint personal catalog.
+This repository authors the personal collection independently of Blacktower’s package catalog. It contains 62 managed personal entrypoints, two shared-personal overrides, and one repository-local Blacktower entrypoint. Two externally owned OS symlinks complete the 64-entrypoint personal catalog.
 
 ## Layout and ownership
 
@@ -50,3 +50,5 @@ Edit authored sources here; never maintain installed copies as the source of tru
 Before each release, run validation and focused helper tests, then bounded behavior fixtures. Permit at most one repair-and-retest round per failed behavioral case. Capture fresh `skills/list` in Blacktower and an unrelated repository with `scripts/discovery.py`. Confirm shared owners appear once, retired names are absent, and the Blacktower skill stays local. Source character budgets and runtime metadata measurements are distinct from model token billing; report unavailable token usage explicitly.
 
 There is no remote configured. Publishing or pushing this repository requires a separate request.
+
+The optional library, profiles, profile command, and global Codex/RTK sources are now maintained here. See [the operating model](docs/OPERATING-MODEL.md) and [the September review](reports/2026-09-20-upstream-review.md).

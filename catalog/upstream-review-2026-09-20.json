@@ -1,0 +1,767 @@
+[
+  {
+    "collection": "pstack",
+    "name": "architect",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/architect/SKILL.md",
+    "sha256": "897a59beaa3cab107d98c256206e062cc4a5e9421a45b9d462fbded19291fea5",
+    "owner": "architecture-patterns",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "arena",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/arena/SKILL.md",
+    "sha256": "8d431f7b1aa19daf6300366fc876c4d1aadac06417ec5502407345ffaf4e90d9",
+    "owner": null,
+    "decision": "Not activated: automatic fan-out/model assumptions conflict with bounded, authorized delegation; use existing review tools when requested."
+  },
+  {
+    "collection": "pstack",
+    "name": "automate-me",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/automate-me/SKILL.md",
+    "sha256": "1510979b0b71b54284427a19c09918f8b1fdfc168f9b7f9e30098793a5ec88ef",
+    "owner": null,
+    "decision": "Not activated: would introduce a second setup/style authority; keep this repository and existing runtime policies."
+  },
+  {
+    "collection": "pstack",
+    "name": "blast-radius",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/blast-radius/SKILL.md",
+    "sha256": "20cb2945f5fe62055166f745107274af5f19428ca033e53a9b8bc69650d3ded1",
+    "owner": "code-review",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "bro",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/bro/SKILL.md",
+    "sha256": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb",
+    "owner": "unslop",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "create-verification-skill",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/create-verification-skill/SKILL.md",
+    "sha256": "644f2551403c1bca01a2855b34611b6e7be0ce0dc5b204514c376c0f6a6e6ac4",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "pstack",
+    "name": "figure-it-out",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/figure-it-out/SKILL.md",
+    "sha256": "e041c64a39f1084a20e60ee99762c4dbd3ec8be56ed33fd68ea867b8bd8bd3e4",
+    "owner": "implementation-plan",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "how",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/how/SKILL.md",
+    "sha256": "06b714dbd830bc829bfb89e33a1c39daf6d72ea412e488ea9d65f5f33b885a0c",
+    "owner": "codemap",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "interrogate",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/interrogate/SKILL.md",
+    "sha256": "2867910309e81411123ae4edca68ffca5795e66521d3f3bc0876f6213b542fb9",
+    "owner": null,
+    "decision": "Not activated: automatic fan-out/model assumptions conflict with bounded, authorized delegation; use existing review tools when requested."
+  },
+  {
+    "collection": "pstack",
+    "name": "maintain-verification-skill",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/maintain-verification-skill/SKILL.md",
+    "sha256": "515c0eaa054b3f6be1b1fb06f2c2f173c80fddb58bbcac57576f89c479bc68e8",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "pstack",
+    "name": "make-bot-ui",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/make-bot-ui/SKILL.md",
+    "sha256": "3624c8ef16cf2e48deb2a4049e72c6962a9431c8d6c6af90e7bd7ea0375224ec",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "pstack",
+    "name": "no-comments",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/no-comments/SKILL.md",
+    "sha256": "5c5b0882297d704c3a9720c52b7a793c68b013eaf717989f0945624efdfe2b05",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "pstack",
+    "name": "poteto-mode",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/poteto-mode/SKILL.md",
+    "sha256": "b3c505602b82fb3641a3983e9c46fb974881faa12ece1af804fae27afb7be532",
+    "owner": null,
+    "decision": "Not activated: would introduce a second setup/style authority; keep this repository and existing runtime policies."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-attack-the-premise",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-attack-the-premise/SKILL.md",
+    "sha256": "c87bd7536f772f8a403ad8155535ee17a1bbec9a353156693eb3bb1520c87ae3",
+    "owner": "systematic-debugging",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-boundary-discipline",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-boundary-discipline/SKILL.md",
+    "sha256": "62ac2862c2caa22dd14531f51c9c6bb445ceb198ca98a687e25b4d47c1f10a28",
+    "owner": "api-development",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-build-the-lever",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-build-the-lever/SKILL.md",
+    "sha256": "458b269eab8e95a1573276955312f7d2a13ae8599879a9efc748248f6bc34b56",
+    "owner": "codemod-surgeon",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-encode-lessons-in-structure",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-encode-lessons-in-structure/SKILL.md",
+    "sha256": "77044c83a9ac6df78fc643887ea5f1f11f082adaf14b717c060cdaed03cce863",
+    "owner": "codemod-surgeon",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-exhaust-the-design-space",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-exhaust-the-design-space/SKILL.md",
+    "sha256": "8583310d7297b7823d75494faa57b003564d436807febecdecbd8321abe5cf6e",
+    "owner": "architecture-patterns",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-experience-first",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-experience-first/SKILL.md",
+    "sha256": "58903529d733b1c1a7c9ccf127d45ef3c7d0d9f0b81164a4dc6b80efe6f2912b",
+    "owner": "architecture-patterns",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-fix-root-causes",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-fix-root-causes/SKILL.md",
+    "sha256": "ba4cd38da1dcc8fe5432feb64457cba95594736a9b21b2ebf8f8c52aee068707",
+    "owner": "systematic-debugging",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-foundational-thinking",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-foundational-thinking/SKILL.md",
+    "sha256": "864b827e8199d946ce58beca0f89c4ed4099ed6e426fb698a3aaa45de2a9eea2",
+    "owner": "architecture-patterns",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-guard-the-context-window",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-guard-the-context-window/SKILL.md",
+    "sha256": "9f60e2c79b35f865cb103462f9128c6760b70f603475d1e535e5930f61840f66",
+    "owner": "implementation-plan",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-laziness-protocol",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-laziness-protocol/SKILL.md",
+    "sha256": "9006579e9e3f33955d17569733db688ae65f22577dc3b21803d219a5a8445aff",
+    "owner": "refactor",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-make-operations-idempotent",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-make-operations-idempotent/SKILL.md",
+    "sha256": "540738217c3da7bf513b9886924ad6a2bc77e58be867f5bd2e1831c74bf2ce70",
+    "owner": "verify-behavior",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-migrate-callers-then-delete-legacy-apis",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md",
+    "sha256": "09978915a4a11990cf0a9a02d9c08cc59e0b7a04c5c24b83aa560fbe4146f75b",
+    "owner": "refactor",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-minimize-reader-load",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-minimize-reader-load/SKILL.md",
+    "sha256": "42551c5dc74cd578163c148da552db3ff67d29b78600ef216bfd311fb828fe69",
+    "owner": "refactor",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-model-the-domain",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-model-the-domain/SKILL.md",
+    "sha256": "bbadbb9a723fac3f76e782ae45665eb94058ec10993e4bae36d4dc6b0e4eac07",
+    "owner": "architecture-patterns",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-never-block-on-the-human",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-never-block-on-the-human/SKILL.md",
+    "sha256": "d82bce9ab9193249d1ec0d514202d89602f0fd3d312174d622c2dd222bae5a2e",
+    "owner": "implementation-plan",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-outcome-oriented-execution",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-outcome-oriented-execution/SKILL.md",
+    "sha256": "beedcaed75572a6a1662d47f16da203c2bd2c9dbffbbd678d4ba187d67b7e670",
+    "owner": "implementation-plan",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-prove-it-works",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-prove-it-works/SKILL.md",
+    "sha256": "ae13d287984a5864312b6286899d4ee2b60f8272b5e5e8fcc586a7c3ea51020b",
+    "owner": "verify-behavior",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-redesign-from-first-principles",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-redesign-from-first-principles/SKILL.md",
+    "sha256": "a1c7fd0a96b40e12a74bceb0e6bb20a9666dd844dcabfb624acb27da23b929fe",
+    "owner": "architecture-patterns",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-separate-before-serializing-shared-state",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-separate-before-serializing-shared-state/SKILL.md",
+    "sha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
+    "owner": "architecture-patterns",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-sequence-verifiable-units",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-sequence-verifiable-units/SKILL.md",
+    "sha256": "761390804ee36c32f5338d8db47ec54463d40ff96dbb296dfafabcd5f2593eec",
+    "owner": "implementation-plan",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-subtract-before-you-add",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-subtract-before-you-add/SKILL.md",
+    "sha256": "a983a50e732c1ed315eba7aaf47a61329e31c4794eb1ab9d25d9945265b31e03",
+    "owner": "refactor",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-test-behavior-not-implementation",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-test-behavior-not-implementation/SKILL.md",
+    "sha256": "87e40efe4e486f7ea639d2ed1fc0abe6c93b8fd0e89a81218086909d2470a52e",
+    "owner": "repository-test-maintenance",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "principle-type-system-discipline",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/principle-type-system-discipline/SKILL.md",
+    "sha256": "c83da8031ffb4c86410030d3e261f659598fca2b7d8158fd9dc269d70a3a025e",
+    "owner": "typescript-pro",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "recall",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/recall/SKILL.md",
+    "sha256": "d265b0e5b6dc5b89c0407f3387d24462c988e1990a37d5359735137908128c5a",
+    "owner": "session-handoff",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "reflect",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/reflect/SKILL.md",
+    "sha256": "6a4d4ccaace9ce88c3e268fcbedf3cfd40e527162a5e5aad6de8edbaf5e2b83f",
+    "owner": null,
+    "decision": "Not activated: automatic fan-out/model assumptions conflict with bounded, authorized delegation; use existing review tools when requested."
+  },
+  {
+    "collection": "pstack",
+    "name": "setup-pstack",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/setup-pstack/SKILL.md",
+    "sha256": "2399a5670c6408e92a996299c9de9f22736997cb7e835c694309e7c6fc8c39bf",
+    "owner": null,
+    "decision": "Not activated: would introduce a second setup/style authority; keep this repository and existing runtime policies."
+  },
+  {
+    "collection": "pstack",
+    "name": "show-me-your-work",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/show-me-your-work/SKILL.md",
+    "sha256": "831e85ba3f84f38bf338cd03e6af050fea357752e25a825e334c99f59d7f2077",
+    "owner": "implementation-plan",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "swarm",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/swarm/SKILL.md",
+    "sha256": "d578d877c3b8b9de7163f52579c4683337a940acc0fbe4496a498f5d3b27df30",
+    "owner": null,
+    "decision": "Not activated: automatic fan-out/model assumptions conflict with bounded, authorized delegation; use existing review tools when requested."
+  },
+  {
+    "collection": "pstack",
+    "name": "tdd",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/tdd/SKILL.md",
+    "sha256": "011cab0ecc04a3632121efb493ae4d60aa282a9b72c66de74dd8ad7e4313e05a",
+    "owner": "tdd",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "teach",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/teach/SKILL.md",
+    "sha256": "bd286e5a6290673be2cd28aef7af2ec7f1fb138e6bce156ea657368c7e7fc8a4",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "pstack",
+    "name": "technical-writing",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/technical-writing/SKILL.md",
+    "sha256": "6d6d9e625ae412ee8f36df8deb6fd9203d7c6acca776d5ee3cabbb9126f8b84c",
+    "owner": "technical-writing",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "typescript-best-practices",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/typescript-best-practices/SKILL.md",
+    "sha256": "28f9e61710e205f6f3c5476f333483cff0e988f6a5b639e2faad536344b40c5e",
+    "owner": "typescript-pro",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "unslop",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/unslop/SKILL.md",
+    "sha256": "c6d2572294d933a428211921069e9a248490e9b466ca59437cb4d9de248600ca",
+    "owner": "unslop",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "pstack",
+    "name": "why",
+    "revision": "6ed0f7a9504f577d7529064103cecce9be7dfc5e",
+    "source": "https://github.com/cursor/plugins/blob/6ed0f7a9504f577d7529064103cecce9be7dfc5e/pstack/skills/why/SKILL.md",
+    "sha256": "222b93789754ba6ee901835137184acdca667f7e47c523bcc85aca86675fb249",
+    "owner": "code-review",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "ask-matt",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/ask-matt/SKILL.md",
+    "sha256": "b25d86fb36b1d294eeead5d7db529f86135f9671f2afcd607579a63bb2213769",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "code-review",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/code-review/SKILL.md",
+    "sha256": "47f4e52c21694def9c7c11cbfbf891ca35eac7a93e395797515be3c8a409ae50",
+    "owner": "code-review",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "codebase-design",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/codebase-design/SKILL.md",
+    "sha256": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
+    "owner": "architecture-patterns",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "diagnosing-bugs",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/diagnosing-bugs/SKILL.md",
+    "sha256": "77f3cf31bc99b2f49af943222526531fcc9fc41d047626d3640e875e85af3e84",
+    "owner": "systematic-debugging",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "domain-modeling",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/domain-modeling/SKILL.md",
+    "sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e",
+    "owner": "architecture-patterns",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "grill-with-docs",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/grill-with-docs/SKILL.md",
+    "sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+    "owner": "requirements-interview",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "implement",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/implement/SKILL.md",
+    "sha256": "6d3fd9e83b8f36e5213854779db49b256a457a7ebb4a503e53fa7dcff696adc3",
+    "owner": "implementation-plan",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "improve-codebase-architecture",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/improve-codebase-architecture/SKILL.md",
+    "sha256": "d1ac25511a936ff4250a48dbcefda363837d6bb9321b3cba73df99fa37270a75",
+    "owner": "architecture-patterns",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "prototype",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/prototype/SKILL.md",
+    "sha256": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
+    "owner": "prototype",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "research",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/research/SKILL.md",
+    "sha256": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "resolving-merge-conflicts",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/resolving-merge-conflicts/SKILL.md",
+    "sha256": "9d8114f8ef0b31f535a265fc05c364bd8cf2e2895a830040e06c22acb11f54b0",
+    "owner": "git-advanced-workflows",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "setup-matt-pocock-skills",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/setup-matt-pocock-skills/SKILL.md",
+    "sha256": "2bcd89e97777cdb705914424e39c97d5db524c8eb4eafac8120778a07774f0ec",
+    "owner": null,
+    "decision": "Not activated: would introduce a second setup/style authority; keep this repository and existing runtime policies."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "tdd",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/tdd/SKILL.md",
+    "sha256": "cb01f66bebfaa25fa1f88e6b7e769cd9fd9f35b1120b8563749820738814c927",
+    "owner": "tdd",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "to-spec",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/to-spec/SKILL.md",
+    "sha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "to-tickets",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/to-tickets/SKILL.md",
+    "sha256": "5c9fba69845c2519b9b35b9af42ae5142c21f8ca15ac2123dc2722002c8058ae",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "triage",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/triage/SKILL.md",
+    "sha256": "623a2ed692bdc77d2090e2a3dea3b627dd722ad3bbaca0be83aada75292c8fc4",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "wayfinder",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/wayfinder/SKILL.md",
+    "sha256": "fee6e1d0c50f0e736b4ef8a599060c959afae904c9a97d82c97f049fcc3aa0f1",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "wizard",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/engineering/wizard/SKILL.md",
+    "sha256": "bdf31d48211ea559878f95a4f344aeabf8d85897488ba564382bab0b000daac1",
+    "owner": "wizard",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "claude-handoff",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/in-progress/claude-handoff/SKILL.md",
+    "sha256": "6738e8b7c7899ea0038fb7a5c859ca1b90c7b1eb40123dcdbe94c51b5b119f12",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "implement-spec",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/in-progress/implement-spec/SKILL.md",
+    "sha256": "f703b5f41df9c2202e19540d203e0d5fc32613572a838a070136cc22e712b129",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "loop-me",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/in-progress/loop-me/SKILL.md",
+    "sha256": "e44d1cc3e760fb86ac42964c2a5f1fcac511715db50fb375f3f7be814de1eaa7",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "pr",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/in-progress/pr/SKILL.md",
+    "sha256": "e91dc57fa0ee1d8d2fd35562425c943d377f0acdfba6245858a619990fcff0e8",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "retro",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/in-progress/retro/SKILL.md",
+    "sha256": "33fbc28568e3146f20fd908b12998bc0ab30aa4f4c87288199a40793efa94696",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "setup-ts-deep-modules",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/in-progress/setup-ts-deep-modules/SKILL.md",
+    "sha256": "29acca66ac99d4532e2a6f0370d8125d7cba1e87c9ac66573203c75189d3e6c7",
+    "owner": "typescript-pro",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "writing-beats",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/in-progress/writing-beats/SKILL.md",
+    "sha256": "a96abafa2372eede8267d770138b322d6125da8adaa7ccf0a5e08e4ee13ee71e",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "writing-fragments",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/in-progress/writing-fragments/SKILL.md",
+    "sha256": "298b0edd23df229183630de592ed8aa4289233560f2040691f6eb77caeaad4ea",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "writing-shape",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/in-progress/writing-shape/SKILL.md",
+    "sha256": "f5e6c57bdd85178ace4a260c92f46da6b64ddee18215b461d875739c68976f72",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "git-guardrails-claude-code",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/misc/git-guardrails-claude-code/SKILL.md",
+    "sha256": "69b291d655626a01602b998a1836fcb93c058ede68dfafddfd71e87f17074764",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "migrate-to-shoehorn",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/misc/migrate-to-shoehorn/SKILL.md",
+    "sha256": "de4da4c11d924fac79c924b2ee3d2db4a5cb98386eb490a599119463d036ae72",
+    "owner": "typescript-pro",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "scaffold-exercises",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/misc/scaffold-exercises/SKILL.md",
+    "sha256": "75f5c9d771606fb9762f16522efc954df11c324f87148d8ff069bce166257de9",
+    "owner": "scaffold-exercises",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "setup-pre-commit",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/misc/setup-pre-commit/SKILL.md",
+    "sha256": "c9819d7f1e3b198064edc1faa3154224ed67395e9f07f5d3cea4b67cf0a11a98",
+    "owner": "ci-maintenance",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "grill-me",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/productivity/grill-me/SKILL.md",
+    "sha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+    "owner": "requirements-interview",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "grilling",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/productivity/grilling/SKILL.md",
+    "sha256": "10ff989e7498b23b5acb49d5048f11dcd906757d2f79c5cdf8a00001381296f2",
+    "owner": "requirements-interview",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "handoff",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/productivity/handoff/SKILL.md",
+    "sha256": "7c62de979fdc7ac32fb5ddb2146156c917f80ee070d30fadc9d40343c4b6ed25",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "teach",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/productivity/teach/SKILL.md",
+    "sha256": "a32df9dcdfc0c4fdc1c98e1ed3940c5f56b84c1aa90ff60346f32b8b53915b43",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "to-questionnaire",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/productivity/to-questionnaire/SKILL.md",
+    "sha256": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b",
+    "owner": null,
+    "decision": "Not activated: niche workflow, overlapping orchestration, or no demonstrated need in this review."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "wait-what",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/productivity/wait-what/SKILL.md",
+    "sha256": "e3f44e3ccbc0e7b62f20ba70b295fc9c9f4aa3f96c77168faee1c71bacbf4215",
+    "owner": "unslop",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  },
+  {
+    "collection": "matt-pocock",
+    "name": "writing-for-agents",
+    "revision": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+    "source": "https://github.com/mattpocock/skills/blob/c55ee46073ed923f86ce59a5eb3b6d895095d1b7/skills/productivity/writing-for-agents/SKILL.md",
+    "sha256": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a",
+    "owner": "authoring reference",
+    "decision": "Existing curated owner or added conditional procedure; retain one entrypoint."
+  }
+]
