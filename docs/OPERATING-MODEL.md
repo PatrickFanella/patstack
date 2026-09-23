@@ -47,7 +47,30 @@ Read the repository AGENTS.md, then the relevant `authoring/writing-for-agents/`
 
 To update an optional skill already active, edit its canonical library source and reconcile the active copy deliberately; drift is a stop, not a reason to overwrite. `promote` exists for an intentional active edit/new skill, preserves the replaced library version, and refuses curated owners. Review and commit its repository diff afterward.
 
-## Instruction chain
+## Claude Code on Kvant
+
+Claude's `~/.claude/CLAUDE.md` links to `instructions/CLAUDE.md`, which imports
+the shared global context. The workstation link manifest exposes the current
+62 curated personal skills and five active shared skills through individual
+links in `~/.claude/skills/`. Its two existing OS-owned skills and account-synced
+skills keep their owners. System and Codex plugin skills are not copied.
+After changing optional profile membership, review Claude's links too; the
+manifest records this selection and does not automatically follow new names.
+
+Use `python scripts/claude-mcp.py plan`, then `apply` and `verify`, to add
+portable Codex MCP entries to Claude's user configuration. The script preserves
+other state, refuses conflicting entries, and saves a private backup before
+writing. It excludes the Codex desktop bridge and invalid or unsupported
+entries. Registration does not establish connectivity or transfer OAuth login.
+Run Claude's MCP health check separately and start a fresh session after changes.
+To undo an added MCP entry, remove it only if it still matches the imported
+entry; do not restore the entire backup over newer Claude state. Source-link
+rollback uses the recorded `link-workstation.py` transaction.
+
+Claude keeps its own runtime, model, permissions, hooks, authentication, and
+memory. A linked skill that needs a missing tool must report the limitation.
+
+## Runtime instruction chain
 
 The client supplies its runtime rules, conversation, available tools, and selected skill metadata. User-controlled Codex context starts at the global AGENTS.md; nearest project instructions add local scope. RTK is required shell guidance. HOMELAB supplies host and documentation policy, with dated history loaded only when relevant. Skills expose names/descriptions for selection; procedures and references are loaded when needed. Exact expansion and context packing depend on the client; filesystem inventory is not a complete runtime prompt trace.
 
