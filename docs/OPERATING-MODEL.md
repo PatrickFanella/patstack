@@ -67,6 +67,11 @@ To undo an added MCP entry, remove it only if it still matches the imported
 entry; do not restore the entire backup over newer Claude state. Source-link
 rollback uses the recorded `link-workstation.py` transaction.
 
+The local `claude` launcher links to `scripts/claude-launcher`. It retains mise
+version selection and resolves the executable with `mise which` to avoid
+recursing through its own PATH entry. Its former wrapper is backed up by the
+source-link installer.
+
 Claude keeps its own runtime, model, permissions, hooks, authentication, and
 memory. A linked skill that needs a missing tool must report the limitation.
 

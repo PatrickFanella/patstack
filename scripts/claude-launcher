@@ -1,0 +1,10 @@
+#!/bin/bash
+# Resolve the executable explicitly: mise exec's PATH may select this wrapper.
+export MISE_MINIMUM_RELEASE_AGE=0
+mise use -g "claude" || exit 1
+claude_executable=$(mise which claude) || exit 1
+if [[ ! -x "$claude_executable" || "$claude_executable" -ef "$0" ]]; then
+  printf '%s\n' 'Could not resolve the installed Claude executable.' >&2
+  exit 1
+fi
+exec "$claude_executable" "$@"

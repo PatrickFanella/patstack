@@ -73,7 +73,8 @@
     "/home/onnwee/.claude/skills/requirements-interview": "/home/onnwee/.agents/skills/requirements-interview",
     "/home/onnwee/.claude/skills/session-handoff": "/home/onnwee/.agents/skills/session-handoff",
     "/home/onnwee/.claude/skills/summarization": "/home/onnwee/.agents/skills/summarization",
-    "/home/onnwee/.claude/skills/web-search": "/home/onnwee/.agents/skills/web-search"
+    "/home/onnwee/.claude/skills/web-search": "/home/onnwee/.agents/skills/web-search",
+    "/home/onnwee/.local/bin/claude": "/home/onnwee/Work/Tools/codex-skills/scripts/claude-launcher"
   },
   "baseline": {
     "/home/onnwee/.agents/skill-library": {
@@ -14451,6 +14452,11 @@
     "/home/onnwee/.claude/skills/requirements-interview": null,
     "/home/onnwee/.claude/skills/session-handoff": null,
     "/home/onnwee/.claude/skills/summarization": null,
-    "/home/onnwee/.claude/skills/web-search": null
+    "/home/onnwee/.claude/skills/web-search": null,
+    "/home/onnwee/.local/bin/claude": {
+      "type": "file",
+      "sha256": "db7dedcd66f50fdf4bc93d7fd94052f66c7ba4322820d3eb066ba82efa7eabad",
+      "mode": 493
+    }
   }
 }
