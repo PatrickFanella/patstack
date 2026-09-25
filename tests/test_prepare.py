@@ -22,3 +22,10 @@ class PrepareTests(unittest.TestCase):
    with self.assertRaisesRegex(RuntimeError,'Drift'):installer.prepare(root,state)
    with self.assertRaisesRegex(RuntimeError,'intervening edits'):installer.rollback(run,state)
    self.assertEqual((personal/'ordinary/SKILL.md').read_text(),'intervening edit')
+
+   scoped=installer.prepare(root,state,only_skills=['frontend-design'])
+   self.assertEqual([op['destination'] for op in scoped['operations']],[str(personal/'frontend-design')])
+   installer.apply(scoped,state)
+   self.assertEqual((personal/'ordinary/SKILL.md').read_text(),'intervening edit')
+   with self.assertRaisesRegex(RuntimeError,'Drift'):installer.prepare(root,state,only_skills=['ordinary'])
+   with self.assertRaisesRegex(RuntimeError,'Unknown personal skills'):installer.prepare(root,state,only_skills=['missing'])

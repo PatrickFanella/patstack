@@ -826,5 +826,11 @@
     "owner": "authoring reference",
     "kind": "reference",
     "path": "authoring/writing-for-agents/guide.md"
+  },
+  {
+    "original": "t3-repo-setup",
+    "owner": "t3-repo-setup",
+    "kind": "authored",
+    "path": "skills/t3-repo-setup/SKILL.md"
   }
 ]

@@ -74,7 +74,8 @@
     "/home/onnwee/.claude/skills/session-handoff": "/home/onnwee/.agents/skills/session-handoff",
     "/home/onnwee/.claude/skills/summarization": "/home/onnwee/.agents/skills/summarization",
     "/home/onnwee/.claude/skills/web-search": "/home/onnwee/.agents/skills/web-search",
-    "/home/onnwee/.local/bin/claude": "/home/onnwee/Work/Tools/codex-skills/scripts/claude-launcher"
+    "/home/onnwee/.local/bin/claude": "/home/onnwee/Work/Tools/codex-skills/scripts/claude-launcher",
+    "/home/onnwee/.claude/skills/t3-repo-setup": "/home/onnwee/.codex/skills/t3-repo-setup"
   },
   "baseline": {
     "/home/onnwee/.agents/skill-library": {

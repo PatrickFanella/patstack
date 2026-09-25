@@ -1,6 +1,6 @@
 # Personal Codex skills
 
-This repository authors the personal collection independently of Blacktower’s package catalog. It contains 62 managed personal entrypoints, two shared-personal overrides, and one repository-local Blacktower entrypoint. Two externally owned OS symlinks complete the 64-entrypoint personal catalog.
+This repository authors the personal collection independently of Blacktower’s package catalog. It contains 63 managed personal entrypoints, two shared-personal overrides, and one repository-local Blacktower entrypoint. Two externally owned OS symlinks complete the 65-entrypoint personal catalog.
 
 ## Layout and ownership
 
@@ -8,7 +8,7 @@ This repository authors the personal collection independently of Blacktower’s 
 - `shared/`: canonical `requirements-interview` and `session-handoff`, installed in `~/.agents/skills`. Duplicate Codex copies are retired.
 - `repository-skills/blacktower-development`: installed only in Blacktower’s `.agents/skills`, privately excluded through Git’s local exclude file.
 - `authoring/`: non-discovered guidance for maintaining the collection.
-- `catalog/proposed-catalog.json`: authoritative target; `capabilities.json` maps all 138 original capabilities to owners and procedures. `retired-names.json` maps retired names, with no compatibility entrypoints.
+- `catalog/proposed-catalog.json`: authoritative target; `capabilities.json` maps 138 imported capabilities and the authored T3 onboarding capability to owners and procedures. `retired-names.json` maps retired names, with no compatibility entrypoints.
 - `catalog/baseline.json`: pre-migration hashes, modes, and symlinks. `installation.json` records this host’s destinations and immutable archive location.
 - `evaluations/`, `tests/`, `reports/`: bounded behavior trials, deterministic tests, discovery measurements, and rollout evidence.
 

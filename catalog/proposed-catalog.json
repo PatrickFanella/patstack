@@ -471,6 +471,14 @@
     ]
   },
   {
+    "name": "t3-repo-setup",
+    "description": "Onboard a repository into T3 development environments with isolated previews, local tests, and project actions.",
+    "scope": "personal",
+    "sources": [
+      "t3-repo-setup"
+    ]
+  },
+  {
     "name": "tdd",
     "description": "'Test-first implementation when requested: red-green-refactor, test boundaries, fixtures, and meaningful assertions.'",
     "scope": "personal",
@@ -516,6 +524,14 @@
     ]
   },
   {
+    "name": "unslop",
+    "description": "Required for user-facing prose and documentation: remove filler, vague claims, inflated language, and repetitive framing while preserving meaning, evidence, uncertainty, and voice.",
+    "scope": "personal",
+    "sources": [
+      "pstack/unslop"
+    ]
+  },
+  {
     "name": "verify-behavior",
     "description": "Verify UI, CLI, API, build, or performance claims using runnable evidence; distinguish smoke checks from regressions.",
     "scope": "personal",
@@ -557,14 +573,6 @@
     "scope": "personal",
     "sources": [
       "workflow-orchestration-patterns"
-    ]
-  },
-  {
-    "name": "unslop",
-    "description": "Required for user-facing prose and documentation: remove filler, vague claims, inflated language, and repetitive framing while preserving meaning, evidence, uncertainty, and voice.",
-    "scope": "personal",
-    "sources": [
-      "pstack/unslop"
     ]
   }
 ]

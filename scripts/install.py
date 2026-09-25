@@ -45,7 +45,7 @@ def remove(p):
 
 def statefile(state):return Path(state)/'installed.json'
 
-def prepare(root=ROOT,state=DEFAULT_STATE):
+def prepare(root=ROOT,state=DEFAULT_STATE,only_skills=None):
  root=Path(root);config=read(root/'catalog/installation.json');baseline=read(root/'catalog/baseline.json');installed=read(statefile(state),{'paths':{}})
  destinations={};groups={}
  for p in (root/'skills').iterdir():
@@ -66,6 +66,12 @@ def prepare(root=ROOT,state=DEFAULT_STATE):
  payload=original if marker in original.splitlines() else original+('' if not original or original.endswith('\n') else '\n')+marker+'\n'
  desired_exclude={'type':'file','sha256':hashlib.sha256(payload.encode()).hexdigest(),'mode':snapshot(exclude)['mode'] if snapshot(exclude) else 0o644}
  destinations[exclude]=None;groups[exclude]=3
+ if only_skills:
+  available={Path(dest).name:dest for dest,src in destinations.items() if src and Path(src).parent==root/'skills'}
+  unknown=set(only_skills)-available.keys()
+  if unknown:raise RuntimeError('Unknown personal skills: '+', '.join(sorted(unknown)))
+  selected={available[name] for name in only_skills}
+  destinations={dest:src for dest,src in destinations.items() if dest in selected}
  operations=[]
  for dest,src in sorted(destinations.items(),key=lambda x:(groups[x[0]],x[0])):
   old=installed['paths'].get(dest,baseline.get(dest))
@@ -189,10 +195,12 @@ def verify(plan,state):
 
 def main():
  parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('command',choices=['plan','apply','verify','rollback']);parser.add_argument('--state',type=Path,default=DEFAULT_STATE);parser.add_argument('--resume',type=Path);parser.add_argument('--run',type=Path);parser.add_argument('--through',type=int,choices=[1,2,3],default=3)
+ parser.add_argument('--only-skill',action='append',help='Limit plan/apply/verify to a named personal skill; preserves drift checks for selected paths')
  args=parser.parse_args()
+ if args.only_skill and (args.command=='rollback' or args.resume):parser.error('--only-skill cannot change the scope of a saved transaction')
  # plan/verify do not create or modify installation state.
- if args.command=='plan':print(json.dumps(prepare(state=args.state),indent=2));return
- if args.command=='verify':print(json.dumps(verify(prepare(state=args.state),args.state)));return
+ if args.command=='plan':print(json.dumps(prepare(state=args.state,only_skills=args.only_skill),indent=2));return
+ if args.command=='verify':print(json.dumps(verify(prepare(state=args.state,only_skills=args.only_skill),args.state)));return
  args.state.mkdir(parents=True,exist_ok=True)
  with (args.state/'installer.lock').open('a') as lock:
   fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
@@ -203,6 +211,6 @@ def main():
    if not args.resume:
     unfinished=[p for p in args.state.glob('run-*/journal.json') if read(p)['status'] in {'applying','partial','rolling-back'}]
     if unfinished:raise RuntimeError('Resume or roll back the unfinished transaction: '+str(unfinished[0].parent))
-   result=apply(None if args.resume else prepare(state=args.state),args.state,resume=args.resume,through=args.through);print(result)
+   result=apply(None if args.resume else prepare(state=args.state,only_skills=args.only_skill),args.state,resume=args.resume,through=args.through);print(result)
 
 if __name__=='__main__':main()

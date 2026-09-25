@@ -84,3 +84,15 @@ Keep infrastructure history and operating notes in Ars Malefica. Keep executable
 ## Required prose policy across hosts
 
 The canonical Agent Documentation Policy in Ars Malefica requires unslop for every prose response and documentation edit, regardless of optional profile selection. It includes direct file paths so the requirement also works when a client does not automatically select the skill. Load once per session. Kvant uses this repository's managed skill. Almaz, Dozor, and NUC received the same source with hash receipts at `~/.codex/skill-installations/required-unslop.json`; Soyuz and Sputnik retain their existing owners. Review those receipts and preserve local drift before updating remote personal copies. Full personal-catalog fleet deployment remains separate.
+
+## Installing one personal skill
+
+Use `python scripts/install.py plan --only-skill NAME`, then `apply` and `verify`
+with the same selector for a bounded personal-skill change. Selected destinations
+retain the normal source, drift, backup, and transaction checks. Other skills and
+repository-local installs are left untouched; this does not repair or verify
+unrelated drift. Saved transactions retain their original scope during resume
+and rollback.
+
+`t3-repo-setup` owns onboarding repositories into the T3 development launcher.
+Its operational guide and recipe schema remain owned by `t3-dev-environments`.
