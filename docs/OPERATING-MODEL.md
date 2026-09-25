@@ -51,7 +51,7 @@ To update an optional skill already active, edit its canonical library source an
 
 Claude's `~/.claude/CLAUDE.md` links to `instructions/CLAUDE.md`, which imports
 the shared global context. The workstation link manifest exposes the current
-62 curated personal skills and five active shared skills through individual
+63 curated personal skills and five active shared skills through individual
 links in `~/.claude/skills/`. Its two existing OS-owned skills and account-synced
 skills keep their owners. System and Codex plugin skills are not copied.
 After changing optional profile membership, review Claude's links too; the
