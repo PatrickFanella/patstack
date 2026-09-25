@@ -14458,6 +14458,7 @@
       "type": "file",
       "sha256": "db7dedcd66f50fdf4bc93d7fd94052f66c7ba4322820d3eb066ba82efa7eabad",
       "mode": 493
-    }
+    },
+    "/home/onnwee/.claude/skills/t3-repo-setup": null
   }
 }
