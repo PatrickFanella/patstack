@@ -1,3 +1,14 @@
+---
+type: reference
+status: active
+created: '2026-06-04'
+updated: 2026-06-11
+tags:
+- topic/git
+- topic/systems-agent-skills
+title: Git Safety
+---
+
 # Git Safety
 
 ## Rules

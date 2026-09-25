@@ -2,10 +2,10 @@
 type: reference
 status: active
 created: '2026-06-04'
-updated: 2026-06-11
+updated: 2026-07-24
 tags:
-- systems/agent-skills
-- workflows
+- topic/systems-agent-skills
+- topic/workflows
 title: Workflow Map
 ---
 
@@ -14,10 +14,14 @@ title: Workflow Map
 ## Routing
 
 - Journal → `003 Resources/Periodic Notes/`
-- Resource → `003 Resources/Media/<medium>/`
-- Thread → `001 Projects/Threads/`
+- Inbox clipping → `000 Inbox/Clippings/`
+- Resource → general material in `003 Resources/Media/<medium>/` or
+  `003 Resources/Reference/`
+- Thread → inquiry-bound sources and original thinking in
+  `001 Projects/Threads/<Thread>/`
 - Work → `001 Projects/Works/<type>/` (Blog Posts, Social Posts, Software, Essays, Videos, Zines, Music, Releases, Documentation)
-- Documentation → `003 Resources/Documentation/` or `003 Resources/Systems/`
+- Internal documentation → `003 Resources/Systems/`
+- Self-standing documentation → `001 Projects/Works/Documentation/`
 
 ## Capture fields
 
@@ -38,4 +42,6 @@ title: Workflow Map
 - Capture first.
 - Route immediately.
 - Add structure only after the note exists.
-- Tags use canonical hierarchy: `type/*`, `domain/*`, `status/*`, `project/*`.
+- Properties hold type and state. Tags use the discovery facets `domain/*`,
+  `project/*`, `platform/*`, `medium/*`, `method/*`, `topic/*`, and
+  `cadence/*`.

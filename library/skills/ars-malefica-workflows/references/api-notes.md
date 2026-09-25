@@ -4,8 +4,8 @@ status: active
 created: '2026-06-04'
 updated: 2026-06-11
 tags:
-- systems/agent-skills
-- api
+- topic/api
+- topic/systems-agent-skills
 title: API Notes
 ---
 

@@ -16,7 +16,7 @@ Use this skill for the recurring monthly pass over `/home/onnwee/Documents/ars-m
 
 - Treat `004 Archives/**` as historical storage. Do not bulk-normalize archives unless the user explicitly asks.
 - Treat everything outside `004 Archives/**` as managed: every note is either normalized with vault metadata or governed by source-preserving/native-schema rules.
-- Never print secrets. Check only presence/ignore status for Remotely Save and plugin data.
+- Never print secrets. Check only activation and ignore status for sync and plugin data.
 - Preserve source, vendor, generated, and clipping bodies. Metadata/link cleanup is OK; semantic rewrites need explicit user approval.
 - Stage and commit only intended vault-maintenance changes. Leave personal Obsidian UI state (`.obsidian/bookmarks.json`, graph/icon state, workspace state) uncommitted unless the user explicitly wants UI state committed.
 
@@ -25,7 +25,7 @@ Use this skill for the recurring monthly pass over `/home/onnwee/Documents/ars-m
 1. **Snapshot state**
    - Run `git status --short --ignored`.
    - Run the helper script in dry/report mode: `python3 <skill>/scripts/vault_monthly_check.py /home/onnwee/Documents/ars-malefica`.
-   - Confirm `.obsidian/plugins/remotely-save/data.json` and `.obsidian/plugins/paperless/data.json` are ignored.
+   - Confirm official Sync is enabled, Remotely Save is disabled, and retained Remotely Save plus Paperless data are ignored.
 
 2. **Empty or triage Inbox**
    - Review `000 Inbox/Inbox.md` and any non-hidden child folders.
@@ -42,12 +42,14 @@ Use this skill for the recurring monthly pass over `/home/onnwee/Documents/ars-m
 4. **Run vault health checks**
    - Open `003 Resources/Systems/Vault Health Dashboard.md`.
    - Resolve missing `type`, missing `status`, stale `updated`, orphaned notes (no outgoing AND no incoming links), and source/generated review queues.
-   - Open `Home.md` and verify all 8 Dataview queries render correctly (stale notes, orphans, inbox, deadlines, threads, works).
+   - Resolve every path in `misplaced_periodic_notes`, `missing_required_parent_notes`, `invalid_segment_ranges`, `duplicate_period_keys`, and `legacy_type_folders`.
+   - Parent grandfathering applies only to absent paths listed in [`LEGACY_SPARSE_PARENT_EXCEPTIONS`](scripts/vault_monthly_check.py). Each path has its own maximum legacy child interval end. A child after that cutoff requires the parent, and an existing malformed parent is never exempt. See Task 6 migration semantics.
+   - Open `Home.md` and verify every Dataview block renders correctly.
    - Use `003 Resources/Systems/Vault Quality Exceptions.md` to decide whether a note gets full vault metadata or native-schema/source-preserving management.
 
 5. **Normalize metadata conservatively**
    - Use existing vocabulary from `003 Resources/Systems/Vault Conventions.md`.
-   - Tags should use canonical hierarchy: `type/*`, `domain/*`, `status/*`, `project/*`.
+   - Tags should use the canonical dimensions in Vault Conventions; keep `type`, `status`, and `stage` as properties.
    - Add `updated: YYYY-MM-DD` only when a note was touched or deliberately reviewed.
    - Generated/vendor/source-like files should normally receive `type: repository-docs` or `type: source`, `status: reference`, and useful tags.
 
@@ -58,7 +60,9 @@ Use this skill for the recurring monthly pass over `/home/onnwee/Documents/ars-m
 
 7. **Validate and commit**
    - Run `/usr/bin/git diff --check`.
+   - Run `python3 <skill>/tests/test_vault_monthly_check.py`.
    - Run `python3 <skill>/scripts/vault_monthly_check.py /home/onnwee/Documents/ars-malefica --json > /tmp/vault-monthly-check.json`.
+   - Parse the report with `python3 -m json.tool /tmp/vault-monthly-check.json >/dev/null` and verify all five `hierarchy_defect_counts` are zero.
    - Run `python3 -m json.tool .obsidian/plugins/quickadd/data.json >/tmp/quickadd-json-check.out` when QuickAdd-facing files changed.
    - Run `/usr/bin/git check-ignore -v .obsidian/plugins/remotely-save/data.json .obsidian/plugins/paperless/data.json`.
    - Commit in small batches by risk band: navigation/health surfaces, active work, source/generated metadata, archive manifests.
@@ -71,7 +75,8 @@ Use this skill for the recurring monthly pass over `/home/onnwee/Documents/ars-m
 ## Bundled resources
 
 - `references/monthly-checklist.md`: copyable checklist for a monthly maintenance note.
-- `scripts/vault_monthly_check.py`: deterministic report for metadata gaps, stale workbenches, inbox markdown, Remotely Save ignore status, and uncommitted UI-state paths.
+- `scripts/vault_monthly_check.py`: deterministic report for metadata gaps, periodic-note hierarchy defects, stale workbenches, inbox markdown, sync/plugin posture, ignore status, and uncommitted UI-state paths. Hierarchy findings contain counts and paths only.
+- `tests/test_vault_monthly_check.py`: focused fixtures for all five periodic-note hierarchy checks.
 - `assets/monthly-maintenance-note.md`: template for a saved monthly maintenance report.
 
 ## Output style

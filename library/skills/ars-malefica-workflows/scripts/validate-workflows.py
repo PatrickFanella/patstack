@@ -12,7 +12,7 @@ from pathlib import Path
 REQUIRED_FILES = [
     Path("Home.md"),
     Path("003 Resources/QuickAdd/QuickAdd Workflow.md"),
-    Path("003 Resources/Media Notes.md"),
+    Path("003 Resources/Media/Media Notes.md"),
     Path("003 Resources/Systems/Capture Workflow.md"),
     Path("003 Resources/Systems/Workspace Guide.md"),
     Path("003 Resources/Systems/Obsidian Automation API.md"),

@@ -16,6 +16,8 @@ EXPECTED = {
     "Thread Synthesis.json",
     "Works Pipeline.json",
     "Documentation.json",
+    "Software.json",
+    "Writing.json",
 }
 
 

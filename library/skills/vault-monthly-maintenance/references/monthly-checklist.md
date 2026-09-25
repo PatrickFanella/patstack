@@ -7,6 +7,7 @@ Use this checklist for a 15-30 minute monthly upkeep pass.
 - [ ] `git status --short --ignored`
 - [ ] `python3 <skill>/scripts/vault_monthly_check.py /home/onnwee/Documents/ars-malefica`
 - [ ] `/usr/bin/git check-ignore -v .obsidian/plugins/remotely-save/data.json .obsidian/plugins/paperless/data.json`
+- [ ] Confirm report: official Sync enabled, Remotely Save disabled, retained private data ignored.
 
 ## 2. Inbox
 

@@ -14,6 +14,7 @@ Author personal Codex skills, optional skill profiles, and Kvant's Codex bootstr
 | Global Codex context and RTK | `instructions/` | `~/.codex/AGENTS.md` and `RTK.md` link here |
 | Shared docs policy and HOMELAB | Ars Malefica canonical policy/host briefings | Guarded `sync-briefings.py` generates `~/.homelab/HOMELAB.md` |
 | Blacktower package and fleet enablement | Blacktower source and Estate Config `skills/hosts.json` | Estate Config's host-selected deployment |
+| Ars Malefica vault skills (`ars-malefica-*`, `vault-monthly-maintenance`, `guitar-practice-coach`, `coding-challenge-coach`, `patreon-manager`) | Ars Malefica `.opencode/skills/` | `library/skills/` and Blacktower `src/skills/` copies, refreshed by the vault's `scripts/sync-vault-skills.py apply`; edit the vault source, not these copies |
 | OS/system/plugin skills | Their owning package or plugin | Their managed directories; never edit their caches |
 
 The 322-skill reservoir is preserved for selection and research, not a blanket endorsement. Some entries have been superseded by curated owners. Profiles filter curated and retired names, so old entrypoints cannot silently undo consolidation. Keep substantial optional procedures behind references in the owning skill.

@@ -14,11 +14,11 @@ CORE_FILES = [
     Path("001 Projects/Threads/Threads Index.md"),
     Path("001 Projects/Works/Works Index.md"),
     Path("003 Resources/QuickAdd/QuickAdd Workflow.md"),
-    Path("003 Resources/Media Notes.md"),
+    Path("003 Resources/Media/Media Notes.md"),
     Path("003 Resources/Systems/Workspace Guide.md"),
     Path("003 Resources/Systems/Obsidian Automation API.md"),
-    Path("004 Archives/Redirects.md"),
-    Path("004 Archives/Deletion Candidates.md"),
+    Path("003 Resources/Systems/Vault Migrations/Redirects.md"),
+    Path("003 Resources/Systems/Vault Maintenance/Deletion Candidates.md"),
     Path(".obsidian/community-plugins.json"),
     Path(".obsidian/workspace.json"),
 ]
@@ -28,10 +28,11 @@ CORE_DIRS = [
     Path("001 Projects/Threads"),
     Path("001 Projects/Works"),
     Path("003 Resources/Media"),
-    Path("003 Resources/Documentation"),
+    Path("003 Resources/Reference"),
+    Path("003 Resources/Systems"),
     Path("003 Resources/QuickAdd"),
     Path("003 Resources/Periodic Notes"),
-    Path("004 Archives/Planning Systems"),
+    Path("004 Archives"),
     Path(".obsidian/workspaces"),
 ]
 

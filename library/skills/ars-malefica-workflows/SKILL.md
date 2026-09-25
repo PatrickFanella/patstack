@@ -50,5 +50,5 @@ Use for capture and routing work in the vault.
 
 - 30 QuickAdd capture choices, all targeting real folders
 - 22 Templater folder-template auto-mappings
-- 55 templates with canonical tags
+- 56 templates with canonical metadata and discovery facets
 - 3 Kanban boards for content/software pipelines

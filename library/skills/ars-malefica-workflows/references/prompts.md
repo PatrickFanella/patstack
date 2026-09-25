@@ -4,8 +4,8 @@ status: active
 created: '2026-06-04'
 updated: 2026-06-11
 tags:
-- systems/agent-skills
-- prompts
+- topic/prompts
+- topic/systems-agent-skills
 title: Prompt Snippets
 ---
 
