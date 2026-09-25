@@ -19,7 +19,7 @@ title: Vault Map
 - `001 Projects/Works/` — concrete outputs (Blog Posts, Social Posts, Software, Essays, Videos, Zines, Music, Releases, Documentation, Patreon).
 - `002 Areas/` — responsibilities and admin (Life, Work, People).
 - `003 Resources/` — media (10 subfolders), documentation, templates (55), periodic notes, QuickAdd support.
-- `004 Archives/` — archived Threads only; delete other retired material (Git is the recovery point).
+- `004 Archives/` — archived Threads only; delete other retired material (recover pre-2026-09-25 history from the private history bundle in Documentation-Hub/backups/git-history).
 
 ## Maintenance surfaces
 
