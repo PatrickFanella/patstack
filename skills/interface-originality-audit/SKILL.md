@@ -21,7 +21,9 @@ Do not treat familiar components, colors, fonts, or effects as universally forbi
 3. Inspect the running interface or representative screenshots when available.
 4. Distinguish deliberate repetition from an unexamined template default.
 
-If the evidence is incomplete, state what was unavailable and avoid claiming that a choice is objectively wrong.
+If the evidence is incomplete, state what was unavailable. Screenshots support visual findings; use observed interactions for behavioral claims. Review quality and specificity without asserting AI authorship from appearance.
+
+For a requested AI-look/generic-design review, or when judging an apparent cluster of defaults, read [the research and task checks](references/research-informed-interface-review.md). It distinguishes measured patterns, practitioner observations, and review heuristics.
 
 ## Audit lenses
 
@@ -39,7 +41,7 @@ Recommend the number, grouping, and interaction pattern the content actually nee
 
 ### Product specificity and trust
 
-Prefer inspectable evidence over atmosphere. Look for real product screens, useful demos, representative data, original imagery, attributable customer proof, and copy that names concrete capabilities. Flag fabricated-looking testimonials, generic stock or generated imagery, and claims that could be pasted onto a competitor's page unchanged.
+Prefer inspectable evidence over atmosphere: real screens, useful demos, representative data, relevant imagery, attributable customer proof, and concrete capabilities. Flag unsupported testimonials or metrics and claims that could be pasted onto a competitor's page unchanged. Missing provenance means unverified; appearance alone does not establish fabrication.
 
 ### Production completeness
 

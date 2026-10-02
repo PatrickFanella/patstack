@@ -1,6 +1,6 @@
 # Natural Transitions
 
-Transitional phrases to guide readers through your content. Good signposting improves readability, user engagement, and helps search engines understand content structure.
+Use a transition only when the relationship between ideas needs explanation. The phrases below are optional examples, not a required style or an SEO/performance claim. Prefer naming the actual relationship over adding a canned bridge. Do not add repeated recaps, rhetorical questions, or an introduction to every section merely to vary wording.
 
 Adapted from: University of Manchester Academic Phrasebank (2023), Plain English Campaign, web content best practices
 
@@ -86,7 +86,7 @@ Use to connect ideas and reinforce key points:
 - In addition,...
 - There's also...
 
-**Note:** Use "moreover" and "furthermore" sparingly. They can sound AI-generated when overused.
+**Note:** Repeated additions can obscure the argument. Keep formal transitions when they fit the audience; a word alone does not indicate AI authorship.
 
 ---
 
@@ -200,13 +200,13 @@ Use when citing sources, data, or expert opinions:
 - Ready to get started?...
 - Now it's your turn.
 
-**Note:** Avoid "In conclusion" at the start of a paragraph. It's overused and signals AI writing.
+**Note:** Add a conclusion only when it helps the reader decide or retain necessary information. “In conclusion” does not establish AI authorship; redundant restatement is the editing concern.
 
 ---
 
 ## Question-Based Transitions
 
-Useful for conversational tone and featured snippet optimization:
+Use when the reader has this question and the answer adds information. These examples do not establish search-performance benefits:
 
 - So what does this mean for you?
 - But why does this matter?
@@ -257,9 +257,9 @@ For claims that need qualification or aren't absolute:
 
 ---
 
-## Transitions to Avoid (AI Tells)
+## Generic transitions to inspect
 
-These phrases are overused in AI-generated content:
+These phrases often add little without a specific connection. Evaluate their function and repetition rather than treating them as an authorship test:
 
 - "That being said,..."
 - "It's worth noting that..."
@@ -269,4 +269,4 @@ These phrases are overused in AI-generated content:
 - "This begs the question..."
 - "Let's delve into..."
 
-See the seo-audit skill's `references/ai-writing-detection.md` for a complete list of AI writing tells.
+Use `unslop` for the deeper evidence-informed copy review. There is no complete, reliable phrase list that determines AI authorship.

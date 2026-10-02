@@ -11,14 +11,14 @@ metadata:
 
 # Copywriting
 
-You are an expert conversion copywriter. Your goal is to write marketing copy that is clear, compelling, and drives action.
+Write marketing copy that helps the intended reader understand the offer and decide what to do. Treat conversion improvement as a hypothesis until measured. Use `unslop` for prose cleanup and its deeper review when generic AI phrasing is the concern.
 
 ## Before Writing
 
 **Check for product marketing context first:**
 If `.agents/product-marketing-context.md` exists, read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
-Gather this context (ask if not provided):
+Use available product evidence for this context; ask only when missing information materially changes the copy:
 
 ### 1. Page Purpose
 - What type of page? (homepage, landing page, pricing, feature, about)
@@ -49,10 +49,13 @@ If you have to choose between clear and creative, choose clear.
 
 ### Benefits Over Features
 Features: What it does. Benefits: What that means for the customer.
+Connect the benefit to the actual feature, mechanism, or condition. Do not replace a useful explanation with an abstract promise.
 
 ### Specificity Over Vagueness
 - Vague: "Save time on your workflow"
-- Specific: "Cut your weekly reporting from 4 hours to 15 minutes"
+- Specific: "Export the weekly report from the same view you use to review results" (only if supported).
+
+Quantified outcomes need evidence; a plausible number is not a proof point. Apply the competitor-substitution test: where an unrelated product could use the sentence unchanged, add supported product information.
 
 ### Customer Language Over Company Language
 Use words your customers use. Mirror voice-of-customer from reviews, interviews, support tickets.
@@ -69,7 +72,7 @@ Each section should advance one argument. Build a logical flow down the page.
 1. **Simple over complex** — "Use" not "utilize," "help" not "facilitate"
 2. **Specific over vague** — Avoid "streamline," "optimize," "innovative"
 3. **Active over passive** — "We generate reports" not "Reports are generated"
-4. **Confident over qualified** — Remove "almost," "very," "really"
+4. **Preserve meaningful limits** — Cut empty intensifiers, but retain conditions, uncertainty, and eligibility that affect the claim
 5. **Show over tell** — Describe the outcome instead of using adverbs
 6. **Honest over sensational** — Fabricated statistics or testimonials erode trust and create legal liability
 
@@ -81,21 +84,17 @@ Each section should advance one argument. Build a logical flow down the page.
 - Exclamation points? (remove them)
 - Marketing buzzwords without substance?
 
-For thorough line-by-line review, use the **copy-editing** skill after your draft.
+For thorough line-by-line review, read [the copy-editing procedure](references/curated/copy-editing.md) and retain the evidence limits above if its style advice conflicts. Review repeated rhetorical formulas across the draft, not isolated words or punctuation; do not add forced slang or fictional experience to simulate human authorship.
 
 ---
 
 ## Best Practices
 
 ### Be Direct
-Get to the point. Don't bury the value in qualifications.
-
-❌ Slack lets you share files instantly, from documents to images, directly in your conversations
-
-✅ Need to share a screenshot? Send as many documents, images, and audio files as your heart desires.
+Get to the point while retaining limits that affect the reader's decision. Prefer a supported statement of behavior over an unlimited or emotionally inflated promise.
 
 ### Use Rhetorical Questions
-Questions engage readers and make them think about their own situation.
+Use a question when it helps the intended reader recognize a real situation; repeated questions can become formulaic.
 - "Hate returning stuff to Amazon?"
 - "Tired of chasing approvals?"
 
@@ -108,6 +107,8 @@ Puns and wit make copy memorable—but only if it fits the brand and doesn't und
 ---
 
 ## Page Structure Framework
+
+Choose sections from visitor questions, available evidence, and the primary action. The following patterns are options, not a mandatory page skeleton. Do not add arbitrary three-part groups, testimonials, guarantees, or a final recap to fill a template.
 
 ### Above the Fold
 
@@ -141,8 +142,8 @@ Puns and wit make copy memorable—but only if it fits the brand and doesn't und
 |---------|---------|
 | Social Proof | Build credibility (logos, stats, testimonials) |
 | Problem/Pain | Show you understand their situation |
-| Solution/Benefits | Connect to outcomes (3-5 key benefits) |
-| How It Works | Reduce perceived complexity (3-4 steps) |
+| Solution/Benefits | Connect supported capabilities to relevant outcomes |
+| How It Works | Explain the actual steps the reader needs |
 | Objection Handling | FAQ, comparisons, guarantees |
 | Final CTA | Recap value, repeat CTA, risk reversal |
 
@@ -152,10 +153,12 @@ Puns and wit make copy memorable—but only if it fits the brand and doesn't und
 
 ## CTA Copy Guidelines
 
-**Weak CTAs (avoid):**
+Choose a label that accurately describes the next action. Familiar labels can be appropriate in context. Do not promise a free trial, instant result, or personalized price unless the journey supports it.
+
+**Labels to make more specific when useful:**
 - Submit, Sign Up, Learn More, Click Here, Get Started
 
-**Strong CTAs (use):**
+**Specific labels, when supported:**
 - Start Free Trial
 - Get [Specific Thing]
 - See [Product] in Action
@@ -249,7 +252,7 @@ For headlines and CTAs, provide 2-3 options:
 
 ## Related Skills
 
-- **copy-editing**: For polishing existing copy (use after your draft)
+- **unslop**: For prose cleanup and an evidence-informed review of generic AI phrasing
 - **page-cro**: If page structure/strategy needs work, not just copy
 - **email-sequence**: For email copywriting
 - **popup-cro**: For popup and modal copy

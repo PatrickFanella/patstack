@@ -14,6 +14,10 @@ Read the supplied text and its intended audience. Preserve facts, uncertainty, c
 3. Keep the author's tone. Add personality only where supported by the source; never invent experience, opinions, evidence, or measurements.
 4. Read the revision once as its audience. Remove remaining awkward phrasing and check that no claim became stronger or lost a qualification.
 
+Treat suspected AI patterns as editing clues, not proof of authorship. Evaluate repeated structures and fit to the audience; do not ban individual words, punctuation, contractions, or polished grammar. Preserve necessary qualifications and established terminology.
+
+For marketing/interface copy or a requested deeper review of generic AI writing, read [the evidence-informed review](references/research-informed-copy-review.md). Use it to check product specificity, claim support, rhetorical repetition, and tone across user states. Ordinary short replies do not require loading that reference.
+
 For a longer editing pass, consult the [pattern examples](references/upstream.md). Treat its punctuation preferences as editing heuristics: preserve syntax in code, quotations, names, and required formats. Its universal trigger is upstream context, not a requirement to load this reference on every turn.
 
 Return the requested rewrite. Explain substantive changes when useful; omit a change log for a small rewrite. Prose editing does not authorize changing code behavior or publishing the text.

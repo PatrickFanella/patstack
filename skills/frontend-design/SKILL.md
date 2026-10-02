@@ -11,23 +11,23 @@ metadata:
 
 # Frontend Design
 
-Design and implement production UI that looks intentional, distinctive, accessible, and stack-appropriate. Use for code-level visual work; use `react-pro` when the main challenge is React architecture/state/performance rather than visual execution.
+Implement UI with clear priorities and coherent styling. Use for code-level visual work; use `react-pro` for React architecture, state, or performance.
 
 ## Defaults
 
 - Target stack: TypeScript, React/Next.js, Tailwind, CSS, browser testing.
-- Avoid generic AI aesthetics: default gradients, predictable cards, bland system-font layouts, and context-free purple/blue SaaS visuals.
-- Choose a clear aesthetic direction before coding: brutal minimal, editorial, industrial, retro-futurist, warm craft, data-dense, etc.
+- Treat familiar fonts, colors, cards, and effects as choices to justify against the product, not forbidden signs of AI authorship. Preserve established branding and usable conventions.
+- Choose a coherent direction from the audience, content, task, and existing system; novelty alone is not a design goal.
 - Match complexity to the aesthetic: maximalist needs rich detail; minimalism needs precision.
 - Prefer real implementation over mockups: responsive, accessible, keyboard-safe, and testable.
 
 ## Workflow
 
-1. Clarify purpose, audience, constraints, and existing design language.
-2. Pick one bold design direction and name it in a sentence.
+1. Read available product and design context: primary task, audience language, supported capabilities, representative data, constraints, and existing design rules. Resolve missing information only when it changes the implementation.
+2. Explain how the hierarchy and visual direction serve the task. Choose sections and groupings from the content; do not impose a hero, three-card grid, bento layout, or generic KPI dashboard by default.
 3. Implement layout, typography, color, spacing, motion, and responsive states.
 4. Check accessibility basics: contrast, labels, focus, keyboard, semantics.
-5. Inspect in browser when possible; fix visual breakage at source.
+5. Inspect the rendered interface and exercise the main task when browser tools are available. Include relevant empty, loading, error, permission, long-content, and narrow-screen conditions. Report unavailable checks; a screenshot does not prove working interactions.
 6. If more design data is needed, consult merged `tool-ui-ux-pro-max` references/scripts.
 
 ## Review Checklist
@@ -35,9 +35,12 @@ Design and implement production UI that looks intentional, distinctive, accessib
 - [ ] UI has a clear point of view.
 - [ ] Typography, spacing, color, and motion are coherent.
 - [ ] Responsive states are handled.
-- [ ] Components do not look like generic AI/SaaS defaults.
+- [ ] Components and visual emphasis have a product or interaction reason.
+- [ ] Labels, claims, and resulting behavior agree; sample data and unverified proof are identified.
 - [ ] Accessibility basics pass.
 - [ ] Visual QA findings include source-file fixes, not just comments.
+
+For a requested originality review, use `interface-originality-audit` and its research reference. Use `unslop` for generic interface copy. Separate visual taste, observed usability defects, and verified behavior; keep implementation details out of product flows unless users need them to decide.
 
 ## Resources
 
@@ -55,12 +58,6 @@ Former merged-skill dumps were distilled into these lookup files:
 - `references/curated/visual-design-foundations.md` — Visual Design Foundations guidance.
 - `references/curated/web-design-reviewer.md` — Web Design Reviewer guidance.
 
-
-### Extracted resource directories
-
-- `references/` — curated resources extracted from prior merged skill material.
-- `scripts/` — curated resources extracted from prior merged skill material.
-- `assets/` — curated resources extracted from prior merged skill material.
 
 ## Design-data lookup
 
