@@ -58,4 +58,3 @@ Expected near-miss negatives:
 
 The description explicitly includes the positive intents and excludes ordinary
 implementation work where the agent is expected to author the solution.
-

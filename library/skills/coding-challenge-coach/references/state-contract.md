@@ -88,4 +88,3 @@ dedicated workspace unless the user explicitly selects an existing repository.
 - Optimizing for speed, streaks, or challenge volume.
 - Replacing the active pointer with history or overwriting completed blocks.
 - Copying proprietary prompts or test suites into the vault.
-

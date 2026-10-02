@@ -149,4 +149,3 @@ completion is not itself musical evidence. Do not create Codex automations.
 2. Run the Ars Malefica vault and workflow validators.
 3. Read back the affected Super Productivity tasks and recurrence configs.
 4. Report the decision, evidence used, changed files/tasks, and missing evidence.
-

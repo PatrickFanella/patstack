@@ -153,4 +153,3 @@ of copying proprietary prompt text or test suites without permission.
 When maintaining this skill rather than coaching, read
 `examples/behavior-evaluation.md` for the initial positive, near-miss, and
 with-skill versus baseline checks.
-
