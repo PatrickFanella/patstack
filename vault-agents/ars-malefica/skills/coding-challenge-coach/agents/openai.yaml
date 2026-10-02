@@ -1,0 +1,4 @@
+interface:
+  display_name: "Coding Challenge Coach"
+  short_description: "Assess coding evidence and build adaptive challenges"
+  default_prompt: "Use $coding-challenge-coach to establish or review my coding baseline and give me the next focused challenge."

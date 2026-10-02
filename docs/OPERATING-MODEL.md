@@ -12,9 +12,9 @@ Author personal Codex skills, optional skill profiles, and Kvant's Codex bootstr
 | Optional profile membership | `profiles/*.txt` | `~/.agents/skill-profiles` links here |
 | Profile command | `scripts/skill-profile` | `~/.agents/bin/skill-profile` links here |
 | Global Codex context and RTK | `instructions/` | `~/.codex/AGENTS.md` and `RTK.md` link here |
-| Shared docs policy and HOMELAB | Ars Malefica canonical policy/host briefings | Guarded `sync-briefings.py` generates `~/.homelab/HOMELAB.md` |
+| Shared docs policy and HOMELAB | Operations canonical policy/host briefings | Guarded `sync-briefings.py` generates `~/.homelab/HOMELAB.md` |
 | Blacktower package and fleet enablement | Blacktower source and Estate Config `skills/hosts.json` | Estate Config's host-selected deployment |
-| Ars Malefica vault skills (`ars-malefica-*`, `vault-monthly-maintenance`, `guitar-practice-coach`, `coding-challenge-coach`, `patreon-manager`) | Ars Malefica `.opencode/skills/` | `library/skills/` and Blacktower `src/skills/` copies, refreshed by the vault's `scripts/sync-vault-skills.py apply`; edit the vault source, not these copies |
+| Four-vault instructions and local skills | `vault-agents/<vault>/AGENTS.md` and `vault-agents/<vault>/skills/`; deployment map in `catalog/vault-agents.json` | Each vault's `AGENTS.md`, `.agents/skills/`, and compatible `.opencode/skills/` copies via `scripts/vault-agents.py`; existing optional-library copies are also mapped. Blacktower package copies retain their package owner and need a separate release. |
 | OS/system/plugin skills | Their owning package or plugin | Their managed directories; never edit their caches |
 
 The 322-skill reservoir is preserved for selection and research, not a blanket endorsement. Some entries have been superseded by curated owners. Profiles filter curated and retired names, so old entrypoints cannot silently undo consolidation. Keep substantial optional procedures behind references in the owning skill.
@@ -80,11 +80,11 @@ memory. A linked skill that needs a missing tool must report the limitation.
 
 The client supplies its runtime rules, conversation, available tools, and selected skill metadata. User-controlled Codex context starts at the global AGENTS.md; nearest project instructions add local scope. RTK is required shell guidance. HOMELAB supplies host and documentation policy, with dated history loaded only when relevant. Skills expose names/descriptions for selection; procedures and references are loaded when needed. Exact expansion and context packing depend on the client; filesystem inventory is not a complete runtime prompt trace.
 
-Keep infrastructure history and operating notes in Ars Malefica. Keep executable configuration in its owning repository. Documentation should link to the owner instead of copying editable skill bodies. Fleet rollout of this personal repository requires host inventories, destination mappings, preview, and guarded application; this workstation release does not claim fleet parity.
+Keep infrastructure history and operating notes in Operations. Keep executable configuration in its owning repository. Documentation should link to the owner instead of copying editable skill bodies. Fleet rollout of this personal repository requires host inventories, destination mappings, preview, and guarded application; this workstation release does not claim fleet parity.
 
 ## Required prose policy across hosts
 
-The canonical Agent Documentation Policy in Ars Malefica requires unslop for every prose response and documentation edit, regardless of optional profile selection. It includes direct file paths so the requirement also works when a client does not automatically select the skill. Load once per session. Kvant uses this repository's managed skill. Almaz, Dozor, and NUC received the same source with hash receipts at `~/.codex/skill-installations/required-unslop.json`; Soyuz and Sputnik retain their existing owners. Review those receipts and preserve local drift before updating remote personal copies. Full personal-catalog fleet deployment remains separate.
+The canonical Agent Documentation Policy in Operations requires unslop for every prose response and documentation edit, regardless of optional profile selection. It includes direct file paths so the requirement also works when a client does not automatically select the skill. Load once per session. Kvant uses this repository's managed skill. Almaz, Dozor, and NUC received the same source with hash receipts at `~/.codex/skill-installations/required-unslop.json`; Soyuz and Sputnik retain their existing owners. Review those receipts and preserve local drift before updating remote personal copies. Full personal-catalog fleet deployment remains separate.
 
 ## Installing one personal skill
 
@@ -97,3 +97,20 @@ and rollback.
 
 `t3-repo-setup` owns onboarding repositories into the T3 development launcher.
 Its operational guide and recipe schema remain owned by `t3-dev-environments`.
+
+## Vault-local agent configuration
+
+`vault-agents/` owns the four-vault instruction and skill sources. These skills
+remain local to their vaults; they are not added to the curated global catalog.
+The complete file mapping is `catalog/vault-agents.json`. Use
+`python scripts/vault-agents.py plan`, review destinations, then `apply` and
+`verify`. The tool refuses destination drift and records backups under
+`~/.local/state/vault-agent-deployments/`. For a later update, reconcile reviewed
+destination hashes in the manifest; never replace a drift baseline just to pass.
+
+The personal vault retains eight skills. SUBCULT has its planning skill and
+Patreon manager; Operations and Library each have one focused skill. The old
+personal OpenCode Patreon entrypoint remains compatible but routes to Studio.
+Copied instructions inside Library reference collections are not deployment
+targets. Test new skills with the skill-creator validator and check routing
+against the positive and near-miss cases in `vault-agents/acceptance.md`.

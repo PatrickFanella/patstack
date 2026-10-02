@@ -1,0 +1,4 @@
+interface:
+  display_name: "Guitar Practice Coach"
+  short_description: "Review evidence and build focused guitar lessons"
+  default_prompt: "Use $guitar-practice-coach to review my recent guitar practice evidence and update the next lesson."
