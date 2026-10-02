@@ -84,4 +84,3 @@ mutation. Recurring reminders are allowed; Codex automations are out of scope.
 - Guessing attribution for user-authored study files.
 - Treating pain or numbness as a speed problem.
 - Overwriting completed blocks or breaking ledger links.
-
