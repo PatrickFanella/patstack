@@ -1,0 +1,79 @@
+{
+  "verifiedAt": "2026-10-02T08:48:22.408439+00:00",
+  "sourceRevision": "86ebcc63eac55446f4cb6cd1a4159f1ac7743c21",
+  "installerRun": "/home/onnwee/.codex/skill-installations/codex-skills/run-bda2e6787bbb4dc0aeda8b341450e5e0",
+  "installerStatus": "complete",
+  "installerVerification": {
+    "verified": 3,
+    "protected": 5
+  },
+  "skills": [
+    {
+      "name": "unslop",
+      "source": "/home/onnwee/Work/Tools/codex-skills/skills/unslop",
+      "installed": "/home/onnwee/.codex/skills/unslop",
+      "treeSha256": "115553575d57cef4540667d51aba70293fe069b6aa198a13ae18a7e929b0f1b6",
+      "claudeLink": "/home/onnwee/.claude/skills/unslop",
+      "discovery": {
+        "name": "unslop",
+        "description": "Required for user-facing prose and documentation: remove filler, vague claims, inflated language, and repetitive framing while preserving meaning, evidence, uncertainty, and voice.",
+        "path": "/home/onnwee/.codex/skills/unslop/SKILL.md",
+        "scope": "user",
+        "enabled": true,
+        "pluginId": null
+      }
+    },
+    {
+      "name": "frontend-design",
+      "source": "/home/onnwee/Work/Tools/codex-skills/skills/frontend-design",
+      "installed": "/home/onnwee/.codex/skills/frontend-design",
+      "treeSha256": "cb959903b7de4db78a7c4bc9d06fab668c16cd83edfb306a0a38131d5b7f667c",
+      "claudeLink": "/home/onnwee/.claude/skills/frontend-design",
+      "discovery": {
+        "name": "frontend-design",
+        "description": "Implement or refine web interface visuals, responsive layouts, and interaction states within the product design.",
+        "path": "/home/onnwee/.codex/skills/frontend-design/SKILL.md",
+        "scope": "user",
+        "enabled": true,
+        "pluginId": null
+      }
+    },
+    {
+      "name": "interface-originality-audit",
+      "source": "/home/onnwee/Work/Tools/codex-skills/skills/interface-originality-audit",
+      "installed": "/home/onnwee/.codex/skills/interface-originality-audit",
+      "treeSha256": "ac146c190e2f364bef26b99cf3de7a0187a223568beb7c1039db8e7b0d6dbc66",
+      "claudeLink": "/home/onnwee/.claude/skills/interface-originality-audit",
+      "discovery": {
+        "name": "interface-originality-audit",
+        "description": "Audit UI originality, product credibility, and missing interaction states; report evidence-backed design findings.",
+        "path": "/home/onnwee/.codex/skills/interface-originality-audit/SKILL.md",
+        "scope": "user",
+        "enabled": true,
+        "pluginId": null
+      }
+    }
+  ],
+  "freshDiscovery": {
+    "cwd": "/home/onnwee",
+    "totalSkills": 84,
+    "errors": [],
+    "retiredPersonalLeaks": []
+  },
+  "sourceLinkVerification": {
+    "verified": 76,
+    "result": "Existing guarded source links verified; no changes needed."
+  },
+  "validation": {
+    "structureErrors": 0,
+    "repositoryUnitTestsPassed": 16
+  },
+  "optionalCopywriting": {
+    "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/copywriting",
+    "active": false,
+    "profile": "core",
+    "decision": "Keep updated source available through optional profiles; no activation requested."
+  },
+  "systemOwnerReconciliation": "reports/2026-10-02-system-owner-reconciliation.json",
+  "publication": "Local commits only; no remote or fleet rollout."
+}
