@@ -23,7 +23,7 @@ Use this checklist for a 15-30 minute monthly upkeep pass.
 - [ ] Review active works.
 - [ ] Review paused works.
 - [ ] Review stale workbenches.
-- [ ] Review Kanban boards: SubBlog Pipeline, Social Pipeline, Software Pipeline.
+- [ ] Review personal active work; include SUBCULT boards or Studio plans only when those owners are in scope.
 - [ ] Review open decisions.
 - [ ] Update one next action per active project/thread.
 

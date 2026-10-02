@@ -1,6 +1,6 @@
 # Patreon Obsidian vault conventions
 
-Workspace: `/home/onnwee/Projects/patreon`.
+Workspace: `/home/onnwee/Work/Subcult/subcult-studio/content/patreon`.
 
 ## Required style
 
