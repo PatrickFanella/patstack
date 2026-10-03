@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily Gitea retention audit
+
+[Timer]
+OnCalendar=*-*-* 05:15:00
+RandomizedDelaySec=20m
+Persistent=true
+Unit=gitea-retention-audit.service
+
+[Install]
+WantedBy=timers.target

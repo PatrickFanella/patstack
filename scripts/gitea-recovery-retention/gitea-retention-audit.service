@@ -1,0 +1,12 @@
+[Unit]
+Description=Record Gitea retention and deployed-image evidence
+After=docker.service
+Requires=docker.service
+RequiresMountsFor=/mnt/spektr
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/gitea-retention-audit
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7

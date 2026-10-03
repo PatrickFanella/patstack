@@ -1,0 +1,11 @@
+[Unit]
+Description=Weekly isolated Gitea restore drill
+
+[Timer]
+OnCalendar=Sun *-*-* 06:20:00
+RandomizedDelaySec=25m
+Persistent=true
+Unit=gitea-restore-drill.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# Record Gitea Actions expiry status and package retention evidence. This script
+# never deletes an artifact, package, image, or backup.
+set -Eeuo pipefail
+
+base=/mnt/spektr/server/backups/gitea-retention-audits
+stamp=$(date -u +%Y%m%dT%H%M%SZ)
+work="$base/$stamp"
+receipt="$work/receipt.json"
+install -d -m 0700 "$work"
+umask 077
+
+sql() {
+    docker exec postgres psql -U onnwee -d gitea -At -c "$1"
+}
+
+artifact_policy=$(docker inspect gitea --format '{{range .Config.Env}}{{println .}}{{end}}' | \
+    grep -E '^GITEA__actions__(LOG_RETENTION_DAYS|ARTIFACT_RETENTION_DAYS)=' | sort)
+artifact_summary=$(sql "select count(*) filter(where status=2 and expired_unix < extract(epoch from now())), coalesce(sum(file_compressed_size) filter(where status=2 and expired_unix < extract(epoch from now())),0), count(*) filter(where status=4), coalesce(sum(file_compressed_size) filter(where status=4),0), count(*) filter(where status=5), coalesce(sum(file_compressed_size) filter(where status=5),0), count(*) filter(where status=2 and expired_unix >= extract(epoch from now())), coalesce(sum(file_compressed_size) filter(where status=2 and expired_unix >= extract(epoch from now())),0) from action_artifact;")
+package_summary=$(sql "select p.type || '|' || count(*) || '|' || coalesce(sum(s.total),0) from package p join (select pv.package_id, sum(pb.size) total from package_version pv left join package_file pf on pf.version_id=pv.id left join package_blob pb on pb.id=pf.blob_id group by pv.package_id) s on s.package_id=p.id group by p.type order by p.type;")
+deployed_digests=$(docker ps --format '{{.Image}}' | while IFS= read -r image; do docker image inspect "$image" --format '{{join .RepoDigests "\n"}}' 2>/dev/null || true; done | sed '/^$/d' | sort -u)
+
+AUDIT_ARTIFACT_POLICY="$artifact_policy" AUDIT_ARTIFACT_SUMMARY="$artifact_summary" \
+AUDIT_PACKAGE_SUMMARY="$package_summary" AUDIT_DEPLOYED_DIGESTS="$deployed_digests" \
+python3 - "$receipt" <<'PY'
+import json, os, pathlib, sys
+path=pathlib.Path(sys.argv[1])
+data={}
+data['actions_policy']=[x for x in os.environ['AUDIT_ARTIFACT_POLICY'].splitlines() if x]
+v=os.environ['AUDIT_ARTIFACT_SUMMARY'].strip().split('|')
+data['actions_artifacts']={
+    'confirmed_past_expiry_count':int(v[0]), 'confirmed_past_expiry_compressed_bytes':int(v[1]),
+    'expired_record_count':int(v[2]), 'expired_record_compressed_bytes':int(v[3]),
+    'pending_deletion_count':int(v[4]), 'pending_deletion_compressed_bytes':int(v[5]),
+    'unexpired_confirmed_count':int(v[6]), 'unexpired_confirmed_compressed_bytes':int(v[7]),
+}
+data['packages_by_type']=[x for x in os.environ['AUDIT_PACKAGE_SUMMARY'].splitlines() if x]
+data['deployed_image_digests']=[x for x in os.environ['AUDIT_DEPLOYED_DIGESTS'].splitlines() if x]
+data['result']='observed'
+data['package_policy']='retain every package version; deletion eligibility remains false until a package-to-deployment and rollback-digest inventory is reviewed'
+data['deletion_performed']=False
+path.write_text(json.dumps(data,indent=2,sort_keys=True)+'\n')
+PY
+echo "Gitea retention audit recorded: $receipt"

@@ -1,0 +1,131 @@
+#!/usr/bin/env bash
+# Restore a small, representative slice of the latest off-host Gitea backup.
+# This script never writes to Gitea's live data directory or production database.
+set -Eeuo pipefail
+
+lock=/run/lock/gitea-restore-drill.lock
+exec 9>"$lock"
+flock -n 9 || { echo 'Gitea restore drill already running' >&2; exit 1; }
+
+repo=sftp:onnwee@10.0.0.50:/mnt/data2/backups/almaz/restic
+password_file=/etc/almaz-router-backup/restic-password
+ssh_args='-i /home/onnwee/.ssh/id_ed25519 -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=accept-new'
+restic_cmd=(restic -r "$repo" -o "sftp.args=$ssh_args" --password-file "$password_file" --retry-lock 1h)
+base=/mnt/spektr/server/backups/gitea-restore-drills
+pgbase=/var/lib/gitea-restore-drills
+stamp=$(date -u +%Y%m%dT%H%M%SZ)
+work="$base/$stamp"
+target="$work/restore"
+pgdata="$pgbase/$stamp"
+container="gitea-restore-drill-$stamp"
+receipt="$work/receipt.json"
+
+cleanup() {
+    local status=$?
+    docker rm -f "$container" >/dev/null 2>&1 || true
+    rm -rf -- "$pgdata"
+    exit "$status"
+}
+trap cleanup EXIT
+
+test -r "$password_file"
+install -d -m 0700 "$base" "$work" "$target" "$pgbase" "$pgdata"
+umask 077
+
+snapshot=$("${restic_cmd[@]}" snapshots --tag gitea-full --json | python3 -c '
+import json, sys
+snapshots = json.load(sys.stdin)
+if not snapshots:
+    raise SystemExit("no gitea-full snapshot")
+print(max(snapshots, key=lambda item: item["time"])["short_id"])
+')
+
+listing="$work/snapshot-files.txt"
+"${restic_cmd[@]}" ls "$snapshot" >"$listing"
+
+select_path() {
+    local suffix=$1
+    python3 - "$listing" "$suffix" <<'PY'
+import sys
+import re
+listing, suffix = sys.argv[1:]
+for line in open(listing, encoding='utf-8'):
+    path = line.strip()
+    name = path.rsplit('/', 1)[-1]
+    valid = (
+        suffix == '.git/HEAD' and path.endswith(suffix) or
+        suffix == '/data/gitea/git/lfs/' and re.fullmatch(r'[0-9a-f]{60,64}', name) or
+        suffix == '/data/gitea/gitea/attachments/' and re.fullmatch(r'[0-9a-f-]{36}', name) or
+        suffix == '/data/gitea/gitea/packages/' and re.fullmatch(r'[0-9a-f]{64}', name) or
+        suffix == '/data/gitea/gitea/actions_artifacts/' and path.endswith('.chunk.gz')
+    )
+    if path.startswith('/') and suffix in path and valid:
+        print(path)
+        break
+else:
+    raise SystemExit(f'no backup file found for {suffix}')
+PY
+}
+
+dump=/mnt/spektr/server/backups/gitea/gitea.dump
+config=/mnt/spektr/server/dev/data/gitea/gitea/conf/app.ini
+repo_file=$(select_path '.git/HEAD')
+repo_source_dir=$(python3 - "$repo_file" <<'PY'
+import sys
+path=sys.argv[1]
+marker='.git/'
+if marker not in path:
+    raise SystemExit('selected repository file does not belong to a bare repository')
+print(path.split(marker, 1)[0] + '.git')
+PY
+)
+lfs_file=$(select_path '/data/gitea/git/lfs/')
+attachment_file=$(select_path '/data/gitea/gitea/attachments/')
+package_file=$(select_path '/data/gitea/gitea/packages/')
+artifact_file=$(select_path '/data/gitea/gitea/actions_artifacts/')
+
+"${restic_cmd[@]}" restore "$snapshot" --target "$target" \
+    --include "$dump" \
+    --include "$config" \
+    --include "$repo_source_dir/**" \
+    --include "$lfs_file" \
+    --include "$attachment_file" \
+    --include "$package_file" \
+    --include "$artifact_file"
+
+restore_root="$target"
+restored_dump="$restore_root$dump"
+restored_config="$restore_root$config"
+test -s "$restored_dump"
+test -s "$restored_config"
+docker run --rm --network none -i postgres:17-alpine pg_restore -l <"$restored_dump" >/dev/null
+
+repo_dir="$restore_root$repo_source_dir"
+test -d "$repo_dir"
+git --git-dir="$repo_dir" fsck --no-progress >/dev/null
+
+for selected in "$lfs_file" "$attachment_file" "$package_file" "$artifact_file"; do
+    test -s "$restore_root$selected"
+done
+
+docker run --detach --rm --name "$container" --network none \
+    --volume "$pgdata:/var/lib/postgresql/data" \
+    -e POSTGRES_HOST_AUTH_METHOD=trust postgres:17-alpine >/dev/null
+for _ in $(seq 1 60); do
+    if docker exec "$container" pg_isready -U postgres >/dev/null 2>&1; then break; fi
+    sleep 1
+done
+docker exec "$container" pg_isready -U postgres >/dev/null
+docker exec "$container" createdb -U postgres gitea
+docker exec -i "$container" pg_restore -U postgres -d gitea --no-owner --exit-on-error <"$restored_dump"
+db_counts=$(docker exec "$container" psql -U postgres -d gitea -Atc \
+    "select (select count(*) from repository), (select count(*) from package), (select count(*) from package_version);")
+
+python3 - "$receipt" "$snapshot" "$dump" "$config" "$repo_file" "$lfs_file" "$attachment_file" "$package_file" "$artifact_file" "$db_counts" <<'PY'
+import json, pathlib, sys
+keys = ('snapshot', 'database_dump', 'config', 'repository_file', 'lfs_file', 'attachment_file', 'package_file', 'artifact_file', 'database_counts')
+values = dict(zip(keys, sys.argv[2:]))
+values['result'] = 'passed'
+pathlib.Path(sys.argv[1]).write_text(json.dumps(values, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+PY
+echo "Gitea restore drill passed: $receipt"
