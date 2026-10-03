@@ -18,3 +18,11 @@ Deploy the helper and policy into the private Gitea agent state directory,
 and the units into `~/.config/systemd/user/`. Validate with `systemd-analyze
 --user verify`, reload the user daemon, and enable the timer. Disable the
 exact timer to stop these checks. No credential is included in this source.
+
+Expiry writes an atomic mode-0600 receipt at
+`~/.local/state/gitea-agent/vaultwarden-session-expiry-receipt.json`, containing
+only timestamps, lock return code, removal result and status. The saved session
+key never enters the receipt. A concurrent fresh unlock is preserved. The
+four-hour boundary, active-session preservation, failed-lock handling and
+concurrent-unlock cases are tested with isolated fixtures and a mock lock
+command; those tests do not lock the real vault or prove natural expiry.
