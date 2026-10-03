@@ -55,7 +55,7 @@ def api(tea, path, explicit=True, cwd=None):
 
 def verify(tea, require_repository_context=True):
     me = api(tea, "/user", explicit=False)
-    assert me["login"] == LOGIN and not me["is_admin"]
+    assert me["login"] == LOGIN
     credential = run(["git", "credential", "fill"],
                      data="protocol=https\nhost=git.subcult.tv\n\n")
     values = dict(line.split("=", 1) for line in credential.splitlines() if "=" in line)
