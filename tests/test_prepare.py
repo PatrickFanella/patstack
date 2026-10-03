@@ -2,6 +2,25 @@ import importlib.util,json,pathlib,subprocess,tempfile,unittest
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('transaction_installer',ROOT/'scripts/install.py');installer=importlib.util.module_from_spec(spec);spec.loader.exec_module(installer)
 class PrepareTests(unittest.TestCase):
+ def test_scoped_removal_uses_installed_state_and_preserves_drift(self):
+  with tempfile.TemporaryDirectory() as directory:
+   root=pathlib.Path(directory);state=root/'state';personal=root/'installed';exclude=root/'blacktower/.git/info/exclude'
+   for p in [root/'catalog',root/'skills',root/'shared',personal/'specialist',exclude.parent]:p.mkdir(parents=True,exist_ok=True)
+   target=personal/'specialist';(target/'SKILL.md').write_text('curated procedure')
+   before=installer.snapshot(target)
+   installer.save(root/'catalog/installation.json',{'personalRoot':str(personal),'sharedRoot':str(root/'shared-installed'),'blacktowerRoot':str(root/'blacktower'),'excludePath':str(exclude)})
+   installer.save(root/'catalog/baseline.json',{})
+   installer.save(root/'catalog/proposed-catalog.json',[{'name':'specialist','scope':'optional'}])
+   installer.save(installer.statefile(state),{'paths':{str(target):before}})
+   subprocess.run(['git','init','-q',str(root)],check=True)
+   subprocess.run(['git','-C',str(root),'-c','user.name=Fixture','-c','user.email=fixture@invalid','commit','--allow-empty','-qm','fixture'],check=True)
+   plan=installer.prepare(root,state,only_skills=['specialist'])
+   self.assertEqual([(op['destination'],op['action']) for op in plan['operations']],[(str(target),'retire')])
+   run=installer.apply(plan,state);self.assertFalse(target.exists());installer.verify(installer.prepare(root,state,only_skills=['specialist']),state)
+   installer.rollback(run,state);self.assertEqual(installer.snapshot(target),before)
+   (target/'SKILL.md').write_text('user edit')
+   with self.assertRaisesRegex(RuntimeError,'Drift'):installer.prepare(root,state,only_skills=['specialist'])
+   self.assertEqual((target/'SKILL.md').read_text(),'user edit')
  def test_plan_batches_idempotency_and_drift(self):
   with tempfile.TemporaryDirectory() as directory:
    root=pathlib.Path(directory);state=root/'state';personal=root/'installed';shared=root/'shared-installed';blacktower=root/'blacktower';exclude=blacktower/'.git/info/exclude'

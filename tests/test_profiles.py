@@ -28,6 +28,17 @@ class ProfileTests(unittest.TestCase):
  def test_curated_promotion_is_refused(self):
   manager.activate([])
   with self.assertRaisesRegex(SystemExit,'curated'):manager.promote('interview',['core'])
+ def test_optional_catalog_owner_activates_only_when_selected(self):
+  (manager.SOURCE/'catalog/proposed-catalog.json').write_text(json.dumps([
+   {'name':'curated','scope':'personal'}, {'name':'optional','scope':'optional'}]))
+  (manager.LIBRARY/'optional/SKILL.md').write_text('curated specialist procedure')
+  manager.activate([])
+  self.assertNotIn('optional',manager.skill_dirs(manager.ACTIVE))
+  manager.activate(['extra'])
+  self.assertEqual((manager.ACTIVE/'optional/SKILL.md').read_text(),'curated specialist procedure')
+  self.assertNotIn('curated',manager.skill_dirs(manager.ACTIVE))
+  manager.activate([])
+  self.assertNotIn('optional',manager.skill_dirs(manager.ACTIVE))
  def test_all_still_filters_and_mode_drift_blocks(self):
   manager.activate([],True);self.assertNotIn('retired',manager.skill_dirs(manager.ACTIVE));self.assertNotIn('curated',manager.skill_dirs(manager.ACTIVE))
   p=manager.ACTIVE/'base/SKILL.md';p.chmod(0o700)

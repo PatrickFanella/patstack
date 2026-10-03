@@ -1,11 +1,12 @@
 {
   "metrics": {
-    "authoredPersonal": 64,
-    "personalDescriptions": 8181,
-    "personalBodies": 111931,
-    "personalEntrypoints": 66,
+    "authoredPersonal": 59,
+    "personalDescriptions": 7629,
+    "personalBodies": 106089,
+    "optionalCuratedEntrypoints": 5,
+    "personalEntrypoints": 61,
     "personalDescriptionBudget": 12000,
-    "personalDescriptionHeadroom": 3819,
+    "personalDescriptionHeadroom": 4371,
     "retiredNames": 90,
     "mappedOriginals": 148
   },

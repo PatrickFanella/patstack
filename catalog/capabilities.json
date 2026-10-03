@@ -273,25 +273,25 @@
     "original": "helm-chart-scaffolding",
     "owner": "kubernetes-development",
     "kind": "mode",
-    "path": "skills/kubernetes-development/references/modes/helm-chart-scaffolding/guide.md"
+    "path": "library/skills/kubernetes-development/references/modes/helm-chart-scaffolding/guide.md"
   },
   {
     "original": "k8s-manifest-generator",
     "owner": "kubernetes-development",
     "kind": "mode",
-    "path": "skills/kubernetes-development/references/modes/k8s-manifest-generator/guide.md"
+    "path": "library/skills/kubernetes-development/references/modes/k8s-manifest-generator/guide.md"
   },
   {
     "original": "k8s-security-policies",
     "owner": "kubernetes-development",
     "kind": "mode",
-    "path": "skills/kubernetes-development/references/modes/k8s-security-policies/guide.md"
+    "path": "library/skills/kubernetes-development/references/modes/k8s-security-policies/guide.md"
   },
   {
     "original": "lightweight-charts",
     "owner": "lightweight-charts",
     "kind": "retained",
-    "path": "skills/lightweight-charts/SKILL.md"
+    "path": "library/skills/lightweight-charts/SKILL.md"
   },
   {
     "original": "llm-evaluation",
@@ -477,13 +477,13 @@
     "original": "binary-analysis-patterns",
     "owner": "reverse-engineering",
     "kind": "mode",
-    "path": "skills/reverse-engineering/references/modes/binary-analysis-patterns/guide.md"
+    "path": "library/skills/reverse-engineering/references/modes/binary-analysis-patterns/guide.md"
   },
   {
     "original": "protocol-reverse-engineering",
     "owner": "reverse-engineering",
     "kind": "mode",
-    "path": "skills/reverse-engineering/references/modes/protocol-reverse-engineering/guide.md"
+    "path": "library/skills/reverse-engineering/references/modes/protocol-reverse-engineering/guide.md"
   },
   {
     "original": "rust-pro",
@@ -543,7 +543,7 @@
     "original": "solidity-security",
     "owner": "solidity-security",
     "kind": "retained",
-    "path": "skills/solidity-security/SKILL.md"
+    "path": "library/skills/solidity-security/SKILL.md"
   },
   {
     "original": "diagnosing-bugs",
@@ -597,7 +597,7 @@
     "original": "terraform-module-library",
     "owner": "terraform-module-library",
     "kind": "retained",
-    "path": "skills/terraform-module-library/SKILL.md"
+    "path": "library/skills/terraform-module-library/SKILL.md"
   },
   {
     "original": "migrate-to-shoehorn",

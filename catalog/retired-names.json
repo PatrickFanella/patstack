@@ -105,15 +105,15 @@
   },
   "helm-chart-scaffolding": {
     "owner": "kubernetes-development",
-    "procedure": "skills/kubernetes-development/references/modes/helm-chart-scaffolding/guide.md"
+    "procedure": "library/skills/kubernetes-development/references/modes/helm-chart-scaffolding/guide.md"
   },
   "k8s-manifest-generator": {
     "owner": "kubernetes-development",
-    "procedure": "skills/kubernetes-development/references/modes/k8s-manifest-generator/guide.md"
+    "procedure": "library/skills/kubernetes-development/references/modes/k8s-manifest-generator/guide.md"
   },
   "k8s-security-policies": {
     "owner": "kubernetes-development",
-    "procedure": "skills/kubernetes-development/references/modes/k8s-security-policies/guide.md"
+    "procedure": "library/skills/kubernetes-development/references/modes/k8s-security-policies/guide.md"
   },
   "distributed-tracing": {
     "owner": "observability",
@@ -173,11 +173,11 @@
   },
   "binary-analysis-patterns": {
     "owner": "reverse-engineering",
-    "procedure": "skills/reverse-engineering/references/modes/binary-analysis-patterns/guide.md"
+    "procedure": "library/skills/reverse-engineering/references/modes/binary-analysis-patterns/guide.md"
   },
   "protocol-reverse-engineering": {
     "owner": "reverse-engineering",
-    "procedure": "skills/reverse-engineering/references/modes/protocol-reverse-engineering/guide.md"
+    "procedure": "library/skills/reverse-engineering/references/modes/protocol-reverse-engineering/guide.md"
   },
   "bash-defensive-patterns": {
     "owner": "shell-development",

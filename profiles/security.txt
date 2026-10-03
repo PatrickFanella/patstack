@@ -15,3 +15,4 @@ security-ownership-map
 security-threat-model
 solidity-security
 stripe-integration
+reverse-engineering

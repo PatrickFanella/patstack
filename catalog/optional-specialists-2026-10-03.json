@@ -1,0 +1,293 @@
+[
+  {
+    "name": "solidity-security",
+    "curatedFiles": {
+      "SKILL.md": {
+        "sha256": "92b08c15e89819d42ecefa0cb14b0a675086d552ee9bf04282b678c7466c51c3",
+        "mode": 420
+      },
+      "notices/blacktower-mit.md": {
+        "sha256": "a0d977279f86d6b16f2fb5edafda853f74d54af3c49b5ea97466637d70092f4d",
+        "mode": 420
+      },
+      "references/curated/defi-protocol-templates.md": {
+        "sha256": "58bdec3cfc0b3ea094621484af32dec304792b2610743eead61aedea4e659d96",
+        "mode": 420
+      },
+      "references/curated/nft-standards.md": {
+        "sha256": "ebc098fca13c4104d4ad659da16c00cd5894f889dedbd2088b9a1a394f8a0eab",
+        "mode": 420
+      },
+      "references/full-guide.md": {
+        "sha256": "aedded1f40304a80a5d365f1be70139e7082d1fa300d25b9e8e96a2eae1a790a",
+        "mode": 420
+      }
+    },
+    "canonicalSource": "library/skills/solidity-security",
+    "previousOptionalSource": {
+      "archive": "authoring/optional-originals/2026-10-03/solidity-security",
+      "files": {
+        "SKILL.md": {
+          "sha256": "61e7abad699c3c9f9f74cdeba54203713603e440df491221761ff4fdc765e6a1",
+          "mode": 420
+        },
+        "references/curated/defi-protocol-templates.md": {
+          "sha256": "58bdec3cfc0b3ea094621484af32dec304792b2610743eead61aedea4e659d96",
+          "mode": 420
+        },
+        "references/curated/nft-standards.md": {
+          "sha256": "ebc098fca13c4104d4ad659da16c00cd5894f889dedbd2088b9a1a394f8a0eab",
+          "mode": 420
+        },
+        "references/full-guide.md": {
+          "sha256": "aedded1f40304a80a5d365f1be70139e7082d1fa300d25b9e8e96a2eae1a790a",
+          "mode": 420
+        }
+      }
+    }
+  },
+  {
+    "name": "kubernetes-development",
+    "curatedFiles": {
+      "SKILL.md": {
+        "sha256": "cce81c80ae8a271a0889f717797cf6d16a8a4d7910cece0ad3d170844d225234",
+        "mode": 420
+      },
+      "references/modes/helm-chart-scaffolding/assets/Chart.yaml.template": {
+        "sha256": "a752ee6b46f5f191d032fe1f4da60772a02651a3be03605acc86489875f4e1dd",
+        "mode": 420
+      },
+      "references/modes/helm-chart-scaffolding/assets/values.yaml.template": {
+        "sha256": "d4ec34d9301b82001a167babcbfcfda8a5f2c39dbbe5b85d336a9c695d35c91a",
+        "mode": 420
+      },
+      "references/modes/helm-chart-scaffolding/guide.md": {
+        "sha256": "05c1ce3bb35fda504566e542f7de6c471788b5cbe852901f80b4f2fa295f82fe",
+        "mode": 420
+      },
+      "references/modes/helm-chart-scaffolding/notices/blacktower-mit.md": {
+        "sha256": "a0d977279f86d6b16f2fb5edafda853f74d54af3c49b5ea97466637d70092f4d",
+        "mode": 420
+      },
+      "references/modes/helm-chart-scaffolding/references/chart-structure.md": {
+        "sha256": "33bc7dc78368282ce0cc6b21f9df9551afe2482a2886c21082cba6b746373b5d",
+        "mode": 420
+      },
+      "references/modes/helm-chart-scaffolding/references/full-guide.md": {
+        "sha256": "6036c513b838af67744b383be1d399fa160369a01f885cfe45fabfba93ab81a2",
+        "mode": 420
+      },
+      "references/modes/helm-chart-scaffolding/scripts/validate-chart.sh": {
+        "sha256": "4c5a5d66da0ee105318f4793d62d07b3bb987392eb783ece966bc7be4936dbe8",
+        "mode": 493
+      },
+      "references/modes/k8s-manifest-generator/assets/configmap-template.yaml": {
+        "sha256": "d991cec7e5653ea24bdec1b0e76ec9de70cc0a7ac4e13c647cdfd893e31cb064",
+        "mode": 420
+      },
+      "references/modes/k8s-manifest-generator/assets/deployment-template.yaml": {
+        "sha256": "9cbaf979af9c66f8fb64e3430a6751820f8ff3161a3af351fa3728e4eddd1245",
+        "mode": 420
+      },
+      "references/modes/k8s-manifest-generator/assets/service-template.yaml": {
+        "sha256": "87f085b5502182b7503d332f7c62da69bb3f737cb8f38f65ceb520d7e5557711",
+        "mode": 420
+      },
+      "references/modes/k8s-manifest-generator/guide.md": {
+        "sha256": "9f9dd8339de031c87a7110bea5c0a5f6491afed3d1a979c3134b68e34f2b9162",
+        "mode": 420
+      },
+      "references/modes/k8s-manifest-generator/notices/blacktower-mit.md": {
+        "sha256": "a0d977279f86d6b16f2fb5edafda853f74d54af3c49b5ea97466637d70092f4d",
+        "mode": 420
+      },
+      "references/modes/k8s-manifest-generator/references/deployment-spec.md": {
+        "sha256": "e86131be416480baa0a4dc2b2bb99d0da4b5f361f5616bd18556038013abc394",
+        "mode": 420
+      },
+      "references/modes/k8s-manifest-generator/references/full-guide.md": {
+        "sha256": "96dbd0a532a6f51347493ae0418af4f6c76e00d23f87b3766a253bdbc92de146",
+        "mode": 420
+      },
+      "references/modes/k8s-manifest-generator/references/service-spec.md": {
+        "sha256": "2d4c4c9c5161f379478d8d880acd2d6323f5c5877a767c2ef7613b9966d746e7",
+        "mode": 420
+      },
+      "references/modes/k8s-security-policies/assets/network-policy-template.yaml": {
+        "sha256": "719734ad1a92abad28556c3c421c3f848923854f3228f0424b7f409182c9df6f",
+        "mode": 420
+      },
+      "references/modes/k8s-security-policies/guide.md": {
+        "sha256": "9c503d29da7f650c169314d4bb3e1751f50d273f4fc56815cae56a063f4de39d",
+        "mode": 420
+      },
+      "references/modes/k8s-security-policies/notices/blacktower-mit.md": {
+        "sha256": "a0d977279f86d6b16f2fb5edafda853f74d54af3c49b5ea97466637d70092f4d",
+        "mode": 420
+      },
+      "references/modes/k8s-security-policies/references/full-guide.md": {
+        "sha256": "5a6883470539ec91e6a21946db3b4e154ef210c2490dda462a50f8e0a7c633ac",
+        "mode": 420
+      },
+      "references/modes/k8s-security-policies/references/rbac-patterns.md": {
+        "sha256": "0b63b0f25e81e5b941a4eec3415e63ebd931d88402f0278c155550b635ab7010",
+        "mode": 420
+      }
+    },
+    "canonicalSource": "library/skills/kubernetes-development",
+    "previousOptionalSource": null
+  },
+  {
+    "name": "terraform-module-library",
+    "curatedFiles": {
+      "SKILL.md": {
+        "sha256": "f9cb1fffc6c92dbaf6231410ddd448df8168aa7cccd84399f9051382a72d0ef7",
+        "mode": 420
+      },
+      "guide.md": {
+        "sha256": "1134b9a2baa0296e298445f486cf1cb15348480dc7b394c69190788ed53b8d46",
+        "mode": 420
+      },
+      "notices/blacktower-mit.md": {
+        "sha256": "a0d977279f86d6b16f2fb5edafda853f74d54af3c49b5ea97466637d70092f4d",
+        "mode": 420
+      },
+      "part-01.md": {
+        "sha256": "2e8b6b5600279ef72e594ba2df61c3e646c90a6df35939dac324f78619e93690",
+        "mode": 420
+      },
+      "part-02.md": {
+        "sha256": "fb15094d6be68b39840d4b6805e901deffff25f9a0d2fd95490e2ff71ffc3306",
+        "mode": 420
+      },
+      "part-03.md": {
+        "sha256": "a11a6dc65c5073799f629a4f621d8a8c70cd0714bd385bcf9cdcecbdfca16552",
+        "mode": 420
+      },
+      "part-04.md": {
+        "sha256": "d3034932a00199c9c12e19cf76aa3a07da70fbcc7f47194d5cc492fd3957c95f",
+        "mode": 420
+      },
+      "part-05.md": {
+        "sha256": "01c89c6b7cf922954a2e215dd59b6b950c3fb819c3b056dd48a456a165cc494a",
+        "mode": 420
+      },
+      "part-06.md": {
+        "sha256": "70fd8193f8773bc510651a8512ed3a70448708332bd2cc4d7cc552b68703223b",
+        "mode": 420
+      },
+      "part-07.md": {
+        "sha256": "c6572be00faccfea412efd5db67200c3c5c87f283e7c2dca02e80b075b738021",
+        "mode": 420
+      },
+      "part-08.md": {
+        "sha256": "0ca7feeeaa1a75b3d6a376f1621543095ca90cef563be6bc0628a1f16e7fb5ca",
+        "mode": 420
+      },
+      "part-09.md": {
+        "sha256": "fba5af17022f44f54c79f1ad4c01efa66a13825f860f015c50fcd7680ee5ee5c",
+        "mode": 420
+      },
+      "part-10.md": {
+        "sha256": "1b59a20f9c52a53f434ecbe7ad920c2b9ca62d1b34442f033ebf89833672d371",
+        "mode": 420
+      },
+      "part-11.md": {
+        "sha256": "737b3c122e647c622e86809159f83ff55f4daf1d59b66ee19402250b4c4320eb",
+        "mode": 420
+      },
+      "references/aws-modules.md": {
+        "sha256": "fdec33a85c9fc14107f482ae0d1d29920a965cd56d4c12e2aa41a4afc2461cf2",
+        "mode": 420
+      },
+      "references/oci-modules.md": {
+        "sha256": "f0cd599c2e2a1be54300033b52622a5f6d40b7e045bd9c1e9d515f5e599c14bc",
+        "mode": 420
+      }
+    },
+    "canonicalSource": "library/skills/terraform-module-library",
+    "previousOptionalSource": {
+      "archive": "authoring/optional-originals/2026-10-03/terraform-module-library",
+      "files": {
+        "SKILL.md": {
+          "sha256": "5d9c6900be65dc9aa5591994365897e74b911f2b6a5b80f76435b6a83dc2abc3",
+          "mode": 420
+        },
+        "references/aws-modules.md": {
+          "sha256": "fdec33a85c9fc14107f482ae0d1d29920a965cd56d4c12e2aa41a4afc2461cf2",
+          "mode": 420
+        },
+        "references/oci-modules.md": {
+          "sha256": "f0cd599c2e2a1be54300033b52622a5f6d40b7e045bd9c1e9d515f5e599c14bc",
+          "mode": 420
+        }
+      }
+    }
+  },
+  {
+    "name": "lightweight-charts",
+    "curatedFiles": {
+      "SKILL.md": {
+        "sha256": "42aa34604786933980cf26ec5f4fa6b70dfdcea7384ca7b822dde907e19da753",
+        "mode": 420
+      },
+      "notices/blacktower-mit.md": {
+        "sha256": "a0d977279f86d6b16f2fb5edafda853f74d54af3c49b5ea97466637d70092f4d",
+        "mode": 420
+      },
+      "references/detailed-guide.md": {
+        "sha256": "b2fb12d663fc7abc358f5c7a78fc74d71ca3d7b9158c71d67f324c7eb15cc2e4",
+        "mode": 420
+      }
+    },
+    "canonicalSource": "library/skills/lightweight-charts",
+    "previousOptionalSource": {
+      "archive": "authoring/optional-originals/2026-10-03/lightweight-charts",
+      "files": {
+        "SKILL.md": {
+          "sha256": "f0fb1363ec9c6d2d782691de58a771f6d1a824e978a188134acfa3251ed9a5a7",
+          "mode": 420
+        },
+        "references/detailed-guide.md": {
+          "sha256": "b2fb12d663fc7abc358f5c7a78fc74d71ca3d7b9158c71d67f324c7eb15cc2e4",
+          "mode": 420
+        }
+      }
+    }
+  },
+  {
+    "name": "reverse-engineering",
+    "curatedFiles": {
+      "SKILL.md": {
+        "sha256": "292ab03d97ca8914b870da9089f564c7d5ee36b1a26ae9d30f8e5ddde69491e0",
+        "mode": 420
+      },
+      "references/modes/binary-analysis-patterns/guide.md": {
+        "sha256": "32d5805c9158373be9cb0ccf0ef32659870ce412c82433e050960d6503fd6103",
+        "mode": 420
+      },
+      "references/modes/binary-analysis-patterns/notices/blacktower-mit.md": {
+        "sha256": "a0d977279f86d6b16f2fb5edafda853f74d54af3c49b5ea97466637d70092f4d",
+        "mode": 420
+      },
+      "references/modes/binary-analysis-patterns/references/detailed-guide.md": {
+        "sha256": "c5974e552e2abd90e18b7900d8ff46eaf781666412ed5ca81c3248661b30607d",
+        "mode": 420
+      },
+      "references/modes/protocol-reverse-engineering/guide.md": {
+        "sha256": "324a470c3221938b1259e01f88073dd219fb8179639a10ba31f190b7ac34c591",
+        "mode": 420
+      },
+      "references/modes/protocol-reverse-engineering/notices/blacktower-mit.md": {
+        "sha256": "a0d977279f86d6b16f2fb5edafda853f74d54af3c49b5ea97466637d70092f4d",
+        "mode": 420
+      },
+      "references/modes/protocol-reverse-engineering/references/full-guide.md": {
+        "sha256": "ba779b7127b0d511df8ad91e27f37307e32d8b34185e8df6138ed2b65ad3e49e",
+        "mode": 420
+      }
+    },
+    "canonicalSource": "library/skills/reverse-engineering",
+    "previousOptionalSource": null
+  }
+]

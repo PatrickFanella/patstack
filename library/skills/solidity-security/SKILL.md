@@ -1,6 +1,6 @@
 ---
 name: solidity-security
-description: Master smart contract security best practices to prevent common vulnerabilities and implement secure Solidity patterns. Use when writing smart contracts, auditing existing contracts, or implementing security measures for blockchain applications.
+description: Implement or audit Solidity contracts for exploitable behavior, authorization, state transitions, and fund safety.
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

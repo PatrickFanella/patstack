@@ -13,6 +13,35 @@ SPEC.loader.exec_module(links)
 
 
 class SourceLinkScopeTests(unittest.TestCase):
+    def test_retired_link_is_backed_up_and_rollback_preserves_later_edits(self):
+        old_root, old_state = links.ROOT, links.STATE
+        self.addCleanup(setattr, links, 'ROOT', old_root)
+        self.addCleanup(setattr, links, 'STATE', old_state)
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            links.ROOT, links.STATE = root, root / 'state'
+            (root / 'catalog').mkdir()
+            source = root / 'source'; source.mkdir()
+            dest = root / 'retired'; dest.symlink_to(source)
+            before = links.install.snapshot(dest)
+            (root / 'catalog/workstation-links.json').write_text(json.dumps({
+                'links': {}, 'retiredLinks': [str(dest)], 'baseline': {str(dest): before}}))
+            import subprocess
+            subprocess.run(['git', 'init', '-q', str(root)], check=True)
+            subprocess.run(['git', '-C', str(root), '-c', 'user.name=Fixture', '-c', 'user.email=fixture@invalid',
+                            'commit', '--allow-empty', '-qm', 'fixture'], check=True)
+            plan = links.plan([str(dest)])
+            self.assertEqual(plan['operations'][0]['action'], 'retire')
+            run = links.install.apply(plan, links.STATE)
+            self.assertFalse(dest.is_symlink())
+            links.install.verify(links.plan([str(dest)]), links.STATE)
+            dest.write_text('later content')
+            with self.assertRaisesRegex(RuntimeError, 'intervening edits'):
+                links.install.rollback(run, links.STATE)
+            self.assertEqual(dest.read_text(), 'later content')
+            dest.unlink()
+            links.install.rollback(run, links.STATE)
+            self.assertEqual(links.install.snapshot(dest), before)
     def test_selected_link_preserves_unrelated_destination_drift(self):
         old_root, old_state = links.ROOT, links.STATE
         self.addCleanup(setattr, links, 'ROOT', old_root)

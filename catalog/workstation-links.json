@@ -29,8 +29,6 @@
     "/home/onnwee/.claude/skills/hatch-pet": "/home/onnwee/.codex/skills/hatch-pet",
     "/home/onnwee/.claude/skills/implementation-plan": "/home/onnwee/.codex/skills/implementation-plan",
     "/home/onnwee/.claude/skills/interface-originality-audit": "/home/onnwee/.codex/skills/interface-originality-audit",
-    "/home/onnwee/.claude/skills/kubernetes-development": "/home/onnwee/.codex/skills/kubernetes-development",
-    "/home/onnwee/.claude/skills/lightweight-charts": "/home/onnwee/.codex/skills/lightweight-charts",
     "/home/onnwee/.claude/skills/llm-evaluation": "/home/onnwee/.codex/skills/llm-evaluation",
     "/home/onnwee/.claude/skills/mcp-builder": "/home/onnwee/.codex/skills/mcp-builder",
     "/home/onnwee/.claude/skills/mcp-integration-lifecycle": "/home/onnwee/.codex/skills/mcp-integration-lifecycle",
@@ -48,7 +46,6 @@
     "/home/onnwee/.claude/skills/refactor": "/home/onnwee/.codex/skills/refactor",
     "/home/onnwee/.claude/skills/repository-delivery-review": "/home/onnwee/.codex/skills/repository-delivery-review",
     "/home/onnwee/.claude/skills/repository-test-maintenance": "/home/onnwee/.codex/skills/repository-test-maintenance",
-    "/home/onnwee/.claude/skills/reverse-engineering": "/home/onnwee/.codex/skills/reverse-engineering",
     "/home/onnwee/.claude/skills/rust-pro": "/home/onnwee/.codex/skills/rust-pro",
     "/home/onnwee/.claude/skills/scaffold-exercises": "/home/onnwee/.codex/skills/scaffold-exercises",
     "/home/onnwee/.claude/skills/secrets-management": "/home/onnwee/.codex/skills/secrets-management",
@@ -56,12 +53,10 @@
     "/home/onnwee/.claude/skills/security-ownership-map": "/home/onnwee/.codex/skills/security-ownership-map",
     "/home/onnwee/.claude/skills/security-threat-model": "/home/onnwee/.codex/skills/security-threat-model",
     "/home/onnwee/.claude/skills/shell-development": "/home/onnwee/.codex/skills/shell-development",
-    "/home/onnwee/.claude/skills/solidity-security": "/home/onnwee/.codex/skills/solidity-security",
     "/home/onnwee/.claude/skills/systematic-debugging": "/home/onnwee/.codex/skills/systematic-debugging",
     "/home/onnwee/.claude/skills/tdd": "/home/onnwee/.codex/skills/tdd",
     "/home/onnwee/.claude/skills/technical-writing": "/home/onnwee/.codex/skills/technical-writing",
     "/home/onnwee/.claude/skills/temporal-python-testing": "/home/onnwee/.codex/skills/temporal-python-testing",
-    "/home/onnwee/.claude/skills/terraform-module-library": "/home/onnwee/.codex/skills/terraform-module-library",
     "/home/onnwee/.claude/skills/typescript-pro": "/home/onnwee/.codex/skills/typescript-pro",
     "/home/onnwee/.claude/skills/unslop": "/home/onnwee/.codex/skills/unslop",
     "/home/onnwee/.claude/skills/verify-behavior": "/home/onnwee/.codex/skills/verify-behavior",
@@ -14462,5 +14457,12 @@
     },
     "/home/onnwee/.claude/skills/t3-repo-setup": null,
     "/home/onnwee/.claude/skills/stripe-billing-operations": null
-  }
+  },
+  "retiredLinks": [
+    "/home/onnwee/.claude/skills/solidity-security",
+    "/home/onnwee/.claude/skills/kubernetes-development",
+    "/home/onnwee/.claude/skills/terraform-module-library",
+    "/home/onnwee/.claude/skills/lightweight-charts",
+    "/home/onnwee/.claude/skills/reverse-engineering"
+  ]
 }

@@ -11,8 +11,16 @@ def main():
     actual={p.parent.name for p in (ROOT/'skills').glob('*/SKILL.md')}|{'omarchy','diagnose-crash'}
     expected={x['name'] for x in catalog if x['scope']=='personal'}
     if actual!=expected:errors.append(f'catalog mismatch {actual^expected}')
-    for folder in ['skills','shared','repository-skills']:
-        for p in (ROOT/folder).rglob('SKILL.md'):
+    optional={x['name'] for x in catalog if x['scope']=='optional'}
+    metrics['optionalCuratedEntrypoints']=len(optional)
+    for folder in ['skills','shared','repository-skills','library/skills']:
+        source_root=ROOT/folder
+        roots=[source_root/name for name in sorted(optional)] if folder=='library/skills' else [source_root]
+        entrypoints=[p for base in roots for p in base.rglob('SKILL.md')]
+        if folder=='library/skills':
+            for name in optional:
+                if not (source_root/name/'SKILL.md').is_file():errors.append(f'missing optional source: {name}')
+        for p in entrypoints:
             try:
                 _,front,body=p.read_text().split('---',2); meta=yaml.safe_load(front)
                 if meta['name']!=p.parent.name:errors.append(f'name: {p}')
@@ -23,7 +31,7 @@ def main():
                 if folder=='skills':
                     metrics['authoredPersonal']+=1;metrics['personalDescriptions']+=len(meta['description']);metrics['personalBodies']+=len(body)
             except Exception as e:errors.append(f'{p}: {e}')
-        for p in (ROOT/folder).rglob('agents/openai.yaml'):
+        for p in [p for base in roots for p in base.rglob('agents/openai.yaml')]:
             try:
                 meta=yaml.safe_load(p.read_text())
                 if not isinstance(meta,dict) or set(meta)-{'interface','dependencies','policy'}:errors.append(f'unsupported UI metadata: {p}')
@@ -31,21 +39,21 @@ def main():
                 policy=meta.get('policy',{})
                 if 'allow_implicit_invocation' in policy and not isinstance(policy['allow_implicit_invocation'],bool):errors.append(f'invocation policy: {p}')
             except Exception as e:errors.append(f'UI metadata {p}: {e}')
-        for p in (ROOT/folder).rglob('*.md'):
+        for p in [p for base in roots for p in base.rglob('*.md')]:
             # Examples and code fences are illustrative, not resource links.
             text=re.sub(r'(?ms)^(```|~~~).*?^\1[^\n]*','',p.read_text())
             for link in re.findall(r'\]\(([^\s)]+)(?:\s+[^)]*)?\)',text):
                 if re.match(r'^(?:https?:|mailto:|#|data:)',link):continue
                 target=link.split('#')[0]
                 if target and not (p.parent/target).exists():errors.append(f'broken link {p.relative_to(ROOT)} -> {target}')
-        for p in (ROOT/folder).rglob('*.py'):
+        for p in [p for base in roots for p in base.rglob('*.py')]:
             try:tree=ast.parse(p.read_text());scripts.append({'path':str(p.relative_to(ROOT)),'mode':oct(p.stat().st_mode&0o777),'imports':sorted({n.names[0].name.split('.')[0] for n in ast.walk(tree) if isinstance(n,ast.Import)}|{n.module.split('.')[0] for n in ast.walk(tree) if isinstance(n,ast.ImportFrom) and n.module})})
             except SyntaxError as e:errors.append(f'python syntax {p}: {e}')
     for name in ['omarchy','diagnose-crash']:
         p=pathlib.Path.home()/'.codex/skills'/name/'SKILL.md';_,front,body=p.read_text().split('---',2)
         metrics['personalDescriptions']+=len(yaml.safe_load(front)['description']);metrics['personalBodies']+=len(body)
     metrics['personalEntrypoints']=len(actual)
-    if len(actual)!=66:errors.append(f'personal entrypoint count {len(actual)} != 66')
+    if len(actual)!=61:errors.append(f'personal entrypoint count {len(actual)} != 61')
     metrics['personalDescriptionBudget']=PERSONAL_DESCRIPTION_BUDGET
     metrics['personalDescriptionHeadroom']=PERSONAL_DESCRIPTION_BUDGET-metrics['personalDescriptions']
     if metrics['personalDescriptionHeadroom']<0:errors.append(f'description budget {metrics}')

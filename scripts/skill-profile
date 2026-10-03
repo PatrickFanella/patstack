@@ -63,7 +63,7 @@ def reserved_names() -> set[str]:
                 vault_names.add(path.parent.name)
     local_manifest = SOURCE / "catalog/local-owners.json"
     local_names = set(json.loads(local_manifest.read_text())) if local_manifest.exists() else set()
-    return {item["name"] for item in catalog} | set(retired) | set(managed_shared()) | set(system) | vault_names | local_names
+    return {item["name"] for item in catalog if item.get("scope", "personal") != "optional"} | set(retired) | set(managed_shared()) | set(system) | vault_names | local_names
 
 
 def sources() -> dict[str, Path]:

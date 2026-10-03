@@ -10,19 +10,22 @@ def plan(only_links=None):
     config=install.read(ROOT/'catalog/workstation-links.json')
     previous=install.read(install.statefile(STATE), {'paths':{}})
     operations=[]
-    links=config['links']
+    links=dict(config['links'])
+    for dest in config.get('retiredLinks', []):
+        if dest in links:raise RuntimeError('Link cannot be active and retired: '+dest)
+        links[dest]=None
     if only_links:
         unknown=set(only_links)-links.keys()
         if unknown:raise RuntimeError('Unknown source links: '+', '.join(sorted(unknown)))
         links={dest:source for dest,source in links.items() if dest in only_links}
     for dest,source in links.items():
-        if not Path(source).exists(): raise RuntimeError('Missing source: '+source)
-        desired={'type':'symlink','target':source,'mode':0o777}
+        if source is not None and not Path(source).exists(): raise RuntimeError('Missing source: '+source)
+        desired={'type':'symlink','target':source,'mode':0o777} if source is not None else None
         expected=previous['paths'].get(dest,config['baseline'].get(dest))
         actual=install.snapshot(dest)
         if actual not in [expected,desired]:raise RuntimeError('Drift: '+dest)
         # Payload is a staged symlink outside the authored tree.
-        operations.append({'destination':dest,'source':None,'expected':expected,'desired':desired,'group':1,'payload':None,'action':'unchanged' if actual==desired else 'link'})
+        operations.append({'destination':dest,'source':None,'expected':expected,'desired':desired,'group':1,'payload':None,'action':'unchanged' if actual==desired else 'retire' if desired is None else 'link'})
     return {'sourceRoot':str(ROOT),'sourceRevision':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'operations':operations,'protected':{},'previousInstalled':previous}
 
 def main():
@@ -47,6 +50,7 @@ def main():
         if pending:raise RuntimeError('Roll back unfinished source-link transaction: '+str(pending[0]))
         proposal=plan(args.only_link);stage=STATE/'sources';stage.mkdir(exist_ok=True)
         for i,op in enumerate(proposal['operations']):
+            if op['desired'] is None:continue
             p=stage/str(i)
             if p.is_symlink():p.unlink()
             elif p.exists():raise RuntimeError('Unexpected source stage: '+str(p))

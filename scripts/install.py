@@ -57,7 +57,7 @@ def prepare(root=ROOT,state=DEFAULT_STATE,only_skills=None,only_shared=None):
  destinations[target]=str(root/'repository-skills/blacktower-development');groups[target]=3
  catalog=read(root/'catalog/proposed-catalog.json');keep={r['name'] for r in catalog if r['scope']=='personal'}
  personal=Path(config['personalRoot'])
- for p in baseline:
+ for p in baseline.keys() | installed['paths'].keys():
   q=Path(p)
   if q.parent==personal and q.name not in keep and q.name!='.system':destinations[p]=None;groups[p]=3 if q.name.startswith('principle-') or q.name=='writing-for-agents' else (1 if q.name in {'requirements-interview','session-handoff','review-agent'} else 2)
  # Exclude only this private repo-local installation; preserve all pre-existing text.
@@ -69,7 +69,7 @@ def prepare(root=ROOT,state=DEFAULT_STATE,only_skills=None,only_shared=None):
  if only_skills or only_shared:
   selected=set()
   for names,folder,label in [(only_skills,'skills','personal'),(only_shared,'shared','shared')]:
-   available={Path(dest).name:dest for dest,src in destinations.items() if src and Path(src).parent==root/folder}
+   available={Path(dest).name:dest for dest,src in destinations.items() if (label=='personal' and Path(dest).parent==personal and Path(dest).name!='.system') or (label=='shared' and src and Path(src).parent==root/folder)}
    unknown=set(names or [])-available.keys()
    if unknown:raise RuntimeError(f'Unknown {label} skills: '+', '.join(sorted(unknown)))
    selected.update(available[name] for name in names or [])

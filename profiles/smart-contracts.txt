@@ -1,0 +1,2 @@
+# Focused optional specialist profile: smart-contracts
+solidity-security

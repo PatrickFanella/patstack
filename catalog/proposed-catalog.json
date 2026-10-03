@@ -214,7 +214,7 @@
   {
     "name": "kubernetes-development",
     "description": "Kubernetes manifests, Helm charts, and cluster workload policies; validate the requested deployment artifact.",
-    "scope": "personal",
+    "scope": "optional",
     "sources": [
       "helm-chart-scaffolding",
       "k8s-manifest-generator",
@@ -224,7 +224,7 @@
   {
     "name": "lightweight-charts",
     "description": "'TradingView Lightweight Charts implementation: series, time scales, live updates, plugins, and framework integration.'",
-    "scope": "personal",
+    "scope": "optional",
     "sources": [
       "lightweight-charts"
     ]
@@ -388,7 +388,7 @@
   {
     "name": "reverse-engineering",
     "description": "Analyze executable binaries or network protocols; select disassembly or packet-analysis procedures as needed.",
-    "scope": "personal",
+    "scope": "optional",
     "sources": [
       "binary-analysis-patterns",
       "protocol-reverse-engineering"
@@ -455,7 +455,7 @@
   {
     "name": "solidity-security",
     "description": "Implement or audit Solidity contracts for exploitable behavior, authorization, state transitions, and fund safety.",
-    "scope": "personal",
+    "scope": "optional",
     "sources": [
       "solidity-security"
     ]
@@ -515,7 +515,7 @@
   {
     "name": "terraform-module-library",
     "description": "Create reusable Terraform modules with explicit inputs, provider constraints, examples, and validation.",
-    "scope": "personal",
+    "scope": "optional",
     "sources": [
       "terraform-module-library"
     ]

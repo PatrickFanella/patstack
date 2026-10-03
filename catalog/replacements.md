@@ -7,7 +7,7 @@
 | `api-design-principles` | `api-development` | [procedure](../skills/api-development/references/modes/api-design-principles/guide.md) |
 | `bash-defensive-patterns` | `shell-development` | [procedure](../skills/shell-development/references/modes/bash-defensive-patterns/guide.md) |
 | `bats-testing-patterns` | `shell-development` | [procedure](../skills/shell-development/references/modes/bats-testing-patterns/guide.md) |
-| `binary-analysis-patterns` | `reverse-engineering` | [procedure](../skills/reverse-engineering/references/modes/binary-analysis-patterns/guide.md) |
+| `binary-analysis-patterns` | `reverse-engineering` | [procedure](../library/skills/reverse-engineering/references/modes/binary-analysis-patterns/guide.md) |
 | `changelog-automation` | `git-advanced-workflows` | [procedure](../skills/git-advanced-workflows/references/modes/changelog-automation/guide.md) |
 | `check-compiler-errors` | `verify-behavior` | [procedure](../skills/verify-behavior/references/modes/check-compiler-errors/guide.md) |
 | `cli-for-agents` | `cli-developer` | [procedure](../skills/cli-developer/references/modes/cli-for-agents/guide.md) |
@@ -25,10 +25,10 @@
 | `fix-merge-conflicts` | `git-advanced-workflows` | [procedure](../skills/git-advanced-workflows/references/modes/fix-merge-conflicts/guide.md) |
 | `github-pro` | `git-advanced-workflows` | [procedure](../skills/git-advanced-workflows/references/modes/github-pro/guide.md) |
 | `grafana-dashboards` | `observability` | [procedure](../skills/observability/references/modes/grafana-dashboards/guide.md) |
-| `helm-chart-scaffolding` | `kubernetes-development` | [procedure](../skills/kubernetes-development/references/modes/helm-chart-scaffolding/guide.md) |
+| `helm-chart-scaffolding` | `kubernetes-development` | [procedure](../library/skills/kubernetes-development/references/modes/helm-chart-scaffolding/guide.md) |
 | `hybrid-search-implementation` | `rag-implementation` | [procedure](../skills/rag-implementation/references/modes/hybrid-search-implementation/guide.md) |
-| `k8s-manifest-generator` | `kubernetes-development` | [procedure](../skills/kubernetes-development/references/modes/k8s-manifest-generator/guide.md) |
-| `k8s-security-policies` | `kubernetes-development` | [procedure](../skills/kubernetes-development/references/modes/k8s-security-policies/guide.md) |
+| `k8s-manifest-generator` | `kubernetes-development` | [procedure](../library/skills/kubernetes-development/references/modes/k8s-manifest-generator/guide.md) |
+| `k8s-security-policies` | `kubernetes-development` | [procedure](../library/skills/kubernetes-development/references/modes/k8s-security-policies/guide.md) |
 | `local-change-quality-gate` | `code-review` | [procedure](../skills/code-review/references/modes/local-change-quality-gate/guide.md) |
 | `loop-on-ci` | `ci-maintenance` | [procedure](../skills/ci-maintenance/references/modes/loop-on-ci/guide.md) |
 | `make-pr-easy-to-review` | `git-advanced-workflows` | [procedure](../skills/git-advanced-workflows/references/modes/make-pr-easy-to-review/guide.md) |
@@ -60,7 +60,7 @@
 | `principle-subtract-before-you-add` | `refactor` | [procedure](../skills/refactor/references/principles/subtract-before-you-add.md) |
 | `principle-type-system-discipline` | `typescript-pro` | [procedure](../skills/typescript-pro/references/principles/type-system-discipline.md) |
 | `prometheus-configuration` | `observability` | [procedure](../skills/observability/references/modes/prometheus-configuration/guide.md) |
-| `protocol-reverse-engineering` | `reverse-engineering` | [procedure](../skills/reverse-engineering/references/modes/protocol-reverse-engineering/guide.md) |
+| `protocol-reverse-engineering` | `reverse-engineering` | [procedure](../library/skills/reverse-engineering/references/modes/protocol-reverse-engineering/guide.md) |
 | `python-configuration` | `python-development` | [procedure](../skills/python-development/references/modes/python-configuration/guide.md) |
 | `python-packaging` | `python-development` | [procedure](../skills/python-development/references/modes/python-packaging/guide.md) |
 | `python-testing-patterns` | `python-development` | [procedure](../skills/python-development/references/modes/python-testing-patterns/guide.md) |
