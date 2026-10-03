@@ -1,0 +1,10 @@
+[Unit]
+Description=Read-only Gitea package recovery and retention inventory
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 %h/.local/share/gitea-package-retention/gitea-package-retention-audit.py
+TimeoutStartSec=10min
+UMask=0077

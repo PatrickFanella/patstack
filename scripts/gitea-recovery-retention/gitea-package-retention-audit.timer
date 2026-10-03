@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily read-only Gitea package retention audit
+
+[Timer]
+OnCalendar=*-*-* 07:20:00
+RandomizedDelaySec=20min
+Persistent=true
+Unit=gitea-package-retention-audit.service
+
+[Install]
+WantedBy=timers.target
