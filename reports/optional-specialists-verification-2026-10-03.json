@@ -1,0 +1,48 @@
+{
+  "sourceRevision": "e67181a3cb857925ef72585e3525a7bffaa1dccd",
+  "personalReceipt": "/home/onnwee/.codex/skill-installations/codex-skills/run-e17f822fd6864383bc7f065318a715bc",
+  "claudeReceipt": "/home/onnwee/.codex/skill-installations/codex-source-links/run-ab16662ef60d4873b07b206ec4a266dc",
+  "homeDiscovery": {
+    "total": 80,
+    "enabled": 79,
+    "specialistsAbsent": true,
+    "errors": []
+  },
+  "sourceAndArchiveHashesPreserved": true,
+  "disposableProjectActivationTests": [
+    {
+      "profile": "infrastructure",
+      "discovered": [
+        "kubernetes-development",
+        "terraform-module-library"
+      ],
+      "curatedDirectoryHashesMatch": true,
+      "absentAfterDeactivation": true
+    },
+    {
+      "profile": "charting",
+      "discovered": [
+        "lightweight-charts"
+      ],
+      "curatedDirectoryHashesMatch": true,
+      "absentAfterDeactivation": true
+    },
+    {
+      "profile": "reverse-engineering",
+      "discovered": [
+        "reverse-engineering"
+      ],
+      "curatedDirectoryHashesMatch": true,
+      "absentAfterDeactivation": true
+    },
+    {
+      "profile": "smart-contracts",
+      "discovered": [
+        "solidity-security"
+      ],
+      "curatedDirectoryHashesMatch": true,
+      "absentAfterDeactivation": true
+    }
+  ],
+  "proofBoundary": "Local discovery and selection verified; no specialist task, live infrastructure or fleet operation performed."
+}
