@@ -5,7 +5,7 @@ Use this checklist for a 15-30 minute monthly upkeep pass.
 ## 1. Snapshot
 
 - [ ] `git status --short --ignored`
-- [ ] `python3 <skill>/scripts/vault_monthly_check.py /home/onnwee/Documents/ars-malefica`
+- [ ] `python3 <skill>/scripts/vault_monthly_check.py "/home/onnwee/Work/Vaults/Ars Malefica"`
 - [ ] `/usr/bin/git check-ignore -v .obsidian/plugins/remotely-save/data.json .obsidian/plugins/paperless/data.json`
 - [ ] Confirm report: official Sync enabled, Remotely Save disabled, retained private data ignored.
 
@@ -57,5 +57,5 @@ Use this checklist for a 15-30 minute monthly upkeep pass.
 
 - [ ] `/usr/bin/git diff --check`
 - [ ] `python3 -m json.tool .obsidian/plugins/quickadd/data.json >/tmp/quickadd-json-check.out` if QuickAdd changed
-- [ ] `python3 <skill>/scripts/vault_monthly_check.py /home/onnwee/Documents/ars-malefica --json > /tmp/vault-monthly-check.json`
+- [ ] `python3 <skill>/scripts/vault_monthly_check.py "/home/onnwee/Work/Vaults/Ars Malefica" --json > /tmp/vault-monthly-check.json`
 - [ ] Commit intentional vault changes only.
