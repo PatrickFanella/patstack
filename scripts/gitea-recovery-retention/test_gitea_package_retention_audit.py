@@ -26,6 +26,14 @@ class PackageRetentionAuditTests(unittest.TestCase):
         self.assertEqual(inventory, {"containers": [], "cached_images": [], "compose_refs": []})
         self.assertIn("Docker daemon unavailable", error)
 
+    def test_compose_failure_preserves_partial_inventory_and_blocks_host(self):
+        value = {"containers": [{"name": "stopped-test"}], "cached_images": [],
+                 "compose_refs": [], "compose_errors": ["/workspace/missing.yml"]}
+        with patch.object(audit, "remote", return_value=audit.json.dumps(value)):
+            inventory, error = audit.host_references("example")
+        self.assertEqual(inventory["containers"], value["containers"])
+        self.assertIn("Compose source unreadable", error)
+
     def test_cached_rollback_digest_is_a_preservation_reason(self):
         row = self.row()
         refs = audit.refs_for_version(row)

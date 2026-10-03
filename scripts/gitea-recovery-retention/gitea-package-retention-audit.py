@@ -109,14 +109,16 @@ for row in rows:
             if not os.path.isfile(path) or os.path.getsize(path) > 1048576: raise OSError("not a bounded readable file")
             with open(path, errors="replace") as handle: refs.update(re.findall(r"git\.subcult\.tv/[A-Za-z0-9._/-]+(?::[A-Za-z0-9._-]+|@sha256:[0-9a-fA-F]{64})?", handle.read()))
         except OSError as exc: compose_errors.append(path+": "+str(exc))
-if compose_errors: raise SystemExit("Compose source unreadable: "+"; ".join(compose_errors[:3]))
-print(json.dumps({"containers":rows,"cached_images":cached,"compose_refs":sorted(refs)}))
+print(json.dumps({"containers":rows,"cached_images":cached,"compose_refs":sorted(refs),
+                  "compose_errors":sorted(set(compose_errors))}))
 '''
 
 
 def host_references(host: str) -> tuple[dict[str, Any], str | None]:
     try:
-        return json.loads(remote(host, REMOTE_CONTAINERS)), None
+        value = json.loads(remote(host, REMOTE_CONTAINERS))
+        errors = value.get("compose_errors", [])
+        return value, ("Compose source unreadable: " + "; ".join(errors[:3])) if errors else None
     except Exception as exc:
         return {"containers": [], "cached_images": [], "compose_refs": []}, str(exc)
 

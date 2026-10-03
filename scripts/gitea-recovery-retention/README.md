@@ -20,3 +20,13 @@ from files at most 1 MiB and fails closed when a supplied source is unavailable.
 
 The user service and timer run from this source after installation. Receipts
 belong in the private runtime directory configured by the service unit.
+
+## Current follow-up gate
+
+The Almaz inventory contains four stopped CI/test containers whose Compose labels
+refer to ephemeral `/workspace/subculture-collective/...` paths. Their mount
+metadata does not map `/workspace`, and the stopped containers cannot read those
+paths. The audit must continue to fail closed for those labels. A future CI
+cleanup should remove completed test containers or replace their Compose labels
+with a durable source reference; do not add an exclusion merely to permit
+retention deletion.
