@@ -82,7 +82,7 @@ def verify(tea, require_repository_context=True):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=["apply", "normalize", "verify"])
+    parser.add_argument("mode", choices=["apply", "normalize", "rotate", "verify"])
     parser.add_argument("--tea", required=True)
     args = parser.parse_args()
     os.umask(0o077)
@@ -95,6 +95,61 @@ def main():
     tea_config = config_home / "tea/config.yml"
     if sys.platform == "darwin" and not os.environ.get("XDG_CONFIG_HOME"):
         tea_config = home / "Library/Application Support/tea/config.yml"
+    if args.mode == "rotate":
+        isolated_config = config_home / "agent-identity/tea/config.yml"
+        targets = [(tea_config, payload["main"]), (isolated_config, payload["isolated"])]
+        for path, item in targets:
+            assert digest(path) == item["expected_sha256"], "Credential configuration drift"
+            agent = item["config"]["logins"][0]
+            assert agent["name"] == LOGIN and agent["user"] == LOGIN and agent["default"]
+            assert agent["token"] == payload["token"]
+        state = home / ".local/state/gitea-agent" / ("admin-scope-" + payload["run_id"])
+        state.mkdir(parents=True, exist_ok=True)
+        if (state / "receipt.json").exists():
+            raise RuntimeError("Token transition already recorded; inspect its receipt")
+        receipt = {"host": payload["host"], "token_id": payload["token_id"],
+                   "scopes": payload["scopes"], "files": []}
+        for index, (path, item) in enumerate(targets):
+            backup = state / ("before-" + str(index))
+            shutil.copyfile(path, backup)
+            receipt["files"].append({"path": str(path), "backup": str(backup),
+                                     "before_sha256": item["expected_sha256"]})
+        (state / "receipt.json").write_text(json.dumps(receipt, indent=2))
+        written_hashes = {}
+        try:
+            for path, item in targets:
+                path.write_text(json.dumps(item["config"], indent=2))
+                path.chmod(0o600)
+                written_hashes[str(path)] = digest(path)
+            me = api(args.tea, "/user", explicit=False)
+            assert me["login"] == LOGIN and me["is_admin"]
+            users = api(args.tea, "/admin/users?limit=1", explicit=False)
+            assert isinstance(users, list) and users
+            credential = run(["git", "credential", "fill"],
+                             data="protocol=https\nhost=git.subcult.tv\n\n")
+            values = dict(line.split("=", 1) for line in credential.splitlines() if "=" in line)
+            assert values.get("username") == LOGIN and values.get("password") == payload["token"]
+            receipt["verification"] = {"api_login": me["login"], "site_admin": True,
+                                       "admin_api_read": True, "credential_login": LOGIN}
+            for entry in receipt["files"]:
+                entry["after_sha256"] = digest(Path(entry["path"]))
+        except Exception:
+            blocked = []
+            for entry in receipt["files"]:
+                path = Path(entry["path"])
+                expected = written_hashes.get(str(path), entry["before_sha256"])
+                if digest(path) == expected:
+                    shutil.copyfile(entry["backup"], path)
+                else:
+                    blocked.append(str(path))
+            receipt["rolled_back"] = not blocked
+            receipt["rollback_blocked_files"] = blocked
+            (state / "receipt.json").write_text(json.dumps(receipt, indent=2))
+            raise
+        (state / "receipt.json").write_text(json.dumps(receipt, indent=2))
+        print(json.dumps({"host": payload["host"], "token_id": payload["token_id"],
+                          "scopes": payload["scopes"], "verification": receipt["verification"]}))
+        return
     state = home / ".local/state/gitea-agent" / ("fleet-" + payload["run_id"])
     state.mkdir(parents=True, exist_ok=True)
     receipt_path = state / "receipt.json"

@@ -86,6 +86,8 @@ instructions import it without replacing their other guidance. Gitea CLI default
 HTTPS credentials and conditional commit attribution select `subcult-agent`.
 Other Git hosts retain their existing identity. Explicit service credentials are
 separate consumers and require their own access and runtime migration checks.
+The user explicitly keeps Switchyard on `open-pilot`; a fleet default or token
+scope update must preserve that runtime credential and identity.
 
 `scripts/gitea-agent-host.py` applies a host configuration and records private
 before-state backups and hashes. It receives the device token and instruction
@@ -104,6 +106,15 @@ repository, the agent Git credential, conditional author attribution, HTTPS
 transport, and a successful push dry run. A pending context check is not a
 completed fleet rollout. The registry audit and local checks do not prove other
 devices; retain each host's actual verification receipt.
+
+The `rotate` stage accepts replacement-token configurations through stdin,
+checks both the ordinary and isolated tea configurations against their current
+hashes, saves private backups, and updates the agent entry in both. It verifies
+the authenticated account, access to the admin API, and the exact token selected
+by Git. On failure it restores only files that still match this transition's
+written hashes, preserving concurrent edits. The six device tokens gained
+`write:admin` with user authorization on October 3, 2026; the previous tokens
+remain recovery credentials rather than current device defaults.
 
 For rollback, require each touched file to match its receipt's final hash before
 restoring its private before-state backup, or removing a file that was originally
