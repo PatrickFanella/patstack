@@ -78,6 +78,39 @@ memory. A linked skill that needs a missing tool must report the limitation.
 
 ## Runtime instruction chain
 
+### Fleet Gitea identity
+
+`instructions/GITEA.md` owns the shared agent identity guidance. Its deployed copy
+is `~/.config/agent-identity/GITEA.md`; user-controlled Codex, Claude and OpenCode
+instructions import it without replacing their other guidance. Gitea CLI defaults,
+HTTPS credentials and conditional commit attribution select `subcult-agent`.
+Other Git hosts retain their existing identity. Explicit service credentials are
+separate consumers and require their own access and runtime migration checks.
+
+`scripts/gitea-agent-host.py` applies a host configuration and records private
+before-state backups and hashes. It receives the device token and instruction
+text through stdin; never put tokens in arguments or repository files. The
+`apply` stage retains existing logins, sets the agent default, installs an
+isolated Git helper, replaces only Gitea SSH URL redirects with HTTPS, and adds
+conditional Gitea author settings. On macOS, the ordinary tea configuration is
+under `~/Library/Application Support/tea/` unless XDG configuration overrides it.
+
+The `normalize` stage receives a parsed tea configuration with the agent login
+first and the current file hash, refuses a changed file, preserves the other
+logins, and verifies repository-context selection. This step matters because tea
+may select the first matching login inside a checkout instead of its marked
+default. Final `verify` requires the agent identity both inside and outside a
+repository, the agent Git credential, conditional author attribution, HTTPS
+transport, and a successful push dry run. A pending context check is not a
+completed fleet rollout. The registry audit and local checks do not prove other
+devices; retain each host's actual verification receipt.
+
+For rollback, require each touched file to match its receipt's final hash before
+restoring its private before-state backup, or removing a file that was originally
+absent. Refuse later edits. Preserve retained human credentials and revoke only
+the device token being retired; do not restore a whole unrelated configuration
+or token inventory from another device.
+
 The client supplies its runtime rules, conversation, available tools, and selected skill metadata. User-controlled Codex context starts at the global AGENTS.md; nearest project instructions add local scope. RTK is required shell guidance. HOMELAB supplies host and documentation policy, with dated history loaded only when relevant. Skills expose names/descriptions for selection; procedures and references are loaded when needed. Exact expansion and context packing depend on the client; filesystem inventory is not a complete runtime prompt trace.
 
 Keep infrastructure history and operating notes in Machinum. Keep executable configuration in its owning repository. Documentation should link to the owner instead of copying editable skill bodies. Fleet rollout of this personal repository requires host inventories, destination mappings, preview, and guarded application; this workstation release does not claim fleet parity.
