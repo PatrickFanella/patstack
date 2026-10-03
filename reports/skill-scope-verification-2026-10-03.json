@@ -1,0 +1,79 @@
+{
+  "sourceRevision": "e42496ac88426335b7aee3587375ba03e3793000",
+  "discovery": [
+    {
+      "cwd": "/home/onnwee",
+      "total": 85,
+      "enabled": 84,
+      "localOwners": []
+    },
+    {
+      "cwd": "/home/onnwee/Work/Vaults/Ars Malefica",
+      "total": 93,
+      "enabled": 92,
+      "localOwners": [
+        "ars-malefica-inbox-intake",
+        "ars-malefica-maintenance",
+        "ars-malefica-source-intake",
+        "ars-malefica-thread-init",
+        "ars-malefica-workflows",
+        "coding-challenge-coach",
+        "guitar-practice-coach",
+        "vault-monthly-maintenance"
+      ]
+    },
+    {
+      "cwd": "/home/onnwee/Work/Vaults/SUBCULT",
+      "total": 87,
+      "enabled": 86,
+      "localOwners": [
+        "patreon-manager",
+        "subcult-vault"
+      ]
+    },
+    {
+      "cwd": "/home/onnwee/Work/Vaults/Machinum",
+      "total": 86,
+      "enabled": 85,
+      "localOwners": [
+        "operations-vault"
+      ]
+    },
+    {
+      "cwd": "/home/onnwee/Work/Vaults/Archivum",
+      "total": 86,
+      "enabled": 85,
+      "localOwners": [
+        "library-vault"
+      ]
+    },
+    {
+      "cwd": "/home/onnwee/Work/Subcult/edda",
+      "total": 86,
+      "enabled": 85,
+      "localOwners": [
+        "play-edda"
+      ]
+    }
+  ],
+  "retiredEntrypointsAbsent": [
+    "grilling",
+    "handoff",
+    "llama-line-client",
+    "obsidian-vault",
+    "show-me-your-work",
+    "stripe",
+    "use-my-browser",
+    "wait-what"
+  ],
+  "originalSourceHashesPreserved": true,
+  "profilePlansFiltered": {
+    "all": 165,
+    "tooling-homelab": 27,
+    "ai-agents": 27,
+    "product-growth": 27
+  },
+  "personalSharedReceipt": "/home/onnwee/.codex/skill-installations/codex-skills/run-b15a87803fa04b71ad58f79a14ff282f",
+  "vaultReceipt": "/home/onnwee/.local/state/vault-agent-deployments/20261003T204510713104Z",
+  "claudeLinkReceipt": "/home/onnwee/.codex/skill-installations/codex-source-links/run-842c6ee7114b44b4a9d51a26abca5d77"
+}
