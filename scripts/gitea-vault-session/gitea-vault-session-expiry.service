@@ -1,0 +1,8 @@
+[Unit]
+Description=Expire saved Gitea Vaultwarden CLI session after four hours
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 %h/.local/state/gitea-agent/expire-vaultwarden-session.py
+UMask=0077
+TimeoutStartSec=45

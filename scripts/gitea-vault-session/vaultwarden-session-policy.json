@@ -1,0 +1,5 @@
+{
+  "max_age_seconds": 14400,
+  "expiry_check_seconds": 60,
+  "desktop_timeout_minutes": 240
+}
