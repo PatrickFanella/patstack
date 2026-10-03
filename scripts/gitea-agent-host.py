@@ -55,7 +55,7 @@ def api(tea, path, explicit=True):
 def verify(tea):
     me = api(tea, "/user", explicit=False)
     assert me["login"] == LOGIN and not me["is_admin"]
-    credential = run([tea, "login", "helper", "get"],
+    credential = run(["git", "credential", "fill"],
                      data="protocol=https\nhost=git.subcult.tv\n\n")
     values = dict(line.split("=", 1) for line in credential.splitlines() if "=" in line)
     assert values.get("username") == LOGIN and values.get("password")
@@ -87,8 +87,12 @@ def main():
     payload = json.load(__import__("sys").stdin)
     home = Path.home()
     state = home / ".local/state/gitea-agent" / ("fleet-" + payload["run_id"])
-    state.mkdir(parents=True, exist_ok=False)
-    receipt = {"token_id": payload["token_id"], "host": payload["host"], "files": []}
+    state.mkdir(parents=True, exist_ok=True)
+    receipt_path = state / "receipt.json"
+    receipt = json.loads(receipt_path.read_text()) if receipt_path.exists() else {
+        "token_id": payload["token_id"], "host": payload["host"], "files": []}
+    if receipt.get("completed_at"):
+        raise RuntimeError("Deployment already completed; use verify")
 
     def backup(path):
         if any(f["path"] == str(path) for f in receipt["files"]):
@@ -126,14 +130,23 @@ def main():
             run(["git", "config", "--global", "--fixed-value", "--unset-all", key, value])
     for prefix in SSH_PREFIXES:
         run(["git", "config", "--global", "--add", f"url.{URL}/.insteadOf", prefix])
+    identity = config_home / "agent-identity"
+    identity.mkdir(parents=True, exist_ok=True)
+    isolated = identity / "tea"
+    isolated.mkdir(parents=True, exist_ok=True)
+    isolated_config = isolated / "config.yml"
+    backup(isolated_config)
+    # JSON is valid YAML; no additional parser dependency is needed on the host.
+    isolated_config.write_text(json.dumps({"logins": [{"name": LOGIN, "url": URL,
+        "token": payload["token"], "default": True, "user": LOGIN,
+        "ssh_host": "git.subcult.tv"}], "preferences": {}}))
+    isolated_config.chmod(0o600)
     helper_key = f"credential.{URL}.helper"
     run(["git", "config", "--global", "--replace-all", helper_key, ""])
     run(["git", "config", "--global", "--add", helper_key,
-         "!" + shlex.quote(args.tea) + " login helper"])
+         "!XDG_CONFIG_HOME=" + shlex.quote(str(identity)) + " " +
+         shlex.quote(args.tea) + " login helper"])
     run(["git", "config", "--global", f"credential.{URL}.username", LOGIN])
-
-    identity = config_home / "agent-identity"
-    identity.mkdir(parents=True, exist_ok=True)
     include = identity / "gitea.gitconfig"
     guidance = identity / "GITEA.md"
     backup(include)
