@@ -52,3 +52,15 @@ Before each release, run validation and focused helper tests, then bounded behav
 There is no remote configured. Publishing or pushing this repository requires a separate request.
 
 The optional library, profiles, profile command, and global Codex/RTK sources are now maintained here. See [the operating model](docs/OPERATING-MODEL.md) and [the September review](reports/2026-09-20-upstream-review.md).
+
+## Skilldeck TUI and CLI
+
+[Skilldeck](apps/skilldeck/README.md) discovers local agent skills, organizes named groups, and previews/applies selections with recorded ownership and recoverable backups. Its standalone folder-adoption workflow is independent of this repository; the existing-backend adapter edits canonical optional profiles and uses this repository's guarded deployment commands.
+
+```sh
+uv tool install --editable apps/skilldeck
+skilldeck
+skilldeck apply --mobile --dry-run
+```
+
+System and plugin directories retain their owners. Existing installer-managed roots use explicit backends. See the [discovery and ownership guidelines](apps/skilldeck/docs/discovery-ownership.md) before adopting another folder.

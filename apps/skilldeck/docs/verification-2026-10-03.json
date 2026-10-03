@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-03",
+  "version": "0.1.0",
+  "baseRevision": "ce74b882fe2ab71b6c7b70651a735693689ca26c",
+  "appTests": {
+    "passed": 23,
+    "command": "uv run --project apps/skilldeck --extra test pytest apps/skilldeck/tests -q"
+  },
+  "repositoryTests": {
+    "passed": 31,
+    "command": "python -B -m unittest discover -s tests"
+  },
+  "sourceValidation": {
+    "errors": []
+  },
+  "wheelWorkflow": {
+    "workspace": "/tmp/skilldeck-final-wheel-922yx8rn",
+    "consoleWorkflowPassed": true,
+    "previewReadOnly": true,
+    "dynamicGroupFlagPassed": true,
+    "verified": true,
+    "idempotencyPassed": true,
+    "rollbackPassed": true,
+    "wheelSha256": "3304574d7a06867302a10dda7c3e9baeeca3387ae03b614f84327e544a06a68d",
+    "sdistContainsOwnershipGuide": true,
+    "filteredDiscoveryPassed": true
+  },
+  "terminal": {
+    "realPtyLaunch": true,
+    "keyboardQuit": true,
+    "exitCode": 0,
+    "renderedBytes": 78176
+  },
+  "visualChecks": {
+    "sizes": [
+      [
+        120,
+        40
+      ],
+      [
+        80,
+        24
+      ]
+    ],
+    "screenshots": [
+      "/home/onnwee/.local/state/skilldeck-proof/2026-10-03/skilldeck-120x40.png",
+      "/home/onnwee/.local/state/skilldeck-proof/2026-10-03/skilldeck-80x24.png"
+    ],
+    "compactLayoutVerified": true
+  },
+  "diskDiscovery": {
+    "entries": 501,
+    "roots": 40,
+    "includesPluginCacheVersions": true,
+    "isLiveClientCatalog": false
+  },
+  "existingBackend": {
+    "mobilePreviewPassed": true,
+    "optionalInventoryMatchedCanonicalBackend": true,
+    "selectionUnchanged": true,
+    "currentProfile": "core",
+    "activeSharedSkills": 5,
+    "unpromotedChanges": []
+  },
+  "localInstall": {
+    "command": "uv tool install --editable apps/skilldeck",
+    "executable": "/home/onnwee/.local/bin/skilldeck",
+    "testedPlatform": "Linux",
+    "pythonVersion": "3.13.13",
+    "textualVersion": "8.2.8"
+  },
+  "artifacts": [
+    "/home/onnwee/.local/state/skilldeck-proof/2026-10-03/skilldeck-0.1.0-py3-none-any.whl",
+    "/home/onnwee/.local/state/skilldeck-proof/2026-10-03/skilldeck-0.1.0.tar.gz"
+  ],
+  "limitations": [
+    "No Windows support in this POSIX-lock release.",
+    "Standalone apply changes registered folder paths; it does not prove model invocation or automatically mirror every client.",
+    "Existing Codex/Claude profile application remains a sequential backend operation with its own recovery receipts.",
+    "Known managers remain owners; migration of an unknown third-party installer requires a reviewed ownership declaration.",
+    "Tests for destructive selection changes used fixture roots; actual installed selection was previewed only.",
+    "No package publication, remote repository creation, push, or fleet installation."
+  ]
+}
