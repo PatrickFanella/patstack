@@ -13,3 +13,5 @@ Start at Home.md and Focus.md, then the relevant Strategy, Products or Publishin
 Studio owns social/Patreon content, media, branding and preparation automation at `~/Work/Subcult/subcult-studio`; read its AGENTS.md before edits. Link to that owner instead of creating a second content master here. Preparing a plan or draft does not authorize sending, scheduling or publication. Existing explicit user authorization remains valid.
 
 Use subcult-vault for vault organization and business/product/publishing planning; use patreon-manager for the supporter workflow and its Studio sources. Keep personal practice in Ars Malefica, infrastructure evidence in Machinum, and bulk references in Archivum.
+
+For the maintained setup, workflow owners and device checks, read Machinum’s `20-operations/Four Vault Setup.md`. SUBCULT, Machinum and Archivum use `Workflow Guide.md` for commands, workspaces and captures and `Metadata Guide.md` for authored-note frontmatter. Ars Malefica retains its personal Vault Conventions and local workflow skills. Sync exclusions are per-device; consult Machinum’s `20-operations/Obsidian Sync Policy.md` before connecting another device.
