@@ -114,7 +114,12 @@ the authenticated account, access to the admin API, and the exact token selected
 by Git. On failure it restores only files that still match this transition's
 written hashes, preserving concurrent edits. The six device tokens gained
 `write:admin` with user authorization on October 3, 2026; the previous tokens
-remain recovery credentials rather than current device defaults.
+remain recovery credentials rather than current device defaults. The user then
+authorized full permissions; all six defaults now use replacement tokens with
+the `all` scope. Scope readback and package listing were verified. Token
+creation requires account authentication on this instance; using a personal
+access token at that endpoint returns `401 auth required` even with `all`.
+Keep this distinction when preparing scoped publishing credentials.
 
 For rollback, require each touched file to match its receipt's final hash before
 restoring its private before-state backup, or removing a file that was originally
