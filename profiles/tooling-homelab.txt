@@ -46,3 +46,4 @@ use-my-browser
 vault-monthly-maintenance
 vscode-extension-development
 wait-what
+homelab-operations

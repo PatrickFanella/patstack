@@ -1,6 +1,6 @@
 ---
 name: scaffold-exercises
-description: Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.
+description: Scaffold coding exercises, solution directories, and explanatory material in the existing course format.
 ---
 
 # Scaffold Exercises

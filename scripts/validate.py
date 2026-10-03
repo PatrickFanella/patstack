@@ -13,7 +13,7 @@ def main():
     if actual!=expected:errors.append(f'catalog mismatch {actual^expected}')
     optional={x['name'] for x in catalog if x['scope']=='optional'}
     metrics['optionalCuratedEntrypoints']=len(optional)
-    for folder in ['skills','shared','repository-skills','library/skills']:
+    for folder in ['skills','shared','repository-skills','library/skills','project-agents']:
         source_root=ROOT/folder
         roots=[source_root/name for name in sorted(optional)] if folder=='library/skills' else [source_root]
         entrypoints=[p for base in roots for p in base.rglob('SKILL.md')]
@@ -25,7 +25,7 @@ def main():
                 _,front,body=p.read_text().split('---',2); meta=yaml.safe_load(front)
                 if meta['name']!=p.parent.name:errors.append(f'name: {p}')
                 if not isinstance(meta['description'],str) or not meta['description'].strip():errors.append(f'description: {p}')
-                if len(p.relative_to(ROOT/folder).parts)!=2:errors.append(f'nested discovery: {p}')
+                if folder!='project-agents' and len(p.relative_to(ROOT/folder).parts)!=2:errors.append(f'nested discovery: {p}')
                 if len(body)>(8000 if p.parent.name=='hatch-pet' else 4000):errors.append(f'oversized: {p}')
                 if set(meta)-{'name','description','metadata','license','compatibility','allowed-tools'}:errors.append(f'unsupported frontmatter: {p}: {set(meta)}')
                 if folder=='skills':
@@ -53,12 +53,12 @@ def main():
         p=pathlib.Path.home()/'.codex/skills'/name/'SKILL.md';_,front,body=p.read_text().split('---',2)
         metrics['personalDescriptions']+=len(yaml.safe_load(front)['description']);metrics['personalBodies']+=len(body)
     metrics['personalEntrypoints']=len(actual)
-    if len(actual)!=61:errors.append(f'personal entrypoint count {len(actual)} != 61')
+    if len(actual)!=54:errors.append(f'personal entrypoint count {len(actual)} != 54')
     metrics['personalDescriptionBudget']=PERSONAL_DESCRIPTION_BUDGET
     metrics['personalDescriptionHeadroom']=PERSONAL_DESCRIPTION_BUDGET-metrics['personalDescriptions']
     if metrics['personalDescriptionHeadroom']<0:errors.append(f'description budget {metrics}')
     caps=json.loads((ROOT/'catalog/capabilities.json').read_text())
-    if len(caps)!=148 or len({x['original'] for x in caps})!=148:errors.append('incomplete capability mapping')
+    if len(caps)!=158 or len({x['original'] for x in caps})!=158:errors.append('incomplete capability mapping')
     for c in caps:
         if not (ROOT/c['path']).exists():errors.append(f'unreachable capability {c}')
     retired=json.loads((ROOT/'catalog/retired-names.json').read_text())

@@ -1,0 +1,1 @@
+For skill, profile, qualification or deployment changes, read `.agents/skills/codex-skills-maintenance/SKILL.md`. This local procedure is authored in this repository; use the guarded project selection deployment for other worktrees. Read `docs/PROJECT-SKILLS.md` for selection commands.

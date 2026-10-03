@@ -1,25 +1,31 @@
 # Skill Profile Catalog
 
-Generated from current source and ownership filters on October 3, 2026. Counts include the core and exclude global, retired and local-only owners.
+Generated from current sources and qualification filters on October 3, 2026. Counts include core and exclude global, retired, local-only and blocked owners.
 
-**Library source folders:** 324
-**Eligible shared owners:** 170
+**Library source folders:** 325
+**Eligible shared owners:** 168
 **Universal core:** 5
-**Profiles:** 16
+**Profiles:** 21
 
 Core: `fact-check`, `requirements-interview`, `session-handoff`, `summarization`, `web-search`
 
-## ai-agents (27 including core)
+## ai-agents (24 including core)
 
 Agent systems, MCP, LLM workflows, skills, orchestration, and automation runtimes.
 
-`arena`, `automate-me`, `blacktower`, `cancel-ralph`, `check-agent-compatibility`, `continual-learning`, `create-plugin-scaffold`, `cursor-sdk`, `customize-opencode`, `deep-research`, `multi-agent-workflows`, `orchestrate`, `plugin-creator`, `poteto-mode`, `ralph-loop`, `ralph-loop-help`, `recall`, `reflect`, `review-plugin-submission`, `setup-pstack`, `skills-cli`, `swarm`
+`arena`, `automate-me`, `blacktower`, `cancel-ralph`, `continual-learning`, `create-plugin-scaffold`, `cursor-sdk`, `customize-opencode`, `deep-research`, `multi-agent-workflows`, `orchestrate`, `plugin-creator`, `ralph-loop`, `ralph-loop-help`, `recall`, `reflect`, `review-plugin-submission`, `setup-pstack`, `swarm`
 
-## backend-data (6 including core)
+## backend-data (8 including core)
 
 APIs, services, authentication, databases, search, payments, and data quality.
 
-`stripe-integration`
+`develop-userscripts`, `stripe-integration`, `workflow-orchestration-patterns`
+
+## browser-extension-development (7 including core)
+
+Focused optional profile: browser-extension-development
+
+`develop-userscripts`, `vscode-extension-development`
 
 ## charting (6 including core)
 
@@ -27,17 +33,17 @@ Focused optional specialist profile: charting
 
 `lightweight-charts`
 
-## creative-media-design (17 including core)
+## creative-media-design (14 including core)
 
 Visual design, presentations, images, video, music, games, and brand media.
 
-`develop-web-game`, `ebook-analysis`, `game-design-theory`, `image`, `musical-dna`, `neubrutal-hud`, `pptx-generator`, `presentation-design`, `subcult-brand-voice`, `subcult-visual-design`, `subcult-worldbuilding`, `video`
+`develop-web-game`, `ebook-analysis`, `game-design-theory`, `image`, `musical-dna`, `neubrutal-hud`, `pptx-generator`, `presentation-design`, `video`
 
-## devops-reliability (7 including core)
+## devops-reliability (8 including core)
 
 Cloud, deployment, infrastructure, observability, performance, and operational safety.
 
-`kubernetes-development`, `terraform-module-library`
+`homelab-operations`, `kubernetes-development`, `terraform-module-library`
 
 ## docs-research (16 including core)
 
@@ -51,17 +57,29 @@ Languages, Git, architecture, refactoring, implementation, and general software 
 
 `architect`, `ask-matt`, `bro`, `cartography`, `claude-handoff`, `deep-research`, `deepwork`, `design-an-interface`, `figure-it-out`, `how`, `implement`, `interrogate`, `loop-me`, `multi-agent-workflows`, `no-comments`, `observe-and-tune`, `qa`, `reproduce-and-fix-issues`, `research`, `setup-benny`, `to-prd`, `to-tickets`, `triage-issue-reports`, `wayfinder`, `weekly-review`, `what-did-i-get-done`, `why`, `workflow-from-chats`, `worktrees`, `writing-plans`
 
-## frontend-mobile (8 including core)
+## frontend-mobile (10 including core)
 
 Web UI, React, browser automation, accessibility, mobile, and interface systems.
 
-`agent-browser`, `lightweight-charts`, `neubrutal-hud`
+`agent-browser`, `lightweight-charts`, `neubrutal-hud`, `react-native-pro`, `vscode-extension-development`
 
 ## infrastructure (7 including core)
 
 Focused optional specialist profile: infrastructure
 
 `kubernetes-development`, `terraform-module-library`
+
+## learning-exercises (6 including core)
+
+Focused optional profile: learning-exercises
+
+`scaffold-exercises`
+
+## mobile (6 including core)
+
+Focused optional profile: mobile
+
+`react-native-pro`
 
 ## product-growth (27 including core)
 
@@ -87,17 +105,29 @@ Focused optional specialist profile: smart-contracts
 
 `solidity-security`
 
-## testing-quality (14 including core)
+## temporal (7 including core)
+
+Focused optional profile: temporal
+
+`temporal-python-testing`, `workflow-orchestration-patterns`
+
+## terminal-ui (6 including core)
+
+Focused optional profile: terminal-ui
+
+`opentui`
+
+## testing-quality (15 including core)
 
 Testing, debugging, review, verification, QA, and maintainability overlay.
 
-`backtesting-frameworks`, `blast-radius`, `create-verification-skill`, `improve-codebase-architecture`, `maintain-verification-skill`, `pr-review-canvas`, `review-and-ship`, `thermos`, `triage`
+`backtesting-frameworks`, `blast-radius`, `create-verification-skill`, `improve-codebase-architecture`, `maintain-verification-skill`, `pr-review-canvas`, `review-and-ship`, `temporal-python-testing`, `thermos`, `triage`
 
-## tooling-homelab (27 including core)
+## tooling-homelab (26 including core)
 
 CLI and desktop tools, integrations, plugins, browser control, Obsidian, and homelab operations.
 
-`agent-browser`, `almaz`, `blacktower`, `codex-desktop-maintenance`, `codex-skills-maintenance`, `customize-opencode`, `git-guardrails-claude-code`, `homelab`, `karakeep`, `nuc`, `obsidian-cli`, `opensource-guide-coach`, `scheduled-tasks`, `screenshot`, `setup-matt-pocock-skills`, `skills-cli`, `super-productivity-maintenance`, `super-productivity-mcp`, `super-productivity-planning`, `switchyard-runtime`, `teach`, `to-questionnaire`
+`agent-browser`, `blacktower`, `codex-desktop-maintenance`, `customize-opencode`, `git-guardrails-claude-code`, `homelab-operations`, `karakeep`, `obsidian-cli`, `opensource-guide-coach`, `opentui`, `scaffold-exercises`, `scheduled-tasks`, `screenshot`, `setup-matt-pocock-skills`, `super-productivity-maintenance`, `super-productivity-mcp`, `super-productivity-planning`, `switchyard-runtime`, `teach`, `to-questionnaire`, `vscode-extension-development`
 
 ## writing-worldbuilding (49 including core)
 

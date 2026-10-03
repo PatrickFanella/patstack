@@ -3,5 +3,13 @@
     "owner": "Edda gameplay",
     "source": "library/skills/play-edda",
     "deployment": "/home/onnwee/Work/Subcult/edda/.agents/skills/play-edda"
+  },
+  "codex-skills-maintenance": {
+    "owner": "codex-skills",
+    "source": "project-agents/codex-skills/skills/codex-skills-maintenance"
+  },
+  "studio-preparation": {
+    "owner": "Studio",
+    "source": "project-agents/subcult-studio/skills/studio-preparation"
   }
 }

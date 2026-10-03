@@ -1,14 +1,14 @@
 {
   "metrics": {
-    "authoredPersonal": 59,
-    "personalDescriptions": 7629,
-    "personalBodies": 106089,
-    "optionalCuratedEntrypoints": 5,
-    "personalEntrypoints": 61,
+    "authoredPersonal": 52,
+    "personalDescriptions": 6890,
+    "personalBodies": 97971,
+    "optionalCuratedEntrypoints": 13,
+    "personalEntrypoints": 54,
     "personalDescriptionBudget": 12000,
-    "personalDescriptionHeadroom": 4371,
-    "retiredNames": 90,
-    "mappedOriginals": 148
+    "personalDescriptionHeadroom": 5110,
+    "retiredNames": 97,
+    "mappedOriginals": 158
   },
   "errors": [],
   "scriptDependencies": [
@@ -522,6 +522,22 @@
         "__future__",
         "collections",
         "sys"
+      ]
+    },
+    {
+      "path": "project-agents/codex-skills/skills/codex-skills-maintenance/scripts/audit_skills.py",
+      "mode": "0o755",
+      "imports": [
+        "__future__",
+        "argparse",
+        "collections",
+        "dataclasses",
+        "json",
+        "pathlib",
+        "re",
+        "sys",
+        "typing",
+        "yaml"
       ]
     }
   ]

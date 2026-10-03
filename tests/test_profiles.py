@@ -39,6 +39,13 @@ class ProfileTests(unittest.TestCase):
   self.assertNotIn('curated',manager.skill_dirs(manager.ACTIVE))
   manager.activate([])
   self.assertNotIn('optional',manager.skill_dirs(manager.ACTIVE))
+
+ def test_blocked_qualification_is_excluded_from_profiles_and_all(self):
+  (manager.SOURCE/'catalog/qualification.json').write_text(json.dumps({'skills': {
+   'optional': {'status': 'blocked', 'blockedReason': 'missing runtime'}}}))
+  manager.activate([])
+  self.assertNotIn('optional',manager.preview(['extra'])['skills'])
+  self.assertNotIn('optional',manager.preview([],True)['skills'])
  def test_all_still_filters_and_mode_drift_blocks(self):
   manager.activate([],True);self.assertNotIn('retired',manager.skill_dirs(manager.ACTIVE));self.assertNotIn('curated',manager.skill_dirs(manager.ACTIVE))
   p=manager.ACTIVE/'base/SKILL.md';p.chmod(0o700)

@@ -3,3 +3,9 @@ __pycache__/
 .pytest_cache/
 .runtime/
 reports/discovery-*.json
+
+# Generated project skill selections; author project-agents and catalog instead.
+/.agents/skills/
+/.claude/skills/
+/.opencode/skills/
+/.agent-skills.json

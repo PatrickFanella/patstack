@@ -195,7 +195,7 @@
     "original": "develop-userscripts",
     "owner": "develop-userscripts",
     "kind": "retained",
-    "path": "skills/develop-userscripts/SKILL.md"
+    "path": "library/skills/develop-userscripts/SKILL.md"
   },
   {
     "original": "diagnose-crash",
@@ -351,7 +351,7 @@
     "original": "opentui",
     "owner": "opentui",
     "kind": "retained",
-    "path": "skills/opentui/SKILL.md"
+    "path": "library/skills/opentui/SKILL.md"
   },
   {
     "original": "performance-investigation",
@@ -429,7 +429,7 @@
     "original": "react-native-pro",
     "owner": "react-native-pro",
     "kind": "retained",
-    "path": "skills/react-native-pro/SKILL.md"
+    "path": "library/skills/react-native-pro/SKILL.md"
   },
   {
     "original": "react-pro",
@@ -495,7 +495,7 @@
     "original": "scaffold-exercises",
     "owner": "scaffold-exercises",
     "kind": "retained",
-    "path": "skills/scaffold-exercises/SKILL.md"
+    "path": "library/skills/scaffold-exercises/SKILL.md"
   },
   {
     "original": "secrets-management",
@@ -591,7 +591,7 @@
     "original": "temporal-python-testing",
     "owner": "temporal-python-testing",
     "kind": "retained",
-    "path": "skills/temporal-python-testing/SKILL.md"
+    "path": "library/skills/temporal-python-testing/SKILL.md"
   },
   {
     "original": "terraform-module-library",
@@ -657,7 +657,7 @@
     "original": "vscode-extension-development",
     "owner": "vscode-extension-development",
     "kind": "retained",
-    "path": "skills/vscode-extension-development/SKILL.md"
+    "path": "library/skills/vscode-extension-development/SKILL.md"
   },
   {
     "original": "wcag-audit-patterns",
@@ -675,7 +675,7 @@
     "original": "workflow-orchestration-patterns",
     "owner": "workflow-orchestration-patterns",
     "kind": "retained",
-    "path": "skills/workflow-orchestration-patterns/SKILL.md"
+    "path": "library/skills/workflow-orchestration-patterns/SKILL.md"
   },
   {
     "original": "requirements-interview",
@@ -886,5 +886,65 @@
     "owner": "stripe-billing-operations",
     "kind": "authored-overlay",
     "path": "skills/stripe-billing-operations/SKILL.md"
+  },
+  {
+    "original": "homelab",
+    "owner": "operations-vault",
+    "kind": "adapted-local",
+    "path": "vault-agents/Operations/skills/operations-vault/references/operational-evidence.md"
+  },
+  {
+    "original": "nuc",
+    "owner": "operations-vault",
+    "kind": "adapted-local",
+    "path": "vault-agents/Operations/skills/operations-vault/references/operational-evidence.md"
+  },
+  {
+    "original": "almaz",
+    "owner": "operations-vault",
+    "kind": "adapted-local",
+    "path": "vault-agents/Operations/skills/operations-vault/references/operational-evidence.md"
+  },
+  {
+    "original": "skills-cli",
+    "owner": "codex-skills-maintenance",
+    "kind": "adapted-local",
+    "path": "project-agents/codex-skills/skills/codex-skills-maintenance/references/external-intake.md"
+  },
+  {
+    "original": "subcult-brand-voice",
+    "owner": "studio-preparation",
+    "kind": "adapted-local",
+    "path": "project-agents/subcult-studio/skills/studio-preparation/SKILL.md"
+  },
+  {
+    "original": "subcult-visual-design",
+    "owner": "studio-preparation",
+    "kind": "adapted-local",
+    "path": "project-agents/subcult-studio/skills/studio-preparation/SKILL.md"
+  },
+  {
+    "original": "subcult-worldbuilding",
+    "owner": "studio-preparation",
+    "kind": "adapted-local",
+    "path": "project-agents/subcult-studio/skills/studio-preparation/SKILL.md"
+  },
+  {
+    "original": "codex-skills-maintenance",
+    "owner": "codex-skills-maintenance",
+    "kind": "local",
+    "path": "project-agents/codex-skills/skills/codex-skills-maintenance/SKILL.md"
+  },
+  {
+    "original": "studio-preparation",
+    "owner": "studio-preparation",
+    "kind": "local",
+    "path": "project-agents/subcult-studio/skills/studio-preparation/SKILL.md"
+  },
+  {
+    "original": "homelab-operations",
+    "owner": "homelab-operations",
+    "kind": "optional",
+    "path": "library/skills/homelab-operations/SKILL.md"
   }
 ]

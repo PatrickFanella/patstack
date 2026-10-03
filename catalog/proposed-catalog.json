@@ -132,7 +132,7 @@
   {
     "name": "develop-userscripts",
     "description": "'Userscript implementation and debugging: page lifecycle, browser permissions, injection, and update behavior.'",
-    "scope": "personal",
+    "scope": "optional",
     "sources": [
       "develop-userscripts"
     ]
@@ -283,7 +283,7 @@
   {
     "name": "opentui",
     "description": "Build OpenTUI terminal interfaces with the correct renderer lifecycle, input handling, and framework bindings.",
-    "scope": "personal",
+    "scope": "optional",
     "sources": [
       "opentui"
     ]
@@ -345,7 +345,7 @@
   {
     "name": "react-native-pro",
     "description": "'React Native/Expo implementation: navigation, native integration, offline behavior, lists, and mobile performance.'",
-    "scope": "personal",
+    "scope": "optional",
     "sources": [
       "react-native-pro"
     ]
@@ -405,7 +405,7 @@
   {
     "name": "scaffold-exercises",
     "description": "Scaffold coding exercises, solution directories, and explanatory material in the existing course format.",
-    "scope": "personal",
+    "scope": "optional",
     "sources": [
       "scaffold-exercises"
     ]
@@ -507,7 +507,7 @@
   {
     "name": "temporal-python-testing",
     "description": "Test Temporal Python workflows with replay, time skipping, activities, mocks, and determinism checks.",
-    "scope": "personal",
+    "scope": "optional",
     "sources": [
       "temporal-python-testing"
     ]
@@ -554,7 +554,7 @@
   {
     "name": "vscode-extension-development",
     "description": "VS Code extension commands, menus, contribution visibility, and localized user-facing strings.",
-    "scope": "personal",
+    "scope": "optional",
     "sources": [
       "vscode-extension-development"
     ]
@@ -578,9 +578,19 @@
   {
     "name": "workflow-orchestration-patterns",
     "description": "Design Temporal workflows and activities with durable state, deterministic execution, and failure recovery.",
-    "scope": "personal",
+    "scope": "optional",
     "sources": [
       "workflow-orchestration-patterns"
+    ]
+  },
+  {
+    "name": "homelab-operations",
+    "scope": "optional",
+    "description": "Route homelab work to current Machinum inventory and operating procedures.",
+    "sources": [
+      "homelab",
+      "nuc",
+      "almaz"
     ]
   }
 ]

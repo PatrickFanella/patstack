@@ -17,3 +17,5 @@ Use subcult-vault for vault organization and business/product/publishing plannin
 For the maintained setup, workflow owners and device checks, read Machinum’s `20-operations/Four Vault Setup.md`. SUBCULT, Machinum and Archivum use `Workflow Guide.md` for commands, workspaces and captures and `Metadata Guide.md` for authored-note frontmatter. Ars Malefica retains its personal Vault Conventions and local workflow skills. Sync exclusions are per-device; consult Machinum’s `20-operations/Obsidian Sync Policy.md` before connecting another device.
 
 For note search, creation or organization, read [note discovery and linking](.agents/references/note-discovery.md). Keep this vault's own layout and metadata rules.
+
+For brand, product copy or supporter preparation, read Studio’s `.agents/skills/studio-preparation/SKILL.md` and source-routing reference. Keep planning here and physical content in Studio; older fixed posting promises are historical context.

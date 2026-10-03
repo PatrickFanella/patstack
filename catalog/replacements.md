@@ -94,3 +94,10 @@
 | `use-my-browser` | `verify-behavior` | [procedure](../skills/verify-behavior/references/browser-diagnosis.md) |
 | `stripe` | `stripe-billing-operations` | [procedure](../skills/stripe-billing-operations/SKILL.md) |
 | `wait-what` | `unslop` | [procedure](../skills/unslop/SKILL.md) |
+| `homelab` | `operations-vault` | [procedure](../vault-agents/Operations/skills/operations-vault/references/operational-evidence.md) |
+| `nuc` | `operations-vault` | [procedure](../vault-agents/Operations/skills/operations-vault/references/operational-evidence.md) |
+| `almaz` | `operations-vault` | [procedure](../vault-agents/Operations/skills/operations-vault/references/operational-evidence.md) |
+| `skills-cli` | `codex-skills-maintenance` | [procedure](../project-agents/codex-skills/skills/codex-skills-maintenance/references/external-intake.md) |
+| `subcult-brand-voice` | `studio-preparation` | [procedure](../project-agents/subcult-studio/skills/studio-preparation/SKILL.md) |
+| `subcult-visual-design` | `studio-preparation` | [procedure](../project-agents/subcult-studio/skills/studio-preparation/SKILL.md) |
+| `subcult-worldbuilding` | `studio-preparation` | [procedure](../project-agents/subcult-studio/skills/studio-preparation/SKILL.md) |

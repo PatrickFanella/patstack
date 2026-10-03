@@ -1,6 +1,6 @@
 ---
 name: react-native-pro
-description: React Native and Expo professional development skill covering app architecture, styling, navigation, animations, native modules, offline sync, list performance, and cross-platform mobile best practices. Use when building, reviewing, optimizing, or refactoring React Native mobile apps.
+description: 'React Native/Expo implementation: navigation, native integration, offline behavior, lists, and mobile performance.'
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -21,9 +21,6 @@ Use for production React Native / Expo work across architecture, visual design, 
 ## Resources
 
 Load these only when needed; keep `SKILL.md` as the activation workflow.
-
-## Merged Skills
-
 
 ## Merged Skills
 

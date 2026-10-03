@@ -1,0 +1,1 @@
+For SUBCULT brand assets, product copy or supporter material, read `.agents/skills/studio-preparation/SKILL.md` and resolve the Studio source owner before editing. The product owns implementation and verification; Studio owns maintained brand/content masters. `.agent-skills.json` records the generated selection.

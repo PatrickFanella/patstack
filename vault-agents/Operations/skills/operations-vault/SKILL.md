@@ -1,6 +1,6 @@
 ---
 name: operations-vault
-description: "Maintain homelab inventory, procedures, runbooks and dated evidence in the Machinum vault. Use for host documentation and briefing refreshes; do not treat a documentation task as permission to alter infrastructure."
+description: "Maintain Machinum homelab evidence and route authorized host operations, incidents, backups and service changes through current inventory and runbooks. Documentation alone does not authorize infrastructure changes."
 ---
 
 # Machinum Vault
@@ -12,3 +12,5 @@ Inspect Git status before editing. Preserve unrelated changes and commit only in
 For an authorized briefing refresh, commit the relevant host note and policy, then run ~/Documents/Documentation-Hub/scripts/sync-briefings.py in preview mode before --apply. Keep source/hash checks intact; record per-host results and leave conflicting copies untouched. Do not write directly to generated HOMELAB.md or the retired personal-vault tree.
 
 A writing request does not itself authorize deployment, service restart or network changes. Public output remains hash-allowlisted. Report local commit, Sync, per-host refresh and website publication as separate evidence.
+
+For health, alert routing, exposure, storage, GPU or service-change work, read [operational evidence](references/operational-evidence.md) and the relevant maintained host/runbook notes.

@@ -1,0 +1,90 @@
+[
+  {
+    "name": "homelab",
+    "source": "library/skills/homelab",
+    "entrypointSha256": "1b2721148d6671818b8cd0fd0a094b3dc9d35362d59d6a98d942ea2bf9de69cf",
+    "sourceRevision": "38c4f70e3af2b66dd62025d1a0a916a2a7b48645",
+    "preserved": true,
+    "license": "Inherited notices preserved; unresolved upstream redistribution rights remain unresolved.",
+    "adaptation": "Useful local procedure retained behind canonical ownership; stale paths, fixed topology/cadence and client assumptions removed from active routing.",
+    "positiveCase": "Task requiring the named canonical workflow.",
+    "nearMiss": "Unrelated task or missing runtime contract."
+  },
+  {
+    "name": "nuc",
+    "source": "library/skills/nuc",
+    "entrypointSha256": "2993c32b82c0af45ddcaac7b88be299a82b8b1e5bd33c794258bd7d0f505a475",
+    "sourceRevision": "38c4f70e3af2b66dd62025d1a0a916a2a7b48645",
+    "preserved": true,
+    "license": "Inherited notices preserved; unresolved upstream redistribution rights remain unresolved.",
+    "adaptation": "Useful local procedure retained behind canonical ownership; stale paths, fixed topology/cadence and client assumptions removed from active routing.",
+    "positiveCase": "Task requiring the named canonical workflow.",
+    "nearMiss": "Unrelated task or missing runtime contract."
+  },
+  {
+    "name": "almaz",
+    "source": "library/skills/almaz",
+    "entrypointSha256": "5ac5268a455ab0807870067d3b023ea8c1f7c6cbf698cb960388d41ad68c9eb5",
+    "sourceRevision": "38c4f70e3af2b66dd62025d1a0a916a2a7b48645",
+    "preserved": true,
+    "license": "Inherited notices preserved; unresolved upstream redistribution rights remain unresolved.",
+    "adaptation": "Useful local procedure retained behind canonical ownership; stale paths, fixed topology/cadence and client assumptions removed from active routing.",
+    "positiveCase": "Task requiring the named canonical workflow.",
+    "nearMiss": "Unrelated task or missing runtime contract."
+  },
+  {
+    "name": "codex-skills-maintenance",
+    "source": "library/skills/codex-skills-maintenance",
+    "entrypointSha256": "12aa94098cbe32ea52f4b4077b4d806a6df5b237024aeba43e6d0623f5cc2a60",
+    "sourceRevision": "38c4f70e3af2b66dd62025d1a0a916a2a7b48645",
+    "preserved": true,
+    "license": "Inherited notices preserved; unresolved upstream redistribution rights remain unresolved.",
+    "adaptation": "Useful local procedure retained behind canonical ownership; stale paths, fixed topology/cadence and client assumptions removed from active routing.",
+    "positiveCase": "Task requiring the named canonical workflow.",
+    "nearMiss": "Unrelated task or missing runtime contract."
+  },
+  {
+    "name": "skills-cli",
+    "source": "library/skills/skills-cli",
+    "entrypointSha256": "dc1917dbf8b0bb183234614f45a1530de20160b0f4253e8ec724ec30aab67b7a",
+    "sourceRevision": "38c4f70e3af2b66dd62025d1a0a916a2a7b48645",
+    "preserved": true,
+    "license": "Inherited notices preserved; unresolved upstream redistribution rights remain unresolved.",
+    "adaptation": "Useful local procedure retained behind canonical ownership; stale paths, fixed topology/cadence and client assumptions removed from active routing.",
+    "positiveCase": "Task requiring the named canonical workflow.",
+    "nearMiss": "Unrelated task or missing runtime contract."
+  },
+  {
+    "name": "subcult-brand-voice",
+    "source": "library/skills/subcult-brand-voice",
+    "entrypointSha256": "de7b6bb98086e4da637332d932574df1f19683d3d9cb65a5e6be96511d810acb",
+    "sourceRevision": "38c4f70e3af2b66dd62025d1a0a916a2a7b48645",
+    "preserved": true,
+    "license": "Inherited notices preserved; unresolved upstream redistribution rights remain unresolved.",
+    "adaptation": "Useful local procedure retained behind canonical ownership; stale paths, fixed topology/cadence and client assumptions removed from active routing.",
+    "positiveCase": "Task requiring the named canonical workflow.",
+    "nearMiss": "Unrelated task or missing runtime contract."
+  },
+  {
+    "name": "subcult-visual-design",
+    "source": "library/skills/subcult-visual-design",
+    "entrypointSha256": "77d7288ac687e2f50029448e22d0c17ec287b0a13789942ec3219af7b56c74be",
+    "sourceRevision": "38c4f70e3af2b66dd62025d1a0a916a2a7b48645",
+    "preserved": true,
+    "license": "Inherited notices preserved; unresolved upstream redistribution rights remain unresolved.",
+    "adaptation": "Useful local procedure retained behind canonical ownership; stale paths, fixed topology/cadence and client assumptions removed from active routing.",
+    "positiveCase": "Task requiring the named canonical workflow.",
+    "nearMiss": "Unrelated task or missing runtime contract."
+  },
+  {
+    "name": "subcult-worldbuilding",
+    "source": "library/skills/subcult-worldbuilding",
+    "entrypointSha256": "26d37f95393b2fac4650095e81e23a56874d0358a56a451cd680ecaa512edcea",
+    "sourceRevision": "38c4f70e3af2b66dd62025d1a0a916a2a7b48645",
+    "preserved": true,
+    "license": "Inherited notices preserved; unresolved upstream redistribution rights remain unresolved.",
+    "adaptation": "Useful local procedure retained behind canonical ownership; stale paths, fixed topology/cadence and client assumptions removed from active routing.",
+    "positiveCase": "Task requiring the named canonical workflow.",
+    "nearMiss": "Unrelated task or missing runtime contract."
+  }
+]

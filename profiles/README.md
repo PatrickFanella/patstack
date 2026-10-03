@@ -20,3 +20,9 @@ then `activate infrastructure` when needed. Profiles can be combined. Use
 `deactivate` to return to core. These selections govern Codex optional shared
 skills; Claude uses explicit source links and needs its own deliberate link
 selection. No specialist is active in the default core.
+
+Additional focused profiles are mobile, terminal-ui, browser-extension-development,
+temporal and learning-exercises. They respectively select React Native, OpenTUI,
+userscript/VS Code extension work, the two Temporal procedures, and exercise scaffolding.
+Known blocked qualifications are filtered even under --all. See docs/PROJECT-SKILLS.md
+for guarded local/worktree selections and matching Claude optional links.

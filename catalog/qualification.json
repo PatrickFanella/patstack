@@ -1,0 +1,4910 @@
+{
+  "schemaVersion": 1,
+  "proofPolicy": "Supported clients declare procedure/deployment contracts; structure and selection evidence do not establish live task behavior. Unreviewed sources are retained for review, not endorsed. Blocked entries cannot be activated through profiles.",
+  "skills": {
+    "ab-test-setup": {
+      "canonicalSource": "library/skills/ab-test-setup",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "adaptation-synthesis": {
+      "canonicalSource": "library/skills/adaptation-synthesis",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "agent-browser": {
+      "canonicalSource": "library/skills/agent-browser",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "agent-workspace-linux": {
+      "canonicalSource": "skills/agent-workspace-linux",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Isolated agent desktop/browser workspace operations and QA; use its MCP surface rather than host desktop control.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "almaz": {
+      "canonicalSource": "library/skills/almaz",
+      "owner": "operations-vault",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "api-design-principles": {
+      "canonicalSource": "library/skills/api-design-principles",
+      "owner": "api-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "architect": {
+      "canonicalSource": "library/skills/architect",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "architecture-patterns": {
+      "canonicalSource": "skills/architecture-patterns",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "'Architecture and domain modeling: module boundaries, dependency cycles, CQRS, and domain vocabulary.'",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "arena": {
+      "canonicalSource": "library/skills/arena",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "ars-malefica-inbox-intake": {
+      "canonicalSource": "vault-agents/ars-malefica/skills/ars-malefica-inbox-intake",
+      "owner": "ars-malefica",
+      "scope": "vault-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [
+        "existing vault and its named tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/vault-agents.json"
+      ],
+      "positiveTask": "Route inbox items to their owning vault and personal destinations following the Ars Malefica conventions. Use when triaging the inbox, processing captured clippings/articles/PDFs, intaking a large batch of new material, or cleaning up 000 Inbox. Knows the Resources-and-Threads boundary, the Sources/Raw-vs-Research-vs-Notes split, and the Media directory structure.",
+      "nearMiss": "Work owned by another vault."
+    },
+    "ars-malefica-maintenance": {
+      "canonicalSource": "vault-agents/ars-malefica/skills/ars-malefica-maintenance",
+      "owner": "ars-malefica",
+      "scope": "vault-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [
+        "existing vault and its named tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/vault-agents.json"
+      ],
+      "positiveTask": "Personal vault/repository maintenance for ars-malefica. Use when validating vault structure, archive/redirect hygiene, workspace integrity, plugin/API posture, git safety, or staged secret checks. Triggers: maintenance, validate vault, archive, redirects, workspaces, plugin check, API posture, git safety, secret scan, repo health.",
+      "nearMiss": "Work owned by another vault."
+    },
+    "ars-malefica-source-intake": {
+      "canonicalSource": "vault-agents/ars-malefica/skills/ars-malefica-source-intake",
+      "owner": "ars-malefica",
+      "scope": "vault-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [
+        "existing vault and its named tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/vault-agents.json"
+      ],
+      "positiveTask": "Create Resources catalog cards for reusable sources (books, courses, podcasts, articles, films, games, music, YouTube). Use when capturing a new book to read, adding a course reference, saving a podcast episode, logging a film, or creating any Media entry that is reusable across Threads. Knows the Media directory structure, catalog card frontmatter conventions, and how to wire entries into the Media Index.",
+      "nearMiss": "Work owned by another vault."
+    },
+    "ars-malefica-thread-init": {
+      "canonicalSource": "vault-agents/ars-malefica/skills/ars-malefica-thread-init",
+      "owner": "ars-malefica",
+      "scope": "vault-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [
+        "existing vault and its named tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/vault-agents.json"
+      ],
+      "positiveTask": "Scaffold a new Ars Malefica Thread with canonical directory structure, home note, and MOC. Use when starting a new inquiry, creating a Thread for a topic that deserves sustained attention, or setting up the folder structure for a captured theme. Knows the standard Thread shape (Notes, Sources/Raw, Sources/Research, Concepts, Synthesis), the Templater folder mappings, and the Threads Index wiring.",
+      "nearMiss": "Work owned by another vault."
+    },
+    "ars-malefica-workflows": {
+      "canonicalSource": "vault-agents/ars-malefica/skills/ars-malefica-workflows",
+      "owner": "ars-malefica",
+      "scope": "vault-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [
+        "existing vault and its named tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/vault-agents.json"
+      ],
+      "positiveTask": "Ars Malefica capture and workflow operations for journal, media, thread, work, and documentation routing. Use when building or validating QuickAdd, Templater, capture prompts, journal flow, media notes, thread synthesis, work metadata, or Obsidian REST/MCP/CLI automation. Triggers: capture, journal, media, thread, work, QuickAdd, Templater, REST, MCP, CLI, routing, workflow.",
+      "nearMiss": "Work owned by another vault."
+    },
+    "ask-matt": {
+      "canonicalSource": "library/skills/ask-matt",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "auth-implementation-patterns": {
+      "canonicalSource": "skills/auth-implementation-patterns",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "'Implement or debug authentication and authorization: sessions, OAuth, tokens, roles, and access checks.'",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "automate-me": {
+      "canonicalSource": "library/skills/automate-me",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "backtesting-frameworks": {
+      "canonicalSource": "library/skills/backtesting-frameworks",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "bash-defensive-patterns": {
+      "canonicalSource": "library/skills/bash-defensive-patterns",
+      "owner": "shell-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "bats-testing-patterns": {
+      "canonicalSource": "library/skills/bats-testing-patterns",
+      "owner": "shell-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "binary-analysis-patterns": {
+      "canonicalSource": "library/skills/binary-analysis-patterns",
+      "owner": "reverse-engineering",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "blacktower": {
+      "canonicalSource": "library/skills/blacktower",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "blast-radius": {
+      "canonicalSource": "library/skills/blast-radius",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "blind-spot-detective": {
+      "canonicalSource": "library/skills/blind-spot-detective",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "book-marketing": {
+      "canonicalSource": "library/skills/book-marketing",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "bro": {
+      "canonicalSource": "library/skills/bro",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "cancel-ralph": {
+      "canonicalSource": "library/skills/cancel-ralph",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "cartography": {
+      "canonicalSource": "library/skills/cartography",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "changelog-automation": {
+      "canonicalSource": "library/skills/changelog-automation",
+      "owner": "git-advanced-workflows",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "chapter-drafter": {
+      "canonicalSource": "library/skills/chapter-drafter",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "character-arc": {
+      "canonicalSource": "library/skills/character-arc",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "check-agent-compatibility": {
+      "canonicalSource": "library/skills/check-agent-compatibility",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "blocked",
+      "supportedClients": [],
+      "requiredTools": [
+        "compatibility-scan-review agent",
+        "startup-review agent",
+        "validation-review agent",
+        "docs-reliability-review agent",
+        "declared deterministic scanner"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "docs/reviews/2026-10-03-skill-scope-review.md"
+      ],
+      "positiveTask": "Run the explicit compatibility score in its original fully configured runtime.",
+      "nearMiss": "An ordinary code review or a runtime missing the four named agents.",
+      "blockedReason": "The required named agents and scanner are not supplied by the current Codex runtime. YAML is repaired; operational qualification remains missing."
+    },
+    "check-compiler-errors": {
+      "canonicalSource": "library/skills/check-compiler-errors",
+      "owner": "verify-behavior",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "claim-investigation": {
+      "canonicalSource": "library/skills/claim-investigation",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "claude-handoff": {
+      "canonicalSource": "library/skills/claude-handoff",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "cli-developer": {
+      "canonicalSource": "skills/cli-developer",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "'CLI design and implementation: flags, subcommands, completions, interactive fallback, and automation contracts.'",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "cli-for-agents": {
+      "canonicalSource": "library/skills/cli-for-agents",
+      "owner": "cli-developer",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "cliche-transcendence": {
+      "canonicalSource": "library/skills/cliche-transcendence",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "clonedeps": {
+      "canonicalSource": "skills/clonedeps",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Inspect dependency source at the lockfile-resolved version; obtain only the repositories needed for the investigation.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "cloudflare-deploy": {
+      "canonicalSource": "skills/cloudflare-deploy",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Cloudflare Workers and Pages deployment; follow the selected product and verify the deployed artifact.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "code-review": {
+      "canonicalSource": "skills/code-review",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Review code changes for actionable defects or requested maintainability concerns; keep repository audits separate.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "codebase-design": {
+      "canonicalSource": "library/skills/codebase-design",
+      "owner": "architecture-patterns",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "codemap": {
+      "canonicalSource": "skills/codemap",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Map repository structure and update existing code maps incrementally using the bundled inventory helper.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "codemod-surgeon": {
+      "canonicalSource": "skills/codemod-surgeon",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Automate widespread source edits with structural transforms, bounded scope, repeatability, and semantic checks.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "codex-desktop-maintenance": {
+      "canonicalSource": "library/skills/codex-desktop-maintenance",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "codex-skills-maintenance": {
+      "canonicalSource": "project-agents/codex-skills/skills/codex-skills-maintenance",
+      "owner": "codex-skills",
+      "scope": "project-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude",
+        "opencode"
+      ],
+      "requiredTools": [
+        "rtk",
+        "git",
+        "python3 for deployment and checks"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/project-selections.json"
+      ],
+      "positiveTask": "Review profiles and deploy a bounded skill source change.",
+      "nearMiss": "Ordinary implementation in an unrelated repository."
+    },
+    "coding-challenge-coach": {
+      "canonicalSource": "vault-agents/ars-malefica/skills/coding-challenge-coach",
+      "owner": "ars-malefica",
+      "scope": "vault-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [
+        "existing vault and its named tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/vault-agents.json"
+      ],
+      "positiveTask": "Establish an evidence-based coding baseline, generate adaptive original programming challenges, review attempts, diagnose bottlenecks, and maintain the Ars Malefica coding-practice ledger. Use when the user asks to assess their coding level, start or continue coding challenges, get a hint or code review on an active challenge, practice algorithms or software-engineering skills, review progress, or build the next challenge block. Do not use for ordinary implementation work where the user wants the agent to write the solution rather than coach their attempt.",
+      "nearMiss": "Work owned by another vault."
+    },
+    "competitive-landscape": {
+      "canonicalSource": "library/skills/competitive-landscape",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "competitor-alternatives": {
+      "canonicalSource": "library/skills/competitor-alternatives",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "competitor-profiling": {
+      "canonicalSource": "library/skills/competitor-profiling",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "conlang": {
+      "canonicalSource": "library/skills/conlang",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "content-strategy": {
+      "canonicalSource": "library/skills/content-strategy",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "continual-learning": {
+      "canonicalSource": "library/skills/continual-learning",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "control-cli": {
+      "canonicalSource": "library/skills/control-cli",
+      "owner": "verify-behavior",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "control-surface-designer": {
+      "canonicalSource": "library/skills/control-surface-designer",
+      "owner": "blacktower-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "control-ui": {
+      "canonicalSource": "library/skills/control-ui",
+      "owner": "verify-behavior",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "copywriting": {
+      "canonicalSource": "library/skills/copywriting",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "cqrs-implementation": {
+      "canonicalSource": "library/skills/cqrs-implementation",
+      "owner": "architecture-patterns",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "create-learning-path": {
+      "canonicalSource": "library/skills/create-learning-path",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "create-plugin-scaffold": {
+      "canonicalSource": "library/skills/create-plugin-scaffold",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "create-verification-skill": {
+      "canonicalSource": "library/skills/create-verification-skill",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "cursor-sdk": {
+      "canonicalSource": "library/skills/cursor-sdk",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "customer-research": {
+      "canonicalSource": "library/skills/customer-research",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "customize-opencode": {
+      "canonicalSource": "library/skills/customize-opencode",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "data-storytelling": {
+      "canonicalSource": "library/skills/data-storytelling",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "database-migration": {
+      "canonicalSource": "skills/database-migration",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "'Database schema and data migrations: compatibility, backfills, validation, cutover, and rollback.'",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "deep-research": {
+      "canonicalSource": "library/skills/deep-research",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "deepwork": {
+      "canonicalSource": "library/skills/deepwork",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "dependency-upgrade": {
+      "canonicalSource": "skills/dependency-upgrade",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Upgrade dependencies with lockfile evidence, breaking-change analysis, proportional testing, and rollback.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "deployment-pipeline-design": {
+      "canonicalSource": "library/skills/deployment-pipeline-design",
+      "owner": "ci-maintenance",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "design-an-interface": {
+      "canonicalSource": "library/skills/design-an-interface",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "deslop": {
+      "canonicalSource": "library/skills/deslop",
+      "owner": "refactor",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "develop-userscripts": {
+      "canonicalSource": "library/skills/develop-userscripts",
+      "owner": "codex-skills",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "'Userscript implementation and debugging: page lifecycle, browser permissions, injection, and update behavior.'",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "develop-web-game": {
+      "canonicalSource": "library/skills/develop-web-game",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "diagnose-crash": {
+      "canonicalSource": "library/skills/diagnose-crash",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "diagnosing-bugs": {
+      "canonicalSource": "library/skills/diagnosing-bugs",
+      "owner": "systematic-debugging",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "dialogue": {
+      "canonicalSource": "library/skills/dialogue",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "distributed-tracing": {
+      "canonicalSource": "library/skills/distributed-tracing",
+      "owner": "observability",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "dna-extraction": {
+      "canonicalSource": "library/skills/dna-extraction",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "doc": {
+      "canonicalSource": "library/skills/doc",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "docs-canvas": {
+      "canonicalSource": "library/skills/docs-canvas",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "domain-modeling": {
+      "canonicalSource": "library/skills/domain-modeling",
+      "owner": "architecture-patterns",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "drafting": {
+      "canonicalSource": "library/skills/drafting",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "ebook-analysis": {
+      "canonicalSource": "library/skills/ebook-analysis",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "edit-article": {
+      "canonicalSource": "library/skills/edit-article",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "email-sequence": {
+      "canonicalSource": "library/skills/email-sequence",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "fact-check": {
+      "canonicalSource": "library/skills/fact-check",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "selection-tested",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "current client source retrieval/search tools when required"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/optional-specialists-verification-2026-10-03.json"
+      ],
+      "positiveTask": "Verify specific generated claims against their supporting sources.",
+      "nearMiss": "An unrelated task without the named source review or synthesis request."
+    },
+    "failure-anthropologist": {
+      "canonicalSource": "library/skills/failure-anthropologist",
+      "owner": "systematic-debugging",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "figure-it-out": {
+      "canonicalSource": "library/skills/figure-it-out",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "fix-merge-conflicts": {
+      "canonicalSource": "library/skills/fix-merge-conflicts",
+      "owner": "git-advanced-workflows",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "frontend-design": {
+      "canonicalSource": "skills/frontend-design",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Implement or refine web interface visuals, responsive layouts, and interaction states within the product design.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "game-design-theory": {
+      "canonicalSource": "library/skills/game-design-theory",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "game-facilitator": {
+      "canonicalSource": "library/skills/game-facilitator",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "gdpr-data-handling": {
+      "canonicalSource": "skills/gdpr-data-handling",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "'Implement requested personal-data controls: consent, retention, deletion, portability, and auditability.'",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "genre-conventions": {
+      "canonicalSource": "library/skills/genre-conventions",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "gentle-teaching": {
+      "canonicalSource": "library/skills/gentle-teaching",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "git-advanced-workflows": {
+      "canonicalSource": "skills/git-advanced-workflows",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Git conflicts, worktrees, history repair, and PR preparation; hosted operations follow the configured remote.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "git-guardrails-claude-code": {
+      "canonicalSource": "library/skills/git-guardrails-claude-code",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "gitea-repo-overhaul": {
+      "canonicalSource": "skills/gitea-repo-overhaul",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Audit or modernize Gitea/Forgejo repository settings, issues, workflows, and release organization.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "github-pro": {
+      "canonicalSource": "library/skills/github-pro",
+      "owner": "git-advanced-workflows",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "golang-pro": {
+      "canonicalSource": "skills/golang-pro",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Go concurrency, interfaces, errors, profiling, and tests; use relevant patterns for the existing application.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "good-thinking": {
+      "canonicalSource": "library/skills/good-thinking",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "grafana-dashboards": {
+      "canonicalSource": "library/skills/grafana-dashboards",
+      "owner": "observability",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "grilling": {
+      "canonicalSource": "library/skills/grilling",
+      "owner": "requirements-interview",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "guitar-practice-coach": {
+      "canonicalSource": "vault-agents/ars-malefica/skills/guitar-practice-coach",
+      "owner": "ars-malefica",
+      "scope": "vault-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [
+        "existing vault and its named tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/vault-agents.json"
+      ],
+      "positiveTask": "Maintain an evidence-driven guitar practice curriculum in the Ars Malefica Guitar Thread and its Super Productivity project. Use when reviewing guitar practice, diagnosing a stalled passage or picking problem, adjusting the current week, intaking lesson PDFs or TuxGuitar studies, assessing a completed practice block, sourcing focused bluegrass, country, jazz, classical, or Bach material, or creating the next practice block.",
+      "nearMiss": "Work owned by another vault."
+    },
+    "handoff": {
+      "canonicalSource": "library/skills/handoff",
+      "owner": "session-handoff",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "helm-chart-scaffolding": {
+      "canonicalSource": "library/skills/helm-chart-scaffolding",
+      "owner": "kubernetes-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "homelab": {
+      "canonicalSource": "library/skills/homelab",
+      "owner": "operations-vault",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "homelab-operations": {
+      "canonicalSource": "library/skills/homelab-operations",
+      "owner": "codex-skills",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude",
+        "opencode"
+      ],
+      "requiredTools": [
+        "accessible Machinum owner and task-specific host tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Investigate a cross-host backup or route incident through Machinum.",
+      "nearMiss": "A generic local unit-test failure."
+    },
+    "how": {
+      "canonicalSource": "library/skills/how",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "hybrid-search-implementation": {
+      "canonicalSource": "library/skills/hybrid-search-implementation",
+      "owner": "rag-implementation",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "image": {
+      "canonicalSource": "library/skills/image",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "imagegen": {
+      "canonicalSource": "library/skills/imagegen",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "implement": {
+      "canonicalSource": "library/skills/implement",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "improve-codebase-architecture": {
+      "canonicalSource": "library/skills/improve-codebase-architecture",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "interactive-fiction": {
+      "canonicalSource": "library/skills/interactive-fiction",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "internal-comms": {
+      "canonicalSource": "library/skills/internal-comms",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "interrogate": {
+      "canonicalSource": "library/skills/interrogate",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "joke-engineering": {
+      "canonicalSource": "library/skills/joke-engineering",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "k8s-manifest-generator": {
+      "canonicalSource": "library/skills/k8s-manifest-generator",
+      "owner": "kubernetes-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "k8s-security-policies": {
+      "canonicalSource": "library/skills/k8s-security-policies",
+      "owner": "kubernetes-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "karakeep": {
+      "canonicalSource": "library/skills/karakeep",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "kubernetes-development": {
+      "canonicalSource": "library/skills/kubernetes-development",
+      "owner": "codex-skills",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Kubernetes manifests, Helm charts, and cluster workload policies; validate the requested deployment artifact.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "language-evolution": {
+      "canonicalSource": "library/skills/language-evolution",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "launch-strategy": {
+      "canonicalSource": "library/skills/launch-strategy",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "lightweight-charts": {
+      "canonicalSource": "library/skills/lightweight-charts",
+      "owner": "codex-skills",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "'TradingView Lightweight Charts implementation: series, time scales, live updates, plugins, and framework integration.'",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "list-builder": {
+      "canonicalSource": "library/skills/list-builder",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "llama-line-client": {
+      "canonicalSource": "library/skills/llama-line-client",
+      "owner": "retired",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "llm-evaluation": {
+      "canonicalSource": "skills/llm-evaluation",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Evaluate LLM behavior with representative datasets, baselines, task metrics, and reproducible results.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "local-change-quality-gate": {
+      "canonicalSource": "library/skills/local-change-quality-gate",
+      "owner": "code-review",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "loop-me": {
+      "canonicalSource": "library/skills/loop-me",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "loop-on-ci": {
+      "canonicalSource": "library/skills/loop-on-ci",
+      "owner": "ci-maintenance",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "lyric-diagnostic": {
+      "canonicalSource": "library/skills/lyric-diagnostic",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "maintain-verification-skill": {
+      "canonicalSource": "library/skills/maintain-verification-skill",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "make-pr-easy-to-review": {
+      "canonicalSource": "library/skills/make-pr-easy-to-review",
+      "owner": "git-advanced-workflows",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "marketing-psychology": {
+      "canonicalSource": "library/skills/marketing-psychology",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "mcp-builder": {
+      "canonicalSource": "skills/mcp-builder",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Build MCP servers with explicit tool contracts, transports, errors, and executable interoperability checks.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "mcp-integration-lifecycle": {
+      "canonicalSource": "skills/mcp-integration-lifecycle",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Diagnose MCP registration, transport, initialization, catalog, auth, and reload boundaries in the active client.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "memory-forensics": {
+      "canonicalSource": "library/skills/memory-forensics",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "migrate-to-shoehorn": {
+      "canonicalSource": "library/skills/migrate-to-shoehorn",
+      "owner": "typescript-pro",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "mtls-configuration": {
+      "canonicalSource": "skills/mtls-configuration",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "'Configure and diagnose mutual TLS: certificate identity, trust chains, rotation, and service authentication.'",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "multi-agent-workflows": {
+      "canonicalSource": "library/skills/multi-agent-workflows",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "multi-reviewer-patterns": {
+      "canonicalSource": "library/skills/multi-reviewer-patterns",
+      "owner": "code-review",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "musical-dna": {
+      "canonicalSource": "library/skills/musical-dna",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "naming": {
+      "canonicalSource": "library/skills/naming",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "neubrutal-hud": {
+      "canonicalSource": "library/skills/neubrutal-hud",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "no-comments": {
+      "canonicalSource": "library/skills/no-comments",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "nodejs-backend-patterns": {
+      "canonicalSource": "library/skills/nodejs-backend-patterns",
+      "owner": "api-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "nuc": {
+      "canonicalSource": "library/skills/nuc",
+      "owner": "operations-vault",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "observe-and-tune": {
+      "canonicalSource": "library/skills/observe-and-tune",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "obsidian-cli": {
+      "canonicalSource": "library/skills/obsidian-cli",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "obsidian-vault": {
+      "canonicalSource": "library/skills/obsidian-vault",
+      "owner": "vault-local note guidance",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "omarchy": {
+      "canonicalSource": "library/skills/omarchy",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "openai-docs": {
+      "canonicalSource": "library/skills/openai-docs",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "openapi-spec-generation": {
+      "canonicalSource": "library/skills/openapi-spec-generation",
+      "owner": "api-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "opensource-guide-coach": {
+      "canonicalSource": "library/skills/opensource-guide-coach",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "opentui": {
+      "canonicalSource": "library/skills/opentui",
+      "owner": "codex-skills",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Build OpenTUI terminal interfaces with the correct renderer lifecycle, input handling, and framework bindings.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "orchestrate": {
+      "canonicalSource": "library/skills/orchestrate",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "page-cro": {
+      "canonicalSource": "library/skills/page-cro",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "paid-ads": {
+      "canonicalSource": "library/skills/paid-ads",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "patreon-manager": {
+      "canonicalSource": "vault-agents/SUBCULT/skills/patreon-manager",
+      "owner": "SUBCULT",
+      "scope": "vault-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [
+        "existing vault and its named tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/vault-agents.json"
+      ],
+      "positiveTask": "Prepare a supporter draft from current Studio offer and project evidence.",
+      "nearMiss": "Work owned by another vault."
+    },
+    "pci-compliance": {
+      "canonicalSource": "library/skills/pci-compliance",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "pdf": {
+      "canonicalSource": "library/skills/pdf",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "performance-investigation": {
+      "canonicalSource": "skills/performance-investigation",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Diagnose measured latency, CPU, memory, or throughput regressions using comparable profiles and benchmarks.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "play-edda": {
+      "canonicalSource": "library/skills/play-edda",
+      "owner": "Edda gameplay",
+      "scope": "project-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude",
+        "opencode"
+      ],
+      "requiredTools": [
+        "rtk",
+        "git",
+        "python3 for deployment and checks"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/project-selections.json"
+      ],
+      "positiveTask": "Maintain the named project workflow.",
+      "nearMiss": "Unrelated repository work."
+    },
+    "playwright": {
+      "canonicalSource": "skills/playwright",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Automate a browser with Playwright CLI for navigation, interaction, inspection, and evidence capture.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "plugin-creator": {
+      "canonicalSource": "library/skills/plugin-creator",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "plugin-integrator": {
+      "canonicalSource": "library/skills/plugin-integrator",
+      "owner": "blacktower-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "postgres-data-quality": {
+      "canonicalSource": "library/skills/postgres-data-quality",
+      "owner": "postgres-pro",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "postgres-pro": {
+      "canonicalSource": "skills/postgres-pro",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "PostgreSQL query plans, indexes, locks, replication, and data-quality checks against the real schema.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "poteto-mode": {
+      "canonicalSource": "library/skills/poteto-mode",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "blocked",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "docs/reviews/2026-10-03-skill-scope-review.md"
+      ],
+      "positiveTask": null,
+      "nearMiss": null,
+      "blockedReason": "Folder name differs from source frontmatter; original personal-style import is not qualified for activation."
+    },
+    "pptx-generator": {
+      "canonicalSource": "library/skills/pptx-generator",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "pr-review-canvas": {
+      "canonicalSource": "library/skills/pr-review-canvas",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "presentation-design": {
+      "canonicalSource": "library/skills/presentation-design",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-boundary-discipline": {
+      "canonicalSource": "library/skills/principle-boundary-discipline",
+      "owner": "architecture-patterns",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-build-the-lever": {
+      "canonicalSource": "library/skills/principle-build-the-lever",
+      "owner": "codemod-surgeon",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-encode-lessons-in-structure": {
+      "canonicalSource": "library/skills/principle-encode-lessons-in-structure",
+      "owner": "codemod-surgeon",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-exhaust-the-design-space": {
+      "canonicalSource": "library/skills/principle-exhaust-the-design-space",
+      "owner": "architecture-patterns",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-experience-first": {
+      "canonicalSource": "library/skills/principle-experience-first",
+      "owner": "architecture-patterns",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-fix-root-causes": {
+      "canonicalSource": "library/skills/principle-fix-root-causes",
+      "owner": "systematic-debugging",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-foundational-thinking": {
+      "canonicalSource": "library/skills/principle-foundational-thinking",
+      "owner": "architecture-patterns",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-guard-the-context-window": {
+      "canonicalSource": "library/skills/principle-guard-the-context-window",
+      "owner": "implementation-plan",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-laziness-protocol": {
+      "canonicalSource": "library/skills/principle-laziness-protocol",
+      "owner": "refactor",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-make-operations-idempotent": {
+      "canonicalSource": "library/skills/principle-make-operations-idempotent",
+      "owner": "verify-behavior",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-migrate-callers-then-delete-legacy-apis": {
+      "canonicalSource": "library/skills/principle-migrate-callers-then-delete-legacy-apis",
+      "owner": "refactor",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-minimize-reader-load": {
+      "canonicalSource": "library/skills/principle-minimize-reader-load",
+      "owner": "refactor",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-model-the-domain": {
+      "canonicalSource": "library/skills/principle-model-the-domain",
+      "owner": "architecture-patterns",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-never-block-on-the-human": {
+      "canonicalSource": "library/skills/principle-never-block-on-the-human",
+      "owner": "implementation-plan",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-outcome-oriented-execution": {
+      "canonicalSource": "library/skills/principle-outcome-oriented-execution",
+      "owner": "implementation-plan",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-prove-it-works": {
+      "canonicalSource": "library/skills/principle-prove-it-works",
+      "owner": "verify-behavior",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-redesign-from-first-principles": {
+      "canonicalSource": "library/skills/principle-redesign-from-first-principles",
+      "owner": "architecture-patterns",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-separate-before-serializing-shared-state": {
+      "canonicalSource": "library/skills/principle-separate-before-serializing-shared-state",
+      "owner": "architecture-patterns",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-sequence-verifiable-units": {
+      "canonicalSource": "library/skills/principle-sequence-verifiable-units",
+      "owner": "implementation-plan",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-subtract-before-you-add": {
+      "canonicalSource": "library/skills/principle-subtract-before-you-add",
+      "owner": "refactor",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "principle-type-system-discipline": {
+      "canonicalSource": "library/skills/principle-type-system-discipline",
+      "owner": "typescript-pro",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "prometheus-configuration": {
+      "canonicalSource": "library/skills/prometheus-configuration",
+      "owner": "observability",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "prose-style": {
+      "canonicalSource": "library/skills/prose-style",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "protocol-reverse-engineering": {
+      "canonicalSource": "library/skills/protocol-reverse-engineering",
+      "owner": "reverse-engineering",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "prototype": {
+      "canonicalSource": "skills/prototype",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Prototype a state model or competing UI designs in a disposable runnable artifact to answer a specific question.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "python-configuration": {
+      "canonicalSource": "library/skills/python-configuration",
+      "owner": "python-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "python-packaging": {
+      "canonicalSource": "library/skills/python-packaging",
+      "owner": "python-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "python-testing-patterns": {
+      "canonicalSource": "library/skills/python-testing-patterns",
+      "owner": "python-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "python-tooling-patterns": {
+      "canonicalSource": "library/skills/python-tooling-patterns",
+      "owner": "python-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "qa": {
+      "canonicalSource": "library/skills/qa",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "rag-implementation": {
+      "canonicalSource": "skills/rag-implementation",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "'Retrieval systems: ingestion, vector/keyword search, ranking, citations, and retrieval-quality measurement.'",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "ralph-loop": {
+      "canonicalSource": "library/skills/ralph-loop",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "ralph-loop-help": {
+      "canonicalSource": "library/skills/ralph-loop-help",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "react-native-pro": {
+      "canonicalSource": "library/skills/react-native-pro",
+      "owner": "codex-skills",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "'React Native/Expo implementation: navigation, native integration, offline behavior, lists, and mobile performance.'",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "react-pro": {
+      "canonicalSource": "skills/react-pro",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "React/Next.js state, rendering, data loading, component APIs, and performance within the existing application.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "readme-i18n": {
+      "canonicalSource": "library/skills/readme-i18n",
+      "owner": "technical-writing",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "recall": {
+      "canonicalSource": "library/skills/recall",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "refactor": {
+      "canonicalSource": "skills/refactor",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Behavior-preserving refactoring and code simplification; plan changes when requested and verify public contracts.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "reflect": {
+      "canonicalSource": "library/skills/reflect",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "release-engineer": {
+      "canonicalSource": "library/skills/release-engineer",
+      "owner": "blacktower-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "repository-delivery-review": {
+      "canonicalSource": "skills/repository-delivery-review",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Audit a repository against its intended capabilities; separate implemented, incomplete, planned, and unverified work.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "reproduce-and-fix-issues": {
+      "canonicalSource": "library/skills/reproduce-and-fix-issues",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "request-refactor-plan": {
+      "canonicalSource": "library/skills/request-refactor-plan",
+      "owner": "refactor",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "requirements-interview": {
+      "canonicalSource": "shared/requirements-interview",
+      "owner": "shared-core",
+      "scope": "shared",
+      "status": "selection-tested",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/optional-specialists-verification-2026-10-03.json"
+      ],
+      "positiveTask": "Clarify ambiguous work or run a grill-me / grill-with-docs design interview. Use when the requested outcome, constraints, acceptance criteria, or tradeoffs would materially change the implementation; skip it when repository evidence already makes the task clear.",
+      "nearMiss": "An ordinary task without the named procedure."
+    },
+    "research": {
+      "canonicalSource": "library/skills/research",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "reverse-engineering": {
+      "canonicalSource": "library/skills/reverse-engineering",
+      "owner": "codex-skills",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Analyze executable binaries or network protocols; select disassembly or packet-analysis procedures as needed.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "reverse-outliner": {
+      "canonicalSource": "library/skills/reverse-outliner",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "review-agent": {
+      "canonicalSource": "library/skills/review-agent",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "review-and-ship": {
+      "canonicalSource": "library/skills/review-and-ship",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "review-doc-consistency": {
+      "canonicalSource": "library/skills/review-doc-consistency",
+      "owner": "technical-writing",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "review-plugin-submission": {
+      "canonicalSource": "library/skills/review-plugin-submission",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "review-quality": {
+      "canonicalSource": "library/skills/review-quality",
+      "owner": "code-review",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "revision": {
+      "canonicalSource": "library/skills/revision",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "revops": {
+      "canonicalSource": "library/skills/revops",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "run-learning-retrospective": {
+      "canonicalSource": "library/skills/run-learning-retrospective",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "rust-pro": {
+      "canonicalSource": "skills/rust-pro",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Rust ownership, async execution, errors, concurrency, and systems integration within the existing crate design.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "sales-enablement": {
+      "canonicalSource": "library/skills/sales-enablement",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "sast-configuration": {
+      "canonicalSource": "library/skills/sast-configuration",
+      "owner": "ci-maintenance",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "scaffold-exercises": {
+      "canonicalSource": "library/skills/scaffold-exercises",
+      "owner": "codex-skills",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Scaffold coding exercises, solution directories, and explanatory material in the existing course format.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "scheduled-tasks": {
+      "canonicalSource": "library/skills/scheduled-tasks",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "screenshot": {
+      "canonicalSource": "library/skills/screenshot",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "secrets-management": {
+      "canonicalSource": "skills/secrets-management",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Implement CI/runtime secret storage, delivery, and rotation using the environment\u2019s existing secret provider.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "secure-linux-web-hosting": {
+      "canonicalSource": "library/skills/secure-linux-web-hosting",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "security-best-practices": {
+      "canonicalSource": "skills/security-best-practices",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Requested security review or secure coding guidance for Python, JavaScript/TypeScript, and Go.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "security-ownership-map": {
+      "canonicalSource": "skills/security-ownership-map",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Requested security ownership and bus-factor analysis from Git history; identify sensitive-code ownership gaps.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "security-threat-model": {
+      "canonicalSource": "skills/security-threat-model",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "'Requested repository threat model: assets, trust boundaries, attacker paths, and prioritized mitigations.'",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "sensitivity-check": {
+      "canonicalSource": "library/skills/sensitivity-check",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "seo-pro": {
+      "canonicalSource": "library/skills/seo-pro",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "session-handoff": {
+      "canonicalSource": "shared/session-handoff",
+      "owner": "shared-core",
+      "scope": "shared",
+      "status": "selection-tested",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/optional-specialists-verification-2026-10-03.json"
+      ],
+      "positiveTask": "Preserve progress, decisions, blockers, and continuation steps when work will continue in another agent session or agent. Use before a context reset, ownership transfer, or long pause; do not trigger for an ordinary final summary.",
+      "nearMiss": "An ordinary task without the named procedure."
+    },
+    "session-warden": {
+      "canonicalSource": "library/skills/session-warden",
+      "owner": "blacktower-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "setup-benny": {
+      "canonicalSource": "library/skills/setup-benny",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "setup-matt-pocock-skills": {
+      "canonicalSource": "library/skills/setup-matt-pocock-skills",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "setup-pre-commit": {
+      "canonicalSource": "library/skills/setup-pre-commit",
+      "owner": "ci-maintenance",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "setup-pstack": {
+      "canonicalSource": "library/skills/setup-pstack",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "setup-ts-deep-modules": {
+      "canonicalSource": "library/skills/setup-ts-deep-modules",
+      "owner": "typescript-pro",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "shared-world": {
+      "canonicalSource": "library/skills/shared-world",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "shellcheck-configuration": {
+      "canonicalSource": "library/skills/shellcheck-configuration",
+      "owner": "shell-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "show-me-your-work": {
+      "canonicalSource": "library/skills/show-me-your-work",
+      "owner": "implementation-plan",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "simplify": {
+      "canonicalSource": "library/skills/simplify",
+      "owner": "refactor",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "skill-creator": {
+      "canonicalSource": "library/skills/skill-creator",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "skill-installer": {
+      "canonicalSource": "library/skills/skill-installer",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "skills-cli": {
+      "canonicalSource": "library/skills/skills-cli",
+      "owner": "codex-skills-maintenance",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "slo-implementation": {
+      "canonicalSource": "library/skills/slo-implementation",
+      "owner": "observability",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "social-content": {
+      "canonicalSource": "library/skills/social-content",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "solidity-security": {
+      "canonicalSource": "library/skills/solidity-security",
+      "owner": "codex-skills",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Implement or audit Solidity contracts for exploitable behavior, authorization, state transitions, and fund safety.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "speech-adaptation": {
+      "canonicalSource": "library/skills/speech-adaptation",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "spreadsheet": {
+      "canonicalSource": "library/skills/spreadsheet",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "startup-finance": {
+      "canonicalSource": "library/skills/startup-finance",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "statistical-distance": {
+      "canonicalSource": "library/skills/statistical-distance",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "story-coach": {
+      "canonicalSource": "library/skills/story-coach",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "story-collaborator": {
+      "canonicalSource": "library/skills/story-collaborator",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "story-idea-generator": {
+      "canonicalSource": "library/skills/story-idea-generator",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "story-sense": {
+      "canonicalSource": "library/skills/story-sense",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "stripe": {
+      "canonicalSource": "library/skills/stripe",
+      "owner": "stripe-billing-operations",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "stripe-integration": {
+      "canonicalSource": "library/skills/stripe-integration",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "subcult-brand-voice": {
+      "canonicalSource": "library/skills/subcult-brand-voice",
+      "owner": "studio-preparation",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "subcult-visual-design": {
+      "canonicalSource": "library/skills/subcult-visual-design",
+      "owner": "studio-preparation",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "subcult-worldbuilding": {
+      "canonicalSource": "library/skills/subcult-worldbuilding",
+      "owner": "studio-preparation",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "summarization": {
+      "canonicalSource": "library/skills/summarization",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "selection-tested",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "current client source retrieval/search tools when required"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/optional-specialists-verification-2026-10-03.json"
+      ],
+      "positiveTask": "Summarize a supplied document for its intended audience.",
+      "nearMiss": "An unrelated task without the named source review or synthesis request."
+    },
+    "super-productivity-maintenance": {
+      "canonicalSource": "library/skills/super-productivity-maintenance",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "super-productivity-mcp": {
+      "canonicalSource": "library/skills/super-productivity-mcp",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "super-productivity-planning": {
+      "canonicalSource": "library/skills/super-productivity-planning",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "swarm": {
+      "canonicalSource": "library/skills/swarm",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "switchyard-runtime": {
+      "canonicalSource": "library/skills/switchyard-runtime",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "systematic-debugging": {
+      "canonicalSource": "skills/systematic-debugging",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Reproduce and diagnose a defect; choose a tight failing check, isolate the cause, and verify the repair.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "table-tone": {
+      "canonicalSource": "library/skills/table-tone",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "tdd": {
+      "canonicalSource": "skills/tdd",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "'Test-first implementation when requested: red-green-refactor, test boundaries, fixtures, and meaningful assertions.'",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "teach": {
+      "canonicalSource": "library/skills/teach",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "technical-writing": {
+      "canonicalSource": "skills/technical-writing",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Technical docs, RFCs, README localization, and docs-versus-code checks; preserve source meaning and working links.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "technology-impact": {
+      "canonicalSource": "library/skills/technology-impact",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "temporal-python-testing": {
+      "canonicalSource": "library/skills/temporal-python-testing",
+      "owner": "codex-skills",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Test Temporal Python workflows with replay, time skipping, activities, mocks, and determinism checks.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "terraform-module-library": {
+      "canonicalSource": "library/skills/terraform-module-library",
+      "owner": "codex-skills",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Create reusable Terraform modules with explicit inputs, provider constraints, examples, and validation.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "thermo-nuclear-code-quality-review": {
+      "canonicalSource": "library/skills/thermo-nuclear-code-quality-review",
+      "owner": "code-review",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "thermo-nuclear-review": {
+      "canonicalSource": "library/skills/thermo-nuclear-review",
+      "owner": "code-review",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "thermos": {
+      "canonicalSource": "library/skills/thermos",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "to-prd": {
+      "canonicalSource": "library/skills/to-prd",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "to-questionnaire": {
+      "canonicalSource": "library/skills/to-questionnaire",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "to-tickets": {
+      "canonicalSource": "library/skills/to-tickets",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "triage": {
+      "canonicalSource": "library/skills/triage",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "triage-issue-reports": {
+      "canonicalSource": "library/skills/triage-issue-reports",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "typescript-best-practices": {
+      "canonicalSource": "library/skills/typescript-best-practices",
+      "owner": "typescript-pro",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "typescript-pro": {
+      "canonicalSource": "skills/typescript-pro",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "TypeScript type design, compiler configuration, and migrations; load framework guidance only for framework-specific work.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "ubiquitous-language": {
+      "canonicalSource": "library/skills/ubiquitous-language",
+      "owner": "architecture-patterns",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "unslop": {
+      "canonicalSource": "skills/unslop",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Required for every user-facing prose response and documentation edit. Remove filler while preserving meaning, facts, uncertainty and voice; explain again in plain language when an explanation did not land.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "use-my-browser": {
+      "canonicalSource": "library/skills/use-my-browser",
+      "owner": "verify-behavior",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "uv-package-manager": {
+      "canonicalSource": "library/skills/uv-package-manager",
+      "owner": "python-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "vault-monthly-maintenance": {
+      "canonicalSource": "vault-agents/ars-malefica/skills/vault-monthly-maintenance",
+      "owner": "ars-malefica",
+      "scope": "vault-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [
+        "existing vault and its named tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/vault-agents.json"
+      ],
+      "positiveTask": "Monthly ars-malefica Obsidian vault maintenance workflow. Use when the user asks to run monthly vault upkeep, vault maintenance, inbox cleanup, active work review, stale workbench review, normalization audit, archive review, or to keep the non-Archive vault managed under the vault operating-system.",
+      "nearMiss": "Work owned by another vault."
+    },
+    "verify-this": {
+      "canonicalSource": "library/skills/verify-this",
+      "owner": "verify-behavior",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "video": {
+      "canonicalSource": "library/skills/video",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "voice-analysis": {
+      "canonicalSource": "library/skills/voice-analysis",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "vscode-extension-development": {
+      "canonicalSource": "library/skills/vscode-extension-development",
+      "owner": "codex-skills",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "VS Code extension commands, menus, contribution visibility, and localized user-facing strings.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "wait-what": {
+      "canonicalSource": "library/skills/wait-what",
+      "owner": "unslop",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "wayfinder": {
+      "canonicalSource": "library/skills/wayfinder",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "wcag-audit-patterns": {
+      "canonicalSource": "skills/wcag-audit-patterns",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Audit or repair web accessibility using keyboard, semantics, contrast, and assistive-technology evidence.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "web-search": {
+      "canonicalSource": "library/skills/web-search",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "selection-tested",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "current client source retrieval/search tools when required"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/optional-specialists-verification-2026-10-03.json"
+      ],
+      "positiveTask": "Search current public information using available tools.",
+      "nearMiss": "An unrelated task without the named source review or synthesis request."
+    },
+    "webapp-testing": {
+      "canonicalSource": "library/skills/webapp-testing",
+      "owner": "verify-behavior",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "websocket-engineer": {
+      "canonicalSource": "library/skills/websocket-engineer",
+      "owner": "api-development",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "weekly-review": {
+      "canonicalSource": "library/skills/weekly-review",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "what-did-i-get-done": {
+      "canonicalSource": "library/skills/what-did-i-get-done",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "why": {
+      "canonicalSource": "library/skills/why",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "wizard": {
+      "canonicalSource": "skills/wizard",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Build an interactive setup script for steps requiring human input; keep secrets hidden and actions reviewable.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "workflow-from-chats": {
+      "canonicalSource": "library/skills/workflow-from-chats",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "workflow-orchestration-patterns": {
+      "canonicalSource": "library/skills/workflow-orchestration-patterns",
+      "owner": "codex-skills",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Design Temporal workflows and activities with durable state, deterministic execution, and failure recovery.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "worktrees": {
+      "canonicalSource": "library/skills/worktrees",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "world-fates": {
+      "canonicalSource": "library/skills/world-fates",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "worldbuilding": {
+      "canonicalSource": "library/skills/worldbuilding",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "writing-beats": {
+      "canonicalSource": "library/skills/writing-beats",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "writing-for-agents": {
+      "canonicalSource": "library/skills/writing-for-agents",
+      "owner": "authoring reference",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/retired-names.json"
+      ],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "writing-fragments": {
+      "canonicalSource": "library/skills/writing-fragments",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "writing-plans": {
+      "canonicalSource": "library/skills/writing-plans",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "writing-shape": {
+      "canonicalSource": "library/skills/writing-shape",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "unreviewed",
+      "supportedClients": [],
+      "requiredTools": [],
+      "lastReviewed": null,
+      "evidence": [],
+      "positiveTask": null,
+      "nearMiss": null
+    },
+    "api-development": {
+      "canonicalSource": "skills/api-development",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "'API contracts and backend protocols: REST/GraphQL, OpenAPI, Node services, and WebSocket lifecycle design.'",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "ci-maintenance": {
+      "canonicalSource": "skills/ci-maintenance",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "CI failures, pipelines, pre-commit hooks, and code scanning; distinguish local checks from hosted run results.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "hatch-pet": {
+      "canonicalSource": "skills/hatch-pet",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Create or repair Codex v2 animated pets; validate atlas geometry, directions, transparency, and packaging.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "implementation-plan": {
+      "canonicalSource": "skills/implementation-plan",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Plan or implement a bounded feature from a spec; map acceptance criteria to changes and executable verification.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "interface-originality-audit": {
+      "canonicalSource": "skills/interface-originality-audit",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Audit UI originality, product credibility, and missing interaction states; report evidence-backed design findings.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "observability": {
+      "canonicalSource": "skills/observability",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Metrics, traces, dashboards, and SLOs; implement telemetry or diagnose a specific monitoring gap.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "python-development": {
+      "canonicalSource": "skills/python-development",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Python tooling, packaging, settings, uv environments, and pytest; select the procedure for the requested change.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "repository-test-maintenance": {
+      "canonicalSource": "skills/repository-test-maintenance",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Maintain an oversized or brittle repository test suite while preserving crucial behavior and removing obsolete work.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "shell-development": {
+      "canonicalSource": "skills/shell-development",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Shell scripting, ShellCheck linting, and Bats tests; preserve exit status, quoting, cleanup, and portability.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "stripe-billing-operations": {
+      "canonicalSource": "skills/stripe-billing-operations",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Perform Stripe billing operations such as invoice drafts, refunds and subscription changes. Check account and test/live mode, prevent duplicates, reuse existing authorization, and verify provider receipts.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "t3-repo-setup": {
+      "canonicalSource": "skills/t3-repo-setup",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Onboard a repository into T3 development environments with isolated previews, local tests, and project actions.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "verify-behavior": {
+      "canonicalSource": "skills/verify-behavior",
+      "owner": "codex-skills",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "reports/structure.json"
+      ],
+      "positiveTask": "Verify UI, CLI, API, build, or performance claims using runnable evidence; distinguish smoke checks from regressions.",
+      "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "studio-preparation": {
+      "canonicalSource": "project-agents/subcult-studio/skills/studio-preparation",
+      "owner": "Studio",
+      "scope": "project-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude",
+        "opencode"
+      ],
+      "requiredTools": [
+        "rtk",
+        "git",
+        "python3 for deployment and checks"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/project-selections.json",
+        "catalog/six-pass-adaptations-2026-10-03.json"
+      ],
+      "positiveTask": "Prepare a product graphic or supporter draft from current Studio sources.",
+      "nearMiss": "Ordinary product implementation without brand/content changes."
+    },
+    "subcult-vault": {
+      "canonicalSource": "vault-agents/SUBCULT/skills/subcult-vault",
+      "owner": "SUBCULT",
+      "scope": "vault-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [
+        "existing vault and its named tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/vault-agents.json"
+      ],
+      "positiveTask": "Organize SUBCULT business, product and publishing plans in its Obsidian vault. Use for its strategy notes, portfolio indexes and editorial planning; code implementation belongs in the product repository.",
+      "nearMiss": "Work owned by another vault."
+    },
+    "operations-vault": {
+      "canonicalSource": "vault-agents/Operations/skills/operations-vault",
+      "owner": "Operations",
+      "scope": "vault-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [
+        "existing vault and its named tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/vault-agents.json"
+      ],
+      "positiveTask": "Maintain Machinum homelab evidence and route authorized host operations, incidents, backups and service changes through current inventory and runbooks. Documentation alone does not authorize infrastructure changes.",
+      "nearMiss": "Work owned by another vault."
+    },
+    "library-vault": {
+      "canonicalSource": "vault-agents/Library/skills/library-vault",
+      "owner": "Library",
+      "scope": "vault-local",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [
+        "existing vault and its named tools"
+      ],
+      "lastReviewed": "2026-10-03",
+      "evidence": [
+        "catalog/vault-agents.json"
+      ],
+      "positiveTask": "Find, catalog and refresh imported reference material in the Archivum vault while preserving source ownership. Use for repository/tool mirrors, bulk resources and clipping provenance; authored personal notes belong elsewhere.",
+      "nearMiss": "Work owned by another vault."
+    }
+  }
+}

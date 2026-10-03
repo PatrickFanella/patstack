@@ -1,0 +1,16 @@
+# Operational evidence and change routing
+
+For host health, alerts, route exposure, backup/storage work or service placement, start with Machinum root AGENTS.md and its Documentation Control policy. Resolve the relevant current host briefings and Service Ownership Graph from this vault. NUC and Almaz are two hosts in the current fleet, not a fixed two-host architecture. Old .nuc/docs/almaz paths, compose roots, GPU kernels, backup repositories and service placements are historical observations until freshly verified.
+
+Choose the requested branch:
+
+- Health or incident: identify host and service, compare effective config, service/runtime, transport, authentication/policy, persistence and visible behavior. Correlate pressure/OOM, restart and application errors. Tag every observation with host, time and source. A running container or health endpoint alone does not prove representative application behavior.
+- Alerts: inspect alert generation, routing, delivery and provider receipt separately. Trace the publisher's current owner; do not assume an ntfy topic or Alertmanager location from an old skill. Avoid printing notification bodies or credential-bearing logs unnecessarily.
+- Exposure: trace current ingress/auth/DNS to upstream listener and actual rendered/API result. Inspect compose publishes and firewall rules on the identified hosts before concluding a route is public or protected.
+- Backups and storage: inspect current job config, timers/logs, repository integrity, retention and an independent restore. Mount names and backup timestamps do not prove recoverability. Keep acquisition, preservation, storage budget and public access decisions distinct. SnapRAID touch/sync/scrub and filesystem deletion are mutations with their own task authorization.
+- GPU or post-upgrade: inspect current OS/kernel/driver, PCI presence, nvidia-smi or the actual accelerator tool, container runtime and representative workload. An old known-good kernel is historical evidence, not a universal pin recommendation.
+- Service changes: use the existing Service Migration Checklist in 40-runbooks. Establish current consumers, reverse systemd dependencies, active work, backup/restore, route fallback, cutover and rollback before applying an authorized change. Docker live-restore does not suppress dependent services with Requires=docker.service. Preserve Kvant and internet connectivity constraints.
+
+Use existing task authorization and continue necessary approved work; do not invent repeated approval gates. Documentation work alone does not authorize operational changes. Keep secrets in their existing store. Save durable facts and dated evidence in the vault's existing destinations, run its registry audit, commit intended notes and preview guarded briefing sync. Do not edit generated HOMELAB.md or revive retired trees. Registry validity, local deployment, natural execution, provider delivery and website publication remain separate proof.
+
+Original homelab/nuc/almaz source folders remain archived in the optional reservoir. Their host-specific scripts and templates are reference material requiring path, credential, schema and side-effect review before reuse; no legacy helper is automatically executed by this adapter.

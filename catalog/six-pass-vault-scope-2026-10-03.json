@@ -1,0 +1,14 @@
+{
+  "destinations": [
+    "/home/onnwee/Work/Vaults/SUBCULT/AGENTS.md",
+    "/home/onnwee/Work/Vaults/SUBCULT/.agents/skills/patreon-manager/SKILL.md",
+    "/home/onnwee/Work/Vaults/SUBCULT/.opencode/skills/patreon-manager/SKILL.md",
+    "/home/onnwee/Work/Vaults/Machinum/AGENTS.md",
+    "/home/onnwee/Work/Vaults/Machinum/.agents/skills/operations-vault/SKILL.md",
+    "/home/onnwee/Work/Vaults/Machinum/.opencode/skills/operations-vault/SKILL.md",
+    "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/patreon-manager/SKILL.md",
+    "/home/onnwee/Work/Vaults/Machinum/.agents/skills/operations-vault/references/operational-evidence.md",
+    "/home/onnwee/Work/Vaults/Machinum/.opencode/skills/operations-vault/references/operational-evidence.md"
+  ],
+  "preservedDirtyMirror": "library/skills/patreon-manager/SKILL.md"
+}

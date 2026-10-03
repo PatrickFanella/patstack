@@ -38,8 +38,14 @@ def plan(rows):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('mode', choices=['plan', 'apply', 'verify'])
+    parser.add_argument('--only-destination', action='append', help='Deploy only exact registered paths; preserve normal drift checks')
     args = parser.parse_args()
     manifest = json.loads((ROOT / 'catalog/vault-agents.json').read_text())
+    if args.only_destination:
+        unknown = set(args.only_destination) - {row['destination'] for row in manifest['files']}
+        if unknown:
+            parser.error('Unknown destinations: ' + ', '.join(sorted(unknown)))
+        manifest['files'] = [row for row in manifest['files'] if row['destination'] in args.only_destination]
     changes, errors = plan(manifest['files'])
     print(json.dumps({'mode': args.mode, 'changes': len(changes), 'errors': errors}, indent=2))
     if errors:

@@ -1,0 +1,559 @@
+[
+  {
+    "name": "react-native-pro",
+    "files": {
+      "SKILL.md": {
+        "sha256": "7936b6c6a6583da1af63781fdb438f18c47aed35da749785af0e13839b966d1f",
+        "mode": 420
+      },
+      "notices/blacktower-mit.md": {
+        "sha256": "a0d977279f86d6b16f2fb5edafda853f74d54af3c49b5ea97466637d70092f4d",
+        "mode": 420
+      },
+      "references/curated/react-native-architecture.md": {
+        "sha256": "5d929001ac7eaf7fc573946cef047429d7647b384769fb21a57ac6ce40965f9e",
+        "mode": 420
+      },
+      "references/curated/react-native-design.md": {
+        "sha256": "c215486367073c75acfa27bfcd6f504f3ef132af047d7916bf07e784c8e7299a",
+        "mode": 420
+      },
+      "references/curated/vercel-react-native-skills.md": {
+        "sha256": "430b583617a588bce8f460a1dbb9133a8101b166d494f42b0719a57097f5deba",
+        "mode": 420
+      }
+    },
+    "source": "library/skills/react-native-pro",
+    "archivedOriginal": {
+      "path": "authoring/optional-originals/2026-10-03-second-pass/react-native-pro",
+      "files": {
+        "SKILL.md": {
+          "sha256": "a5419a1c1a26a146f198992da6cd339f8415803678f5a3b0a060b87600b63135",
+          "mode": 420
+        },
+        "references/curated/react-native-architecture.md": {
+          "sha256": "5d929001ac7eaf7fc573946cef047429d7647b384769fb21a57ac6ce40965f9e",
+          "mode": 420
+        },
+        "references/curated/react-native-design.md": {
+          "sha256": "c215486367073c75acfa27bfcd6f504f3ef132af047d7916bf07e784c8e7299a",
+          "mode": 420
+        },
+        "references/curated/vercel-react-native-skills.md": {
+          "sha256": "430b583617a588bce8f460a1dbb9133a8101b166d494f42b0719a57097f5deba",
+          "mode": 420
+        }
+      }
+    }
+  },
+  {
+    "name": "opentui",
+    "files": {
+      "SKILL.md": {
+        "sha256": "3f4d1c7a38eb67713092f5f7c07f767f7a04c3f70c06e028a2b4559ab17f6727",
+        "mode": 420
+      },
+      "guide.md": {
+        "sha256": "f96ca3170bc804a8ab4d8ecb472eb0773bfa9e125b4120c3c4e1bd183f3ed44d",
+        "mode": 420
+      },
+      "notices/blacktower-mit.md": {
+        "sha256": "a0d977279f86d6b16f2fb5edafda853f74d54af3c49b5ea97466637d70092f4d",
+        "mode": 420
+      },
+      "part-01.md": {
+        "sha256": "9089d553f25ca1ef2c2c1e6e7ea098a02b49d93e4f051e006321b184198105b9",
+        "mode": 420
+      },
+      "part-02.md": {
+        "sha256": "0d92a77731efb08cfce721efedde547017dfabc60e488d61ee5ba718e4cad40b",
+        "mode": 420
+      },
+      "part-03.md": {
+        "sha256": "9adb1ad975026b846e33131a927dab612eb31134e3459085d99fa63032ac3b44",
+        "mode": 420
+      },
+      "part-04.md": {
+        "sha256": "eb2e7f98e4ca415939670eda6af7989faf913758ce147adb44b764e227301edc",
+        "mode": 420
+      },
+      "part-05.md": {
+        "sha256": "1a4e073f2cdde0f92c9623d24a254a48a42cc69b32653987065217bb80ed7f6f",
+        "mode": 420
+      },
+      "part-06.md": {
+        "sha256": "bb0b74dee6b691a2ce3f39e029f1df049ff35b009833bef85fad62ed1d15413c",
+        "mode": 420
+      },
+      "references/animation/REFERENCE.md": {
+        "sha256": "2ce5b58bf128e0d1bc3aed914a2c4d0cdac9fdfe2b79952537a285245f61a0f8",
+        "mode": 420
+      },
+      "references/components/REFERENCE.md": {
+        "sha256": "46318a848df4d80d14cb338c8678e0cdb865b62ae73f574096655e1a30484fac",
+        "mode": 420
+      },
+      "references/components/code-diff.md": {
+        "sha256": "cfad32e2aa19cd9b91eee1ea6675e81be7aec84b56b8a8ae95fffbf45c9e5099",
+        "mode": 420
+      },
+      "references/components/containers.md": {
+        "sha256": "42c284ed6edf0734d31e5157a8b311766438907ed00fe9e4e6142e304b617c78",
+        "mode": 420
+      },
+      "references/components/inputs.md": {
+        "sha256": "8e2aa0c980fdb0410acf4f71ac004634df4e55f50cacf90fbf881d28cecacc9a",
+        "mode": 420
+      },
+      "references/components/text-display.md": {
+        "sha256": "7a1664e36ed1759bdb7d11adbd2190e8f3c0ce2aeaff3777f243af1a4d984794",
+        "mode": 420
+      },
+      "references/core/REFERENCE.md": {
+        "sha256": "21a84a47b120f2c3c90669bb0bc7183fb18cd0d1984730402c573c5a6d2547bd",
+        "mode": 420
+      },
+      "references/core/api.md": {
+        "sha256": "b707e6843f6f49d84b711a98ef1581b94ca40fc32d855b478615b14ba814c019",
+        "mode": 420
+      },
+      "references/core/configuration.md": {
+        "sha256": "315d4070c401ce013ca9d6c32ac0b0a21da1057090f90a224eea1eb008f95601",
+        "mode": 420
+      },
+      "references/core/gotchas.md": {
+        "sha256": "71437d3291a7699925fb1d95272a99d803ea22902cda1aa33fd9393d4811aae5",
+        "mode": 420
+      },
+      "references/core/patterns.md": {
+        "sha256": "ea64aef391e29a6304b8f3096dfc3d62dcac3ecba2fcee83a8e22a2ff76a7396",
+        "mode": 420
+      },
+      "references/keyboard/REFERENCE.md": {
+        "sha256": "bd1ae56c596600760fc5fb50d68ad892e31ab84f9f9dae668a3ab270068911c9",
+        "mode": 420
+      },
+      "references/layout/REFERENCE.md": {
+        "sha256": "de631f3a991c90367b0f2c635d067fd848afcc514e038f68bc3deff925e9dad3",
+        "mode": 420
+      },
+      "references/layout/patterns.md": {
+        "sha256": "91213121f3adffdde636ea0525792cc42eea9a5555d84d859a02f39732c92d24",
+        "mode": 420
+      },
+      "references/react/REFERENCE.md": {
+        "sha256": "b34f04fd011085f1c5cc6f96c75d5f64d3aa05dce41b42f76c98639ec68f9bb8",
+        "mode": 420
+      },
+      "references/react/api.md": {
+        "sha256": "2f9545eda0a5f57e7f37b7bd4d8017831af05661e3121764a578d407ce7810b8",
+        "mode": 420
+      },
+      "references/react/configuration.md": {
+        "sha256": "6df3e07c7d551aa895cecd323ee3d2ecd24df090c095165ae6646529fbd04b83",
+        "mode": 420
+      },
+      "references/react/gotchas.md": {
+        "sha256": "0937bf77986e5810dd230ef876e0a6089309f1aba39ad98c3da339a622bdbb25",
+        "mode": 420
+      },
+      "references/react/patterns.md": {
+        "sha256": "847cda8cfba6fc59696891a14606c6c7d30c6e12fa028cb063ca306dd3160285",
+        "mode": 420
+      },
+      "references/solid/REFERENCE.md": {
+        "sha256": "6088eade1094c16903f875d805bc46b3af8bae50a97dc6b2ecf442752825b598",
+        "mode": 420
+      },
+      "references/solid/api.md": {
+        "sha256": "5e11360e20bd1aa3acaec36a6e54c63e3e4308ef105acc9a41bd486032c79eac",
+        "mode": 420
+      },
+      "references/solid/configuration.md": {
+        "sha256": "4e5fd0794792961138889ec309cbb722f1b71e58c53e54c349d20836b93ce890",
+        "mode": 420
+      },
+      "references/solid/gotchas.md": {
+        "sha256": "1cc6e5b20a377911f57ff85f722251c5a4d8ae8401a8b73fa0ff35185b12c633",
+        "mode": 420
+      },
+      "references/solid/patterns.md": {
+        "sha256": "a50cd50f9694b27725aab36fbf08a0fe78e62c953e2502564a4bb09d0c611741",
+        "mode": 420
+      },
+      "references/testing/REFERENCE.md": {
+        "sha256": "11527d3fffa90ffd08bfed1d967b2a7897922c6c6a3aaefb1f5dd7b2d95f985e",
+        "mode": 420
+      }
+    },
+    "source": "library/skills/opentui",
+    "archivedOriginal": {
+      "path": "authoring/optional-originals/2026-10-03-second-pass/opentui",
+      "files": {
+        "SKILL.md": {
+          "sha256": "e9d86ec838b27d91051a51c1f65a14b48e02b5179f85d1e3c14915061b0e27f9",
+          "mode": 420
+        },
+        "references/animation/REFERENCE.md": {
+          "sha256": "2ce5b58bf128e0d1bc3aed914a2c4d0cdac9fdfe2b79952537a285245f61a0f8",
+          "mode": 420
+        },
+        "references/components/REFERENCE.md": {
+          "sha256": "46318a848df4d80d14cb338c8678e0cdb865b62ae73f574096655e1a30484fac",
+          "mode": 420
+        },
+        "references/components/code-diff.md": {
+          "sha256": "cfad32e2aa19cd9b91eee1ea6675e81be7aec84b56b8a8ae95fffbf45c9e5099",
+          "mode": 420
+        },
+        "references/components/containers.md": {
+          "sha256": "42c284ed6edf0734d31e5157a8b311766438907ed00fe9e4e6142e304b617c78",
+          "mode": 420
+        },
+        "references/components/inputs.md": {
+          "sha256": "8e2aa0c980fdb0410acf4f71ac004634df4e55f50cacf90fbf881d28cecacc9a",
+          "mode": 420
+        },
+        "references/components/text-display.md": {
+          "sha256": "7a1664e36ed1759bdb7d11adbd2190e8f3c0ce2aeaff3777f243af1a4d984794",
+          "mode": 420
+        },
+        "references/core/REFERENCE.md": {
+          "sha256": "21a84a47b120f2c3c90669bb0bc7183fb18cd0d1984730402c573c5a6d2547bd",
+          "mode": 420
+        },
+        "references/core/api.md": {
+          "sha256": "b707e6843f6f49d84b711a98ef1581b94ca40fc32d855b478615b14ba814c019",
+          "mode": 420
+        },
+        "references/core/configuration.md": {
+          "sha256": "315d4070c401ce013ca9d6c32ac0b0a21da1057090f90a224eea1eb008f95601",
+          "mode": 420
+        },
+        "references/core/gotchas.md": {
+          "sha256": "71437d3291a7699925fb1d95272a99d803ea22902cda1aa33fd9393d4811aae5",
+          "mode": 420
+        },
+        "references/core/patterns.md": {
+          "sha256": "ea64aef391e29a6304b8f3096dfc3d62dcac3ecba2fcee83a8e22a2ff76a7396",
+          "mode": 420
+        },
+        "references/keyboard/REFERENCE.md": {
+          "sha256": "bd1ae56c596600760fc5fb50d68ad892e31ab84f9f9dae668a3ab270068911c9",
+          "mode": 420
+        },
+        "references/layout/REFERENCE.md": {
+          "sha256": "de631f3a991c90367b0f2c635d067fd848afcc514e038f68bc3deff925e9dad3",
+          "mode": 420
+        },
+        "references/layout/patterns.md": {
+          "sha256": "91213121f3adffdde636ea0525792cc42eea9a5555d84d859a02f39732c92d24",
+          "mode": 420
+        },
+        "references/react/REFERENCE.md": {
+          "sha256": "b34f04fd011085f1c5cc6f96c75d5f64d3aa05dce41b42f76c98639ec68f9bb8",
+          "mode": 420
+        },
+        "references/react/api.md": {
+          "sha256": "2f9545eda0a5f57e7f37b7bd4d8017831af05661e3121764a578d407ce7810b8",
+          "mode": 420
+        },
+        "references/react/configuration.md": {
+          "sha256": "6df3e07c7d551aa895cecd323ee3d2ecd24df090c095165ae6646529fbd04b83",
+          "mode": 420
+        },
+        "references/react/gotchas.md": {
+          "sha256": "0937bf77986e5810dd230ef876e0a6089309f1aba39ad98c3da339a622bdbb25",
+          "mode": 420
+        },
+        "references/react/patterns.md": {
+          "sha256": "847cda8cfba6fc59696891a14606c6c7d30c6e12fa028cb063ca306dd3160285",
+          "mode": 420
+        },
+        "references/solid/REFERENCE.md": {
+          "sha256": "6088eade1094c16903f875d805bc46b3af8bae50a97dc6b2ecf442752825b598",
+          "mode": 420
+        },
+        "references/solid/api.md": {
+          "sha256": "5e11360e20bd1aa3acaec36a6e54c63e3e4308ef105acc9a41bd486032c79eac",
+          "mode": 420
+        },
+        "references/solid/configuration.md": {
+          "sha256": "4e5fd0794792961138889ec309cbb722f1b71e58c53e54c349d20836b93ce890",
+          "mode": 420
+        },
+        "references/solid/gotchas.md": {
+          "sha256": "1cc6e5b20a377911f57ff85f722251c5a4d8ae8401a8b73fa0ff35185b12c633",
+          "mode": 420
+        },
+        "references/solid/patterns.md": {
+          "sha256": "a50cd50f9694b27725aab36fbf08a0fe78e62c953e2502564a4bb09d0c611741",
+          "mode": 420
+        },
+        "references/testing/REFERENCE.md": {
+          "sha256": "11527d3fffa90ffd08bfed1d967b2a7897922c6c6a3aaefb1f5dd7b2d95f985e",
+          "mode": 420
+        }
+      }
+    }
+  },
+  {
+    "name": "develop-userscripts",
+    "files": {
+      "SKILL.md": {
+        "sha256": "407753c60801fe90cfa0f7bf4c23ac82336feae1361bc0856b67eb21b7b4a006",
+        "mode": 420
+      },
+      "guide.md": {
+        "sha256": "39060af69df71ce72d8474ec16116fc85f50e6d1b69b7f77343580ccc58f802c",
+        "mode": 420
+      },
+      "notices/blacktower-mit.md": {
+        "sha256": "a0d977279f86d6b16f2fb5edafda853f74d54af3c49b5ea97466637d70092f4d",
+        "mode": 420
+      },
+      "part-01.md": {
+        "sha256": "9deee6f08b386b0e55cb8d5929548ce9a23056c68a75b4d45b8965aefa3c0423",
+        "mode": 420
+      },
+      "part-02.md": {
+        "sha256": "454acd9a991a0aaddfa9101720f826f500b8863467dd02251e61123493ce95aa",
+        "mode": 420
+      },
+      "part-03.md": {
+        "sha256": "4a81f312d441fa2bd1666f71140f24ae8d956a733bea3b744737e306e970a95b",
+        "mode": 420
+      },
+      "part-04.md": {
+        "sha256": "ec8187520fdc4dd26dd686aa755aff1e35343dc071cadf3b73f6fa71cf23eb3a",
+        "mode": 420
+      },
+      "part-05.md": {
+        "sha256": "14302b3f5760038db85d64f150b2eb25cb6583703cbb19351f4b12bc85c6f113",
+        "mode": 420
+      },
+      "part-06.md": {
+        "sha256": "026d4280f11db376f204db9489ca6b2e620d51df1a4625efaa5577694f5b25ca",
+        "mode": 420
+      },
+      "part-07.md": {
+        "sha256": "99089c51e87a27b78d38ddb2475ef19ff0f76390d470d21c91231b6fab72a34e",
+        "mode": 420
+      },
+      "part-08.md": {
+        "sha256": "4b1398e015170654d2a5c91555db18a83b036d12a9d13c74e555de62e9ee1ba7",
+        "mode": 420
+      },
+      "part-09.md": {
+        "sha256": "8147bd744d02ed720be62119c46c1a62db1e8af8925b92a2f924571a49121c15",
+        "mode": 420
+      },
+      "references/metadata-and-api-map.md": {
+        "sha256": "eb4367936e49c59afd09271330729ee7b29d7b9d54fec2f4f7f649ca00c68ee8",
+        "mode": 420
+      },
+      "references/scriptcat-extensions.md": {
+        "sha256": "fca0c5ab3cb46bc5461d4c0be6c0333394b25f6806a16cc6f7b659f3e6ae5c79",
+        "mode": 420
+      }
+    },
+    "source": "library/skills/develop-userscripts",
+    "archivedOriginal": {
+      "path": "authoring/optional-originals/2026-10-03-second-pass/develop-userscripts",
+      "files": {
+        "SKILL.md": {
+          "sha256": "61d04a5a2795c615b0111aac0f057831f10c73bbb53d5b6e99518ec155d650e6",
+          "mode": 420
+        },
+        "references/metadata-and-api-map.md": {
+          "sha256": "eb4367936e49c59afd09271330729ee7b29d7b9d54fec2f4f7f649ca00c68ee8",
+          "mode": 420
+        },
+        "references/scriptcat-extensions.md": {
+          "sha256": "fca0c5ab3cb46bc5461d4c0be6c0333394b25f6806a16cc6f7b659f3e6ae5c79",
+          "mode": 420
+        }
+      }
+    }
+  },
+  {
+    "name": "vscode-extension-development",
+    "files": {
+      "SKILL.md": {
+        "sha256": "9d0b09b80d1d68165e5361b03b31800900f5fd1a20e83c755d7f9042c6b975c2",
+        "mode": 420
+      },
+      "notices/blacktower-mit.md": {
+        "sha256": "a0d977279f86d6b16f2fb5edafda853f74d54af3c49b5ea97466637d70092f4d",
+        "mode": 420
+      }
+    },
+    "source": "library/skills/vscode-extension-development",
+    "archivedOriginal": {
+      "path": "authoring/optional-originals/2026-10-03-second-pass/vscode-extension-development",
+      "files": {
+        "SKILL.md": {
+          "sha256": "984d5f90720c62d9eaee0d6ea3d976a58dd5ec125fb14aab7c427779323fe986",
+          "mode": 420
+        }
+      }
+    }
+  },
+  {
+    "name": "scaffold-exercises",
+    "files": {
+      "SKILL.md": {
+        "sha256": "c51797bc5fe3761e145f4ce49ef514dd5ed45ca6c2d5828a0d3ef81110ae9432",
+        "mode": 420
+      },
+      "agents/openai.yaml": {
+        "sha256": "525b33913340bea7947ad2de17f2a7c5fb94be543345fe80ae753b9a44ba601d",
+        "mode": 420
+      },
+      "notices/mattpocock-skills-mit.txt": {
+        "sha256": "755b8acd6047855dfbdbc21f864ea8a5316daae6f12940c32c5275d0a5bbafa5",
+        "mode": 420
+      }
+    },
+    "source": "library/skills/scaffold-exercises",
+    "archivedOriginal": {
+      "path": "authoring/optional-originals/2026-10-03-second-pass/scaffold-exercises",
+      "files": {
+        "SKILL.md": {
+          "sha256": "75f5c9d771606fb9762f16522efc954df11c324f87148d8ff069bce166257de9",
+          "mode": 420
+        },
+        "agents/openai.yaml": {
+          "sha256": "525b33913340bea7947ad2de17f2a7c5fb94be543345fe80ae753b9a44ba601d",
+          "mode": 420
+        }
+      }
+    }
+  },
+  {
+    "name": "temporal-python-testing",
+    "files": {
+      "SKILL.md": {
+        "sha256": "c3ee8f91c205816e6e160d3e5e2e1b459e654f4062f5582b817ae234f748dacd",
+        "mode": 420
+      },
+      "guide.md": {
+        "sha256": "47f2fef289265e1120fe635686c232ed24f3b270df07760cca531bf62fc0bb40",
+        "mode": 420
+      },
+      "notices/blacktower-mit.md": {
+        "sha256": "a0d977279f86d6b16f2fb5edafda853f74d54af3c49b5ea97466637d70092f4d",
+        "mode": 420
+      },
+      "part-01.md": {
+        "sha256": "c3f570a1c5f82e60c6d6767d5186c5f8bbc2dc189d3dfc932fd37b4f086dc68f",
+        "mode": 420
+      },
+      "part-02.md": {
+        "sha256": "99bd62791d9b2d9da4361b7d12213ba89b1b85df53fda012faf3f3060874c731",
+        "mode": 420
+      },
+      "part-03.md": {
+        "sha256": "5ffc9f050923abe530c6f8037efd9d94f9c4fa0b416dd802c426b0f7b5e1c591",
+        "mode": 420
+      },
+      "part-04.md": {
+        "sha256": "c24c9106a270f11e98dd60e3a1bae7700a501bb17a076d24f80b2d6be1c80eb6",
+        "mode": 420
+      },
+      "part-05.md": {
+        "sha256": "a8c4c648b651c8f31ded1ddf9c4150924102c0e5f828c68f6450c6991b647831",
+        "mode": 420
+      },
+      "part-06.md": {
+        "sha256": "8017baf22f141be6841b754cf360d9abacca8a15aa2a605463399384530a1ea4",
+        "mode": 420
+      },
+      "part-07.md": {
+        "sha256": "40236649cee385959bd0920e6eb6c1197e5d5bfe9da9f0f5f8a825293ade7e18",
+        "mode": 420
+      },
+      "part-08.md": {
+        "sha256": "763ef58090b56c78910bc216e7d618fa65f7df71cdf8eb0c2692432f0528da18",
+        "mode": 420
+      },
+      "part-09.md": {
+        "sha256": "722ac332e0d2ce844a7cb998a0b8745f3a537b3db382918dfb7f4c3895bdaf7f",
+        "mode": 420
+      },
+      "resources/integration-testing.md": {
+        "sha256": "9c5b5d1ed33b7c3e536c197824f7ac42ae647df7f7369182f66efbc58f9d7ae3",
+        "mode": 420
+      },
+      "resources/local-setup.md": {
+        "sha256": "d407ca7c4a285d6f2c031b4740a4b8d5bf5840f656c6b68deb2877e00860cc97",
+        "mode": 420
+      },
+      "resources/replay-testing.md": {
+        "sha256": "f7e2e3ae1f1f9d7fbb547bd5639e97cdd7d7ef4bbae9887897520182e4cad51e",
+        "mode": 420
+      },
+      "resources/unit-testing.md": {
+        "sha256": "4fe310c3fb54cc44ab0178983546daa4785f4023ea7f0b92e3418096ddf289a8",
+        "mode": 420
+      }
+    },
+    "source": "library/skills/temporal-python-testing",
+    "archivedOriginal": {
+      "path": "authoring/optional-originals/2026-10-03-second-pass/temporal-python-testing",
+      "files": {
+        "SKILL.md": {
+          "sha256": "3a4495023bb2e76eda6993fb9f30949cefe77cf05b460fd3c819af803d6670b7",
+          "mode": 420
+        },
+        "resources/integration-testing.md": {
+          "sha256": "9c5b5d1ed33b7c3e536c197824f7ac42ae647df7f7369182f66efbc58f9d7ae3",
+          "mode": 420
+        },
+        "resources/local-setup.md": {
+          "sha256": "d407ca7c4a285d6f2c031b4740a4b8d5bf5840f656c6b68deb2877e00860cc97",
+          "mode": 420
+        },
+        "resources/replay-testing.md": {
+          "sha256": "f7e2e3ae1f1f9d7fbb547bd5639e97cdd7d7ef4bbae9887897520182e4cad51e",
+          "mode": 420
+        },
+        "resources/unit-testing.md": {
+          "sha256": "4fe310c3fb54cc44ab0178983546daa4785f4023ea7f0b92e3418096ddf289a8",
+          "mode": 420
+        }
+      }
+    }
+  },
+  {
+    "name": "workflow-orchestration-patterns",
+    "files": {
+      "SKILL.md": {
+        "sha256": "b13bde819a1c11357a8a14cef5e1d782b65a1fcb5e5a1bcf180ed46d93f1848c",
+        "mode": 420
+      },
+      "notices/blacktower-mit.md": {
+        "sha256": "a0d977279f86d6b16f2fb5edafda853f74d54af3c49b5ea97466637d70092f4d",
+        "mode": 420
+      },
+      "references/detailed-guide.md": {
+        "sha256": "568cc375106fc323e5b485ed48d72e26fed55fd3a1844e0e1069315fa2a08304",
+        "mode": 420
+      }
+    },
+    "source": "library/skills/workflow-orchestration-patterns",
+    "archivedOriginal": {
+      "path": "authoring/optional-originals/2026-10-03-second-pass/workflow-orchestration-patterns",
+      "files": {
+        "SKILL.md": {
+          "sha256": "3801020fea793ed05c6378dea2a0d9e50ae670eb58379f4ed26f4d5b6f0f1fa3",
+          "mode": 420
+        },
+        "references/detailed-guide.md": {
+          "sha256": "568cc375106fc323e5b485ed48d72e26fed55fd3a1844e0e1069315fa2a08304",
+          "mode": 420
+        }
+      }
+    }
+  }
+]

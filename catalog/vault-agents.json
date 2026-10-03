@@ -355,17 +355,17 @@
     {
       "source": "vault-agents/SUBCULT/AGENTS.md",
       "destination": "/home/onnwee/Work/Vaults/SUBCULT/AGENTS.md",
-      "previous_sha256": "59e94f36427fa47e72f90a139eb6b4e60afce9ef3759d2d26d5af0e550b73264"
+      "previous_sha256": "685c7e6077763fe522e8542050d8778b3b51faaba07ae6dae7244bfcae3c680c"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/SUBCULT/.agents/skills/patreon-manager/SKILL.md",
-      "previous_sha256": "4c8b30e6b47b192619de445d74ecc4b262be85f2e5d0c2abe3268b7bd5d5046e"
+      "previous_sha256": "3c86c9507f7f8cbed4b9af6cb1d95b1d138d518288384a82704387378f5c7c04"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/SUBCULT/.opencode/skills/patreon-manager/SKILL.md",
-      "previous_sha256": "4c8b30e6b47b192619de445d74ecc4b262be85f2e5d0c2abe3268b7bd5d5046e"
+      "previous_sha256": "3c86c9507f7f8cbed4b9af6cb1d95b1d138d518288384a82704387378f5c7c04"
     },
     {
       "source": "vault-agents/SUBCULT/skills/subcult-vault/SKILL.md",
@@ -540,17 +540,17 @@
     {
       "source": "vault-agents/Operations/AGENTS.md",
       "destination": "/home/onnwee/Work/Vaults/Machinum/AGENTS.md",
-      "previous_sha256": "f49df5dc0323e8e837196c05d5adeaaac3ef8cca17375d6228e236a673885c6e"
+      "previous_sha256": "04f22a60b9fb3a91d982d6c78b7bbc4bf03b888d2dfdb68481a5a50b93ea5920"
     },
     {
       "source": "vault-agents/Operations/skills/operations-vault/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Machinum/.agents/skills/operations-vault/SKILL.md",
-      "previous_sha256": "af6ee0f91ec34f2bb7aea84deabc8a1cd79ed786fa8825997de356e5a916fb1e"
+      "previous_sha256": "949096491f1042602dbe81335339a34dbe2b74fd0e9fab9ac1815d35f5aa6006"
     },
     {
       "source": "vault-agents/Operations/skills/operations-vault/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Machinum/.opencode/skills/operations-vault/SKILL.md",
-      "previous_sha256": "af6ee0f91ec34f2bb7aea84deabc8a1cd79ed786fa8825997de356e5a916fb1e"
+      "previous_sha256": "949096491f1042602dbe81335339a34dbe2b74fd0e9fab9ac1815d35f5aa6006"
     },
     {
       "source": "vault-agents/Library/AGENTS.md",
@@ -739,13 +739,8 @@
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/SKILL.md",
-      "destination": "/home/onnwee/Work/Tools/codex-skills/library/skills/patreon-manager/SKILL.md",
-      "previous_sha256": "4c8b30e6b47b192619de445d74ecc4b262be85f2e5d0c2abe3268b7bd5d5046e"
-    },
-    {
-      "source": "vault-agents/SUBCULT/skills/patreon-manager/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/patreon-manager/SKILL.md",
-      "previous_sha256": "4c8b30e6b47b192619de445d74ecc4b262be85f2e5d0c2abe3268b7bd5d5046e"
+      "previous_sha256": "3c86c9507f7f8cbed4b9af6cb1d95b1d138d518288384a82704387378f5c7c04"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/agents/openai.yaml",
@@ -925,6 +920,16 @@
     {
       "source": "vault-agents/shared-references/note-discovery.md",
       "destination": "/home/onnwee/Work/Vaults/Archivum/.agents/references/note-discovery.md",
+      "previous_sha256": null
+    },
+    {
+      "source": "vault-agents/Operations/skills/operations-vault/references/operational-evidence.md",
+      "destination": "/home/onnwee/Work/Vaults/Machinum/.agents/skills/operations-vault/references/operational-evidence.md",
+      "previous_sha256": null
+    },
+    {
+      "source": "vault-agents/Operations/skills/operations-vault/references/operational-evidence.md",
+      "destination": "/home/onnwee/Work/Vaults/Machinum/.opencode/skills/operations-vault/references/operational-evidence.md",
       "previous_sha256": null
     }
   ]

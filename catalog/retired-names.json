@@ -358,5 +358,33 @@
   "wait-what": {
     "owner": "unslop",
     "procedure": "skills/unslop/SKILL.md"
+  },
+  "homelab": {
+    "owner": "operations-vault",
+    "procedure": "vault-agents/Operations/skills/operations-vault/references/operational-evidence.md"
+  },
+  "nuc": {
+    "owner": "operations-vault",
+    "procedure": "vault-agents/Operations/skills/operations-vault/references/operational-evidence.md"
+  },
+  "almaz": {
+    "owner": "operations-vault",
+    "procedure": "vault-agents/Operations/skills/operations-vault/references/operational-evidence.md"
+  },
+  "skills-cli": {
+    "owner": "codex-skills-maintenance",
+    "procedure": "project-agents/codex-skills/skills/codex-skills-maintenance/references/external-intake.md"
+  },
+  "subcult-brand-voice": {
+    "owner": "studio-preparation",
+    "procedure": "project-agents/subcult-studio/skills/studio-preparation/SKILL.md"
+  },
+  "subcult-visual-design": {
+    "owner": "studio-preparation",
+    "procedure": "project-agents/subcult-studio/skills/studio-preparation/SKILL.md"
+  },
+  "subcult-worldbuilding": {
+    "owner": "studio-preparation",
+    "procedure": "project-agents/subcult-studio/skills/studio-preparation/SKILL.md"
   }
 }

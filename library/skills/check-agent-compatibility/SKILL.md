@@ -1,11 +1,12 @@
 ---
 name: check-agent-compatibility
-description: Run the full repository compatibility pass: scanner score, startup path, validation loop, and docs reliability.
+description: "Run the explicit repository compatibility pass in a runtime supplying the named compatibility agents and scanner."
 ---
 
 # Check agent compatibility
 
 ## Trigger
+Before this workflow, verify the four named agents and scanner contract exist. Report missing runtime requirements and stop; do not invent scores or silently substitute other agents.
 
 Use when the user wants the full compatibility pass for a repo.
 
