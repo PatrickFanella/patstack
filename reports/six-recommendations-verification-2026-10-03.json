@@ -1,0 +1,244 @@
+{
+  "date": "2026-10-03",
+  "implementationRevision": "2a8be9c8fd703fba02964965e7db53e6c357893e",
+  "unitTests": {
+    "passed": 31
+  },
+  "independentOfflineCases": {
+    "passed": 3,
+    "evidence": "docs/reviews/2026-10-03-six-forward-test.md"
+  },
+  "preservedFileHashesAndModes": 120,
+  "preservedAdaptationEntrypoints": 8,
+  "projects": [
+    {
+      "project": "codex-skills",
+      "clients": [
+        "codex",
+        "claude",
+        "opencode"
+      ],
+      "readback": true
+    },
+    {
+      "project": "subcult-studio",
+      "clients": [
+        "codex",
+        "claude",
+        "opencode"
+      ],
+      "readback": true
+    },
+    {
+      "project": "subcult-tv",
+      "clients": [
+        "codex",
+        "claude",
+        "opencode"
+      ],
+      "readback": true
+    }
+  ],
+  "worktrees": [
+    {
+      "project": "codex-skills",
+      "root": "/home/onnwee/.local/state/skill-selection-proofs/2026-10-03-six/codex-skills",
+      "receipt": "/home/onnwee/.codex/skill-installations/project-selections/bbd79f9b5b318da2a7c0/run-dcf1b249fc1746409c32577a328eeb2c",
+      "verification": {
+        "verified": 5,
+        "protected": 0
+      }
+    },
+    {
+      "project": "subcult-studio",
+      "root": "/home/onnwee/.local/state/skill-selection-proofs/2026-10-03-six/subcult-studio",
+      "receipt": "/home/onnwee/.codex/skill-installations/project-selections/9eaecbd1fbbb5dcfc8da/run-c7ce1d417cd9412d81fa9f98e44b7695",
+      "verification": {
+        "verified": 5,
+        "protected": 0
+      }
+    }
+  ],
+  "optionalProfiles": [
+    {
+      "profile": "mobile",
+      "addedSkills": [
+        "react-native-pro"
+      ],
+      "selectedCount": 6,
+      "verification": {
+        "verified": 6,
+        "protected": 0
+      },
+      "freshCodexRepoDiscovery": true,
+      "claudeReadback": true,
+      "returnedToCore": true,
+      "receipt": "/home/onnwee/.local/state/skill-selection-proofs/2026-10-03-six/profile-mobile/client-state/run-a7143b34b1de42e6bb4bbb56ccdcbe45"
+    },
+    {
+      "profile": "terminal-ui",
+      "addedSkills": [
+        "opentui"
+      ],
+      "selectedCount": 6,
+      "verification": {
+        "verified": 6,
+        "protected": 0
+      },
+      "freshCodexRepoDiscovery": true,
+      "claudeReadback": true,
+      "returnedToCore": true,
+      "receipt": "/home/onnwee/.local/state/skill-selection-proofs/2026-10-03-six/profile-terminal-ui/client-state/run-5b0a1a7cb0ef48d8bc647d168f6fddd6"
+    },
+    {
+      "profile": "browser-extension-development",
+      "addedSkills": [
+        "develop-userscripts",
+        "vscode-extension-development"
+      ],
+      "selectedCount": 7,
+      "verification": {
+        "verified": 7,
+        "protected": 0
+      },
+      "freshCodexRepoDiscovery": true,
+      "claudeReadback": true,
+      "returnedToCore": true,
+      "receipt": "/home/onnwee/.local/state/skill-selection-proofs/2026-10-03-six/profile-browser-extension-development/client-state/run-2f66752add804bcf9d9e90b7d5581b79"
+    },
+    {
+      "profile": "temporal",
+      "addedSkills": [
+        "temporal-python-testing",
+        "workflow-orchestration-patterns"
+      ],
+      "selectedCount": 7,
+      "verification": {
+        "verified": 7,
+        "protected": 0
+      },
+      "freshCodexRepoDiscovery": true,
+      "claudeReadback": true,
+      "returnedToCore": true,
+      "receipt": "/home/onnwee/.local/state/skill-selection-proofs/2026-10-03-six/profile-temporal/client-state/run-2c283cd27cb24a8e808c6d5261edcb82"
+    },
+    {
+      "profile": "learning-exercises",
+      "addedSkills": [
+        "scaffold-exercises"
+      ],
+      "selectedCount": 6,
+      "verification": {
+        "verified": 6,
+        "protected": 0
+      },
+      "freshCodexRepoDiscovery": true,
+      "claudeReadback": true,
+      "returnedToCore": true,
+      "receipt": "/home/onnwee/.local/state/skill-selection-proofs/2026-10-03-six/profile-learning-exercises/client-state/run-2aba47ce627a463284e5453575e94373"
+    }
+  ],
+  "discovery": [
+    {
+      "cwd": "/home/onnwee",
+      "count": 73,
+      "errors": [],
+      "repoSkills": []
+    },
+    {
+      "cwd": "/home/onnwee/Work/Tools/codex-skills",
+      "count": 74,
+      "errors": [],
+      "repoSkills": [
+        "codex-skills-maintenance"
+      ]
+    },
+    {
+      "cwd": "/home/onnwee/Work/Subcult/subcult-studio",
+      "count": 74,
+      "errors": [],
+      "repoSkills": [
+        "studio-preparation"
+      ]
+    },
+    {
+      "cwd": "/home/onnwee/Work/Subcult/subcult-tv",
+      "count": 74,
+      "errors": [],
+      "repoSkills": [
+        "studio-preparation"
+      ]
+    },
+    {
+      "cwd": "/home/onnwee/.local/state/skill-selection-proofs/2026-10-03-six/codex-skills",
+      "count": 74,
+      "errors": [],
+      "repoSkills": [
+        "codex-skills-maintenance"
+      ]
+    },
+    {
+      "cwd": "/home/onnwee/.local/state/skill-selection-proofs/2026-10-03-six/subcult-studio",
+      "count": 74,
+      "errors": [],
+      "repoSkills": [
+        "studio-preparation"
+      ]
+    },
+    {
+      "cwd": "/home/onnwee/Work/Vaults/Machinum",
+      "count": 74,
+      "errors": [],
+      "repoSkills": [
+        "operations-vault"
+      ]
+    },
+    {
+      "cwd": "/home/onnwee/Work/Vaults/SUBCULT",
+      "count": 75,
+      "errors": [],
+      "repoSkills": [
+        "patreon-manager",
+        "subcult-vault"
+      ]
+    }
+  ],
+  "qualificationCounts": {
+    "unreviewed": 157,
+    "structure-reviewed": 69,
+    "archived": 97,
+    "blocked": 2,
+    "selection-tested": 16
+  },
+  "knownBlockedEntries": [
+    "check-agent-compatibility",
+    "poteto-mode"
+  ],
+  "globalSharedSelection": {
+    "profile": "core",
+    "count": 5,
+    "unpromotedChanges": []
+  },
+  "personalEntrypoints": 54,
+  "descriptionBudget": 12000,
+  "descriptionCharacters": 6890,
+  "receipts": {
+    "personalRetirement": "/home/onnwee/.codex/skill-installations/codex-skills/run-7c701559f4884e25b10ac31eb2c2ee5f",
+    "claudeRetirement": "/home/onnwee/.codex/skill-installations/codex-source-links/run-5e838adca5214ba4a56c3ab0bf626041",
+    "vaultDeployment": "/home/onnwee/.local/state/vault-agent-deployments/20261003T222721405893Z",
+    "claudeCore": "/home/onnwee/.codex/skill-installations/optional-client-links/run-ebd7e15dfa4f4e11b84e1099822792be",
+    "projectSelections": [
+      "/home/onnwee/.codex/skill-installations/project-selections/38aa36c553cd9619ff59/run-8694ad2bea6b4340a521979bd080e2f4",
+      "/home/onnwee/.codex/skill-installations/project-selections/b41d08d0bb0c9645ca51/run-d19f066a1a5d48e5b56b75d9c2ad4894",
+      "/home/onnwee/.codex/skill-installations/project-selections/3af0312a36458242d722/run-74115a4865a64a77898875bb7f9c5aa6"
+    ]
+  },
+  "proofBoundaries": [
+    "Fresh Codex discovery and guarded installation/readback were exercised.",
+    "Claude and OpenCode checks establish file/link deployment contracts; no model task invocation in those clients was run.",
+    "Optional profile selection tests used isolated roots and returned them to core; actual global core remained unchanged.",
+    "Offline forward cases do not establish production, provider, browser, or host runtime behavior.",
+    "Two new detached proof worktrees are retained under the proof directory; existing T3 worktrees were not changed.",
+    "No infrastructure change or public publishing action was performed."
+  ]
+}

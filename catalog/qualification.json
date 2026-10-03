@@ -671,7 +671,7 @@
       "canonicalSource": "project-agents/codex-skills/skills/codex-skills-maintenance",
       "owner": "codex-skills",
       "scope": "project-local",
-      "status": "structure-reviewed",
+      "status": "selection-tested",
       "supportedClients": [
         "codex",
         "claude",
@@ -684,7 +684,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "catalog/project-selections.json"
+        "catalog/project-selections.json",
+        "reports/six-recommendations-verification-2026-10-03.json"
       ],
       "positiveTask": "Review profiles and deploy a bounded skill source change.",
       "nearMiss": "Ordinary implementation in an unrelated repository."
@@ -1038,7 +1039,7 @@
       "canonicalSource": "library/skills/develop-userscripts",
       "owner": "codex-skills",
       "scope": "optional",
-      "status": "structure-reviewed",
+      "status": "selection-tested",
       "supportedClients": [
         "codex",
         "claude"
@@ -1048,7 +1049,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "reports/six-recommendations-verification-2026-10-03.json"
       ],
       "positiveTask": "'Userscript implementation and debugging: page lifecycle, browser permissions, injection, and update behavior.'",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -2200,7 +2202,7 @@
       "canonicalSource": "library/skills/opentui",
       "owner": "codex-skills",
       "scope": "optional",
-      "status": "structure-reviewed",
+      "status": "selection-tested",
       "supportedClients": [
         "codex",
         "claude"
@@ -2210,7 +2212,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "reports/six-recommendations-verification-2026-10-03.json"
       ],
       "positiveTask": "Build OpenTUI terminal interfaces with the correct renderer lifecycle, input handling, and framework bindings.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -2255,7 +2258,7 @@
       "canonicalSource": "vault-agents/SUBCULT/skills/patreon-manager",
       "owner": "SUBCULT",
       "scope": "vault-local",
-      "status": "structure-reviewed",
+      "status": "selection-tested",
       "supportedClients": [
         "codex",
         "opencode"
@@ -2265,7 +2268,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "catalog/vault-agents.json"
+        "catalog/vault-agents.json",
+        "reports/six-recommendations-verification-2026-10-03.json"
       ],
       "positiveTask": "Prepare a supporter draft from current Studio offer and project evidence.",
       "nearMiss": "Work owned by another vault."
@@ -2932,7 +2936,7 @@
       "canonicalSource": "library/skills/react-native-pro",
       "owner": "codex-skills",
       "scope": "optional",
-      "status": "structure-reviewed",
+      "status": "selection-tested",
       "supportedClients": [
         "codex",
         "claude"
@@ -2942,7 +2946,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "reports/six-recommendations-verification-2026-10-03.json"
       ],
       "positiveTask": "'React Native/Expo implementation: navigation, native integration, offline behavior, lists, and mobile performance.'",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -3293,7 +3298,7 @@
       "canonicalSource": "library/skills/scaffold-exercises",
       "owner": "codex-skills",
       "scope": "optional",
-      "status": "structure-reviewed",
+      "status": "selection-tested",
       "supportedClients": [
         "codex",
         "claude"
@@ -3303,7 +3308,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "reports/six-recommendations-verification-2026-10-03.json"
       ],
       "positiveTask": "Scaffold coding exercises, solution directories, and explanatory material in the existing course format.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -4018,7 +4024,7 @@
       "canonicalSource": "library/skills/temporal-python-testing",
       "owner": "codex-skills",
       "scope": "optional",
-      "status": "structure-reviewed",
+      "status": "selection-tested",
       "supportedClients": [
         "codex",
         "claude"
@@ -4028,7 +4034,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "reports/six-recommendations-verification-2026-10-03.json"
       ],
       "positiveTask": "Test Temporal Python workflows with replay, time skipping, activities, mocks, and determinism checks.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -4307,7 +4314,7 @@
       "canonicalSource": "library/skills/vscode-extension-development",
       "owner": "codex-skills",
       "scope": "optional",
-      "status": "structure-reviewed",
+      "status": "selection-tested",
       "supportedClients": [
         "codex",
         "claude"
@@ -4317,7 +4324,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "reports/six-recommendations-verification-2026-10-03.json"
       ],
       "positiveTask": "VS Code extension commands, menus, contribution visibility, and localized user-facing strings.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -4485,7 +4493,7 @@
       "canonicalSource": "library/skills/workflow-orchestration-patterns",
       "owner": "codex-skills",
       "scope": "optional",
-      "status": "structure-reviewed",
+      "status": "selection-tested",
       "supportedClients": [
         "codex",
         "claude"
@@ -4495,7 +4503,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "reports/six-recommendations-verification-2026-10-03.json"
       ],
       "positiveTask": "Design Temporal workflows and activities with durable state, deterministic execution, and failure recovery.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -4830,7 +4839,7 @@
       "canonicalSource": "project-agents/subcult-studio/skills/studio-preparation",
       "owner": "Studio",
       "scope": "project-local",
-      "status": "structure-reviewed",
+      "status": "selection-tested",
       "supportedClients": [
         "codex",
         "claude",
@@ -4844,7 +4853,8 @@
       "lastReviewed": "2026-10-03",
       "evidence": [
         "catalog/project-selections.json",
-        "catalog/six-pass-adaptations-2026-10-03.json"
+        "catalog/six-pass-adaptations-2026-10-03.json",
+        "reports/six-recommendations-verification-2026-10-03.json"
       ],
       "positiveTask": "Prepare a product graphic or supporter draft from current Studio sources.",
       "nearMiss": "Ordinary product implementation without brand/content changes."
@@ -4870,9 +4880,9 @@
     },
     "operations-vault": {
       "canonicalSource": "vault-agents/Operations/skills/operations-vault",
-      "owner": "Operations",
+      "owner": "Machinum",
       "scope": "vault-local",
-      "status": "structure-reviewed",
+      "status": "selection-tested",
       "supportedClients": [
         "codex",
         "opencode"
@@ -4882,7 +4892,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "catalog/vault-agents.json"
+        "catalog/vault-agents.json",
+        "reports/six-recommendations-verification-2026-10-03.json"
       ],
       "positiveTask": "Maintain Machinum homelab evidence and route authorized host operations, incidents, backups and service changes through current inventory and runbooks. Documentation alone does not authorize infrastructure changes.",
       "nearMiss": "Work owned by another vault."
