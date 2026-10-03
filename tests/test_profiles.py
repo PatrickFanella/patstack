@@ -32,3 +32,20 @@ class ProfileTests(unittest.TestCase):
   manager.activate([],True);self.assertNotIn('retired',manager.skill_dirs(manager.ACTIVE));self.assertNotIn('curated',manager.skill_dirs(manager.ACTIVE))
   p=manager.ACTIVE/'base/SKILL.md';p.chmod(0o700)
   with self.assertRaises(SystemExit):manager.activate([])
+
+ def test_local_owners_stay_local_even_under_all_and_cannot_be_promoted(self):
+  for name in ['vault-only','repo-only']:
+   p=manager.LIBRARY/name;p.mkdir();(p/'SKILL.md').write_text(name)
+  (manager.SOURCE/'catalog/vault-agents.json').write_text(json.dumps({'files':[
+   {'source':'vault-agents/Personal/skills/vault-only/SKILL.md'},
+   {'source':'vault-agents/Personal/AGENTS.md'}]}))
+  (manager.SOURCE/'catalog/local-owners.json').write_text(json.dumps({'repo-only':{'owner':'fixture'}}))
+  (manager.PROFILES/'extra.txt').write_text('optional\nvault-only\nrepo-only\n')
+  manager.activate([])
+  self.assertEqual(manager.preview(['extra'])['skills'],['base','interview','optional'])
+  self.assertTrue({'repo-only','vault-only'} <= set(manager.preview(['extra'])['excluded_duplicate_or_retired']))
+  manager.activate([],True)
+  self.assertNotIn('vault-only',manager.skill_dirs(manager.ACTIVE))
+  self.assertNotIn('repo-only',manager.skill_dirs(manager.ACTIVE))
+  with self.assertRaisesRegex(SystemExit,'curated'):manager.promote('repo-only',['extra'])
+  self.assertTrue((manager.LIBRARY/'repo-only/SKILL.md').exists())

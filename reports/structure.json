@@ -1,11 +1,11 @@
 {
   "metrics": {
-    "authoredPersonal": 63,
-    "personalDescriptions": 7951,
-    "personalBodies": 108009,
-    "personalEntrypoints": 65,
-    "retiredNames": 82,
-    "mappedOriginals": 139
+    "authoredPersonal": 64,
+    "personalDescriptions": 7995,
+    "personalBodies": 111931,
+    "personalEntrypoints": 66,
+    "retiredNames": 90,
+    "mappedOriginals": 148
   },
   "errors": [],
   "scriptDependencies": [

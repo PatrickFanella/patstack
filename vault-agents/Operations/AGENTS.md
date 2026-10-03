@@ -15,3 +15,5 @@ Commit only intended changes. `~/.homelab/HOMELAB.md` is generated from committe
 Run the cross-vault registry audit with `rtk proxy python "/home/onnwee/Work/Vaults/Ars Malefica/scripts/documentation.py" audit`. Public output remains restricted to the exact hash-approved allowlist. Do not write homelab notes into the retired Ars Malefica subtree or bypass its guard.
 
 For the maintained setup, workflow owners and device checks, read Machinum’s `20-operations/Four Vault Setup.md`. SUBCULT, Machinum and Archivum use `Workflow Guide.md` for commands, workspaces and captures and `Metadata Guide.md` for authored-note frontmatter. Ars Malefica retains its personal Vault Conventions and local workflow skills. Sync exclusions are per-device; consult Machinum’s `20-operations/Obsidian Sync Policy.md` before connecting another device.
+
+For note search, creation or organization, read [note discovery and linking](.agents/references/note-discovery.md). Keep this vault's own layout and metadata rules.

@@ -832,5 +832,59 @@
     "owner": "t3-repo-setup",
     "kind": "authored",
     "path": "skills/t3-repo-setup/SKILL.md"
+  },
+  {
+    "original": "grilling",
+    "owner": "requirements-interview",
+    "kind": "reference",
+    "path": "shared/requirements-interview/references/grilling.md"
+  },
+  {
+    "original": "handoff",
+    "owner": "session-handoff",
+    "kind": "reference",
+    "path": "shared/session-handoff/SKILL.md"
+  },
+  {
+    "original": "show-me-your-work",
+    "owner": "implementation-plan",
+    "kind": "reference",
+    "path": "skills/implementation-plan/references/decision-trail.md"
+  },
+  {
+    "original": "llama-line-client",
+    "owner": "retired",
+    "kind": "retired",
+    "path": "library/skills/llama-line-client/SKILL.md"
+  },
+  {
+    "original": "obsidian-vault",
+    "owner": "vault-local note guidance",
+    "kind": "reference",
+    "path": "vault-agents/shared-references/note-discovery.md"
+  },
+  {
+    "original": "use-my-browser",
+    "owner": "verify-behavior",
+    "kind": "reference",
+    "path": "skills/verify-behavior/references/browser-diagnosis.md"
+  },
+  {
+    "original": "stripe",
+    "owner": "stripe-billing-operations",
+    "kind": "reference",
+    "path": "skills/stripe-billing-operations/SKILL.md"
+  },
+  {
+    "original": "wait-what",
+    "owner": "unslop",
+    "kind": "reference",
+    "path": "skills/unslop/SKILL.md"
+  },
+  {
+    "original": "stripe-billing-operations",
+    "owner": "stripe-billing-operations",
+    "kind": "authored-overlay",
+    "path": "skills/stripe-billing-operations/SKILL.md"
   }
 ]

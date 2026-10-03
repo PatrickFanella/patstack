@@ -43,9 +43,9 @@ def main():
         p=pathlib.Path.home()/'.codex/skills'/name/'SKILL.md';_,front,body=p.read_text().split('---',2)
         metrics['personalDescriptions']+=len(yaml.safe_load(front)['description']);metrics['personalBodies']+=len(body)
     metrics['personalEntrypoints']=len(actual)
-    if len(actual)!=65 or metrics['personalDescriptions']>8000:errors.append(f'budget {metrics}')
+    if len(actual)!=66 or metrics['personalDescriptions']>8000:errors.append(f'budget {metrics}')
     caps=json.loads((ROOT/'catalog/capabilities.json').read_text())
-    if len(caps)!=139 or len({x['original'] for x in caps})!=139:errors.append('incomplete capability mapping')
+    if len(caps)!=148 or len({x['original'] for x in caps})!=148:errors.append('incomplete capability mapping')
     for c in caps:
         if not (ROOT/c['path']).exists():errors.append(f'unreachable capability {c}')
     retired=json.loads((ROOT/'catalog/retired-names.json').read_text())

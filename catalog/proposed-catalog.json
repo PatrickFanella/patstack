@@ -461,6 +461,14 @@
     ]
   },
   {
+    "name": "stripe-billing-operations",
+    "description": "Stripe billing operations: check account/mode and duplicates, perform authorized changes, and verify receipts.",
+    "scope": "personal",
+    "sources": [
+      "stripe"
+    ]
+  },
+  {
     "name": "systematic-debugging",
     "description": "Reproduce and diagnose a defect; choose a tight failing check, isolate the cause, and verify the repair.",
     "scope": "personal",
@@ -525,7 +533,7 @@
   },
   {
     "name": "unslop",
-    "description": "Required for user-facing prose and documentation: remove filler, vague claims, inflated language, and repetitive framing while preserving meaning, evidence, uncertainty, and voice.",
+    "description": "Required for all user-facing prose and docs: remove filler while preserving meaning, facts, uncertainty and voice.",
     "scope": "personal",
     "sources": [
       "pstack/unslop"

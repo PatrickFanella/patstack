@@ -15,3 +15,5 @@ Homelab notes now belong in Machinum. The retired System Docs Vault subtree is t
 Migration paths are recorded in scripts/vault-split/layout.json. For registry checks run `rtk proxy python scripts/documentation.py audit`. Legacy structural/maintenance checks still have monolithic assumptions: report findings separately and do not rebuild retired folders to make them pass. Do not push the split deletion set as a website update before the publisher has been migrated.
 
 For the maintained setup, workflow owners and device checks, read Machinum’s `20-operations/Four Vault Setup.md`. SUBCULT, Machinum and Archivum use `Workflow Guide.md` for commands, workspaces and captures and `Metadata Guide.md` for authored-note frontmatter. Ars Malefica retains its personal Vault Conventions and local workflow skills. Sync exclusions are per-device; consult Machinum’s `20-operations/Obsidian Sync Policy.md` before connecting another device.
+
+For note search, creation or organization, read [note discovery and linking](.agents/references/note-discovery.md). Keep this vault's own layout and metadata rules.

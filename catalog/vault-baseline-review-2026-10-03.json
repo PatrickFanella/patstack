@@ -1,0 +1,29 @@
+{
+  "source_revision": "106b7bcc465a288c881c2508cc08db5c68fcb740",
+  "reconciled": [
+    {
+      "destination": "/home/onnwee/Work/Vaults/Ars Malefica/AGENTS.md",
+      "previous_baseline": "4348026f365e7cf902c4d460d16d3881bb95580282f22c781228d4d5ebab8de1",
+      "reviewed_before_sha256": "fedf7e16bc60737b6266086716777d0c27cfca69ddf84cb8def7f4fe9b7e0c70",
+      "proof": "Deployed bytes equal current committed source; diff to new source contains only the approved note-discovery pointer."
+    },
+    {
+      "destination": "/home/onnwee/Work/Vaults/SUBCULT/AGENTS.md",
+      "previous_baseline": "e235136ee997ba356b45597f91e2cbc73e17dbedd84efed960659af3ec5e05db",
+      "reviewed_before_sha256": "59e94f36427fa47e72f90a139eb6b4e60afce9ef3759d2d26d5af0e550b73264",
+      "proof": "Deployed bytes equal current committed source; diff to new source contains only the approved note-discovery pointer."
+    },
+    {
+      "destination": "/home/onnwee/Work/Vaults/Machinum/AGENTS.md",
+      "previous_baseline": "99a459a3816b5924db1f75d3969a1fb9db8f38a397662e77c17e8a256eaafca1",
+      "reviewed_before_sha256": "f49df5dc0323e8e837196c05d5adeaaac3ef8cca17375d6228e236a673885c6e",
+      "proof": "Deployed bytes equal current committed source; diff to new source contains only the approved note-discovery pointer."
+    },
+    {
+      "destination": "/home/onnwee/Work/Vaults/Archivum/AGENTS.md",
+      "previous_baseline": "4f1075d3a3dd1a0088516ac25ff6f2d28f6a076de92773a4608c741abe97fbe2",
+      "reviewed_before_sha256": "0f97f5176fddfd3f62e69029130817d7af08a9a58ea121a45835b406c26e7488",
+      "proof": "Deployed bytes equal current committed source; diff to new source contains only the approved note-discovery pointer."
+    }
+  ]
+}

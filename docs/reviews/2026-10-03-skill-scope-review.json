@@ -1,0 +1,1434 @@
+{
+  "observed_date": "2026-10-03",
+  "scope": [
+    "tooling-homelab",
+    "ai-agents",
+    "product-growth"
+  ],
+  "active_profile": "core",
+  "eligible_selected": 82,
+  "disposition_counts": {
+    "optional": 26,
+    "adapt-area": 3,
+    "client-specific": 15,
+    "existing-local": 6,
+    "adapt-first": 4,
+    "localize": 6,
+    "local-adapter": 6,
+    "core": 5,
+    "consolidate": 7,
+    "leave-off": 1,
+    "area-adapter": 3
+  },
+  "records": [
+    {
+      "name": "ab-test-setup",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/ab-test-setup/SKILL.md",
+      "sha256": "b72e95cf237c613fa49ba6f5881433ff2ec515257a5af16fc7284904551255c6",
+      "decision": "optional",
+      "proposed_home": "Product experimentation",
+      "reason": "Distinct experiment design; tighten broad comparison triggers and keep tracking implementation separate.",
+      "structural": {
+        "lines": 43,
+        "description_words": 108,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "agent-browser",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/agent-browser/SKILL.md",
+      "sha256": "9ad3a041c0a64185ed17b830efe224b4ced8d80bd2a22d0e34bf0d7b5a31c284",
+      "decision": "optional",
+      "proposed_home": "Explicit CLI browser requests",
+      "reason": "Useful alternate backend; preserve the T3 preview and vendor browser priority.",
+      "structural": {
+        "lines": 60,
+        "description_words": 47,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "almaz",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/almaz/SKILL.md",
+      "sha256": "5ac5268a455ab0807870067d3b023ea8c1f7c6cbf698cb960388d41ad68c9eb5",
+      "decision": "adapt-area",
+      "proposed_home": "Machinum operations-vault host references",
+      "reason": "Retired documentation authority and static topology; adapt against current canonical sources before use.",
+      "structural": {
+        "lines": 77,
+        "description_words": 44,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "arena",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/arena/SKILL.md",
+      "sha256": "a2241e8500a44d9c16bd3260c8c70e28c4bb8a857c33061d42b267057e6f7093",
+      "decision": "client-specific",
+      "proposed_home": "Cursor/pstack environment",
+      "reason": "Explicit fan-out workflow with foreign model defaults and tool contracts; adapt and test before Codex use.",
+      "structural": {
+        "lines": 71,
+        "description_words": 44,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "ars-malefica-inbox-intake",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/ars-malefica-inbox-intake/SKILL.md",
+      "sha256": "5383a4fbff6fe657509642966f2f2b65f5e47378c2f04d2574cca72710de34cc",
+      "decision": "existing-local",
+      "proposed_home": "Ars Malefica",
+      "reason": "Existing local owner; library/vault SKILL.md bytes match; prevent optional global reactivation.",
+      "structural": {
+        "lines": 112,
+        "description_words": 47,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "ars-malefica-source-intake",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/ars-malefica-source-intake/SKILL.md",
+      "sha256": "7c0bd04a11aef3f1b430044f357b1e03d7021049af0a7c2876aecfbcbecffad5",
+      "decision": "existing-local",
+      "proposed_home": "Ars Malefica",
+      "reason": "Existing local owner; library/vault SKILL.md bytes match; prevent optional global reactivation.",
+      "structural": {
+        "lines": 113,
+        "description_words": 62,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "ars-malefica-thread-init",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/ars-malefica-thread-init/SKILL.md",
+      "sha256": "03894beb017191a2f55a4991e66a0336c0df6bf3f73af64ae03e2effeaf47ee6",
+      "decision": "existing-local",
+      "proposed_home": "Ars Malefica",
+      "reason": "Existing local owner; library/vault SKILL.md bytes match; prevent optional global reactivation.",
+      "structural": {
+        "lines": 133,
+        "description_words": 59,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "ars-malefica-workflows",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/ars-malefica-workflows/SKILL.md",
+      "sha256": "232c9046ae47351e0d54cd95c6f7cfbb5761dea0289f107f2e6e4d793f136bec",
+      "decision": "existing-local",
+      "proposed_home": "Ars Malefica",
+      "reason": "Existing local owner; library/vault SKILL.md bytes match; prevent optional global reactivation.",
+      "structural": {
+        "lines": 41,
+        "description_words": 48,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "automate-me",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/automate-me/SKILL.md",
+      "sha256": "34e7eab6f495093d474817bc4c13f26bcf5fafa439f2761b8c1ec72b07487764",
+      "decision": "adapt-first",
+      "proposed_home": "Agent configuration authoring",
+      "reason": "Cursor transcript and create-skill dependency; adapt to canonical codex-skills ownership before activation.",
+      "structural": {
+        "lines": 109,
+        "description_words": 44,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "blacktower",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/blacktower/SKILL.md",
+      "sha256": "395908d1d45f6751e6c28a5fbfe2f0474b91e7c3c19b997524891cfa2d495d4b",
+      "decision": "client-specific",
+      "proposed_home": "Blacktower user configuration",
+      "reason": "Configuration workflow useful outside its code repository; require explicit Blacktower target and package owner.",
+      "structural": {
+        "lines": 41,
+        "description_words": 38,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "book-marketing",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/book-marketing/SKILL.md",
+      "sha256": "559eddefeeafc16071f97cfbad9a1443ccd9358814e31e88b15693dbf8c4012d",
+      "decision": "optional",
+      "proposed_home": "Book or publishing project",
+      "reason": "Distinct blurb and positioning workflow; local adapter when a maintained book project exists.",
+      "structural": {
+        "lines": 48,
+        "description_words": 30,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "cancel-ralph",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/cancel-ralph/SKILL.md",
+      "sha256": "5824c5344af837c1cc56659d362124f75bdc1460ae66bf616e592fb2d8e8ea43",
+      "decision": "client-specific",
+      "proposed_home": "Installed Ralph runtime",
+      "reason": "Cancellation requires the actual runtime; preserve explicit invocation and keep all three Ralph entries together.",
+      "structural": {
+        "lines": 28,
+        "description_words": 19,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "check-agent-compatibility",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/check-agent-compatibility/SKILL.md",
+      "sha256": "2391a06aec1bfb475690a9c386207e009090e35c624b5ca6cace3ea4c6705970",
+      "decision": "adapt-first",
+      "proposed_home": "Repository delivery assessment",
+      "reason": "Invalid YAML description and required named agents; consider repository-delivery-review and t3-repo-setup ownership first.",
+      "structural": {
+        "lines": 46,
+        "description_words": 0,
+        "missing_relative_links": [],
+        "parse_issues": [
+          "invalid YAML frontmatter: mapping values are not allowed here\n  in \"<unicode string>\", line 2, column 56:\n     ... ll repository compatibility pass: scanner score, startup path, v ... \n                                         ^",
+          "missing name",
+          "missing description"
+        ],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "codex-desktop-maintenance",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/codex-desktop-maintenance/SKILL.md",
+      "sha256": "b9e01e48b20c9a323831d708760cf1f56518f2e0cc5fb6480361671700250b35",
+      "decision": "optional",
+      "proposed_home": "Kvant workstation maintenance",
+      "reason": "Host-specific diagnostic useful from arbitrary working directories; optional host profile with a narrow target check.",
+      "structural": {
+        "lines": 46,
+        "description_words": 46,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "codex-skills-maintenance",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/codex-skills-maintenance/SKILL.md",
+      "sha256": "12aa94098cbe32ea52f4b4077b4d806a6df5b237024aeba43e6d0623f5cc2a60",
+      "decision": "localize",
+      "proposed_home": "codex-skills repository",
+      "reason": "Distinct maintenance workflow; repository AGENTS should route catalog audits here; adapt audit root and ownership defaults.",
+      "structural": {
+        "lines": 71,
+        "description_words": 43,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "competitive-landscape",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/competitive-landscape/SKILL.md",
+      "sha256": "9665bf9f3b2717940716d479f6d61199ee5a92dd6f0df2e41ebee3067a3d443d",
+      "decision": "optional",
+      "proposed_home": "Product research",
+      "reason": "Strategic positioning differs from competitor fact collection; use sources and mark interpretations.",
+      "structural": {
+        "lines": 68,
+        "description_words": 45,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "competitor-alternatives",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/competitor-alternatives/SKILL.md",
+      "sha256": "39a9b0dcdede52596d32e03119b867b85c4427c80a5e0ec660f07aab3df5bbd0",
+      "decision": "optional",
+      "proposed_home": "Product comparison pages",
+      "reason": "Distinct published comparison artifact; retain factual support and publication gates.",
+      "structural": {
+        "lines": 268,
+        "description_words": 80,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "competitor-profiling",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/competitor-profiling/SKILL.md",
+      "sha256": "3487221f283d3379324ba4fa0ce10c51f5df7f7961c4d94fbe3a1917b45335ee",
+      "decision": "optional",
+      "proposed_home": "Product research",
+      "reason": "Collect competitor evidence; separate collection from strategic positioning and comparison copy.",
+      "structural": {
+        "lines": 42,
+        "description_words": 77,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "content-strategy",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/content-strategy/SKILL.md",
+      "sha256": "fb9280c36f709320b7bad1a802efdc59308f5979eadb7cb2e04542d7800df4aa",
+      "decision": "local-adapter",
+      "proposed_home": "Studio publishing and SUBCULT planning",
+      "reason": "Generic procedure remains optional; Studio adapter owns calendars, source inputs and publication gates.",
+      "structural": {
+        "lines": 43,
+        "description_words": 97,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "continual-learning",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/continual-learning/SKILL.md",
+      "sha256": "f627f733a33879b63523da7e92c8b33e6086df42a49a8139a87d1c21e7bd9b16",
+      "decision": "adapt-first",
+      "proposed_home": "Agent configuration authoring",
+      "reason": "Depends on agents-memory-updater; no implicit memory writes or transcript mining authorization.",
+      "structural": {
+        "lines": 24,
+        "description_words": 12,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "copywriting",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/copywriting/SKILL.md",
+      "sha256": "f8a93f6abf248c82ff9cb743929a3fb0c94d5588431e5840bea749055ced413c",
+      "decision": "local-adapter",
+      "proposed_home": "Studio and individual product copy",
+      "reason": "Keep reusable copy method optional; source brand rules from Studio and product claims from each owner.",
+      "structural": {
+        "lines": 273,
+        "description_words": 104,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "create-plugin-scaffold",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/create-plugin-scaffold/SKILL.md",
+      "sha256": "b1ca0ef8398d957c59c1ab8c34527fd53120de51318af33ef61acab7961c9b46",
+      "decision": "client-specific",
+      "proposed_home": "Cursor plugin authoring",
+      "reason": "Cursor manifest and marketplace workflow; do not confuse with Codex plugin-creator.",
+      "structural": {
+        "lines": 70,
+        "description_words": 29,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "cursor-sdk",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/cursor-sdk/SKILL.md",
+      "sha256": "3fbe439f366ea94e0a756fc7288d2d8bd3f871bed4b97219dc1aee2f8c8ab979",
+      "decision": "client-specific",
+      "proposed_home": "Cursor SDK projects",
+      "reason": "Provider-specific implementation; narrow to an actual Cursor SDK consumer.",
+      "structural": {
+        "lines": 239,
+        "description_words": 159,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "customer-research",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/customer-research/SKILL.md",
+      "sha256": "a7752dbbd1a28a67a67b26b6c41e073b03ce84a08e973d511e68a537381f58da",
+      "decision": "optional",
+      "proposed_home": "Product research",
+      "reason": "Distinct evidence-gathering and synthesis; no invented interviews or automatic outreach.",
+      "structural": {
+        "lines": 43,
+        "description_words": 108,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "customize-opencode",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/customize-opencode/SKILL.md",
+      "sha256": "eca8611d5ae0509be403441eac176e11f4bdf4fd7b8a42578647cd20e920372b",
+      "decision": "client-specific",
+      "proposed_home": "OpenCode configuration",
+      "reason": "Keep exact configuration target; useful outside a single repository.",
+      "structural": {
+        "lines": 212,
+        "description_words": 24,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "data-storytelling",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/data-storytelling/SKILL.md",
+      "sha256": "c404385e2f452b7240e89dafd1ba0dfa912f5aa5cc3e948e116efb3ca25a8105",
+      "decision": "optional",
+      "proposed_home": "Analytical communication",
+      "reason": "Advisory presentation method; route calculations and source-backed analysis to Data Analytics when applicable.",
+      "structural": {
+        "lines": 41,
+        "description_words": 24,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "deep-research",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/deep-research/SKILL.md",
+      "sha256": "698e20043144c689cf479634bdf94b60f323410a0051af2dea272847085c916b",
+      "decision": "optional",
+      "proposed_home": "Cross-repository investigation",
+      "reason": "Repository research only; overlaps codemap and delivery review; do not use as an internet-research trigger.",
+      "structural": {
+        "lines": 63,
+        "description_words": 31,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "email-sequence",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/email-sequence/SKILL.md",
+      "sha256": "a3c77da7ed9dfb2140cd717751d64e67c3961cabecf45357205d126aa4f8f9e4",
+      "decision": "optional",
+      "proposed_home": "A product lifecycle program",
+      "reason": "Conditional lifecycle copy workflow; no automatic sending or unsupported product promises.",
+      "structural": {
+        "lines": 330,
+        "description_words": 76,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "fact-check",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/fact-check/SKILL.md",
+      "sha256": "875f6ee4745e118f1f7982a215e16fed492addbc897fd3289be4448a843d493f",
+      "decision": "core",
+      "proposed_home": "Shared core",
+      "reason": "Retain separate post-generation checking contract.",
+      "structural": {
+        "lines": 48,
+        "description_words": 31,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "git-guardrails-claude-code",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/git-guardrails-claude-code/SKILL.md",
+      "sha256": "69b291d655626a01602b998a1836fcb93c058ede68dfafddfd71e87f17074764",
+      "decision": "client-specific",
+      "proposed_home": "Claude configuration authoring",
+      "reason": "One-time client hook setup; no blanket installation across repositories.",
+      "structural": {
+        "lines": 95,
+        "description_words": 40,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "grilling",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/grilling/SKILL.md",
+      "sha256": "d2498125dd20a0d3a27f03e0ebcc8e681cf42be468e2d3e3c9e8f5dadcae8d47",
+      "decision": "consolidate",
+      "proposed_home": "requirements-interview",
+      "reason": "Requested grilling already has one shared owner; preserve useful references rather than another entrypoint.",
+      "structural": {
+        "lines": 22,
+        "description_words": 25,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "handoff",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/handoff/SKILL.md",
+      "sha256": "7c62de979fdc7ac32fb5ddb2146156c917f80ee070d30fadc9d40343c4b6ed25",
+      "decision": "consolidate",
+      "proposed_home": "session-handoff",
+      "reason": "Existing shared owner covers continuation records; avoid competing locations and triggers.",
+      "structural": {
+        "lines": 16,
+        "description_words": 14,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "homelab",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/homelab/SKILL.md",
+      "sha256": "1b2721148d6671818b8cd0fd0a094b3dc9d35362d59d6a98d942ea2bf9de69cf",
+      "decision": "adapt-area",
+      "proposed_home": "Machinum operations-vault references",
+      "reason": "Cross-host router repeats obsolete two-host topology and retired documentation paths; current host registry must win.",
+      "structural": {
+        "lines": 143,
+        "description_words": 37,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "internal-comms",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/internal-comms/SKILL.md",
+      "sha256": "d86e7feb88f8de39bc95c0db37165b52e6a8e78db6d149778904c82517704c92",
+      "decision": "optional",
+      "proposed_home": "Internal communications",
+      "reason": "Useful distinct audience and artifact; technical-writing remains the technical documentation owner.",
+      "structural": {
+        "lines": 47,
+        "description_words": 35,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "karakeep",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/karakeep/SKILL.md",
+      "sha256": "5dabd324681701102377cd45104f06c6a7d04a052a8f1399dd0de1effbd5fbe3",
+      "decision": "optional",
+      "proposed_home": "Bookmark intake integration",
+      "reason": "Service spans multiple vaults and research tasks; retain optional integration with owning-vault routing.",
+      "structural": {
+        "lines": 211,
+        "description_words": 15,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "launch-strategy",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/launch-strategy/SKILL.md",
+      "sha256": "83242c182ae86a52a33b0a0dc5dfa102f88381dfa43ede993d447de48dd0b831",
+      "decision": "local-adapter",
+      "proposed_home": "SUBCULT planning and Studio preparation",
+      "reason": "Reusable method optional; actual launch decisions remain product-owned and publication requires its own gate.",
+      "structural": {
+        "lines": 43,
+        "description_words": 65,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "llama-line-client",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/llama-line-client/SKILL.md",
+      "sha256": "ae86c04deee1c9cd6c12285a85609a669f574b5e6bd41b0adefbf8c74e2e2df6",
+      "decision": "localize",
+      "proposed_home": "Switchyard model-broker client guide",
+      "reason": "Keep client contract reusable from consumers through a source pointer; do not restore historical service ownership.",
+      "structural": {
+        "lines": 222,
+        "description_words": 47,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "marketing-psychology",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/marketing-psychology/SKILL.md",
+      "sha256": "0fc5a41e8a909f2594ac1268e3be61d859fa71bff04c6982f9db87db189e6fea",
+      "decision": "optional",
+      "proposed_home": "Product copy review",
+      "reason": "Advisory only; preserve SUBCULT values, support claims and avoid applying persuasion to every response.",
+      "structural": {
+        "lines": 43,
+        "description_words": 63,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "multi-agent-workflows",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/multi-agent-workflows/SKILL.md",
+      "sha256": "02f87f3721cc1ee9a30790f7815029acb418461dd8907055a5a635ba36660bbe",
+      "decision": "client-specific",
+      "proposed_home": "OpenCode/Blacktower delegation",
+      "reason": "Current body names those clients; adapt to runtime contracts and explicit delegation authorization before Codex use.",
+      "structural": {
+        "lines": 65,
+        "description_words": 37,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "nuc",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/nuc/SKILL.md",
+      "sha256": "2993c32b82c0af45ddcaac7b88be299a82b8b1e5bd33c794258bd7d0f505a475",
+      "decision": "adapt-area",
+      "proposed_home": "Machinum operations-vault host references",
+      "reason": "Retired .nuc documentation authority; adapt inventory paths and preserve useful scripts.",
+      "structural": {
+        "lines": 71,
+        "description_words": 37,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "obsidian-cli",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/obsidian-cli/SKILL.md",
+      "sha256": "f62ccbbfd96323d550ecd1debd92f463d777dacb7ae4e2721dad5a5d71902863",
+      "decision": "optional",
+      "proposed_home": "Cross-vault CLI integration",
+      "reason": "Generic transport can serve all vaults; vault schemas and mutation policy stay local.",
+      "structural": {
+        "lines": 112,
+        "description_words": 71,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "obsidian-vault",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/obsidian-vault/SKILL.md",
+      "sha256": "2af5b701969a151c4121d1bd7b16e00c2074209368b15ac3b57f422b89271f69",
+      "decision": "consolidate",
+      "proposed_home": "Vault-local workflows plus Obsidian integration",
+      "reason": "Broad find/create/organize trigger overlaps local owners; retain only distinct transport guidance after comparison.",
+      "structural": {
+        "lines": 64,
+        "description_words": 26,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "opensource-guide-coach",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/opensource-guide-coach/SKILL.md",
+      "sha256": "7c8b828d182ea0a64f3c3ff37eb55b492c0d5d9cc95415d22b90658c1a637ffb",
+      "decision": "optional",
+      "proposed_home": "Open-source project governance",
+      "reason": "Distinct governance and community workflow; localize project-specific policy after explicit adoption.",
+      "structural": {
+        "lines": 41,
+        "description_words": 40,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "orchestrate",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/orchestrate/SKILL.md",
+      "sha256": "a56718f3acf4bbc13e44ca7b8e00d499e818fb16ee293bbe3d58621968c28e22",
+      "decision": "client-specific",
+      "proposed_home": "Cursor SDK orchestration",
+      "reason": "Explicit command only; cloud-agent dependencies are not supplied by Codex collaboration automatically.",
+      "structural": {
+        "lines": 47,
+        "description_words": 33,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "page-cro",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/page-cro/SKILL.md",
+      "sha256": "8158fe457357f881e50bfa33f50b9ab04abb4c97627d0516c6976763d6abc40b",
+      "decision": "local-adapter",
+      "proposed_home": "Individual product marketing pages",
+      "reason": "Product data and supported claims are local; reusable optimization method remains optional.",
+      "structural": {
+        "lines": 203,
+        "description_words": 112,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "paid-ads",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/paid-ads/SKILL.md",
+      "sha256": "ed3b162143a2224db159c9e3e14ec94e41f97305b380748c0f012a107c2e0cbb",
+      "decision": "optional",
+      "proposed_home": "Explicit advertising work",
+      "reason": "Advisory for specified platforms; Ads Manager plugin is a separate provider and cannot replace all platforms.",
+      "structural": {
+        "lines": 43,
+        "description_words": 79,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "patreon-manager",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/patreon-manager/SKILL.md",
+      "sha256": "3c86c9507f7f8cbed4b9af6cb1d95b1d138d518288384a82704387378f5c7c04",
+      "decision": "local-adapter",
+      "proposed_home": "Studio Patreon preparation with SUBCULT planning pointer",
+      "reason": "Existing SUBCULT local copy matches library; Studio owns content; reconcile cadence and historical claims before moving.",
+      "structural": {
+        "lines": 119,
+        "description_words": 38,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "play-edda",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/play-edda/SKILL.md",
+      "sha256": "f776c47caabfdda355e70a0d30054dc8cacd9202b5af8a8553c5cf300072dcaf",
+      "decision": "existing-local",
+      "proposed_home": "Edda gameplay",
+      "reason": "Existing repository copy matches library; run only for gameplay or gameplay QA, never every Edda code task.",
+      "structural": {
+        "lines": 169,
+        "description_words": 62,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "plugin-creator",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/plugin-creator/SKILL.md",
+      "sha256": "8fd56316b2c49cbdc657a5d197967a233018e1fada65b00a5dd030dce6499a6e",
+      "decision": "localize",
+      "proposed_home": "codex-skills/plugin authoring area",
+      "reason": "Codex-specific workflow; keep foreign Cursor plugin scaffold separate and retain manifests and provenance.",
+      "structural": {
+        "lines": 243,
+        "description_words": 62,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "poteto-mode",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/poteto-mode/SKILL.md",
+      "sha256": "4ba7360de446bd8f07e41a18a1028257e8b1d4aa7544b5c42ee45c8583e2c7ab",
+      "decision": "leave-off",
+      "proposed_home": "Explicit personal style request",
+      "reason": "Another person's style is not this user's default; preserve as optional research only.",
+      "structural": {
+        "lines": 147,
+        "description_words": 27,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "presentation-design",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/presentation-design/SKILL.md",
+      "sha256": "6bf3787404e133f5a61076fe2a6913d117d641dbaccbe1bdba7fdd74ad332653",
+      "decision": "optional",
+      "proposed_home": "Presentation review",
+      "reason": "Advisory design method; managed Presentations skill owns concrete deck creation and verification.",
+      "structural": {
+        "lines": 47,
+        "description_words": 30,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "ralph-loop",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/ralph-loop/SKILL.md",
+      "sha256": "3583d0868329b2b1a0f081cd7d0d1ef51cf5a12696e407edbc6b8cdca41f8a09",
+      "decision": "client-specific",
+      "proposed_home": "Installed Ralph runtime",
+      "reason": "Requires compatible loop runtime; preserve explicit invocation and user limits.",
+      "structural": {
+        "lines": 54,
+        "description_words": 32,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "ralph-loop-help",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/ralph-loop-help/SKILL.md",
+      "sha256": "a33a6719a95002f2c2bebf1f63a965954ee166130da17fdf514d719bb394ac65",
+      "decision": "client-specific",
+      "proposed_home": "Installed Ralph runtime",
+      "reason": "Help for the same runtime; do not advertise availability without checking the client.",
+      "structural": {
+        "lines": 81,
+        "description_words": 30,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "recall",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/recall/SKILL.md",
+      "sha256": "db1a6a4bc4e9a6a1be03ac7f49675a4bf7e63e6689886084ec5692baf9ff0600",
+      "decision": "optional",
+      "proposed_home": "Context recovery",
+      "reason": "Distinct current-state reconstruction; limit history access to the requested scope.",
+      "structural": {
+        "lines": 35,
+        "description_words": 54,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "reflect",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/reflect/SKILL.md",
+      "sha256": "dcf2a1d9e04bcba2d7e07cdbb2ddf626c4bfd95039e1814dfe86e5d890055f15",
+      "decision": "optional",
+      "proposed_home": "Explicit workflow reflection",
+      "reason": "Useful conservative recommendation workflow; no automatic prompt edits, transcript mining or memory changes.",
+      "structural": {
+        "lines": 198,
+        "description_words": 40,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "requirements-interview",
+      "source": "/home/onnwee/Work/Tools/codex-skills/shared/requirements-interview/SKILL.md",
+      "sha256": "7c36ff3c95f37a43353dfb6b4eba33c90616d506934a9234604c38f6a259fe06",
+      "decision": "core",
+      "proposed_home": "Shared core",
+      "reason": "Retain named grill modes and bounded ordinary clarification.",
+      "structural": {
+        "lines": 79,
+        "description_words": 36,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "review-plugin-submission",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/review-plugin-submission/SKILL.md",
+      "sha256": "ff7411fc0426934871ac18f8ed55edcfc49f19443701dbe9109a3395ccded61d",
+      "decision": "client-specific",
+      "proposed_home": "Cursor plugin marketplace",
+      "reason": "Specific marketplace readiness; adapt separately for Codex plugin distribution.",
+      "structural": {
+        "lines": 49,
+        "description_words": 20,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "revops",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/revops/SKILL.md",
+      "sha256": "81a1ce63808d5bf0854bb0ac55c8963566bfddc8f488d95005045c570a2d4c31",
+      "decision": "optional",
+      "proposed_home": "An actual sales pipeline",
+      "reason": "Specialist method; no evidence that it should apply to all SUBCULT work.",
+      "structural": {
+        "lines": 43,
+        "description_words": 88,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "sales-enablement",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/sales-enablement/SKILL.md",
+      "sha256": "bc3465b9f6a7e6b7e21722bbf03462b41222f69347cee57bd465c9508f4c1419",
+      "decision": "optional",
+      "proposed_home": "Explicit sales materials",
+      "reason": "Artifact-specific method; factual product claims remain owned by product sources.",
+      "structural": {
+        "lines": 43,
+        "description_words": 94,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "scheduled-tasks",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/scheduled-tasks/SKILL.md",
+      "sha256": "e724e29dfe64440863286ceb3261e28ddf63b28d9a51a80ed56898218a303304",
+      "decision": "client-specific",
+      "proposed_home": "OpenCode scheduler configuration",
+      "reason": "Actual scheduler/tool availability required; review broad permission examples before adopting in production.",
+      "structural": {
+        "lines": 188,
+        "description_words": 40,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "screenshot",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/screenshot/SKILL.md",
+      "sha256": "6e76581ed0609375cfdb998bd51318ea1faf9d32c16c58dc97e77f0e578a26f7",
+      "decision": "optional",
+      "proposed_home": "Explicit host screen capture",
+      "reason": "Fallback capture method; prefer T3 preview/device or focused tool captures when supplied.",
+      "structural": {
+        "lines": 44,
+        "description_words": 35,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "seo-pro",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/seo-pro/SKILL.md",
+      "sha256": "a92a8fb74465831ff85e72684b2907e3009b25dd1d05527553ddb2999b821e40",
+      "decision": "optional",
+      "proposed_home": "Product search visibility",
+      "reason": "Useful across several sites; product-specific routes and assets belong to their repositories.",
+      "structural": {
+        "lines": 57,
+        "description_words": 32,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "session-handoff",
+      "source": "/home/onnwee/Work/Tools/codex-skills/shared/session-handoff/SKILL.md",
+      "sha256": "5bebdaa2d5ed8f9c1bc1c3dcfbcf2a9f41ffc3297c3b9e9ae1ff97fcbfc23cda",
+      "decision": "core",
+      "proposed_home": "Shared core",
+      "reason": "Retain recovery and continuation contract; do not trigger on ordinary final reports.",
+      "structural": {
+        "lines": 62,
+        "description_words": 35,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "setup-matt-pocock-skills",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/setup-matt-pocock-skills/SKILL.md",
+      "sha256": "2bcd89e97777cdb705914424e39c97d5db524c8eb4eafac8120778a07774f0ec",
+      "decision": "localize",
+      "proposed_home": "Repository onboarding procedure",
+      "reason": "One-time tracker/domain-doc setup; honor actual remote and existing T3 conventions rather than repeated setup.",
+      "structural": {
+        "lines": 116,
+        "description_words": 29,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "setup-pstack",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/setup-pstack/SKILL.md",
+      "sha256": "3b62d9fd4cce8f450b36b2bc6b1df2f00d887e0a3abd55e7fc1ccbde5db96cea",
+      "decision": "client-specific",
+      "proposed_home": "Cursor/pstack configuration",
+      "reason": "Client-specific model routing rule; no cross-client profile equivalence.",
+      "structural": {
+        "lines": 65,
+        "description_words": 32,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "show-me-your-work",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/show-me-your-work/SKILL.md",
+      "sha256": "b99833c41a8781a6af191487f1af37711a3198b98f9373e3c02292b8a6e09aba",
+      "decision": "consolidate",
+      "proposed_home": "implementation-plan decision trail",
+      "reason": "Existing owner already routes decision trails; optional source also mandates incompatible cross-model review tooling.",
+      "structural": {
+        "lines": 82,
+        "description_words": 52,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "skills-cli",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/skills-cli/SKILL.md",
+      "sha256": "dc1917dbf8b0bb183234614f45a1530de20160b0f4253e8ec724ec30aab67b7a",
+      "decision": "adapt-first",
+      "proposed_home": "codex-skills upstream intake reference",
+      "reason": "Generic installer trigger conflicts with guarded source-first deployment; restrict to explicit external CLI requests.",
+      "structural": {
+        "lines": 42,
+        "description_words": 42,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "social-content",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/social-content/SKILL.md",
+      "sha256": "29c92f04b9e46dde89d144c8ee40588fd789543121d39610384efab99e553835",
+      "decision": "local-adapter",
+      "proposed_home": "Studio social preparation",
+      "reason": "Reusable platform method optional; actual source, schedules, approval and dispatch state remain Studio-owned.",
+      "structural": {
+        "lines": 43,
+        "description_words": 96,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "startup-finance",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/startup-finance/SKILL.md",
+      "sha256": "ea881fdddb9b91da1201ac9c3fb249292f57d2ae4526c9900e951c3dcb4ed7b5",
+      "decision": "optional",
+      "proposed_home": "Explicit finance planning",
+      "reason": "Specialist models need stated assumptions and source evidence; no blanket growth default.",
+      "structural": {
+        "lines": 38,
+        "description_words": 17,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "stripe",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/stripe/SKILL.md",
+      "sha256": "ed2b03cf8eaf9a82efb982327105663a9de051b439f80541b526ced93749ec04",
+      "decision": "consolidate",
+      "proposed_home": "Installed Stripe plugin plus local billing adapter",
+      "reason": "Preserve provider namespaces; project billing policy belongs to consumers; verify unique operations before retiring optional wrapper.",
+      "structural": {
+        "lines": 154,
+        "description_words": 48,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "summarization",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/summarization/SKILL.md",
+      "sha256": "655569ee4a00dd2131b78fd8e17fed7d5d9a32794b03f2acc1f46f4f209c8276",
+      "decision": "core",
+      "proposed_home": "Shared core",
+      "reason": "Retain audience and purpose selection; no extra blanket research activation.",
+      "structural": {
+        "lines": 223,
+        "description_words": 32,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "super-productivity-maintenance",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/super-productivity-maintenance/SKILL.md",
+      "sha256": "4e3c3bb5a86a42bda546287875ff19c5b462946ca2c524eba1958bb20d660d61",
+      "decision": "area-adapter",
+      "proposed_home": "Personal planning area in Ars Malefica",
+      "reason": "User task upkeep spans projects; local planning router with explicit cross-workspace pointer, not MCP development policy.",
+      "structural": {
+        "lines": 81,
+        "description_words": 47,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "super-productivity-mcp",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/super-productivity-mcp/SKILL.md",
+      "sha256": "f9c07985c9b1a43f9a6862d7224d2874fa67704922f86abc767df61a8d538478",
+      "decision": "localize",
+      "proposed_home": "super-productivity-mcp repository",
+      "reason": "Development and bridge diagnostics overlap mcp-integration-lifecycle; local service references retain distinct detail.",
+      "structural": {
+        "lines": 53,
+        "description_words": 32,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "super-productivity-planning",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/super-productivity-planning/SKILL.md",
+      "sha256": "b4ea92231fe4fa4741bf85278147d5a11fcaa5ed23b0344e2ef42fe2222bf361",
+      "decision": "area-adapter",
+      "proposed_home": "Personal planning area in Ars Malefica",
+      "reason": "Task and routine semantics belong to planning area; use only for task data changes and preserve live-state checks.",
+      "structural": {
+        "lines": 100,
+        "description_words": 49,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "swarm",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/swarm/SKILL.md",
+      "sha256": "8e6494e296af5496cacb0fb83f33f647c84286d2e1d1b85580bc0f0f577a81cd",
+      "decision": "client-specific",
+      "proposed_home": "Cursor/pstack environment",
+      "reason": "Foreign cloud delegation flags and default model; explicit command only after adaptation.",
+      "structural": {
+        "lines": 46,
+        "description_words": 23,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "switchyard-runtime",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/switchyard-runtime/SKILL.md",
+      "sha256": "24291b039479e98379de421209c1ce5ea5f1363af115503355db130665aed4ac",
+      "decision": "localize",
+      "proposed_home": "Switchyard development guidance",
+      "reason": "Project-specific API and verification rules; remove unconditional git checkout cleanup before adoption.",
+      "structural": {
+        "lines": 20,
+        "description_words": 18,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "teach",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/teach/SKILL.md",
+      "sha256": "a32df9dcdfc0c4fdc1c98e1ed3940c5f56b84c1aa90ff60346f32b8b53915b43",
+      "decision": "area-adapter",
+      "proposed_home": "A learning Thread or teaching workspace",
+      "reason": "MISSION and lesson state are project-local; do not create this state in arbitrary repositories.",
+      "structural": {
+        "lines": 140,
+        "description_words": 11,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "to-questionnaire",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/to-questionnaire/SKILL.md",
+      "sha256": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b",
+      "decision": "optional",
+      "proposed_home": "Explicit external knowledge questionnaire",
+      "reason": "Distinct asynchronous artifact; preparing it does not authorize sending it.",
+      "structural": {
+        "lines": 54,
+        "description_words": 16,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "use-my-browser",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/use-my-browser/SKILL.md",
+      "sha256": "92ce49bf9e29a344238bf66740448cee9d3d93928d7b8d0ee7c0c60db23c4abe",
+      "decision": "consolidate",
+      "proposed_home": "T3 preview and managed browser/Chrome owners",
+      "reason": "Broad routing wrapper overlaps supplied native tools; preserve unique diagnostic references only.",
+      "structural": {
+        "lines": 42,
+        "description_words": 61,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    },
+    {
+      "name": "vault-monthly-maintenance",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/vault-monthly-maintenance/SKILL.md",
+      "sha256": "46dcfbef052db6a783ad0d2e42a7be1fef0d0d2462d87049f3126cf152e2b58f",
+      "decision": "existing-local",
+      "proposed_home": "Ars Malefica",
+      "reason": "Existing local owner; library/vault entrypoint bytes match; monthly procedure remains conditional.",
+      "structural": {
+        "lines": 92,
+        "description_words": 41,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "wait-what",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/wait-what/SKILL.md",
+      "sha256": "e3f44e3ccbc0e7b62f20ba70b295fc9c9f4aa3f96c77168faee1c71bacbf4215",
+      "decision": "consolidate",
+      "proposed_home": "Global prose guidance or unslop reference",
+      "reason": "Small re-explanation behavior does not need a competing global workflow; retain only distinct terminology advice.",
+      "structural": {
+        "lines": 7,
+        "description_words": 9,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": true
+      }
+    },
+    {
+      "name": "web-search",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/web-search/SKILL.md",
+      "sha256": "3f1c166a5a556cc7ac9071e066b75776e218b9100cb8835fb3cd561f2238ff65",
+      "decision": "core",
+      "proposed_home": "Shared core",
+      "reason": "Retain backend selection and source-checking boundary.",
+      "structural": {
+        "lines": 49,
+        "description_words": 33,
+        "missing_relative_links": [],
+        "parse_issues": [],
+        "has_openai_yaml": false
+      }
+    }
+  ],
+  "filtered_profile_entries": [
+    {
+      "name": "agent-workspace-linux",
+      "existing_owner": "agent-workspace-linux"
+    },
+    {
+      "name": "cli-for-agents",
+      "existing_owner": "{'owner': 'cli-developer', 'procedure': 'skills/cli-developer/references/modes/cli-for-agents/guide.md'}"
+    },
+    {
+      "name": "diagnose-crash",
+      "existing_owner": "diagnose-crash"
+    },
+    {
+      "name": "github-pro",
+      "existing_owner": "{'owner': 'git-advanced-workflows', 'procedure': 'skills/git-advanced-workflows/references/modes/github-pro/guide.md'}"
+    },
+    {
+      "name": "imagegen",
+      "existing_owner": "managed system owner"
+    },
+    {
+      "name": "llm-evaluation",
+      "existing_owner": "llm-evaluation"
+    },
+    {
+      "name": "mcp-builder",
+      "existing_owner": "mcp-builder"
+    },
+    {
+      "name": "mcp-integration-lifecycle",
+      "existing_owner": "mcp-integration-lifecycle"
+    },
+    {
+      "name": "migrate-to-shoehorn",
+      "existing_owner": "{'owner': 'typescript-pro', 'procedure': 'skills/typescript-pro/references/modes/migrate-to-shoehorn/guide.md'}"
+    },
+    {
+      "name": "omarchy",
+      "existing_owner": "omarchy"
+    },
+    {
+      "name": "opentui",
+      "existing_owner": "opentui"
+    },
+    {
+      "name": "playwright",
+      "existing_owner": "playwright"
+    },
+    {
+      "name": "plugin-integrator",
+      "existing_owner": "{'owner': 'blacktower-development', 'procedure': 'repository-skills/blacktower-development/references/modes/plugin-integrator/guide.md'}"
+    },
+    {
+      "name": "principle-boundary-discipline",
+      "existing_owner": "{'owner': 'architecture-patterns', 'procedure': 'skills/architecture-patterns/references/principles/boundary-discipline.md'}"
+    },
+    {
+      "name": "principle-build-the-lever",
+      "existing_owner": "{'owner': 'codemod-surgeon', 'procedure': 'skills/codemod-surgeon/references/principles/build-the-lever.md'}"
+    },
+    {
+      "name": "principle-encode-lessons-in-structure",
+      "existing_owner": "{'owner': 'codemod-surgeon', 'procedure': 'skills/codemod-surgeon/references/principles/encode-lessons-in-structure.md'}"
+    },
+    {
+      "name": "principle-exhaust-the-design-space",
+      "existing_owner": "{'owner': 'architecture-patterns', 'procedure': 'skills/architecture-patterns/references/principles/exhaust-the-design-space.md'}"
+    },
+    {
+      "name": "principle-experience-first",
+      "existing_owner": "{'owner': 'architecture-patterns', 'procedure': 'skills/architecture-patterns/references/principles/experience-first.md'}"
+    },
+    {
+      "name": "principle-fix-root-causes",
+      "existing_owner": "{'owner': 'systematic-debugging', 'procedure': 'skills/systematic-debugging/references/principles/fix-root-causes.md'}"
+    },
+    {
+      "name": "principle-foundational-thinking",
+      "existing_owner": "{'owner': 'architecture-patterns', 'procedure': 'skills/architecture-patterns/references/principles/foundational-thinking.md'}"
+    },
+    {
+      "name": "principle-guard-the-context-window",
+      "existing_owner": "{'owner': 'implementation-plan', 'procedure': 'skills/implementation-plan/references/principles/guard-the-context-window.md'}"
+    },
+    {
+      "name": "principle-laziness-protocol",
+      "existing_owner": "{'owner': 'refactor', 'procedure': 'skills/refactor/references/principles/laziness-protocol.md'}"
+    },
+    {
+      "name": "principle-make-operations-idempotent",
+      "existing_owner": "{'owner': 'verify-behavior', 'procedure': 'skills/verify-behavior/references/principles/make-operations-idempotent.md'}"
+    },
+    {
+      "name": "principle-migrate-callers-then-delete-legacy-apis",
+      "existing_owner": "{'owner': 'refactor', 'procedure': 'skills/refactor/references/principles/migrate-callers-then-delete-legacy-apis.md'}"
+    },
+    {
+      "name": "principle-minimize-reader-load",
+      "existing_owner": "{'owner': 'refactor', 'procedure': 'skills/refactor/references/principles/minimize-reader-load.md'}"
+    },
+    {
+      "name": "principle-model-the-domain",
+      "existing_owner": "{'owner': 'architecture-patterns', 'procedure': 'skills/architecture-patterns/references/principles/model-the-domain.md'}"
+    },
+    {
+      "name": "principle-never-block-on-the-human",
+      "existing_owner": "{'owner': 'implementation-plan', 'procedure': 'skills/implementation-plan/references/principles/never-block-on-the-human.md'}"
+    },
+    {
+      "name": "principle-outcome-oriented-execution",
+      "existing_owner": "{'owner': 'implementation-plan', 'procedure': 'skills/implementation-plan/references/principles/outcome-oriented-execution.md'}"
+    },
+    {
+      "name": "principle-prove-it-works",
+      "existing_owner": "{'owner': 'verify-behavior', 'procedure': 'skills/verify-behavior/references/principles/prove-it-works.md'}"
+    },
+    {
+      "name": "principle-redesign-from-first-principles",
+      "existing_owner": "{'owner': 'architecture-patterns', 'procedure': 'skills/architecture-patterns/references/principles/redesign-from-first-principles.md'}"
+    },
+    {
+      "name": "principle-separate-before-serializing-shared-state",
+      "existing_owner": "{'owner': 'architecture-patterns', 'procedure': 'skills/architecture-patterns/references/principles/separate-before-serializing-shared-state.md'}"
+    },
+    {
+      "name": "principle-sequence-verifiable-units",
+      "existing_owner": "{'owner': 'implementation-plan', 'procedure': 'skills/implementation-plan/references/principles/sequence-verifiable-units.md'}"
+    },
+    {
+      "name": "principle-subtract-before-you-add",
+      "existing_owner": "{'owner': 'refactor', 'procedure': 'skills/refactor/references/principles/subtract-before-you-add.md'}"
+    },
+    {
+      "name": "principle-type-system-discipline",
+      "existing_owner": "{'owner': 'typescript-pro', 'procedure': 'skills/typescript-pro/references/principles/type-system-discipline.md'}"
+    },
+    {
+      "name": "rag-implementation",
+      "existing_owner": "rag-implementation"
+    },
+    {
+      "name": "review-agent",
+      "existing_owner": "managed system owner"
+    },
+    {
+      "name": "scaffold-exercises",
+      "existing_owner": "scaffold-exercises"
+    },
+    {
+      "name": "setup-pre-commit",
+      "existing_owner": "{'owner': 'ci-maintenance', 'procedure': 'skills/ci-maintenance/references/modes/setup-pre-commit/guide.md'}"
+    },
+    {
+      "name": "setup-ts-deep-modules",
+      "existing_owner": "{'owner': 'typescript-pro', 'procedure': 'skills/typescript-pro/references/modes/setup-ts-deep-modules/guide.md'}"
+    },
+    {
+      "name": "skill-creator",
+      "existing_owner": "managed system owner"
+    },
+    {
+      "name": "skill-installer",
+      "existing_owner": "managed system owner"
+    },
+    {
+      "name": "vscode-extension-development",
+      "existing_owner": "vscode-extension-development"
+    }
+  ],
+  "limits": [
+    "Semantic assessment uses metadata, selected bodies and local owner evidence; it is not a runtime behavior test.",
+    "Extra frontmatter and missing UI metadata are advisory, not proof a skill cannot run.",
+    "No skill installations or profile membership were changed."
+  ]
+}

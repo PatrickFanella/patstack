@@ -47,6 +47,9 @@ Status: in-progress | blocked | ready-for-review
 
 Keep the handoff scannable. Include file paths, symbols, command outcomes, and
 test status; omit conversational history that does not affect continuation.
+Point to existing specs, issues, plans and artifacts instead of copying them.
+Name the relevant skills and canonical source paths for the next task; do not
+assume another client exposes the same Skill tool or integrations.
 
 For longer-running context systems, load the relevant material in
 `references/context-management/` and the optional templates in

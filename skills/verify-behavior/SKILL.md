@@ -28,6 +28,7 @@ Conclude with PASS, FAIL, or INCONCLUSIVE for the named mode and claim. Include 
 - Build or adapt a local browser/CDP harness to drive and inspect a web, IDE, or Electron UI. Read [the procedure](references/modes/control-ui/guide.md).
 - For regression or performance comparisons only, capture a valid baseline and treatment and compare artifacts. Read [the procedure](references/modes/verify-this/guide.md).
 - Test local or remote web applications with browser automation and QA workflows. Read [the procedure](references/modes/webapp-testing/guide.md).
+- For live-session debugging, misleading fetch results, hidden DOM state, or save/publish evidence, read [browser diagnosis](references/browser-diagnosis.md). Keep the current client's browser/tool routing in force.
 
 Resource paths inside a mode are relative to that mode directory. Run its scripts from that directory or use absolute script paths, passing the target repository explicitly.
 

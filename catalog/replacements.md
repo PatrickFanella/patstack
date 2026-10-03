@@ -1,6 +1,6 @@
 # Retired entrypoint replacements
 
-82 names are retired; no compatibility entrypoints are installed. The additional retired copies of requirements-interview, session-handoff, and review-agent retain canonical shared/system owners. Procedure names inside references may retain their original labels.
+90 names are retired; no compatibility entrypoints are installed. The additional retired copies of requirements-interview, session-handoff, and review-agent retain canonical shared/system owners. Procedure names inside references may retain their original labels.
 
 | Retired name | Replacement owner | Procedure |
 |---|---|---|
@@ -86,3 +86,11 @@
 | `webapp-testing` | `verify-behavior` | [procedure](../skills/verify-behavior/references/modes/webapp-testing/guide.md) |
 | `websocket-engineer` | `api-development` | [procedure](../skills/api-development/references/modes/websocket-engineer/guide.md) |
 | `writing-for-agents` | `authoring reference` | [procedure](../authoring/writing-for-agents/guide.md) |
+| `grilling` | `requirements-interview` | [procedure](../shared/requirements-interview/references/grilling.md) |
+| `handoff` | `session-handoff` | [procedure](../shared/session-handoff/SKILL.md) |
+| `show-me-your-work` | `implementation-plan` | [procedure](../skills/implementation-plan/references/decision-trail.md) |
+| `llama-line-client` | `retired` | [procedure](../library/skills/llama-line-client/SKILL.md) |
+| `obsidian-vault` | `vault-local note guidance` | [procedure](../vault-agents/shared-references/note-discovery.md) |
+| `use-my-browser` | `verify-behavior` | [procedure](../skills/verify-behavior/references/browser-diagnosis.md) |
+| `stripe` | `stripe-billing-operations` | [procedure](../skills/stripe-billing-operations/SKILL.md) |
+| `wait-what` | `unslop` | [procedure](../skills/unslop/SKILL.md) |

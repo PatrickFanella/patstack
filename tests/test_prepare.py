@@ -29,3 +29,16 @@ class PrepareTests(unittest.TestCase):
    self.assertEqual((personal/'ordinary/SKILL.md').read_text(),'intervening edit')
    with self.assertRaisesRegex(RuntimeError,'Drift'):installer.prepare(root,state,only_skills=['ordinary'])
    with self.assertRaisesRegex(RuntimeError,'Unknown personal skills'):installer.prepare(root,state,only_skills=['missing'])
+
+   shared_scope=installer.prepare(root,state,only_shared=['session-handoff'])
+   self.assertEqual([op['destination'] for op in shared_scope['operations']],[str(shared/'session-handoff')])
+   installer.apply(shared_scope,state)
+   shared_target=shared/'session-handoff/SKILL.md'
+   self.assertEqual(shared_target.read_text(),'candidate')
+   shared_target.write_text('shared user edit')
+   with self.assertRaisesRegex(RuntimeError,'Drift'):installer.prepare(root,state,only_shared=['session-handoff'])
+   with self.assertRaisesRegex(RuntimeError,'Unknown shared skills'):installer.prepare(root,state,only_shared=['missing'])
+   (personal/'ordinary/SKILL.md').write_text('another user edit')
+   selected=installer.prepare(root,state,only_skills=['frontend-design'])
+   self.assertEqual(len(selected['operations']),1)
+   self.assertEqual(shared_target.read_text(),'shared user edit')

@@ -1,0 +1,7 @@
+{
+  "play-edda": {
+    "owner": "Edda gameplay",
+    "source": "library/skills/play-edda",
+    "deployment": "/home/onnwee/Work/Subcult/edda/.agents/skills/play-edda"
+  }
+}

@@ -1,6 +1,6 @@
 ---
 name: unslop
-description: "Required for user-facing prose and documentation: remove filler, vague claims, inflated language, and repetitive framing while preserving meaning, evidence, uncertainty, and voice."
+description: "Required for all user-facing prose and docs: remove filler while preserving meaning, facts, uncertainty and voice."
 ---
 
 # Unslop
@@ -15,6 +15,8 @@ Read the supplied text and its intended audience. Preserve facts, uncertainty, c
 4. Read the revision once as its audience. Remove remaining awkward phrasing and check that no claim became stronger or lost a qualification.
 
 Treat suspected AI patterns as editing clues, not proof of authorship. Evaluate repeated structures and fit to the audience; do not ban individual words, punctuation, contractions, or polished grammar. Preserve necessary qualifications and established terminology.
+
+When the user says an explanation did not land, briefly restore the task context and explain it again in plain language. State the current result, why it matters, and the next concrete action. Use the project's established terms; consult an existing CONTEXT.md or CONTEXT-MAP.md only when terminology is unclear. Replace unexplained jargon with a concrete example rather than repeating the same wording. Do not claim formal Simplified Technical English compliance without checking the standard.
 
 For marketing/interface copy or a requested deeper review of generic AI writing, read [the evidence-informed review](references/research-informed-copy-review.md). Use it to check product specificity, claim support, rhetorical repetition, and tone across user states. Ordinary short replies do not require loading that reference.
 

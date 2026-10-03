@@ -326,5 +326,37 @@
   "writing-for-agents": {
     "owner": "authoring reference",
     "procedure": "authoring/writing-for-agents/guide.md"
+  },
+  "grilling": {
+    "owner": "requirements-interview",
+    "procedure": "shared/requirements-interview/references/grilling.md"
+  },
+  "handoff": {
+    "owner": "session-handoff",
+    "procedure": "shared/session-handoff/SKILL.md"
+  },
+  "show-me-your-work": {
+    "owner": "implementation-plan",
+    "procedure": "skills/implementation-plan/references/decision-trail.md"
+  },
+  "llama-line-client": {
+    "owner": "retired",
+    "procedure": "library/skills/llama-line-client/SKILL.md"
+  },
+  "obsidian-vault": {
+    "owner": "vault-local note guidance",
+    "procedure": "vault-agents/shared-references/note-discovery.md"
+  },
+  "use-my-browser": {
+    "owner": "verify-behavior",
+    "procedure": "skills/verify-behavior/references/browser-diagnosis.md"
+  },
+  "stripe": {
+    "owner": "stripe-billing-operations",
+    "procedure": "skills/stripe-billing-operations/SKILL.md"
+  },
+  "wait-what": {
+    "owner": "unslop",
+    "procedure": "skills/unslop/SKILL.md"
   }
 }
