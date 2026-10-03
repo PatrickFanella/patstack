@@ -2,6 +2,7 @@
 
 @/home/onnwee/.codex/RTK.md
 @/home/onnwee/.homelab/HOMELAB.md
+@/home/onnwee/.config/agent-identity/GITEA.md
 
 Read both files before workspace work when the client has not expanded these references. RTK governs shell commands; HOMELAB contains the shared documentation policy and host context. Read the nearest project AGENTS.md for repository-specific instructions.
 
