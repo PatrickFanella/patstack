@@ -462,7 +462,7 @@
   },
   {
     "name": "stripe-billing-operations",
-    "description": "Stripe billing operations: check account/mode and duplicates, perform authorized changes, and verify receipts.",
+    "description": "Perform Stripe billing operations such as invoice drafts, refunds and subscription changes. Check account and test/live mode, prevent duplicates, reuse existing authorization, and verify provider receipts.",
     "scope": "personal",
     "sources": [
       "stripe"
@@ -533,7 +533,7 @@
   },
   {
     "name": "unslop",
-    "description": "Required for all user-facing prose and docs: remove filler while preserving meaning, facts, uncertainty and voice.",
+    "description": "Required for every user-facing prose response and documentation edit. Remove filler while preserving meaning, facts, uncertainty and voice; explain again in plain language when an explanation did not land.",
     "scope": "personal",
     "sources": [
       "pstack/unslop"

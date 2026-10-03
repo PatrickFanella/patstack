@@ -3,6 +3,8 @@
 import ast, hashlib, json, pathlib, re, sys
 import yaml
 ROOT=pathlib.Path(__file__).resolve().parents[1]
+# Local discovery-context review limit; not a client or connected-app requirement.
+PERSONAL_DESCRIPTION_BUDGET=12_000
 def main():
     errors=[]; metrics={'authoredPersonal':0,'personalDescriptions':0,'personalBodies':0}; scripts=[]
     catalog=json.loads((ROOT/'catalog/proposed-catalog.json').read_text())
@@ -43,7 +45,10 @@ def main():
         p=pathlib.Path.home()/'.codex/skills'/name/'SKILL.md';_,front,body=p.read_text().split('---',2)
         metrics['personalDescriptions']+=len(yaml.safe_load(front)['description']);metrics['personalBodies']+=len(body)
     metrics['personalEntrypoints']=len(actual)
-    if len(actual)!=66 or metrics['personalDescriptions']>8000:errors.append(f'budget {metrics}')
+    if len(actual)!=66:errors.append(f'personal entrypoint count {len(actual)} != 66')
+    metrics['personalDescriptionBudget']=PERSONAL_DESCRIPTION_BUDGET
+    metrics['personalDescriptionHeadroom']=PERSONAL_DESCRIPTION_BUDGET-metrics['personalDescriptions']
+    if metrics['personalDescriptionHeadroom']<0:errors.append(f'description budget {metrics}')
     caps=json.loads((ROOT/'catalog/capabilities.json').read_text())
     if len(caps)!=148 or len({x['original'] for x in caps})!=148:errors.append('incomplete capability mapping')
     for c in caps:

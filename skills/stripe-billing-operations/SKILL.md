@@ -1,6 +1,6 @@
 ---
 name: stripe-billing-operations
-description: "Stripe billing operations: check account/mode and duplicates, perform authorized changes, and verify receipts."
+description: "Perform Stripe billing operations such as invoice drafts, refunds and subscription changes. Check account and test/live mode, prevent duplicates, reuse existing authorization, and verify provider receipts."
 ---
 
 # Stripe billing operations
