@@ -53,14 +53,16 @@ There is no remote configured. Publishing or pushing this repository requires a 
 
 The optional library, profiles, profile command, and global Codex/RTK sources are now maintained here. See [the operating model](docs/OPERATING-MODEL.md) and [the September review](reports/2026-09-20-upstream-review.md).
 
-## Skilldeck TUI and CLI
+## Subsets TUI and CLI
 
-[Skilldeck](apps/skilldeck/README.md) discovers local agent skills, organizes named groups, and previews/applies selections with recorded ownership and recoverable backups. Its standalone folder-adoption workflow is independent of this repository; the existing-backend adapter edits canonical optional profiles and uses this repository's guarded deployment commands.
+[Subsets](https://git.subcult.tv/subculture-collective/subsets) owns the standalone skill manager application. It discovers local skills, organizes named groups, and previews/applies selections with recorded ownership and recoverable backups. Its optional adapter edits canonical profiles and calls this repository’s guarded deployment commands.
+
+The application source now lives in the sibling `subsets` repository. `apps/skilldeck` is a compatibility link to that checkout. Original application history remains in commit `88d665b`; the private migration checkpoint preserves the original directory and machine verification report.
 
 ```sh
-uv tool install --editable apps/skilldeck
-skilldeck
-skilldeck apply --mobile --dry-run
+uv tool install --editable ../subsets
+subsets
+subsets apply --mobile --dry-run
 ```
 
-System and plugin directories retain their owners. Existing installer-managed roots use explicit backends. See the [discovery and ownership guidelines](apps/skilldeck/docs/discovery-ownership.md) before adopting another folder.
+System and plugin directories retain their owners. Existing installer-managed roots use explicit backends. See the [discovery and ownership guidelines](https://git.subcult.tv/subculture-collective/subsets/src/branch/main/docs/discovery-ownership.md) before adopting another folder.
