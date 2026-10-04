@@ -57,7 +57,7 @@ The optional library, profiles, profile command, and global Codex/RTK sources ar
 
 [Subsets](https://git.subcult.tv/subculture-collective/subsets) owns the standalone skill manager application. It discovers local skills, organizes named groups, and previews/applies selections with recorded ownership and recoverable backups. Its optional adapter edits canonical profiles and calls this repository’s guarded deployment commands.
 
-The application source now lives in the sibling `subsets` repository. `apps/skilldeck` is a compatibility link to that checkout. Original application history remains in commit `88d665b`; the private migration checkpoint preserves the original directory and machine verification report.
+The application source lives in the sibling `subsets` repository. Original application history remains in commit `88d665b`; the private migration checkpoint preserves the original directory and machine verification report.
 
 ```sh
 uv tool install --editable ../subsets
