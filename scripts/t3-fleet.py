@@ -39,19 +39,29 @@ def remote(command, payload):
         codex = tomllib.loads((home / '.codex/config.toml').read_text()) if (home / '.codex/config.toml').exists() else {}
         claude = json.loads((home / '.claude.json').read_text()) if (home / '.claude.json').exists() else {}
         additions = {}
+        removals = []
         for client, current in [('codex', codex.get('mcp_servers', {})), ('claude', claude.get('mcpServers', {}))]:
             additions[client] = []
             for name, spec in payload['mcpServers'].items():
                 wanted = spec if client == 'codex' else ({'type': 'http', 'url': spec['url']} if 'url' in spec else {'type': 'stdio', **spec})
+                if client == 'claude' and name in payload.get('claudeAccountManaged', []):
+                    if name in current:
+                        backups = list(state.glob('*/before/.claude.json'))
+                        introduced = any(name not in json.loads(p.read_text()).get('mcpServers', {}) for p in backups)
+                        if current[name] != wanted or not introduced:
+                            raise RuntimeError('Preserve preexisting account MCP entry: ' + name)
+                        removals.append(name)
+                    continue
                 if name in current:
                     if any(current[name].get(k) != v for k, v in wanted.items()):
                         raise RuntimeError(f'Preserve conflicting {client} MCP entry: {name}')
                 else:
                     additions[client].append(name)
         payload['additions'] = additions
+        payload['removeClaudeDuplicates'] = removals
         planfile.write_text(json.dumps(payload))
         planfile.chmod(0o600)
-        print(json.dumps({'skillsChanged': [p for p, before in payload['before'].items() if before != desired_snapshot(payload['skills'][p])], 'mcpAdditions': additions}))
+        print(json.dumps({'skillsChanged': [p for p, before in payload['before'].items() if before != desired_snapshot(payload['skills'][p])], 'mcpAdditions': additions, 'removeClaudeDuplicates': removals}))
         return
     plan = json.loads(planfile.read_text())
     if plan['revision'] != payload['revision'] or plan['skills'] != payload['skills'] or plan['mcpServers'] != payload['mcpServers']:
@@ -97,7 +107,8 @@ def remote(command, payload):
             os.replace(temp, path)
         for relative, client in [('.codex/config.toml', 'codex'), ('.claude.json', 'claude')]:
             names = plan['additions'][client]
-            if not names:
+            removals = plan['removeClaudeDuplicates'] if client == 'claude' else []
+            if not names and not removals:
                 continue
             path = home / relative
             old = path.read_bytes() if path.exists() else b''
@@ -113,6 +124,8 @@ def remote(command, payload):
                 tomllib.loads(content)
             else:
                 config = json.loads(old) if old else {}
+                for name in removals:
+                    del config['mcpServers'][name]
                 for name in names:
                     spec = payload['mcpServers'][name]
                     config.setdefault('mcpServers', {})[name] = {'type': 'http', **spec} if 'url' in spec else {'type': 'stdio', **spec}
@@ -127,6 +140,10 @@ def remote(command, payload):
         text = (home / relative).read_text()
         current = tomllib.loads(text).get('mcp_servers', {}) if client == 'codex' else json.loads(text).get('mcpServers', {})
         for name, spec in payload['mcpServers'].items():
+            if client == 'claude' and name in payload.get('claudeAccountManaged', []):
+                if name in current:
+                    failures.append('duplicate account MCP: ' + name)
+                continue
             wanted = spec if client == 'codex' else ({'type': 'http', **spec} if 'url' in spec else {'type': 'stdio', **spec})
             if any(current.get(name, {}).get(k) != v for k, v in wanted.items()):
                 failures.append(client + ':' + name)
@@ -172,7 +189,7 @@ def main():
             root = '.codex/skills' if folder == 'skills' else '.agents/skills'
             skills[root + '/' + source.name] = files
             skills['.claude/skills/' + source.name] = {'link': '/home/onnwee/' + root + '/' + source.name}
-    payload = {'revision': revision, 'skills': skills, 'mcpServers': manifest['mcpServers']}
+    payload = {'revision': revision, 'skills': skills, 'mcpServers': manifest['mcpServers'], 'claudeAccountManaged': manifest.get('claudeAccountManaged', [])}
     code = "__file__ = '/tmp/t3-fleet-deployer.py'\n" + Path(__file__).read_text().replace("if __name__ == '__main__':\n    main()", "remote(sys.argv[1], json.load(sys.stdin))")
     command = ['python3', '-c', code, args.command] if args.host == 'kvant' else ['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', args.host, shlex.join(['python3', '-c', code, args.command])]
     subprocess.run(command, input=json.dumps(payload), text=True, check=True)
