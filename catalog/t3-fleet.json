@@ -1,0 +1,10 @@
+{
+  "hosts": ["kvant", "dozor", "almaz"],
+  "skillSources": ["skills", "shared"],
+  "mcpServers": {
+    "openaiDeveloperDocs": {"url": "https://developers.openai.com/mcp"},
+    "context7": {"command": "npx", "args": ["-y", "@upstash/context7-mcp"]},
+    "CrowdReply": {"url": "https://mcp.crowdreply.io/mcp/client"},
+    "buffer": {"url": "https://mcp.buffer.com/mcp"}
+  }
+}
