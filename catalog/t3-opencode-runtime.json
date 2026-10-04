@@ -1,0 +1,8 @@
+{
+  "sourceConfig": "/home/onnwee/.config/opencode/opencode.json",
+  "destination": "/home/onnwee/.local/share/opencode-t3/config/opencode/opencode.json",
+  "skillRoots": [
+    "/home/onnwee/.codex/skills",
+    "/home/onnwee/.agents/skills"
+  ]
+}
