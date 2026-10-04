@@ -80,12 +80,16 @@ def remote(command, payload):
             temp = path.with_name(path.name + '.t3-fleet-new')
             if temp.exists():
                 raise RuntimeError('Preserve pending destination: ' + str(temp))
-            temp.mkdir(parents=True)
-            for name, entry in files.items():
-                dest = temp / name
-                dest.parent.mkdir(parents=True, exist_ok=True)
-                dest.write_bytes(base64.b64decode(entry['content']))
-                dest.chmod(entry['mode'])
+            temp.parent.mkdir(parents=True, exist_ok=True)
+            if 'link' in files:
+                temp.symlink_to(files['link'])
+            else:
+                temp.mkdir()
+                for name, entry in files.items():
+                    dest = temp / name
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    dest.write_bytes(base64.b64decode(entry['content']))
+                    dest.chmod(entry['mode'])
             if path.is_symlink() or path.is_file():
                 path.unlink()
             elif path.is_dir():
@@ -132,6 +136,8 @@ def remote(command, payload):
 
 
 def desired_snapshot(files):
+    if 'link' in files:
+        return files
     result = {}
     for name, entry in files.items():
         node = result
@@ -165,7 +171,7 @@ def main():
                 files[str(path.relative_to(source))] = {'content': base64.b64encode(committed).decode(), 'mode': path.stat().st_mode & 0o777}
             root = '.codex/skills' if folder == 'skills' else '.agents/skills'
             skills[root + '/' + source.name] = files
-            skills['.claude/skills/' + source.name] = files
+            skills['.claude/skills/' + source.name] = {'link': '/home/onnwee/' + root + '/' + source.name}
     payload = {'revision': revision, 'skills': skills, 'mcpServers': manifest['mcpServers']}
     code = "__file__ = '/tmp/t3-fleet-deployer.py'\n" + Path(__file__).read_text().replace("if __name__ == '__main__':\n    main()", "remote(sys.argv[1], json.load(sys.stdin))")
     command = ['python3', '-c', code, args.command] if args.host == 'kvant' else ['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', args.host, shlex.join(['python3', '-c', code, args.command])]
