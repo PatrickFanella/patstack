@@ -11,5 +11,9 @@
   "studio-preparation": {
     "owner": "Studio",
     "source": "project-agents/subcult-studio/skills/studio-preparation"
+  },
+  "social-craft": {
+    "owner": "Studio",
+    "source": "project-agents/subcult-studio/skills/social-craft"
   }
 }

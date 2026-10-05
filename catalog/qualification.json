@@ -3354,7 +3354,7 @@
       "evidence": [
         "reports/structure.json"
       ],
-      "positiveTask": "Implement CI/runtime secret storage, delivery, and rotation using the environment\u2019s existing secret provider.",
+      "positiveTask": "Implement CI/runtime secret storage, delivery, and rotation using the environment’s existing secret provider.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "secure-linux-web-hosting": {
@@ -4916,6 +4916,29 @@
       ],
       "positiveTask": "Find, catalog and refresh imported reference material in the Archivum vault while preserving source ownership. Use for repository/tool mirrors, bulk resources and clipping provenance; authored personal notes belong elsewhere.",
       "nearMiss": "Work owned by another vault."
+    },
+    "social-craft": {
+      "canonicalSource": "project-agents/subcult-studio/skills/social-craft",
+      "owner": "Studio",
+      "scope": "project-local",
+      "status": "authored",
+      "supportedClients": [
+        "codex",
+        "claude",
+        "opencode"
+      ],
+      "requiredTools": [
+        "rtk",
+        "git",
+        "python3",
+        "chromium for render.py"
+      ],
+      "lastReviewed": "2026-10-05",
+      "evidence": [
+        "catalog/project-selections.json"
+      ],
+      "positiveTask": "Draft or critique a SUBCULT caption, devlog entry or post image so a stranger stops and reads.",
+      "nearMiss": "Brand asset production or supporter offer copy (studio-preparation); product implementation."
     }
   }
 }

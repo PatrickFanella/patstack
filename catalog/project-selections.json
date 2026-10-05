@@ -23,7 +23,8 @@
     "subcult-studio": {
       "canonicalRoot": "/home/onnwee/Work/Subcult/subcult-studio",
       "sources": [
-        "project-agents/subcult-studio/skills/studio-preparation"
+        "project-agents/subcult-studio/skills/studio-preparation",
+        "project-agents/subcult-studio/skills/social-craft"
       ],
       "clients": [
         "codex",
@@ -42,7 +43,8 @@
     "subcult-tv": {
       "canonicalRoot": "/home/onnwee/Work/Subcult/subcult-tv",
       "sources": [
-        "project-agents/subcult-studio/skills/studio-preparation"
+        "project-agents/subcult-studio/skills/studio-preparation",
+        "project-agents/subcult-studio/skills/social-craft"
       ],
       "clients": [
         "codex",
