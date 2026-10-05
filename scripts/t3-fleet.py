@@ -120,7 +120,8 @@ def remote(command, payload):
                 for name in names:
                     content += '\n[mcp_servers.' + json.dumps(name) + ']\n'
                     for key, value in payload['mcpServers'][name].items():
-                        content += key + ' = ' + json.dumps(value) + '\n'
+                        encoded = '{' + ', '.join(json.dumps(k) + ' = ' + json.dumps(v) for k, v in value.items()) + '}' if isinstance(value, dict) else json.dumps(value)
+                        content += key + ' = ' + encoded + '\n'
                 tomllib.loads(content)
             else:
                 config = json.loads(old) if old else {}
@@ -191,7 +192,8 @@ def main():
             root = '.codex/skills' if folder == 'skills' else '.agents/skills'
             skills[root + '/' + source.name] = files
             skills['.claude/skills/' + source.name] = {'link': host_home + '/' + root + '/' + source.name}
-    payload = {'revision': revision, 'skills': skills, 'mcpServers': manifest['mcpServers'], 'claudeAccountManaged': manifest.get('claudeAccountManaged', [])}
+    mcp_servers = {name: {**spec, **manifest.get('hostMcpOverrides', {}).get(args.host, {}).get(name, {})} for name, spec in manifest['mcpServers'].items()}
+    payload = {'revision': revision, 'skills': skills, 'mcpServers': mcp_servers, 'claudeAccountManaged': manifest.get('claudeAccountManaged', [])}
     code = "__file__ = '/tmp/t3-fleet-deployer.py'\n" + Path(__file__).read_text().replace("if __name__ == '__main__':\n    main()", "remote(sys.argv[1], json.load(sys.stdin))")
     command = [host_python, '-c', code, args.command] if args.host == 'kvant' else ['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', args.host, shlex.join([host_python, '-c', code, args.command])]
     subprocess.run(command, input=json.dumps(payload), text=True, check=True)

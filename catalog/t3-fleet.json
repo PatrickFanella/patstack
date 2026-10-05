@@ -1,13 +1,49 @@
 {
-  "hosts": ["kvant", "dozor", "almaz", "nuc", "soyuz"],
-  "hostHomes": {"soyuz": "/Users/onnwee"},
-  "hostPython": {"soyuz": "/opt/homebrew/bin/python3"},
-  "skillSources": ["skills", "shared"],
-  "claudeAccountManaged": ["buffer"],
+  "hosts": [
+    "kvant",
+    "dozor",
+    "almaz",
+    "nuc",
+    "soyuz"
+  ],
+  "hostHomes": {
+    "soyuz": "/Users/onnwee"
+  },
+  "hostPython": {
+    "soyuz": "/opt/homebrew/bin/python3"
+  },
+  "skillSources": [
+    "skills",
+    "shared"
+  ],
+  "claudeAccountManaged": [
+    "buffer"
+  ],
   "mcpServers": {
-    "openaiDeveloperDocs": {"url": "https://developers.openai.com/mcp"},
-    "context7": {"command": "npx", "args": ["-y", "@upstash/context7-mcp"]},
-    "CrowdReply": {"url": "https://mcp.crowdreply.io/mcp/client"},
-    "buffer": {"url": "https://mcp.buffer.com/mcp"}
+    "openaiDeveloperDocs": {
+      "url": "https://developers.openai.com/mcp"
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ]
+    },
+    "CrowdReply": {
+      "url": "https://mcp.crowdreply.io/mcp/client"
+    },
+    "buffer": {
+      "url": "https://mcp.buffer.com/mcp"
+    }
+  },
+  "hostMcpOverrides": {
+    "soyuz": {
+      "context7": {
+        "env": {
+          "PATH": "/opt/homebrew/bin:/Users/onnwee/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+        }
+      }
+    }
   }
 }
