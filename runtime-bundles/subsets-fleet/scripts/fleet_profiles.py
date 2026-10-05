@@ -60,6 +60,12 @@ def proposal(profiles):
         if path.parent not in [active, HOME / '.claude/skills']:
             raise RuntimeError('Unexpected managed destination: ' + dest)
         if any(p.is_symlink() for p in path.parents):
+            if path.parent == HOME / '.claude/skills':
+                # Generated client roots keep their owner; shared selection still works.
+                preserved[dest] = install.snapshot(path)
+                if path.name not in excluded:
+                    excluded.append(path.name)
+                continue
             raise RuntimeError('Linked parent retains its owner: ' + dest)
         actual = install.snapshot(path)
         old = previous['paths'].get(dest)

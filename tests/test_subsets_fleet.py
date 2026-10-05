@@ -71,10 +71,19 @@ class FleetProfilesTests(unittest.TestCase):
         self.assertEqual(path.read_text(), 'later user edit')
         self.assertTrue((self.home / '.claude/skills/optional').is_symlink())
 
-    def test_unknown_category_and_symlink_parent_are_refused(self):
+    def test_unknown_category_is_refused_and_generated_client_root_preserved(self):
         self.run_cli('activate', 'unknown', success=False)
         elsewhere = self.home / 'elsewhere'
         elsewhere.mkdir()
         (self.home / '.claude').symlink_to(elsewhere)
+        self.run_cli('activate', 'extra')
+        self.assertTrue((self.home / '.agents/skills/optional').exists())
+        self.assertEqual(list(elsewhere.iterdir()), [])
+
+    def test_linked_shared_root_is_refused_without_writes(self):
+        shutil.rmtree(self.home / '.agents/skills')
+        elsewhere = self.home / 'elsewhere'
+        elsewhere.mkdir()
+        (self.home / '.agents/skills').symlink_to(elsewhere)
         self.run_cli('activate', 'extra', success=False)
-        self.assertFalse((self.home / '.agents/skills/optional').exists())
+        self.assertEqual(list(elsewhere.iterdir()), [])
