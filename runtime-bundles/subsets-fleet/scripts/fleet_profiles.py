@@ -15,6 +15,13 @@ HOME = Path.home()
 STATE = HOME / '.local/state/subsets-fleet/profiles'
 
 
+def link_mode():
+    # macOS applies umask to symlink modes; Linux always reports 0777.
+    mask = os.umask(0)
+    os.umask(mask)
+    return 0o777 & ~mask if sys.platform == 'darwin' else 0o777
+
+
 def manager():
     # The original profile selector supplies ownership and qualification filters.
     result = runpy.run_path(str(SOURCE / 'scripts/profile-selector'))
@@ -40,7 +47,7 @@ def proposal(profiles):
         desired[dest] = (install.snapshot(sources[name]), str(sources[name]))
         if 'claude' in qualification.get(name, {}).get('supportedClients', []):
             link = str(HOME / '.claude/skills' / name)
-            desired[link] = ({'type': 'symlink', 'target': dest, 'mode': 0o777}, None)
+            desired[link] = ({'type': 'symlink', 'target': dest, 'mode': link_mode()}, None)
         else:
             excluded.append(name)
     for dest in previous['paths']:
