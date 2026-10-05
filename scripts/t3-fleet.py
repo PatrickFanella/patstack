@@ -166,11 +166,13 @@ def desired_snapshot(files):
 
 
 def main():
+    manifest = json.loads((ROOT / 'catalog/t3-fleet.json').read_text())
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command', choices=['plan', 'apply', 'verify'])
-    parser.add_argument('--host', required=True, choices=['kvant', 'dozor', 'almaz'])
+    parser.add_argument('--host', required=True, choices=manifest['hosts'])
     args = parser.parse_args()
-    manifest = json.loads((ROOT / 'catalog/t3-fleet.json').read_text())
+    host_home = manifest.get('hostHomes', {}).get(args.host, '/home/onnwee')
+    host_python = manifest.get('hostPython', {}).get(args.host, 'python3')
     revision = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
     skills = {}
     for folder in manifest['skillSources']:
@@ -188,10 +190,10 @@ def main():
                 files[str(path.relative_to(source))] = {'content': base64.b64encode(committed).decode(), 'mode': path.stat().st_mode & 0o777}
             root = '.codex/skills' if folder == 'skills' else '.agents/skills'
             skills[root + '/' + source.name] = files
-            skills['.claude/skills/' + source.name] = {'link': '/home/onnwee/' + root + '/' + source.name}
+            skills['.claude/skills/' + source.name] = {'link': host_home + '/' + root + '/' + source.name}
     payload = {'revision': revision, 'skills': skills, 'mcpServers': manifest['mcpServers'], 'claudeAccountManaged': manifest.get('claudeAccountManaged', [])}
     code = "__file__ = '/tmp/t3-fleet-deployer.py'\n" + Path(__file__).read_text().replace("if __name__ == '__main__':\n    main()", "remote(sys.argv[1], json.load(sys.stdin))")
-    command = ['python3', '-c', code, args.command] if args.host == 'kvant' else ['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', args.host, shlex.join(['python3', '-c', code, args.command])]
+    command = [host_python, '-c', code, args.command] if args.host == 'kvant' else ['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', args.host, shlex.join([host_python, '-c', code, args.command])]
     subprocess.run(command, input=json.dumps(payload), text=True, check=True)
 
 

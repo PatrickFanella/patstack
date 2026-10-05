@@ -1,5 +1,7 @@
 {
-  "hosts": ["kvant", "dozor", "almaz"],
+  "hosts": ["kvant", "dozor", "almaz", "nuc", "soyuz"],
+  "hostHomes": {"soyuz": "/Users/onnwee"},
+  "hostPython": {"soyuz": "/opt/homebrew/bin/python3"},
   "skillSources": ["skills", "shared"],
   "claudeAccountManaged": ["buffer"],
   "mcpServers": {
