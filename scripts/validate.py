@@ -58,7 +58,7 @@ def main():
     metrics['personalDescriptionHeadroom']=PERSONAL_DESCRIPTION_BUDGET-metrics['personalDescriptions']
     if metrics['personalDescriptionHeadroom']<0:errors.append(f'description budget {metrics}')
     caps=json.loads((ROOT/'catalog/capabilities.json').read_text())
-    if len(caps)!=158 or len({x['original'] for x in caps})!=158:errors.append('incomplete capability mapping')
+    if len(caps)!=162 or len({x['original'] for x in caps})!=162:errors.append('incomplete capability mapping')
     for c in caps:
         if not (ROOT/c['path']).exists():errors.append(f'unreachable capability {c}')
     retired=json.loads((ROOT/'catalog/retired-names.json').read_text())

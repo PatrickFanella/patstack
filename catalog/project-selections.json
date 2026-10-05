@@ -24,7 +24,10 @@
       "canonicalRoot": "/home/onnwee/Work/Subcult/subcult-tv",
       "sources": [
         "project-agents/subcult-tv/skills/social-craft",
-        "project-agents/subcult-tv/skills/studio-brand-system"
+        "project-agents/subcult-tv/skills/studio-brand-system",
+        "project-agents/subcult-tv/skills/studio-reference-study",
+        "project-agents/subcult-tv/skills/studio-brand-audit",
+        "project-agents/subcult-tv/skills/studio-brand-handoff"
       ],
       "clients": [
         "codex",

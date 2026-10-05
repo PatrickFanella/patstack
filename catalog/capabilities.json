@@ -946,5 +946,29 @@
     "owner": "social-craft",
     "kind": "adapted-local",
     "path": "project-agents/subcult-tv/skills/social-craft/SKILL.md"
+  },
+  {
+    "original": "studio-brand-system",
+    "owner": "studio-brand-system",
+    "kind": "local",
+    "path": "project-agents/subcult-tv/skills/studio-brand-system/SKILL.md"
+  },
+  {
+    "original": "studio-reference-study",
+    "owner": "studio-reference-study",
+    "kind": "local",
+    "path": "project-agents/subcult-tv/skills/studio-reference-study/SKILL.md"
+  },
+  {
+    "original": "studio-brand-audit",
+    "owner": "studio-brand-audit",
+    "kind": "local",
+    "path": "project-agents/subcult-tv/skills/studio-brand-audit/SKILL.md"
+  },
+  {
+    "original": "studio-brand-handoff",
+    "owner": "studio-brand-handoff",
+    "kind": "local",
+    "path": "project-agents/subcult-tv/skills/studio-brand-handoff/SKILL.md"
   }
 ]

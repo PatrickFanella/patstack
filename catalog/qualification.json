@@ -4955,7 +4955,79 @@
         "project-agents/subcult-tv/skills/studio-brand-system/references/workflow.md"
       ],
       "positiveTask": "Compare design systems for SUBCULT.TV using Studio references, then document the chosen direction and create a reproducible brand pack.",
-      "nearMiss": "Write a weekly caption or supporter copy (social-craft), or fix a component without changing the visual system."
+      "nearMiss": "Write a weekly caption (social-craft), catalog a reference (studio-reference-study), audit an existing brand (studio-brand-audit), or integrate a selected pack (studio-brand-handoff)."
+    },
+    "studio-reference-study": {
+      "canonicalSource": "project-agents/subcult-tv/skills/studio-reference-study",
+      "owner": "Studio",
+      "scope": "project-local",
+      "status": "authored",
+      "supportedClients": [
+        "codex",
+        "claude",
+        "opencode"
+      ],
+      "requiredTools": [
+        "rtk",
+        "git",
+        "python3",
+        "current client browser for source capture or rendered verification"
+      ],
+      "lastReviewed": "2026-10-05",
+      "evidence": [
+        "catalog/project-selections.json",
+        "project-agents/subcult-tv/skills/studio-reference-study/SKILL.md"
+      ],
+      "positiveTask": "Create a source-linked reference study and register it in the private Studio catalog.",
+      "nearMiss": "Choose a production identity (studio-brand-system) or copy a reference into public assets."
+    },
+    "studio-brand-audit": {
+      "canonicalSource": "project-agents/subcult-tv/skills/studio-brand-audit",
+      "owner": "Studio",
+      "scope": "project-local",
+      "status": "authored",
+      "supportedClients": [
+        "codex",
+        "claude",
+        "opencode"
+      ],
+      "requiredTools": [
+        "rtk",
+        "git",
+        "python3",
+        "current client browser for source capture or rendered verification"
+      ],
+      "lastReviewed": "2026-10-05",
+      "evidence": [
+        "catalog/project-selections.json",
+        "project-agents/subcult-tv/skills/studio-brand-audit/SKILL.md"
+      ],
+      "positiveTask": "Audit the implemented product and promotional exports against the selected Studio brand with visual evidence.",
+      "nearMiss": "Explore a replacement identity (studio-brand-system) or make an unrelated backend change."
+    },
+    "studio-brand-handoff": {
+      "canonicalSource": "project-agents/subcult-tv/skills/studio-brand-handoff",
+      "owner": "Studio",
+      "scope": "project-local",
+      "status": "authored",
+      "supportedClients": [
+        "codex",
+        "claude",
+        "opencode"
+      ],
+      "requiredTools": [
+        "rtk",
+        "git",
+        "python3",
+        "current client browser for source capture or rendered verification"
+      ],
+      "lastReviewed": "2026-10-05",
+      "evidence": [
+        "catalog/project-selections.json",
+        "project-agents/subcult-tv/skills/studio-brand-handoff/SKILL.md"
+      ],
+      "positiveTask": "Integrate a selected Studio brand pack into its product with exact asset mappings, hashes and verified exports.",
+      "nearMiss": "Create a new identity (studio-brand-system) or deploy a site without a handoff request."
     }
   }
 }

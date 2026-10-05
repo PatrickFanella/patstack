@@ -14,6 +14,12 @@ Use the same project ID and the actual isolated checkout path for a worktree. Th
 
 The initial mappings cover codex-skills maintenance, Studio preparation and its subcult-tv consumer. Root instructions trigger procedures only for the relevant task. CLI `rollback --run PATH` restores this root’s recorded transaction while preserving intervening edits. Discovery and filesystem readback do not prove a model followed the procedure or that external services work.
 
+## Studio skill ownership
+
+Canonical Studio skill instructions live under `project-agents/subcult-tv/skills/` in codex-skills. The current subcult-tv selection includes `social-craft`, `studio-brand-system`, `studio-reference-study`, `studio-brand-audit` and `studio-brand-handoff`. Their ownership and routing are registered in `catalog/local-owners.json`, `catalog/capabilities.json` and `catalog/qualification.json`; `catalog/project-selections.json` selects the project deployment.
+
+Studio's guides, studies, brand masters and resulting assets remain in `subcult-tv/studio/`. Worktree `.agents/skills/` copies, Claude/OpenCode links and `.agent-skills.json` are generated destinations. Edit the canonical instruction once, validate and commit it, then use the project installer for each intended checkout. System, OS and plugin skills retain their package owners.
+
 ## Optional Codex and Claude selection
 
 The same reviewed profile can be previewed for Codex and Claude. Claude linkage is explicit; it does not copy Codex plugins, tools, settings, permissions, accounts or authentication. Unreviewed or blocked client contracts stop application.

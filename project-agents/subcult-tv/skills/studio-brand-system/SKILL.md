@@ -15,7 +15,7 @@ Create a coherent visual system that someone can apply to a website and its supp
 
 For a complete branding request, carry the modes through the requested outcome. A request for options ends with reviewable options. Honor an existing selection or explicit authorization to choose; otherwise keep a recommendation marked proposed and wait for the owner's selection before treating it as the production identity. Continue reversible research and previews while that decision is pending.
 
-Read [the workflow and deliverables](references/workflow.md) for the selected mode. Ordinary post writing belongs to `social-craft`; preparation and publication processes belong to `studio-preparation`. Routine UI fixes do not require a new brand system.
+Read [the workflow and deliverables](references/workflow.md) for the selected mode. Use `studio-reference-study` for reference intake, `studio-brand-audit` for implementation review, `studio-brand-handoff` for integration and `social-craft` for post writing. Routine UI fixes do not require a new brand system.
 
 ## Start from Studio
 

@@ -15,5 +15,17 @@
   "studio-brand-system": {
     "owner": "Studio",
     "source": "project-agents/subcult-tv/skills/studio-brand-system"
+  },
+  "studio-reference-study": {
+    "owner": "Studio",
+    "source": "project-agents/subcult-tv/skills/studio-reference-study"
+  },
+  "studio-brand-audit": {
+    "owner": "Studio",
+    "source": "project-agents/subcult-tv/skills/studio-brand-audit"
+  },
+  "studio-brand-handoff": {
+    "owner": "Studio",
+    "source": "project-agents/subcult-tv/skills/studio-brand-handoff"
   }
 }
