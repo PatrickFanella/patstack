@@ -50,16 +50,15 @@ def main():
     def replace(path, *, content=None, target=None):
         path.parent.mkdir(parents=True, exist_ok=True)
         before = install.snapshot(path)
+        if target and path.is_symlink() and path.readlink() == target:
+            return
+        if content is not None and path.is_file() and path.read_text() == content:
+            return
         backup = run / ('before-' + str(len(operations)))
         if before is not None:
             install.copy(path, backup)
             if install.snapshot(backup) != before:
                 raise RuntimeError('Backup mismatch')
-        desired = {'type': 'symlink', 'target': str(target), 'mode': 0o777} if target else None
-        if target and before == desired:
-            return
-        if content is not None and path.is_file() and path.read_text() == content:
-            return
         if install.snapshot(path) != before:
             raise RuntimeError('Concurrent edit: ' + str(path))
         install.remove(path)
