@@ -5,12 +5,13 @@ description: Write, critique or rework SUBCULT social posts, captions, devlog en
 
 # Social craft
 
-Work from the subcult-tv checkout (`studio/` holds the sources). Read these before writing:
+Work from the subcult-tv checkout (`studio/` holds the sources). The canonical Kvant checkout may sit on another agent's feature branch; read from `origin/main` or a worktree when its files are older. Read these before writing:
 
 1. `studio/content/VOICE.md`: the account and product voices. It wins over everything below.
 2. `studio/content/social/Product Claims Register.md` and the change's own evidence: the only source of facts.
 3. `studio/content/social/research/DIGEST.md`: evidence-tagged rules, platform notes, rejected myths and the reviewer rubric. Open the long files beside it (`engagement-psychology.md`, `platform-playbooks.md`, `growth-strategy.md`, `visuals.md`, and `exemplars.md` / `post-patterns.md` when present) only for the question at hand.
 4. `studio/automation/social-posting/craft/examples.md`: reference captions. Copy their moves, never their facts.
+5. [Lessons](references/lessons.md): account voices, the moves that won blind comparisons, the recurring failures and the pipeline gotchas. Read it before tuning a prompt or judging a draft.
 
 ## Writing a post
 
@@ -24,4 +25,4 @@ Write two versions with different structures, then critique both as a stranger o
 
 ## The automated path
 
-The Instagram and website/Patreon jobs run the same method as separate model calls (`craft.py`: brief, drafts, review, final, image, visual check); X and Bluesky drafts get an editor pass (`craft/short.md`). Change those prompts in subcult-tv and compare against a saved fixture before deploying. Drafts stay unapproved: approval, scheduling and publication need the owner and provider readback.
+The Instagram and website/Patreon jobs run the same method as separate model calls (`craft.py`: brief, drafts, review, final, image, visual check); X and Bluesky drafts get an editor pass (`craft/short.md`). Change those prompts in subcult-tv and compare them blind against the installed version on a saved fixture before deploying ([lessons](references/lessons.md#evaluating-changes)). Runtime locations and deployment are in the `studio-preparation` source routing. Drafts stay unapproved: approval, scheduling and publication need the owner and provider readback.

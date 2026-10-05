@@ -47,6 +47,8 @@ Read the affected generator before running it. Use a supported per-brand selecto
 
 Use original artwork, appropriately licensed media or verified product captures. Keep screenshots truthful, sanitize private data, and identify mockups and placeholder copy. When image generation is useful, use the available image tool and retain its prompt/source context; do not flatten editable identity sources without a reason. Write final copy from the voice guide and supported claims.
 
+The social drafting jobs also consume each pack. `studio/automation/social-posting/render.py` sets the brand's fonts and motif, plus the lockup variant with the best measured contrast against the background. `craft/art-direction.json` holds each product's art direction for generated images. After changing a pack's lockups, fonts or palette, render a sample 1080×1350 post card for that brand and check it at phone size.
+
 ## Verify and hand off
 
 Inspect rendered exports, not only source files. Check mark legibility at small sizes, type clipping, font substitution, line wrapping, transparency, crop safety, narrow layouts and a phone-sized promotional preview. Parse changed SVGs and token files. Measure relevant contrast pairs, including interactive states: ordinary text needs 4.5:1, large text 3:1 and meaningful UI boundaries/focus indications 3:1. Do not apply text contrast thresholds to purely decorative artwork.

@@ -4850,11 +4850,12 @@
         "git",
         "python3 for deployment and checks"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-10-05",
       "evidence": [
         "catalog/project-selections.json",
         "catalog/six-pass-adaptations-2026-10-03.json",
-        "reports/six-recommendations-verification-2026-10-03.json"
+        "reports/six-recommendations-verification-2026-10-03.json",
+        "project-agents/subcult-studio/skills/studio-preparation/references/source-routing.md"
       ],
       "positiveTask": "Prepare a product graphic or supporter draft from current Studio sources.",
       "nearMiss": "Ordinary product implementation without brand/content changes."
@@ -4935,7 +4936,8 @@
       ],
       "lastReviewed": "2026-10-05",
       "evidence": [
-        "catalog/project-selections.json"
+        "catalog/project-selections.json",
+        "project-agents/subcult-studio/skills/social-craft/references/lessons.md"
       ],
       "positiveTask": "Draft or critique a SUBCULT caption, devlog entry or post image so a stranger stops and reads.",
       "nearMiss": "Brand asset production or supporter offer copy (studio-preparation); product implementation."
