@@ -913,21 +913,21 @@
   },
   {
     "original": "subcult-brand-voice",
-    "owner": "studio-preparation",
+    "owner": "social-craft",
     "kind": "adapted-local",
-    "path": "project-agents/subcult-studio/skills/studio-preparation/SKILL.md"
+    "path": "project-agents/subcult-tv/skills/social-craft/SKILL.md"
   },
   {
     "original": "subcult-visual-design",
-    "owner": "studio-preparation",
+    "owner": "studio-brand-system",
     "kind": "adapted-local",
-    "path": "project-agents/subcult-studio/skills/studio-preparation/SKILL.md"
+    "path": "project-agents/subcult-tv/skills/studio-brand-system/SKILL.md"
   },
   {
     "original": "subcult-worldbuilding",
-    "owner": "studio-preparation",
+    "owner": "studio-brand-system",
     "kind": "adapted-local",
-    "path": "project-agents/subcult-studio/skills/studio-preparation/SKILL.md"
+    "path": "project-agents/subcult-tv/skills/studio-brand-system/SKILL.md"
   },
   {
     "original": "codex-skills-maintenance",
@@ -936,15 +936,15 @@
     "path": "project-agents/codex-skills/skills/codex-skills-maintenance/SKILL.md"
   },
   {
-    "original": "studio-preparation",
-    "owner": "studio-preparation",
-    "kind": "local",
-    "path": "project-agents/subcult-studio/skills/studio-preparation/SKILL.md"
-  },
-  {
     "original": "homelab-operations",
     "owner": "homelab-operations",
     "kind": "optional",
     "path": "library/skills/homelab-operations/SKILL.md"
+  },
+  {
+    "original": "studio-preparation",
+    "owner": "social-craft",
+    "kind": "adapted-local",
+    "path": "project-agents/subcult-tv/skills/social-craft/SKILL.md"
   }
 ]

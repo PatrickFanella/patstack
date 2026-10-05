@@ -47,7 +47,7 @@ def audit(root: Path) -> list[dict[str, object]]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("root", nargs="?", default="/home/onnwee/Work/Subcult/subcult-studio/content/patreon", type=Path)
+    parser.add_argument("root", nargs="?", default="/home/onnwee/Work/Subcult/subcult-tv/studio/content/patreon", type=Path)
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
 

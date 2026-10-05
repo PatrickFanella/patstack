@@ -3808,7 +3808,7 @@
     },
     "subcult-brand-voice": {
       "canonicalSource": "library/skills/subcult-brand-voice",
-      "owner": "studio-preparation",
+      "owner": "social-craft",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3822,7 +3822,7 @@
     },
     "subcult-visual-design": {
       "canonicalSource": "library/skills/subcult-visual-design",
-      "owner": "studio-preparation",
+      "owner": "studio-brand-system",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3836,7 +3836,7 @@
     },
     "subcult-worldbuilding": {
       "canonicalSource": "library/skills/subcult-worldbuilding",
-      "owner": "studio-preparation",
+      "owner": "studio-brand-system",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4836,29 +4836,18 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "studio-preparation": {
-      "canonicalSource": "project-agents/subcult-studio/skills/studio-preparation",
-      "owner": "Studio",
-      "scope": "project-local",
-      "status": "selection-tested",
-      "supportedClients": [
-        "codex",
-        "claude",
-        "opencode"
-      ],
-      "requiredTools": [
-        "rtk",
-        "git",
-        "python3 for deployment and checks"
-      ],
+      "canonicalSource": "library/skills/studio-preparation",
+      "owner": "social-craft",
+      "scope": "optional",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [],
       "lastReviewed": "2026-10-05",
       "evidence": [
-        "catalog/project-selections.json",
-        "catalog/six-pass-adaptations-2026-10-03.json",
-        "reports/six-recommendations-verification-2026-10-03.json",
-        "project-agents/subcult-studio/skills/studio-preparation/references/source-routing.md"
+        "catalog/retired-names.json"
       ],
-      "positiveTask": "Prepare a product graphic or supporter draft from current Studio sources.",
-      "nearMiss": "Ordinary product implementation without brand/content changes."
+      "positiveTask": null,
+      "nearMiss": null
     },
     "subcult-vault": {
       "canonicalSource": "vault-agents/SUBCULT/skills/subcult-vault",
@@ -4919,7 +4908,7 @@
       "nearMiss": "Work owned by another vault."
     },
     "social-craft": {
-      "canonicalSource": "project-agents/subcult-studio/skills/social-craft",
+      "canonicalSource": "project-agents/subcult-tv/skills/social-craft",
       "owner": "Studio",
       "scope": "project-local",
       "status": "authored",
@@ -4937,10 +4926,11 @@
       "lastReviewed": "2026-10-05",
       "evidence": [
         "catalog/project-selections.json",
-        "project-agents/subcult-studio/skills/social-craft/references/lessons.md"
+        "project-agents/subcult-tv/skills/social-craft/references/lessons.md",
+        "project-agents/subcult-tv/skills/social-craft/references/runtime.md"
       ],
-      "positiveTask": "Draft or critique a SUBCULT caption, devlog entry or post image so a stranger stops and reads.",
-      "nearMiss": "Brand asset production or supporter offer copy (studio-preparation); product implementation."
+      "positiveTask": "Draft or critique a SUBCULT caption, devlog entry, supporter page or post image so a stranger stops and reads.",
+      "nearMiss": "Brand system or asset production (studio-brand-system); product implementation."
     },
     "studio-brand-system": {
       "canonicalSource": "project-agents/subcult-tv/skills/studio-brand-system",
@@ -4965,7 +4955,7 @@
         "project-agents/subcult-tv/skills/studio-brand-system/references/workflow.md"
       ],
       "positiveTask": "Compare design systems for SUBCULT.TV using Studio references, then document the chosen direction and create a reproducible brand pack.",
-      "nearMiss": "Write a weekly caption (social-craft), prepare a publication (studio-preparation), or fix a component without changing the visual system."
+      "nearMiss": "Write a weekly caption or supporter copy (social-craft), or fix a component without changing the visual system."
     }
   }
 }

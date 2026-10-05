@@ -376,15 +376,19 @@
     "procedure": "project-agents/codex-skills/skills/codex-skills-maintenance/references/external-intake.md"
   },
   "subcult-brand-voice": {
-    "owner": "studio-preparation",
-    "procedure": "project-agents/subcult-studio/skills/studio-preparation/SKILL.md"
+    "owner": "social-craft",
+    "procedure": "project-agents/subcult-tv/skills/social-craft/SKILL.md"
   },
   "subcult-visual-design": {
-    "owner": "studio-preparation",
-    "procedure": "project-agents/subcult-studio/skills/studio-preparation/SKILL.md"
+    "owner": "studio-brand-system",
+    "procedure": "project-agents/subcult-tv/skills/studio-brand-system/SKILL.md"
   },
   "subcult-worldbuilding": {
-    "owner": "studio-preparation",
-    "procedure": "project-agents/subcult-studio/skills/studio-preparation/SKILL.md"
+    "owner": "studio-brand-system",
+    "procedure": "project-agents/subcult-tv/skills/studio-brand-system/SKILL.md"
+  },
+  "studio-preparation": {
+    "owner": "social-craft",
+    "procedure": "project-agents/subcult-tv/skills/social-craft/SKILL.md"
   }
 }

@@ -1,1 +1,0 @@
-For product branding, public copy or editorial/supporter preparation, read `.agents/skills/studio-preparation/SKILL.md`. Use the selected product pack and claims register; older fixed cadence and universal aesthetic guidance do not override current owner decisions. `.agent-skills.json` records this checkout’s generated selection.

@@ -98,6 +98,7 @@
 | `nuc` | `operations-vault` | [procedure](../vault-agents/Operations/skills/operations-vault/references/operational-evidence.md) |
 | `almaz` | `operations-vault` | [procedure](../vault-agents/Operations/skills/operations-vault/references/operational-evidence.md) |
 | `skills-cli` | `codex-skills-maintenance` | [procedure](../project-agents/codex-skills/skills/codex-skills-maintenance/references/external-intake.md) |
-| `subcult-brand-voice` | `studio-preparation` | [procedure](../project-agents/subcult-studio/skills/studio-preparation/SKILL.md) |
-| `subcult-visual-design` | `studio-preparation` | [procedure](../project-agents/subcult-studio/skills/studio-preparation/SKILL.md) |
-| `subcult-worldbuilding` | `studio-preparation` | [procedure](../project-agents/subcult-studio/skills/studio-preparation/SKILL.md) |
+| `subcult-brand-voice` | `social-craft` | [procedure](../project-agents/subcult-tv/skills/social-craft/SKILL.md) |
+| `subcult-visual-design` | `studio-brand-system` | [procedure](../project-agents/subcult-tv/skills/studio-brand-system/SKILL.md) |
+| `subcult-worldbuilding` | `studio-brand-system` | [procedure](../project-agents/subcult-tv/skills/studio-brand-system/SKILL.md) |
+| `studio-preparation` | `social-craft` | [procedure](../project-agents/subcult-tv/skills/social-craft/SKILL.md) |

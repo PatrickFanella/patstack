@@ -10,87 +10,87 @@
     {
       "source": "vault-agents/ars-malefica/AGENTS.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/AGENTS.md",
-      "previous_sha256": "fedf7e16bc60737b6266086716777d0c27cfca69ddf84cb8def7f4fe9b7e0c70"
+      "previous_sha256": "f184189c900106464f07b70d3e365453682e576b587b7da3076e3098106baaa5"
     },
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.agents/skills/vault-monthly-maintenance/SKILL.md",
-      "previous_sha256": "3d8f99ce46a8add7d3e6625a186a50e54c77e499ca76c79703bbaa7edf8b756a"
+      "previous_sha256": "46dcfbef052db6a783ad0d2e42a7be1fef0d0d2462d87049f3126cf152e2b58f"
     },
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/vault-monthly-maintenance/SKILL.md",
-      "previous_sha256": "3d8f99ce46a8add7d3e6625a186a50e54c77e499ca76c79703bbaa7edf8b756a"
+      "previous_sha256": "46dcfbef052db6a783ad0d2e42a7be1fef0d0d2462d87049f3126cf152e2b58f"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-inbox-intake/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.agents/skills/ars-malefica-inbox-intake/SKILL.md",
-      "previous_sha256": "45b889b501e518140127fe287c1aed0e535b826c613f5997e6cae1536abe64ec"
+      "previous_sha256": "5383a4fbff6fe657509642966f2f2b65f5e47378c2f04d2574cca72710de34cc"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-inbox-intake/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/ars-malefica-inbox-intake/SKILL.md",
-      "previous_sha256": "45b889b501e518140127fe287c1aed0e535b826c613f5997e6cae1536abe64ec"
+      "previous_sha256": "5383a4fbff6fe657509642966f2f2b65f5e47378c2f04d2574cca72710de34cc"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-maintenance/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.agents/skills/ars-malefica-maintenance/SKILL.md",
-      "previous_sha256": "35b566a93fe434ca009076637477a66b3cc3b476d76d1102a02e8dc78bce0129"
+      "previous_sha256": "44fb782c14de4d506c3340c4b979b02619b5f0ed18341636f3c20cd358e457e3"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-maintenance/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/ars-malefica-maintenance/SKILL.md",
-      "previous_sha256": "35b566a93fe434ca009076637477a66b3cc3b476d76d1102a02e8dc78bce0129"
+      "previous_sha256": "44fb782c14de4d506c3340c4b979b02619b5f0ed18341636f3c20cd358e457e3"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-source-intake/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.agents/skills/ars-malefica-source-intake/SKILL.md",
-      "previous_sha256": "8789214631dcd68dc972bcbf216ae7b9fa4c7515497df93309a266aa6bcd2f6a"
+      "previous_sha256": "7c0bd04a11aef3f1b430044f357b1e03d7021049af0a7c2876aecfbcbecffad5"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-source-intake/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/ars-malefica-source-intake/SKILL.md",
-      "previous_sha256": "8789214631dcd68dc972bcbf216ae7b9fa4c7515497df93309a266aa6bcd2f6a"
+      "previous_sha256": "7c0bd04a11aef3f1b430044f357b1e03d7021049af0a7c2876aecfbcbecffad5"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-thread-init/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.agents/skills/ars-malefica-thread-init/SKILL.md",
-      "previous_sha256": "b7e74c1a48824a09d495433fc6bfb92e51fdce67c2b5082a7b193297394e3043"
+      "previous_sha256": "03894beb017191a2f55a4991e66a0336c0df6bf3f73af64ae03e2effeaf47ee6"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-thread-init/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/ars-malefica-thread-init/SKILL.md",
-      "previous_sha256": "b7e74c1a48824a09d495433fc6bfb92e51fdce67c2b5082a7b193297394e3043"
+      "previous_sha256": "03894beb017191a2f55a4991e66a0336c0df6bf3f73af64ae03e2effeaf47ee6"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-workflows/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.agents/skills/ars-malefica-workflows/SKILL.md",
-      "previous_sha256": "b25bd8626d11370abcb319e7d5910f97e0c57554afeca85f10ee295d19156055"
+      "previous_sha256": "232c9046ae47351e0d54cd95c6f7cfbb5761dea0289f107f2e6e4d793f136bec"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-workflows/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/ars-malefica-workflows/SKILL.md",
-      "previous_sha256": "b25bd8626d11370abcb319e7d5910f97e0c57554afeca85f10ee295d19156055"
+      "previous_sha256": "232c9046ae47351e0d54cd95c6f7cfbb5761dea0289f107f2e6e4d793f136bec"
     },
     {
       "source": "vault-agents/ars-malefica/skills/coding-challenge-coach/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.agents/skills/coding-challenge-coach/SKILL.md",
-      "previous_sha256": "a5735b860ff160948a9fde0c25f683ad6e4ce9970260c15c038c7477c174dda8"
+      "previous_sha256": "c592d54e7e79b12a0023a5fe77a61ae31989d7cc216bac16c580d0a65da1e188"
     },
     {
       "source": "vault-agents/ars-malefica/skills/coding-challenge-coach/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/coding-challenge-coach/SKILL.md",
-      "previous_sha256": "a5735b860ff160948a9fde0c25f683ad6e4ce9970260c15c038c7477c174dda8"
+      "previous_sha256": "c592d54e7e79b12a0023a5fe77a61ae31989d7cc216bac16c580d0a65da1e188"
     },
     {
       "source": "vault-agents/ars-malefica/skills/guitar-practice-coach/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.agents/skills/guitar-practice-coach/SKILL.md",
-      "previous_sha256": "b08d1131511f43b635a3961b4eb16d56f8daad629b36086f6d25005b88d26a1a"
+      "previous_sha256": "52ed7e00a6b08b0bf3427498a322bbb445fb2b539d925b41fbe1dca77e999210"
     },
     {
       "source": "vault-agents/ars-malefica/skills/guitar-practice-coach/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/guitar-practice-coach/SKILL.md",
-      "previous_sha256": "b08d1131511f43b635a3961b4eb16d56f8daad629b36086f6d25005b88d26a1a"
+      "previous_sha256": "52ed7e00a6b08b0bf3427498a322bbb445fb2b539d925b41fbe1dca77e999210"
     },
     {
       "source": "vault-agents/ars-malefica/skills/guitar-practice-coach/agents/openai.yaml",
@@ -355,27 +355,27 @@
     {
       "source": "vault-agents/SUBCULT/AGENTS.md",
       "destination": "/home/onnwee/Work/Vaults/SUBCULT/AGENTS.md",
-      "previous_sha256": "685c7e6077763fe522e8542050d8778b3b51faaba07ae6dae7244bfcae3c680c"
+      "previous_sha256": "d2237c3e89189c944acce4051cb93110cbc0ac3ad8ace15980e2984fac133f81"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/SUBCULT/.agents/skills/patreon-manager/SKILL.md",
-      "previous_sha256": "3c86c9507f7f8cbed4b9af6cb1d95b1d138d518288384a82704387378f5c7c04"
+      "previous_sha256": "5c203e96092e140c5809cc4431b65a90f6d174e6e7d91d6591e9a1cc318dcbbd"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/SUBCULT/.opencode/skills/patreon-manager/SKILL.md",
-      "previous_sha256": "3c86c9507f7f8cbed4b9af6cb1d95b1d138d518288384a82704387378f5c7c04"
+      "previous_sha256": "5c203e96092e140c5809cc4431b65a90f6d174e6e7d91d6591e9a1cc318dcbbd"
     },
     {
       "source": "vault-agents/SUBCULT/skills/subcult-vault/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/SUBCULT/.agents/skills/subcult-vault/SKILL.md",
-      "previous_sha256": "07d72ddd7830a68b761e0f1ef99732777dded379ab92e7b9bbe8ab1f0f01dca8"
+      "previous_sha256": "62004a3895869550bb06a42f78dd30f9868f723e7395332d0d99ec99380a617a"
     },
     {
       "source": "vault-agents/SUBCULT/skills/subcult-vault/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/SUBCULT/.opencode/skills/subcult-vault/SKILL.md",
-      "previous_sha256": "07d72ddd7830a68b761e0f1ef99732777dded379ab92e7b9bbe8ab1f0f01dca8"
+      "previous_sha256": "62004a3895869550bb06a42f78dd30f9868f723e7395332d0d99ec99380a617a"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/agents/openai.yaml",
@@ -470,12 +470,12 @@
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/references/obsidian-vault.md",
       "destination": "/home/onnwee/Work/Vaults/SUBCULT/.agents/skills/patreon-manager/references/obsidian-vault.md",
-      "previous_sha256": null
+      "previous_sha256": "2344f6c225fee522a01d6781919185211fb5e51af661c3a0f61bd1e6c96dadc1"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/references/obsidian-vault.md",
       "destination": "/home/onnwee/Work/Vaults/SUBCULT/.opencode/skills/patreon-manager/references/obsidian-vault.md",
-      "previous_sha256": null
+      "previous_sha256": "2344f6c225fee522a01d6781919185211fb5e51af661c3a0f61bd1e6c96dadc1"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/references/review-metrics.md",
@@ -510,12 +510,12 @@
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/scripts/patreon-doc-index.py",
       "destination": "/home/onnwee/Work/Vaults/SUBCULT/.agents/skills/patreon-manager/scripts/patreon-doc-index.py",
-      "previous_sha256": null
+      "previous_sha256": "fe4d53b58b1f939ed792f0b9780a5b086f52e4d27f89aacc2cb97b382b6e41d2"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/scripts/patreon-doc-index.py",
       "destination": "/home/onnwee/Work/Vaults/SUBCULT/.opencode/skills/patreon-manager/scripts/patreon-doc-index.py",
-      "previous_sha256": null
+      "previous_sha256": "fe4d53b58b1f939ed792f0b9780a5b086f52e4d27f89aacc2cb97b382b6e41d2"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/scripts/render-template.py",
@@ -570,7 +570,7 @@
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/SKILL.md",
       "destination": "/home/onnwee/Work/Tools/codex-skills/library/skills/vault-monthly-maintenance/SKILL.md",
-      "previous_sha256": "3d8f99ce46a8add7d3e6625a186a50e54c77e499ca76c79703bbaa7edf8b756a"
+      "previous_sha256": "46dcfbef052db6a783ad0d2e42a7be1fef0d0d2462d87049f3126cf152e2b58f"
     },
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/agents/openai.yaml",
@@ -605,7 +605,7 @@
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-inbox-intake/SKILL.md",
       "destination": "/home/onnwee/Work/Tools/codex-skills/library/skills/ars-malefica-inbox-intake/SKILL.md",
-      "previous_sha256": "45b889b501e518140127fe287c1aed0e535b826c613f5997e6cae1536abe64ec"
+      "previous_sha256": "5383a4fbff6fe657509642966f2f2b65f5e47378c2f04d2574cca72710de34cc"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-inbox-intake/references/state-contract.md",
@@ -615,7 +615,7 @@
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-maintenance/SKILL.md",
       "destination": "/home/onnwee/Work/Tools/codex-skills/library/skills/ars-malefica-maintenance/SKILL.md",
-      "previous_sha256": "35b566a93fe434ca009076637477a66b3cc3b476d76d1102a02e8dc78bce0129"
+      "previous_sha256": "44fb782c14de4d506c3340c4b979b02619b5f0ed18341636f3c20cd358e457e3"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-maintenance/references/git-safety.md",
@@ -650,7 +650,7 @@
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-source-intake/SKILL.md",
       "destination": "/home/onnwee/Work/Tools/codex-skills/library/skills/ars-malefica-source-intake/SKILL.md",
-      "previous_sha256": "8789214631dcd68dc972bcbf216ae7b9fa4c7515497df93309a266aa6bcd2f6a"
+      "previous_sha256": "7c0bd04a11aef3f1b430044f357b1e03d7021049af0a7c2876aecfbcbecffad5"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-source-intake/references/state-contract.md",
@@ -660,7 +660,7 @@
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-thread-init/SKILL.md",
       "destination": "/home/onnwee/Work/Tools/codex-skills/library/skills/ars-malefica-thread-init/SKILL.md",
-      "previous_sha256": "b7e74c1a48824a09d495433fc6bfb92e51fdce67c2b5082a7b193297394e3043"
+      "previous_sha256": "03894beb017191a2f55a4991e66a0336c0df6bf3f73af64ae03e2effeaf47ee6"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-thread-init/references/state-contract.md",
@@ -670,7 +670,7 @@
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-workflows/SKILL.md",
       "destination": "/home/onnwee/Work/Tools/codex-skills/library/skills/ars-malefica-workflows/SKILL.md",
-      "previous_sha256": "b25bd8626d11370abcb319e7d5910f97e0c57554afeca85f10ee295d19156055"
+      "previous_sha256": "232c9046ae47351e0d54cd95c6f7cfbb5761dea0289f107f2e6e4d793f136bec"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-workflows/references/api-notes.md",
@@ -695,7 +695,7 @@
     {
       "source": "vault-agents/ars-malefica/skills/coding-challenge-coach/SKILL.md",
       "destination": "/home/onnwee/Work/Tools/codex-skills/library/skills/coding-challenge-coach/SKILL.md",
-      "previous_sha256": "a5735b860ff160948a9fde0c25f683ad6e4ce9970260c15c038c7477c174dda8"
+      "previous_sha256": "c592d54e7e79b12a0023a5fe77a61ae31989d7cc216bac16c580d0a65da1e188"
     },
     {
       "source": "vault-agents/ars-malefica/skills/coding-challenge-coach/agents/openai.yaml",
@@ -720,7 +720,7 @@
     {
       "source": "vault-agents/ars-malefica/skills/guitar-practice-coach/SKILL.md",
       "destination": "/home/onnwee/Work/Tools/codex-skills/library/skills/guitar-practice-coach/SKILL.md",
-      "previous_sha256": "b08d1131511f43b635a3961b4eb16d56f8daad629b36086f6d25005b88d26a1a"
+      "previous_sha256": "52ed7e00a6b08b0bf3427498a322bbb445fb2b539d925b41fbe1dca77e999210"
     },
     {
       "source": "vault-agents/ars-malefica/skills/guitar-practice-coach/agents/openai.yaml",
@@ -740,7 +740,7 @@
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/patreon-manager/SKILL.md",
-      "previous_sha256": "3c86c9507f7f8cbed4b9af6cb1d95b1d138d518288384a82704387378f5c7c04"
+      "previous_sha256": "5c203e96092e140c5809cc4431b65a90f6d174e6e7d91d6591e9a1cc318dcbbd"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/agents/openai.yaml",
@@ -835,12 +835,12 @@
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/references/obsidian-vault.md",
       "destination": "/home/onnwee/Work/Tools/codex-skills/library/skills/patreon-manager/references/obsidian-vault.md",
-      "previous_sha256": "a587641cb76747915d064be7dbdde17272dc533f4496f2ad64b3fcfdbb4dc825"
+      "previous_sha256": "2344f6c225fee522a01d6781919185211fb5e51af661c3a0f61bd1e6c96dadc1"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/references/obsidian-vault.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/patreon-manager/references/obsidian-vault.md",
-      "previous_sha256": "a587641cb76747915d064be7dbdde17272dc533f4496f2ad64b3fcfdbb4dc825"
+      "previous_sha256": "2344f6c225fee522a01d6781919185211fb5e51af661c3a0f61bd1e6c96dadc1"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/references/review-metrics.md",
@@ -875,12 +875,12 @@
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/scripts/patreon-doc-index.py",
       "destination": "/home/onnwee/Work/Tools/codex-skills/library/skills/patreon-manager/scripts/patreon-doc-index.py",
-      "previous_sha256": "acd1a53842985c4178f5935ec5b1f75f8af03e2be971d6243ee905376377d26e"
+      "previous_sha256": "fe4d53b58b1f939ed792f0b9780a5b086f52e4d27f89aacc2cb97b382b6e41d2"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/scripts/patreon-doc-index.py",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/patreon-manager/scripts/patreon-doc-index.py",
-      "previous_sha256": "acd1a53842985c4178f5935ec5b1f75f8af03e2be971d6243ee905376377d26e"
+      "previous_sha256": "fe4d53b58b1f939ed792f0b9780a5b086f52e4d27f89aacc2cb97b382b6e41d2"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/scripts/render-template.py",

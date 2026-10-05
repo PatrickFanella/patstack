@@ -20,31 +20,10 @@
         }
       }
     },
-    "subcult-studio": {
-      "canonicalRoot": "/home/onnwee/Work/Subcult/subcult-studio",
-      "sources": [
-        "project-agents/subcult-studio/skills/studio-preparation",
-        "project-agents/subcult-studio/skills/social-craft"
-      ],
-      "clients": [
-        "codex",
-        "claude",
-        "opencode"
-      ],
-      "instructions": "project-agents/subcult-studio/instructions.md",
-      "baseline": {
-        "AGENTS.md": {
-          "type": "file",
-          "sha256": "bfaca4ff76660e64ed1984531d5b599d56f8cc09e16a9eb4364ef69a86ffab90",
-          "mode": 420
-        }
-      }
-    },
     "subcult-tv": {
       "canonicalRoot": "/home/onnwee/Work/Subcult/subcult-tv",
       "sources": [
-        "project-agents/subcult-studio/skills/studio-preparation",
-        "project-agents/subcult-studio/skills/social-craft",
+        "project-agents/subcult-tv/skills/social-craft",
         "project-agents/subcult-tv/skills/studio-brand-system"
       ],
       "clients": [
