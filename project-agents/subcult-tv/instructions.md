@@ -1,1 +1,2 @@
 For SUBCULT brand assets, product copy or supporter material, read `.agents/skills/studio-preparation/SKILL.md` and resolve the Studio source owner before editing. The product owns implementation and verification; Studio owns maintained brand/content masters. `.agent-skills.json` records the generated selection.
+For selecting or refining a design system and producing its brand guides, tokens or asset pack, read `.agents/skills/studio-brand-system/SKILL.md`. Studio references are available at https://subcult.tv/admin/studio/references and in `studio/references/`.

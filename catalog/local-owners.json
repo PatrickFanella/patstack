@@ -15,5 +15,9 @@
   "social-craft": {
     "owner": "Studio",
     "source": "project-agents/subcult-studio/skills/social-craft"
+  },
+  "studio-brand-system": {
+    "owner": "Studio",
+    "source": "project-agents/subcult-tv/skills/studio-brand-system"
   }
 }

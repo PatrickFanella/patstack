@@ -4939,6 +4939,31 @@
       ],
       "positiveTask": "Draft or critique a SUBCULT caption, devlog entry or post image so a stranger stops and reads.",
       "nearMiss": "Brand asset production or supporter offer copy (studio-preparation); product implementation."
+    },
+    "studio-brand-system": {
+      "canonicalSource": "project-agents/subcult-tv/skills/studio-brand-system",
+      "owner": "Studio",
+      "scope": "project-local",
+      "status": "authored",
+      "supportedClients": [
+        "codex",
+        "claude",
+        "opencode"
+      ],
+      "requiredTools": [
+        "rtk",
+        "git",
+        "python3",
+        "current client browser for authenticated references and visual inspection",
+        "affected brand generator dependencies for production"
+      ],
+      "lastReviewed": "2026-10-05",
+      "evidence": [
+        "catalog/project-selections.json",
+        "project-agents/subcult-tv/skills/studio-brand-system/references/workflow.md"
+      ],
+      "positiveTask": "Compare design systems for SUBCULT.TV using Studio references, then document the chosen direction and create a reproducible brand pack.",
+      "nearMiss": "Write a weekly caption (social-craft), prepare a publication (studio-preparation), or fix a component without changing the visual system."
     }
   }
 }
