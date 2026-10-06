@@ -40,7 +40,110 @@
           "type": "file",
           "sha256": "08521ff9d18c03b4f60e505e8546ff9ea6bad0f6de12e29f9dbfb7915240c91c",
           "mode": 420
+        },
+        ".agents/skills/social-craft": {
+          "type": "directory",
+          "mode": 493,
+          "entries": {
+            "SKILL.md": {
+              "type": "file",
+              "sha256": "9340ac77427fd2ed5cf8b656243d113428a2433e7c552cde4c80edc800f65024",
+              "mode": 420
+            },
+            "references": {
+              "type": "directory",
+              "mode": 493,
+              "entries": {
+                "lessons.md": {
+                  "type": "file",
+                  "sha256": "a4538ea225868e048012f8abea25d96e44f81171a8d9b967940d2a4b76951e99",
+                  "mode": 420
+                },
+                "runtime.md": {
+                  "type": "file",
+                  "sha256": "da0cc9d792c9d67b1c3b413c9da8baa9f0bad53055db69fdf1e1f93ae543eb67",
+                  "mode": 420
+                }
+              }
+            }
+          }
+        },
+        ".agents/skills/studio-brand-system": {
+          "type": "directory",
+          "mode": 493,
+          "entries": {
+            "SKILL.md": {
+              "type": "file",
+              "sha256": "b462e130bc090390e0a3e8fe89ca6f9de23e23c293cfe1f3f106dd5b05cac976",
+              "mode": 420
+            },
+            "references": {
+              "type": "directory",
+              "mode": 493,
+              "entries": {
+                "workflow.md": {
+                  "type": "file",
+                  "sha256": "8e51a099355f9b0b28a30b0a185d5882963afe7ce7c52f8f1d9f5d49815c8a73",
+                  "mode": 420
+                }
+              }
+            }
+          }
+        },
+        ".agents/skills/studio-reference-study": {
+          "type": "directory",
+          "mode": 493,
+          "entries": {
+            "SKILL.md": {
+              "type": "file",
+              "sha256": "be2b4d342d94dbd90921d9795b07f6f092f14fe877caac909270e13557467de5",
+              "mode": 420
+            },
+            "references": {
+              "type": "directory",
+              "mode": 493,
+              "entries": {
+                "study-outline.md": {
+                  "type": "file",
+                  "sha256": "e94a63a615acb76012b8dcb4d021e39e1c598ab54e202bfc097bf0c41dabe958",
+                  "mode": 420
+                }
+              }
+            }
+          }
+        },
+        ".agents/skills/studio-brand-audit": {
+          "type": "directory",
+          "mode": 493,
+          "entries": {
+            "SKILL.md": {
+              "type": "file",
+              "sha256": "b9a1cf3621ac1a3d1a6fef329e9f9bc056e694ce7b988cc954da786d21697957",
+              "mode": 420
+            }
+          }
+        },
+        ".agents/skills/studio-brand-handoff": {
+          "type": "directory",
+          "mode": 493,
+          "entries": {
+            "SKILL.md": {
+              "type": "file",
+              "sha256": "3cd7dfeffa526043df2cbc44bfa35ca5a763d74441aa5a44a02ce1392fcb051d",
+              "mode": 420
+            }
+          }
+        },
+        ".agent-skills.json": {
+          "type": "file",
+          "sha256": "776feb972e12ff84b958310842048c413586ea07e7f7dc99ce2027f506f5e6e0",
+          "mode": 420
         }
+      },
+      "baselineProvenance": {
+        "sourceRevision": "cc37c41f7a31020cbc7b362eca618fba0e9833e7",
+        "reviewedAt": "2026-10-06",
+        "reason": "Copied worktree selection has no transaction record. Every file, mode, link and receipt hash was checked against this committed source before baseline registration."
       }
     }
   }
