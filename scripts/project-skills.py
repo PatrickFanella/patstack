@@ -85,8 +85,10 @@ def plan(project, target, source_root=ROOT, state=None):
         path = Path(destination)
         if target not in path.parents or any(p.is_symlink() for p in path.parents):
             raise RuntimeError('Destination escapes project or traverses a symlink: ' + destination)
+        relative = str(path.relative_to(target))
+        baseline = config.get('rootBaselines', {}).get(str(target), {})
         old = previous['paths'].get(destination,
-                    config.get('baseline', {}).get(str(path.relative_to(target))))
+                    baseline.get(relative, config.get('baseline', {}).get(relative)))
         actual = install.snapshot(path)
         payload = item.get('payload')
         wanted = item.get('desired')

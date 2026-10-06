@@ -16,7 +16,7 @@ The initial mappings cover codex-skills maintenance, Studio preparation and its 
 
 ## Copied worktrees without an installation record
 
-A Git-created worktree can contain committed generated skills without this host's per-worktree installer transaction. A later source update then fails the drift guard. Before registering a bootstrap baseline in the canonical project selection, compare the complete copied file set, bytes and modes against the exact earlier committed skill source, verify the client links, and match every source hash in `.agent-skills.json`. Record that source revision and review in `baselineProvenance`. Preserve a differing copy; never register arbitrary current bytes merely to make installation pass. The normal installer still previews the change, saves backups and verifies destination hashes.
+A Git-created worktree can contain committed generated skills without this host's per-worktree installer transaction. A later source update then fails the drift guard. Before registering a root-specific bootstrap baseline in the canonical project selection, compare the complete copied file set, bytes and modes against the exact earlier committed skill source, verify the client links, and match every source hash in `.agent-skills.json`. Store it under `rootBaselines` for that exact checkout; record the source revision and review in `baselineProvenance`. Preserve a differing copy; never register arbitrary current bytes merely to make installation pass. The normal installer still previews the change, saves backups and verifies destination hashes.
 
 ## Studio skill ownership
 
