@@ -10,6 +10,7 @@ Author personal Codex skills, optional skill profiles, and Kvant's Codex bootstr
 | Shared interview and handoff | `shared/` | `~/.agents/skills/`; preserved by profile switching |
 | Optional reservoir | `library/skills/` | Eligible skills copied to `~/.agents/skills/` by the profile command |
 | Optional profile membership | `profiles/*.txt` | `~/.agents/skill-profiles` links here |
+| Switchyard OpenCode skill selection | `runtime-bundles/switchyard-opencode.json` and the selected skill owners | Generated image-owned snapshot in Switchyard, with source/export hashes in `services/opencode/skills.lock.json` |
 | Profile command | `scripts/skill-profile` | `~/.agents/bin/skill-profile` links here |
 | Global Codex context and RTK | `instructions/` | `~/.codex/AGENTS.md` and `RTK.md` link here |
 | Shared docs policy and HOMELAB | Machinum canonical policy/host briefings | Guarded `sync-briefings.py` generates `~/.homelab/HOMELAB.md` |

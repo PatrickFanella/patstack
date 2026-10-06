@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "name": "switchyard-opencode",
+  "description": "General coding, game design and web games, docs, debugging, and social content. No persona roster.",
+  "skills": [
+    "skills/implementation-plan",
+    "skills/architecture-patterns",
+    "skills/api-development",
+    "skills/frontend-design",
+    "skills/git-advanced-workflows",
+    "skills/systematic-debugging",
+    "skills/code-review",
+    "skills/verify-behavior",
+    "skills/technical-writing",
+    "skills/unslop",
+    "library/skills/game-design-theory",
+    "library/skills/develop-web-game",
+    "library/skills/social-content",
+    "library/skills/copywriting",
+    "library/skills/fact-check",
+    "shared/requirements-interview",
+    "shared/session-handoff",
+    "library/skills/summarization",
+    "library/skills/web-search"
+  ],
+  "required_skills": [
+    "unslop"
+  ]
+}
