@@ -14,6 +14,10 @@ Use the same project ID and the actual isolated checkout path for a worktree. Th
 
 The initial mappings cover codex-skills maintenance, Studio preparation and its subcult-tv consumer. Root instructions trigger procedures only for the relevant task. CLI `rollback --run PATH` restores this root’s recorded transaction while preserving intervening edits. Discovery and filesystem readback do not prove a model followed the procedure or that external services work.
 
+## Copied worktrees without an installation record
+
+A Git-created worktree can contain committed generated skills without this host's per-worktree installer transaction. A later source update then fails the drift guard. Before registering a root-specific bootstrap baseline in the canonical project selection, compare the complete copied file set, bytes and modes against the exact earlier committed skill source, verify the client links, and match every source hash in `.agent-skills.json`. Store it under `rootBaselines` for that exact checkout; record the source revision and review in `baselineProvenance`. Preserve a differing copy; never register arbitrary current bytes merely to make installation pass. The normal installer still previews the change, saves backups and verifies destination hashes.
+
 ## Studio skill ownership
 
 Canonical Studio skill instructions live under `project-agents/subcult-tv/skills/` in codex-skills. The current subcult-tv selection includes `social-craft`, `studio-brand-system`, `studio-reference-study`, `studio-brand-audit` and `studio-brand-handoff`. Their ownership and routing are registered in `catalog/local-owners.json`, `catalog/capabilities.json` and `catalog/qualification.json`; `catalog/project-selections.json` selects the project deployment.

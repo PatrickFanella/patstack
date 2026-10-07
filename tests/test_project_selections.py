@@ -81,6 +81,28 @@ class ProjectSelectionTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, 'Client contract'): self.plan()
         self.assertFalse(self.state.exists())
 
+    def test_reviewed_copied_baseline_accepts_known_bytes_and_rejects_later_edits(self):
+        self.deploy(self.plan())
+        import shutil
+        shutil.rmtree(self.state)
+        known = self.target / '.agents/skills/specialist'
+        self.config['rootBaselines'] = {str(self.target): {
+            str(known.relative_to(self.target)): project.install.snapshot(known),
+            '.agent-skills.json': project.install.snapshot(self.target / '.agent-skills.json')}}
+        self.save_config()
+        (self.source / 'library/skills/specialist/SKILL.md').write_text('updated canonical procedure')
+        proposal = self.plan()
+        self.assertEqual(next(x['action'] for x in proposal['operations'] if x['destination'] == str(known)), 'install')
+        fresh = self.root / 'fresh'
+        subprocess.run(['git', '-C', str(self.target), 'worktree', 'add', '--detach', '-q', str(fresh), 'HEAD'], check=True)
+        # The reviewed copied baseline must not require skills to exist in another checkout.
+        self.plan(fresh)
+        (known / 'SKILL.md').write_text('later local edit')
+        with self.assertRaisesRegex(RuntimeError, 'destination drift'):
+            self.plan()
+        self.assertEqual((known / 'SKILL.md').read_text(), 'later local edit')
+        self.assertFalse(self.state.exists())
+
     def test_real_worktree_selection_uses_the_same_git_owner(self):
         worktree = self.root / 'isolated'
         subprocess.run(['git', '-C', str(self.target), 'worktree', 'add', '--detach', '-q', str(worktree), 'HEAD'], check=True)
