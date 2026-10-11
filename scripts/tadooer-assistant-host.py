@@ -12,6 +12,7 @@ import stat
 import subprocess
 import sys
 import time
+import tomllib
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -81,9 +82,10 @@ def remote(mode,payload):
     market=str(folder/'marketplace')
     allowed_markets=set(previous.get('marketplaceSources',[]))
     if previous.get('folder'): allowed_markets.add(str(Path(previous['folder'])/'marketplace'))
-    codex_markets=json.loads(run(['codex','plugin','marketplace','list','--json']).stdout)['marketplaces']
-    codex_market=next((m for m in codex_markets if m['name']=='subcult-tadooer'),None)
-    codex_source=codex_market.get('marketplaceSource',{}).get('source') if codex_market else None
+    codex_config=home/'.codex/config.toml'
+    codex_settings=tomllib.loads(codex_config.read_text()) if codex_config.exists() else {}
+    codex_market=codex_settings.get('marketplaces',{}).get('subcult-tadooer',{})
+    codex_source=codex_market.get('source')
     claude_market=read_json(home/'.claude/plugins/known_marketplaces.json').get('subcult-tadooer')
     claude_source=claude_market.get('source',{}).get('path') if claude_market else None
     for source in (codex_source,claude_source):
