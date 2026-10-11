@@ -5033,7 +5033,7 @@
       "canonicalSource": "integrations/tadooer/plugin/skills/tadooer-workflow",
       "owner": "codex-skills",
       "scope": "plugin",
-      "status": "structure-reviewed",
+      "status": "selection-tested",
       "supportedClients": [
         "codex",
         "claude-code"
@@ -5044,7 +5044,8 @@
       "lastReviewed": "2026-10-11",
       "evidence": [
         "docs/TADOOER-ASSISTANTS.md",
-        "catalog/tadooer-assistant.json"
+        "catalog/tadooer-assistant.json",
+        "docs/reviews/2026-10-11-tadooer-assistant-fleet.md"
       ],
       "positiveTask": "Read my Tadooer tasks and plan tomorrow; confirm requested ordinary changes through the advertised tool policy.",
       "nearMiss": "Review local source code without using Tadooer, or install a desktop app without authorization to edit tasks."

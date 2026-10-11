@@ -96,3 +96,7 @@ unchanged Tadooer registrations through each native client CLI, and retain any
 newer settings. A full-file restoration requires confirming that no later
 client changes would be lost. Versioned plugin/runtime payloads stay available
 for inspection and deliberate rollback.
+
+The [October 11 fleet report](reviews/2026-10-11-tadooer-assistant-fleet.md)
+records installed clients, protocol evidence, runtime paths and authentication
+limits.
