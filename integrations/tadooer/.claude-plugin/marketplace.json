@@ -1,0 +1,14 @@
+{
+  "name": "subcult-tadooer",
+  "owner": {
+    "name": "SUBCULT"
+  },
+  "plugins": [
+    {
+      "name": "tadooer-assistant",
+      "source": "./plugin",
+      "description": "Tadooer planning and task workflows through the registered Tadooer MCP server",
+      "version": "1.0.1"
+    }
+  ]
+}

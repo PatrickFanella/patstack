@@ -27,5 +27,10 @@
   "studio-brand-handoff": {
     "owner": "Studio",
     "source": "project-agents/subcult-tv/skills/studio-brand-handoff"
+  },
+  "tadooer-workflow": {
+    "owner": "codex-skills Tadooer assistant plugin",
+    "source": "integrations/tadooer/plugin/skills/tadooer-workflow",
+    "deployment": "native Codex and Claude plugin installers; catalog/tadooer-assistant.json"
   }
 }

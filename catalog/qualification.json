@@ -3354,7 +3354,7 @@
       "evidence": [
         "reports/structure.json"
       ],
-      "positiveTask": "Implement CI/runtime secret storage, delivery, and rotation using the environment’s existing secret provider.",
+      "positiveTask": "Implement CI/runtime secret storage, delivery, and rotation using the environment\u2019s existing secret provider.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "secure-linux-web-hosting": {
@@ -5028,6 +5028,27 @@
       ],
       "positiveTask": "Integrate a selected Studio brand pack into its product with exact asset mappings, hashes and verified exports.",
       "nearMiss": "Create a new identity (studio-brand-system) or deploy a site without a handoff request."
+    },
+    "tadooer-workflow": {
+      "canonicalSource": "integrations/tadooer/plugin/skills/tadooer-workflow",
+      "owner": "codex-skills",
+      "scope": "plugin",
+      "status": "selection-tested",
+      "supportedClients": [
+        "codex",
+        "claude-code"
+      ],
+      "requiredTools": [
+        "registered tadooer MCP server with scoped automation token"
+      ],
+      "lastReviewed": "2026-10-11",
+      "evidence": [
+        "docs/TADOOER-ASSISTANTS.md",
+        "catalog/tadooer-assistant.json",
+        "docs/reviews/2026-10-11-tadooer-assistant-fleet.md"
+      ],
+      "positiveTask": "Read my Tadooer tasks and plan tomorrow; confirm requested ordinary changes through the advertised tool policy.",
+      "nearMiss": "Review local source code without using Tadooer, or install a desktop app without authorization to edit tasks."
     }
   }
 }

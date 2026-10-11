@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "owner": "codex-skills",
+  "plugin": "tadooer-assistant@subcult-tadooer",
+  "skillSource": "integrations/tadooer/plugin/skills/tadooer-workflow",
+  "capabilities": [
+    "tasks",
+    "planning",
+    "focus",
+    "calendar",
+    "habits",
+    "templates"
+  ],
+  "deployment": "scripts/tadooer-assistant-host.py",
+  "runtime": {
+    "owner": "subculture-collective/tadooer",
+    "revision": "928af1d88b0ddd8878daf1a87e3871388369121f",
+    "sha256": "a159e56f9588111c32404c9bb5ec1e59d0ee4efc13caaccb5f3d1a213ae8f5f7",
+    "entrypoint": "apps/mcp-stdio/dist/main.mjs"
+  },
+  "hosts": {
+    "kvant": {
+      "node": "/home/onnwee/.local/share/mise/installs/node/24.18.0/bin/node"
+    },
+    "sputnik": {
+      "node": "/home/onnwee/.local/share/mise/installs/node/24.21.0/bin/node"
+    },
+    "soyuz": {
+      "node": "/Users/onnwee/.local/share/mise/installs/node/24.21.0/bin/node",
+      "python": "/opt/homebrew/bin/python3"
+    },
+    "dozor": {
+      "node": "/home/onnwee/.local/share/tadooer-assistant/runtime/node-v24.21.0-linux-x64/bin/node"
+    },
+    "almaz": {
+      "node": "/home/onnwee/.local/bin/node"
+    },
+    "nuc": {
+      "node": "/home/onnwee/.local/share/mise/installs/node/24.15.0/bin/node"
+    }
+  },
+  "sidecarProvenance": {
+    "url": "https://nodejs.org/dist/v24.21.0/node-v24.21.0-linux-x64.tar.xz",
+    "sha256": "fd8e59d5a511510f6a298afb548f18c7d2b1be404d8b4a27d94fbe49f56cb2d6"
+  }
+}
