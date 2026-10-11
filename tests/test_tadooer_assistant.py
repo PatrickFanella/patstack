@@ -12,6 +12,9 @@ host = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(host)
 
 class TadooerGuardTests(unittest.TestCase):
+    def test_client_json_preserves_wrapper_status_and_parses_native_result(self):
+        self.assertEqual(host.client_json('mise status\n[{"version":"1.0.1"}]\n'), [{"version":"1.0.1"}])
+
     def test_remote_script_compiles_without_truncating_its_own_strings(self):
         compile(host.remote_source(), "remote-script", "exec")
 

@@ -41,6 +41,12 @@ def write(path,data,mode=0o600):
 def read_json(path):
     return json.loads(path.read_text()) if path.exists() else {}
 
+def client_json(output):
+    for index,line in enumerate(output.splitlines()):
+        if line.lstrip().startswith(('[','{')):
+            return json.loads('\n'.join(output.splitlines()[index:]))
+    raise RuntimeError('Client did not return JSON.')
+
 def existing_mcp(home,launcher):
     claude=read_json(home/'.claude.json').get('mcpServers',{}).get('tadooer')
     if claude and (claude.get('command')!=str(launcher) or claude.get('args',[])!=[]):
@@ -147,6 +153,7 @@ def remote(mode,payload):
             run(['claude','plugin','marketplace','remove','subcult-tadooer','--scope','user','--json'])
         if claude_source!=market: run(['claude','plugin','marketplace','add',market,'--scope','user','--json'])
         run(['claude','plugin','install','tadooer-assistant@subcult-tadooer','--scope','user'])
+        run(['claude','plugin','update','tadooer-assistant@subcult-tadooer','--scope','user'])
         summary['ownedFiles']={str(p):state(p) for p in (launcher,setup)}
         summary['payloadHashes']=payload['hashes']
         summary['phase']='installed'
@@ -162,7 +169,15 @@ def remote(mode,payload):
             raise RuntimeError('Codex plugin not enabled.')
         for name,value in data.items():
             if (folder/name).read_bytes()!=value: raise RuntimeError('Payload hash mismatch.')
+        expected_version=json.loads(data['marketplace/plugin/.codex-plugin/plugin.json'])['version']
+        codex_plugins=client_json(run(['codex','plugin','list','--marketplace','subcult-tadooer','--json']).stdout)['installed']
+        claude_plugins=client_json(run(['claude','plugin','list','--json']).stdout)
+        for client,items in (('Codex',codex_plugins),('Claude',claude_plugins)):
+            matches=[i for i in items if i.get('pluginId',i.get('id'))=='tadooer-assistant@subcult-tadooer']
+            if len(matches)!=1 or not matches[0].get('enabled') or matches[0].get('version')!=expected_version:
+                raise RuntimeError(client+' plugin version/enabled verification failed.')
         summary['registration']='verified'; summary['pluginInstallation']='verified'
+        summary['pluginVersion']=expected_version
         print(json.dumps(summary,indent=2))
 
 def payload_for(runtime,node,url,revision):
