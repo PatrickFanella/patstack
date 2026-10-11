@@ -43,6 +43,8 @@ Rollback restores only that transaction’s changed destinations and the precedi
 
 ## Maintenance
 
+Gitea runs source validation and the disposable installer/selection tests on PRs and main. `python scripts/validate.py --source-only` checks the repository without reading installed OS or system skills. Its report lists those owners as unverified; installation verification still requires the normal validator and the destination checks below. CI never installs skills or changes client configuration.
+
 Edit authored sources here; never maintain installed copies as the source of truth. Keep task descriptions concise and put substantial procedures in conditionally loaded references. Preserve plan-only, read-only review, explicit strict review, explicit TypeScript boundary setup, and separate publishing/deployment scope. New capabilities need a concrete trigger, resource links, and an acceptance fixture. General principles belong in relevant conditional references, not new globally discovered entrypoints.
 
 `build_collection.py` is the historical one-time import recipe, not an update command: rerunning it is unsupported after curation. Update the catalog and capability map explicitly when changing ownership. Preserve provenance and licenses when moving resources. The frontend CSV dataset is pinned to MIT-licensed upstream revision `363cd8911f210ec640704101ee820e6e64a63c3b`; its per-file hashes and notices are in `skills/frontend-design/scripts/data/provenance.json` and `notices/`.

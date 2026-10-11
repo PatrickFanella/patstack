@@ -1,11 +1,31 @@
 #!/usr/bin/env python3
 """Validate the curated collection, without loading every reference into an agent."""
-import ast, hashlib, json, pathlib, re, sys
+import argparse, ast, hashlib, json, pathlib, re, sys
 import yaml
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 # Local discovery-context review limit; not a client or connected-app requirement.
 PERSONAL_DESCRIPTION_BUDGET=12_000
-def main():
+def external_description_metrics(source_only=False):
+    if source_only:
+        return {'personalDescriptions': 0, 'personalBodies': 0,
+                'unverifiedExternalOwners': ['omarchy', 'diagnose-crash']}
+    result={'personalDescriptions': 0, 'personalBodies': 0, 'unverifiedExternalOwners': []}
+    for name in ['omarchy','diagnose-crash']:
+        p=pathlib.Path.home()/'.codex/skills'/name/'SKILL.md';_,front,body=p.read_text().split('---',2)
+        result['personalDescriptions']+=len(yaml.safe_load(front)['description'])
+        result['personalBodies']+=len(body)
+    return result
+
+def capability_path_errors(caps, source_only=False):
+    errors=[];unverified=[]
+    for capability in caps:
+        if source_only and capability.get('kind') in {'external','system'}:
+            unverified.append(capability['owner'])
+        elif not (ROOT/capability['path']).exists():
+            errors.append(f'unreachable capability {capability}')
+    return errors,sorted(set(unverified))
+
+def main(source_only=False):
     errors=[]; metrics={'authoredPersonal':0,'personalDescriptions':0,'personalBodies':0}; scripts=[]
     catalog=json.loads((ROOT/'catalog/proposed-catalog.json').read_text())
     actual={p.parent.name for p in (ROOT/'skills').glob('*/SKILL.md')}|{'omarchy','diagnose-crash'}
@@ -49,9 +69,11 @@ def main():
         for p in [p for base in roots for p in base.rglob('*.py')]:
             try:tree=ast.parse(p.read_text());scripts.append({'path':str(p.relative_to(ROOT)),'mode':oct(p.stat().st_mode&0o777),'imports':sorted({n.names[0].name.split('.')[0] for n in ast.walk(tree) if isinstance(n,ast.Import)}|{n.module.split('.')[0] for n in ast.walk(tree) if isinstance(n,ast.ImportFrom) and n.module})})
             except SyntaxError as e:errors.append(f'python syntax {p}: {e}')
-    for name in ['omarchy','diagnose-crash']:
-        p=pathlib.Path.home()/'.codex/skills'/name/'SKILL.md';_,front,body=p.read_text().split('---',2)
-        metrics['personalDescriptions']+=len(yaml.safe_load(front)['description']);metrics['personalBodies']+=len(body)
+    external=external_description_metrics(source_only)
+    for key in ['personalDescriptions','personalBodies']:metrics[key]+=external[key]
+    metrics['sourceOnly']=source_only
+    metrics['unverifiedExternalOwners']=external['unverifiedExternalOwners']
+    metrics['personalDescriptionScope']='repository sources' if source_only else 'sources and installed OS owners'
     metrics['personalEntrypoints']=len(actual)
     if len(actual)!=54:errors.append(f'personal entrypoint count {len(actual)} != 54')
     metrics['personalDescriptionBudget']=PERSONAL_DESCRIPTION_BUDGET
@@ -59,12 +81,16 @@ def main():
     if metrics['personalDescriptionHeadroom']<0:errors.append(f'description budget {metrics}')
     caps=json.loads((ROOT/'catalog/capabilities.json').read_text())
     if len(caps)!=162 or len({x['original'] for x in caps})!=162:errors.append('incomplete capability mapping')
-    for c in caps:
-        if not (ROOT/c['path']).exists():errors.append(f'unreachable capability {c}')
+    capability_errors,unverified=capability_path_errors(caps,source_only)
+    errors.extend(capability_errors)
+    metrics['unverifiedCapabilityOwners']=unverified
     retired=json.loads((ROOT/'catalog/retired-names.json').read_text())
     if actual&retired.keys():errors.append('retirement map includes active names')
     metrics['retiredNames']=len(retired);metrics['mappedOriginals']=len(caps)
     (ROOT/'reports').mkdir(exist_ok=True)
     (ROOT/'reports/structure.json').write_text(json.dumps({'metrics':metrics,'errors':errors,'scriptDependencies':scripts},indent=2)+'\n')
     print(json.dumps({'metrics':metrics,'errors':errors},indent=2));return bool(errors)
-if __name__=='__main__':sys.exit(main())
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--source-only',action='store_true',help='Validate repository sources; report installed OS owners as unverified')
+    sys.exit(main(parser.parse_args().source_only))
