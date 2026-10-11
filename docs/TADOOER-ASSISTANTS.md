@@ -100,3 +100,10 @@ for inspection and deliberate rollback.
 The [October 11 fleet report](reviews/2026-10-11-tadooer-assistant-fleet.md)
 records installed clients, protocol evidence, runtime paths and authentication
 limits.
+
+
+The six-device rollout now has separate scoped tokens and a verified production
+read on each host. Those tokens expire November 10, 2026; their private per-host
+metadata receipts record the exact expiry and confirmation policy. Rotate or
+revoke through Connections, then repeat a read. Hosted OAuth remains a separate
+qualification: the public discovery URL returned HTML during the rollout.
