@@ -1,0 +1,12 @@
+{
+  "name": "subcult-tadooer",
+  "interface": { "displayName": "SUBCULT Tadooer" },
+  "plugins": [
+    {
+      "name": "tadooer-assistant",
+      "source": { "source": "local", "path": "./plugin" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_USE" },
+      "category": "Productivity"
+    }
+  ]
+}

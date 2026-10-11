@@ -164,3 +164,11 @@ personal OpenCode Patreon entrypoint remains compatible but routes to Studio.
 Copied instructions inside Archivum reference collections are not deployment
 targets. Test new skills with the skill-creator validator and check routing
 against the positive and near-miss cases in `vault-agents/acceptance.md`.
+
+## Tadooer assistant integration
+
+`integrations/tadooer/` owns the personal Tadooer workflow plugin for Codex and
+Claude Code. Native client installers own deployed caches; the product owns its
+MCP runtime. Use the bounded fleet installer and manifest described in
+[Tadooer assistant installation](TADOOER-ASSISTANTS.md). Authentication is a
+separate check requiring a scoped token stored privately on the device.
