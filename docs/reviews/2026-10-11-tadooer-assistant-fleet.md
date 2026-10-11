@@ -19,9 +19,9 @@ A separate fixture initialized the exact installed launcher and listed its
 catalog on every host: protocol status `ok`, 102 tools, including `suite.confirm`.
 The fixture used a synthetic credential in a temporary mode-0600 file and an
 unused loopback port. It called no application operation and deleted its files.
-These results prove transport startup and static catalog discovery. No
-production authenticated read or mutation was performed, and no model session
-or paid inference was used for qualification.
+These results prove transport startup and static catalog discovery. The initial fixture performed no production read or mutation. The follow-up
+qualification below completed an authenticated read on every host. No model
+session or paid inference was used for qualification.
 
 The product adapter's three test files passed all 11 tests. Canonical skill
 validation, Claude plugin validation and `scripts/validate.py` passed. The
@@ -55,16 +55,41 @@ verification checks both clients against version 1.0.1.
 
 ## Authentication and scope
 
-Authentication is pending on all six hosts. No automation-token prefix was found in the searched configuration, state,
-local data, private assistant configuration or application-support locations
-on any host. The search reported only paths and permission metadata for
-candidates; no secret values were printed. This is evidence for those searched
-locations, not a claim about every file on every disk. The desktop login remains separate from assistant credentials.
-Create a scoped token in Tadooer Connections and enter it on the chosen device
-through `~/.local/bin/tadooer-setup-token`; the local prompt hides input and
-writes a private file. Then verify an authorized read against the real server.
-Do not place credentials in chat or Git. Separate revocable device tokens are
-preferred.
+The owner signed into the collaborative Tadooer browser and selected read and
+manage permissions for tasks, projects, schedule, focus, habits and templates.
+Six separate device tokens were issued through the ordinary session/CSRF
+protected API, with `confirm_all` and a 30-day expiry of
+`2026-11-10T21:11:30.592Z`. The scope set includes read/write for those six
+areas plus `planning:write` for daily planning. No connector recovery, calendar
+publication, notification tests or application-settings write scope was added.
+
+Tokens were encrypted in the browser for transfer, decrypted only in process
+memory on Kvant and sent to each device through SSH stdin. No plaintext token
+was printed or saved in a shared handoff file. Each device saved its credential
+at its configured absolute path with current-user ownership and mode `0600`.
+The temporary encryption key and encrypted browser download were deleted after
+all six hosts verified access. No browser cookie became an MCP credential.
+
+The exact installed MCP launcher on every host initialized, listed 102 tools
+and successfully called `suite.tasks.list` against the hosted instance. Task
+content was suppressed from receipts and reports. Authentication receipts at
+`~/.local/state/tadooer-assistant/authentication.json` record non-secret token
+metadata, expiry, confirmation policy and read verification. No production task
+mutation was performed; management scopes are granted but write behavior was
+not qualified against live records.
+
+The initial searches found no reusable automation token in the searched
+configuration, state, local data, private assistant configuration or
+application-support locations. These searches reported only paths and
+permission metadata for candidates, never secret values. They do not establish
+absence on every disk.
+
+Public `/.well-known/oauth-authorization-server` returned the HTML web app on
+October 11, so hosted OAuth compatibility remains unqualified. This rollout
+uses the verified local stdio adapter and scoped device tokens. The desktop
+login remains separate from assistant credentials. Revoke a device's access
+in Connections when retiring it; replace expired credentials deliberately with
+`tadooer-setup-token` and repeat an authenticated read.
 
 This deployment covers the known user's Codex and Claude Code configurations.
 No separate Claude Desktop app/configuration was found in the standard checked
@@ -74,5 +99,6 @@ release. Product release scope stays with the Tadooer roadmap and source docs.
 
 Canonical procedure: [Tadooer assistant installation](../TADOOER-ASSISTANTS.md).
 The pre-existing dirty Tadooer desktop worktree was preserved; the adapter was
-built in a separate pinned checkout. These source changes are committed locally
-in codex-skills; publication of its existing branch was not part of this rollout.
+built in a separate pinned checkout. The canonical source changes are prepared on an isolated review branch based
+on current Gitea main. The original source branch and dirty product worktree
+remain available; publication does not merge or deploy a product release.
