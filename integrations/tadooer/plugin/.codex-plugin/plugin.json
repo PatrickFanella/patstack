@@ -1,15 +1,22 @@
 {
   "name": "tadooer-assistant",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use the registered Tadooer MCP server for tasks, planning and focus",
-  "author": { "name": "SUBCULT" },
+  "author": {
+    "name": "SUBCULT"
+  },
   "skills": "./skills/",
   "interface": {
     "displayName": "Tadooer",
     "shortDescription": "Manage Tadooer through its scoped MCP tools.",
     "developerName": "SUBCULT",
     "category": "Productivity",
-    "capabilities": ["Read", "Write"],
-    "defaultPrompt": "Help me plan my day in Tadooer."
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Help me plan my day in Tadooer."
+    ]
   }
 }

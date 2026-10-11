@@ -1,7 +1,9 @@
 {
   "name": "tadooer-assistant",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use the registered Tadooer MCP server for tasks, planning and focus",
-  "author": { "name": "SUBCULT" },
+  "author": {
+    "name": "SUBCULT"
+  },
   "skills": "./skills/"
 }
