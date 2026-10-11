@@ -77,13 +77,13 @@ this repository, substituting the selected host's manifest values:
 ```sh
 rtk proxy python scripts/tadooer-assistant-host.py plan --host kvant \
   --runtime /absolute/build/apps/mcp-stdio/dist/main.mjs \
-  --node /usr/bin/node --revision REVIEWED_GIT_SHA
+  --node /home/onnwee/.local/share/mise/installs/node/24.18.0/bin/node --revision REVIEWED_GIT_SHA
 rtk proxy python scripts/tadooer-assistant-host.py apply --host kvant \
   --runtime /absolute/build/apps/mcp-stdio/dist/main.mjs \
-  --node /usr/bin/node --revision REVIEWED_GIT_SHA
+  --node /home/onnwee/.local/share/mise/installs/node/24.18.0/bin/node --revision REVIEWED_GIT_SHA
 rtk proxy python scripts/tadooer-assistant-host.py verify --host kvant \
   --runtime /absolute/build/apps/mcp-stdio/dist/main.mjs \
-  --node /usr/bin/node --revision REVIEWED_GIT_SHA
+  --node /home/onnwee/.local/share/mise/installs/node/24.18.0/bin/node --revision REVIEWED_GIT_SHA
 ```
 
 Remote deployment uses SSH and `--python` when the remote default is unsuitable.
