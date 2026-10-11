@@ -78,6 +78,18 @@ def remote(mode,payload):
     for path,expected in previous.get('ownedFiles',{}).items():
         if state(Path(path))!=expected: raise RuntimeError('Managed file drift: '+path)
     registered=existing_mcp(home,launcher)
+    market=str(folder/'marketplace')
+    allowed_markets=set(previous.get('marketplaceSources',[]))
+    if previous.get('folder'): allowed_markets.add(str(Path(previous['folder'])/'marketplace'))
+    codex_markets=json.loads(run(['codex','plugin','marketplace','list','--json']).stdout)['marketplaces']
+    codex_market=next((m for m in codex_markets if m['name']=='subcult-tadooer'),None)
+    codex_source=codex_market.get('marketplaceSource',{}).get('source') if codex_market else None
+    claude_market=read_json(home/'.claude/plugins/known_marketplaces.json').get('subcult-tadooer')
+    claude_source=claude_market.get('source',{}).get('path') if claude_market else None
+    for source in (codex_source,claude_source):
+        if source and source not in allowed_markets:
+            raise RuntimeError('Unmanaged Tadooer marketplace source; preserve '+source)
+
     launcher_bytes=('#!/bin/sh\nexec '+shlex.quote(str(node))+' '+shlex.quote(str(folder/'runtime/main.mjs'))+' "$@"\n').encode()
     setup_bytes=('#!/bin/sh\nexec '+shlex.quote(sys.executable)+' '+shlex.quote(str(folder/'marketplace/setup-token.py'))+' "$@"\n').encode()
     for path,content in ((launcher,launcher_bytes),(setup,setup_bytes)):
@@ -120,13 +132,22 @@ def remote(mode,payload):
             write(config,json.dumps({'url':payload['url'],'tokenFile':str(config.parent/'automation-token')},indent=2).encode())
         if not registered[0]: run(['codex','mcp','add','tadooer','--',str(launcher)])
         if not registered[1]: run(['claude','mcp','add','--scope','user','tadooer','--',str(launcher)])
-        market=str(folder/'marketplace')
-        run(['codex','plugin','marketplace','add',market,'--json'])
+        summary['ownedFiles']={str(p):state(p) for p in (launcher,setup)}
+        summary['folder']=str(folder); summary['backup']=str(backup)
+        summary['marketplaceSources']=sorted(allowed_markets|{market})
+        summary['phase']='native-installation-pending'
+        write(receipt_path,json.dumps(summary,indent=2).encode())
+        if codex_source and codex_source!=market:
+            run(['codex','plugin','marketplace','remove','subcult-tadooer','--json'])
+        if codex_source!=market: run(['codex','plugin','marketplace','add',market,'--json'])
         run(['codex','plugin','add','tadooer-assistant@subcult-tadooer','--json'])
-        run(['claude','plugin','marketplace','add',market,'--scope','user','--json'])
+        if claude_source and claude_source!=market:
+            run(['claude','plugin','marketplace','remove','subcult-tadooer','--scope','user','--json'])
+        if claude_source!=market: run(['claude','plugin','marketplace','add',market,'--scope','user','--json'])
         run(['claude','plugin','install','tadooer-assistant@subcult-tadooer','--scope','user'])
         summary['ownedFiles']={str(p):state(p) for p in (launcher,setup)}
         summary['payloadHashes']=payload['hashes']
+        summary['phase']='installed'
         summary['folder']=str(folder); summary['backup']=str(backup)
         write(receipt_path,json.dumps(summary,indent=2).encode())
     if mode in ('apply','verify'):

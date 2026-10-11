@@ -30,6 +30,8 @@ class TadooerGuardTests(unittest.TestCase):
             home = Path(directory)
             payload = host.payload_for(Path(__file__), '/usr/bin/node', 'https://example.test', 'fixture')
             def client(args, check=True):
+                if 'marketplace' in args:
+                    return SimpleNamespace(returncode=0, stdout='{"marketplaces":[]}', stderr='')
                 if args[-1] == '--version':
                     return SimpleNamespace(returncode=0, stdout='v24.1.0', stderr='')
                 return SimpleNamespace(returncode=1, stdout='', stderr='absent')
