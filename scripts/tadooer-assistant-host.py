@@ -149,6 +149,10 @@ def payload_for(runtime,node,url,revision):
         if p.is_file(): files['marketplace/'+str(p.relative_to(source))]=p.read_bytes()
     return {'node':node,'url':url,'sourceRevision':revision,'files':{k:base64.b64encode(v).decode() for k,v in files.items()},'hashes':{k:digest(v) for k,v in files.items()}}
 
+def remote_source():
+    body=Path(__file__).read_text().rsplit("\nif __name__ ==",1)[0]
+    return "__file__='/tmp/tadooer-assistant-host.py'\n"+body+"\nremote(sys.argv[1],json.load(sys.stdin))\n"
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument('mode',choices=('plan','apply','verify'))
@@ -162,7 +166,7 @@ def main():
     payload=payload_for(args.runtime,args.node,args.url,args.revision)
     if args.host=='kvant': remote(args.mode,payload)
     else:
-        code="__file__='/tmp/tadooer-assistant-host.py'\n"+Path(__file__).read_text().split("if __name__ == '__main__':")[0]+"\nremote(sys.argv[1],json.load(sys.stdin))\n"
+        code=remote_source()
         command=' '.join(shlex.quote(x) for x in (args.python,'-c',code,args.mode))
         result=subprocess.run(['rtk','proxy','ssh','-o','BatchMode=yes','-o','ConnectTimeout=8',args.host,command],input=json.dumps(payload),text=True,capture_output=True,timeout=300)
         if result.returncode: raise RuntimeError(result.stderr[-2000:])

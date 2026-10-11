@@ -12,6 +12,9 @@ host = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(host)
 
 class TadooerGuardTests(unittest.TestCase):
+    def test_remote_script_compiles_without_truncating_its_own_strings(self):
+        compile(host.remote_source(), "remote-script", "exec")
+
     def test_conflicting_claude_registration_is_preserved(self):
         with tempfile.TemporaryDirectory() as directory:
             home = Path(directory)
