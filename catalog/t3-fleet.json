@@ -4,13 +4,14 @@
     "dozor",
     "almaz",
     "nuc",
-    "soyuz"
+    "soyuz",
+    "sputnik"
   ],
   "hostHomes": {
     "soyuz": "/Users/onnwee"
   },
   "hostPython": {
-    "soyuz": "/opt/homebrew/bin/python3"
+    "soyuz": "/Users/onnwee/.local/share/mise/installs/python/latest/bin/python3"
   },
   "skillSources": [
     "skills",
