@@ -35,6 +35,10 @@ def remote(command, payload):
     planfile = state / 'plan.json'
     if command == 'plan':
         payload['before'] = {p: snapshot(home / p) for p in payload['skills']}
+        payload['preservedSkills'] = [p for p, before in payload['before'].items()
+            if payload.get('additive') and (
+                any(parent.is_symlink() for parent in (home / p).parents if parent != home)
+                or (before is not None and before != desired_snapshot(payload['skills'][p])))]
         payload['configBefore'] = {p: snapshot(home / p) for p in ['.codex/config.toml', '.claude.json']}
         codex = tomllib.loads((home / '.codex/config.toml').read_text()) if (home / '.codex/config.toml').exists() else {}
         claude = json.loads((home / '.claude.json').read_text()) if (home / '.claude.json').exists() else {}
@@ -61,11 +65,12 @@ def remote(command, payload):
         payload['removeClaudeDuplicates'] = removals
         planfile.write_text(json.dumps(payload))
         planfile.chmod(0o600)
-        print(json.dumps({'skillsChanged': [p for p, before in payload['before'].items() if before != desired_snapshot(payload['skills'][p])], 'mcpAdditions': additions, 'removeClaudeDuplicates': removals}))
+        print(json.dumps({'skillsChanged': [p for p, before in payload['before'].items() if p not in payload['preservedSkills'] and before != desired_snapshot(payload['skills'][p])], 'preservedSkills': payload['preservedSkills'], 'mcpAdditions': additions, 'removeClaudeDuplicates': removals}))
         return
     plan = json.loads(planfile.read_text())
-    if plan['revision'] != payload['revision'] or plan['skills'] != payload['skills'] or plan['mcpServers'] != payload['mcpServers']:
+    if plan['revision'] != payload['revision'] or plan['skills'] != payload['skills'] or plan['mcpServers'] != payload['mcpServers'] or plan.get('additive') != payload.get('additive'):
         raise RuntimeError('Source changed since plan; preview again')
+    managed_skills = {p: files for p, files in payload['skills'].items() if p not in plan.get('preservedSkills', [])}
     if command == 'apply':
         for p, expected in {**plan['before'], **plan['configBefore']}.items():
             if snapshot(home / p) != expected:
@@ -74,7 +79,7 @@ def remote(command, payload):
         run.mkdir(mode=0o700)
         (run / 'plan.json').write_text(json.dumps(plan))
         (run / 'plan.json').chmod(0o600)
-        for relative, files in payload['skills'].items():
+        for relative, files in managed_skills.items():
             path = home / relative
             if snapshot(path) == desired_snapshot(files):
                 continue
@@ -136,7 +141,7 @@ def remote(command, payload):
             temp.write_text(content);temp.chmod(0o600);os.replace(temp, path)
         (run / 'after.json').write_text(json.dumps({p: snapshot(home / p) for p in {**plan['before'], **plan['configBefore']}}))
         print('Backup and deployment receipt: ' + str(run))
-    failures = [p for p, files in payload['skills'].items() if snapshot(home / p) != desired_snapshot(files)]
+    failures = [p for p, files in managed_skills.items() if snapshot(home / p) != desired_snapshot(files)]
     for relative, client in [('.codex/config.toml', 'codex'), ('.claude.json', 'claude')]:
         text = (home / relative).read_text()
         current = tomllib.loads(text).get('mcp_servers', {}) if client == 'codex' else json.loads(text).get('mcpServers', {})
@@ -150,7 +155,7 @@ def remote(command, payload):
                 failures.append(client + ':' + name)
     if failures:
         raise RuntimeError('Verification failed: ' + ', '.join(failures))
-    print(json.dumps({'verifiedSkillDirectories': len(payload['skills']), 'sharedMcpServers': list(payload['mcpServers']), 'revision': payload['revision']}))
+    print(json.dumps({'verifiedSkillDirectories': len(managed_skills), 'preservedSkills': plan.get('preservedSkills', []), 'sharedMcpServers': list(payload['mcpServers']), 'revision': payload['revision']}))
 
 
 def desired_snapshot(files):
@@ -171,6 +176,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command', choices=['plan', 'apply', 'verify'])
     parser.add_argument('--host', required=True, choices=manifest['hosts'])
+    parser.add_argument('--additive', action='store_true', help='Install missing skills while preserving differing existing owners and linked roots')
     args = parser.parse_args()
     host_home = manifest.get('hostHomes', {}).get(args.host, '/home/onnwee')
     host_python = manifest.get('hostPython', {}).get(args.host, 'python3')
@@ -193,7 +199,7 @@ def main():
             skills[root + '/' + source.name] = files
             skills['.claude/skills/' + source.name] = {'link': host_home + '/' + root + '/' + source.name}
     mcp_servers = {name: {**spec, **manifest.get('hostMcpOverrides', {}).get(args.host, {}).get(name, {})} for name, spec in manifest['mcpServers'].items()}
-    payload = {'revision': revision, 'skills': skills, 'mcpServers': mcp_servers, 'claudeAccountManaged': manifest.get('claudeAccountManaged', [])}
+    payload = {'additive': args.additive, 'revision': revision, 'skills': skills, 'mcpServers': mcp_servers, 'claudeAccountManaged': manifest.get('claudeAccountManaged', [])}
     code = "__file__ = '/tmp/t3-fleet-deployer.py'\n" + Path(__file__).read_text().replace("if __name__ == '__main__':\n    main()", "remote(sys.argv[1], json.load(sys.stdin))")
     command = [host_python, '-c', code, args.command] if args.host == 'kvant' else ['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', args.host, shlex.join([host_python, '-c', code, args.command])]
     subprocess.run(command, input=json.dumps(payload), text=True, check=True)
