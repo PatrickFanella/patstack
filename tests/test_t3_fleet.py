@@ -45,6 +45,25 @@ class FleetDeploymentTests(unittest.TestCase):
         self.assertEqual(len(backups), 1)
         self.assertEqual(backups[0].read_text(), 'old skill')
 
+    def test_additive_preserves_existing_skill_and_adds_mcp(self):
+        self.payload['additive'] = True
+        skill = self.home / '.codex/skills/example'
+        skill.mkdir(parents=True)
+        (skill / 'SKILL.md').write_text('foreign owner')
+        self.run_stage('plan'); self.run_stage('apply'); self.run_stage('verify')
+        self.assertEqual((skill / 'SKILL.md').read_text(), 'foreign owner')
+        self.assertIn('example.com/mcp', (self.home / '.codex/config.toml').read_text())
+
+    def test_additive_does_not_write_through_linked_root(self):
+        self.payload['additive'] = True
+        source = self.home / 'owned-root'
+        source.mkdir()
+        root = self.home / '.codex/skills'
+        root.parent.mkdir(); root.symlink_to(source)
+        self.run_stage('plan'); self.run_stage('apply'); self.run_stage('verify')
+        self.assertEqual(list(source.iterdir()), [])
+        self.assertTrue(root.is_symlink())
+
     def test_refuses_intervening_edit(self):
         self.run_stage('plan')
         skill = self.home / '.codex/skills/example'
