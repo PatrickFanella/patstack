@@ -592,5 +592,31 @@
       "nuc",
       "almaz"
     ]
+  },
+  {
+    "name": "brand-voice",
+    "description": "Define or review a product's written voice from existing brand guidance and real copy samples, with usable rules, examples, and tone shifts.",
+    "scope": "shared",
+    "sources": [
+      "okara:brand-voice"
+    ]
+  },
+  {
+    "name": "content-repurposing",
+    "description": "Adapt an existing article, demo, transcript, report, or approved product brief into requested social, newsletter, or video formats while preserving its evidence.",
+    "scope": "shared",
+    "sources": [
+      "okara:repurposing"
+    ]
+  },
+  {
+    "name": "marketing-packet",
+    "description": "Create or refresh a product marketing packet with evidence, positioning, channel copy, a demo brief, reusable prompts, and a practical campaign plan.",
+    "scope": "shared",
+    "sources": [
+      "okara:content-brief",
+      "okara:brand-voice",
+      "okara:repurposing"
+    ]
   }
 ]

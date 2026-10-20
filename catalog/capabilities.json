@@ -970,5 +970,23 @@
     "owner": "studio-brand-handoff",
     "kind": "local",
     "path": "project-agents/subcult-tv/skills/studio-brand-handoff/SKILL.md"
+  },
+  {
+    "original": "brand-voice",
+    "owner": "brand-voice",
+    "kind": "shared",
+    "path": "shared/brand-voice/SKILL.md"
+  },
+  {
+    "original": "content-repurposing",
+    "owner": "content-repurposing",
+    "kind": "shared",
+    "path": "shared/content-repurposing/SKILL.md"
+  },
+  {
+    "original": "marketing-packet",
+    "owner": "marketing-packet",
+    "kind": "shared",
+    "path": "shared/marketing-packet/SKILL.md"
   }
 ]

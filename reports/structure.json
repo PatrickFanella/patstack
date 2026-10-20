@@ -4,11 +4,15 @@
     "personalDescriptions": 6890,
     "personalBodies": 97971,
     "optionalCuratedEntrypoints": 13,
+    "sourceOnly": false,
+    "unverifiedExternalOwners": [],
+    "personalDescriptionScope": "sources and installed OS owners",
     "personalEntrypoints": 54,
     "personalDescriptionBudget": 12000,
     "personalDescriptionHeadroom": 5110,
+    "unverifiedCapabilityOwners": [],
     "retiredNames": 98,
-    "mappedOriginals": 162
+    "mappedOriginals": 165
   },
   "errors": [],
   "scriptDependencies": [

@@ -1,0 +1,15 @@
+{
+  "source": "Okara authenticated skills export",
+  "capture_date": "2026-10-19 America/Chicago",
+  "upstream_commit": null,
+  "pinning": "No upstream Git revision published; exact captured content pinned by SHA-256.",
+  "license": "No redistribution license established. Private personal deployment only; review before public redistribution.",
+  "originals": [
+    {
+      "url": "https://okara.ai/skills/repurposing",
+      "sha256": "f99b7bdd586fa07bf8a516943bbc625ae78b6ab6c8e6c446b92c64ed8f785dad",
+      "archive": "authoring/upstream/okara/2026-10-19/repurposing.md"
+    }
+  ],
+  "adaptation": "Original source retained outside discovery; concise procedure adapted for source evidence, project ownership, existing client tools, and user-authorized publication boundaries."
+}

@@ -5049,6 +5049,57 @@
       ],
       "positiveTask": "Read my Tadooer tasks and plan tomorrow; confirm requested ordinary changes through the advertised tool policy.",
       "nearMiss": "Review local source code without using Tadooer, or install a desktop app without authorization to edit tasks."
+    },
+    "brand-voice": {
+      "canonicalSource": "shared/brand-voice",
+      "owner": "codex-skills",
+      "scope": "shared",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-19",
+      "evidence": [
+        "docs/reviews/2026-10-19-marketing-skills.md"
+      ],
+      "positiveTask": "Create a usable Subsets written voice guide from its approved Personal Utility identity and product README.",
+      "nearMiss": "Fix a CLI parser defect without changing product voice."
+    },
+    "content-repurposing": {
+      "canonicalSource": "shared/content-repurposing",
+      "owner": "codex-skills",
+      "scope": "shared",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-19",
+      "evidence": [
+        "docs/reviews/2026-10-19-marketing-skills.md"
+      ],
+      "positiveTask": "Adapt the approved Subsets product brief into social, newsletter, community, and demo formats, preserving claim IDs.",
+      "nearMiss": "Invent an acquisition campaign with no source product facts or source asset."
+    },
+    "marketing-packet": {
+      "canonicalSource": "shared/marketing-packet",
+      "owner": "codex-skills",
+      "scope": "shared",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [],
+      "lastReviewed": "2026-10-19",
+      "evidence": [
+        "docs/reviews/2026-10-19-marketing-skills.md"
+      ],
+      "positiveTask": "Create docs/marketing for Subsets with claims, copy, a demo, and a measured 30-day plan.",
+      "nearMiss": "Install Node dependencies or inspect a CLI error without requesting marketing work."
     }
   }
 }

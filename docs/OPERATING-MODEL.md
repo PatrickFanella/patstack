@@ -138,6 +138,8 @@ The canonical Agent Documentation Policy in Machinum requires unslop for every p
 
 ## Installing one personal skill
 
+Shared marketing procedures and their bounded cross-device reading bundle are documented in [Shared marketing tools](MARKETING-TOOLS.md). Skill sources remain in this repository; product packets remain in their project repositories, and synced reading copies carry provenance rather than becoming competing editing masters.
+
 Use `python scripts/install.py plan --only-skill NAME`, then `apply` and `verify`
 with the same selector for a bounded personal-skill change. Selected destinations
 retain the normal source, drift, backup, and transaction checks. Other skills and
