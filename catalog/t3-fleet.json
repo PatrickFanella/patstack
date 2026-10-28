@@ -45,7 +45,7 @@
     "soyuz": {
       "context7": {
         "env": {
-          "PATH": "/opt/homebrew/bin:/Users/onnwee/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+          "PATH": "/Users/onnwee/.local/share/mise/installs/node/lts/bin:/Users/onnwee/.local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
         }
       }
     }
