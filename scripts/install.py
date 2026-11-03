@@ -57,6 +57,13 @@ def prepare(root=ROOT,state=DEFAULT_STATE,only_skills=None,only_shared=None):
  destinations[target]=str(root/'repository-skills/blacktower-development');groups[target]=3
  catalog=read(root/'catalog/proposed-catalog.json');keep={r['name'] for r in catalog if r['scope']=='personal'}
  personal=Path(config['personalRoot'])
+ retired_names=set(read(root/'catalog/retired-names.json',{}))
+ shared_root=Path(config['sharedRoot']);shared_names={p.name for p in (root/'shared').iterdir()}
+ for p in installed['paths'].keys():
+  q=Path(p)
+  # A shared skill this installer placed and later renamed or retired.
+  if q.parent==shared_root and q.name in retired_names and q.name not in shared_names and p not in destinations:
+   destinations[p]=None;groups[p]=1
  for p in baseline.keys() | installed['paths'].keys():
   q=Path(p)
   if q.parent==personal and q.name not in keep and q.name!='.system':destinations[p]=None;groups[p]=3 if q.name.startswith('principle-') or q.name=='writing-for-agents' else (1 if q.name in {'scope-grill','relay-baton','diff-auditor'} else 2)

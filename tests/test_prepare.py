@@ -61,3 +61,18 @@ class PrepareTests(unittest.TestCase):
    selected=installer.prepare(root,state,only_skills=['ui-craft'])
    self.assertEqual(len(selected['operations']),1)
    self.assertEqual(shared_target.read_text(),'shared user edit')
+ def test_renamed_shared_skill_retires_only_installer_placed_copy(self):
+  with tempfile.TemporaryDirectory() as directory:
+   root=pathlib.Path(directory);state=root/'state';personal=root/'installed';shared=root/'shared-installed';exclude=root/'blacktower/.git/info/exclude'
+   for p in [root/'catalog',root/'skills',root/'shared/new-baton',shared/'old-baton',shared/'foreign-retired',personal,exclude.parent]:p.mkdir(parents=True,exist_ok=True)
+   (root/'shared/new-baton/SKILL.md').write_text('renamed');(shared/'old-baton/SKILL.md').write_text('placed');(shared/'foreign-retired/SKILL.md').write_text('another owner')
+   installer.save(root/'catalog/installation.json',{'personalRoot':str(personal),'sharedRoot':str(shared),'blacktowerRoot':str(root/'blacktower'),'excludePath':str(exclude)})
+   installer.save(root/'catalog/baseline.json',{});installer.save(root/'catalog/proposed-catalog.json',[])
+   installer.save(root/'catalog/retired-names.json',{'old-baton':{'owner':'new-baton'},'foreign-retired':{'owner':None}})
+   installer.save(installer.statefile(state),{'paths':{str(shared/'old-baton'):installer.snapshot(shared/'old-baton')}})
+   subprocess.run(['git','init','-q',str(root)],check=True)
+   subprocess.run(['git','-C',str(root),'-c','user.name=Fixture','-c','user.email=fixture@invalid','commit','--allow-empty','-qm','fixture'],check=True)
+   actions={op['destination']:op['action'] for op in installer.prepare(root,state)['operations']}
+   self.assertEqual(actions[str(shared/'old-baton')],'retire')
+   self.assertEqual(actions[str(shared/'new-baton')],'install')
+   self.assertNotIn(str(shared/'foreign-retired'),actions)
