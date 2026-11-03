@@ -3,8 +3,9 @@
 @/home/onnwee/.codex/RTK.md
 @/home/onnwee/.homelab/HOMELAB.md
 @/home/onnwee/.config/agent-identity/GITEA.md
+@/home/onnwee/.config/agent-instructions/WORKING.md
 
-Read these files before workspace work when the client has not expanded these references. RTK governs shell commands; HOMELAB contains the shared documentation policy and host context; GITEA selects the agent identity. Read the nearest project AGENTS.md for repository-specific instructions.
+Read these files before workspace work when the client has not expanded these references. RTK governs shell commands; HOMELAB contains the shared documentation policy and host context; GITEA selects the agent identity; WORKING records how the owner wants agents to work. Read the nearest project AGENTS.md for repository-specific instructions.
 
 For skill, profile, or global-instruction changes, use `/home/onnwee/Work/Tools/codex-skills` as the authoring source and read its AGENTS.md and `docs/OPERATING-MODEL.md`. Installed skills and global instruction links are deployment targets. System, OS, and plugin-owned skills retain their own owners.
 
