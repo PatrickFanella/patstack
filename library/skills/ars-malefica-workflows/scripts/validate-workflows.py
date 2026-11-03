@@ -58,7 +58,7 @@ def main() -> int:
     home = root / "Home.md"
     if home.exists():
         text = home.read_text(encoding="utf-8")
-        for needle in ["QuickAdd", "Threads Index", "Works Index", "Periodic Notes", "Vault Map"]:
+        for needle in ["QuickAdd", "Threads Index", "Works Index", "Periodic Notes", "Systems Index"]:
             if needle not in text:
                 problems.append(f"Home.md missing mention: {needle}")
 
