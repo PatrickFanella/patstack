@@ -45,6 +45,7 @@ CANONICAL_EXCLUDE_PREFIXES = (
     "001 Projects/Works/Distributed Creature ARG/",
     "001 Projects/Works/Documentation/Developer Community Engagement Kit/",
     ".opencode/skills/",
+    "001 Projects/Threads/Music/Ableton Performance System/",
     "003 Resources/Systems/Ableton Performance System/",
     "003 Resources/Systems/System Docs Vault/",
     "003 Resources/Systems/Vault Migrations/Design History/",

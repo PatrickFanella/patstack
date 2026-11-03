@@ -335,7 +335,7 @@
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/scripts/vault_monthly_check.py",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.agents/skills/vault-monthly-maintenance/scripts/vault_monthly_check.py",
-      "previous_sha256": null
+      "previous_sha256": "baa0afdaee6327489aec1544a4b325aa4ec312586cd412ab8524e23733adcb0a"
     },
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/scripts/vault_monthly_check.py",
