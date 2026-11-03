@@ -12,8 +12,8 @@ Author personal Codex skills, optional skill profiles, and Kvant's Codex bootstr
 | Optional profile membership | `profiles/*.txt` | `~/.agents/skill-profiles` links here |
 | Switchyard OpenCode skill selection | `runtime-bundles/switchyard-opencode.json` and the selected skill owners | Generated image-owned snapshot in Switchyard, with source/export hashes in `services/opencode/skills.lock.json` |
 | Profile command | `scripts/skill-profile` | `~/.agents/bin/skill-profile` links here |
-| Global Codex context and RTK | `instructions/` | `~/.codex/AGENTS.md` and `RTK.md` link here |
-| Owner working style | `instructions/WORKING.md` | `~/.config/agent-instructions/WORKING.md` on every host via `scripts/working-style-host.py`; client files import it |
+| Global client instructions | `instructions/WORKING.md` and `instructions/hosts.json` | Rendered per host into `~/.codex/AGENTS.md`, `~/.claude/CLAUDE.md` and `~/.config/opencode/AGENTS.md` by `scripts/global-instructions.py` |
+| RTK guidance | `instructions/RTK.md` | Kvant's `~/.codex/RTK.md` and `~/.claude/RTK.md` link here; rendered files carry the short rule on RTK hosts |
 | Shared docs policy and HOMELAB | Machinum canonical policy/host briefings | Guarded `sync-briefings.py` generates `~/.homelab/HOMELAB.md` |
 | Blacktower package and fleet enablement | Blacktower source and Estate Config `skills/hosts.json` | Estate Config's host-selected deployment |
 | Four-vault instructions and local skills | `vault-agents/<vault>/AGENTS.md` and `vault-agents/<vault>/skills/`; deployment map in `catalog/vault-agents.json` | Each vault's `AGENTS.md`, `.agents/skills/`, and compatible `.opencode/skills/` copies via `scripts/vault-agents.py`; existing optional-library copies are also mapped. Blacktower package copies retain their package owner and need a separate release. |
@@ -52,8 +52,8 @@ To update an optional skill already active, edit its canonical library source an
 
 ## Claude Code on Kvant
 
-Claude's `~/.claude/CLAUDE.md` links to `instructions/CLAUDE.md`, which imports
-the shared global context. The workstation link manifest exposes the current
+Claude's `~/.claude/CLAUDE.md` is rendered like every host's (see Global client
+instructions). The workstation link manifest exposes the current
 63 curated personal skills and five active shared skills through individual
 links in `~/.claude/skills/`. Its two existing OS-owned skills and account-synced
 skills keep their owners. System and Codex plugin skills are not copied.
@@ -78,22 +78,29 @@ source-link installer.
 Claude keeps its own runtime, model, permissions, hooks, authentication, and
 memory. A linked skill that needs a missing tool must report the limitation.
 
-## Owner working style
+## Global client instructions
 
-`instructions/WORKING.md` holds the owner's working preferences for every agent
-and client. Write it from observed failures in session history, not copied
-templates; keep each rule a default the owner can override in a prompt. When a
-correction recurs, add a rule here with a short bad/good example.
+Every host's Codex, Claude Code and OpenCode global file is generated. The
+shared part is `instructions/WORKING.md`: the owner's working preferences,
+written from observed failures in session history and kept as defaults a prompt
+can override. When a correction recurs, add a rule there with a short bad/good
+example. Per-host facts (home, RTK, vaults, Blacktower, local notes) live in
+`instructions/hosts.json`; client differences live in the renderer.
 
-Deploy per host with `python scripts/working-style-host.py plan --host HOST`,
-review, then `apply` and `verify`. The script writes the shared copy, appends one
-`@` import to user-controlled `~/.codex/AGENTS.md`, `~/.claude/CLAUDE.md` and
-`~/.config/opencode/AGENTS.md`, and skips client files that are symlinks into
-this repository (Kvant imports it from `instructions/AGENTS.md`). It refuses a
-hand-edited deployed copy and any change between plan and apply. Receipts and
-private backups are under `~/.local/state/agent-working-style/`; `rollback`
-restores the latest run only when every touched file still matches its receipt.
-Start a fresh agent session to load a change.
+Claude expands `@` imports; Codex does not (checked on 2026-11-03 with a
+no-tools probe that could not see HOMELAB content). Codex and OpenCode files
+therefore tell the agent to open HOMELAB and GITEA itself, and owned content is
+inlined rather than imported. Externally owned files stay references: HOMELAB is
+generated from Machinum and GITEA is written by `gitea-agent-host.py`, whose
+duplicate check finds the `@` path already present.
+
+Preview with `python scripts/global-instructions.py render --host HOST`. Deploy
+with `plan --host HOST`, review, then `apply` and `verify`. The first apply on a
+host adopts the existing files after backing them up, including Kvant's former
+symlinks; later runs refuse a file hand-edited since the last deploy. Receipts
+and private backups are under `~/.local/state/agent-global-instructions/`;
+`rollback` restores the latest run only when every touched file still matches
+its receipt. Start a fresh agent session to load a change.
 
 ## Runtime instruction chain
 
