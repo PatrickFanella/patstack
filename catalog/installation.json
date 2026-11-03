@@ -2,6 +2,6 @@
   "archive": "/home/onnwee/.codex/skill-backups/20260908T034154Z-before-consolidation",
   "personalRoot": "/home/onnwee/.codex/skills",
   "sharedRoot": "/home/onnwee/.agents/skills",
-  "blacktowerRoot": "/home/onnwee/Work/tools/blacktower",
-  "excludePath": "/home/onnwee/Work/tools/blacktower/.git/info/exclude"
+  "blacktowerRoot": "/home/onnwee/Work/Tools/blacktower",
+  "excludePath": "/home/onnwee/Work/Tools/blacktower/.git/info/exclude"
 }

@@ -84,11 +84,23 @@ def prepare(root=ROOT,state=DEFAULT_STATE,only_skills=None,only_shared=None):
    'ownership':'repository-local' if dest==target or dest==exclude else 'shared-personal' if Path(dest).parent==Path(config['sharedRoot']) else 'personal',
    'retiredName':Path(dest).name if desired is None else None,
    'payload':payload if dest==exclude else None,'action':'unchanged' if actual==desired else 'retire' if desired is None else 'install'})
- protected={p:s for p,s in baseline.items() if p not in destinations and (p.endswith('/.system') or '/usr/share/' in p or Path(p).name in {'omarchy','diagnose-crash'})}
- for p,s in protected.items():
-  if snapshot(p)!=s:raise RuntimeError(f'Externally owned skill changed: {p}')
+ protected,changed=external_owners(baseline,destinations)
  revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
- return {'sourceRoot':str(root),'sourceRevision':revision,'operations':operations,'protected':protected,'previousInstalled':installed}
+ return {'sourceRoot':str(root),'sourceRevision':revision,'operations':operations,'protected':protected,
+  'externalOwnersChangedSinceBaseline':changed,'previousInstalled':installed}
+
+def external_owners(baseline,destinations):
+ """Snapshot OS-, system- and Omarchy-owned skills as they are now.
+
+ Their owners update them (Codex upgrades .system; Omarchy exists only on some
+ hosts), so a stale baseline is reported, not enforced. apply and verify still
+ refuse any change to these paths while the installer runs."""
+ protected={};changed=[]
+ for p,s in baseline.items():
+  if p in destinations or not (p.endswith('/.system') or '/usr/share/' in p or Path(p).name in {'omarchy','diagnose-crash'}):continue
+  protected[p]=snapshot(p)
+  if protected[p]!=s:changed.append(p)
+ return protected,sorted(changed)
 
 def validate_current(op,phase):
  actual=snapshot(op['destination'])
