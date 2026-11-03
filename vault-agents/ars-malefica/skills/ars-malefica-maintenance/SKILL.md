@@ -1,6 +1,6 @@
 ---
 name: ars-malefica-maintenance
-description: "Personal vault/repository maintenance for ars-malefica. Use when validating vault structure, archive/redirect hygiene, workspace integrity, plugin/API posture, git safety, or staged secret checks. Triggers: maintenance, validate vault, archive, redirects, workspaces, plugin check, API posture, git safety, secret scan, repo health."
+description: "Ars Malefica repo hygiene. Use to validate vault structure, redirects, workspaces, plugin data posture, git staging or staged secrets before a commit. Not for the monthly upkeep pass (vault-monthly-maintenance)."
 metadata:
   blacktower-pack: personal
   blacktower-kind: workflow
@@ -31,7 +31,7 @@ Use for safe repo/vault upkeep.
 2. Prefer validation over deletion; archive first, remove later.
 3. Keep plugin/API data secret-free; never stage secret-bearing blobs.
 4. Verify paperless and remotely-save data.json are gitignored.
-5. Run relevant individual checks from `references/validation-notes.md`. The aggregate maintenance gate and legacy structural validator predate the split; report their findings without rebuilding retired folders. Run `rtk proxy python scripts/documentation.py audit` for the four-vault registry and the migration tests when changing migration code. Check the specific changed workspace or capture in Obsidian.
+5. Run relevant individual checks from `references/validation-notes.md`. The aggregate maintenance gate and legacy structural validator predate the split; report their findings without rebuilding retired folders. Run `python3 scripts/documentation.py audit` from the vault root for the four-vault registry and the migration tests when changing migration code. Check the specific changed workspace or capture in Obsidian.
 
 6. Run the staged secret scan separately after staging.
 7. Finish with `git diff --cached --check`.
@@ -57,9 +57,8 @@ Use for safe repo/vault upkeep.
   OS junk.
 - Use `scan-secrets.sh` on staged changes before commit.
 
-## Key surfaces (post Wave 1-6)
+## Key surfaces
 
-- 41 enabled plugins, 10 optimized configs
-- 8 workspaces, 3 Kanban boards
+- Read plugin, workspace and board counts from the current `.obsidian` JSON; counts recorded after the Wave 1-6 work are stale.
 - Monthly health automation is intentionally deferred; run the validation
   workflow manually when closing a maintenance slice.

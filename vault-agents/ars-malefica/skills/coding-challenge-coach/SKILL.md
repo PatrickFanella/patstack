@@ -1,6 +1,6 @@
 ---
 name: coding-challenge-coach
-description: Establish an evidence-based coding baseline, generate adaptive original programming challenges, review attempts, diagnose bottlenecks, and maintain the Ars Malefica coding-practice ledger. Use when the user asks to assess their coding level, start or continue coding challenges, get a hint or code review on an active challenge, practice algorithms or software-engineering skills, review progress, or build the next challenge block. Do not use for ordinary implementation work where the user wants the agent to write the solution rather than coach their attempt.
+description: "Coding practice coach. Use to assess the user's coding baseline, give the next challenge or a hint, review an attempt, or plan the next block in the Ars Malefica ledger. Not when the agent should write the code."
 metadata:
   compatibility: Requires Python 3 for the bundled validator and a user-approved local workspace or repository for executable challenges. Network access is optional.
   blacktower-pack: personal-learning

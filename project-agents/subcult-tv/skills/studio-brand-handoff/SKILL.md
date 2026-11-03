@@ -1,6 +1,6 @@
 ---
 name: studio-brand-handoff
-description: Prepare or integrate a selected Studio brand pack into a SUBCULT product repository with explicit asset selection, source hashes, token mappings, reproducible exports and product verification.
+description: "Studio brand handoff. Use to plan, integrate or refresh a selected Studio brand pack in a SUBCULT product repository with asset mappings, hashes, tokens and exports. Not for selecting or auditing a brand."
 ---
 
 # Studio brand handoff

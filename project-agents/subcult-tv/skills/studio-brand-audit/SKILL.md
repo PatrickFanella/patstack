@@ -1,6 +1,6 @@
 ---
 name: studio-brand-audit
-description: Compare a SUBCULT product's implemented website or promotional assets with its selected Studio brand system, and report evidence-backed discrepancies in identity, tokens, copy, accessibility and exports.
+description: "Studio brand audit. Use to check a SUBCULT product's site or promo assets against its selected Studio brand pack, verify fixes, or repair drift. Not for choosing a new direction (studio-brand-system)."
 ---
 
 # Studio brand audit
@@ -33,6 +33,6 @@ Measure relevant contrast pairs and inspect keyboard/focus behavior when the int
 
 Place a scoped report under `studio/studies/reviews/<dated-audit>/`, or the product's review location if that product owns the work. Each actionable finding needs: affected file/URL and state, observed behavior, expected rule with source, practical impact, evidence, proposed fix and owning repository. Rank by impact; separate verified defects, specification gaps and optional improvements. Include representative matching behavior so absence of findings is not mistaken for absence of inspection.
 
-If repairing, preserve owner-edited masters, change only the affected sources, regenerate their exports and update manifests/provenance together. Run relevant product checks and `rtk make check-studio check-studio-automation` for Studio changes. Verify fixed states and exports again. Do not silently replace the selected direction or deploy a site as an audit step.
+If repairing, preserve owner-edited masters, change only the affected sources, regenerate their exports and update manifests/provenance together. Run relevant product checks and `make check-studio check-studio-automation` for Studio changes. Verify fixed states and exports again. Do not silently replace the selected direction or deploy a site as an audit step.
 
 Finish with the report, prioritized findings, inspected scope, checks and limitations. An audit is complete when each finding is supported and routed to an owner. A fix is verified only for the source, render and runtime boundaries actually checked.
