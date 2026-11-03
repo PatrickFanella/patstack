@@ -98,3 +98,26 @@ class InstallerTransactionTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ExternalOwnerTests(unittest.TestCase):
+    def test_changed_owner_is_reported_and_then_guarded(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            system = root / ".codex/skills/.system"
+            system.mkdir(parents=True)
+            (system / "SKILL.md").write_text("old")
+            baseline = {str(system): installer.snapshot(system), str(root / "gone/omarchy"): {"type": "symlink"}}
+            (system / "SKILL.md").write_text("upgraded by its owner")
+            protected, changed = installer.external_owners(baseline, {})
+            self.assertEqual(changed, sorted(baseline))
+            self.assertIsNone(protected[str(root / "gone/omarchy")])
+            state, target, source = root / "state", root / "target", root / "source"
+            target.write_text("a"); source.write_text("b")
+            plan = toy_plan(root, installer.snapshot(target), installer.snapshot(source), source)
+            plan["protected"] = protected
+            (system / "SKILL.md").write_text("changed during the run")
+            with self.assertRaisesRegex(RuntimeError, "Protected path drift"):
+                installer.apply(plan, state)
+            self.assertEqual(target.read_text(), "a")
+
