@@ -1,10 +1,10 @@
 [
   {
-    "name": "agent-workspace-linux",
+    "name": "sandbox-desktop",
     "description": "Use when a task needs an isolated hidden Linux desktop or workspace-owned browser: GUI app QA, web/browser/shopping automation, sandboxed app observation, or stale workspace cleanup. Routes agent-workspace-linux MCP tools on demand. Does NOT apply to host desktop/Chrome control, generic MCP setup, or pure code/file edits.",
-    "path": "/home/onnwee/.codex/skills/agent-workspace-linux/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/sandbox-desktop/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/agent-workspace-linux/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/sandbox-desktop/SKILL.md",
     "entrypointSha256": "d7667ac34c058721fe7383cde7159dfbc29f9871f0cb2676c37005803aedc4da",
     "descriptionChars": 323,
     "bodyChars": 7294,
@@ -30,11 +30,11 @@
     "files": 7
   },
   {
-    "name": "architecture-patterns",
+    "name": "boundary-drafter",
     "description": "Implement proven backend architecture patterns including Clean Architecture, Hexagonal Architecture, and Domain-Driven Design. Use this skill when designing clean architecture for a new microservice, when refactoring a monolith to use bounded contexts, when implementing hexagonal or onion architecture patterns, or when debugging dependency cycles between application layers.",
-    "path": "/home/onnwee/.codex/skills/architecture-patterns/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/boundary-drafter/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/architecture-patterns/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/boundary-drafter/SKILL.md",
     "entrypointSha256": "80f90e0045016701e70972baaed9f18c1da95a027c171f8ca3dcd7df948034d4",
     "descriptionChars": 376,
     "bodyChars": 1541,
@@ -45,11 +45,11 @@
     "files": 6
   },
   {
-    "name": "auth-implementation-patterns",
+    "name": "auth-gatekeeper",
     "description": "Master authentication and authorization patterns including JWT, OAuth2, session management, and RBAC to build secure, scalable access control systems. Use when implementing auth systems, securing APIs, or debugging security issues.",
-    "path": "/home/onnwee/.codex/skills/auth-implementation-patterns/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/auth-gatekeeper/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/auth-implementation-patterns/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/auth-gatekeeper/SKILL.md",
     "entrypointSha256": "5cd1f20268be068723acfd985c0e7b6df642aaf8815d6fba7d7321d8f26c3f15",
     "descriptionChars": 231,
     "bodyChars": 2549,
@@ -135,11 +135,11 @@
     "files": 2
   },
   {
-    "name": "cli-developer",
+    "name": "cli-contract-smith",
     "description": "Use when building CLI tools, implementing argument parsing, or adding interactive prompts. Invoke for parsing flags and subcommands, displaying progress bars and spinners, generating bash/zsh/fish completion scripts, CLI design, shell completions, and cross-platform terminal applications using Rust clap, Go Cobra, or TypeScript Commander.",
-    "path": "/home/onnwee/.codex/skills/cli-developer/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/cli-contract-smith/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/cli-developer/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/cli-contract-smith/SKILL.md",
     "entrypointSha256": "364d5eea728a0d0ecc7c958381ce3d763a1c606de4d8eb3adb62849c2326af7f",
     "descriptionChars": 340,
     "bodyChars": 4526,
@@ -165,11 +165,11 @@
     "files": 2
   },
   {
-    "name": "clonedeps",
+    "name": "dep-source-clone",
     "description": "Clone important project dependency source code into an ignored local workspace so OpenCode can inspect library internals. Use when the user asks to clone dependencies, inspect dependency/source internals, understand SDK/framework behavior from source, debug library implementation details, or make core dependency repos locally readable. Do not use for ordinary API/docs questions where @librarian is enough.",
-    "path": "/home/onnwee/.codex/skills/clonedeps/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/dep-source-clone/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/clonedeps/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/dep-source-clone/SKILL.md",
     "entrypointSha256": "4aa47820368d7cdffbca3ef56707a847be7f5ac5ca5efe76638119428066389b",
     "descriptionChars": 408,
     "bodyChars": 1561,
@@ -180,11 +180,11 @@
     "files": 5
   },
   {
-    "name": "cloudflare-deploy",
+    "name": "cf-edge-deploy",
     "description": "Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare.",
-    "path": "/home/onnwee/.codex/skills/cloudflare-deploy/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/cf-edge-deploy/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/cloudflare-deploy/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/cf-edge-deploy/SKILL.md",
     "entrypointSha256": "e28313a420e7c6f21e5f887ccb146cf598e503f61adaf4dcebe74a95206774ee",
     "descriptionChars": 189,
     "bodyChars": 1408,
@@ -210,11 +210,11 @@
     "files": 5
   },
   {
-    "name": "codemap",
+    "name": "repo-atlas",
     "description": "Generate comprehensive hierarchical codemaps for UNFAMILIAR repositories. Expensive operation - only use when explicitly asked for codebase documentation or initial repository mapping",
-    "path": "/home/onnwee/.codex/skills/codemap/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/repo-atlas/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/codemap/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/repo-atlas/SKILL.md",
     "entrypointSha256": "0eb445bf6922899bf68877b8df58c8b068351c73b81bb3322ff89ca6d95ebcd9",
     "descriptionChars": 183,
     "bodyChars": 6473,
@@ -225,11 +225,11 @@
     "files": 6
   },
   {
-    "name": "codemod-surgeon",
+    "name": "sweep-rewriter",
     "description": "Plan and execute safe repo-wide mechanical refactors, API migrations, subsystem removals, renames, generated-index moves, and AST-grep/codemod rewrites. Use when many files must change consistently with low semantic ambiguity.",
-    "path": "/home/onnwee/.codex/skills/codemod-surgeon/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/sweep-rewriter/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/codemod-surgeon/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/sweep-rewriter/SKILL.md",
     "entrypointSha256": "76fec4bf6995d2cf93c4d6a253f21407148aaa8ec628556902c1793dee21a275",
     "descriptionChars": 226,
     "bodyChars": 997,
@@ -300,11 +300,11 @@
     "files": 3
   },
   {
-    "name": "database-migration",
+    "name": "schema-migrator",
     "description": "Execute database migrations across ORMs and platforms with zero-downtime strategies, data transformation, and rollback procedures. Use when migrating databases, changing schemas, performing data transformations, or implementing zero-downtime deployment strategies.",
-    "path": "/home/onnwee/.codex/skills/database-migration/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/schema-migrator/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/database-migration/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/schema-migrator/SKILL.md",
     "entrypointSha256": "2caccd69a485628de794ed4482f2fabc5c8faf8909287ddf939da18123f9a711",
     "descriptionChars": 264,
     "bodyChars": 1426,
@@ -315,11 +315,11 @@
     "files": 3
   },
   {
-    "name": "dependency-upgrade",
+    "name": "dep-upgrade-pilot",
     "description": "Manage major dependency version upgrades with compatibility analysis, staged rollout, and comprehensive testing. Use when upgrading framework versions, updating major dependencies, or managing breaking changes in libraries.",
-    "path": "/home/onnwee/.codex/skills/dependency-upgrade/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/dep-upgrade-pilot/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/dependency-upgrade/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/dep-upgrade-pilot/SKILL.md",
     "entrypointSha256": "05b7cdc52dc5f21654408d3698549ae6c6290b2d34f63942a793da7ea3959dad",
     "descriptionChars": 223,
     "bodyChars": 7355,
@@ -360,11 +360,11 @@
     "files": 2
   },
   {
-    "name": "develop-userscripts",
+    "name": "userscript-workshop",
     "description": "Use when building, debugging, packaging, or publishing browser userscripts for Tampermonkey or ScriptCat, including GM APIs, metadata blocks, permission issues, @match/@grant/@connect setup, ScriptCat background or scheduled scripts, UserConfig blocks, or subscription workflows.",
-    "path": "/home/onnwee/.codex/skills/develop-userscripts/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/userscript-workshop/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/develop-userscripts/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/userscript-workshop/SKILL.md",
     "entrypointSha256": "61d04a5a2795c615b0111aac0f057831f10c73bbb53d5b6e99518ec155d650e6",
     "descriptionChars": 279,
     "bodyChars": 5341,
@@ -465,11 +465,11 @@
     "files": 2
   },
   {
-    "name": "frontend-design",
+    "name": "ui-craft",
     "description": "Create, polish, and visually review distinctive production-grade frontend interfaces. Use when building or improving web UI, React components, Tailwind layouts, dashboards, landing pages, responsive design, visual consistency, or fixing UI/design issues in code.",
-    "path": "/home/onnwee/.codex/skills/frontend-design/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/ui-craft/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/frontend-design/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/ui-craft/SKILL.md",
     "entrypointSha256": "a5a62f2a33072dd54ec326904127e46e081c1ffea89426d59dc575185095801a",
     "descriptionChars": 262,
     "bodyChars": 2703,
@@ -480,11 +480,11 @@
     "files": 16
   },
   {
-    "name": "gdpr-data-handling",
+    "name": "privacy-controls",
     "description": "Implement GDPR-compliant data handling with consent management, data subject rights, and privacy by design. Use when building systems that process EU personal data, implementing privacy controls, or conducting GDPR compliance reviews.",
-    "path": "/home/onnwee/.codex/skills/gdpr-data-handling/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/privacy-controls/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/gdpr-data-handling/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/privacy-controls/SKILL.md",
     "entrypointSha256": "384f245c54be0c8134ea25cc2598fe1342d9c42f0884cba0a667b09c57720ddb",
     "descriptionChars": 234,
     "bodyChars": 1396,
@@ -495,11 +495,11 @@
     "files": 3
   },
   {
-    "name": "git-advanced-workflows",
+    "name": "git-surgery",
     "description": "Master advanced Git workflows including rebasing, cherry-picking, bisect, worktrees, and reflog to maintain clean history and recover from any situation. Use when managing complex Git histories, collaborating on feature branches, or troubleshooting repository issues.",
-    "path": "/home/onnwee/.codex/skills/git-advanced-workflows/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/git-surgery/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/git-advanced-workflows/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/git-surgery/SKILL.md",
     "entrypointSha256": "77c31506f1e7826f54539231ff17c365dec9ad3efbe9c6280c0d22a50066c6bf",
     "descriptionChars": 267,
     "bodyChars": 1433,
@@ -510,11 +510,11 @@
     "files": 6
   },
   {
-    "name": "gitea-repo-overhaul",
+    "name": "gitea-fleet-tidy",
     "description": "End-to-end Gitea/Forgejo repository overhaul workflow for self-hosted repos. Use when asked to inventory, modernize, normalize, audit, or aggressively improve Gitea repos by creating manifests/reports, normalizing labels/issues/wiki pages, enabling repo units, adding soft branch protections, migrating default branches, planning workflows/releases/packages, and keeping repo settings sane.",
-    "path": "/home/onnwee/.codex/skills/gitea-repo-overhaul/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/gitea-fleet-tidy/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/gitea-repo-overhaul/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/gitea-fleet-tidy/SKILL.md",
     "entrypointSha256": "555284dd3eb7b744dfb3ec3e4b48cfad4f42c34a489f1138580b96ed50a1d1bb",
     "descriptionChars": 390,
     "bodyChars": 1597,
@@ -540,11 +540,11 @@
     "files": 19
   },
   {
-    "name": "golang-pro",
+    "name": "go-craft",
     "description": "Implements concurrent Go patterns using goroutines and channels, designs and builds microservices with gRPC or REST, optimizes Go application performance with pprof, and enforces idiomatic Go with generics, interfaces, and robust error handling. Use when building Go applications requiring concurrent programming, microservices architecture, or high-performance systems. Invoke for goroutines, channels, Go generics, gRPC integration, CLI tools, benchmarks, or table-driven testing.",
-    "path": "/home/onnwee/.codex/skills/golang-pro/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/go-craft/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/golang-pro/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/go-craft/SKILL.md",
     "entrypointSha256": "3012c2ae549c364670c99ef0ebc1dce466847e30cd7f9f171820bd720e578b42",
     "descriptionChars": 482,
     "bodyChars": 4736,
@@ -570,11 +570,11 @@
     "files": 2
   },
   {
-    "name": "hatch-pet",
+    "name": "pet-hatchery",
     "description": "Create, repair, validate, visually QA, and package Codex-compatible v2 animated pets from character art, generated images, company or prospect brand cues, or visual references. Use for any new Codex pet, custom mascot, non-pixel pet style, brand-inspired pet, existing-pet repair, or 8x11 spritesheet workflow requiring all 9 standard animation rows, 16 look directions, deterministic assembly, QA artifacts, and spriteVersionNumber 2 packaging.",
-    "path": "/home/onnwee/.codex/skills/hatch-pet/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/pet-hatchery/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/hatch-pet/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/pet-hatchery/SKILL.md",
     "entrypointSha256": "ccfabd5d761faa721586f8793dd93bdd735e2a2c07099a5d593a7e31286e58f3",
     "descriptionChars": 445,
     "bodyChars": 85025,
@@ -615,11 +615,11 @@
     "files": 6
   },
   {
-    "name": "interface-originality-audit",
+    "name": "ui-cliche-audit",
     "description": "Review product and marketing interfaces for context-free AI/SaaS design defaults, weak product evidence, and missing production states. Use when a UI feels generic, template-derived, or visually interchangeable, or for a pre-ship originality and credibility review. Use frontend-design to implement fixes and unslop to revise copy.",
-    "path": "/home/onnwee/.codex/skills/interface-originality-audit/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/ui-cliche-audit/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/interface-originality-audit/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/ui-cliche-audit/SKILL.md",
     "entrypointSha256": "4c9561561eda7cf341728cdc6a93d271662254c207e347ff69892c4726525a35",
     "descriptionChars": 331,
     "bodyChars": 3510,
@@ -660,11 +660,11 @@
     "files": 5
   },
   {
-    "name": "lightweight-charts",
+    "name": "tv-candle-charts",
     "description": "Use when working with TradingView's lightweight-charts — creating charts, adding series (Line/Area/Bar/Candlestick/Histogram), configuring time and price scales, streaming realtime or historical data, panes, markers, per-bar/per-point colors, tooltips, coordinate conversion, custom plugins or primitives, non-financial horizontal scales, SSR/browser loading, or React/Vue/Web Components wrappers. Covers v5 API conventions and the common time, scale, marker, plugin, and wrapper foot-guns.",
-    "path": "/home/onnwee/.codex/skills/lightweight-charts/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/tv-candle-charts/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/lightweight-charts/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/tv-candle-charts/SKILL.md",
     "entrypointSha256": "f0fb1363ec9c6d2d782691de58a771f6d1a824e978a188134acfa3251ed9a5a7",
     "descriptionChars": 490,
     "bodyChars": 1652,
@@ -675,11 +675,11 @@
     "files": 3
   },
   {
-    "name": "llm-evaluation",
+    "name": "eval-bench",
     "description": "Implement comprehensive evaluation strategies for LLM applications using automated metrics, human feedback, and benchmarking. Use when testing LLM performance, measuring AI application quality, or establishing evaluation frameworks.",
-    "path": "/home/onnwee/.codex/skills/llm-evaluation/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/eval-bench/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/llm-evaluation/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/eval-bench/SKILL.md",
     "entrypointSha256": "85534dc00d4dd91a3bde0f8d157e2171f9450a8e3facaf76b0c7abb1a8b38d9c",
     "descriptionChars": 232,
     "bodyChars": 569,
@@ -735,11 +735,11 @@
     "files": 2
   },
   {
-    "name": "mcp-builder",
+    "name": "mcp-server-forge",
     "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, preferably in Go using the MCP API, with TypeScript as the primary fallback.",
-    "path": "/home/onnwee/.codex/skills/mcp-builder/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/mcp-server-forge/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/mcp-builder/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/mcp-server-forge/SKILL.md",
     "entrypointSha256": "e3102f4817976d600424b09636ae23a7d18157284ed7fe2139100eb1cb1d18cd",
     "descriptionChars": 296,
     "bodyChars": 1533,
@@ -750,11 +750,11 @@
     "files": 15
   },
   {
-    "name": "mcp-integration-lifecycle",
+    "name": "mcp-wire-tracer",
     "description": "Add, diagnose, normalize, or verify Model Context Protocol integrations across their complete client lifecycle. Use for stdio or HTTP MCP servers when a server must be registered, launches but does not initialize, works in one client but not another, exposes missing tools or resources, needs approval or OAuth configuration, or requires reload and smallest-fix verification.",
-    "path": "/home/onnwee/.codex/skills/mcp-integration-lifecycle/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/mcp-wire-tracer/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/mcp-integration-lifecycle/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/mcp-wire-tracer/SKILL.md",
     "entrypointSha256": "ce7976d8f06abe387331c38fac2430fd88b4596bde6aacca156f5a7b076e2a3d",
     "descriptionChars": 375,
     "bodyChars": 4330,
@@ -780,11 +780,11 @@
     "files": 3
   },
   {
-    "name": "mtls-configuration",
+    "name": "mtls-trust-chain",
     "description": "Configure mutual TLS (mTLS) for zero-trust service-to-service communication. Use when implementing zero-trust networking, certificate management, or securing internal service communication.",
-    "path": "/home/onnwee/.codex/skills/mtls-configuration/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/mtls-trust-chain/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/mtls-configuration/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/mtls-trust-chain/SKILL.md",
     "entrypointSha256": "7516d6c78b2018024dfa62ac3fd88ae3e3202952e78f91b2677e24857c1645f9",
     "descriptionChars": 189,
     "bodyChars": 1932,
@@ -855,11 +855,11 @@
     "files": 4
   },
   {
-    "name": "opentui",
+    "name": "opentui-screens",
     "description": "Comprehensive OpenTUI skill for building terminal user interfaces. Covers the core imperative API, React reconciler, and Solid reconciler. Use for any TUI development task including components, layout, keyboard handling, animations, and testing.",
-    "path": "/home/onnwee/.codex/skills/opentui/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/opentui-screens/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/opentui/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/opentui-screens/SKILL.md",
     "entrypointSha256": "e9d86ec838b27d91051a51c1f65a14b48e02b5179f85d1e3c14915061b0e27f9",
     "descriptionChars": 245,
     "bodyChars": 7109,
@@ -870,11 +870,11 @@
     "files": 27
   },
   {
-    "name": "performance-investigation",
+    "name": "perf-hotpath-probe",
     "description": "Diagnose measurable performance regressions before optimizing. Use when an endpoint, job, query, build, render, or process is unexpectedly slow, CPU or memory usage is high, or a change needs benchmark-backed performance verification. Do not use for speculative optimization without an observed problem or target.",
-    "path": "/home/onnwee/.codex/skills/performance-investigation/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/perf-hotpath-probe/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/performance-investigation/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/perf-hotpath-probe/SKILL.md",
     "entrypointSha256": "6e5f81d3dd8854b52c5981de61baf8f7517560c70bb93650243a54b78cbe21dd",
     "descriptionChars": 313,
     "bodyChars": 1743,
@@ -885,11 +885,11 @@
     "files": 2
   },
   {
-    "name": "playwright",
+    "name": "playwright-cli-driver",
     "description": "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script.",
-    "path": "/home/onnwee/.codex/skills/playwright/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/playwright-cli-driver/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/playwright/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/playwright-cli-driver/SKILL.md",
     "entrypointSha256": "0ffaabcc8e0990627c4725f18bf1c7955534a796c1c199e872909de2013ce6a8",
     "descriptionChars": 209,
     "bodyChars": 3520,
@@ -930,11 +930,11 @@
     "files": 4
   },
   {
-    "name": "postgres-pro",
+    "name": "pg-plan-reader",
     "description": "Use when optimizing PostgreSQL queries, configuring replication, or implementing advanced database features. Invoke for EXPLAIN analysis, JSONB operations, extension usage, VACUUM tuning, performance monitoring.",
-    "path": "/home/onnwee/.codex/skills/postgres-pro/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/pg-plan-reader/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/postgres-pro/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/pg-plan-reader/SKILL.md",
     "entrypointSha256": "8a958c1c0ad96bc70dbf4e44f1ac377db691614b094cc1ca4b00bec1688a84bd",
     "descriptionChars": 211,
     "bodyChars": 5848,
@@ -1290,11 +1290,11 @@
     "files": 3
   },
   {
-    "name": "prototype",
+    "name": "throwaway-prototype",
     "description": "Build a throwaway prototype to flesh out a design before committing to it. Routes between two branches — a runnable terminal app for state/business-logic questions, or several radically different UI variations toggleable from one route. Use when the user wants to prototype, sanity-check a data model or state machine, mock up a UI, explore design options, or says \"prototype this\", \"let me play with it\", \"try a few designs\".",
-    "path": "/home/onnwee/.codex/skills/prototype/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/throwaway-prototype/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/prototype/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/throwaway-prototype/SKILL.md",
     "entrypointSha256": "6c9e861ecba483976d3448734c12c611310da265273ed1aef54f4118c3b67cf4",
     "descriptionChars": 426,
     "bodyChars": 2766,
@@ -1365,11 +1365,11 @@
     "files": 14
   },
   {
-    "name": "rag-implementation",
+    "name": "retrieval-pipeline",
     "description": "Build Retrieval-Augmented Generation (RAG) systems for LLM applications with vector databases and semantic search. Use when implementing knowledge-grounded AI, building document Q&A systems, or integrating LLMs with external knowledge bases.",
-    "path": "/home/onnwee/.codex/skills/rag-implementation/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/retrieval-pipeline/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/rag-implementation/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/retrieval-pipeline/SKILL.md",
     "entrypointSha256": "07186b3170c36f4ee07198e9746b399b5e86f29f5911d8cb990c8b407b0fe0e8",
     "descriptionChars": 241,
     "bodyChars": 1403,
@@ -1380,11 +1380,11 @@
     "files": 3
   },
   {
-    "name": "react-native-pro",
+    "name": "rn-expo-builder",
     "description": "React Native and Expo professional development skill covering app architecture, styling, navigation, animations, native modules, offline sync, list performance, and cross-platform mobile best practices. Use when building, reviewing, optimizing, or refactoring React Native mobile apps.",
-    "path": "/home/onnwee/.codex/skills/react-native-pro/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/rn-expo-builder/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/react-native-pro/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/rn-expo-builder/SKILL.md",
     "entrypointSha256": "a5419a1c1a26a146f198992da6cd339f8415803678f5a3b0a060b87600b63135",
     "descriptionChars": 285,
     "bodyChars": 1032,
@@ -1395,11 +1395,11 @@
     "files": 5
   },
   {
-    "name": "react-pro",
+    "name": "react-render-tuner",
     "description": "React and Next.js professional development skill covering modern React, App Router, state management, reusable component APIs, performance, bundle hygiene, data fetching, and review. Use when building, refactoring, reviewing, or optimizing React/Next.js apps with TypeScript and Tailwind.",
-    "path": "/home/onnwee/.codex/skills/react-pro/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/react-render-tuner/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/react-pro/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/react-render-tuner/SKILL.md",
     "entrypointSha256": "bd6d59b249e7fd5aea9c801775557d0fefcb193d882ec3d6ff77199615b9591d",
     "descriptionChars": 288,
     "bodyChars": 2295,
@@ -1425,11 +1425,11 @@
     "files": 4
   },
   {
-    "name": "refactor",
+    "name": "safe-refactor-pass",
     "description": "Surgical code refactoring to improve maintainability without changing behavior. Covers extracting functions, renaming variables, breaking down god functions, improving type safety, eliminating code smells, and applying design patterns. Less drastic than repo-rebuilder; use for gradual improvements.",
-    "path": "/home/onnwee/.codex/skills/refactor/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/safe-refactor-pass/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/refactor/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/safe-refactor-pass/SKILL.md",
     "entrypointSha256": "224edef7088ae41c1ed9f082fa6a3ee5df2e607a9b4aa8ad88af4ab3d6a305e8",
     "descriptionChars": 299,
     "bodyChars": 1451,
@@ -1455,11 +1455,11 @@
     "files": 6
   },
   {
-    "name": "repository-delivery-review",
+    "name": "ship-check",
     "description": "Assess a repository's implementation status, completeness, delivery readiness, technical risks, or continued viability using instructions, architecture, documentation, plans, code, tests, and current verification evidence together. Use for comprehensive project audits, abandoned-project reviews, roadmap-versus-code comparisons, readiness reports, or requests to separate complete, incomplete, planned, and unverified capability. Do not use for reviewing only a local diff or a hosted pull request.",
-    "path": "/home/onnwee/.codex/skills/repository-delivery-review/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/ship-check/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/repository-delivery-review/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/ship-check/SKILL.md",
     "entrypointSha256": "865db5707bb21f750f480fed8c2b00063cb907b8b3df9796a8b1a0088d121d0e",
     "descriptionChars": 499,
     "bodyChars": 2569,
@@ -1470,11 +1470,11 @@
     "files": 5
   },
   {
-    "name": "repository-test-maintenance",
+    "name": "test-suite-pruner",
     "description": "Clean up a repository and overhaul an oversized or brittle test suite while preserving crucial behavior. Use for removing obsolete artifacts, plans, unreachable code, redundant tests, and adding durable maintenance gates; not for routine single-bug fixes or dependency upgrades alone.",
-    "path": "/home/onnwee/.codex/skills/repository-test-maintenance/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/test-suite-pruner/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/repository-test-maintenance/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/test-suite-pruner/SKILL.md",
     "entrypointSha256": "ba3a00255bafe2bce7f2fd830dc870536c1c740e85a84658a8e123ce16a1a41c",
     "descriptionChars": 284,
     "bodyChars": 8418,
@@ -1500,11 +1500,11 @@
     "files": 2
   },
   {
-    "name": "requirements-interview",
+    "name": "scope-grill",
     "description": "Clarify ambiguous or high-risk work through a bounded requirements interview. Use when the requested outcome, constraints, acceptance criteria, or tradeoffs would materially change the implementation; skip it when repository evidence already makes the task clear.",
-    "path": "/home/onnwee/.codex/skills/requirements-interview/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/scope-grill/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/requirements-interview/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/scope-grill/SKILL.md",
     "entrypointSha256": "db565774e42287e7e435f090dbf2c5b3305858a79581aa10cbaa1b4ab7a09e10",
     "descriptionChars": 263,
     "bodyChars": 2472,
@@ -1515,11 +1515,11 @@
     "files": 7
   },
   {
-    "name": "review-agent",
+    "name": "diff-auditor",
     "description": "Perform a read-only, defect-first review of a specified code change and return every actionable finding. Use when another agent delegates review of uncommitted changes, a base-branch diff, a commit, or custom review instructions.",
-    "path": "/home/onnwee/.codex/skills/review-agent/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/diff-auditor/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/review-agent/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/diff-auditor/SKILL.md",
     "entrypointSha256": "07079efd0dc76f05fade424e5dfb048dce1de2df7626e1a4f56292a4f3f92228",
     "descriptionChars": 229,
     "bodyChars": 2390,
@@ -1560,11 +1560,11 @@
     "files": 9
   },
   {
-    "name": "rust-pro",
+    "name": "rust-ownership-async",
     "description": "Rust professional development skill covering async Rust, ownership, memory safety, Tokio, error handling, concurrency, and safe systems design. Use when writing, reviewing, debugging, or refactoring Rust code.",
-    "path": "/home/onnwee/.codex/skills/rust-pro/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/rust-ownership-async/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/rust-pro/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/rust-ownership-async/SKILL.md",
     "entrypointSha256": "69b168246c8543bb205a854c0ceecb73bb62e7a12cc0d7a587d6c0a8a989ccb3",
     "descriptionChars": 209,
     "bodyChars": 871,
@@ -1590,11 +1590,11 @@
     "files": 2
   },
   {
-    "name": "scaffold-exercises",
+    "name": "exercise-scaffold",
     "description": "Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.",
-    "path": "/home/onnwee/.codex/skills/scaffold-exercises/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/exercise-scaffold/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/scaffold-exercises/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/exercise-scaffold/SKILL.md",
     "entrypointSha256": "75f5c9d771606fb9762f16522efc954df11c324f87148d8ff069bce166257de9",
     "descriptionChars": 204,
     "bodyChars": 3339,
@@ -1605,11 +1605,11 @@
     "files": 3
   },
   {
-    "name": "secrets-management",
+    "name": "secret-rotation-flow",
     "description": "Implement secure secrets management for CI/CD pipelines using Vault, AWS Secrets Manager, or native platform solutions. Use when handling sensitive credentials, rotating secrets, or securing CI/CD environments.",
-    "path": "/home/onnwee/.codex/skills/secrets-management/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/secret-rotation-flow/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/secrets-management/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/secret-rotation-flow/SKILL.md",
     "entrypointSha256": "db0cb6deb82bb86da9575d926772f2db9369582f52658289c8ee6e6c22c38ec5",
     "descriptionChars": 210,
     "bodyChars": 2152,
@@ -1620,11 +1620,11 @@
     "files": 3
   },
   {
-    "name": "security-best-practices",
+    "name": "secure-code-audit",
     "description": "Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/report, or secure-by-default coding help. Trigger only for supported languages (python, javascript/typescript, go). Do not trigger for general code review, debugging, or non-security tasks.",
-    "path": "/home/onnwee/.codex/skills/security-best-practices/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/secure-code-audit/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/security-best-practices/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/secure-code-audit/SKILL.md",
     "entrypointSha256": "2b954e99148d90ae2a9bbde41a0c77b19e611efb28435d8daf5ed5bcacf2c18a",
     "descriptionChars": 385,
     "bodyChars": 1552,
@@ -1635,11 +1635,11 @@
     "files": 15
   },
   {
-    "name": "security-ownership-map",
+    "name": "bus-factor-map",
     "description": "Analyze git repositories to build a security ownership topology (people-to-file), compute bus factor and sensitive-code ownership, and export CSV/JSON for graph databases and visualization. Trigger only when the user explicitly wants a security-oriented ownership or bus-factor analysis grounded in git history (for example: orphaned sensitive code, security maintainers, CODEOWNERS reality checks for risk, sensitive hotspots, or ownership clusters). Do not trigger for general maintainer lists or non-security ownership questions.",
-    "path": "/home/onnwee/.codex/skills/security-ownership-map/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/bus-factor-map/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/security-ownership-map/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/bus-factor-map/SKILL.md",
     "entrypointSha256": "e189a9e9d97a15a65d3dca12b857b3c019ec95b5c58d1ebe6f14d3d396bd8611",
     "descriptionChars": 532,
     "bodyChars": 1780,
@@ -1650,11 +1650,11 @@
     "files": 10
   },
   {
-    "name": "security-threat-model",
+    "name": "stride-threat-map",
     "description": "Repository-grounded threat modeling that enumerates trust boundaries, assets, attacker capabilities, abuse paths, and mitigations, and writes a concise Markdown threat model. Trigger only when the user explicitly asks to threat model a codebase or path, enumerate threats/abuse paths, or perform AppSec threat modeling. Do not trigger for general architecture summaries, code review, or non-security design work.",
-    "path": "/home/onnwee/.codex/skills/security-threat-model/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/stride-threat-map/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/security-threat-model/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/stride-threat-map/SKILL.md",
     "entrypointSha256": "254c3fa5df74deb9c9d49877fbcdfb1c1f5320ddee779bb802958d8e251a51f2",
     "descriptionChars": 412,
     "bodyChars": 1039,
@@ -1665,11 +1665,11 @@
     "files": 11
   },
   {
-    "name": "session-handoff",
+    "name": "relay-baton",
     "description": "Preserve progress, decisions, blockers, and continuation steps when work will continue in another OpenCode session or agent. Use before a context reset, ownership transfer, or long pause; do not trigger for an ordinary final summary.",
-    "path": "/home/onnwee/.codex/skills/session-handoff/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/relay-baton/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/session-handoff/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/relay-baton/SKILL.md",
     "entrypointSha256": "44cc5aaca652a16161c54642a9f70d31fea37d76f324054acfa5e9510ace01eb",
     "descriptionChars": 233,
     "bodyChars": 1771,
@@ -1770,11 +1770,11 @@
     "files": 2
   },
   {
-    "name": "solidity-security",
+    "name": "solidity-audit",
     "description": "Master smart contract security best practices to prevent common vulnerabilities and implement secure Solidity patterns. Use when writing smart contracts, auditing existing contracts, or implementing security measures for blockchain applications.",
-    "path": "/home/onnwee/.codex/skills/solidity-security/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/solidity-audit/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/solidity-security/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/solidity-audit/SKILL.md",
     "entrypointSha256": "61e7abad699c3c9f9f74cdeba54203713603e440df491221761ff4fdc765e6a1",
     "descriptionChars": 245,
     "bodyChars": 2967,
@@ -1785,11 +1785,11 @@
     "files": 5
   },
   {
-    "name": "systematic-debugging",
+    "name": "bug-tracer",
     "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
-    "path": "/home/onnwee/.codex/skills/systematic-debugging/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/bug-tracer/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/systematic-debugging/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/bug-tracer/SKILL.md",
     "entrypointSha256": "d75ef51ff1634d55c8ce303f137a1581ebf89fff0233e86a4076df84cbcf98b6",
     "descriptionChars": 91,
     "bodyChars": 1337,
@@ -1800,11 +1800,11 @@
     "files": 17
   },
   {
-    "name": "tdd",
+    "name": "red-green-loop",
     "description": "Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions \"red-green-refactor\", wants integration tests, or asks for test-first development.",
-    "path": "/home/onnwee/.codex/skills/tdd/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/red-green-loop/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/tdd/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/red-green-loop/SKILL.md",
     "entrypointSha256": "1b6d6c54cb47827b5a4b983f5cd978fd8005e557f3df5e4a4027152132d5cf8d",
     "descriptionChars": 206,
     "bodyChars": 4432,
@@ -1815,11 +1815,11 @@
     "files": 8
   },
   {
-    "name": "technical-writing",
+    "name": "tech-doc-writer",
     "description": "Layered technical-writing standard: Diátaxis structure, Google developer style sentences, STE instruction rules, Global English syntax. Use for /technical-writing or when writing or reviewing docs, RFCs, readmes, PR descriptions, or commit messages.",
-    "path": "/home/onnwee/.codex/skills/technical-writing/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/tech-doc-writer/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/technical-writing/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/tech-doc-writer/SKILL.md",
     "entrypointSha256": "fc19431e8104962d9fcff09ec428364e228dddd0190ae2fa99b1b74f8770ead8",
     "descriptionChars": 249,
     "bodyChars": 11191,
@@ -1830,11 +1830,11 @@
     "files": 2
   },
   {
-    "name": "temporal-python-testing",
+    "name": "temporal-py-tests",
     "description": "Test Temporal workflows with pytest, time-skipping, and mocking strategies. Covers unit testing, integration testing, replay testing, and local development setup. Use when implementing Temporal workflow tests or debugging test failures.",
-    "path": "/home/onnwee/.codex/skills/temporal-python-testing/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/temporal-py-tests/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/temporal-python-testing/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/temporal-py-tests/SKILL.md",
     "entrypointSha256": "3a4495023bb2e76eda6993fb9f30949cefe77cf05b460fd3c819af803d6670b7",
     "descriptionChars": 236,
     "bodyChars": 4644,
@@ -1845,11 +1845,11 @@
     "files": 6
   },
   {
-    "name": "terraform-module-library",
+    "name": "terraform-module-smith",
     "description": "Build reusable Terraform modules for AWS, Azure, GCP, and OCI infrastructure following infrastructure-as-code best practices. Use when creating infrastructure modules, standardizing cloud provisioning, or implementing reusable IaC components.",
-    "path": "/home/onnwee/.codex/skills/terraform-module-library/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/terraform-module-smith/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/terraform-module-library/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/terraform-module-smith/SKILL.md",
     "entrypointSha256": "5d9c6900be65dc9aa5591994365897e74b911f2b6a5b80f76435b6a83dc2abc3",
     "descriptionChars": 242,
     "bodyChars": 5367,
@@ -1905,11 +1905,11 @@
     "files": 3
   },
   {
-    "name": "typescript-pro",
+    "name": "ts-type-design",
     "description": "TypeScript-first JavaScript/Node development skill. Use when building or reviewing TypeScript apps, JS/TS libraries, Node scripts, type-safe APIs, advanced types, tsconfig, tRPC, type guards, discriminated unions, or when plain JavaScript work appears in a TS-first codebase.",
-    "path": "/home/onnwee/.codex/skills/typescript-pro/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/ts-type-design/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/typescript-pro/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/ts-type-design/SKILL.md",
     "entrypointSha256": "25efef3feb03c0ac6f638c4c48c8d1858049d17fe5eb66b1f8ac84eaad38bd3f",
     "descriptionChars": 275,
     "bodyChars": 1854,
@@ -1965,11 +1965,11 @@
     "files": 2
   },
   {
-    "name": "vscode-extension-development",
+    "name": "vscode-extension-lab",
     "description": "Implement and review VS Code extension contribution points, commands, menus, when-clause visibility, and localization. Use when changing an extension's package.json contributions or user-facing strings; do not use for ordinary application commands or general translation work outside a VS Code extension.",
-    "path": "/home/onnwee/.codex/skills/vscode-extension-development/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/vscode-extension-lab/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/vscode-extension-development/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/vscode-extension-lab/SKILL.md",
     "entrypointSha256": "984d5f90720c62d9eaee0d6ea3d976a58dd5ec125fb14aab7c427779323fe986",
     "descriptionChars": 304,
     "bodyChars": 2213,
@@ -1980,11 +1980,11 @@
     "files": 2
   },
   {
-    "name": "wcag-audit-patterns",
+    "name": "wcag-a11y-audit",
     "description": "Conduct WCAG 2.2 accessibility audits with automated checks, manual verification, screen-reader considerations, and remediation guidance. Use when auditing websites for accessibility, fixing WCAG violations, validating assistive-technology support, or implementing accessible components.",
-    "path": "/home/onnwee/.codex/skills/wcag-audit-patterns/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/wcag-a11y-audit/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/wcag-audit-patterns/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/wcag-a11y-audit/SKILL.md",
     "entrypointSha256": "5c5fba7eb1cbe02b4d6c6124798a12212d022b7bd286304621604cca1b8cfc49",
     "descriptionChars": 287,
     "bodyChars": 1269,
@@ -2025,11 +2025,11 @@
     "files": 7
   },
   {
-    "name": "wizard",
+    "name": "setup-wizard-script",
     "description": "Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover. Don't invoke this for steps the agent can perform itself.",
-    "path": "/home/onnwee/.codex/skills/wizard/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/setup-wizard-script/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/wizard/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/setup-wizard-script/SKILL.md",
     "entrypointSha256": "bdf31d48211ea559878f95a4f344aeabf8d85897488ba564382bab0b000daac1",
     "descriptionChars": 313,
     "bodyChars": 3768,
@@ -2040,11 +2040,11 @@
     "files": 4
   },
   {
-    "name": "workflow-orchestration-patterns",
+    "name": "temporal-flow-design",
     "description": "Design durable workflows with Temporal for distributed systems. Covers workflow vs activity separation, saga patterns, state management, and determinism constraints. Use when building long-running processes, distributed transactions, or microservice orchestration.",
-    "path": "/home/onnwee/.codex/skills/workflow-orchestration-patterns/SKILL.md",
+    "path": "/home/onnwee/.codex/skills/temporal-flow-design/SKILL.md",
     "scope": "personal",
-    "resolvedPath": "/home/onnwee/.codex/skills/workflow-orchestration-patterns/SKILL.md",
+    "resolvedPath": "/home/onnwee/.codex/skills/temporal-flow-design/SKILL.md",
     "entrypointSha256": "3801020fea793ed05c6378dea2a0d9e50ae670eb58379f4ed26f4d5b6f0f1fa3",
     "descriptionChars": 264,
     "bodyChars": 1439,
@@ -2070,11 +2070,11 @@
     "files": 4
   },
   {
-    "name": "fact-check",
+    "name": "claim-verifier",
     "description": "Verify claims in generated output against sources. Use as a separate pass AFTER content generation to catch hallucinations. Critical constraint - cannot be reliably combined with generation in a single pass.",
-    "path": "/home/onnwee/.agents/skills/fact-check/SKILL.md",
+    "path": "/home/onnwee/.agents/skills/claim-verifier/SKILL.md",
     "scope": "shared-personal",
-    "resolvedPath": "/home/onnwee/.agents/skills/fact-check/SKILL.md",
+    "resolvedPath": "/home/onnwee/.agents/skills/claim-verifier/SKILL.md",
     "entrypointSha256": "875f6ee4745e118f1f7982a215e16fed492addbc897fd3289be4448a843d493f",
     "descriptionChars": 207,
     "bodyChars": 1361,
@@ -2085,11 +2085,11 @@
     "files": 2
   },
   {
-    "name": "requirements-interview",
+    "name": "scope-grill",
     "description": "Clarify ambiguous or high-risk work through a bounded requirements interview. Use when the requested outcome, constraints, acceptance criteria, or tradeoffs would materially change the implementation; skip it when repository evidence already makes the task clear.",
-    "path": "/home/onnwee/.agents/skills/requirements-interview/SKILL.md",
+    "path": "/home/onnwee/.agents/skills/scope-grill/SKILL.md",
     "scope": "shared-personal",
-    "resolvedPath": "/home/onnwee/.agents/skills/requirements-interview/SKILL.md",
+    "resolvedPath": "/home/onnwee/.agents/skills/scope-grill/SKILL.md",
     "entrypointSha256": "f76fcd4d088ed573148d8bd42e024361271453d62bf287b9fb6fd4f8092c0cdc",
     "descriptionChars": 263,
     "bodyChars": 2153,
@@ -2100,11 +2100,11 @@
     "files": 6
   },
   {
-    "name": "session-handoff",
+    "name": "relay-baton",
     "description": "Preserve progress, decisions, blockers, and continuation steps when work will continue in another OpenCode session or agent. Use before a context reset, ownership transfer, or long pause; do not trigger for an ordinary final summary.",
-    "path": "/home/onnwee/.agents/skills/session-handoff/SKILL.md",
+    "path": "/home/onnwee/.agents/skills/relay-baton/SKILL.md",
     "scope": "shared-personal",
-    "resolvedPath": "/home/onnwee/.agents/skills/session-handoff/SKILL.md",
+    "resolvedPath": "/home/onnwee/.agents/skills/relay-baton/SKILL.md",
     "entrypointSha256": "44cc5aaca652a16161c54642a9f70d31fea37d76f324054acfa5e9510ace01eb",
     "descriptionChars": 233,
     "bodyChars": 1771,
@@ -2115,11 +2115,11 @@
     "files": 10
   },
   {
-    "name": "summarization",
+    "name": "digest-distiller",
     "description": "Create effective summaries by matching summarization type to purpose, audience, and context. Use when asked to summarize, create TLDR, condense content, or create executive summaries. Keywords: summary, TLDR, condense, executive summary, abstract.",
-    "path": "/home/onnwee/.agents/skills/summarization/SKILL.md",
+    "path": "/home/onnwee/.agents/skills/digest-distiller/SKILL.md",
     "scope": "shared-personal",
-    "resolvedPath": "/home/onnwee/.agents/skills/summarization/SKILL.md",
+    "resolvedPath": "/home/onnwee/.agents/skills/digest-distiller/SKILL.md",
     "entrypointSha256": "655569ee4a00dd2131b78fd8e17fed7d5d9a32794b03f2acc1f46f4f209c8276",
     "descriptionChars": 247,
     "bodyChars": 5724,
@@ -2130,11 +2130,11 @@
     "files": 1
   },
   {
-    "name": "web-search",
+    "name": "web-lookup",
     "description": "Search the web using the available search backend. Prefer built-in/Exa websearch for general current information; use Brave or Tavily only if configured and specifically needed for localization, freshness, domain filtering, or AI-optimized summaries.",
-    "path": "/home/onnwee/.agents/skills/web-search/SKILL.md",
+    "path": "/home/onnwee/.agents/skills/web-lookup/SKILL.md",
     "scope": "shared-personal",
-    "resolvedPath": "/home/onnwee/.agents/skills/web-search/SKILL.md",
+    "resolvedPath": "/home/onnwee/.agents/skills/web-lookup/SKILL.md",
     "entrypointSha256": "3f1c166a5a556cc7ac9071e066b75776e218b9100cb8835fb3cd561f2238ff65",
     "descriptionChars": 250,
     "bodyChars": 1347,
@@ -2145,7 +2145,7 @@
     "files": 5
   },
   {
-    "name": "imagegen",
+    "name": "raster-image-gen",
     "description": "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas.",
     "path": "/home/onnwee/.codex/skills/.system/imagegen/SKILL.md",
     "scope": "system",
@@ -2160,7 +2160,7 @@
     "files": 12
   },
   {
-    "name": "openai-docs",
+    "name": "openai-doc-lookup",
     "description": "Use for Codex models/pricing, scheduled tasks, skills, settings, setup, troubleshooting, customization, automations, and self-knowledge—including 'you,' 'your,' 'this app,' or 'this coding agent' when they refer to Codex—and for OpenAI APIs/products and ChatGPT Work. Also use for model choice/migration, prompting, SDKs, Responses, Realtime, agents, evals, and Chat/Work/Codex comparisons. Do not use for generic app/software tasks that merely mention Codex.",
     "path": "/home/onnwee/.codex/skills/.system/openai-docs/SKILL.md",
     "scope": "system",
@@ -2175,7 +2175,7 @@
     "files": 17
   },
   {
-    "name": "plugin-creator",
+    "name": "codex-plugin-scaffold",
     "description": "Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, valid manifest defaults, and personal-marketplace entries by default. Use when Codex needs to create a new personal plugin, add optional plugin structure, generate or update marketplace entries for plugin ordering and availability metadata, or update an existing local plugin during development with the CLI-driven cachebuster and reinstall flow.",
     "path": "/home/onnwee/.codex/skills/.system/plugin-creator/SKILL.md",
     "scope": "system",
@@ -2190,7 +2190,7 @@
     "files": 11
   },
   {
-    "name": "review-agent",
+    "name": "diff-auditor",
     "description": "Perform a read-only, defect-first review of a specified code change and return every actionable finding. Use when another agent delegates review of uncommitted changes, a base-branch diff, a commit, or custom review instructions.",
     "path": "/home/onnwee/.codex/skills/.system/review-agent/SKILL.md",
     "scope": "system",
@@ -2205,7 +2205,7 @@
     "files": 2
   },
   {
-    "name": "skill-creator",
+    "name": "skill-forge",
     "description": "Create or update a Codex skill with appropriately scoped instructions and any needed supporting resources.",
     "path": "/home/onnwee/.codex/skills/.system/skill-creator/SKILL.md",
     "scope": "system",
@@ -2220,7 +2220,7 @@
     "files": 10
   },
   {
-    "name": "skill-installer",
+    "name": "codex-skill-fetch",
     "description": "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).",
     "path": "/home/onnwee/.codex/skills/.system/skill-installer/SKILL.md",
     "scope": "system",
@@ -2715,8 +2715,8 @@
     "files": 3
   },
   {
-    "name": "deep-research",
-    "description": "Conduct thorough research using authoritative sources and produce evidence-backed findings with citations. Use this skill only when the user asks specifically for Deep research, uses $deep-research, or selects Deep research in Work mode. Do not use it for ordinary research requests.",
+    "name": "repo-research-trail",
+    "description": "Conduct thorough research using authoritative sources and produce evidence-backed findings with citations. Use this skill only when the user asks specifically for Deep research, uses $repo-research-trail, or selects Deep research in Work mode. Do not use it for ordinary research requests.",
     "path": "/home/onnwee/.codex/plugins/cache/openai-curated-remote/deep-research-work/0.1.14/skills/deep-research/SKILL.md",
     "scope": "plugin:deep-research-work",
     "resolvedPath": "/home/onnwee/.codex/plugins/cache/openai-curated-remote/deep-research-work/0.1.14/skills/deep-research/SKILL.md",
@@ -3210,7 +3210,7 @@
     "files": 79
   },
   {
-    "name": "pdf",
+    "name": "pdf-render-check",
     "description": "Read, create, inspect, render, and verify PDF files where visual layout matters, including fillable AcroForms. Use Poppler rendering plus Python tools such as reportlab, pdfplumber, and pypdf for generation and extraction.",
     "path": "/home/onnwee/.codex/plugins/cache/openai-primary-runtime/pdf/26.904.11930/skills/pdf/SKILL.md",
     "scope": "plugin:pdf",

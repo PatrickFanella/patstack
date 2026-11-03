@@ -1,6 +1,6 @@
 ---
 name: openapi-spec-generation
-description: Generate and maintain OpenAPI 3.1 specifications from code, design-first specs, and validation patterns. Use when creating API documentation, generating SDKs, or ensuring API contract compliance.
+description: "OpenAPI 3.1 specs: write design-first, generate from code, lint and validate, produce SDKs or docs. Use when an API contract must be created or checked."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

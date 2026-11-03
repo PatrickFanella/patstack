@@ -1,6 +1,6 @@
 ---
 name: session-warden
-description: Diagnose and change Blacktower delegated-session lifecycle behavior. Use for stuck delegated tasks, background job board state, cancel_task, subtask/council sessions, session reuse, tmux/zellij panes, cleanup, orphan processes, or OpenCode SDK session timeout handling.
+description: "Debug Blacktower delegated-session lifecycle: stuck or orphaned tasks, cancel_task, subtask/council sessions, reuse, tmux/zellij panes, OpenCode SDK timeouts. Use when changing Blacktower session code."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: internal

@@ -1,5 +1,5 @@
 ---
-name: database-migration
+name: schema-migrator
 description: Execute database migrations across ORMs and platforms with zero-downtime strategies, data transformation, and rollback procedures. Use when migrating databases, changing schemas, performing data transformations, or implementing zero-downtime deployment strategies.
 metadata:
   blacktower-pack: engineering
@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: data-database,database,migration
 ---
 
-# database-migration
+# schema-migrator
 
 ## Use this skill
 

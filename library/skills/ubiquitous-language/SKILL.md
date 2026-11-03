@@ -1,6 +1,6 @@
 ---
 name: ubiquitous-language
-description: Extract a DDD-style ubiquitous language glossary from the current conversation, flagging ambiguities and proposing canonical terms. Saves to UBIQUITOUS_LANGUAGE.md. Use when user wants to define domain terms, build a glossary, harden terminology, create a ubiquitous language, or mentions "domain model" or "DDD".
+description: "Ubiquitous language: extract a DDD glossary from the conversation, flag ambiguous terms and propose canonical ones in UBIQUITOUS_LANGUAGE.md. Use for glossary, domain-term or DDD requests."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

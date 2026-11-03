@@ -8,7 +8,7 @@ Root and subplanners behave the same way. The root reports to the user; a subpla
 
 Load before acting:
 
-1. Load the [cursor-sdk plugin](https://github.com/cursor/plugins/tree/main/cursor-sdk) for auth, spawning, and `CursorAgentError` vs. `RunResult.status === "error"`.
+1. Load the [cursor-sdk-builder plugin](https://github.com/cursor/plugins/tree/main/cursor-sdk) for auth, spawning, and `CursorAgentError` vs. `RunResult.status === "error"`.
 
 Scripts expect `bun` on PATH. Install dependencies with `bun install` inside this skill's `scripts/` directory.
 

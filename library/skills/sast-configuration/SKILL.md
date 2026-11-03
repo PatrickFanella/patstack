@@ -1,6 +1,6 @@
 ---
 name: sast-configuration
-description: Configure Static Application Security Testing (SAST) tools for automated vulnerability detection in application code. Use when setting up security scanning, implementing DevSecOps practices, or automating code vulnerability detection.
+description: "SAST setup: Semgrep, CodeQL or SonarQube, custom rules, CI scanning (Gitea Actions or GitHub). Use when adding or tuning static security scanning. Not for manual security review (secure-code-audit)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -28,7 +28,7 @@ This skill provides comprehensive guidance for setting up and configuring SAST t
 
 - Custom rule creation with pattern matching
 - Language-specific security rules (Python, JavaScript, Go, Java, etc.)
-- CI/CD integration (GitHub Actions, GitLab CI, Jenkins)
+- CI/CD integration (Gitea Actions, GitHub Actions, GitLab CI, Jenkins). Gitea Actions accepts GitHub Actions workflow syntax under `.gitea/workflows/`, but GitHub Advanced Security and code-scanning uploads are not available there.
 - False positive tuning and rule optimization
 - Organizational policy enforcement
 

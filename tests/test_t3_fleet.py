@@ -19,7 +19,7 @@ class FleetDeploymentTests(unittest.TestCase):
         self.home = Path(self.temp.name)
         self.patch = patch.object(fleet.Path, 'home', return_value=self.home)
         self.patch.start()
-        self.payload = {'revision': 'test', 'skills': {'.codex/skills/example': {
+        self.payload = {'draft-reviser': 'test', 'skills': {'.codex/skills/example': {
             'SKILL.md': {'content': base64.b64encode(b'new skill').decode(), 'mode': 0o644}}},
             'mcpServers': {'docs': {'url': 'https://example.com/mcp'}}}
 

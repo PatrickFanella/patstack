@@ -1,8 +1,5 @@
 ---
-description: 'Ars Malefica capture and workflow operations for journal, media, thread, work, and documentation routing. Use
-  when building or validating QuickAdd, Templater, capture prompts, journal flow, media notes, thread synthesis, work metadata,
-  or Obsidian REST/MCP/CLI automation. Triggers: capture, journal, media, thread, work, QuickAdd, Templater, REST, MCP, CLI,
-  routing, workflow.'
+description: "Ars Malefica capture flows: build or fix QuickAdd and Templater captures, journal and media notes, thread synthesis, work metadata, or Obsidian REST/MCP/CLI automation."
 name: ars-malefica-workflows
 metadata:
   blacktower-pack: personal

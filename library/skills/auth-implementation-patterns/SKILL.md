@@ -1,6 +1,6 @@
 ---
-name: auth-implementation-patterns
-description: Master authentication and authorization patterns including JWT, OAuth2, session management, and RBAC to build secure, scalable access control systems. Use when implementing auth systems, securing APIs, or debugging security issues.
+name: auth-gatekeeper
+description: "Auth implementation: sessions, JWT, OAuth2/OIDC, RBAC and permission checks, or debugging a login or access-control bug."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

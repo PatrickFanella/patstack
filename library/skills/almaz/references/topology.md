@@ -1,13 +1,14 @@
 # Almaz topology reference
 
-Last verified from live state and docs pass: 2026-06-06. Refresh live state before critical operations.
+Last verified from live state and docs pass: 2026-06-06; OS baseline updated from the Machinum Almaz briefing (live check 2026-11-03). Refresh live state before critical operations. Fleet-wide canonical facts live in Machinum on Kvant.
 
 ## Host roles
 
 | Host | Address | Role | Keep here |
 | --- | --- | --- | --- |
 | `almaz` | `10.0.0.200` | Public edge/security/storage/media/GPU/automation host | Caddy, Cloudflared, Authelia, Technitium, wg-easy, media, Immich, n8n, Ollama, SnapRAID/MergerFS, almaz backups |
-| `nuc` | `10.0.0.56` | Internal Docker app/data/dashboard host | productivity apps, project apps, dashboards, most monitoring/data services |
+| `nuc` | `10.0.0.56` | Internal Docker app/data/dashboard host | productivity apps, project apps, dashboards, `ntfy`, local collectors |
+| `dozor` | `10.0.0.57` | Central monitoring/alerting host | Prometheus/alerting, Blackbox probes, fallback DNS |
 | `volga` | `10.0.0.1` | Router with USB drive treated as remote-ish backup target | router USB restic repositories for nuc and almaz |
 
 Recommended traffic shape:
@@ -21,12 +22,12 @@ Do not broadly rebalance services. Prefer host-specific ownership and explicit m
 ## Almaz baseline
 
 - Hostname: `almaz`
-- OS: Ubuntu 26.04 LTS (`resolute`)
-- Kernel baseline: `7.0.0-15-generic` pinned/held after the 2026-06-06 NVIDIA regression
+- OS: Debian 13 (trixie) since 2026-11-03; apt only. Ubuntu 26.04 was deleted the same day and there is no fallback OS.
+- Kernel at cutover: `6.12.115+deb13.1-amd64`
 - Hardware: ASUS Z170-A desktop/server, x86_64, NVIDIA GeForce GTX 1080
-- NVIDIA: driver `580.159.03`, CUDA `13.0` observed working on `7.0.0-15-generic`
-- Known bad kernel path: `7.0.0-22-generic` caused GTX 1080 `NVRM Xid 79, GPU has fallen off the bus` shortly after boot, even after a cold boot. It was purged on 2026-06-06; do not reinstall without an explicit kernel/NVIDIA test plan.
-- Docker: Docker CE `29.5.0` from Ubuntu `resolute` Docker repo; Compose plugin `5.1.3`
+- NVIDIA: driver `580.159.03`, an NVIDIA installer build with DKMS (not an apt package), so kernel updates depend on DKMS rebuilding it
+- History: on Ubuntu, kernel `7.0.0-22-generic` caused GTX 1080 `NVRM Xid 79` failures (2026-06-06). That kernel line no longer exists on this host.
+- Docker: Docker CE `29.9.2` from the Docker Debian repository (2026-11-03)
 - Display/login: `greetd`; Sway/SwayFX/kitty path documented in `terminal-and-desktop.md`
 
 ## Storage
@@ -60,7 +61,7 @@ Latest storage audit notes:
 - Health check script: `/usr/local/sbin/almaz-health-check.sh`.
 - Health check timer: `almaz-health-check.timer`.
 - Health checks should verify apt/dpkg, failed units, mounts, Docker health, critical containers, NVIDIA, and SnapRAID quick status.
-- Kernel/NVIDIA health checks should confirm `uname -r` is `7.0.0-15-generic`, `nvidia-smi` succeeds, and `apt-mark showhold` includes the known-good kernel/NVIDIA stack until a replacement is tested.
+- Kernel/NVIDIA health checks should confirm `uname -r`, that `dkms status` lists the NVIDIA module for that kernel, and that `nvidia-smi` succeeds.
 - Critical post-upgrade fix: `wg-easy` needs `/lib/modules:/lib/modules:ro` in compose.
 
 ## Active documentation anchors

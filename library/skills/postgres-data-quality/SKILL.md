@@ -1,6 +1,6 @@
 ---
 name: postgres-data-quality
-description: Implement PostgreSQL-first data quality checks using constraints, indexes, validation queries, pgTAP/dbt when useful, and CI-safe SQL checks. Use when validating Postgres schemas, tables, migrations, ETL outputs, or data contracts. Prefer native Postgres over Great Expectations unless explicitly requested.
+description: "PostgreSQL data quality checks: constraints, indexes, validation queries, pgTAP or dbt tests and CI-safe SQL for schemas, migrations, ETL outputs and data contracts."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

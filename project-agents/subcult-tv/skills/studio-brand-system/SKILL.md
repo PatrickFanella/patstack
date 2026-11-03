@@ -1,6 +1,6 @@
 ---
 name: studio-brand-system
-description: Select or refine a design system for SUBCULT.TV or a SUBCULT product, then create its maintained branding docs and asset pack in subcult-tv/studio. Use for visual-direction comparisons, brand guides, design tokens and reproducible brand assets.
+description: "Studio brand system. Use to compare visual directions, write brand guides and tokens, or produce asset packs for SUBCULT.TV or a SUBCULT product in subcult-tv/studio. Not for routine UI fixes."
 ---
 
 # Studio brand system

@@ -1,6 +1,6 @@
 ---
-name: postgres-pro
-description: Use when optimizing PostgreSQL queries, configuring replication, or implementing advanced database features. Invoke for EXPLAIN analysis, JSONB operations, extension usage, VACUUM tuning, performance monitoring.
+name: pg-plan-reader
+description: "PostgreSQL tuning and features: EXPLAIN plans, indexes, JSONB, extensions, VACUUM, replication and monitoring. Use when a query, schema or cluster needs Postgres-specific work."
 license: MIT
 metadata:
   blacktower-pack: engineering

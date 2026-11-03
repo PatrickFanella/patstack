@@ -1,6 +1,6 @@
 ---
 name: plugin-integrator
-description: Safely change Blacktower/OpenCode plugin integration points. Use when work touches plugin bootstrap, agent/tool/MCP registration, hooks, config schema/loader behavior, managed skill wiring, OpenCode SDK/plugin APIs, or cross-cutting runtime composition.
+description: "Blacktower and OpenCode plugin integration changes: bootstrap, agent, tool and MCP registration, hooks, config schema and loader, managed skill wiring, OpenCode SDK plugin APIs."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: internal

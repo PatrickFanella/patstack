@@ -1,6 +1,6 @@
 ---
 name: ars-malefica-thread-init
-description: Scaffold a new Ars Malefica Thread with canonical directory structure, home note, and MOC. Use when starting a new inquiry, creating a Thread for a topic that deserves sustained attention, or setting up the folder structure for a captured theme. Knows the standard Thread shape (Notes, Sources/Raw, Sources/Research, Concepts, Synthesis), the Templater folder mappings, and the Threads Index wiring.
+description: "Ars Malefica Thread scaffold. Use to start a new Thread with its folders, home note, MOC and Threads Index entry. Not for adding notes or sources to an existing Thread."
 ---
 
 # Ars Malefica Thread Init

@@ -1,6 +1,6 @@
 ---
 name: loop-on-ci
-description: Monitor PR checks and fix failures until green. Uses gh pr checks as the source of truth for PR-attached checks.
+description: "PR CI loop: read checks on GitHub (gh pr checks) or Gitea (tea and the commit-status API), fix failures, push, and repeat until required checks are green."
 ---
 
 # Loop on CI
@@ -9,7 +9,7 @@ description: Monitor PR checks and fix failures until green. Uses gh pr checks a
 
 Need to watch a branch or pull request and iterate on CI failures until all required checks are green.
 
-Use `gh pr checks` as the source of truth. It includes all PR-attached checks, while `gh run list` only covers GitHub Actions.
+Identify the forge from `git remote get-url origin` first. On GitHub, use `gh pr checks` as the source of truth; it includes all PR-attached checks, while `gh run list` only covers GitHub Actions. On Gitea (`git.subcult.tv`), `gh` does not work: use `tea --login subcult-agent` and the combined commit status of the PR head, as shown below.
 
 ## Workflow
 
@@ -33,6 +33,13 @@ gh pr checks --watch --fail-fast
 
 # GitHub Actions logs, when the failing check links to a GHA run
 gh run view <run-id> --log-failed
+
+# Gitea: resolve the PR, then read the combined status of its head commit
+tea pulls list --login subcult-agent --repo <owner>/<repo> --output json
+tea api --login subcult-agent /repos/<owner>/<repo>/commits/<head-sha>/status
+
+# Gitea Actions runs; each status target_url links to its log
+tea api --login subcult-agent "/repos/<owner>/<repo>/actions/tasks?limit=20"
 ```
 
 ## Guardrails
@@ -41,7 +48,7 @@ gh run view <run-id> --log-failed
 - Do not bypass hooks (`--no-verify`) to force progress.
 - If the failure is clearly unrelated to the PR and appears fixed on main, merge latest main instead of bloating the PR with unrelated fixes.
 - If failures are flaky, retry once and report flake evidence.
-- Re-run `gh pr checks --json name,bucket,state,workflow,link` after every push; the check set can change.
+- Re-run `gh pr checks --json name,bucket,state,workflow,link` (or the Gitea status call) after every push; the check set can change.
 
 ## Output
 

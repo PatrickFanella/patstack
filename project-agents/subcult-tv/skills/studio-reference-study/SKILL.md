@@ -1,6 +1,6 @@
 ---
 name: studio-reference-study
-description: Create or update a source-linked design reference study in subcult-tv/studio from a website, screenshot, visual style or historical collection, and register it for the authenticated Studio reference library.
+description: "Studio design reference study. Use to write, refresh or catalog a source-linked study of a website, screenshot, style or era in subcult-tv/studio/references. Not for picking a brand direction."
 ---
 
 # Studio reference study
@@ -29,6 +29,6 @@ Write authored work under `studio/references/curated/<collection>/`, following [
 
 Use a neighboring curated catalog as the current schema example. Catalog paths are relative to `studio/references/`. Supply a globally unique ID, name, source URL, supported collection, useful summary/tags, document path, images, attachments and provenance. An image-free study uses an empty image list. Reuse the application's current collection taxonomy or include the needed application changes within the authorized scope. Maintain the collection index and `sources.json` with actual authored-file hashes.
 
-Inspect `studio/scripts/export_studio.py` and relevant checks before exporting. Curated catalogs are merged into the private bundle; duplicate IDs stop export. Verify inclusion, attachment paths and hashes using an isolated private output under `studio/runtime/` or outside the repository. Run `rtk make check-studio check-studio-automation` for Studio changes and relevant application checks if taxonomy changed.
+Inspect `studio/scripts/export_studio.py` and relevant checks before exporting. Curated catalogs are merged into the private bundle; duplicate IDs stop export. Verify inclusion, attachment paths and hashes using an isolated private output under `studio/runtime/` or outside the repository. Run `make check-studio check-studio-automation` for Studio changes and relevant application checks if taxonomy changed.
 
 Finish with the study and evidence links, catalog ID, source limits and verification. A local catalog/export is complete when the study is discoverable in the generated private bundle. Updating a running admin library requires a separate authorized export/index or deployment operation; do not claim live availability from source edits.

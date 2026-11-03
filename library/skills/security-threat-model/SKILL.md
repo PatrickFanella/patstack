@@ -1,6 +1,6 @@
 ---
-name: security-threat-model
-description: Repository-grounded threat modeling that enumerates trust boundaries, assets, attacker capabilities, abuse paths, and mitigations, and writes a concise Markdown threat model. Trigger only when the user explicitly asks to threat model a codebase or path, enumerate threats/abuse paths, or perform AppSec threat modeling. Do not trigger for general architecture summaries, code review, or non-security design work.
+name: stride-threat-map
+description: "Threat-model a repository or path: assets, trust boundaries, attacker capabilities, abuse paths, mitigations, written as Markdown. Use only on an explicit threat-model request. Not for code review."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: security,threat,model
 ---
 
-# security-threat-model
+# stride-threat-map
 
 Create repo-grounded threat models. Use STRIDE, attack tree, requirements, and mitigation references only as needed.
 

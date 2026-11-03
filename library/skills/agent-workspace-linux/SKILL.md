@@ -1,6 +1,6 @@
 ---
-name: agent-workspace-linux
-description: "Use when a task needs an isolated hidden Linux desktop or workspace-owned browser: GUI app QA, web/browser/shopping automation, sandboxed app observation, or stale workspace cleanup. Routes agent-workspace-linux MCP tools on demand. Does NOT apply to host desktop/Chrome control, generic MCP setup, or pure code/file edits."
+name: sandbox-desktop
+description: "Isolated Linux workspace: hidden desktop or workspace-owned browser via the sandbox-desktop MCP for GUI QA, sandboxed browsing or stale workspace cleanup. Not for host desktop control."
 metadata:
   blacktower-pack: integrations
   blacktower-kind: tool-wrapper
@@ -8,10 +8,10 @@ metadata:
   blacktower-capabilities: workspace, linux, browser, automation
 ---
 
-# agent-workspace-linux
+# sandbox-desktop
 
 Drive an isolated, agent-owned Linux desktop and workspace-owned browser through
-the `agent-workspace-linux` MCP server. The workspace runs apps, browser
+the `sandbox-desktop` MCP server. The workspace runs apps, browser
 automation, screenshots, clipboard, and input inside its own hidden display,
 never the user's real desktop, focus, or host Chrome.
 

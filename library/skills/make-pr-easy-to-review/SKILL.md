@@ -1,6 +1,6 @@
 ---
 name: make-pr-easy-to-review
-description: Prepare PRs for review by cleaning noisy history, improving PR descriptions, and adding reviewer guidance without changing code behavior. Use for "make this easy to review", "tidy this PR", "clean up commits", or "annotate the diff".
+description: "PR reviewability prep on GitHub or Gitea: tidy noisy commits, rewrite the description, separate mechanical from logic changes, add reviewer notes without changing behavior."
 ---
 
 # Make PR Easy to Review
@@ -21,6 +21,8 @@ Only rewrite history when the user asks for it or agrees to the plan. Before rew
 
 ```bash
 gh pr view <PR> --json title,headRefName,baseRefName,state,commits
+# Gitea repositories (git.subcult.tv): gh does not apply; use tea
+tea pulls <PR> --login subcult-agent --repo <owner>/<repo>
 git fetch origin <headRefName> <baseRefName>
 ORIGINAL_TREE=$(git rev-parse origin/<headRefName>^{tree})
 ```

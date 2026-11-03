@@ -1,6 +1,6 @@
 ---
 name: python-packaging
-description: Create distributable Python packages with proper project structure, setup.py/pyproject.toml, and publishing to PyPI. Use when packaging Python libraries, creating CLI tools, or distributing Python code.
+description: "Use when packaging Python for distribution: pyproject.toml metadata, build backend, entry points, wheels and sdists, PyPI or private-index publishing. Not for app deploys or containers."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -36,6 +36,7 @@ Purpose: ship Python code as installable, versioned, distributable packages.
    - `[project.scripts]` for command installation.
 5. **Build artifacts**
    - Produce wheel + sdist; run `twine check`.
+   - In a uv-managed repo, `uv build` and `uv publish` replace `python -m build` and `twine upload`; use `uv run --with twine twine check dist/*` for validation.
 6. **Publish safely**
    - TestPyPI first, then production PyPI with API tokens.
 7. **Automate release path**

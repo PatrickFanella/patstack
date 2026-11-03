@@ -1,6 +1,6 @@
 ---
 name: principle-prove-it-works
-description: "Apply after completing a task, before declaring done. Verify against the real artifact (run the feature, read the actual value, inspect the diff), not a proxy, self-report, or 'it compiles.'"
+description: "Use before declaring any task done: verify the real artifact (run the feature, read the live value, inspect the diff), not a proxy, a self-report or a successful compile."
 disable-model-invocation: true
 ---
 

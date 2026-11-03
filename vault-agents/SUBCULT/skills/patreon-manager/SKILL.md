@@ -1,6 +1,6 @@
 ---
 name: patreon-manager
-description: Prepare supporter plans and drafts through current Studio sources, preserving task identity and separate approval, scheduling and delivery evidence.
+description: "Patreon supporter planning. Use to plan supporter posts, prepare Patreon drafts or campaign copy, or review Patreon tasks from the SUBCULT vault and Studio sources. Not for approving or publishing."
 ---
 
 # Patreon preparation
@@ -11,4 +11,4 @@ The owner's newer direction uses shared light rewards and occasional material wi
 
 Use the relevant product's source evidence and actual claims register. Prepare a concrete draft with one supported angle; do not invent features, exclusivity or available access. Keep plans here and content in Studio, linked to its owner. Preserve existing task IDs, recurrence, schedules and runtime state; query before changing the requested task.
 
-Existing explicit authorization remains valid. Preparation, approval, scheduling, dispatch and delivery are separate states. Draft or schedule receipts do not prove delivery; record provider evidence for actual publication. This configuration change authorizes neither provider mutations nor timer changes. Retained references, templates and helpers remain source material and must be reconciled with Studio before reuse.
+Existing explicit authorization remains valid. Preparation, approval, scheduling, dispatch and delivery are separate states. Draft or schedule receipts do not prove delivery; record provider evidence for actual publication. This configuration change authorizes neither provider mutations nor timer changes. Retained references, templates and helpers remain source material and must be reconciled with Studio before reuse: `references/` holds the pre-October schedule, content lanes and Super Productivity notes, `assets/` the old post templates, and `scripts/` local helpers (`sp-patreon-status.py` calls `sp-mcp` on Kvant). If the current client has no Super Productivity tool, report the task changes instead of claiming them.

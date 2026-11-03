@@ -1,6 +1,6 @@
 ---
 name: nodejs-backend-patterns
-description: Build production-ready Node.js backend services with Express/Fastify, implementing middleware patterns, error handling, authentication, database integration, and API design best practices. Use when creating Node.js servers, REST APIs, GraphQL backends, or microservices architectures.
+description: "Node.js backend services with Express or Fastify: middleware, error handling, auth, database integration and REST or GraphQL API structure."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -25,7 +25,7 @@ Implement production-grade Node.js backends with clear layering, safe middleware
 
 ## Avoid This Skill When
 
-- Work is mostly auth policy and token lifecycle (use `auth-implementation-patterns`)
+- Work is mostly auth policy and token lifecycle (use `auth-gatekeeper`)
 - Work is infra-only CI/CD or Kubernetes manifest design
 
 ## Workflow

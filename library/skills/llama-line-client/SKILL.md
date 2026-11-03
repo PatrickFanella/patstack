@@ -1,11 +1,6 @@
 ---
 name: llama-line-client
-description: >
-  Build, integrate, or debug clients that talk to Switchyard's native model broker
-  through llama-line/Ollama/OpenAI-compatible ingress on port 11434. Use this skill
-  when writing client code for /api/chat, /api/generate, /v1/chat/completions,
-  handling broker status/error events, configuring client identity and priority,
-  checking /broker/status, or migrating from standalone llama-line to Switchyard.
+description: "Switchyard model-broker clients on port 11434 (Ollama/OpenAI-compatible, formerly llama-line): /api/chat, /v1/chat/completions, client keys and priority, /broker/status, migration."
 metadata:
   blacktower-pack: personal
   blacktower-kind: workflow
@@ -33,7 +28,7 @@ Switchyard-compatible ingress preserves the useful llama-line client contract:
 
 | What | Value |
 |------|-------|
-| Default broker URL | `http://127.0.0.1:11434` local, or LAN host such as `http://10.0.0.50:11434` |
+| Default broker URL | `http://<switchyard-host>:11434`; on Kvant the ingress binds the LAN address `http://10.0.0.50:11434`, not loopback (observed 2026-11-03) |
 | Runtime owner | Switchyard API / native model broker |
 | Legacy service | Standalone `llama-line.service` should be disabled/removed |
 | Client identity | `Authorization: Bearer <key>` mapped by `MODEL_BROKER_CLIENT_KEYS`, or `X-Switchyard-Client` / `X-Llama-Line-Client` |

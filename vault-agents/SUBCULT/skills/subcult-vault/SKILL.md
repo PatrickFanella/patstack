@@ -1,6 +1,6 @@
 ---
 name: subcult-vault
-description: "Organize SUBCULT business, product and publishing plans in its Obsidian vault. Use for its strategy notes, portfolio indexes and editorial planning; code implementation belongs in the product repository."
+description: "SUBCULT business vault. Use to organize strategy notes, product portfolio indexes and editorial plans in the SUBCULT Obsidian vault. Not for product code or Studio social content."
 ---
 
 # Subcult Vault

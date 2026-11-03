@@ -1,6 +1,6 @@
 ---
 name: bash-defensive-patterns
-description: Master defensive Bash programming techniques for production-grade scripts. Use when writing robust shell scripts, CI/CD pipelines, or system utilities requiring fault tolerance and safety.
+description: "Defensive Bash: harden a shell script with strict mode, quoting, traps, safe temp files and input checks. Not for writing Bats tests (bats-testing-patterns)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

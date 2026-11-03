@@ -1,6 +1,6 @@
 ---
-name: rust-pro
-description: Rust professional development skill covering async Rust, ownership, memory safety, Tokio, error handling, concurrency, and safe systems design. Use when writing, reviewing, debugging, or refactoring Rust code.
+name: rust-ownership-async
+description: "Rust work: ownership, lifetimes, async and Tokio, error handling, concurrency, safe systems design. Use when writing, reviewing, debugging or refactoring Rust. Not for Go (go-craft)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -16,14 +16,11 @@ Use for Rust code that needs safe systems design, async/concurrent behavior, own
 
 - Async Rust, Tokio, async traits, streams, cancellation, and concurrency: use the merged `rust-async-patterns` guidance.
 - Ownership, borrowing, lifetimes, RAII, smart pointers, and safe resource management: use the merged `memory-safety-patterns` guidance.
-- For non-Rust Go work, use `golang-pro`.
+- For non-Rust Go work, use `go-craft`.
 
 ## Resources
 
 Load these only when needed; keep `SKILL.md` as the activation workflow.
-
-## Merged Skills
-
 
 ## Merged Skills
 

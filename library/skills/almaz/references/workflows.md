@@ -39,13 +39,13 @@
 
 Minimum consistency checks:
 
-- OS/kernel state says Ubuntu 26.04 LTS `resolute`, not 25.10 `questing`.
+- Current OS/kernel claims say Debian 13 (trixie); Ubuntu mentions are dated before 2026-11-03.
 - active docs do not say router backup is only scaffold/not enabled.
 - `wg-easy` docs mention `/lib/modules:/lib/modules:ro`.
 - Caddy docs do not describe stale `languagetool` as an active bug.
 - Cloudflared docs mention `edda.subcult.tv` direct route to nuc if still configured.
 - terminal/desktop docs do not describe KDE/SDDM/WezTerm as current.
-- kernel/NVIDIA docs mention that `7.0.0-22-generic` is known bad on almaz after the 2026-06-06 GTX 1080 `Xid 79` incident; expected kernel is pinned/held `7.0.0-15-generic` until a newer path is tested.
+- kernel/NVIDIA docs say the 580.159.03 driver is a DKMS installer build that must rebuild for each new kernel.
 
 ## Run health or post-upgrade checks
 
@@ -57,7 +57,7 @@ Minimum consistency checks:
 
 2. Inspect `/home/onnwee/docs/almaz/reports/health-latest.md`.
 3. If failures appear, triage in this order: apt/dpkg, failed units, mounts, Docker unhealthy/restarting containers, NVIDIA, critical containers, SnapRAID status.
-4. For kernel/NVIDIA checks, verify `uname -r`, `nvidia-smi`, and `apt-mark showhold`. Do not treat `7.0.0-22-generic` as healthy on almaz unless a later incident note explicitly supersedes the 2026-06-06 regression.
+4. For kernel/NVIDIA checks, verify `uname -r`, `dkms status`, and `nvidia-smi`.
 5. Do not claim success until failures are resolved or explicitly documented.
 
 ## Check backups

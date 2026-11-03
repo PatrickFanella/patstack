@@ -1,6 +1,6 @@
 ---
 name: codex-skills-maintenance
-description: Audit, validate, and improve a Codex skill catalog across personal, repository, system, runtime, and plugin-managed skills. Use for full skill inventories, trigger-collision reviews, progressive-disclosure and metadata optimization, broken reference/script checks, post-upgrade skill health checks, or safe improvement passes that must preserve managed caches.
+description: "Skill catalog audit: inventory and validate personal, repository, system and plugin skills, find trigger collisions and broken references, or run a post-upgrade pass."
 ---
 
 # Codex Skills Maintenance
@@ -30,7 +30,7 @@ sources.
 5. **Implement narrowly.** Preserve working behavior, move detailed material
    into one-level references, add scripts only for repeated deterministic work,
    and keep `SKILL.md` under 500 lines.
-6. **Validate.** Run the current `skill-creator` `quick_validate.py`, parse
+6. **Validate.** Run the current `skill-forge` `quick_validate.py`, parse
    metadata, type-check and execute scripts, and test real runtime contracts
    where safe.
 7. **Forward-test complex revisions.** Give independent agents realistic tasks

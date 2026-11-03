@@ -1,0 +1,21 @@
+---
+name: secure-code-audit
+description: Use only when asked for a security review or secure-by-default code in Python, JavaScript/TypeScript or Go web stacks. Not for general code review or threat models.
+metadata:
+  blacktower-pack: engineering
+  blacktower-kind: workflow
+  blacktower-tier: standard
+  blacktower-capabilities: security,best,practices
+---
+
+# secure-code-audit
+
+## Use this skill
+
+Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/report, or secure-by-default coding help. Trigger only for supported languages (python, javascript/typescript, go). Do not trigger for general code review, debugging, or non-security tasks.
+
+
+
+## Resources
+
+- `references/detailed-guide.md` — detailed framework and edge cases; load only the sections needed for the task.

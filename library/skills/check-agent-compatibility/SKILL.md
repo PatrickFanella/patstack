@@ -1,6 +1,6 @@
 ---
 name: check-agent-compatibility
-description: "Run the explicit repository compatibility pass in a runtime supplying the named compatibility agents and scanner."
+description: "Agent compatibility score: rate how well agents can boot, validate and follow a repo's docs. Use only when its four named review agents and scanner are installed."
 ---
 
 # Check agent compatibility

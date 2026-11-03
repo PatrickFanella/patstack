@@ -17,6 +17,7 @@ title: API Notes
 - Local REST API: `https://127.0.0.1:27124`
 - Insecure HTTP stays off.
 - CLI only when REST/MCP is unavailable.
+- REST and CLI need a running Obsidian desktop app. Kvant has none since its 2026-11-03 Debian install, only the headless `ob` sync client.
 
 ## Plugin surface
 

@@ -1,6 +1,6 @@
 ---
-name: mcp-integration-lifecycle
-description: Add, diagnose, normalize, or verify Model Context Protocol integrations across their complete client lifecycle. Use for stdio or HTTP MCP servers when a server must be registered, launches but does not initialize, works in one client but not another, exposes missing tools or resources, needs approval or OAuth configuration, or requires reload and smallest-fix verification.
+name: mcp-wire-tracer
+description: "MCP client integration: register stdio or HTTP servers; diagnose launch or initialize failures, missing tools, OAuth or approval config, cross-client differences and reloads. Not for writing a server."
 ---
 
 # MCP Integration Lifecycle

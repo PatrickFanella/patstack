@@ -1,5 +1,5 @@
 ---
-name: git-advanced-workflows
+name: git-surgery
 description: Master advanced Git workflows including rebasing, cherry-picking, bisect, worktrees, and reflog to maintain clean history and recover from any situation. Use when managing complex Git histories, collaborating on feature branches, or troubleshooting repository issues.
 metadata:
   blacktower-pack: engineering
@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: git-github,git,advanced,workflows
 ---
 
-# git-advanced-workflows
+# git-surgery
 
 ## Use this skill
 

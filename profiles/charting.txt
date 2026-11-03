@@ -1,2 +1,2 @@
 # Focused optional specialist profile: charting
-lightweight-charts
+tv-candle-charts

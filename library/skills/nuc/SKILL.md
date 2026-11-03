@@ -1,6 +1,6 @@
 ---
 name: nuc
-description: "NUC homelab operations, documentation, and safety workflows for /home/onnwee/.nuc and the nuc/almaz Docker stack. Use when the user asks about NUC docs, service placement, Docker/Caddy exposure, firewall guards, resource baselines, runbooks, n8n/ntfy ownership, or homelab health checks."
+description: "NUC host operations and its ~/.nuc vault on the NUC: service placement, Docker publish and Caddy exposure, firewall guards, runbooks, health snapshots. Fleet docs live in Machinum."
 metadata:
   blacktower-pack: personal
   blacktower-kind: workflow
@@ -16,7 +16,7 @@ Use this skill to operate, audit, and update the NUC homelab documentation and t
 
 ## Safety contract
 
-- Treat live state as authoritative for operations; treat `/home/onnwee/.nuc` as the active documentation source of truth after verification.
+- Treat live state as authoritative for operations. `/home/onnwee/.nuc` is the NUC host's local documentation vault: it exists on `nuc` (reach it with `ssh nuc`), not on Kvant or the workstations. Canonical fleet documentation is Machinum on Kvant (`~/Work/Vaults/Machinum`, host note `10-inventory/Host - nuc.md`); record material changes there as well, following its `AGENTS.md`.
 - Prefer read-only discovery before proposing changes. Do not restart, migrate, delete, expose, or rotate anything without explicit user approval.
 - Never print secret values. For `.env`, SOPS, tokens, and credentials, report only file paths, key names, and remediation status.
 - Preserve the current architecture unless the user asks for a migration plan: `almaz` is edge/auth/tunnel/media/storage/automation; `nuc` is internal Docker app/data/dashboard host.
@@ -40,6 +40,8 @@ Use this skill to operate, audit, and update the NUC homelab documentation and t
 - Compose source of truth: `/home/onnwee/.nuc/10-inventory/compose-source-of-truth.md`
 - Docker exposure matrix: `/home/onnwee/.nuc/20-operations/docker-port-matrix.md`
 - Almaz Caddyfile path documented for edge validation: `/opt/server/management/config/caddy/Caddyfile` on `almaz`
+
+Run the bundled scripts on `nuc`. From another host, stream them over SSH, for example `ssh nuc 'python3 - /home/onnwee/.nuc' < scripts/nuc_doc_audit.py` or `ssh nuc 'python3 -' < scripts/nuc_health_snapshot.py`.
 
 ## Bundled resources
 

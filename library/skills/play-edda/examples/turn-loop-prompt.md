@@ -12,13 +12,13 @@ Workflow:
 
 1. Fetch turn context:
    ```bash
-   ~/.config/opencode/skills/play-edda/scripts/edda_api.py turn-context <campaign-id>
+   python3 <play-edda skill dir>/scripts/edda_api.py turn-context <campaign-id>
    ```
 2. Read recent history, location, quests, character, NPCs, facts, and time.
 3. Choose one safe, quest-progressing action.
 4. Submit it:
    ```bash
-   ~/.config/opencode/skills/play-edda/scripts/edda_api.py action <campaign-id> "<action>"
+   python3 <play-edda skill dir>/scripts/edda_api.py action <campaign-id> "<action>"
    ```
 5. Report action, outcome, next pressure, play score, and issues.
 

@@ -1,6 +1,6 @@
 ---
-name: llm-evaluation
-description: Implement comprehensive evaluation strategies for LLM applications using automated metrics, human feedback, and benchmarking. Use when testing LLM performance, measuring AI application quality, or establishing evaluation frameworks.
+name: eval-bench
+description: "LLM application evaluation: datasets, automated metrics, LLM-as-judge, human review and baselines. Use when measuring quality or regressions of prompts, models or agents."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: agent-ecosystem,llm,evaluation
 ---
 
-# llm-evaluation
+# eval-bench
 
 Design and run LLM evaluation workflows. Use references for metrics, judge design, datasets, and iteration loops.
 

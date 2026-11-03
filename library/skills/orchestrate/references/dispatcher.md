@@ -16,7 +16,7 @@ One-time setup: run `bun install` inside this skill's `scripts/` directory if `n
 bun cli.ts kickoff "<goal>" [--repo <url>] [--ref main] [--model claude-opus-4-8] [--slack-channel C123] [--dispatcher-name "Alex"]
 ```
 
-The CLI reads `CURSOR_API_KEY`, auto-detects the repo from `git config --get remote.origin.url`, builds the spawn prompt, spawns via `cursor-sdk`, and prints `{ agentId, runId, status, url, dispatcherFirstName }` JSON. Slack is optional. If `SLACK_BOT_TOKEN` is set, also pass `--slack-channel <id>` or set `SLACK_CHANNEL_ID`; otherwise kickoff fails before spawning. If the token is unset, Slack stays disabled.
+The CLI reads `CURSOR_API_KEY`, auto-detects the repo from `git config --get remote.origin.url`, builds the spawn prompt, spawns via `cursor-sdk-builder`, and prints `{ agentId, runId, status, url, dispatcherFirstName }` JSON. Slack is optional. If `SLACK_BOT_TOKEN` is set, also pass `--slack-channel <id>` or set `SLACK_CHANNEL_ID`; otherwise kickoff fails before spawning. If the token is unset, Slack stays disabled.
 
 ## Dispatcher identity
 
@@ -37,7 +37,7 @@ Pass the user's goal through without expanding it. Don't add planning heuristics
 
 ## Auth
 
-`CURSOR_API_KEY` must be a user API key, not a team key. Auth sourcing precedence is documented in the `cursor-sdk` skill (https://github.com/cursor/plugins/tree/main/cursor-sdk). Don't bake keychain lookup into the kickoff CLI itself; cloud-agent VMs have no keychain.
+`CURSOR_API_KEY` must be a user API key, not a team key. Auth sourcing precedence is documented in the `cursor-sdk-builder` skill (https://github.com/cursor/plugins/tree/main/cursor-sdk). Don't bake keychain lookup into the kickoff CLI itself; cloud-agent VMs have no keychain.
 
 ## Observability after kickoff
 

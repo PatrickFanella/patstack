@@ -1,6 +1,6 @@
 ---
-name: clonedeps
-description: Clone important project dependency source code into an ignored local workspace so OpenCode can inspect library internals. Use when the user asks to clone dependencies, inspect dependency/source internals, understand SDK/framework behavior from source, debug library implementation details, or make core dependency repos locally readable. Do not use for ordinary API/docs questions where @librarian is enough.
+name: dep-source-clone
+description: "Dependency source: clone a few dependency repositories at their resolved versions into an ignored workspace to read library internals. Not for ordinary API or docs questions."
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow

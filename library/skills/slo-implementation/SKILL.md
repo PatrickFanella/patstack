@@ -1,6 +1,6 @@
 ---
 name: slo-implementation
-description: Define and implement Service Level Indicators (SLIs) and Service Level Objectives (SLOs) with error budgets and alerting. Use when establishing reliability targets, implementing SRE practices, or measuring service performance.
+description: "Define SLIs, SLOs, error budgets and burn-rate alerts. Use when setting reliability targets or wiring SLO dashboards and alerts. Not for general metrics or tracing (observability)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -65,8 +65,6 @@ sum(storage_writes_successful_total)
 /
 sum(storage_writes_total)
 ```
-
-**Reference:** See `references/slo-definitions.md`
 
 ## Setting SLO Targets
 
@@ -138,8 +136,6 @@ error_budget_policy:
   - remaining_budget: 0%
     action: Feature freeze, focus on reliability
 ```
-
-**Reference:** See `references/error-budget.md`
 
 ## SLO Implementation
 

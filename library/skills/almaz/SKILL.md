@@ -1,6 +1,6 @@
 ---
 name: almaz
-description: "Almaz homelab operations, documentation, backup, storage, GPU/media, and safety workflows for /home/onnwee/docs/almaz and /opt/server. Use when the user asks about almaz docs, service placement versus nuc, Docker/Caddy/Cloudflare/Authelia/wg-easy/Technitium, media or Immich services, NVIDIA/Ollama/Tdarr, SnapRAID/MergerFS storage, router restic backups, Borgmatic cleanup, health checks, or post-upgrade maintenance."
+description: "Almaz host work: service placement versus NUC, Caddy/Authelia/Cloudflared edge, Immich and media, NVIDIA/Ollama, SnapRAID/MergerFS, router restic backups, health and post-upgrade checks, Almaz-local docs."
 metadata:
   blacktower-pack: personal
   blacktower-kind: workflow
@@ -16,10 +16,10 @@ Use this skill to operate, audit, and update the `almaz` homelab host without re
 
 ## Safety contract
 
-- Treat live state as authoritative for operations; treat `/home/onnwee/docs/almaz` as the active documentation source of truth after verification.
+- Treat live state as authoritative for operations. `/home/onnwee/docs/almaz` and every other path below are on Almaz itself; from another host run them through `ssh almaz`. They are Almaz's local docs; fleet-wide canonical documentation is Machinum on Kvant (`10-inventory/Host Briefings/almaz.md` and `Host - almaz.md`). The generated `~/.homelab/HOMELAB.md` is a read-only copy.
 - Prefer read-only discovery before changes. Do not restart, migrate, delete, expose, prune, sync SnapRAID, rotate secrets, or alter backups without explicit user approval.
 - Never print secret values. For `.env`, SOPS, Borg/Restic passwords, DB credentials, tunnel tokens, and app secrets, report only paths, key names, presence, and remediation status.
-- Preserve the current host split unless the user asks for a migration plan: `almaz` owns edge/auth/tunnel/DNS/media/storage/GPU/Immich/n8n; `nuc` owns productivity/project/dashboard/monitoring apps.
+- Preserve the current host split unless the user asks for a migration plan: `almaz` owns edge/auth/tunnel/DNS/LAN gateway/Gitea/media/storage/GPU/Immich/n8n; `nuc` owns internal productivity/project/dashboard apps and `ntfy`; `dozor` owns central monitoring, alerting and Blackbox probes.
 - Keep media, Immich, SnapRAID/MergerFS, GPU workloads, and primary edge services on `almaz` unless a deliberate migration plan includes backup/restore, cutover, rollback, and docs updates.
 - When updating docs, update current claims, timestamps/frontmatter when present, and verify stale phrases are gone.
 
@@ -27,7 +27,7 @@ Use this skill to operate, audit, and update the `almaz` homelab host without re
 
 1. **Docs or inventory question**: read `/home/onnwee/docs/almaz/README.md`, then the narrow doc in `services/`, `infrastructure/`, `runbooks/`, `reports/`, `proposals/`, or `reviews/`. Use `references/topology.md` for current mental model.
 2. **Documentation refresh/audit**: run `scripts/almaz_doc_audit.py /home/onnwee/docs/almaz`, collect live evidence, edit active docs, then rerun audit and targeted stale greps. Read `references/workflows.md` first.
-3. **Health/post-upgrade check**: run `/usr/local/sbin/almaz-health-check.sh` or `scripts/almaz_health_snapshot.py` for read-only evidence. For Docker, NVIDIA, Caddy, storage, and backup posture, verify live state before relying on historical docs. For kernel/NVIDIA work, explicitly check for the 2026-06-06 regression: `7.0.0-22-generic` caused GTX 1080 `Xid 79` GPU-off-bus failures and was purged; `7.0.0-15-generic` is the known-good pinned kernel.
+3. **Health/post-upgrade check**: run `/usr/local/sbin/almaz-health-check.sh` or `scripts/almaz_health_snapshot.py` for read-only evidence. For Docker, NVIDIA, Caddy, storage, and backup posture, verify live state before relying on historical docs. For kernel/NVIDIA work, remember the NVIDIA 580.159.03 driver is an NVIDIA installer build with DKMS, not an apt package: after any kernel update confirm `dkms status` lists the running kernel and `nvidia-smi` succeeds.
 4. **Backup work**: read `runbooks/backups.md` and `references/workflows.md`. `almaz-router-restic-backup.timer` is primary router backup; Borgmatic exists but is secondary/untrusted until stale lock and old DB entries are cleaned up.
 5. **SnapRAID/storage work**: read `infrastructure/storage-audit-2026-05-18.md`; collect status/diff/SMART evidence. Ask before running `snapraid touch`, `sync`, `scrub`, or any destructive filesystem command.
 6. **Service add/change/migration**: start with `assets/templates/service-change-plan.md`; read `references/service-map.md` and `infrastructure/host-duties.md`; ask for approval before live changes.
@@ -62,10 +62,10 @@ Read only what is needed:
 
 - Run `python3 scripts/almaz_doc_audit.py /home/onnwee/docs/almaz` after doc edits.
 - For live posture claims, record command/source and timestamp in the doc or final answer.
-- Confirm OS/kernel before saying upgrade state is current: expected baseline is Ubuntu 26.04 LTS `resolute`, kernel `7.0.0-15-generic`. As of 2026-06-06, `7.0.0-22-generic` is known bad on almaz with NVIDIA `580.159.03`/GTX 1080 (`NVRM Xid 79, GPU has fallen off the bus`), was purged, and should not be reinstalled without an explicit test plan.
+- Confirm OS/kernel before saying upgrade state is current: since 2026-11-03 the baseline is Debian 13 (trixie), apt only, kernel `6.12.115+deb13.1-amd64` at cutover. Ubuntu 26.04 and its `7.0.0-*` kernels are gone; docs dated before 2026-11-03 that mention Ubuntu kernels, held NVIDIA packages or netplan describe the old install.
 - Confirm Docker health before saying services are healthy: no unhealthy/restarting containers and critical containers running.
 - Confirm `/mnt/arkhiv`, `/mnt/spektr`, `/mnt/rezerv`, `/mnt/kamera1-3`, and `/mnt/impuls` before making storage claims.
-- Confirm `nvidia-smi`, held kernel/NVIDIA packages, and `nvidia-container-toolkit` before making GPU/container runtime claims.
+- Confirm `nvidia-smi`, `dkms status` for the running kernel, and `nvidia-container-toolkit` before making GPU/container runtime claims.
 - Confirm `almaz-router-restic-backup.timer` and latest report before saying router backups are active.
 - If any script reports a possible issue, inspect the cited file/command before editing.
 

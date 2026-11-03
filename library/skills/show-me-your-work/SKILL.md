@@ -1,6 +1,6 @@
 ---
 name: show-me-your-work
-description: "Keep a reviewable decision trail for long-running or unattended work: a TSV log with one row per decision (what, why, evidence, result). Local by default; commit it when a reviewer needs the trail to trust the result. Use for /show-me-your-work, autonomous or multi-phase runs, or work a human reviews after stepping away."
+description: "Keep a TSV decision log (what, why, evidence, result) for long or unattended runs, with a transcript audit and cross-model review. Use for /show-me-your-work or work a human reviews later."
 disable-model-invocation: true
 ---
 
@@ -53,7 +53,7 @@ Commit it only when the work is ambitious enough that a reviewer needs the trail
 
 ## Audit the log against the transcript
 
-At the end of the run, before handing back, check the log told the truth. Read this run's transcript under the active workspace's `agent-transcripts/` directory (the system prompt names the path). Don't glob across `~/.cursor/projects/*/`; that reads unrelated private chats. Walk the log against what actually happened:
+At the end of the run, before handing back, check the log told the truth. Read this run's transcript from the client that ran it: Cursor keeps it under the workspace's `agent-transcripts/` directory, Claude Code under `~/.claude/projects/<slug>/`, Codex under `~/.codex/sessions/`, OpenCode under `~/.local/share/opencode/storage/`. Read only this run's file. Don't glob across every project directory; that reads unrelated private chats. If the client exposes no transcript, audit against the commands and outputs you still have in context and say so. Walk the log against what actually happened:
 
 - Every row maps to a real action. Cut invented or aspirational entries.
 - Each row's evidence resolves and shows what the row claims.
@@ -64,7 +64,7 @@ Fix the log, not the story. If the work diverged from what a row claims, the row
 
 ## Cross-model review of the trail
 
-Before handing back, you must spawn a subagent on a different model family from the one that did the work. Self-review is not a substitute; the point is fresh eyes you cannot bring yourself. The subagent reads the audit trail and the run's transcript, then flags what the user should pay attention to. Not a redo of the work, a scan for what's suboptimal or risky.
+Before handing back, you must spawn a subagent on a different model family from the one that did the work. If the client cannot choose a model for a subagent, hand the review to another client (for example a Codex thread for Claude Code work, or the reverse, through T3 Code) and say which one reviewed it. Self-review is not a substitute; the point is fresh eyes you cannot bring yourself. The subagent reads the audit trail and the run's transcript, then flags what the user should pay attention to. Not a redo of the work, a scan for what's suboptimal or risky.
 
 - Decisions logged with weak or absent evidence.
 - Verification steps skipped or claimed without proof in the transcript.

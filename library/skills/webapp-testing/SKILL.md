@@ -1,6 +1,6 @@
 ---
 name: webapp-testing
-description: Test local or remote web applications with browser automation and QA workflows. Use for Playwright-style UI flow checks, screenshots, console/network debugging, accessibility smoke tests, exploratory web QA, and validating frontend behavior after implementation.
+description: "Web app QA: browser-automation checks of UI flows, screenshots, console and network errors, and accessibility smoke tests after frontend changes, local or remote."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

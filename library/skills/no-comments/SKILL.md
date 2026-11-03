@@ -1,12 +1,14 @@
 ---
 name: no-comments
-description: "Spawn Comment Sicko, fix accepted findings, and offer encodings for claimed constraints."
+description: "Comment purge on explicit /no-comments: run the Comment Sicko reviewer over a diff, apply accepted deletions, and offer type, test or lint encodings for constraint comments."
 disable-model-invocation: true
 ---
 
 # No comments
 
 Spawn Comment Sicko. Act on accepted findings.
+
+Comment Sicko is a pstack agent definition from Cursor and is not bundled with this skill. If the current client has no agent by that name, stop and report the missing agent instead of improvising its rules.
 
 Authoring agents defend comments. Defer to Comment Sicko's fresh perspective.
 

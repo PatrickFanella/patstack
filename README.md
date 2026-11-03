@@ -5,14 +5,14 @@ This repository authors the personal collection independently of Blacktower’s 
 ## Layout and ownership
 
 - `skills/`: authored personal skills, installed as managed copies in `~/.codex/skills`.
-- `shared/`: canonical `requirements-interview` and `session-handoff`, installed in `~/.agents/skills`. Duplicate Codex copies are retired.
+- `shared/`: canonical `scope-grill` and `relay-baton`, installed in `~/.agents/skills`. Duplicate Codex copies are retired.
 - `repository-skills/blacktower-development`: installed only in Blacktower’s `.agents/skills`, privately excluded through Git’s local exclude file.
 - `authoring/`: non-discovered guidance for maintaining the collection.
 - `catalog/proposed-catalog.json`: authoritative target; `capabilities.json` maps 138 imported capabilities and the authored T3 onboarding capability to owners and procedures. `retired-names.json` maps retired names, with no compatibility entrypoints.
 - `catalog/baseline.json`: pre-migration hashes, modes, and symlinks. `installation.json` records this host’s destinations and immutable archive location.
 - `evaluations/`, `tests/`, `reports/`: bounded behavior trials, deterministic tests, discovery measurements, and rollout evidence.
 
-`omarchy` and `diagnose-crash` remain OS-owned symlinks. Their links and `/usr/share/omarchy` targets are protected. The personal `review-agent` duplicate is removed; its system owner is unchanged. Managed plugin caches are outside this installer’s authority.
+`omarchy` and `diagnose-crash` remain OS-owned symlinks. Their links and `/usr/share/omarchy` targets are protected. The personal `diff-auditor` duplicate is removed; its system owner is unchanged. Managed plugin caches are outside this installer’s authority.
 
 Original trees are recoverable at `/home/onnwee/.codex/skill-backups/20260908T034154Z-before-consolidation`, outside discovered roots. Imported scripts, assets, and notices remain beside their applicable mode. Resource paths in a mode resolve from that mode’s directory. `<skill-root>` in command examples means the resolved directory of the loaded entrypoint, not the current project directory.
 
@@ -47,7 +47,7 @@ Gitea runs source validation and the disposable installer/selection tests on PRs
 
 Edit authored sources here; never maintain installed copies as the source of truth. Keep task descriptions concise and put substantial procedures in conditionally loaded references. Preserve plan-only, read-only review, explicit strict review, explicit TypeScript boundary setup, and separate publishing/deployment scope. New capabilities need a concrete trigger, resource links, and an acceptance fixture. General principles belong in relevant conditional references, not new globally discovered entrypoints.
 
-`build_collection.py` is the historical one-time import recipe, not an update command: rerunning it is unsupported after curation. Update the catalog and capability map explicitly when changing ownership. Preserve provenance and licenses when moving resources. The frontend CSV dataset is pinned to MIT-licensed upstream revision `363cd8911f210ec640704101ee820e6e64a63c3b`; its per-file hashes and notices are in `skills/frontend-design/scripts/data/provenance.json` and `notices/`.
+`build_collection.py` is the historical one-time import recipe, not an update command: rerunning it is unsupported after curation. Update the catalog and capability map explicitly when changing ownership. Preserve provenance and licenses when moving resources. The frontend CSV dataset is pinned to MIT-licensed upstream revision `363cd8911f210ec640704101ee820e6e64a63c3b`; its per-file hashes and notices are in `skills/ui-craft/scripts/data/provenance.json` and `notices/`.
 
 Before each release, run validation and focused helper tests, then bounded behavior fixtures. Permit at most one repair-and-retest round per failed behavioral case. Capture fresh `skills/list` in Blacktower and an unrelated repository with `scripts/discovery.py`. Confirm shared owners appear once, retired names are absent, and the Blacktower skill stays local. Source character budgets and runtime metadata measurements are distinct from model token billing; report unavailable token usage explicitly.
 

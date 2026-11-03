@@ -1,6 +1,6 @@
 ---
 name: subcult-worldbuilding
-description: "Build SUBCULT's mythic layer: create agent identities, name sub-brands, design structural metaphors, define roles within the collective universe. Use when creating new agents, naming projects, designing governance structures, or expanding the SUBCULT world. Triggers: subcult agent, subcult naming, new agent identity, sub-brand, subcult lore, subcult worldbuilding, mythic structure."
+description: "SUBCULT mythic layer: name sub-brands and projects, define agent identities, roles and governance metaphors for the collective. Use only when an identity or naming task is requested."
 metadata:
   blacktower-pack: personal
   blacktower-kind: workflow

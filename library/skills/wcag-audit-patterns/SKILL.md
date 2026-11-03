@@ -1,6 +1,6 @@
 ---
-name: wcag-audit-patterns
-description: Conduct WCAG 2.2 accessibility audits with automated checks, manual verification, screen-reader considerations, and remediation guidance. Use when auditing websites for accessibility, fixing WCAG violations, validating assistive-technology support, or implementing accessible components.
+name: wcag-a11y-audit
+description: "WCAG 2.2 audit: check a site or component for accessibility violations with automated scans, manual and screen-reader checks, and remediation steps."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

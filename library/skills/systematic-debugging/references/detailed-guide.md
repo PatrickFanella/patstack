@@ -1,4 +1,4 @@
-# systematic-debugging detailed guide
+# bug-tracer detailed guide
 
 # Systematic Debugging
 

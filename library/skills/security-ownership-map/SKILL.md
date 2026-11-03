@@ -1,6 +1,6 @@
 ---
-name: "security-ownership-map"
-description: "Analyze git repositories to build a security ownership topology (people-to-file), compute bus factor and sensitive-code ownership, and export CSV/JSON for graph databases and visualization. Trigger only when the user explicitly wants a security-oriented ownership or bus-factor analysis grounded in git history (for example: orphaned sensitive code, security maintainers, CODEOWNERS reality checks for risk, sensitive hotspots, or ownership clusters). Do not trigger for general maintainer lists or non-security ownership questions."
+name: "bus-factor-map"
+description: "Map security ownership from git history: people-to-file topology, bus factor, orphaned sensitive code, CODEOWNERS checks, CSV/JSON export. Use only when explicitly asked for this analysis."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: security,ownership,map
 ---
 
-# security-ownership-map
+# bus-factor-map
 
 ## Use this skill
 

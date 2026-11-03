@@ -1,69 +1,69 @@
 [
   {
     "original": "agent-workspace-linux",
-    "owner": "agent-workspace-linux",
+    "owner": "sandbox-desktop",
     "kind": "retained",
-    "path": "skills/agent-workspace-linux/SKILL.md"
+    "path": "skills/sandbox-desktop/SKILL.md"
   },
   {
     "original": "api-design-principles",
-    "owner": "api-development",
+    "owner": "api-contract-smith",
     "kind": "mode",
-    "path": "skills/api-development/references/modes/api-design-principles/guide.md"
+    "path": "skills/api-contract-smith/references/modes/api-design-principles/guide.md"
   },
   {
     "original": "nodejs-backend-patterns",
-    "owner": "api-development",
+    "owner": "api-contract-smith",
     "kind": "mode",
-    "path": "skills/api-development/references/modes/nodejs-backend-patterns/guide.md"
+    "path": "skills/api-contract-smith/references/modes/nodejs-backend-patterns/guide.md"
   },
   {
     "original": "openapi-spec-generation",
-    "owner": "api-development",
+    "owner": "api-contract-smith",
     "kind": "mode",
-    "path": "skills/api-development/references/modes/openapi-spec-generation/guide.md"
+    "path": "skills/api-contract-smith/references/modes/openapi-spec-generation/guide.md"
   },
   {
     "original": "websocket-engineer",
-    "owner": "api-development",
+    "owner": "api-contract-smith",
     "kind": "mode",
-    "path": "skills/api-development/references/modes/websocket-engineer/guide.md"
+    "path": "skills/api-contract-smith/references/modes/websocket-engineer/guide.md"
   },
   {
     "original": "architecture-patterns",
-    "owner": "architecture-patterns",
+    "owner": "boundary-drafter",
     "kind": "mode",
-    "path": "skills/architecture-patterns/references/modes/architecture-patterns/guide.md"
+    "path": "skills/boundary-drafter/references/modes/architecture-patterns/guide.md"
   },
   {
     "original": "codebase-design",
-    "owner": "architecture-patterns",
+    "owner": "boundary-drafter",
     "kind": "mode",
-    "path": "skills/architecture-patterns/references/modes/codebase-design/guide.md"
+    "path": "skills/boundary-drafter/references/modes/codebase-design/guide.md"
   },
   {
     "original": "cqrs-implementation",
-    "owner": "architecture-patterns",
+    "owner": "boundary-drafter",
     "kind": "mode",
-    "path": "skills/architecture-patterns/references/modes/cqrs-implementation/guide.md"
+    "path": "skills/boundary-drafter/references/modes/cqrs-implementation/guide.md"
   },
   {
     "original": "domain-modeling",
-    "owner": "architecture-patterns",
+    "owner": "boundary-drafter",
     "kind": "mode",
-    "path": "skills/architecture-patterns/references/modes/domain-modeling/guide.md"
+    "path": "skills/boundary-drafter/references/modes/domain-modeling/guide.md"
   },
   {
     "original": "ubiquitous-language",
-    "owner": "architecture-patterns",
+    "owner": "boundary-drafter",
     "kind": "mode",
-    "path": "skills/architecture-patterns/references/modes/ubiquitous-language/guide.md"
+    "path": "skills/boundary-drafter/references/modes/ubiquitous-language/guide.md"
   },
   {
     "original": "auth-implementation-patterns",
-    "owner": "auth-implementation-patterns",
+    "owner": "auth-gatekeeper",
     "kind": "retained",
-    "path": "skills/auth-implementation-patterns/SKILL.md"
+    "path": "skills/auth-gatekeeper/SKILL.md"
   },
   {
     "original": "control-surface-designer",
@@ -91,111 +91,111 @@
   },
   {
     "original": "deployment-pipeline-design",
-    "owner": "ci-maintenance",
+    "owner": "ci-medic",
     "kind": "mode",
-    "path": "skills/ci-maintenance/references/modes/deployment-pipeline-design/guide.md"
+    "path": "skills/ci-medic/references/modes/deployment-pipeline-design/guide.md"
   },
   {
     "original": "loop-on-ci",
-    "owner": "ci-maintenance",
+    "owner": "ci-medic",
     "kind": "mode",
-    "path": "skills/ci-maintenance/references/modes/loop-on-ci/guide.md"
+    "path": "skills/ci-medic/references/modes/loop-on-ci/guide.md"
   },
   {
     "original": "sast-configuration",
-    "owner": "ci-maintenance",
+    "owner": "ci-medic",
     "kind": "mode",
-    "path": "skills/ci-maintenance/references/modes/sast-configuration/guide.md"
+    "path": "skills/ci-medic/references/modes/sast-configuration/guide.md"
   },
   {
     "original": "setup-pre-commit",
-    "owner": "ci-maintenance",
+    "owner": "ci-medic",
     "kind": "mode",
-    "path": "skills/ci-maintenance/references/modes/setup-pre-commit/guide.md"
+    "path": "skills/ci-medic/references/modes/setup-pre-commit/guide.md"
   },
   {
     "original": "cli-developer",
-    "owner": "cli-developer",
+    "owner": "cli-contract-smith",
     "kind": "mode",
-    "path": "skills/cli-developer/references/modes/cli-developer/guide.md"
+    "path": "skills/cli-contract-smith/references/modes/cli-developer/guide.md"
   },
   {
     "original": "cli-for-agents",
-    "owner": "cli-developer",
+    "owner": "cli-contract-smith",
     "kind": "mode",
-    "path": "skills/cli-developer/references/modes/cli-for-agents/guide.md"
+    "path": "skills/cli-contract-smith/references/modes/cli-for-agents/guide.md"
   },
   {
     "original": "clonedeps",
-    "owner": "clonedeps",
+    "owner": "dep-source-clone",
     "kind": "retained",
-    "path": "skills/clonedeps/SKILL.md"
+    "path": "skills/dep-source-clone/SKILL.md"
   },
   {
     "original": "cloudflare-deploy",
-    "owner": "cloudflare-deploy",
+    "owner": "cf-edge-deploy",
     "kind": "retained",
-    "path": "skills/cloudflare-deploy/SKILL.md"
+    "path": "skills/cf-edge-deploy/SKILL.md"
   },
   {
     "original": "local-change-quality-gate",
-    "owner": "code-review",
+    "owner": "diff-inspector",
     "kind": "mode",
-    "path": "skills/code-review/references/modes/local-change-quality-gate/guide.md"
+    "path": "skills/diff-inspector/references/modes/local-change-quality-gate/guide.md"
   },
   {
     "original": "multi-reviewer-patterns",
-    "owner": "code-review",
+    "owner": "diff-inspector",
     "kind": "mode",
-    "path": "skills/code-review/references/modes/multi-reviewer-patterns/guide.md"
+    "path": "skills/diff-inspector/references/modes/multi-reviewer-patterns/guide.md"
   },
   {
     "original": "review-quality",
-    "owner": "code-review",
+    "owner": "diff-inspector",
     "kind": "mode",
-    "path": "skills/code-review/references/modes/review-quality/guide.md"
+    "path": "skills/diff-inspector/references/modes/review-quality/guide.md"
   },
   {
     "original": "thermo-nuclear-code-quality-review",
-    "owner": "code-review",
+    "owner": "diff-inspector",
     "kind": "mode",
-    "path": "skills/code-review/references/modes/thermo-nuclear-code-quality-review/guide.md"
+    "path": "skills/diff-inspector/references/modes/thermo-nuclear-code-quality-review/guide.md"
   },
   {
     "original": "thermo-nuclear-review",
-    "owner": "code-review",
+    "owner": "diff-inspector",
     "kind": "mode",
-    "path": "skills/code-review/references/modes/thermo-nuclear-review/guide.md"
+    "path": "skills/diff-inspector/references/modes/thermo-nuclear-review/guide.md"
   },
   {
     "original": "codemap",
-    "owner": "codemap",
+    "owner": "repo-atlas",
     "kind": "retained",
-    "path": "skills/codemap/SKILL.md"
+    "path": "skills/repo-atlas/SKILL.md"
   },
   {
     "original": "codemod-surgeon",
-    "owner": "codemod-surgeon",
+    "owner": "sweep-rewriter",
     "kind": "retained",
-    "path": "skills/codemod-surgeon/SKILL.md"
+    "path": "skills/sweep-rewriter/SKILL.md"
   },
   {
     "original": "database-migration",
-    "owner": "database-migration",
+    "owner": "schema-migrator",
     "kind": "retained",
-    "path": "skills/database-migration/SKILL.md"
+    "path": "skills/schema-migrator/SKILL.md"
   },
   {
     "original": "dependency-upgrade",
-    "owner": "dependency-upgrade",
+    "owner": "dep-upgrade-pilot",
     "kind": "retained",
-    "path": "skills/dependency-upgrade/SKILL.md"
+    "path": "skills/dep-upgrade-pilot/SKILL.md"
   },
   {
     "original": "develop-userscripts",
-    "owner": "develop-userscripts",
+    "owner": "userscript-workshop",
     "kind": "retained",
-    "path": "library/skills/develop-userscripts/SKILL.md"
+    "path": "library/skills/userscript-workshop/SKILL.md"
   },
   {
     "original": "diagnose-crash",
@@ -205,141 +205,141 @@
   },
   {
     "original": "frontend-design",
-    "owner": "frontend-design",
+    "owner": "ui-craft",
     "kind": "retained",
-    "path": "skills/frontend-design/SKILL.md"
+    "path": "skills/ui-craft/SKILL.md"
   },
   {
     "original": "gdpr-data-handling",
-    "owner": "gdpr-data-handling",
+    "owner": "privacy-controls",
     "kind": "retained",
-    "path": "skills/gdpr-data-handling/SKILL.md"
+    "path": "skills/privacy-controls/SKILL.md"
   },
   {
     "original": "changelog-automation",
-    "owner": "git-advanced-workflows",
+    "owner": "git-surgery",
     "kind": "mode",
-    "path": "skills/git-advanced-workflows/references/modes/changelog-automation/guide.md"
+    "path": "skills/git-surgery/references/modes/changelog-automation/guide.md"
   },
   {
     "original": "fix-merge-conflicts",
-    "owner": "git-advanced-workflows",
+    "owner": "git-surgery",
     "kind": "mode",
-    "path": "skills/git-advanced-workflows/references/modes/fix-merge-conflicts/guide.md"
+    "path": "skills/git-surgery/references/modes/fix-merge-conflicts/guide.md"
   },
   {
     "original": "git-advanced-workflows",
-    "owner": "git-advanced-workflows",
+    "owner": "git-surgery",
     "kind": "mode",
-    "path": "skills/git-advanced-workflows/references/modes/git-advanced-workflows/guide.md"
+    "path": "skills/git-surgery/references/modes/git-advanced-workflows/guide.md"
   },
   {
     "original": "github-pro",
-    "owner": "git-advanced-workflows",
+    "owner": "git-surgery",
     "kind": "mode",
-    "path": "skills/git-advanced-workflows/references/modes/github-pro/guide.md"
+    "path": "skills/git-surgery/references/modes/github-pro/guide.md"
   },
   {
     "original": "make-pr-easy-to-review",
-    "owner": "git-advanced-workflows",
+    "owner": "git-surgery",
     "kind": "mode",
-    "path": "skills/git-advanced-workflows/references/modes/make-pr-easy-to-review/guide.md"
+    "path": "skills/git-surgery/references/modes/make-pr-easy-to-review/guide.md"
   },
   {
     "original": "gitea-repo-overhaul",
-    "owner": "gitea-repo-overhaul",
+    "owner": "gitea-fleet-tidy",
     "kind": "retained",
-    "path": "skills/gitea-repo-overhaul/SKILL.md"
+    "path": "skills/gitea-fleet-tidy/SKILL.md"
   },
   {
     "original": "golang-pro",
-    "owner": "golang-pro",
+    "owner": "go-craft",
     "kind": "retained",
-    "path": "skills/golang-pro/SKILL.md"
+    "path": "skills/go-craft/SKILL.md"
   },
   {
     "original": "hatch-pet",
-    "owner": "hatch-pet",
+    "owner": "pet-hatchery",
     "kind": "retained",
-    "path": "skills/hatch-pet/SKILL.md"
+    "path": "skills/pet-hatchery/SKILL.md"
   },
   {
     "original": "interface-originality-audit",
-    "owner": "interface-originality-audit",
+    "owner": "ui-cliche-audit",
     "kind": "retained",
-    "path": "skills/interface-originality-audit/SKILL.md"
+    "path": "skills/ui-cliche-audit/SKILL.md"
   },
   {
     "original": "helm-chart-scaffolding",
-    "owner": "kubernetes-development",
+    "owner": "kube-artifact-smith",
     "kind": "mode",
-    "path": "library/skills/kubernetes-development/references/modes/helm-chart-scaffolding/guide.md"
+    "path": "library/skills/kube-artifact-smith/references/modes/helm-chart-scaffolding/guide.md"
   },
   {
     "original": "k8s-manifest-generator",
-    "owner": "kubernetes-development",
+    "owner": "kube-artifact-smith",
     "kind": "mode",
-    "path": "library/skills/kubernetes-development/references/modes/k8s-manifest-generator/guide.md"
+    "path": "library/skills/kube-artifact-smith/references/modes/k8s-manifest-generator/guide.md"
   },
   {
     "original": "k8s-security-policies",
-    "owner": "kubernetes-development",
+    "owner": "kube-artifact-smith",
     "kind": "mode",
-    "path": "library/skills/kubernetes-development/references/modes/k8s-security-policies/guide.md"
+    "path": "library/skills/kube-artifact-smith/references/modes/k8s-security-policies/guide.md"
   },
   {
     "original": "lightweight-charts",
-    "owner": "lightweight-charts",
+    "owner": "tv-candle-charts",
     "kind": "retained",
-    "path": "library/skills/lightweight-charts/SKILL.md"
+    "path": "library/skills/tv-candle-charts/SKILL.md"
   },
   {
     "original": "llm-evaluation",
-    "owner": "llm-evaluation",
+    "owner": "eval-bench",
     "kind": "retained",
-    "path": "skills/llm-evaluation/SKILL.md"
+    "path": "skills/eval-bench/SKILL.md"
   },
   {
     "original": "mcp-builder",
-    "owner": "mcp-builder",
+    "owner": "mcp-server-forge",
     "kind": "retained",
-    "path": "skills/mcp-builder/SKILL.md"
+    "path": "skills/mcp-server-forge/SKILL.md"
   },
   {
     "original": "mcp-integration-lifecycle",
-    "owner": "mcp-integration-lifecycle",
+    "owner": "mcp-wire-tracer",
     "kind": "retained",
-    "path": "skills/mcp-integration-lifecycle/SKILL.md"
+    "path": "skills/mcp-wire-tracer/SKILL.md"
   },
   {
     "original": "mtls-configuration",
-    "owner": "mtls-configuration",
+    "owner": "mtls-trust-chain",
     "kind": "retained",
-    "path": "skills/mtls-configuration/SKILL.md"
+    "path": "skills/mtls-trust-chain/SKILL.md"
   },
   {
     "original": "distributed-tracing",
-    "owner": "observability",
+    "owner": "telemetry-signal-forge",
     "kind": "mode",
-    "path": "skills/observability/references/modes/distributed-tracing/guide.md"
+    "path": "skills/telemetry-signal-forge/references/modes/distributed-tracing/guide.md"
   },
   {
     "original": "grafana-dashboards",
-    "owner": "observability",
+    "owner": "telemetry-signal-forge",
     "kind": "mode",
-    "path": "skills/observability/references/modes/grafana-dashboards/guide.md"
+    "path": "skills/telemetry-signal-forge/references/modes/grafana-dashboards/guide.md"
   },
   {
     "original": "prometheus-configuration",
-    "owner": "observability",
+    "owner": "telemetry-signal-forge",
     "kind": "mode",
-    "path": "skills/observability/references/modes/prometheus-configuration/guide.md"
+    "path": "skills/telemetry-signal-forge/references/modes/prometheus-configuration/guide.md"
   },
   {
     "original": "slo-implementation",
-    "owner": "observability",
+    "owner": "telemetry-signal-forge",
     "kind": "mode",
-    "path": "skills/observability/references/modes/slo-implementation/guide.md"
+    "path": "skills/telemetry-signal-forge/references/modes/slo-implementation/guide.md"
   },
   {
     "original": "omarchy",
@@ -349,345 +349,345 @@
   },
   {
     "original": "opentui",
-    "owner": "opentui",
+    "owner": "opentui-screens",
     "kind": "retained",
-    "path": "library/skills/opentui/SKILL.md"
+    "path": "library/skills/opentui-screens/SKILL.md"
   },
   {
     "original": "performance-investigation",
-    "owner": "performance-investigation",
+    "owner": "perf-hotpath-probe",
     "kind": "retained",
-    "path": "skills/performance-investigation/SKILL.md"
+    "path": "skills/perf-hotpath-probe/SKILL.md"
   },
   {
     "original": "playwright",
-    "owner": "playwright",
+    "owner": "playwright-cli-driver",
     "kind": "retained",
-    "path": "skills/playwright/SKILL.md"
+    "path": "skills/playwright-cli-driver/SKILL.md"
   },
   {
     "original": "postgres-data-quality",
-    "owner": "postgres-pro",
+    "owner": "pg-plan-reader",
     "kind": "mode",
-    "path": "skills/postgres-pro/references/modes/postgres-data-quality/guide.md"
+    "path": "skills/pg-plan-reader/references/modes/postgres-data-quality/guide.md"
   },
   {
     "original": "postgres-pro",
-    "owner": "postgres-pro",
+    "owner": "pg-plan-reader",
     "kind": "mode",
-    "path": "skills/postgres-pro/references/modes/postgres-pro/guide.md"
+    "path": "skills/pg-plan-reader/references/modes/postgres-pro/guide.md"
   },
   {
     "original": "prototype",
-    "owner": "prototype",
+    "owner": "throwaway-prototype",
     "kind": "retained",
-    "path": "skills/prototype/SKILL.md"
+    "path": "skills/throwaway-prototype/SKILL.md"
   },
   {
     "original": "python-configuration",
-    "owner": "python-development",
+    "owner": "python-uv-workbench",
     "kind": "mode",
-    "path": "skills/python-development/references/modes/python-configuration/guide.md"
+    "path": "skills/python-uv-workbench/references/modes/python-configuration/guide.md"
   },
   {
     "original": "python-packaging",
-    "owner": "python-development",
+    "owner": "python-uv-workbench",
     "kind": "mode",
-    "path": "skills/python-development/references/modes/python-packaging/guide.md"
+    "path": "skills/python-uv-workbench/references/modes/python-packaging/guide.md"
   },
   {
     "original": "python-testing-patterns",
-    "owner": "python-development",
+    "owner": "python-uv-workbench",
     "kind": "mode",
-    "path": "skills/python-development/references/modes/python-testing-patterns/guide.md"
+    "path": "skills/python-uv-workbench/references/modes/python-testing-patterns/guide.md"
   },
   {
     "original": "python-tooling-patterns",
-    "owner": "python-development",
+    "owner": "python-uv-workbench",
     "kind": "mode",
-    "path": "skills/python-development/references/modes/python-tooling-patterns/guide.md"
+    "path": "skills/python-uv-workbench/references/modes/python-tooling-patterns/guide.md"
   },
   {
     "original": "uv-package-manager",
-    "owner": "python-development",
+    "owner": "python-uv-workbench",
     "kind": "mode",
-    "path": "skills/python-development/references/modes/uv-package-manager/guide.md"
+    "path": "skills/python-uv-workbench/references/modes/uv-package-manager/guide.md"
   },
   {
     "original": "hybrid-search-implementation",
-    "owner": "rag-implementation",
+    "owner": "retrieval-pipeline",
     "kind": "mode",
-    "path": "skills/rag-implementation/references/modes/hybrid-search-implementation/guide.md"
+    "path": "skills/retrieval-pipeline/references/modes/hybrid-search-implementation/guide.md"
   },
   {
     "original": "rag-implementation",
-    "owner": "rag-implementation",
+    "owner": "retrieval-pipeline",
     "kind": "mode",
-    "path": "skills/rag-implementation/references/modes/rag-implementation/guide.md"
+    "path": "skills/retrieval-pipeline/references/modes/rag-implementation/guide.md"
   },
   {
     "original": "react-native-pro",
-    "owner": "react-native-pro",
+    "owner": "rn-expo-builder",
     "kind": "retained",
-    "path": "library/skills/react-native-pro/SKILL.md"
+    "path": "library/skills/rn-expo-builder/SKILL.md"
   },
   {
     "original": "react-pro",
-    "owner": "react-pro",
+    "owner": "react-render-tuner",
     "kind": "retained",
-    "path": "skills/react-pro/SKILL.md"
+    "path": "skills/react-render-tuner/SKILL.md"
   },
   {
     "original": "deslop",
-    "owner": "refactor",
+    "owner": "safe-refactor-pass",
     "kind": "mode",
-    "path": "skills/refactor/references/modes/deslop/guide.md"
+    "path": "skills/safe-refactor-pass/references/modes/deslop/guide.md"
   },
   {
     "original": "refactor",
-    "owner": "refactor",
+    "owner": "safe-refactor-pass",
     "kind": "mode",
-    "path": "skills/refactor/references/modes/refactor/guide.md"
+    "path": "skills/safe-refactor-pass/references/modes/refactor/guide.md"
   },
   {
     "original": "request-refactor-plan",
-    "owner": "refactor",
+    "owner": "safe-refactor-pass",
     "kind": "mode",
-    "path": "skills/refactor/references/modes/request-refactor-plan/guide.md"
+    "path": "skills/safe-refactor-pass/references/modes/request-refactor-plan/guide.md"
   },
   {
     "original": "simplify",
-    "owner": "refactor",
+    "owner": "safe-refactor-pass",
     "kind": "mode",
-    "path": "skills/refactor/references/modes/simplify/guide.md"
+    "path": "skills/safe-refactor-pass/references/modes/simplify/guide.md"
   },
   {
     "original": "repository-delivery-review",
-    "owner": "repository-delivery-review",
+    "owner": "ship-check",
     "kind": "retained",
-    "path": "skills/repository-delivery-review/SKILL.md"
+    "path": "skills/ship-check/SKILL.md"
   },
   {
     "original": "repository-test-maintenance",
-    "owner": "repository-test-maintenance",
+    "owner": "test-suite-pruner",
     "kind": "retained",
-    "path": "skills/repository-test-maintenance/SKILL.md"
+    "path": "skills/test-suite-pruner/SKILL.md"
   },
   {
     "original": "binary-analysis-patterns",
-    "owner": "reverse-engineering",
+    "owner": "binary-dissector",
     "kind": "mode",
-    "path": "library/skills/reverse-engineering/references/modes/binary-analysis-patterns/guide.md"
+    "path": "library/skills/binary-dissector/references/modes/binary-analysis-patterns/guide.md"
   },
   {
     "original": "protocol-reverse-engineering",
-    "owner": "reverse-engineering",
+    "owner": "binary-dissector",
     "kind": "mode",
-    "path": "library/skills/reverse-engineering/references/modes/protocol-reverse-engineering/guide.md"
+    "path": "library/skills/binary-dissector/references/modes/protocol-reverse-engineering/guide.md"
   },
   {
     "original": "rust-pro",
-    "owner": "rust-pro",
+    "owner": "rust-ownership-async",
     "kind": "retained",
-    "path": "skills/rust-pro/SKILL.md"
+    "path": "skills/rust-ownership-async/SKILL.md"
   },
   {
     "original": "scaffold-exercises",
-    "owner": "scaffold-exercises",
+    "owner": "exercise-scaffold",
     "kind": "retained",
-    "path": "library/skills/scaffold-exercises/SKILL.md"
+    "path": "library/skills/exercise-scaffold/SKILL.md"
   },
   {
     "original": "secrets-management",
-    "owner": "secrets-management",
+    "owner": "secret-rotation-flow",
     "kind": "retained",
-    "path": "skills/secrets-management/SKILL.md"
+    "path": "skills/secret-rotation-flow/SKILL.md"
   },
   {
     "original": "security-best-practices",
-    "owner": "security-best-practices",
+    "owner": "secure-code-audit",
     "kind": "retained",
-    "path": "skills/security-best-practices/SKILL.md"
+    "path": "skills/secure-code-audit/SKILL.md"
   },
   {
     "original": "security-ownership-map",
-    "owner": "security-ownership-map",
+    "owner": "bus-factor-map",
     "kind": "retained",
-    "path": "skills/security-ownership-map/SKILL.md"
+    "path": "skills/bus-factor-map/SKILL.md"
   },
   {
     "original": "security-threat-model",
-    "owner": "security-threat-model",
+    "owner": "stride-threat-map",
     "kind": "retained",
-    "path": "skills/security-threat-model/SKILL.md"
+    "path": "skills/stride-threat-map/SKILL.md"
   },
   {
     "original": "bash-defensive-patterns",
-    "owner": "shell-development",
+    "owner": "bash-script-craft",
     "kind": "mode",
-    "path": "skills/shell-development/references/modes/bash-defensive-patterns/guide.md"
+    "path": "skills/bash-script-craft/references/modes/bash-defensive-patterns/guide.md"
   },
   {
     "original": "bats-testing-patterns",
-    "owner": "shell-development",
+    "owner": "bash-script-craft",
     "kind": "mode",
-    "path": "skills/shell-development/references/modes/bats-testing-patterns/guide.md"
+    "path": "skills/bash-script-craft/references/modes/bats-testing-patterns/guide.md"
   },
   {
     "original": "shellcheck-configuration",
-    "owner": "shell-development",
+    "owner": "bash-script-craft",
     "kind": "mode",
-    "path": "skills/shell-development/references/modes/shellcheck-configuration/guide.md"
+    "path": "skills/bash-script-craft/references/modes/shellcheck-configuration/guide.md"
   },
   {
     "original": "solidity-security",
-    "owner": "solidity-security",
+    "owner": "solidity-audit",
     "kind": "retained",
-    "path": "library/skills/solidity-security/SKILL.md"
+    "path": "library/skills/solidity-audit/SKILL.md"
   },
   {
     "original": "diagnosing-bugs",
-    "owner": "systematic-debugging",
+    "owner": "bug-tracer",
     "kind": "mode",
-    "path": "skills/systematic-debugging/references/modes/diagnosing-bugs/guide.md"
+    "path": "skills/bug-tracer/references/modes/diagnosing-bugs/guide.md"
   },
   {
     "original": "failure-anthropologist",
-    "owner": "systematic-debugging",
+    "owner": "bug-tracer",
     "kind": "mode",
-    "path": "skills/systematic-debugging/references/modes/failure-anthropologist/guide.md"
+    "path": "skills/bug-tracer/references/modes/failure-anthropologist/guide.md"
   },
   {
     "original": "systematic-debugging",
-    "owner": "systematic-debugging",
+    "owner": "bug-tracer",
     "kind": "mode",
-    "path": "skills/systematic-debugging/references/modes/systematic-debugging/guide.md"
+    "path": "skills/bug-tracer/references/modes/systematic-debugging/guide.md"
   },
   {
     "original": "tdd",
-    "owner": "tdd",
+    "owner": "red-green-loop",
     "kind": "retained",
-    "path": "skills/tdd/SKILL.md"
+    "path": "skills/red-green-loop/SKILL.md"
   },
   {
     "original": "readme-i18n",
-    "owner": "technical-writing",
+    "owner": "tech-doc-writer",
     "kind": "mode",
-    "path": "skills/technical-writing/references/modes/readme-i18n/guide.md"
+    "path": "skills/tech-doc-writer/references/modes/readme-i18n/guide.md"
   },
   {
     "original": "review-doc-consistency",
-    "owner": "technical-writing",
+    "owner": "tech-doc-writer",
     "kind": "mode",
-    "path": "skills/technical-writing/references/modes/review-doc-consistency/guide.md"
+    "path": "skills/tech-doc-writer/references/modes/review-doc-consistency/guide.md"
   },
   {
     "original": "technical-writing",
-    "owner": "technical-writing",
+    "owner": "tech-doc-writer",
     "kind": "mode",
-    "path": "skills/technical-writing/references/modes/technical-writing/guide.md"
+    "path": "skills/tech-doc-writer/references/modes/technical-writing/guide.md"
   },
   {
     "original": "temporal-python-testing",
-    "owner": "temporal-python-testing",
+    "owner": "temporal-py-tests",
     "kind": "retained",
-    "path": "library/skills/temporal-python-testing/SKILL.md"
+    "path": "library/skills/temporal-py-tests/SKILL.md"
   },
   {
     "original": "terraform-module-library",
-    "owner": "terraform-module-library",
+    "owner": "terraform-module-smith",
     "kind": "retained",
-    "path": "library/skills/terraform-module-library/SKILL.md"
+    "path": "library/skills/terraform-module-smith/SKILL.md"
   },
   {
     "original": "migrate-to-shoehorn",
-    "owner": "typescript-pro",
+    "owner": "ts-type-design",
     "kind": "mode",
-    "path": "skills/typescript-pro/references/modes/migrate-to-shoehorn/guide.md"
+    "path": "skills/ts-type-design/references/modes/migrate-to-shoehorn/guide.md"
   },
   {
     "original": "setup-ts-deep-modules",
-    "owner": "typescript-pro",
+    "owner": "ts-type-design",
     "kind": "mode",
-    "path": "skills/typescript-pro/references/modes/setup-ts-deep-modules/guide.md"
+    "path": "skills/ts-type-design/references/modes/setup-ts-deep-modules/guide.md"
   },
   {
     "original": "typescript-best-practices",
-    "owner": "typescript-pro",
+    "owner": "ts-type-design",
     "kind": "mode",
-    "path": "skills/typescript-pro/references/modes/typescript-best-practices/guide.md"
+    "path": "skills/ts-type-design/references/modes/typescript-best-practices/guide.md"
   },
   {
     "original": "typescript-pro",
-    "owner": "typescript-pro",
+    "owner": "ts-type-design",
     "kind": "mode",
-    "path": "skills/typescript-pro/references/modes/typescript-pro/guide.md"
+    "path": "skills/ts-type-design/references/modes/typescript-pro/guide.md"
   },
   {
     "original": "check-compiler-errors",
-    "owner": "verify-behavior",
+    "owner": "behavior-proof",
     "kind": "mode",
-    "path": "skills/verify-behavior/references/modes/check-compiler-errors/guide.md"
+    "path": "skills/behavior-proof/references/modes/check-compiler-errors/guide.md"
   },
   {
     "original": "control-cli",
-    "owner": "verify-behavior",
+    "owner": "behavior-proof",
     "kind": "mode",
-    "path": "skills/verify-behavior/references/modes/control-cli/guide.md"
+    "path": "skills/behavior-proof/references/modes/control-cli/guide.md"
   },
   {
     "original": "control-ui",
-    "owner": "verify-behavior",
+    "owner": "behavior-proof",
     "kind": "mode",
-    "path": "skills/verify-behavior/references/modes/control-ui/guide.md"
+    "path": "skills/behavior-proof/references/modes/control-ui/guide.md"
   },
   {
     "original": "verify-this",
-    "owner": "verify-behavior",
+    "owner": "behavior-proof",
     "kind": "mode",
-    "path": "skills/verify-behavior/references/modes/verify-this/guide.md"
+    "path": "skills/behavior-proof/references/modes/verify-this/guide.md"
   },
   {
     "original": "webapp-testing",
-    "owner": "verify-behavior",
+    "owner": "behavior-proof",
     "kind": "mode",
-    "path": "skills/verify-behavior/references/modes/webapp-testing/guide.md"
+    "path": "skills/behavior-proof/references/modes/webapp-testing/guide.md"
   },
   {
     "original": "vscode-extension-development",
-    "owner": "vscode-extension-development",
+    "owner": "vscode-extension-lab",
     "kind": "retained",
-    "path": "library/skills/vscode-extension-development/SKILL.md"
+    "path": "library/skills/vscode-extension-lab/SKILL.md"
   },
   {
     "original": "wcag-audit-patterns",
-    "owner": "wcag-audit-patterns",
+    "owner": "wcag-a11y-audit",
     "kind": "retained",
-    "path": "skills/wcag-audit-patterns/SKILL.md"
+    "path": "skills/wcag-a11y-audit/SKILL.md"
   },
   {
     "original": "wizard",
-    "owner": "wizard",
+    "owner": "setup-wizard-script",
     "kind": "retained",
-    "path": "skills/wizard/SKILL.md"
+    "path": "skills/setup-wizard-script/SKILL.md"
   },
   {
     "original": "workflow-orchestration-patterns",
-    "owner": "workflow-orchestration-patterns",
+    "owner": "temporal-flow-design",
     "kind": "retained",
-    "path": "library/skills/workflow-orchestration-patterns/SKILL.md"
+    "path": "library/skills/temporal-flow-design/SKILL.md"
   },
   {
     "original": "requirements-interview",
-    "owner": "requirements-interview",
+    "owner": "scope-grill",
     "kind": "shared",
-    "path": "shared/requirements-interview/SKILL.md"
+    "path": "shared/scope-grill/SKILL.md"
   },
   {
     "original": "session-handoff",
-    "owner": "session-handoff",
+    "owner": "relay-baton",
     "kind": "shared",
-    "path": "shared/session-handoff/SKILL.md"
+    "path": "shared/relay-baton/SKILL.md"
   },
   {
     "original": "review-agent",
@@ -697,129 +697,129 @@
   },
   {
     "original": "principle-boundary-discipline",
-    "owner": "architecture-patterns",
+    "owner": "boundary-drafter",
     "kind": "principle-reference",
-    "path": "skills/architecture-patterns/references/principles/boundary-discipline.md"
+    "path": "skills/boundary-drafter/references/principles/boundary-discipline.md"
   },
   {
     "original": "principle-exhaust-the-design-space",
-    "owner": "architecture-patterns",
+    "owner": "boundary-drafter",
     "kind": "principle-reference",
-    "path": "skills/architecture-patterns/references/principles/exhaust-the-design-space.md"
+    "path": "skills/boundary-drafter/references/principles/exhaust-the-design-space.md"
   },
   {
     "original": "principle-experience-first",
-    "owner": "architecture-patterns",
+    "owner": "boundary-drafter",
     "kind": "principle-reference",
-    "path": "skills/architecture-patterns/references/principles/experience-first.md"
+    "path": "skills/boundary-drafter/references/principles/experience-first.md"
   },
   {
     "original": "principle-foundational-thinking",
-    "owner": "architecture-patterns",
+    "owner": "boundary-drafter",
     "kind": "principle-reference",
-    "path": "skills/architecture-patterns/references/principles/foundational-thinking.md"
+    "path": "skills/boundary-drafter/references/principles/foundational-thinking.md"
   },
   {
     "original": "principle-model-the-domain",
-    "owner": "architecture-patterns",
+    "owner": "boundary-drafter",
     "kind": "principle-reference",
-    "path": "skills/architecture-patterns/references/principles/model-the-domain.md"
+    "path": "skills/boundary-drafter/references/principles/model-the-domain.md"
   },
   {
     "original": "principle-redesign-from-first-principles",
-    "owner": "architecture-patterns",
+    "owner": "boundary-drafter",
     "kind": "principle-reference",
-    "path": "skills/architecture-patterns/references/principles/redesign-from-first-principles.md"
+    "path": "skills/boundary-drafter/references/principles/redesign-from-first-principles.md"
   },
   {
     "original": "principle-separate-before-serializing-shared-state",
-    "owner": "architecture-patterns",
+    "owner": "boundary-drafter",
     "kind": "principle-reference",
-    "path": "skills/architecture-patterns/references/principles/separate-before-serializing-shared-state.md"
+    "path": "skills/boundary-drafter/references/principles/separate-before-serializing-shared-state.md"
   },
   {
     "original": "principle-laziness-protocol",
-    "owner": "refactor",
+    "owner": "safe-refactor-pass",
     "kind": "principle-reference",
-    "path": "skills/refactor/references/principles/laziness-protocol.md"
+    "path": "skills/safe-refactor-pass/references/principles/laziness-protocol.md"
   },
   {
     "original": "principle-migrate-callers-then-delete-legacy-apis",
-    "owner": "refactor",
+    "owner": "safe-refactor-pass",
     "kind": "principle-reference",
-    "path": "skills/refactor/references/principles/migrate-callers-then-delete-legacy-apis.md"
+    "path": "skills/safe-refactor-pass/references/principles/migrate-callers-then-delete-legacy-apis.md"
   },
   {
     "original": "principle-minimize-reader-load",
-    "owner": "refactor",
+    "owner": "safe-refactor-pass",
     "kind": "principle-reference",
-    "path": "skills/refactor/references/principles/minimize-reader-load.md"
+    "path": "skills/safe-refactor-pass/references/principles/minimize-reader-load.md"
   },
   {
     "original": "principle-subtract-before-you-add",
-    "owner": "refactor",
+    "owner": "safe-refactor-pass",
     "kind": "principle-reference",
-    "path": "skills/refactor/references/principles/subtract-before-you-add.md"
+    "path": "skills/safe-refactor-pass/references/principles/subtract-before-you-add.md"
   },
   {
     "original": "principle-build-the-lever",
-    "owner": "codemod-surgeon",
+    "owner": "sweep-rewriter",
     "kind": "principle-reference",
-    "path": "skills/codemod-surgeon/references/principles/build-the-lever.md"
+    "path": "skills/sweep-rewriter/references/principles/build-the-lever.md"
   },
   {
     "original": "principle-encode-lessons-in-structure",
-    "owner": "codemod-surgeon",
+    "owner": "sweep-rewriter",
     "kind": "principle-reference",
-    "path": "skills/codemod-surgeon/references/principles/encode-lessons-in-structure.md"
+    "path": "skills/sweep-rewriter/references/principles/encode-lessons-in-structure.md"
   },
   {
     "original": "principle-guard-the-context-window",
-    "owner": "implementation-plan",
+    "owner": "build-sequencer",
     "kind": "principle-reference",
-    "path": "skills/implementation-plan/references/principles/guard-the-context-window.md"
+    "path": "skills/build-sequencer/references/principles/guard-the-context-window.md"
   },
   {
     "original": "principle-never-block-on-the-human",
-    "owner": "implementation-plan",
+    "owner": "build-sequencer",
     "kind": "principle-reference",
-    "path": "skills/implementation-plan/references/principles/never-block-on-the-human.md"
+    "path": "skills/build-sequencer/references/principles/never-block-on-the-human.md"
   },
   {
     "original": "principle-outcome-oriented-execution",
-    "owner": "implementation-plan",
+    "owner": "build-sequencer",
     "kind": "principle-reference",
-    "path": "skills/implementation-plan/references/principles/outcome-oriented-execution.md"
+    "path": "skills/build-sequencer/references/principles/outcome-oriented-execution.md"
   },
   {
     "original": "principle-sequence-verifiable-units",
-    "owner": "implementation-plan",
+    "owner": "build-sequencer",
     "kind": "principle-reference",
-    "path": "skills/implementation-plan/references/principles/sequence-verifiable-units.md"
+    "path": "skills/build-sequencer/references/principles/sequence-verifiable-units.md"
   },
   {
     "original": "principle-fix-root-causes",
-    "owner": "systematic-debugging",
+    "owner": "bug-tracer",
     "kind": "principle-reference",
-    "path": "skills/systematic-debugging/references/principles/fix-root-causes.md"
+    "path": "skills/bug-tracer/references/principles/fix-root-causes.md"
   },
   {
     "original": "principle-prove-it-works",
-    "owner": "verify-behavior",
+    "owner": "behavior-proof",
     "kind": "principle-reference",
-    "path": "skills/verify-behavior/references/principles/prove-it-works.md"
+    "path": "skills/behavior-proof/references/principles/prove-it-works.md"
   },
   {
     "original": "principle-make-operations-idempotent",
-    "owner": "verify-behavior",
+    "owner": "behavior-proof",
     "kind": "principle-reference",
-    "path": "skills/verify-behavior/references/principles/make-operations-idempotent.md"
+    "path": "skills/behavior-proof/references/principles/make-operations-idempotent.md"
   },
   {
     "original": "principle-type-system-discipline",
-    "owner": "typescript-pro",
+    "owner": "ts-type-design",
     "kind": "principle-reference",
-    "path": "skills/typescript-pro/references/principles/type-system-discipline.md"
+    "path": "skills/ts-type-design/references/principles/type-system-discipline.md"
   },
   {
     "original": "writing-for-agents",
@@ -829,27 +829,27 @@
   },
   {
     "original": "t3-repo-setup",
-    "owner": "t3-repo-setup",
+    "owner": "t3-repo-onboard",
     "kind": "authored",
-    "path": "skills/t3-repo-setup/SKILL.md"
+    "path": "skills/t3-repo-onboard/SKILL.md"
   },
   {
     "original": "grilling",
-    "owner": "requirements-interview",
+    "owner": "scope-grill",
     "kind": "reference",
-    "path": "shared/requirements-interview/references/grilling.md"
+    "path": "shared/scope-grill/references/grilling.md"
   },
   {
     "original": "handoff",
-    "owner": "session-handoff",
+    "owner": "relay-baton",
     "kind": "reference",
-    "path": "shared/session-handoff/SKILL.md"
+    "path": "shared/relay-baton/SKILL.md"
   },
   {
     "original": "show-me-your-work",
-    "owner": "implementation-plan",
+    "owner": "build-sequencer",
     "kind": "reference",
-    "path": "skills/implementation-plan/references/decision-trail.md"
+    "path": "skills/build-sequencer/references/decision-trail.md"
   },
   {
     "original": "llama-line-client",
@@ -865,27 +865,27 @@
   },
   {
     "original": "use-my-browser",
-    "owner": "verify-behavior",
+    "owner": "behavior-proof",
     "kind": "reference",
-    "path": "skills/verify-behavior/references/browser-diagnosis.md"
+    "path": "skills/behavior-proof/references/browser-diagnosis.md"
   },
   {
     "original": "stripe",
-    "owner": "stripe-billing-operations",
+    "owner": "stripe-billing-guard",
     "kind": "reference",
-    "path": "skills/stripe-billing-operations/SKILL.md"
+    "path": "skills/stripe-billing-guard/SKILL.md"
   },
   {
     "original": "wait-what",
-    "owner": "unslop",
+    "owner": "prose-unslop",
     "kind": "reference",
-    "path": "skills/unslop/SKILL.md"
+    "path": "skills/prose-unslop/SKILL.md"
   },
   {
     "original": "stripe-billing-operations",
-    "owner": "stripe-billing-operations",
+    "owner": "stripe-billing-guard",
     "kind": "authored-overlay",
-    "path": "skills/stripe-billing-operations/SKILL.md"
+    "path": "skills/stripe-billing-guard/SKILL.md"
   },
   {
     "original": "homelab",
@@ -937,9 +937,9 @@
   },
   {
     "original": "homelab-operations",
-    "owner": "homelab-operations",
+    "owner": "fleet-ops-router",
     "kind": "optional",
-    "path": "library/skills/homelab-operations/SKILL.md"
+    "path": "library/skills/fleet-ops-router/SKILL.md"
   },
   {
     "original": "studio-preparation",
@@ -973,20 +973,20 @@
   },
   {
     "original": "brand-voice",
-    "owner": "brand-voice",
+    "owner": "voice-ledger",
     "kind": "shared",
-    "path": "shared/brand-voice/SKILL.md"
+    "path": "shared/voice-ledger/SKILL.md"
   },
   {
     "original": "content-repurposing",
-    "owner": "content-repurposing",
+    "owner": "content-recaster",
     "kind": "shared",
-    "path": "shared/content-repurposing/SKILL.md"
+    "path": "shared/content-recaster/SKILL.md"
   },
   {
     "original": "marketing-packet",
-    "owner": "marketing-packet",
+    "owner": "launch-dossier",
     "kind": "shared",
-    "path": "shared/marketing-packet/SKILL.md"
+    "path": "shared/launch-dossier/SKILL.md"
   }
 ]

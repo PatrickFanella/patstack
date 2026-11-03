@@ -1,6 +1,6 @@
 ---
 name: review-plugin-submission
-description: Audit a Cursor plugin for marketplace readiness. Use when validating manifests, component metadata, discovery paths, and submission quality before publishing.
+description: "Audit a Cursor plugin for marketplace readiness: manifest, component metadata, discovery paths, README. Use before submitting or releasing a Cursor plugin. Not for Claude Code or Codex plugins."
 ---
 
 # Review plugin submission

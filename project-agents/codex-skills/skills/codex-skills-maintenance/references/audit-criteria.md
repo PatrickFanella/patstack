@@ -62,6 +62,8 @@
 
 ## Ecosystem Routing
 
+Names below are Codex plugin and tool names. In Claude Code or OpenCode, route to the equivalent installed skill or tool and say when none exists.
+
 - Private external data: connector or MCP before browser automation.
 - Browser work: follow the current client-native browser contract, including T3 preview status/open, before considering another backend.
 - Isolated/local web testing: use the active client's supported browser and preserve its session ownership.

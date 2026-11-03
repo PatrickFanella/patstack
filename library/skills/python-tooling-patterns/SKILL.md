@@ -1,6 +1,6 @@
 ---
 name: python-tooling-patterns
-description: "Python patterns for utility scripts, generators, document/data tooling, and small automation. Use when Python drives a tool rather than an application stack: CLI helpers, report/doc generation, file processing, validation scripts, quick data transforms, or maintaining existing Python tooling."
+description: "Use when Python drives a tool rather than an app: CLI helpers, generators, report or file processing, validation scripts, data transforms. Not for packaging, settings or test-suite design."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

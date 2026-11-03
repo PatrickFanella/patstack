@@ -22,13 +22,13 @@
 1. Run:
 
    ```bash
-   python3 /home/onnwee/.config/opencode/skills/nuc/scripts/nuc_doc_audit.py /home/onnwee/.nuc
+   ssh nuc 'python3 - /home/onnwee/.nuc' < scripts/nuc_doc_audit.py   # from this skill's directory
    ```
 
 2. Collect live state using read-only commands or:
 
    ```bash
-   python3 /home/onnwee/.config/opencode/skills/nuc/scripts/nuc_health_snapshot.py
+   ssh nuc 'python3 -' < scripts/nuc_health_snapshot.py
    ```
 
 3. Compare active docs outside `90-archive` to live state. Do not update archive docs unless asked.

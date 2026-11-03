@@ -18,7 +18,7 @@ artifact_policy=$(docker inspect gitea --format '{{range .Config.Env}}{{println 
     grep -E '^GITEA__actions__(LOG_RETENTION_DAYS|ARTIFACT_RETENTION_DAYS)=' | sort)
 artifact_summary=$(sql "select count(*) filter(where status=2 and expired_unix < extract(epoch from now())), coalesce(sum(file_compressed_size) filter(where status=2 and expired_unix < extract(epoch from now())),0), count(*) filter(where status=4), coalesce(sum(file_compressed_size) filter(where status=4),0), count(*) filter(where status=5), coalesce(sum(file_compressed_size) filter(where status=5),0), count(*) filter(where status=2 and expired_unix >= extract(epoch from now())), coalesce(sum(file_compressed_size) filter(where status=2 and expired_unix >= extract(epoch from now())),0) from action_artifact;")
 package_summary=$(sql "select p.type || '|' || count(*) || '|' || coalesce(sum(s.total),0) from package p join (select pv.package_id, sum(pb.size) total from package_version pv left join package_file pf on pf.version_id=pv.id left join package_blob pb on pb.id=pf.blob_id group by pv.package_id) s on s.package_id=p.id group by p.type order by p.type;")
-deployed_digests=$(docker ps --format '{{.Image}}' | while IFS= read -r image; do docker image inspect "$image" --format '{{join .RepoDigests "\n"}}' 2>/dev/null || true; done | sed '/^$/d' | sort -u)
+deployed_digests=$(docker ps --format '{{.Image}}' | while IFS= read -r image; do docker image inspect "$marketing-imagery" --format '{{join .RepoDigests "\n"}}' 2>/dev/null || true; done | sed '/^$/d' | sort -u)
 
 AUDIT_ARTIFACT_POLICY="$artifact_policy" AUDIT_ARTIFACT_SUMMARY="$artifact_summary" \
 AUDIT_PACKAGE_SUMMARY="$package_summary" AUDIT_DEPLOYED_DIGESTS="$deployed_digests" \

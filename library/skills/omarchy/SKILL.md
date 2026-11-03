@@ -1,14 +1,6 @@
 ---
 name: omarchy
-description: >
-  REQUIRED for end-user customization of Linux desktop, window manager, or system config.
-  Use when editing ~/.config/hypr/, ~/.config/omarchy/,
-  ~/.config/alacritty/, ~/.config/foot/, ~/.config/kitty/, or ~/.config/ghostty/.
-  Triggers: Hyprland, window rules, animations, keybindings, monitors, gaps, borders,
-  blur, opacity, omarchy-shell, bar, terminal config, themes, background,
-  night light, idle, lock screen, screenshots, reminders, layer rules, workspace
-  settings, display config, and user-facing omarchy commands. Excludes Omarchy
-  source development through `omarchy dev link` workflows.
+description: "Omarchy desktop customization under ~/.config: Hyprland, omarchy-shell bar, terminal configs, themes, idle, lock, screenshots, monitors. Omarchy runs on Sputnik. Not for Omarchy source work."
 ---
 
 # Omarchy Skill
@@ -17,6 +9,8 @@ Manage [Omarchy](https://omarchy.org/) Linux systems - a beautiful, modern, opin
 
 This skill is for end-user customization on installed systems.
 It is not for contributing to Omarchy source code.
+
+In this fleet, Omarchy runs on Sputnik. Kvant moved to Debian 13 on 2026-11-03 and no longer runs Omarchy, so check `command -v omarchy` and the host before following these steps; on Debian use apt, not pacman or yay.
 
 ## When This Skill MUST Be Used
 

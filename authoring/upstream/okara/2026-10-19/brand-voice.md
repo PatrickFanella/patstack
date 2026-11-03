@@ -1,5 +1,5 @@
 ---
-name: brand-voice
+name: voice-ledger
 description: Turn fuzzy voice adjectives into a documented brand voice — concrete attributes, tone rules, vocabulary, and do/don't examples — and apply it consistently.
 owner: Okara Writer Agent
 ---

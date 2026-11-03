@@ -1,6 +1,6 @@
 ---
-name: cli-developer
-description: Use when building CLI tools, implementing argument parsing, or adding interactive prompts. Invoke for parsing flags and subcommands, displaying progress bars and spinners, generating bash/zsh/fish completion scripts, CLI design, shell completions, and cross-platform terminal applications using Rust clap, Go Cobra, or TypeScript Commander.
+name: cli-contract-smith
+description: "CLI building: argument parsing, subcommands, prompts, progress output and shell completions with clap, Cobra or Commander. Not for agent-facing CLI review (cli-for-agents)."
 license: MIT
 metadata:
   blacktower-pack: engineering

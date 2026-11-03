@@ -1,6 +1,6 @@
 ---
 name: prometheus-configuration
-description: Set up Prometheus for comprehensive metric collection, storage, and monitoring of infrastructure and applications. Use when implementing metrics collection, setting up monitoring infrastructure, or configuring alerting systems.
+description: "Use when writing or debugging Prometheus scrape configs, recording or alerting rules, exporters, remote write or retention. Not for dashboards, tracing or SLO design (observability)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -35,6 +35,7 @@ Set up Prometheus for comprehensive metric collection, storage, and monitoring o
 - Use current authoritative documentation when provider or framework behavior is
   version-sensitive.
 - Report concrete evidence, remaining risks, and any unverified assumptions.
+- In this homelab, central Prometheus, Blackbox probes and alerting run on Dozor; NUC runs a remote-write agent. Read `~/.homelab/HOMELAB.md` and the live config on the target host before changing either.
 
 ## Resources
 

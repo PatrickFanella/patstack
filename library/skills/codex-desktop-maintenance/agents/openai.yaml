@@ -1,4 +1,0 @@
-interface:
-  display_name: "Codex Desktop Maintenance"
-  short_description: "Audit the Arch and Omarchy Codex desktop setup"
-  default_prompt: "Use $codex-desktop-maintenance to audit my local Codex Desktop setup safely."

@@ -1,4 +1,4 @@
-# gdpr-data-handling detailed guide
+# privacy-controls detailed guide
 
 # GDPR Data Handling
 

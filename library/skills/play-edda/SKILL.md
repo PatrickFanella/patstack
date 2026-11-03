@@ -1,6 +1,6 @@
 ---
 name: play-edda
-description: Autonomous Edda campaign play loop. Use when asked to play Edda, take a campaign turn, choose the next player action, run/participate in a loop that submits turns, evaluate a playable campaign state, or act as a player for Edda via API/CLI/browser-provided state. Triggers on "play edda", "take a turn", "campaign turn", "autoplay", "play loop", or when paired with /loop for repeated turns.
+description: "Edda campaign play at edda.subcult.tv: take one turn or loop turns through its API, CLI or browser state. Use for \"play edda\", \"take a turn\", \"campaign turn\" or autoplay."
 compatibility: Requires access to the user's Edda campaign state through its configured API, CLI, or browser workflow.
 metadata:
   blacktower-pack: personal
@@ -17,6 +17,8 @@ Play one Edda campaign turn, or pair with `/loop` for recurring autonomous play:
 /play-edda                         # choose one next action from supplied state
 /loop 5m /play-edda                # keep taking turns as new state is provided
 ```
+
+`/loop` is a Claude Code command. In Codex or OpenCode, repeat the cycle with a T3 Code scheduled task or by rerunning the skill.
 
 ## Required Turn Input
 
@@ -39,14 +41,14 @@ The public Edda host is:
 https://edda.subcult.tv
 ```
 
-Use the bundled helper when authenticated HTTP access is available:
+Use the bundled helper when authenticated HTTP access is available. Run it from this skill's directory, wherever the client installed it:
 
 ```bash
 export EDDA_BASE_URL="https://edda.subcult.tv"
-~/.config/opencode/skills/play-edda/scripts/edda_api.py login --email "$EDDA_EMAIL" --password "$EDDA_PASSWORD" --export
+python3 scripts/edda_api.py login --email "$EDDA_EMAIL" --password "$EDDA_PASSWORD" --export
 export EDDA_TOKEN="<jwt from login>"
-~/.config/opencode/skills/play-edda/scripts/edda_api.py turn-context "$CAMPAIGN_ID"
-~/.config/opencode/skills/play-edda/scripts/edda_api.py action "$CAMPAIGN_ID" "I look around for immediate threats and useful clues."
+python3 scripts/edda_api.py turn-context "$CAMPAIGN_ID"
+python3 scripts/edda_api.py action "$CAMPAIGN_ID" "I look around for immediate threats and useful clues."
 ```
 
 Read `references/api.md` when you need exact curl routes, payloads, or WebSocket message shapes. Use `templates/env.example` as a safe environment template; never write real credentials or tokens into skill files, repo files, logs, or prompts unless the user explicitly asks and understands the risk.
@@ -87,7 +89,7 @@ Prefer the game’s generated choices when they are present unless a better free
 If a `CAMPAIGN_ID` and `EDDA_TOKEN` are available, fetch state with:
 
 ```bash
-~/.config/opencode/skills/play-edda/scripts/edda_api.py turn-context "$CAMPAIGN_ID"
+python3 scripts/edda_api.py turn-context "$CAMPAIGN_ID"
 ```
 
 ### 2. Choose player intent
@@ -109,7 +111,7 @@ If a submission tool/API/CLI/browser is available, submit the action and then re
 For the hosted HTTP API, submit with:
 
 ```bash
-~/.config/opencode/skills/play-edda/scripts/edda_api.py action "$CAMPAIGN_ID" "<player action>"
+python3 scripts/edda_api.py action "$CAMPAIGN_ID" "<player action>"
 ```
 
 If no submission mechanism is available, output only the next action in a form the loop can submit:

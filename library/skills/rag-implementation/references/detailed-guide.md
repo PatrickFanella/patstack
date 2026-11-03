@@ -1,4 +1,4 @@
-# rag-implementation detailed guide
+# retrieval-pipeline detailed guide
 
 # RAG Implementation
 

@@ -1,6 +1,6 @@
 ---
 name: shellcheck-configuration
-description: Master ShellCheck static analysis configuration and usage for shell script quality. Use when setting up linting infrastructure, fixing code issues, or ensuring script portability.
+description: "ShellCheck setup and fixes: .shellcheckrc, directives, CI linting, warning remediation, POSIX portability. Use when linting shell scripts or wiring ShellCheck in. Not for writing shell tools (bash-script-craft)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

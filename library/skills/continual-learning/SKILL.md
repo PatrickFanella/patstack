@@ -1,6 +1,6 @@
 ---
 name: continual-learning
-description: Orchestrate continual learning by delegating transcript mining and AGENTS.md updates to `agents-memory-updater`.
+description: "Use for continual learning: hand transcript mining and AGENTS.md updates to the agents-memory-updater subagent; stop if that subagent is not installed."
 disable-model-invocation: true
 ---
 
@@ -14,8 +14,9 @@ Use when the user asks to mine prior chats, maintain `AGENTS.md`, or run the con
 
 ## Workflow
 
-1. Call `agents-memory-updater`.
-2. Return the updater result.
+1. Confirm the `agents-memory-updater` subagent exists in this client. If it does not, say so and stop; do not mine transcripts or edit `AGENTS.md` yourself.
+2. Call `agents-memory-updater`.
+3. Return the updater result.
 
 ## Guardrails
 

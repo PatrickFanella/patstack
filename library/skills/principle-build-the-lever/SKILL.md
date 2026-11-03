@@ -1,6 +1,6 @@
 ---
 name: principle-build-the-lever
-description: "Apply to any non-trivial work, not just bulk work: edits, migrations, analyses, checks. Build the tool that does it or proves it (codemod, script, generator, or a skill your subagents follow) instead of working by hand. The tool is the artifact a reviewer can rerun."
+description: "Use for non-trivial edits, migrations, analyses or checks: build a rerunnable codemod, script, generator or delegate skill instead of working by hand. Not for recurring guardrails (principle-encode-lessons-in-structure)."
 disable-model-invocation: true
 ---
 # Build the Lever

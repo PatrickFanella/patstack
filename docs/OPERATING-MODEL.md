@@ -35,7 +35,7 @@ rtk proxy ~/.agents/bin/skill-profile deactivate
 
 These profiles change the optional shared skills, not the curated Codex base or plugin skills. Start a fresh agent session after changing discovery. The current conversation retains the catalog loaded at its start.
 
-Use `requirements-interview` for a requested `grill-me` or `grill-with-docs`; its named mode supports deeper rounds without turning ordinary tasks into interviews. `unslop` is required for every user-facing prose response and documentation edit. Load it once per session; preserve facts and uncertainty. `code-review` owns blast-radius review. `implementation-plan` owns a reviewable decision trail for long efforts.
+Use `scope-grill` for a requested `grill-me` or `grill-with-docs`; its named mode supports deeper rounds without turning ordinary tasks into interviews. `unslop` is required for every user-facing prose response and documentation edit. Load it once per session; preserve facts and uncertainty. `diff-inspector` owns change-blast-check review. `build-sequencer` owns a reviewable decision trail for long efforts.
 
 ## Maintenance
 
@@ -77,6 +77,24 @@ source-link installer.
 
 Claude keeps its own runtime, model, permissions, hooks, authentication, and
 memory. A linked skill that needs a missing tool must report the limitation.
+
+## Skill names
+
+Skill names follow a distinct noun plus purpose (`bug-tracer`, `prose-unslop`,
+`ship-check`) and must not match a name shipped by an installed plugin or system
+package. The 2026-11-03 review renamed 218 curated, shared and library skills.
+Each old name is in `catalog/retired-names.json` with its new owner and procedure
+path, so profiles filter it and readers can follow it. Entries with
+`owner: null` are retired without a replacement; their `reason` says why.
+`scripts/build_collection.py` regenerates that file from `capabilities.json`,
+so rerunning it would drop these entries; add them back if you rerun it.
+
+Kept names, by owner: `social-craft` and the `studio-*` skills (subcult-tv
+deploys and tunes them by path), `play-edda` (edda repository),
+`blacktower` and `blacktower-development` (Blacktower package),
+`omarchy` and `diagnose-crash` (mirror Omarchy's own skills). The 12 vault
+skills and `codex-skills-maintenance` keep their names until their deployers
+can retire an old destination.
 
 ## Global client instructions
 
@@ -179,7 +197,7 @@ repository-local installs are left untouched; this does not repair or verify
 unrelated drift. Saved transactions retain their original scope during resume
 and rollback.
 
-`t3-repo-setup` owns onboarding repositories into the T3 development launcher.
+`t3-repo-onboard` owns onboarding repositories into the T3 development launcher.
 Its operational guide and recipe schema remain owned by `t3-dev-environments`.
 
 ## Vault-local agent configuration
@@ -196,7 +214,7 @@ The personal vault retains eight skills. SUBCULT has its planning skill and
 Patreon manager; Machinum and Archivum each have one focused skill. The old
 personal OpenCode Patreon entrypoint remains compatible but routes to Studio.
 Copied instructions inside Archivum reference collections are not deployment
-targets. Test new skills with the skill-creator validator and check routing
+targets. Test new skills with the skill-forge validator and check routing
 against the positive and near-miss cases in `vault-agents/acceptance.md`.
 
 ## Tadooer assistant integration

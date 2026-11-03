@@ -1,6 +1,6 @@
 ---
 name: blacktower
-description: Configure and improve Blacktower for the current user. Use when users want to tune agents, models, prompts, custom agents, skills, MCPs, presets, or plugin behavior. Also use when recurring workflow friction suggests a safe config or prompt improvement.
+description: "Blacktower config: tune its OpenCode agents, models, presets, prompts, custom agents, skills, MCPs or plugin behavior for the current user."
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow

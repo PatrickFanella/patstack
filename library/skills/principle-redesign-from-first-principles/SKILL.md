@@ -1,6 +1,6 @@
 ---
 name: principle-redesign-from-first-principles
-description: "Apply when integrating a new requirement into an existing design. Redesign as if the requirement had been a foundational assumption from day one, instead of bolting it on."
+description: "Use when a new requirement must fit an existing design: redesign as if it had been a day-one assumption, propagate it through types, docs and examples, then deliver incrementally."
 disable-model-invocation: true
 ---
 

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Super Productivity Planning"
-  short_description: "Maintain routines and plan focused work"
-  default_prompt: "Use $super-productivity-planning to update my recurring daily framework, reusable routines, one-off plans, and minimal tags with fresh verification."

@@ -1,6 +1,6 @@
 ---
 name: library-vault
-description: "Find, catalog and refresh imported reference material in the Archivum vault while preserving source ownership. Use for repository/tool mirrors, bulk resources and clipping provenance; authored personal notes belong elsewhere."
+description: "Archivum reference vault. Use to find, catalog or refresh imported mirrors, bulk resources and clipping provenance. Not for authored notes, which belong in their owning vault."
 ---
 
 # Archivum Vault

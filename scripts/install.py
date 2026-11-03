@@ -51,15 +51,22 @@ def prepare(root=ROOT,state=DEFAULT_STATE,only_skills=None,only_shared=None):
  for p in (root/'skills').iterdir():
   if (p/'SKILL.md').exists():
    d=str(Path(config['personalRoot'])/p.name);destinations[d]=str(p)
-   groups[d]=1 if p.name=='frontend-design' else (3 if p.name in {'hatch-pet','dependency-upgrade','opentui','technical-writing'} else 2)
+   groups[d]=1 if p.name=='ui-craft' else (3 if p.name in {'pet-hatchery','dep-upgrade-pilot','opentui-screens','tech-doc-writer'} else 2)
  for p in (root/'shared').iterdir():destinations[str(Path(config['sharedRoot'])/p.name)]=str(p);groups[str(Path(config['sharedRoot'])/p.name)]=1
  target=str(Path(config['blacktowerRoot'])/'.agents/skills/blacktower-development')
  destinations[target]=str(root/'repository-skills/blacktower-development');groups[target]=3
  catalog=read(root/'catalog/proposed-catalog.json');keep={r['name'] for r in catalog if r['scope']=='personal'}
  personal=Path(config['personalRoot'])
+ retired_names=set(read(root/'catalog/retired-names.json',{}))
+ shared_root=Path(config['sharedRoot']);shared_names={p.name for p in (root/'shared').iterdir()}
+ for p in installed['paths'].keys():
+  q=Path(p)
+  # A shared skill this installer placed and later renamed or retired.
+  if q.parent==shared_root and q.name in retired_names and q.name not in shared_names and p not in destinations:
+   destinations[p]=None;groups[p]=1
  for p in baseline.keys() | installed['paths'].keys():
   q=Path(p)
-  if q.parent==personal and q.name not in keep and q.name!='.system':destinations[p]=None;groups[p]=3 if q.name.startswith('principle-') or q.name=='writing-for-agents' else (1 if q.name in {'requirements-interview','session-handoff','review-agent'} else 2)
+  if q.parent==personal and q.name not in keep and q.name!='.system':destinations[p]=None;groups[p]=3 if q.name.startswith('principle-') or q.name=='writing-for-agents' else (1 if q.name in {'scope-grill','relay-baton','diff-auditor'} else 2)
  # Exclude only this private repo-local installation; preserve all pre-existing text.
  exclude=config['excludePath'];original=Path(exclude).read_text() if Path(exclude).exists() else ''
  marker='/.agents/skills/blacktower-development/'

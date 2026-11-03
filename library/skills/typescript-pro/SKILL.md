@@ -1,6 +1,6 @@
 ---
-name: typescript-pro
-description: TypeScript-first JavaScript/Node development skill. Use when building or reviewing TypeScript apps, JS/TS libraries, Node scripts, type-safe APIs, advanced types, tsconfig, tRPC, type guards, discriminated unions, or when plain JavaScript work appears in a TS-first codebase.
+name: ts-type-design
+description: "TypeScript and Node work: apps, libraries, scripts, tsconfig, advanced types, type guards, tRPC and type-safe APIs, including plain JS in a TypeScript-first codebase. Not for React rendering; use react-render-tuner."
 license: MIT
 metadata:
   blacktower-pack: engineering
@@ -14,7 +14,7 @@ metadata:
   role: specialist
   scope: implementation
   output-format: code
-  related-skills: react-pro, nodejs-backend-patterns
+  related-skills: react-render-tuner, nodejs-backend-patterns
 ---
 
 # TypeScript Pro

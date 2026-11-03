@@ -1,6 +1,6 @@
 ---
-name: mtls-configuration
-description: Configure mutual TLS (mTLS) for zero-trust service-to-service communication. Use when implementing zero-trust networking, certificate management, or securing internal service communication.
+name: mtls-trust-chain
+description: "Mutual TLS setup and diagnosis: service certificate identity, CA trust chains, rotation, and mesh or proxy mTLS. Use for zero-trust service-to-service authentication."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
