@@ -1,6 +1,6 @@
 ---
 name: slo-implementation
-description: "Define SLIs, SLOs, error budgets and burn-rate alerts. Use when setting reliability targets or wiring SLO dashboards and alerts. Not for general metrics or tracing (observability)."
+description: "Define SLIs, SLOs, error budgets and burn-rate alerts. Use when setting reliability targets or wiring SLO dashboards and alerts. Not for general metrics or tracing (telemetry-signal-forge)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

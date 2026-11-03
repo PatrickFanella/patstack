@@ -1,6 +1,6 @@
 ---
 name: code-walkthrough
-description: "Code walkthrough: explain how a subsystem or flow works, or where code should live, before changing it; optional architecture critique. Not for why it exists (why)."
+description: "Code walkthrough: explain how a subsystem or flow works, or where code should live, before changing it; optional architecture critique. Not for why it exists (rationale-dig)."
 ---
 
 # How

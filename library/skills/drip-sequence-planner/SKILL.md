@@ -1,6 +1,6 @@
 ---
 name: drip-sequence-planner
-description: "Email sequences: plan or improve a drip, onboarding, nurture, re-engagement or other lifecycle email flow; cold outreach is in its cold-email reference. Not for landing pages (copywriting)."
+description: "Email sequences: plan or improve a drip, onboarding, nurture, re-engagement or other lifecycle email flow; cold outreach is in its cold-email reference. Not for landing pages (page-copy-forge)."
 metadata:
   blacktower-pack: growth
   blacktower-kind: workflow

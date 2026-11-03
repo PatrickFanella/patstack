@@ -1,6 +1,6 @@
 ---
 name: rationale-dig
-description: "Why questions: design rationale, 'why we picked Y', regressions, postmortems or data-backed thresholds, answered with cited evidence from git, trackers, docs and chat. Not for runtime behavior; use how."
+description: "Why questions: design rationale, 'why we picked Y', regressions, postmortems or data-backed thresholds, answered with cited evidence from git, trackers, docs and chat. Not for runtime behavior; use code-walkthrough."
 ---
 
 # Why

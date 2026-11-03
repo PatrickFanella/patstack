@@ -1,6 +1,6 @@
 ---
 name: boundary-drafter
-description: "Use when deciding module boundaries, Clean/Hexagonal/DDD structure, CQRS, deep-module design, or a project's domain glossary and ADRs. Not for a local cleanup of existing code; use refactor."
+description: "Use when deciding module boundaries, Clean/Hexagonal/DDD structure, CQRS, deep-module design, or a project's domain glossary and ADRs. Not for a local cleanup of existing code; use safe-refactor-pass."
 ---
 
 # boundary-drafter

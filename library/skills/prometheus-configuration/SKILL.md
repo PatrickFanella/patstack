@@ -1,6 +1,6 @@
 ---
 name: prometheus-configuration
-description: "Use when writing or debugging Prometheus scrape configs, recording or alerting rules, exporters, remote write or retention. Not for dashboards, tracing or SLO design (observability)."
+description: "Use when writing or debugging Prometheus scrape configs, recording or alerting rules, exporters, remote write or retention. Not for dashboards, tracing or SLO design (telemetry-signal-forge)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
