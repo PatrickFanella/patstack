@@ -1,6 +1,6 @@
 ---
 name: triage-issue-reports
-description: Triage Slack issue reports with one thread-only verdict, evidence review, cause-aware routing, tracker dedupe, and fail-closed ticket creation. Use only from the configured Benny triage automation.
+description: "Slack issue-report triage for the configured Benny automation only: one thread verdict, tracker dedupe and fail-closed ticket creation. Not for manual issue triage; use triage."
 disable-model-invocation: true
 ---
 

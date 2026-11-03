@@ -25,7 +25,7 @@ Treat site patterns as part of the browser protocol, not as optional background 
 
 For `browser-required` work, run this loop:
 
-1. As soon as the target domain is known, check whether a matching note already exists under [`references/site-patterns/`](./references/site-patterns/).
+1. As soon as the target domain is known, check whether a matching note already exists under [`references/site-patterns/`](./site-patterns/).
 2. If a note exists, read it before the first meaningful browser mutation on that domain.
 3. During the run, watch for verified site-specific facts that would change how a future run should operate.
 4. Before you consider the task complete, decide whether the run produced a reusable fact, disproved an existing fact, or produced no reusable site-specific learning.
@@ -49,18 +49,18 @@ Start with the outcome, not the tool. Make the user's goal explicit, define what
 Use this routing order:
 
 1. Decide whether the task is `static-capable` or `browser-required`.
-2. If the task is `static-capable`, load [`references/task-routing.md`](./references/task-routing.md) and stay on the cheapest route that still satisfies the evidence target.
-3. If the task is `browser-required`, load [`references/browser-playbook.md`](./references/browser-playbook.md).
-4. If browser-required capability is uncertain in a fresh host session, also load [`references/browser-capability-matrix.md`](./references/browser-capability-matrix.md).
-5. If the user already has an active browser debugging context, such as a selected inspector element or network request, also load [`references/debug-handoff.md`](./references/debug-handoff.md).
-6. If the browser-required task touches a logged-in dashboard, admin surface, CMS, editor, or any save / publish / update flow, also load [`references/control-plane-workflows.md`](./references/control-plane-workflows.md).
-7. If the current failure shape suggests a soft 404, content-unavailable state, suspicious no-op interaction, auth wall, rate limit, or anti-automation defense, also load [`references/anti-automation-friction.md`](./references/anti-automation-friction.md).
-8. If the browser-required task includes iframe, Shadow DOM, collapsed content, or lazy-loaded evidence, also load [`references/deep-dom.md`](./references/deep-dom.md).
-9. If the important evidence lives in an image, audio clip, or video, also load [`references/media-inspection.md`](./references/media-inspection.md).
-10. If browser work can be divided across independent page owners or sub-agents, also load [`references/parallel-browser-ownership.md`](./references/parallel-browser-ownership.md).
-11. If you already know a reliable selector but need an MCP-native `uid` target, also load [`references/selector-bridge.md`](./references/selector-bridge.md).
-12. If page actions leave state ambiguous, a page unexpectedly navigates, an old `uid` may have gone stale, or console / network inspection is now needed to explain the next browser decision, also load [`references/browser-recovery.md`](./references/browser-recovery.md).
-13. If the target site already has a matching domain note under [`references/site-patterns/`](./references/site-patterns/), read that note before operating on the site.
+2. If the task is `static-capable`, load [`references/task-routing.md`](./task-routing.md) and stay on the cheapest route that still satisfies the evidence target.
+3. If the task is `browser-required`, load [`references/browser-playbook.md`](./browser-playbook.md).
+4. If browser-required capability is uncertain in a fresh host session, also load [`references/browser-capability-matrix.md`](./browser-capability-matrix.md).
+5. If the user already has an active browser debugging context, such as a selected inspector element or network request, also load [`references/debug-handoff.md`](./debug-handoff.md).
+6. If the browser-required task touches a logged-in dashboard, admin surface, CMS, editor, or any save / publish / update flow, also load [`references/control-plane-workflows.md`](./control-plane-workflows.md).
+7. If the current failure shape suggests a soft 404, content-unavailable state, suspicious no-op interaction, auth wall, rate limit, or anti-automation defense, also load [`references/anti-automation-friction.md`](./anti-automation-friction.md).
+8. If the browser-required task includes iframe, Shadow DOM, collapsed content, or lazy-loaded evidence, also load [`references/deep-dom.md`](./deep-dom.md).
+9. If the important evidence lives in an image, audio clip, or video, also load [`references/media-inspection.md`](./media-inspection.md).
+10. If browser work can be divided across independent page owners or sub-agents, also load [`references/parallel-browser-ownership.md`](./parallel-browser-ownership.md).
+11. If you already know a reliable selector but need an MCP-native `uid` target, also load [`references/selector-bridge.md`](./selector-bridge.md).
+12. If page actions leave state ambiguous, a page unexpectedly navigates, an old `uid` may have gone stale, or console / network inspection is now needed to explain the next browser decision, also load [`references/browser-recovery.md`](./browser-recovery.md).
+13. If the target site already has a matching domain note under [`references/site-patterns/`](./site-patterns/), read that note before operating on the site.
 
 Treat the following as `browser-required` by default:
 
@@ -92,19 +92,19 @@ The normal happy path for a common task is this entrypoint plus one or two refer
 
 ## Reference index
 
-- [`references/task-routing.md`](./references/task-routing.md): static retrieval vs live browser routing
-- [`references/browser-playbook.md`](./references/browser-playbook.md): core page-action protocol and base browser loop
-- [`references/browser-capability-matrix.md`](./references/browser-capability-matrix.md): capability proof for uncertain host sessions
-- [`references/debug-handoff.md`](./references/debug-handoff.md): active debugging-context handoff
-- [`references/control-plane-workflows.md`](./references/control-plane-workflows.md): logged-in dashboard / CMS save-publish discipline
-- [`references/anti-automation-friction.md`](./references/anti-automation-friction.md): soft 404 / auth / anti-automation classification
-- [`references/deep-dom.md`](./references/deep-dom.md): iframe, Shadow DOM, collapsed, or lazy-loaded evidence
-- [`references/media-inspection.md`](./references/media-inspection.md): image, audio, and video evidence
-- [`references/parallel-browser-ownership.md`](./references/parallel-browser-ownership.md): multi-owner browser coordination
-- [`references/selector-bridge.md`](./references/selector-bridge.md): selector-to-`uid` bridging
-- [`references/browser-recovery.md`](./references/browser-recovery.md): stale `uid`, navigation drift, and console / network escalation
-- [`references/site-patterns/README.md`](./references/site-patterns/README.md): site-pattern note maintenance rules
-- [site-patterns/{domain}.md](./references/site-patterns/): existing domain-specific operating knowledge
+- [`references/task-routing.md`](./task-routing.md): static retrieval vs live browser routing
+- [`references/browser-playbook.md`](./browser-playbook.md): core page-action protocol and base browser loop
+- [`references/browser-capability-matrix.md`](./browser-capability-matrix.md): capability proof for uncertain host sessions
+- [`references/debug-handoff.md`](./debug-handoff.md): active debugging-context handoff
+- [`references/control-plane-workflows.md`](./control-plane-workflows.md): logged-in dashboard / CMS save-publish discipline
+- [`references/anti-automation-friction.md`](./anti-automation-friction.md): soft 404 / auth / anti-automation classification
+- [`references/deep-dom.md`](./deep-dom.md): iframe, Shadow DOM, collapsed, or lazy-loaded evidence
+- [`references/media-inspection.md`](./media-inspection.md): image, audio, and video evidence
+- [`references/parallel-browser-ownership.md`](./parallel-browser-ownership.md): multi-owner browser coordination
+- [`references/selector-bridge.md`](./selector-bridge.md): selector-to-`uid` bridging
+- [`references/browser-recovery.md`](./browser-recovery.md): stale `uid`, navigation drift, and console / network escalation
+- [`references/site-patterns/README.md`](./site-patterns/README.md): site-pattern note maintenance rules
+- [site-patterns/{domain}.md](./site-patterns/): existing domain-specific operating knowledge
 
 ## Resources
 

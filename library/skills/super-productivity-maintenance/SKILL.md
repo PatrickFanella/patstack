@@ -1,6 +1,6 @@
 ---
 name: super-productivity-maintenance
-description: High-level Super Productivity maintenance and routing runbook. Use when the user asks to clean up, audit, maintain, reset, or run a daily/weekly/monthly pass over Super Productivity; coordinates MCP health checks, task planning, inbox triage, schedule hygiene, and follow-up reporting by routing to the focused Super Productivity skills.
+description: "Super Productivity upkeep: daily, weekly or monthly cleanup or audit passes that route MCP health, planning and inbox work to the focused skills and end with a report. Not for a one-lane task."
 metadata:
   blacktower-pack: personal
   blacktower-kind: workflow

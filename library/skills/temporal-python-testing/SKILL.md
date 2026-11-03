@@ -1,6 +1,6 @@
 ---
 name: temporal-python-testing
-description: Test Temporal Python workflows with replay, time skipping, activities, mocks, and determinism checks.
+description: "Temporal Python tests: replay, time skipping, activity mocks and determinism checks for workflow code. Not for workflow design; use workflow-orchestration-patterns."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

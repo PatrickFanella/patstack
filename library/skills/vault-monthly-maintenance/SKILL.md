@@ -1,6 +1,6 @@
 ---
 name: vault-monthly-maintenance
-description: Monthly ars-malefica Obsidian vault maintenance workflow. Use when the user asks to run monthly vault upkeep, vault maintenance, inbox cleanup, active work review, stale workbench review, normalization audit, archive review, or to keep the non-Archive vault managed under the vault operating-system.
+description: "Monthly Ars Malefica vault upkeep: inbox cleanup, active and stale work review, normalization audit and archive review. Not for the Machinum, SUBCULT or Archivum vaults."
 metadata:
   blacktower-pack: personal
   blacktower-kind: workflow

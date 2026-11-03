@@ -1,6 +1,6 @@
 ---
 name: stripe-integration
-description: Implement Stripe payment processing for robust, PCI-compliant payment flows including checkout, subscriptions, and webhooks. Use when integrating Stripe payments, building subscription systems, or implementing secure checkout flows.
+description: "Stripe integration code: Checkout, Payment Intents, subscriptions, customer portal and signed webhooks. Use when adding or fixing Stripe payment flows in an app. Not for account operations; use stripe-billing-operations."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

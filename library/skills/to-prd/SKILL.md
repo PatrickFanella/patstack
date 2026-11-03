@@ -1,6 +1,6 @@
 ---
 name: to-prd
-description: Turn the current conversation context into a PRD and publish it to the project issue tracker. Use when user wants to create a PRD from the current context.
+description: "PRD from context: turn the current conversation and codebase understanding into a PRD and file it on the project tracker. Not for gathering requirements; use requirements-interview first."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

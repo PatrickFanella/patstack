@@ -1,6 +1,6 @@
 ---
 name: super-productivity-planning
-description: Super Productivity task planning, recurring daily-framework scheduling, task hygiene, inbox triage, estimates, minimal tags, and reusable parent-with-subtask routines. Use when the user asks to build or change work/routine schedules, adjust recurrence start times, plan one-off work, organize recurring practice or care routines, clean up tasks, or verify schedule integrity.
+description: "Super Productivity planning: recurring daily frameworks, recurrence start times, one-off scheduling, inbox triage, estimates, tags and parent-with-subtask routines. Not for MCP failures."
 metadata:
   blacktower-pack: personal
   blacktower-kind: workflow

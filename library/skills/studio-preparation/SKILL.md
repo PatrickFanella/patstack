@@ -1,6 +1,6 @@
 ---
 name: studio-preparation
-description: Prepare SUBCULT product copy, brand assets and editorial drafts from Studio sources. Use for brand/application work and supporter preparation; planning and publication remain distinct.
+description: "SUBCULT Studio preparation: product copy, brand assets, editorial drafts and supporter-tier copy from Studio sources. Not for planning or publishing; this produces drafts only."
 ---
 
 # Studio preparation

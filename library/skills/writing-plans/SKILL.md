@@ -1,6 +1,6 @@
 ---
 name: writing-plans
-description: Use when you have a spec or requirements for a multi-step task, before touching code
+description: "Implementation plan: turn a spec or requirements for a multi-step coding task into a bite-sized, test-first plan before touching code. Not for multi-session maps; use wayfinder."
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow
@@ -150,17 +150,18 @@ After saving the plan, offer execution choice:
 
 **1. Subagent-Driven (recommended)** - I dispatch a fresh subagent per task, review between tasks, fast iteration
 
-**2. Inline Execution** - Execute tasks in this session with `todowrite` checkpoints and review after each batch
+**2. Inline Execution** - Execute tasks in this session with todo-list checkpoints and review after each batch
 
 **Which approach?"**
 
 **If Subagent-Driven chosen:**
-- Use a fresh `task` subagent per task.
+- Use a fresh subagent per task (Agent in Claude Code, `spawn_agent` in Codex,
+  task in OpenCode).
 - Review each completed task with `review-quality` before continuing.
-- For multi-stream work, use `parallel-feature-development`,
-  `team-composition-patterns`, and `team-communication-protocols` to define
-  ownership and integration points.
+- For multi-stream work, give each stream its own worktree and file ownership,
+  and name the integration points in the plan.
 
 **If Inline Execution chosen:**
-- Track plan steps with `todowrite`.
+- Track plan steps with the client's todo or plan tool (TodoWrite, `update_plan`,
+  `todowrite`), or a checklist in the plan file.
 - Execute in small batches with checkpoints for review.

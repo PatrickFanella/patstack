@@ -1,6 +1,6 @@
 ---
 name: summarization
-description: "Create effective summaries by matching summarization type to purpose, audience, and context. Use when asked to summarize, create TLDR, condense content, or create executive summaries. Keywords: summary, TLDR, condense, executive summary, abstract."
+description: "Summaries: TL;DR, executive summary, abstract or condensed version of a document, thread or transcript, matched to audience and purpose. Not for checking claims; use fact-check."
 license: MIT
 metadata:
   blacktower-pack: creative

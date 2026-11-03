@@ -1,6 +1,6 @@
 ---
 name: systematic-debugging
-description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+description: "Bug, test failure or unexpected behavior: find the root cause with evidence before proposing a fix. Not for performance regressions; use performance-investigation."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

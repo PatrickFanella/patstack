@@ -1,6 +1,6 @@
 ---
 name: thermo-nuclear-review
-description: Comprehensive security and correctness audit of a branch's changes. Use for thermo nuclear, thermonuclear, or deep review requests, or branch/PR diff audits focused on bugs, breaking changes, security issues, devex regressions, and feature-gate leaks.
+description: "Thermo-nuclear review: exhaustive bug, breakage, security, devex and feature-gate-leak audit of a branch or PR diff. Use only for thermo, thermonuclear or deep branch-audit requests."
 disable-model-invocation: true
 ---
 
@@ -40,7 +40,7 @@ If you report issues as High priority when they are not in fact high priority / 
 NEVER misreport the priority / importance of issues. Be extremely thorough in tracing issues end-to-end to gain complete, and total confidence before reporting.
 
 # Final Response
-IF you have medium-to-high priority / risk findings, and there is a PR for this branch, then check the PR/MR discussion using gh/glab cli to see if there are comments from BugBot or others present.
+IF you have medium-to-high priority / risk findings, and there is a PR for this branch, then check the PR/MR discussion using the forge CLI (`tea` for Gitea at git.subcult.tv, `gh` for GitHub, `glab` for GitLab) to see if there are comments from BugBot or others present.
 If so, take their findings into account. If they found issues you missed, evaluate them to determine if they are valid and include them in your report. If they found some of the same issues you did, see if there is anything from their findings that are worth incorporating into your response.
 Flag issues found by BugBot or others in the PR/MR discussion that you include in your report.
 

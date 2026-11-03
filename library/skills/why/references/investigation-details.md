@@ -10,13 +10,15 @@ git log --follow -p -- <file>
 git log --oneline -20 -- <file>
 git log -1 --format=%B <commit>
 gh pr view <number> --json title,body,author,createdAt,mergedAt,labels,closingIssuesReferences,comments,reviews
+# Gitea (git.subcult.tv): tea pulls <number> --login subcult-agent, or
+# tea api --login subcult-agent /repos/<owner>/<repo>/pulls/<number> (and .../issues/<number>/comments)
 ```
 
 Pass this seed context to every investigator so they do not rediscover it.
 
 ## Coverage roster
 
-Discover MCPs from the available-tools map or the Cursor `mcps/` directory. Map each to one primary category; record ambiguous mappings in the coverage map. Launch all matching investigators in one message, one agent per category:
+Discover MCPs from the client's available-tools list (Claude Code `/mcp`, Codex `codex mcp list`, the `mcp` section of OpenCode config). Map each to one primary category; record ambiguous mappings in the coverage map. Launch all matching investigators in one message, one agent per category:
 
 1. **Source control** (git, `gh`, comments, tests): implementation-time rationale in PR descriptions, review discussions, tests, commits, and comments. Always spawn.
 2. **Issue/ticket tracker** (Linear, Jira, GitHub Issues, Plane, Shortcut): product/business forcing functions, customer or compliance needs, scope changes, and initiatives.
@@ -26,13 +28,13 @@ Discover MCPs from the available-tools map or the Cursor `mcps/` directory. Map 
 6. **Error/exception tracking** (Sentry, Rollbar, Bugsnag, Airbrake): error trajectories, stack traces, release correlations, and defensive-code motivation.
 7. **Product analytics warehouse** (Databricks, Snowflake, BigQuery, ClickHouse, dbt, Redshift): usage, flags, experiments, distributions behind thresholds, migrations, and data scale.
 
-Use `subagent_type: generalPurpose`, the configured investigator model (default `grok-4.6-fast-xhigh`), and `readonly: false`. This is agent mode for MCP access, not permission to write. Add `sources/incident-postmortem.md` when the target is defensive (null checks, retries, timeouts, rate limits, feature flags, egress guards, OOM handling).
+Use the client's general-purpose subagent with its default model unless the user names one. Investigators need MCP and tool access; that access is not permission to write. Add `sources/incident-postmortem.md` when the target is defensive (null checks, retries, timeouts, rate limits, feature flags, egress guards, OOM handling).
 
 ## Skips and synthesis
 
 Skip only if no matching MCP is available (name it as a gap) or the source is provably irrelevant. “Probably irrelevant” is not enough. The rare inline answer is permitted only after confirming that all seven available category searches would be redundant.
 
-Spawn one `generalPurpose` synthesizer using the configured model (default `claude-fable-5-thinking-max`) and `readonly: false`. Provide investigator findings including nulls/skips, code anchor, original question, `epistemics.md`, and `synthesizer-prompt.md`. It returns the final confidence-weighted, evidence-cited narrative; do not rewrite its confidence language.
+Spawn one general-purpose synthesizer subagent (client default model unless the user names one) with the same read-only instruction. Provide investigator findings including nulls/skips, code anchor, original question, `epistemics.md`, and `synthesizer-prompt.md`. It returns the final confidence-weighted, evidence-cited narrative; do not rewrite its confidence language.
 
 ## Output conventions
 

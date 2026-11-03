@@ -1,6 +1,6 @@
 ---
 name: worktrees
-description: Manage Git worktrees as Blacktower safe isolated coding lanes for complex, risky, or parallel work.
+description: "Worktree lanes: create, track, integrate and prune Git worktrees under .blacktower/worktrees for risky, parallel or multi-agent work. Not for simple single-file changes."
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow

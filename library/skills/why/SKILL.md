@@ -1,6 +1,6 @@
 ---
 name: why
-description: "Use for 'why does X work this way', 'why we picked Y', design rationale, regressions, postmortems, or data-backed thresholds. Discovers available MCPs and queries each evidence category (source control, issue tracker, long-form docs, real-time chat, infrastructure observability, error tracking, product analytics warehouse) in parallel, then returns a cited read on decisions and tradeoffs. Use how for runtime behavior."
+description: "Why questions: design rationale, 'why we picked Y', regressions, postmortems or data-backed thresholds, answered with cited evidence from git, trackers, docs and chat. Not for runtime behavior; use how."
 ---
 
 # Why
@@ -16,7 +16,7 @@ The full confidence framework and mandatory phrasing are in [epistemics](referen
 ## Core workflow
 
 1. Identify the target and question. If the target is vague, make the best context-based interpretation, state it briefly, and proceed.
-2. Build a code anchor: relevant file/line ranges, symbols, recent touching commits, PR numbers, and linked ticket IDs. Use git history and `gh` PR bodies/discussion for substantive commits.
+2. Build a code anchor: relevant file/line ranges, symbols, recent touching commits, PR numbers, and linked ticket IDs. Use git history and PR bodies/discussion for substantive commits (`tea` for Gitea repositories, `gh` for GitHub).
 3. Discover available MCPs, map them to the seven evidence categories, and build a coverage map. Spawn one investigator for each available category concurrently; source control is always included.
 4. Give each investigator the code anchor, original question, [investigator prompt](references/investigator-prompt.md), and its category playbook from [source playbooks](references/source-playbook.md). Include the incident/postmortem playbook for defensive code.
 5. Give all findings (including null results and justified skips) plus the anchor and question to one synthesizer with [synthesizer prompt](references/synthesizer-prompt.md) and [epistemics](references/epistemics.md).
@@ -27,7 +27,7 @@ The full confidence framework and mandatory phrasing are in [epistemics](referen
 - Default to complete parallel coverage, not minimalism. A null search is evidence and must be reported.
 - Do not skip a category because it seems unlikely. Skip only when no matching MCP exists or the source is provably irrelevant, and give the written justification in Sources Consulted.
 - One investigator owns one evidence category; do not merge categories or chase cross-source leads.
-- Investigators and synthesizer use agent mode (`readonly: false`) so MCP access and citation spot-checking work; they must not write.
+- Investigators and synthesizer need MCP and tool access for searching and citation spot-checks; instruct them not to write. If the client has no subagent tool, run each category pass yourself in turn.
 - Do not infer motivation from code shape, silently resolve contradictions, or omit unsearchable/empty sources.
 
 ## Required result shape

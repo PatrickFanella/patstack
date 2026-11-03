@@ -1,6 +1,6 @@
 ---
 name: unslop
-description: Cut AI tells from any writing. Must always apply.
+description: "Unslop: edit prose to remove AI writing patterns such as puffery, filler, stock phrases and vague claims. Apply to user-facing text and documentation edits."
 ---
 
 # Unslop

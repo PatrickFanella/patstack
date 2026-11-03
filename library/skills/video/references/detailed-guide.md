@@ -149,7 +149,7 @@ cinematic color grading, 4K
 - Forgetting style — "cinematic," "documentary," "commercial"
 - Requesting text in video — AI models struggle with readable text
 
-**For detailed prompting guides**: See [references/ai-video-prompting.md](references/ai-video-prompting.md)
+**For detailed prompting guides**: See [references/ai-video-prompting.md](ai-video-prompting.md)
 
 ### When to Use AI Generation vs. Stock
 
@@ -322,7 +322,6 @@ Output: Ready-to-publish video
 ## Related Skills
 
 - **social-content**: For video content strategy, hooks, and what to post
-- **ad-creative**: For paid video ad creative and iteration
 - **copywriting**: For video scripts and messaging
 - **marketing-psychology**: For hooks and persuasion in video
 

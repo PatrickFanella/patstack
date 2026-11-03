@@ -1,6 +1,6 @@
 ---
 name: worldbuilding
-description: "Diagnose world-level story problems. This skill should be used when settings feel thin, institutions feel designed rather than evolved, economies don't make sense, or non-human species feel like humans in costume. Keywords: worldbuilding, setting, world, institutions, economy, culture, species, consequences."
+description: "Worldbuilding fixes: diagnose thin settings, designed-feeling institutions, broken economies or species that read as humans in costume. Not for tabletop session tone; use table-tone."
 metadata:
   blacktower-pack: creative
   blacktower-kind: workflow

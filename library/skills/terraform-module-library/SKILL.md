@@ -1,6 +1,6 @@
 ---
 name: terraform-module-library
-description: Create reusable Terraform modules with explicit inputs, provider constraints, examples, and validation.
+description: "Terraform modules: create or refactor reusable modules with typed inputs, provider constraints, examples, and validation or Terratest checks."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

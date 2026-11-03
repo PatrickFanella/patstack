@@ -1,6 +1,6 @@
 ---
 name: voice-analysis
-description: "Extract and document a writer's distinctive voice patterns for consistent reproduction. Use when you need to capture writing voice, analyze writing style, create a voice guide, or write in someone's established style. Keywords: voice, tone, style, writing analysis, fingerprint."
+description: "Writer voice analysis: extract a writer's style patterns into a voice guide so new text can match it. Use when capturing a voice or writing in someone's established style."
 license: MIT
 metadata:
   blacktower-pack: creative

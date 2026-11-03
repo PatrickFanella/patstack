@@ -1,6 +1,6 @@
 ---
 name: table-tone
-description: Diagnose and calibrate tonal delivery for tabletop RPG sessions. Use when narration feels flat, tone shifts jarringly, descriptions overwhelm play, or energy stays monotonous throughout sessions.
+description: "Tabletop RPG tone: diagnose flat narration, jarring tone shifts, overlong descriptions or monotonous session energy, and calibrate delivery for the table."
 license: MIT
 metadata:
   blacktower-pack: creative

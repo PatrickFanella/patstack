@@ -1,6 +1,6 @@
 ---
 name: workflow-from-chats
-description: Extract durable working preferences from recent Cursor chats and convert them into skills, rules, or workflow docs. Use when asked to learn preferences, mine feedback, personalize workflows, or generate team/person-specific agent guidance.
+description: "Preferences from chats: mine recent Codex, Claude Code or OpenCode transcripts for durable working preferences and turn them into skills, rules or workflow docs."
 ---
 
 # Workflow From Chats
@@ -10,6 +10,7 @@ Infer durable working preferences from recent chats. Do not summarize chats; ext
 ## Scope
 
 - Default to the last 7 days unless the user asks for a different window.
+- Transcript sources on this fleet: Codex `~/.codex/sessions/`, Claude Code `~/.claude/projects/`, OpenCode `~/.local/share/opencode/storage/`. Sessions driven through T3 Code land in the underlying client's store on the host that ran them. Read only the hosts and clients the user names, or the current host.
 - Read parent transcripts and relevant subagent transcripts. Use subagent content as evidence, but cite only parent conversations.
 - Do not expose local transcript paths, secrets, customer data, private chat content, or credentials.
 

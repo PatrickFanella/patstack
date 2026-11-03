@@ -1,6 +1,6 @@
 ---
 name: vscode-extension-development
-description: VS Code extension commands, menus, contribution visibility, and localized user-facing strings.
+description: "VS Code extensions: commands, menus, contribution points, when-clause visibility and localized user-facing strings."
 compatibility: Requires a VS Code extension project; validate against the project's engines.vscode range and current official Extension API documentation.
 metadata:
   blacktower-pack: integrations

@@ -1,6 +1,6 @@
 ---
 name: what-did-i-get-done
-description: Summarize authored commits over a user-specified time period into a concise update
+description: "Work recap for a chosen period: summarize your authored commits from yesterday, the last few days or a date range into a short status update. For a grouped weekly review, use weekly-review."
 ---
 
 # What did I get done

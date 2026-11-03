@@ -1,6 +1,6 @@
 ---
 name: switchyard-runtime
-description: Use when working inside Switchyard's managed OpenCode container, Open Pilot runs, native model broker, or workflow executor behavior.
+description: "Switchyard runtime on Kvant: managed OpenCode container, Open Pilot runs, native model broker, workflow executor and their compatibility APIs. Use when changing or debugging Switchyard runtime code."
 metadata:
   blacktower-pack: personal
   blacktower-kind: workflow

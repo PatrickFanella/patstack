@@ -1,6 +1,6 @@
 ---
 name: workflow-orchestration-patterns
-description: Design Temporal workflows and activities with durable state, deterministic execution, and failure recovery.
+description: "Temporal workflow design: workflow and activity split, sagas, durable state, determinism and failure recovery for long-running processes. Not for tests; use temporal-python-testing."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

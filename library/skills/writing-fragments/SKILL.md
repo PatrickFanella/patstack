@@ -1,6 +1,6 @@
 ---
 name: writing-fragments
-description: Grilling session that mines the user for fragments — heterogeneous nuggets of writing (claims, vignettes, sharp sentences, half-thoughts) — and appends them to a single document as raw material for a future article. Use when the user wants to develop ideas before imposing structure, or mentions "fragments", "ideate", or "raw material" for writing.
+description: "Writing fragments: interview the user for claims, vignettes and sharp sentences, appending them to one raw-material document before any structure. Use for fragments or ideation."
 metadata:
   blacktower-pack: creative
   blacktower-kind: workflow

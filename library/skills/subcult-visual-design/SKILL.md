@@ -1,6 +1,6 @@
 ---
 name: subcult-visual-design
-description: "Design UI, graphics, and visual assets in SUBCULT's aesthetic territory: 90s anime futurism, glitch, VHS/CRT, terminal glow, occult insignia, underground label energy. Use when building frontends, creating visual assets, choosing palettes, or reviewing design for any SUBCULT or sub-brand project. Triggers: subcult design, subcult UI, subcult palette, subcult aesthetic, subcult visual, subcult style."
+description: "SUBCULT visual direction: palettes, UI styling and graphics in the 90s anime, glitch, VHS/CRT and terminal-glow aesthetic for SUBCULT or sub-brand projects. A product's approved guide and tokens override it."
 metadata:
   blacktower-pack: personal
   blacktower-kind: workflow

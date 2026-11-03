@@ -1,6 +1,6 @@
 ---
 name: web-search
-description: Search the web using the available search backend. Prefer built-in/Exa websearch for general current information; use Brave or Tavily only if configured and specifically needed for localization, freshness, domain filtering, or AI-optimized summaries.
+description: "Web search: look up current facts, releases or sources outside the repository with the client's search tool, Exa, Brave or Tavily. Not for codebase search or library docs."
 compatibility: Requires network access and a configured web-search backend; Brave and Tavily paths require their respective credentials.
 metadata:
   blacktower-pack: core
@@ -15,7 +15,7 @@ Use one web-search skill for current information lookup.
 
 ## Preferred Backend
 
-1. Built-in/available `websearch` MCP (currently Exa) for general web search.
+1. The client's built-in search (WebSearch in Claude Code, web search in Codex, `websearch` in OpenCode) or the Exa `websearch` MCP for general web search.
 2. Brave only when a configured Brave API key is available and localized/freshness search is required.
 3. Tavily only when a configured Tavily API key is available and AI-optimized summary/domain filtering is required.
 

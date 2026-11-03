@@ -1,6 +1,6 @@
 ---
 name: world-fates
-description: Manage long-term fate and fortune across a shared world. Use when powerful entities feel permanent, when the world becomes static, when you need probabilistic death/fall mechanics, or when campaigns need world-level consequences that persist. Operates above the game-facilitator level.
+description: "World fates: track long-term fortune and the probabilistic fall of powerful entities so a shared campaign world changes over time with persistent consequences."
 license: MIT
 metadata:
   blacktower-pack: creative

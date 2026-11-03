@@ -45,6 +45,8 @@ git log -1 --format=%B <hash>
 
 # Full PR context: body, review comments, linked issues
 gh pr view <number> --json title,body,author,createdAt,mergedAt,labels,closingIssuesReferences,comments,reviews,files
+# Gitea (git.subcult.tv): tea api --login subcult-agent /repos/<owner>/<repo>/pulls/<number>
+# plus /pulls/<number>/reviews and /issues/<number>/comments
 
 # The --json reviews and comments fields are where the real signal is
 ```

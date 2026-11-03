@@ -1,6 +1,6 @@
 ---
 name: technology-impact
-description: Systematically analyze societal impacts of technologies using McLuhan's Tetrad of Media Effects. Use when evaluating new technology, planning technology adoption, or analyzing technology policy.
+description: "Technology impact: analyze a technology's societal effects with McLuhan's tetrad when evaluating adoption, policy or a new tool. Not for vendor or cost comparisons."
 license: MIT
 metadata:
   blacktower-pack: creative

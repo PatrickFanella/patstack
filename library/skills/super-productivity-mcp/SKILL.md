@@ -1,6 +1,6 @@
 ---
 name: super-productivity-mcp
-description: Diagnose and resolve Super Productivity MCP health, development, startup, handshake, catalog, client config, and bridge reliability issues. Use for MCP/runtime failures; use super-productivity-planning for task hygiene, recurring daily frameworks, and one-off scheduling.
+description: "Super Productivity MCP failures: startup, handshake, tool catalog drift, client config or plugin bridge reliability. Not for task planning; use super-productivity-planning."
 license: MIT
 metadata:
   blacktower-pack: personal

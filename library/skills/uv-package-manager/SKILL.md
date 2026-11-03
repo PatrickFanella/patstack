@@ -1,6 +1,6 @@
 ---
 name: uv-package-manager
-description: Master the uv package manager for fast Python dependency management, virtual environments, and modern Python project workflows. Use when setting up Python projects, managing dependencies, or optimizing Python development workflows with uv.
+description: "uv for Python: create projects, add dependencies, lock and sync, manage virtual environments and Python versions, or migrate from pip, Poetry or pip-tools."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

@@ -1,6 +1,6 @@
 ---
 name: use-my-browser
-description: Use when work depends on the user's live browser session or visible rendered state rather than static fetches, especially for browser debugging contexts or DevTools-selected elements or requests, logged-in dashboards or CMS flows, localhost apps, forms, uploads, downloads, media inspection, DOM or iframe inspection, Shadow DOM, or browser failures that look like soft 404s, auth walls, anti-bot checks, or rate limits.
+description: "Live browser session: work needing the user's logged-in pages, localhost apps, DevTools-selected elements, forms, uploads, DOM, iframes or Shadow DOM, or soft-404 and anti-bot diagnosis. Not for static fetches."
 compatibility: Requires an available browser-control integration with access to the user's existing browser session.
 metadata:
   blacktower-pack: integrations

@@ -1,6 +1,6 @@
 ---
 name: subcult-brand-voice
-description: "Write copy, documentation, manifestos, taglines, README intros, about pages, and any public-facing text in SUBCULT's brand voice. Use when creating or reviewing text that represents SUBCULT or any sub-brand (Patchwork, clpr.tv, subcorp, etc.). Triggers: brand voice, subcult copy, write tagline, about page, manifesto, subcult tone, brand-aligned text."
+description: "SUBCULT brand voice: write or review taglines, manifestos, about pages, README intros and other public copy for SUBCULT or a sub-brand (Patchwork, clpr.tv, subcorp). Not for visual design."
 metadata:
   blacktower-pack: personal
   blacktower-kind: workflow

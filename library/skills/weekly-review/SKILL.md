@@ -1,6 +1,6 @@
 ---
 name: weekly-review
-description: Produce a weekly synthesis of authored commits with highlights by bugfix, tech debt, and net-new work
+description: "Weekly review: summarize your authored commits from the last 7-10 days as highlights grouped into bug fixes, tech debt and new work."
 ---
 
 # Weekly review

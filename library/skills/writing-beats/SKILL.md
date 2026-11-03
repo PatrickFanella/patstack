@@ -1,6 +1,6 @@
 ---
 name: writing-beats
-description: Shape an article as a journey of beats, choose-your-own-adventure style. The user picks a starting beat from the raw material, you write only that beat, then offer options for where to pivot next, beat by beat, until the article reaches a natural end. Use when the user has raw material and wants to assemble it as a narrative rather than an argument.
+description: "Article beats: assemble raw material into a narrative one beat at a time, letting the user pick each next pivot. Use when the piece should read as a journey, not an argument."
 metadata:
   blacktower-pack: creative
   blacktower-kind: workflow
