@@ -1,5 +1,5 @@
 ---
-name: mcp-integration-lifecycle
+name: mcp-wire-tracer
 description: "MCP client integration: register stdio or HTTP servers; diagnose launch or initialize failures, missing tools, OAuth or approval config, cross-client differences and reloads. Not for writing a server."
 ---
 

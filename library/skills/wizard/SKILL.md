@@ -1,5 +1,5 @@
 ---
-name: wizard
+name: setup-wizard-script
 description: "Wizard script: generate an interactive bash walkthrough for steps only a human can do, such as credentials, CI secrets, a third-party dashboard or a one-off cutover. Not for steps the agent can run."
 ---
 

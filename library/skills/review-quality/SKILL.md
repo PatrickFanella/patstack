@@ -1,6 +1,6 @@
 ---
 name: review-quality
-description: "Review code quality in one pass: merge-readiness verdict, clean-code maintainability, and docs-vs-code consistency. Use for quality or production-readiness checks. Not for defect-only diff review (review-agent)."
+description: "Review code quality in one pass: merge-readiness verdict, clean-code maintainability, and docs-vs-code consistency. Use for quality or production-readiness checks. Not for defect-only diff review (diff-auditor)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

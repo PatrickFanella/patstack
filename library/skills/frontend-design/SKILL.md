@@ -1,5 +1,5 @@
 ---
-name: frontend-design
+name: ui-craft
 description: Create, polish, and visually review distinctive production-grade frontend interfaces. Use when building or improving web UI, React components, Tailwind layouts, dashboards, landing pages, responsive design, visual consistency, or fixing UI/design issues in code.
 license: Complete terms in LICENSE.txt
 metadata:
@@ -11,7 +11,7 @@ metadata:
 
 # Frontend Design
 
-Design and implement production UI that looks intentional, distinctive, accessible, and stack-appropriate. Use for code-level visual work; use `react-pro` when the main challenge is React architecture/state/performance rather than visual execution.
+Design and implement production UI that looks intentional, distinctive, accessible, and stack-appropriate. Use for code-level visual work; use `react-render-tuner` when the main challenge is React architecture/state/performance rather than visual execution.
 
 ## Defaults
 

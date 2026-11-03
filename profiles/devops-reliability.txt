@@ -1,17 +1,17 @@
 # Cloud, deployment, infrastructure, observability, performance, and operational safety.
-cloudflare-deploy
+cf-edge-deploy
 deployment-pipeline-design
 failure-anthropologist
 github-pro
 grafana-dashboards
 helm-chart-scaffolding
 k8s-manifest-generator
-performance-investigation
+perf-hotpath-probe
 prometheus-configuration
 sast-configuration
-secrets-management
-security-best-practices
+secret-rotation-flow
+secure-code-audit
 slo-implementation
-terraform-module-library
-kubernetes-development
-homelab-operations
+terraform-module-smith
+kube-artifact-smith
+fleet-ops-router

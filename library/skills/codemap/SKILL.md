@@ -1,5 +1,5 @@
 ---
-name: codemap
+name: repo-atlas
 description: "Codemaps: generate hierarchical codemap.md files for an unfamiliar repository, only when the user asks for codebase documentation or a first repository map."
 compatibility: Requires a git repository and a Node.js-compatible runtime or Bun for the bundled codemap helper.
 metadata:
@@ -43,7 +43,7 @@ If neither file exists: Continue to Step 2 (Initialize).
      - Docs: `docs/**`, `*.md` (except root `README.md` if needed), `LICENSE`
      - Build/Deps: `node_modules/**`, `dist/**`, `build/**`, `*.min.js`
    - Respect `.gitignore` automatically
-3. **Run codemap.mjs init** (set `SKILL_DIR` to this skill's installed folder, such as `~/.agents/skills/codemap`):
+3. **Run codemap.mjs init** (set `SKILL_DIR` to this skill's installed folder, such as `~/.agents/skills/repo-atlas`):
 
 ```bash
 node "$SKILL_DIR"/scripts/codemap.mjs init \

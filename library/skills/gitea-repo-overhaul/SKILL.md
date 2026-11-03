@@ -1,5 +1,5 @@
 ---
-name: gitea-repo-overhaul
+name: gitea-fleet-tidy
 description: End-to-end Gitea/Forgejo repository overhaul workflow for self-hosted repos. Use when asked to inventory, modernize, normalize, audit, or aggressively improve Gitea repos by creating manifests/reports, normalizing labels/issues/wiki pages, enabling repo units, adding soft branch protections, migrating default branches, planning workflows/releases/packages, and keeping repo settings sane.
 metadata:
   blacktower-pack: engineering
@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: git-github,gitea,repo,overhaul
 ---
 
-# gitea-repo-overhaul
+# gitea-fleet-tidy
 
 ## Use this skill
 

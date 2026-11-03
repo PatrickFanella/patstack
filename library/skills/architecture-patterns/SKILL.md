@@ -1,5 +1,5 @@
 ---
-name: architecture-patterns
+name: boundary-drafter
 description: "Backend layering: apply Clean, Hexagonal or DDD structure to a new service, split a monolith into bounded contexts, or break dependency cycles between layers."
 metadata:
   blacktower-pack: engineering
@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: backend-architecture,architecture,patterns
 ---
 
-# architecture-patterns
+# boundary-drafter
 
 ## Use this skill
 

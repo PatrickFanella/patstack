@@ -1,6 +1,6 @@
 import csv,hashlib,json,os,pathlib,shutil,subprocess,sys,tempfile,unittest
 ROOT=pathlib.Path(__file__).resolve().parents[1]
-SKILL=ROOT/'skills/frontend-design'
+SKILL=ROOT/'skills/ui-craft'
 class FrontendTests(unittest.TestCase):
  def run_search(self,root,*args):
   return subprocess.run([sys.executable,str(root/'scripts/tool-ui-ux-pro-max/search.py'),*args,'--json'],capture_output=True,text=True,env={**os.environ,'PYTHONDONTWRITEBYTECODE':'1'})

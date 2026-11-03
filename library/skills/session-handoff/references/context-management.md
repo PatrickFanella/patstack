@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: agent-ecosystem,context,engineer
 ---
 
-> **See also:** `session-handoff` (create handoff documents), `deep-research` (research that consumes context).
+> **See also:** `relay-baton` (create handoff documents), `repo-research-trail` (research that consumes context).
 
 # Context Engineering
 

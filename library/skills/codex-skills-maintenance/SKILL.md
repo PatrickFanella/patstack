@@ -30,7 +30,7 @@ sources.
 5. **Implement narrowly.** Preserve working behavior, move detailed material
    into one-level references, add scripts only for repeated deterministic work,
    and keep `SKILL.md` under 500 lines.
-6. **Validate.** Run the current `skill-creator` `quick_validate.py`, parse
+6. **Validate.** Run the current `skill-forge` `quick_validate.py`, parse
    metadata, type-check and execute scripts, and test real runtime contracts
    where safe.
 7. **Forward-test complex revisions.** Give independent agents realistic tasks

@@ -1,5 +1,5 @@
 ---
-name: codemod-surgeon
+name: sweep-rewriter
 description: "Codemods: plan and run repo-wide mechanical rewrites, API migrations, renames or subsystem removals with AST-grep or codemod tools and a leftover scan."
 compatibility: Requires Python 3 for the bundled leftover scanner; AST-aware rewrites require an available codemod or ast-grep runtime.
 metadata:

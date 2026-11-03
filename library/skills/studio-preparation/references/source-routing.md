@@ -18,7 +18,7 @@
 - **Supporter offer:** `content/patreon/support-redesign-2026-10/` (README, site-guidelines and patreon-copy), now on subcult-tv main. Read it for the owner's no-schedule direction. Treat prices, copy and access as proposed until exact approval and live account readback establish them. Do not rewrite historical plans or apply a live offer from this pointer alone.
 - **Planning:** the SUBCULT vault's Home/Focus notes and its existing Strategy, Products or Publishing notes. Use explicit cross-vault URI links, and keep pointers to Studio rather than another editable content master.
 
-The prior brand-voice, visual-design and worldbuilding library folders are preserved as historical source. Their universal dark-mode prescription and mandatory mythic tone are not active product policy. Generic content-strategy, copywriting and launch methods remain optional. Local facts and authority come from the owners above.
+The prior voice-ledger, visual-design and worldbuilding library folders are preserved as historical source. Their universal dark-mode prescription and mandatory mythic tone are not active product policy. Generic editorial-roadmap, copywriting and launch methods remain optional. Local facts and authority come from the owners above.
 
 ## Preparation runtime on Kvant (October 5, 2026)
 

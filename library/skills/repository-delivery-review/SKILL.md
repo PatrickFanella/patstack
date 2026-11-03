@@ -1,5 +1,5 @@
 ---
-name: repository-delivery-review
+name: ship-check
 description: "Audit a whole repository's delivery state: implemented, incomplete, planned and unverified work. Use for project audits, readiness or viability reports, roadmap-versus-code checks. Not for one diff or PR."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: performance-investigation
+name: perf-hotpath-probe
 description: "Measured performance regressions: slow endpoints, jobs, queries, builds or renders, high CPU or memory, benchmark-backed verification. Not for speculative optimization without a target."
 compatibility: Profiling and benchmark commands depend on the project runtime; use only tools already available in the target environment unless the user approves installation.
 metadata:

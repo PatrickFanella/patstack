@@ -1,5 +1,5 @@
 ---
-name: secrets-management
+name: secret-rotation-flow
 description: "Secrets for CI and runtime: storage, injection, rotation, revocation and leak scanning with Vault, cloud secret managers or native CI secrets. Use when moving or rotating credentials."
 metadata:
   blacktower-pack: engineering

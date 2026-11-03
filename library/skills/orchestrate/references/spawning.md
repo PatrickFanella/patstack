@@ -1,6 +1,6 @@
 # Spawning tasks
 
-Contract between `plan.json` entries and the cloud agents the script spawns. Mechanics (auth, `CursorAgentError` vs `RunResult.status === "error"`) live in `cursor-sdk/SKILL.md`. Read that first.
+Contract between `plan.json` entries and the cloud agents the script spawns. Mechanics (auth, `CursorAgentError` vs `RunResult.status === "error"`) live in `cursor-sdk-builder/SKILL.md`. Read that first.
 
 ## Branch naming
 

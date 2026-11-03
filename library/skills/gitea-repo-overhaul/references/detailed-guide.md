@@ -1,4 +1,4 @@
-# gitea-repo-overhaul detailed guide
+# gitea-fleet-tidy detailed guide
 
 # Gitea Repo Overhaul
 

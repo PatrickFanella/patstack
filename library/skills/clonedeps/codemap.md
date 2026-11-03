@@ -38,4 +38,4 @@ directly.
 
 - Registered in `src/cli/custom-skills.ts` with orchestrator-only permission.
 - Included in release verification via `scripts/verify-release-artifact.ts`.
-- Documented in `docs/skills.md` and included in `src/skills/codemap.md`.
+- Documented in `docs/skills.md` and included in `src/skills/repo-atlas.md`.

@@ -1,6 +1,6 @@
 ---
 name: python-testing-patterns
-description: "Use when writing or restructuring pytest suites: fixtures, parametrization, mocking, async tests, coverage. Not for repository-wide test upkeep (repository-test-maintenance)."
+description: "Use when writing or restructuring pytest suites: fixtures, parametrization, mocking, async tests, coverage. Not for repository-wide test upkeep (test-suite-pruner)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

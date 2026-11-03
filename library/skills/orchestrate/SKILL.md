@@ -8,12 +8,12 @@ disable-model-invocation: true
 
 An explicit `/orchestrate <goal>` fans out a large task across parallel Cursor cloud agents. Workers don't talk to each other; they talk up through structured handoffs. The spawn, wait, and handoff loop lives in `scripts/cli.ts`. The planner writes `plan.json`, the script executes it, and the planner reads handoffs to decide what comes next. Long-running agent loops drift; a script with a JSON state file keeps its footing.
 
-**Required reading: the `cursor-sdk` skill ([cursor/plugins/cursor-sdk](https://github.com/cursor/plugins/tree/main/cursor-sdk)).** Spawning, auth, and the error taxonomy live there. Don't reimplement what that skill already documents.
+**Required reading: the `cursor-sdk-builder` skill ([cursor/plugins/cursor-sdk](https://github.com/cursor/plugins/tree/main/cursor-sdk)).** Spawning, auth, and the error taxonomy live there. Don't reimplement what that skill already documents.
 
 ## Setup
 
-- This fleet usually runs Codex, Claude Code and OpenCode. This skill works only with a Cursor account and the Cursor SDK; without `CURSOR_API_KEY`, say so and coordinate local subagents with `multi-agent-workflows` instead.
-- `CURSOR_API_KEY` must be a personal/user key. Create it from [Cursor Dashboard > Integrations](https://cursor.com/dashboard/integrations), then read `cursor-sdk` Auth before using it.
+- This fleet usually runs Codex, Claude Code and OpenCode. This skill works only with a Cursor account and the Cursor SDK; without `CURSOR_API_KEY`, say so and coordinate local subagents with `agent-fanout-plan` instead.
+- `CURSOR_API_KEY` must be a personal/user key. Create it from [Cursor Dashboard > Integrations](https://cursor.com/dashboard/integrations), then read `cursor-sdk-builder` Auth before using it.
 - `SLACK_BOT_TOKEN` is optional. When set, pass `--slack-channel <id>` to `kickoff` or the first `run --root`, or set `SLACK_CHANNEL_ID`. The script stores the channel in `plan.slackChannel`, posts the kickoff thread there, mirrors task status, and reads Andon reactions. When the token is unset, the script logs once and runs without Slack visibility; correctness does not change.
 
 ## Core principles

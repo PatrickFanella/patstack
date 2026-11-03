@@ -1,5 +1,5 @@
 ---
-name: clonedeps
+name: dep-source-clone
 description: "Dependency source: clone a few dependency repositories at their resolved versions into an ignored workspace to read library internals. Not for ordinary API or docs questions."
 metadata:
   blacktower-pack: core

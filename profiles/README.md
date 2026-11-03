@@ -10,10 +10,10 @@ The following specialists are optional. Their curated procedures live under
 
 | Profile | Adds to the five-skill core |
 |---|---|
-| infrastructure | kubernetes-development, terraform-module-library |
-| charting | lightweight-charts |
-| reverse-engineering | reverse-engineering |
-| smart-contracts | solidity-security |
+| infrastructure | kube-artifact-smith, terraform-module-smith |
+| charting | tv-candle-charts |
+| binary-dissector | binary-dissector |
+| smart-contracts | solidity-audit |
 
 For example, run `rtk proxy ~/.agents/bin/skill-profile plan infrastructure`,
 then `activate infrastructure` when needed. Profiles can be combined. Use

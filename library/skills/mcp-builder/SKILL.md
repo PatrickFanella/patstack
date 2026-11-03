@@ -1,5 +1,5 @@
 ---
-name: mcp-builder
+name: mcp-server-forge
 description: "MCP server construction: tool contracts, transports, errors and evaluations, preferring Go with a TypeScript fallback. Not for registering or debugging an existing server."
 license: Complete terms in LICENSE.txt
 metadata:
@@ -9,7 +9,7 @@ metadata:
   blacktower-capabilities: agent-ecosystem,mcp,builder
 ---
 
-# mcp-builder
+# mcp-server-forge
 
 ## Use this skill
 

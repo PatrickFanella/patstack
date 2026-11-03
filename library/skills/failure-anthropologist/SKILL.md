@@ -11,7 +11,7 @@ metadata:
 # Failure Anthropologist
 
 Use this skill after or during recurring failures. It complements
-`systematic-debugging`: debugging finds the root cause; this skill turns the
+`bug-tracer`: debugging finds the root cause; this skill turns the
 lesson into prevention.
 
 ## Investigation workflow

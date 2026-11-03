@@ -1,6 +1,6 @@
 ---
 name: sast-configuration
-description: "SAST setup: Semgrep, CodeQL or SonarQube, custom rules, CI scanning (Gitea Actions or GitHub). Use when adding or tuning static security scanning. Not for manual security review (security-best-practices)."
+description: "SAST setup: Semgrep, CodeQL or SonarQube, custom rules, CI scanning (Gitea Actions or GitHub). Use when adding or tuning static security scanning. Not for manual security review (secure-code-audit)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

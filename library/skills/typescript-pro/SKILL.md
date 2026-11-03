@@ -1,6 +1,6 @@
 ---
-name: typescript-pro
-description: "TypeScript and Node work: apps, libraries, scripts, tsconfig, advanced types, type guards, tRPC and type-safe APIs, including plain JS in a TypeScript-first codebase. Not for React rendering; use react-pro."
+name: ts-type-design
+description: "TypeScript and Node work: apps, libraries, scripts, tsconfig, advanced types, type guards, tRPC and type-safe APIs, including plain JS in a TypeScript-first codebase. Not for React rendering; use react-render-tuner."
 license: MIT
 metadata:
   blacktower-pack: engineering
@@ -14,7 +14,7 @@ metadata:
   role: specialist
   scope: implementation
   output-format: code
-  related-skills: react-pro, nodejs-backend-patterns
+  related-skills: react-render-tuner, nodejs-backend-patterns
 ---
 
 # TypeScript Pro

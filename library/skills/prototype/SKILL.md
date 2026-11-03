@@ -1,5 +1,5 @@
 ---
-name: prototype
+name: throwaway-prototype
 description: "Use to answer a design question with throwaway code: a runnable terminal app for state or business logic, or switchable UI variants on one route. Not for production implementation."
 metadata:
   blacktower-pack: engineering

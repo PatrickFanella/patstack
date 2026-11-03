@@ -1,4 +1,4 @@
-# mcp-builder detailed guide
+# mcp-server-forge detailed guide
 
 # MCP Server Development Guide
 

@@ -1,4 +1,4 @@
-# architecture-patterns detailed guide
+# boundary-drafter detailed guide
 
 # Architecture Patterns
 

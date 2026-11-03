@@ -156,7 +156,7 @@ Collect:
 - Attachments and error signatures
 - Candidate code area
 
-Inspect screenshots and video. Use read-only parallel workers for code history, test ideas, blast-radius mapping, and media review when useful. Each worker gets a narrow question and the Slack-write prohibition.
+Inspect screenshots and video. Use read-only parallel workers for code history, test ideas, change-blast-check mapping, and media review when useful. Each worker gets a narrow question and the Slack-write prohibition.
 
 Use pstack's `how` skill to trace the action through the repository. Use `why` for regression history and defensive code. Form competing cause hypotheses and identify evidence that would separate them.
 
@@ -291,7 +291,7 @@ Only after before-and-after proof:
 - Open a draft pull request. Never merge or deploy from this workflow.
 - Link the configured tracker issue using the tracker's supported pull request syntax.
 - Use the configured public URL form, normally `https://github.com/{owner}/{repo}/pull/{number}`.
-- Include the repro steps, root cause, test result, before and after evidence, and blast-radius checks.
+- Include the repro steps, root cause, test result, before and after evidence, and change-blast-check checks.
 - Run the pull request text and all Slack updates through pstack's `unslop` skill.
 
 If pull request creation fails, do not claim success. Keep the commit or branch state in the run output and mark operations status `Fix did not land`.

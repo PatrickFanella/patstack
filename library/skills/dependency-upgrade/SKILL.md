@@ -1,5 +1,5 @@
 ---
-name: dependency-upgrade
+name: dep-upgrade-pilot
 description: Manage major dependency version upgrades with compatibility analysis, staged rollout, and comprehensive testing. Use when upgrading framework versions, updating major dependencies, or managing breaking changes in libraries.
 metadata:
   blacktower-pack: engineering

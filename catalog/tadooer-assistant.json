@@ -14,7 +14,7 @@
   "deployment": "scripts/tadooer-assistant-host.py",
   "runtime": {
     "owner": "subculture-collective/tadooer",
-    "revision": "928af1d88b0ddd8878daf1a87e3871388369121f",
+    "draft-reviser": "928af1d88b0ddd8878daf1a87e3871388369121f",
     "sha256": "a159e56f9588111c32404c9bb5ec1e59d0ee4efc13caaccb5f3d1a213ae8f5f7",
     "entrypoint": "apps/mcp-stdio/dist/main.mjs"
   },

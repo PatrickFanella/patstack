@@ -12,31 +12,31 @@ CATALOG=json.loads((ROOT/'catalog/proposed-catalog.json').read_text())
 RECS=json.loads((ROOT/'catalog/recommendations.json').read_text())
 TARGETS={r['name']:r['target'] for r in RECS}
 PRINCIPLES={
- 'architecture-patterns':'boundary-discipline exhaust-the-design-space experience-first foundational-thinking model-the-domain redesign-from-first-principles separate-before-serializing-shared-state',
- 'refactor':'laziness-protocol migrate-callers-then-delete-legacy-apis minimize-reader-load subtract-before-you-add',
- 'codemod-surgeon':'build-the-lever encode-lessons-in-structure',
- 'implementation-plan':'guard-the-context-window never-block-on-the-human outcome-oriented-execution sequence-verifiable-units',
- 'systematic-debugging':'fix-root-causes', 'verify-behavior':'prove-it-works make-operations-idempotent',
- 'typescript-pro':'type-system-discipline',
+ 'boundary-drafter':'boundary-discipline exhaust-the-design-space experience-first foundational-thinking model-the-domain redesign-from-first-principles separate-before-serializing-shared-state',
+ 'safe-refactor-pass':'laziness-protocol migrate-callers-then-delete-legacy-apis minimize-reader-load subtract-before-you-add',
+ 'sweep-rewriter':'build-the-lever encode-lessons-in-structure',
+ 'build-sequencer':'guard-the-context-window never-block-on-the-human outcome-oriented-execution sequence-verifiable-units',
+ 'bug-tracer':'fix-root-causes', 'behavior-proof':'prove-it-works make-operations-idempotent',
+ 'ts-type-design':'type-system-discipline',
 }
 CONTRACTS={
- 'typescript-pro':'Respect the existing module system and compiler configuration. Model external values at boundaries; justify assertions rather than treating every cast as a defect. Module-boundary enforcement and shoehorn migrations run only when explicitly requested.',
- 'python-development':'Identify whether the task concerns application code, a utility, packaging, configuration, environment management, or tests. Preserve the project package manager and import layout; use its declared Python version.',
- 'architecture-patterns':'Choose a structure from the actual callers and invariants. Domain vocabulary, module design, and CQRS are separate modes: load only the mode needed. Produce design artifacts when design is requested; implement only within the requested scope.',
- 'api-development':'Start with the public contract and the existing framework. Keep transport validation, authentication, business rules, and persistence responsibilities explicit. Load WebSocket guidance only for long-lived connections.',
- 'cli-developer':'Design flags, stdout/stderr, exit codes, and noninteractive input as a contract. Preserve human interaction when requested; make it an optional fallback for automatable operations.',
- 'shell-development':'Preserve argument boundaries, exit statuses, and cleanup ownership. Choose implementation, linting, or tests; an ordinary script edit does not require all three reference sets.',
- 'git-advanced-workflows':'Resolve the repository, requested comparison, and configured remote first. Preserve unrelated work. Read-only Git inspection, requested history edits, PR preparation, and publishing have separate authorization boundaries.',
- 'ci-maintenance':'Locate the failed job or requested pipeline change. Distinguish local command results from hosted checks. Reuse the existing CI provider and hooks rather than adding a second system; publishing changes requires authorization.',
- 'kubernetes-development':'Select raw manifests, chart templates, or workload policy. Validate the rendered artifact and intended namespace before any authorized cluster operation. Generating configuration does not authorize applying it.',
- 'observability':'Start with the operational question and signal. Choose metrics, tracing, dashboards, or SLO design; keep signal names, labels, units, and time windows consistent across the selected artifacts.',
- 'postgres-pro':'Use the real schema and query plan to establish the problem. Separate read-only diagnostics from index, schema, data, replication, and production changes. Data-quality conclusions need explicit keys and population boundaries.',
- 'rag-implementation':'Treat ingestion, retrieval, ranking, and grounded answers as separately measurable stages. Preserve source provenance and access boundaries; evaluate retrieval results before attributing answer defects to the model.',
- 'refactor':'Preserve observable behavior and existing repository conventions. Select cleanup or a refactor plan; planning does not authorize implementation or filing an issue. Use codemod-surgeon for repeated structural transformations.',
- 'systematic-debugging':'Establish a failing observation before selecting a cause. Change one causal variable at a time; verify the same reproducer after repair. Use recurring-failure analysis only for repeated incidents, not every trivial failure.',
- 'code-review':'Default to read-only, defect-first review of the requested change. Pin the comparison and trace findings through actual callers. Maintainability and strict thermo-nuclear modes require a specific request. Multiple reviewers are optional when scope warrants them; never assume named agent types.',
- 'technical-writing':'Select writing, localization, or consistency review. Preserve the requested audience, source meaning, identifiers, and stopping point. Documentation review does not authorize rewriting code or publishing comments.',
- 'reverse-engineering':'Identify the artifact and authorized analysis scope. Select binary inspection or protocol observation; report inferred structure separately from demonstrated behavior.',
+ 'ts-type-design':'Respect the existing module system and compiler configuration. Model external values at boundaries; justify assertions rather than treating every cast as a defect. Module-boundary enforcement and shoehorn migrations run only when explicitly requested.',
+ 'python-uv-workbench':'Identify whether the task concerns application code, a utility, packaging, configuration, environment management, or tests. Preserve the project package manager and import layout; use its declared Python version.',
+ 'boundary-drafter':'Choose a structure from the actual callers and invariants. Domain vocabulary, module design, and CQRS are separate modes: load only the mode needed. Produce design artifacts when design is requested; implement only within the requested scope.',
+ 'api-contract-smith':'Start with the public contract and the existing framework. Keep transport validation, authentication, business rules, and persistence responsibilities explicit. Load WebSocket guidance only for long-lived connections.',
+ 'cli-contract-smith':'Design flags, stdout/stderr, exit codes, and noninteractive input as a contract. Preserve human interaction when requested; make it an optional fallback for automatable operations.',
+ 'bash-script-craft':'Preserve argument boundaries, exit statuses, and cleanup ownership. Choose implementation, linting, or tests; an ordinary script edit does not require all three reference sets.',
+ 'git-surgery':'Resolve the repository, requested comparison, and configured remote first. Preserve unrelated work. Read-only Git inspection, requested history edits, PR preparation, and publishing have separate authorization boundaries.',
+ 'ci-medic':'Locate the failed job or requested pipeline change. Distinguish local command results from hosted checks. Reuse the existing CI provider and hooks rather than adding a second system; publishing changes requires authorization.',
+ 'kube-artifact-smith':'Select raw manifests, chart templates, or workload policy. Validate the rendered artifact and intended namespace before any authorized cluster operation. Generating configuration does not authorize applying it.',
+ 'telemetry-signal-forge':'Start with the operational question and signal. Choose metrics, tracing, dashboards, or SLO design; keep signal names, labels, units, and time windows consistent across the selected artifacts.',
+ 'pg-plan-reader':'Use the real schema and query plan to establish the problem. Separate read-only diagnostics from index, schema, data, replication, and production changes. Data-quality conclusions need explicit keys and population boundaries.',
+ 'retrieval-pipeline':'Treat ingestion, retrieval, ranking, and grounded answers as separately measurable stages. Preserve source provenance and access boundaries; evaluate retrieval results before attributing answer defects to the model.',
+ 'safe-refactor-pass':'Preserve observable behavior and existing repository conventions. Select cleanup or a refactor plan; planning does not authorize implementation or filing an issue. Use codemod-surgeon for repeated structural transformations.',
+ 'bug-tracer':'Establish a failing observation before selecting a cause. Change one causal variable at a time; verify the same reproducer after repair. Use recurring-failure analysis only for repeated incidents, not every trivial failure.',
+ 'diff-inspector':'Default to read-only, defect-first review of the requested change. Pin the comparison and trace findings through actual callers. Maintainability and strict thermo-nuclear modes require a specific request. Multiple reviewers are optional when scope warrants them; never assume named agent types.',
+ 'tech-doc-writer':'Select writing, localization, or consistency review. Preserve the requested audience, source meaning, identifiers, and stopping point. Documentation review does not authorize rewriting code or publishing comments.',
+ 'binary-dissector':'Identify the artifact and authorized analysis scope. Select binary inspection or protocol observation; report inferred structure separately from demonstrated behavior.',
  'blacktower-development':'Apply only inside Blacktower. Select control UI, plugin composition, release artifacts, or session lifecycle. OpenCode references here describe the software under development, not tools that Codex must have.',
 }
 
@@ -87,19 +87,19 @@ for row in CATALOG:
   capabilities.append({'original':name,'owner':name,'kind':'external','path':str(Path('/home/onnwee/.codex/skills')/name)});continue
  destination=ROOT/('repository-skills' if name=='blacktower-development' else 'skills')/name
  sources=row['sources'];meta={}
- if name in {'implementation-plan','verify-behavior'}:
+ if name in {'build-sequencer','behavior-proof'}:
   draft=ROOT/'catalog/import-inputs'/(name+'.md')
   meta,body=read_skill(draft);destination.mkdir()
  elif len(sources)==1:
   src=ARCHIVE/'personal'/sources[0];meta,body=read_skill(src/'SKILL.md');copy_resources(src,destination)
-  if len(body)>4000 and name!='hatch-pet':
+  if len(body)>4000 and name!='pet-hatchery':
    # Keep original resources in place so all existing relative references continue to work.
    guide(destination,body)
    body=f'# {name}\n\n{row["description"]}\n\nSelect the relevant procedure from [the task guide](guide.md). Load only that procedure, not the complete reference collection.\n\nKeep the requested scope and repository conventions. Report evidence for the operation actually performed.'
   else:body=clean(body)
  else:
   destination.mkdir();body=f'# {name}\n\n'+CONTRACTS.get(name,'Select the mode matching the requested task.')+'\n\n## Select a mode\n\n'
- if len(sources)>1 or name=='verify-behavior':
+ if len(sources)>1 or name=='behavior-proof':
   for original in sources:
    src=ARCHIVE/'personal'/original;oldmeta,oldbody=read_skill(src/'SKILL.md')
    mode=destination/'references/modes'/original;copy_resources(src,mode);guide(mode,oldbody)
@@ -115,11 +115,11 @@ for row in CATALOG:
   p=destination/'agents/openai.yaml';p.parent.mkdir(exist_ok=True);shutil.copy2(ARCHIVE/'personal'/sources[0]/'agents/openai.yaml',p)
 
 # Rich shared owners: union all resources, preferring the richer Codex content.
-for name in ['requirements-interview','session-handoff']:
+for name in ['scope-grill','relay-baton']:
  dst=ROOT/'shared'/name;shutil.copytree(ARCHIVE/'shared'/name,dst,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
  shutil.copytree(ARCHIVE/'personal'/name,dst,dirs_exist_ok=True,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
  capabilities.append({'original':name,'owner':name,'kind':'shared','path':f'shared/{name}/SKILL.md'})
-capabilities.append({'original':'review-agent','owner':'system review-agent','kind':'system','path':'/home/onnwee/.codex/skills/.system/review-agent/SKILL.md'})
+capabilities.append({'original':'diff-auditor','owner':'system review-agent','kind':'system','path':'/home/onnwee/.codex/skills/.system/review-agent/SKILL.md'})
 
 for owner,slugs in PRINCIPLES.items():
  dst=ROOT/'skills'/owner;entry=dst/'SKILL.md';links=[]

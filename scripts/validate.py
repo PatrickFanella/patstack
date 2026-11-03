@@ -53,7 +53,7 @@ def main(source_only=False):
                 if meta['name']!=p.parent.name:errors.append(f'name: {p}')
                 if not isinstance(meta['description'],str) or not meta['description'].strip():errors.append(f'description: {p}')
                 if folder!='project-agents' and len(p.relative_to(ROOT/folder).parts)!=2:errors.append(f'nested discovery: {p}')
-                if len(body)>(8000 if p.parent.name=='hatch-pet' else 4000):errors.append(f'oversized: {p}')
+                if len(body)>(8000 if p.parent.name=='pet-hatchery' else 4000):errors.append(f'oversized: {p}')
                 if set(meta)-{'name','description','metadata','license','compatibility','allowed-tools'}:errors.append(f'unsupported frontmatter: {p}: {set(meta)}')
                 if folder=='skills':
                     metrics['authoredPersonal']+=1;metrics['personalDescriptions']+=len(meta['description']);metrics['personalBodies']+=len(body)

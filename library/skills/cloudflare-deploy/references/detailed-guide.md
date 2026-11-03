@@ -1,4 +1,4 @@
-# cloudflare-deploy detailed guide
+# cf-edge-deploy detailed guide
 
 # Cloudflare Deploy
 

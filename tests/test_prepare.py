@@ -24,12 +24,12 @@ class PrepareTests(unittest.TestCase):
  def test_plan_batches_idempotency_and_drift(self):
   with tempfile.TemporaryDirectory() as directory:
    root=pathlib.Path(directory);state=root/'state';personal=root/'installed';shared=root/'shared-installed';blacktower=root/'blacktower';exclude=blacktower/'.git/info/exclude'
-   for p in [root/'catalog',root/'skills/frontend-design',root/'skills/ordinary',root/'shared/session-handoff',root/'repository-skills/blacktower-development',personal/'retired',personal/'ordinary',exclude.parent]:p.mkdir(parents=True,exist_ok=True)
-   for p in [root/'skills/frontend-design',root/'skills/ordinary',root/'shared/session-handoff',root/'repository-skills/blacktower-development']:(p/'SKILL.md').write_text('candidate')
+   for p in [root/'catalog',root/'skills/ui-craft',root/'skills/ordinary',root/'shared/relay-baton',root/'repository-skills/blacktower-development',personal/'retired',personal/'ordinary',exclude.parent]:p.mkdir(parents=True,exist_ok=True)
+   for p in [root/'skills/ui-craft',root/'skills/ordinary',root/'shared/relay-baton',root/'repository-skills/blacktower-development']:(p/'SKILL.md').write_text('candidate')
    (personal/'ordinary/SKILL.md').write_text('original');(personal/'retired/SKILL.md').write_text('old');exclude.write_text('# existing exclusion\nkeep-me\n')
    config={'personalRoot':str(personal),'sharedRoot':str(shared),'blacktowerRoot':str(blacktower),'excludePath':str(exclude)}
    baseline={str(p):installer.snapshot(p) for p in [personal/'ordinary',personal/'retired',exclude]}
-   installer.save(root/'catalog/installation.json',config);installer.save(root/'catalog/baseline.json',baseline);installer.save(root/'catalog/proposed-catalog.json',[{'name':n,'scope':'personal'} for n in ['ordinary','frontend-design']])
+   installer.save(root/'catalog/installation.json',config);installer.save(root/'catalog/baseline.json',baseline);installer.save(root/'catalog/proposed-catalog.json',[{'name':n,'scope':'personal'} for n in ['ordinary','ui-craft']])
    subprocess.run(['git','init','-q',str(root)],check=True)
    subprocess.run(['git','-C',str(root),'-c','user.name=Fixture','-c','user.email=fixture@invalid','commit','--allow-empty','-qm','fixture'],check=True)
    first=installer.prepare(root,state);self.assertFalse(state.exists());self.assertEqual(first,installer.prepare(root,state))
@@ -42,22 +42,22 @@ class PrepareTests(unittest.TestCase):
    with self.assertRaisesRegex(RuntimeError,'intervening edits'):installer.rollback(run,state)
    self.assertEqual((personal/'ordinary/SKILL.md').read_text(),'intervening edit')
 
-   scoped=installer.prepare(root,state,only_skills=['frontend-design'])
-   self.assertEqual([op['destination'] for op in scoped['operations']],[str(personal/'frontend-design')])
+   scoped=installer.prepare(root,state,only_skills=['ui-craft'])
+   self.assertEqual([op['destination'] for op in scoped['operations']],[str(personal/'ui-craft')])
    installer.apply(scoped,state)
    self.assertEqual((personal/'ordinary/SKILL.md').read_text(),'intervening edit')
    with self.assertRaisesRegex(RuntimeError,'Drift'):installer.prepare(root,state,only_skills=['ordinary'])
    with self.assertRaisesRegex(RuntimeError,'Unknown personal skills'):installer.prepare(root,state,only_skills=['missing'])
 
-   shared_scope=installer.prepare(root,state,only_shared=['session-handoff'])
-   self.assertEqual([op['destination'] for op in shared_scope['operations']],[str(shared/'session-handoff')])
+   shared_scope=installer.prepare(root,state,only_shared=['relay-baton'])
+   self.assertEqual([op['destination'] for op in shared_scope['operations']],[str(shared/'relay-baton')])
    installer.apply(shared_scope,state)
-   shared_target=shared/'session-handoff/SKILL.md'
+   shared_target=shared/'relay-baton/SKILL.md'
    self.assertEqual(shared_target.read_text(),'candidate')
    shared_target.write_text('shared user edit')
-   with self.assertRaisesRegex(RuntimeError,'Drift'):installer.prepare(root,state,only_shared=['session-handoff'])
+   with self.assertRaisesRegex(RuntimeError,'Drift'):installer.prepare(root,state,only_shared=['relay-baton'])
    with self.assertRaisesRegex(RuntimeError,'Unknown shared skills'):installer.prepare(root,state,only_shared=['missing'])
    (personal/'ordinary/SKILL.md').write_text('another user edit')
-   selected=installer.prepare(root,state,only_skills=['frontend-design'])
+   selected=installer.prepare(root,state,only_skills=['ui-craft'])
    self.assertEqual(len(selected['operations']),1)
    self.assertEqual(shared_target.read_text(),'shared user edit')

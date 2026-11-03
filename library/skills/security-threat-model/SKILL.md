@@ -1,5 +1,5 @@
 ---
-name: security-threat-model
+name: stride-threat-map
 description: "Threat-model a repository or path: assets, trust boundaries, attacker capabilities, abuse paths, mitigations, written as Markdown. Use only on an explicit threat-model request. Not for code review."
 metadata:
   blacktower-pack: engineering
@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: security,threat,model
 ---
 
-# security-threat-model
+# stride-threat-map
 
 Create repo-grounded threat models. Use STRIDE, attack tree, requirements, and mitigation references only as needed.
 

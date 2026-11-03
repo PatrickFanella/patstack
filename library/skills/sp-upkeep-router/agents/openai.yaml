@@ -1,0 +1,4 @@
+interface:
+  display_name: "Super Productivity Maintenance"
+  short_description: "Maintain the live Super Productivity system"
+  default_prompt: "Use $sp-upkeep-router to audit the live system and route recurrence scheduling, task planning, and MCP health work safely."

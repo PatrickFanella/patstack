@@ -1,4 +1,0 @@
-interface:
-  display_name: "Codex Desktop Maintenance"
-  short_description: "Audit the Codex Desktop setup on Sputnik"
-  default_prompt: "Use $codex-desktop-maintenance to audit my local Codex Desktop setup safely."

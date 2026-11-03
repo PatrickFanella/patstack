@@ -1,6 +1,6 @@
 ---
 name: python-configuration
-description: "Use when centralizing Python settings: environment variables, pydantic-settings models, fail-fast startup validation, secrets_dir and environment switches. Not for secret-store design (secrets-management)."
+description: "Use when centralizing Python settings: environment variables, pydantic-settings models, fail-fast startup validation, secrets_dir and environment switches. Not for secret-store design (secret-rotation-flow)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

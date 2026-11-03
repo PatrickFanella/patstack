@@ -71,8 +71,8 @@ def render(host, client, revision, source=ROOT / 'instructions'):
     host_lines.append('Skill, profile and global-instruction changes are authored in codex-skills (`' + authoring +
                       '`' + where + '); read its AGENTS.md and `docs/OPERATING-MODEL.md`. '
                       'Installed skills and this file are deployment targets.')
-    host_lines.append('Load the `unslop` skill once per session and apply it to user-facing prose and documentation edits.')
-    host_lines.append('For a requested `grill-me` or `grill-with-docs`, use the matching mode of `requirements-interview`.')
+    host_lines.append('Load the `prose-unslop` skill once per session and apply it to user-facing prose and documentation edits.')
+    host_lines.append('For a requested `grill-me` or `grill-with-docs`, use the matching mode of `scope-grill`.')
     if client == 'claude':
         host_lines.append('Many fleet skills were written for Codex. When a skill needs a tool Claude Code lacks, '
                           'say so and use a supported equivalent; reading a skill does not install its tools.')
@@ -195,7 +195,7 @@ def remote(mode, payload, run_dir=None):
     for path in retired_targets(home):
         actions[str(path)] = 'remove retired copy'
     before = {p: state(Path(p)) for p in actions}
-    summary = {'host': payload['host'], 'sourceRevision': payload['revision'], 'actions': actions}
+    summary = {'host': payload['host'], 'sourceRevision': payload['draft-reviser'], 'actions': actions}
 
     if mode == 'plan':
         write(plan_path, json.dumps({'before': before, 'hashes': payload['hashes']}, indent=2).encode(), 0o600)
@@ -243,7 +243,7 @@ def remote(mode, payload, run_dir=None):
 
 def payload_for(host, revision):
     files = render_all(host, revision)
-    return {'host': host, 'revision': revision, 'files': files,
+    return {'host': host, 'draft-reviser': revision, 'files': files,
             'hashes': {relative: digest(t.encode()) for relative, t in files.items()}}
 
 

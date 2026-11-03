@@ -1,14 +1,14 @@
 # Shared marketing tools
 
-The shared procedures `brand-voice`, `content-repurposing`, and `marketing-packet` are authored under `shared/` in this repository. Their source provenance identifies the reviewed Okara files by SHA-256. The full research archive remains separate at `~/Work/Research/Okara/2026-10-19` on Kvant. No public redistribution license was established for the imported originals.
+The shared procedures `voice-ledger`, `content-recaster`, and `launch-dossier` are authored under `shared/` in this repository. Their source provenance identifies the reviewed Okara files by SHA-256. The full research archive remains separate at `~/Work/Research/Okara/2026-10-19` on Kvant. No public redistribution license was established for the imported originals.
 
-Use `$brand-voice` to define or review written voice, `$content-repurposing` to adapt an actual source asset into selected channels, and `$marketing-packet` to create or refresh a complete product packet. Existing agent sessions keep their initial skill catalog; start a fresh session after installation. The marketing-packet skill includes the original Subcult starter and seven drafting prompts as portable assets.
+Use `$voice-ledger` to define or review written voice, `$content-recaster` to adapt an actual source asset into selected channels, and `$launch-dossier` to create or refresh a complete product packet. Existing agent sessions keep their initial skill catalog; start a fresh session after installation. The launch-dossier skill includes the original Subcult starter and seven drafting prompts as portable assets.
 
 ## Product sources and reading copies
 
 - Subsets editing source: `~/Work/Tools/subsets/docs/marketing/` on Kvant.
 - CLPR editing source for this task: `/home/onnwee/.t3/worktrees/clpr/t3-471fd5e5/docs/marketing/` on Kvant.
-- Generic template editing source: `shared/marketing-packet/assets/` in this repository.
+- Generic template editing source: `shared/launch-dossier/assets/` in this repository.
 - Synced reading bundle on each device: `~/Work/Research/Marketing-Packets/2026-10-19/`, containing `subsets/`, `clpr/`, and `generic/`.
 
 The reading bundle's `SOURCE-MANIFEST.json` records original source and reading-copy hashes. Internal packet links remain local. Links into other repository documents are rewritten to their source revision on Gitea so the reading copy does not assume a matching checkout on every device. This is a versioned, manual sync snapshot; no recurring scheduler or automatic bidirectional writer was configured.
@@ -20,7 +20,7 @@ The reading bundle's `SOURCE-MANIFEST.json` records original source and reading-
 After reviewing, validating, and committing selected skill sources, create a new frozen payload with explicit packet paths:
 
 ```sh
-rtk proxy python3 scripts/marketing-fleet.py bundle --payload /path/to/new-payload.json --packet subsets=/path/to/subsets/docs/marketing --packet clpr=/path/to/clpr/docs/marketing --packet generic=/path/to/codex-skills/shared/marketing-packet/assets
+rtk proxy python3 scripts/marketing-fleet.py bundle --payload /path/to/new-payload.json --packet subsets=/path/to/subsets/docs/marketing --packet clpr=/path/to/clpr/docs/marketing --packet generic=/path/to/codex-skills/shared/launch-dossier/assets
 rtk proxy python3 scripts/marketing-fleet.py plan --payload /path/to/new-payload.json --host sputnik
 rtk proxy python3 scripts/marketing-fleet.py apply --payload /path/to/new-payload.json --host sputnik
 rtk proxy python3 scripts/marketing-fleet.py verify --payload /path/to/new-payload.json --host sputnik

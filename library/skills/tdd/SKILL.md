@@ -1,5 +1,5 @@
 ---
-name: tdd
+name: red-green-loop
 description: "TDD: build a feature or fix a bug test-first with a red-green-refactor loop, or when the user asks for test-first or integration-test-led work. Not for repairing an existing test suite."
 metadata:
   blacktower-pack: engineering

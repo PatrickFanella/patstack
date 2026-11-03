@@ -1,5 +1,5 @@
 ---
-name: "security-best-practices"
+name: "secure-code-audit"
 description: "Security review or secure-by-default coding for Python, JavaScript/TypeScript or Go, on explicit request. Use for a security report or hardening guidance. Not for general code review or other languages."
 allowed-tools: Read Grep Glob
 metadata:
@@ -9,7 +9,7 @@ metadata:
   blacktower-capabilities: security,best,practices
 ---
 
-# security-best-practices
+# secure-code-audit
 
 ## Use this skill
 

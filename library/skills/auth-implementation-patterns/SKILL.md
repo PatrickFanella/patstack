@@ -1,5 +1,5 @@
 ---
-name: auth-implementation-patterns
+name: auth-gatekeeper
 description: "Auth implementation: sessions, JWT, OAuth2/OIDC, RBAC and permission checks, or debugging a login or access-control bug."
 metadata:
   blacktower-pack: engineering

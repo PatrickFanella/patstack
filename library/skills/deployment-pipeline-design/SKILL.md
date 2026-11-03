@@ -83,4 +83,4 @@ Design deployment pipelines that maximize delivery speed without sacrificing saf
 
 - `github-actions-templates`
 - `gitlab-ci-patterns`
-- `secrets-management`
+- `secret-rotation-flow`

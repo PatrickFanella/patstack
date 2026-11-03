@@ -1,5 +1,5 @@
 ---
-name: session-handoff
+name: relay-baton
 description: "Write a continuation record (progress, decisions, blockers, next steps) when work moves to another session, agent or host. Use before a context reset, ownership transfer or long pause. Not for final summaries."
 metadata:
   blacktower-pack: core

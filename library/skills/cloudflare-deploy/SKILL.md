@@ -1,5 +1,5 @@
 ---
-name: cloudflare-deploy
+name: cf-edge-deploy
 description: "Cloudflare deploys: deploy or host a project on Workers, Pages or related Cloudflare services and verify the deployed result."
 allowed-tools: Bash Read Grep Glob Edit Write
 metadata:
@@ -9,7 +9,7 @@ metadata:
   blacktower-capabilities: cloud-infra,cloudflare,deploy
 ---
 
-# cloudflare-deploy
+# cf-edge-deploy
 
 ## Use this skill
 

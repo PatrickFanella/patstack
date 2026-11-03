@@ -1,4 +1,4 @@
-# git-advanced-workflows detailed guide
+# git-surgery detailed guide
 
 # Git Advanced Workflows
 

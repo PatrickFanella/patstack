@@ -1,5 +1,5 @@
 ---
-name: requirements-interview
+name: scope-grill
 description: "Interview for requirements when outcome, constraints, acceptance criteria or tradeoffs would change the implementation; includes grill-me modes. Skip when repository evidence already settles the task."
 metadata:
   blacktower-pack: core
@@ -13,7 +13,7 @@ metadata:
 # Requirements Interview
 
 Resolve only the ambiguity that blocks a safe decision. This workflow combines
-the former `grill-me`, `grill-with-docs`, and requirements-interview skills.
+the former `grill-me`, `grill-with-docs`, and scope-grill skills.
 
 ## Workflow
 

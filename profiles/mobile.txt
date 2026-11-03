@@ -1,2 +1,2 @@
 # Focused optional profile: mobile
-react-native-pro
+rn-expo-builder

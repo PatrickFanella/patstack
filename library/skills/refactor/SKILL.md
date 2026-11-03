@@ -1,5 +1,5 @@
 ---
-name: refactor
+name: safe-refactor-pass
 description: "Refactor code without changing behavior: extract functions, split god functions, rename, tighten types, remove smells. Use for gradual maintainability work. Not for simplification-only passes (simplify)."
 license: MIT
 metadata:

@@ -1,5 +1,5 @@
 ---
-name: rag-implementation
+name: retrieval-pipeline
 description: "Use when building or fixing retrieval-augmented generation: ingestion, chunking, embeddings, vector or hybrid search, reranking, citations and retrieval-quality evaluation."
 metadata:
   blacktower-pack: engineering
@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: agent-ecosystem,rag,implementation
 ---
 
-# rag-implementation
+# retrieval-pipeline
 
 ## Use this skill
 

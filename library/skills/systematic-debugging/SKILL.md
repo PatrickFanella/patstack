@@ -1,6 +1,6 @@
 ---
-name: systematic-debugging
-description: "Bug, test failure or unexpected behavior: find the root cause with evidence before proposing a fix. Not for performance regressions; use performance-investigation."
+name: bug-tracer
+description: "Bug, test failure or unexpected behavior: find the root cause with evidence before proposing a fix. Not for performance regressions; use perf-hotpath-probe."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: debugging,systematic
 ---
 
-# systematic-debugging
+# bug-tracer
 
 ## Use this skill
 

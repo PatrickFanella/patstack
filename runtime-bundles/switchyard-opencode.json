@@ -3,27 +3,27 @@
   "name": "switchyard-opencode",
   "description": "General coding, game design and web games, docs, debugging, and social content. No persona roster.",
   "skills": [
-    "skills/implementation-plan",
-    "skills/architecture-patterns",
-    "skills/api-development",
-    "skills/frontend-design",
-    "skills/git-advanced-workflows",
-    "skills/systematic-debugging",
-    "skills/code-review",
-    "skills/verify-behavior",
-    "skills/technical-writing",
-    "skills/unslop",
-    "library/skills/game-design-theory",
-    "library/skills/develop-web-game",
-    "library/skills/social-content",
-    "library/skills/copywriting",
-    "library/skills/fact-check",
-    "shared/requirements-interview",
-    "shared/session-handoff",
-    "library/skills/summarization",
-    "library/skills/web-search"
+    "skills/build-sequencer",
+    "skills/boundary-drafter",
+    "skills/api-contract-smith",
+    "skills/ui-craft",
+    "skills/git-surgery",
+    "skills/bug-tracer",
+    "skills/diff-inspector",
+    "skills/behavior-proof",
+    "skills/tech-doc-writer",
+    "skills/prose-unslop",
+    "library/skills/game-fun-theory",
+    "library/skills/web-game-loop",
+    "library/skills/social-post-craft",
+    "library/skills/page-copy-forge",
+    "library/skills/claim-verifier",
+    "shared/scope-grill",
+    "shared/relay-baton",
+    "library/skills/digest-distiller",
+    "library/skills/web-lookup"
   ],
   "required_skills": [
-    "unslop"
+    "prose-unslop"
   ]
 }

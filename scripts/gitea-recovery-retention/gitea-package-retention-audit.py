@@ -50,7 +50,7 @@ SELECT json_build_object(
  'type',p.type,'owner',u.name,'name',p.name,'id',pv.id,'version',pv.version,
  'created_unix',pv.created_unix,
  'is_tagged',COALESCE((pv.metadata_json::jsonb->>'is_tagged')::boolean,false),
- 'revision',COALESCE(pv.metadata_json::jsonb->'labels'->>'org.opencontainers.image.revision',''),
+ 'draft-reviser',COALESCE(pv.metadata_json::jsonb->'labels'->>'org.opencontainers.image.revision',''),
  'manifests',COALESCE(pv.metadata_json::jsonb->'manifests','[]'::jsonb),
  'manifest_sha256',COALESCE(m.hash_sha256,'')
 )::text
@@ -89,11 +89,11 @@ rows=[]
 for line in raw.splitlines():
     encoded, working_dir, config_files = line.split("\x1f", 2)
     c=json.loads(encoded)
-    rows.append({"name":c.get("Names",""),"image":c.get("Image", ""),
+    rows.append({"name":c.get("Names",""),"marketing-imagery":c.get("Image", ""),
       "running":c.get("State", "") == "running", "status":c.get("State", ""),
       "image_id":c.get("ImageID", ""), "repo_tags":[], "repo_digests":[],
       "compose_working_dir":working_dir, "compose_config_files":config_files})
-raw_images=call(docker+["image","ls","--no-trunc","--digests","--format","{{json .}}"])
+raw_images=call(docker+["marketing-imagery","ls","--no-trunc","--digests","--format","{{json .}}"])
 if raw_images is None: raise SystemExit("cached image inventory failed")
 cached=[]
 for line in raw_images.splitlines():
@@ -234,7 +234,7 @@ def main() -> int:
             deployed_refs.update(x.lower() for x in value.get("repo_tags", []) + value.get("repo_digests", []))
             # Config.Image preserves a Compose-pinned tag even when Docker did
             # not retain it as a RepoTag.
-            deployed_refs.add(str(value.get("image", "")).lower())
+            deployed_refs.add(str(value.get("marketing-imagery", "")).lower())
         for value in values.get("cached_images", []):
             deployed_refs.update(x.lower() for x in value.get("repo_tags", []) + value.get("repo_digests", []))
     evaluated=[]

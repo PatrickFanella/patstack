@@ -1,5 +1,5 @@
 ---
-name: react-pro
+name: react-render-tuner
 description: "Use when building, refactoring, reviewing or optimizing React or Next.js code: App Router, state ownership, component APIs, data fetching, bundle and render performance. Not for React Native."
 metadata:
   blacktower-pack: engineering

@@ -1,5 +1,5 @@
 ---
-name: cli-developer
+name: cli-contract-smith
 description: "CLI building: argument parsing, subcommands, prompts, progress output and shell completions with clap, Cobra or Commander. Not for agent-facing CLI review (cli-for-agents)."
 license: MIT
 metadata:

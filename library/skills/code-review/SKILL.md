@@ -1,5 +1,5 @@
 ---
-name: code-review
+name: diff-inspector
 description: "Two-axis review: check changes since a commit, branch or merge-base against repo standards and the originating issue or spec, in parallel subagents."
 ---
 

@@ -25,7 +25,7 @@ Implement production-grade Node.js backends with clear layering, safe middleware
 
 ## Avoid This Skill When
 
-- Work is mostly auth policy and token lifecycle (use `auth-implementation-patterns`)
+- Work is mostly auth policy and token lifecycle (use `auth-gatekeeper`)
 - Work is infra-only CI/CD or Kubernetes manifest design
 
 ## Workflow

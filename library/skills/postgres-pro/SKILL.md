@@ -1,5 +1,5 @@
 ---
-name: postgres-pro
+name: pg-plan-reader
 description: "PostgreSQL tuning and features: EXPLAIN plans, indexes, JSONB, extensions, VACUUM, replication and monitoring. Use when a query, schema or cluster needs Postgres-specific work."
 license: MIT
 metadata:

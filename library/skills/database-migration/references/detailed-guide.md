@@ -1,4 +1,4 @@
-# database-migration detailed guide
+# schema-migrator detailed guide
 
 # Database Migration
 

@@ -1,5 +1,5 @@
 ---
-name: unslop
+name: prose-unslop
 description: "Unslop: edit prose to remove AI writing patterns such as puffery, filler, stock phrases and vague claims. Apply to user-facing text and documentation edits."
 ---
 

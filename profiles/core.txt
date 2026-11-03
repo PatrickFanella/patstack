@@ -1,6 +1,6 @@
 # Always active
-fact-check
-requirements-interview
-session-handoff
-summarization
-web-search
+claim-verifier
+scope-grill
+relay-baton
+digest-distiller
+web-lookup

@@ -35,7 +35,7 @@ Every project goes through this process. A todo list, a single-function utility,
 4. **Propose 2-3 approaches** — with trade-offs and your recommendation
 5. **Present design** — in sections scaled to their complexity, get user approval after each section
 7. **Spec self-review** — quick inline check for placeholders, contradictions, ambiguity, scope (see below)
-9. **Transition to implementation** — invoke writing-plans skill to create implementation plan
+9. **Transition to implementation** — invoke build-plan-writer skill to create implementation plan
 
 ## Process Flow
 
@@ -51,7 +51,7 @@ digraph brainstorming {
     "Write design doc" [shape=box];
     "Spec self-review\n(fix inline)" [shape=box];
     "User reviews spec?" [shape=diamond];
-    "Invoke writing-plans skill" [shape=doublecircle];
+    "Invoke build-plan-writer skill" [shape=doublecircle];
 
     "Explore project context" -> "Visual questions ahead?";
     "Visual questions ahead?" -> "Offer Visual Companion\n(own message, no other content)" [label="yes"];
@@ -61,7 +61,7 @@ digraph brainstorming {
 ...
 ```
 
-**The terminal state is invoking writing-plans.** Do NOT invoke frontend-design, mcp-builder, or any other implementation skill. The ONLY skill you invoke after brainstorming is writing-plans.
+**The terminal state is invoking build-plan-writer.** Do NOT invoke ui-craft, mcp-server-forge, or any other implementation skill. The ONLY skill you invoke after brainstorming is build-plan-writer.
 ...
 
 

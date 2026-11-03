@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: creative-media,subcult,visual,design
 ---
 
-> **See also:** `subcult-brand-voice` (writing in SUBCULT's voice), `subcult-worldbuilding` (agent identities, sub-brands, mythic structure), `frontend-design` (general production-grade frontend), `tool-design-style-selector` (design system creation).
+> **See also:** `subcult-brand-voice` (writing in SUBCULT's voice), `subcult-worldbuilding` (agent identities, sub-brands, mythic structure), `ui-craft` (general production-grade frontend), `tool-design-style-selector` (design system creation).
 
 # SUBCULT Visual Design
 

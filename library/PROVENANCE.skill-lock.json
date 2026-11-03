@@ -1,7 +1,7 @@
 {
   "version": 3,
   "skills": {
-    "karakeep": {
+    "karakeep-bookmarks": {
       "source": "karakeep-app/karakeep",
       "sourceType": "github",
       "sourceUrl": "https://github.com/karakeep-app/karakeep.git",

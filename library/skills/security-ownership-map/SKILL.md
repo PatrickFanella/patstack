@@ -1,5 +1,5 @@
 ---
-name: "security-ownership-map"
+name: "bus-factor-map"
 description: "Map security ownership from git history: people-to-file topology, bus factor, orphaned sensitive code, CODEOWNERS checks, CSV/JSON export. Use only when explicitly asked for this analysis."
 metadata:
   blacktower-pack: engineering
@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: security,ownership,map
 ---
 
-# security-ownership-map
+# bus-factor-map
 
 ## Use this skill
 
