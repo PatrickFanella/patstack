@@ -3,9 +3,7 @@
     "/home/onnwee/.agents/skill-library": "/home/onnwee/Work/Tools/codex-skills/library",
     "/home/onnwee/.agents/skill-profiles": "/home/onnwee/Work/Tools/codex-skills/profiles",
     "/home/onnwee/.agents/bin/skill-profile": "/home/onnwee/Work/Tools/codex-skills/scripts/skill-profile",
-    "/home/onnwee/.codex/AGENTS.md": "/home/onnwee/Work/Tools/codex-skills/instructions/AGENTS.md",
     "/home/onnwee/.codex/RTK.md": "/home/onnwee/Work/Tools/codex-skills/instructions/RTK.md",
-    "/home/onnwee/.claude/CLAUDE.md": "/home/onnwee/Work/Tools/codex-skills/instructions/CLAUDE.md",
     "/home/onnwee/.claude/RTK.md": "/home/onnwee/Work/Tools/codex-skills/instructions/RTK.md",
     "/home/onnwee/.claude/skills/agent-workspace-linux": "/home/onnwee/.codex/skills/agent-workspace-linux",
     "/home/onnwee/.claude/skills/api-development": "/home/onnwee/.codex/skills/api-development",
@@ -14356,20 +14354,10 @@
       "sha256": "b79f73cbf53e590bb08537062e5ed5b9cb197d2a8afb9a61085fcda2fedbdddc",
       "mode": 493
     },
-    "/home/onnwee/.codex/AGENTS.md": {
-      "type": "file",
-      "sha256": "4a3cb2cfbd3f6c9338691a6efd59cafde8b7758cbbfc9663cf77efc129b8f2d7",
-      "mode": 384
-    },
     "/home/onnwee/.codex/RTK.md": {
       "type": "file",
       "sha256": "49c368c302c6f63d089f4c1085b242fc50fe22ce5bc34dada6478083000e7c6f",
       "mode": 384
-    },
-    "/home/onnwee/.claude/CLAUDE.md": {
-      "type": "file",
-      "sha256": "96daf2817374190eb67489db076e8ef9b7c7037d34edb14698905c2bb8673a22",
-      "mode": 420
     },
     "/home/onnwee/.claude/RTK.md": {
       "type": "file",

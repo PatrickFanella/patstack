@@ -1,0 +1,15 @@
+{
+  "authoring": "/home/onnwee/Work/Tools/codex-skills",
+  "hosts": {
+    "kvant": {"home": "/home/onnwee", "rtk": true, "authoringCheckout": true,
+      "vaults": "/home/onnwee/Work/Vaults: Ars Malefica, SUBCULT, Machinum and Archivum (plus BX Research Vault)"},
+    "sputnik": {"home": "/home/onnwee", "rtk": true,
+      "vaults": "/home/onnwee/Work/Vaults: Ars Malefica, SUBCULT, Machinum and Archivum"},
+    "almaz": {"home": "/home/onnwee", "rtk": true},
+    "nuc": {"home": "/home/onnwee", "rtk": false},
+    "dozor": {"home": "/home/onnwee", "rtk": false},
+    "soyuz": {"home": "/Users/onnwee", "rtk": true, "blacktowerCodex": true,
+      "vaults": "/Users/onnwee/Work/Vaults: ars-malefica and machinum",
+      "notes": ["The data volume is usually nearly full. Check `df -h ~` before downloads, images, builds or clones, and do repository work on another host when space is short."]}
+  }
+}
