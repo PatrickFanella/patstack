@@ -1,6 +1,6 @@
 ---
 name: prototype
-description: Prototype a state model or competing UI designs in a disposable runnable artifact to answer a specific question.
+description: "Use when a design question needs a throwaway runnable answer: a terminal app that exercises a state model, or switchable UI variants on one route. Not for production code."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

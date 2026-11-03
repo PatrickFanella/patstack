@@ -1,6 +1,6 @@
 ---
 name: typescript-pro
-description: TypeScript type design, compiler configuration, and migrations; load framework guidance only for framework-specific work.
+description: Use for TypeScript type design, tsconfig and module settings, or JS-to-TS work; on request, shoehorn test migration or dependency-cruiser deep modules. Not for React (react-pro).
 ---
 
 # typescript-pro

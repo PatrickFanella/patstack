@@ -1,6 +1,6 @@
 ---
 name: refactor
-description: Behavior-preserving refactoring and code simplification; plan changes when requested and verify public contracts.
+description: Use when restructuring or simplifying code without changing behavior, removing AI slop, or writing a refactor plan. Not for repeated mechanical edits across many files (codemod-surgeon).
 ---
 
 # refactor
@@ -11,7 +11,7 @@ Preserve observable behavior and existing repository conventions. Select cleanup
 
 - Remove AI-generated code slop and clean up code style. Read [the procedure](references/modes/deslop/guide.md).
 - Surgical code refactoring to improve maintainability without changing behavior. Read [the procedure](references/modes/refactor/guide.md).
-- Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Read [the procedure](references/modes/request-refactor-plan/guide.md).
+- Create a refactor plan of small verifiable units; file it as an issue on the repository's own forge (Gitea via `tea`, GitHub via `gh`) only when asked. Read [the procedure](references/modes/request-refactor-plan/guide.md).
 - Simplifies code for clarity without changing behavior. Read [the procedure](references/modes/simplify/guide.md).
 
 Resource paths inside a mode are relative to that mode directory. Run its scripts from that directory or use absolute script paths, passing the target repository explicitly.

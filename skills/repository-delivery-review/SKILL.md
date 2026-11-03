@@ -1,6 +1,6 @@
 ---
 name: repository-delivery-review
-description: Audit a repository against its intended capabilities; separate implemented, incomplete, planned, and unverified work.
+description: "Use when asked how complete, ready or viable a repository is: trace claimed capabilities to code and tests; separate implemented, partial, planned, unverified. Not for diff review."
 ---
 
 # Repository Delivery Review

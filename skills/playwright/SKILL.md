@@ -1,6 +1,6 @@
 ---
 name: playwright
-description: Automate a browser with Playwright CLI for navigation, interaction, inspection, and evidence capture.
+description: "Use when an agent must drive a real browser from the terminal with playwright-cli: open, click, fill, snapshot, screenshot, trace. Not for writing @playwright/test specs."
 ---
 
 # Playwright CLI Skill
@@ -16,14 +16,15 @@ Before proposing commands, check whether `npx` is available (the wrapper depends
 command -v npx >/dev/null 2>&1
 ```
 
-If it is not available, pause and ask the user to install Node.js/npm (which provides `npx`). Provide these steps verbatim:
+If it is not available, pause and ask the user to install Node.js/npm (which provides `npx`). On fleet hosts Node is managed by mise:
 
 ```bash
 # Verify Node/npm are installed
 node --version
 npm --version
 
-# If missing, install Node.js/npm, then:
+# If missing, install Node through mise, then optionally the CLI:
+mise use -g node@24
 npm install -g @playwright/cli@latest
 playwright-cli --help
 ```
@@ -32,12 +33,13 @@ Once `npx` is present, proceed with the wrapper script. A global install of `pla
 
 ## Skill path (set once)
 
+Point `PWCLI` at `scripts/playwright_cli.sh` inside the directory that holds this `SKILL.md`. The install location depends on the client (for example `~/.codex/skills/`, `~/.claude/skills/` or `~/.agents/skills/`), and the folder name can change, so use the absolute path of the loaded skill rather than a guessed one:
+
 ```bash
-export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
-export PWCLI="$CODEX_HOME/skills/playwright/scripts/playwright_cli.sh"
+export PWCLI="/absolute/path/to/this-skill/scripts/playwright_cli.sh"
 ```
 
-User-scoped skills install under `$CODEX_HOME/skills` (default: `~/.codex/skills`).
+If the path cannot be resolved, call the CLI directly with `npx --yes --package @playwright/cli playwright-cli`.
 
 ## Quick start
 

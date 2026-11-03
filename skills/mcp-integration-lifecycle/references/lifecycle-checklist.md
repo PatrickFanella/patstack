@@ -10,6 +10,12 @@ likely failing boundary.
 - Compare the client's effective listing with the file believed to be active.
 - Check duplicate server IDs only after deciding which entry is canonical.
 - Record executable/URL identity and version before changing configuration.
+- Common sources, to confirm against the installed client version: Codex reads
+  `[mcp_servers.<id>]` in `~/.codex/config.toml` (`codex mcp list`); Claude
+  Code reads user/local entries in `~/.claude.json`, project `.mcp.json`, and
+  plugin-provided servers (`claude mcp list`, `claude mcp get <id>`); OpenCode
+  reads the `mcp` key in `opencode.json` (global `~/.config/opencode/` or the
+  project root). T3 Code launches these clients and may supply its own servers.
 
 ## Stdio
 

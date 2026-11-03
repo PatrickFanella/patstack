@@ -1,6 +1,6 @@
 ---
 name: security-best-practices
-description: Requested security review or secure coding guidance for Python, JavaScript/TypeScript, and Go.
+description: Use only when asked for a security review or secure-by-default code in Python, JavaScript/TypeScript or Go web stacks. Not for general code review or threat models.
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

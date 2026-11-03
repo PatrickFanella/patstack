@@ -31,13 +31,7 @@ _Source topic: javascript-pro_
 
 ## Reference Guide
 
-| Topic | Reference | Load When |
-|-------|-----------|-----------|
-| Modern Syntax | `references/modern-syntax.md` | ES2023+ features, optional chaining, private fields |
-| Async Patterns | `references/async-patterns.md` | Promises, async/await, error handling, event loop |
-| Modules | `references/modules.md` | ESM vs CJS, dynamic imports, package.json exports |
-| Browser APIs | `references/browser-apis.md` | Fetch, Web Workers, Storage, IntersectionObserver |
-| Node Essentials | `references/node-essentials.md` | fs/promises, streams, EventEmitter, worker threads |
+The upstream topic files (modern syntax, async patterns, modules, browser APIs, Node essentials) are not bundled. Use the sibling TypeScript references in this mode or current runtime documentation.
 
 ## Constraints
 

@@ -1,6 +1,6 @@
 ---
 name: rag-implementation
-description: 'Retrieval systems: ingestion, vector/keyword search, ranking, citations, and retrieval-quality measurement.'
+description: "Use when building or tuning retrieval for LLM answers: ingestion and chunking, vector, keyword or hybrid search, reranking, citations, retrieval evaluation."
 ---
 
 # rag-implementation

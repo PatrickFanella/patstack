@@ -1,6 +1,6 @@
 ---
 name: secrets-management
-description: Implement CI/runtime secret storage, delivery, and rotation using the environment’s existing secret provider.
+description: "Use when moving, injecting or rotating credentials for CI or runtime: Gitea or GitHub Actions secrets, Vault or cloud secret managers, leak scanning."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -25,7 +25,7 @@ Implement secure secret storage, injection, rotation, and scanning for CI/CD and
 - Secret classes: API keys, DB creds, cert/key, tokens
 - Environments: dev/stage/prod and blast radius boundaries
 - Rotation/SLA requirements and consumer downtime tolerance
-- CI/CD tooling: GitHub Actions, GitLab CI, Jenkins, Argo, etc.
+- CI/CD tooling: Gitea Actions, GitHub Actions, GitLab CI, Jenkins, Argo, etc.
 
 ## Quick Workflow
 
@@ -53,6 +53,10 @@ Implement secure secret storage, injection, rotation, and scanning for CI/CD and
    - Add secret scanning in pre-commit + CI.
    - Ensure audit trail for reads/updates/deletes.
 
+## Gitea repositories
+
+Most repositories here live on Gitea (`https://git.subcult.tv`); `gh secret` does not reach them. Use `tea actions secrets create --stdin <NAME>` and `tea actions variables set --stdin <NAME>` from the checkout (or the repository's Settings > Actions page), feeding values on stdin so they stay out of shell history and process lists. The GitHub examples in the full guide apply only to GitHub mirrors and personal repos.
+
 ## Guardrails
 
 - Never print secret values to logs.
@@ -70,4 +74,4 @@ Implement secure secret storage, injection, rotation, and scanning for CI/CD and
 
 ## Resources
 
-- `references/full-guide.md` — full examples: Vault/AWS/GitHub/GitLab, rotation workflows, External Secrets Operator, secret scanning.
+- `references/full-guide.md` — full examples: Vault/AWS/GitHub/GitLab (map GitHub Actions syntax to Gitea Actions), rotation workflows, External Secrets Operator, secret scanning.

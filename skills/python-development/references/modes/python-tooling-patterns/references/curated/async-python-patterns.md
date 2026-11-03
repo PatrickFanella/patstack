@@ -23,7 +23,7 @@ Design and debug Python asyncio systems. Read the full guide only for detailed c
 
 ## Resources
 
-- `references/full-guide.md` — detailed guidance.
+- The `From full-guide.md` section below — detailed guidance.
 
 
 ### From `full-guide.md`

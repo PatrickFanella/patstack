@@ -1,6 +1,6 @@
 ---
 name: mtls-configuration
-description: 'Configure and diagnose mutual TLS: certificate identity, trust chains, rotation, and service authentication.'
+description: "Use when configuring or debugging mutual TLS between services: client certificates, trust chains, mesh or proxy policy, rotation. Not for ordinary server-only HTTPS."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

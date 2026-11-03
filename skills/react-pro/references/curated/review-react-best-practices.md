@@ -17,7 +17,7 @@ Use this skill to turn “React feels slow / Next.js page is heavy / too many re
 This skill is intentionally built like a rule library:
 
 - `SKILL.md`: how to review + how to search rules
-- `references/rules/*`: one rule per file (taggable, sortable, easy to evolve)
+- `references/rules/*` (upstream only; not bundled here): one rule per file
 
 ## When to apply
 

@@ -1,6 +1,6 @@
 ---
 name: unslop
-description: "Required for every user-facing prose response and documentation edit. Remove filler while preserving meaning, facts, uncertainty and voice; explain again in plain language when an explanation did not land."
+description: "Required for every user-facing prose response and documentation edit: cut filler, keep facts, uncertainty and voice. Also use when an explanation did not land."
 ---
 
 # Unslop

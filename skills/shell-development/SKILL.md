@@ -1,6 +1,6 @@
 ---
 name: shell-development
-description: Shell scripting, ShellCheck linting, and Bats tests; preserve exit status, quoting, cleanup, and portability.
+description: "Use when writing or fixing Bash/POSIX scripts, configuring ShellCheck, or adding Bats tests: quoting, exit status, traps and cleanup, Linux/macOS portability."
 ---
 
 # shell-development

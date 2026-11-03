@@ -1,6 +1,6 @@
 ---
 name: repository-test-maintenance
-description: Maintain an oversized or brittle repository test suite while preserving crucial behavior and removing obsolete work.
+description: "Use when a test suite is oversized, slow, flaky or brittle: baseline it, delete obsolete tests with evidence, reshape around contracts. Not for test-first work (tdd)."
 ---
 
 # repository-test-maintenance

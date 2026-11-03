@@ -1,6 +1,6 @@
 ---
 name: tdd
-description: 'Test-first implementation when requested: red-green-refactor, test boundaries, fixtures, and meaningful assertions.'
+description: "Use when asked for test-first work: red-green-refactor in vertical slices, test boundaries, mocks only at system edges. Not for pruning an existing suite (repository-test-maintenance)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

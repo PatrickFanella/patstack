@@ -11,7 +11,6 @@
 - Pod count by namespace
 - Node status
 
-**Reference:** See `assets/infrastructure-dashboard.json`
 
 ### Database Dashboard
 
@@ -25,7 +24,6 @@
 - Replication lag
 - Slow queries
 
-**Reference:** See `assets/database-dashboard.json`
 
 ### Application Dashboard
 

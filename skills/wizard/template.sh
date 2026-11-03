@@ -26,7 +26,7 @@ _STAGE_INDEX=0
 ENV_FILE="${ENV_FILE:-.env}"
 WRITTEN_ENV=()    # KEYs written to ENV_FILE this run
 WRITTEN_SECRET=() # secret NAMEs set this run
-SKIPPED=()        # things we couldn't do (e.g. gh missing)
+SKIPPED=()        # things we couldn't do (e.g. tea/gh missing)
 
 # _clear wipes the terminal so only the current step is on screen. No-op when
 # output isn't a terminal, so piped logs stay readable.
@@ -138,32 +138,55 @@ write_env() {
   printf '  %s✓ wrote%s %s → %s\n' "$GREEN" "$RESET" "$key" "$ENV_FILE"
 }
 
-# set_secret NAME VALUE sets a GitHub Actions repo secret via gh. Falls back
-# to a warning (and records it) if gh is unavailable or unauthenticated.
+# _forge picks the CI secret backend from the origin remote: "github" for
+# github.com remotes (via gh), otherwise "gitea" (via tea, e.g. git.subcult.tv).
+_forge() {
+  case "$(git remote get-url origin 2>/dev/null)" in
+    *github.com[:/]*) echo github ;;
+    *) echo gitea ;;
+  esac
+}
+
+# set_secret NAME VALUE sets an Actions repo secret on the origin's forge
+# (Gitea via tea, GitHub via gh). Falls back to a warning (and records it) if
+# the CLI is unavailable or the write fails.
 set_secret() {
-  local name="$1" value="$2"
-  if command -v gh >/dev/null 2>&1 && gh auth status >/dev/null 2>&1; then
+  local name="$1" value="$2" forge
+  forge=$(_forge)
+  if [[ "$forge" == github ]] && command -v gh >/dev/null 2>&1 && gh auth status >/dev/null 2>&1; then
     if printf '%s' "$value" | gh secret set "$name" >/dev/null 2>&1; then
       WRITTEN_SECRET+=("$name")
       printf '  %s✓ set%s GitHub secret %s\n' "$GREEN" "$RESET" "$name"
       return
     fi
+  elif [[ "$forge" == gitea ]] && command -v tea >/dev/null 2>&1; then
+    if printf '%s' "$value" | tea actions secrets create --remote origin --stdin "$name" >/dev/null 2>&1; then
+      WRITTEN_SECRET+=("$name")
+      printf '  %s✓ set%s Gitea secret %s\n' "$GREEN" "$RESET" "$name"
+      return
+    fi
   fi
-  SKIPPED+=("GitHub secret $name (set it manually: gh secret set $name)")
-  warn "skipped GitHub secret $name: gh not ready; set it later"
+  SKIPPED+=("$forge Actions secret $name (set it in the repository's Actions settings)")
+  warn "skipped $forge secret $name: CLI not ready; set it later"
 }
 
-# set_var NAME VALUE sets a GitHub Actions repo variable (non-secret).
+# set_var NAME VALUE sets an Actions repo variable (non-secret).
 set_var() {
-  local name="$1" value="$2"
-  if command -v gh >/dev/null 2>&1 && gh auth status >/dev/null 2>&1; then
+  local name="$1" value="$2" forge
+  forge=$(_forge)
+  if [[ "$forge" == github ]] && command -v gh >/dev/null 2>&1 && gh auth status >/dev/null 2>&1; then
     if gh variable set "$name" --body "$value" >/dev/null 2>&1; then
       printf '  %s✓ set%s GitHub variable %s\n' "$GREEN" "$RESET" "$name"
       return
     fi
+  elif [[ "$forge" == gitea ]] && command -v tea >/dev/null 2>&1; then
+    if printf '%s' "$value" | tea actions variables set --remote origin --stdin "$name" >/dev/null 2>&1; then
+      printf '  %s✓ set%s Gitea variable %s\n' "$GREEN" "$RESET" "$name"
+      return
+    fi
   fi
-  SKIPPED+=("GitHub variable $name")
-  warn "skipped GitHub variable $name, gh not ready; set it later"
+  SKIPPED+=("$forge Actions variable $name")
+  warn "skipped $forge variable $name: CLI not ready; set it later"
 }
 
 # finish clears, then shows a closing summary of everything configured.
@@ -171,7 +194,7 @@ finish() {
   _clear
   printf '\n%s%s  ✓ Setup complete%s\n' "$BOLD" "$GREEN" "$RESET"
   (( ${#WRITTEN_ENV[@]} ))    && note "wrote ${#WRITTEN_ENV[@]} value(s) to $ENV_FILE: ${WRITTEN_ENV[*]}"
-  (( ${#WRITTEN_SECRET[@]} )) && note "set ${#WRITTEN_SECRET[@]} GitHub secret(s): ${WRITTEN_SECRET[*]}"
+  (( ${#WRITTEN_SECRET[@]} )) && note "set ${#WRITTEN_SECRET[@]} CI secret(s): ${WRITTEN_SECRET[*]}"
   if (( ${#SKIPPED[@]} )); then
     printf '\n'; warn "still to do by hand:"
     for s in "${SKIPPED[@]}"; do note "  - $s"; done

@@ -1,6 +1,6 @@
 ---
 name: security-ownership-map
-description: Requested security ownership and bus-factor analysis from Git history; identify sensitive-code ownership gaps.
+description: "Use only when asked for security ownership or bus-factor analysis from Git history: orphaned sensitive code, CODEOWNERS reality checks, ownership clusters."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

@@ -1,6 +1,6 @@
 ---
 name: react-pro
-description: React/Next.js state, rendering, data loading, component APIs, and performance within the existing application.
+description: "Use for React or Next.js code: component APIs, server/client boundaries, state and data loading, rerenders, bundle size. Not for visual design direction (frontend-design)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

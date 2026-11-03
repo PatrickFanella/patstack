@@ -29,4 +29,3 @@ sum(storage_writes_successful_total)
 sum(storage_writes_total)
 ```
 
-**Reference:** See `references/slo-definitions.md`

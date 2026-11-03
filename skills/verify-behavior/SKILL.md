@@ -1,6 +1,6 @@
 ---
 name: verify-behavior
-description: Verify UI, CLI, API, build, or performance claims using runnable evidence; distinguish smoke checks from regressions.
+description: "Use before claiming a UI, CLI, API, build or performance change works: run a conformance, regression or baseline check and report PASS, FAIL or INCONCLUSIVE with evidence."
 ---
 
 # Verify Behavior

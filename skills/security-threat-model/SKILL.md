@@ -1,6 +1,6 @@
 ---
 name: security-threat-model
-description: 'Requested repository threat model: assets, trust boundaries, attacker paths, and prioritized mitigations.'
+description: "Use only when asked to threat-model a repository or system: assets, trust boundaries, STRIDE, attack trees, prioritized mitigations. Not for line-level code review."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

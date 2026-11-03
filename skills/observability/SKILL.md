@@ -1,6 +1,6 @@
 ---
 name: observability
-description: Metrics, traces, dashboards, and SLOs; implement telemetry or diagnose a specific monitoring gap.
+description: "Use when adding or fixing metrics, traces, dashboards, alerts or SLOs: Prometheus, Grafana, OpenTelemetry, Jaeger/Tempo, error budgets. Not for profiling slow code (performance-investigation)."
 ---
 
 # observability

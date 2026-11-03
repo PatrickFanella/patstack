@@ -27,4 +27,3 @@ error_budget_policy:
     action: Feature freeze, focus on reliability
 ```
 
-**Reference:** See `references/error-budget.md`

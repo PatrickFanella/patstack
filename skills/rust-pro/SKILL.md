@@ -1,6 +1,6 @@
 ---
 name: rust-pro
-description: Rust ownership, async execution, errors, concurrency, and systems integration within the existing crate design.
+description: "Use for Rust code: ownership, lifetimes and smart pointers, async/Tokio and cancellation, concurrency, error handling, within the existing crate design."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

@@ -1,6 +1,6 @@
 ---
 name: mcp-integration-lifecycle
-description: Diagnose MCP registration, transport, initialization, catalog, auth, and reload boundaries in the active client.
+description: Use when an MCP server fails to register, connect, initialize, list tools, authenticate or reload in Codex, Claude Code or OpenCode. Not for building a new server (mcp-builder).
 ---
 
 # mcp-integration-lifecycle

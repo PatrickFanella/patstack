@@ -1,6 +1,6 @@
 ---
 name: technical-writing
-description: Technical docs, RFCs, README localization, and docs-versus-code checks; preserve source meaning and working links.
+description: Use when writing or restructuring technical docs, RFCs or READMEs, translating README variants, or checking docs against code. Not for a quick prose pass (unslop).
 ---
 
 # technical-writing

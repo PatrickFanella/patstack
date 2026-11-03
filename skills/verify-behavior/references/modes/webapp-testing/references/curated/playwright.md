@@ -16,94 +16,19 @@ _Source topic: playwright_
 
 **Purpose:** Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script.
 
-# Playwright CLI Skill
+# Playwright CLI
 
-Drive a real browser from the terminal using `playwright-cli`. Prefer the bundled wrapper script so the CLI works even when it is not globally installed.
-Treat this skill as CLI-first automation. Do not pivot to `@playwright/test` unless the user explicitly asks for test files.
-
-## Prerequisite check (required)
-
-Before proposing commands, check whether `npx` is available (the wrapper depends on it):
+This mode bundles the wrapper `scripts/playwright/playwright_cli.sh` (relative to the webapp-testing mode directory). It runs `npx --yes --package @playwright/cli playwright-cli`, so no global install is needed; it requires `npx` (Node via mise on fleet hosts).
 
 ```bash
-command -v npx >/dev/null 2>&1
+export PWCLI="/absolute/path/to/webapp-testing/scripts/playwright/playwright_cli.sh"
+"$PWCLI" open https://example.com --headed
+"$PWCLI" snapshot
+"$PWCLI" click e3
+"$PWCLI" snapshot
 ```
 
-If it is not available, pause and ask the user to install Node.js/npm (which provides `npx`). Provide these steps verbatim:
-
-```bash
-
-# If missing, install Node.js/npm, then:
-npm install -g @playwright/mcp@latest
-playwright-cli --help
-```
-
-Once `npx` is present, proceed with the wrapper script. A global install of `playwright-cli` is optional.
-
-## Skill path (set once)
-
-```bash
-```
-
-User-scoped skills install under `$CODEX_HOME/skills` (default: `~/.codex/skills`).
-
-## Quick start
-
-Use the wrapper script:
-
-```bash
-```
-
-If the user prefers a global install, this is also valid:
-
-```bash
-```
-
-## Core workflow
-
-1. Open the page.
-2. Snapshot to get stable element refs.
-3. Interact using refs from the latest snapshot.
-4. Re-snapshot after navigation or significant DOM changes.
-5. Capture artifacts (screenshot, pdf, traces) when useful.
-
-Minimal loop:
-
-```bash
-"$PWCLI" open https://example.com
-...
-
-# ...interactions...
-"$PWCLI" tracing-stop
-```
-
-### Multi-tab work
-
-```bash
-"$PWCLI" tab-new https://example.com
-```
-
-## Wrapper script
-
-The wrapper script uses `npx --package @playwright/mcp playwright-cli` so the CLI can run without a global install:
-
-```bash
-```
-
-Prefer the wrapper unless the repository already standardizes on a global install.
-
-## References
-
-Open only what you need:
-
-- CLI command reference: `references/cli.md`
-- Practical workflows and troubleshooting: `references/workflows.md`
-
-## Guardrails
-
-- Always snapshot before referencing element ids like `e12`.
-- Re-snapshot when refs seem stale.
-- Prefer explicit commands over `eval` and `run-code` unless needed.
+Open the page, snapshot to get element refs, act on refs from the latest snapshot, and snapshot again after navigation or large DOM changes. Do not pivot to `@playwright/test` unless the user asks for test files. The separate `playwright` skill, when installed, carries the full CLI workflow. The command reference and workflows follow below.
 
 ### From `cli.md`
 
@@ -114,8 +39,7 @@ _Source topic: cli_
 Use the wrapper script unless the CLI is already installed globally:
 
 ```bash
-export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
-export PWCLI="$CODEX_HOME/skills/playwright/scripts/playwright_cli.sh"
+export PWCLI="/absolute/path/to/webapp-testing/scripts/playwright/playwright_cli.sh"
 "$PWCLI" --help
 ```
 

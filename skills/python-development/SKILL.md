@@ -1,6 +1,6 @@
 ---
 name: python-development
-description: Python tooling, packaging, settings, uv environments, and pytest; select the procedure for the requested change.
+description: "Use for Python project work: uv environments and dependencies, pyproject packaging, typed settings, pytest suites, small utility scripts. Keeps the project's existing tooling."
 ---
 
 # python-development

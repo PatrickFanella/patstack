@@ -1,6 +1,6 @@
 ---
 name: performance-investigation
-description: Diagnose measured latency, CPU, memory, or throughput regressions using comparable profiles and benchmarks.
+description: "Use when latency, CPU, memory, throughput or build time regressed or must improve: reproduce, profile, change one factor, re-measure. Not for functional bugs (systematic-debugging)."
 compatibility: Profiling and benchmark commands depend on the project runtime; use only tools already available in the target environment unless the user approves installation.
 metadata:
   blacktower-pack: engineering

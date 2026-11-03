@@ -1,6 +1,6 @@
 ---
 name: postgres-pro
-description: PostgreSQL query plans, indexes, locks, replication, and data-quality checks against the real schema.
+description: "Use for PostgreSQL against a real schema: slow queries and EXPLAIN plans, indexes, locks, replication, data-quality constraints and checks. Not for migration rollout (database-migration)."
 ---
 
 # postgres-pro

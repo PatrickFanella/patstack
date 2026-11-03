@@ -1,6 +1,6 @@
 ---
 name: systematic-debugging
-description: Reproduce and diagnose a defect; choose a tight failing check, isolate the cause, and verify the repair.
+description: "Use when a bug, failing test or unexpected behavior needs a root cause: reproduce, isolate one variable at a time, verify the fix. Also for recurring-failure postmortems."
 ---
 
 # systematic-debugging

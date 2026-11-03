@@ -58,4 +58,3 @@
 }
 ```
 
-**Reference:** See `assets/api-dashboard.json`

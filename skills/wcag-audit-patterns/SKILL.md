@@ -1,6 +1,6 @@
 ---
 name: wcag-audit-patterns
-description: Audit or repair web accessibility using keyboard, semantics, contrast, and assistive-technology evidence.
+description: "Use when auditing or fixing web accessibility: keyboard and focus, semantics and ARIA, accessible names, contrast, screen-reader checks against WCAG 2.2 AA."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

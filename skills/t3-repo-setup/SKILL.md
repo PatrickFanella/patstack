@@ -1,6 +1,6 @@
 ---
 name: t3-repo-setup
-description: Onboard a repository into T3 development environments with isolated previews, local tests, and project actions.
+description: "Use when onboarding a repository into T3 dev environments: launcher recipe, isolated worktree previews, tests and project actions. Not for running an already configured preview."
 ---
 
 # T3 repository setup
