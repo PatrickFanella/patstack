@@ -1,6 +1,6 @@
 ---
 name: protocol-reverse-engineering
-description: Master network protocol reverse engineering including packet analysis, protocol dissection, and custom protocol documentation. Use when analyzing network traffic, understanding proprietary protocols, or debugging network communication.
+description: "Use when inferring an undocumented network protocol from captured traffic: framing, field maps, state machines, replay tests, dissectors. Not for ordinary app bugs or when trusted protocol docs exist."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

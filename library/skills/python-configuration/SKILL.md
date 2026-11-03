@@ -1,6 +1,6 @@
 ---
 name: python-configuration
-description: Python configuration management via environment variables and typed settings. Use when externalizing config, setting up pydantic-settings, managing secrets, or implementing environment-specific behavior.
+description: "Use when centralizing Python settings: environment variables, pydantic-settings models, fail-fast startup validation, secrets_dir and environment switches. Not for secret-store design (secrets-management)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

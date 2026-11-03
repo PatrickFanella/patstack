@@ -1,6 +1,6 @@
 ---
 name: principle-model-the-domain
-description: "Apply when writing stateful logic, or when code branches a lot or repeats a shape assumption across files. Encode the domain in a structure instead of scattered conditionals."
+description: "Use when stateful logic, growing if/else chains, synced booleans or repeated shape assumptions appear: encode the domain in a state machine, union, registry or model instead of scattered conditionals."
 disable-model-invocation: true
 ---
 

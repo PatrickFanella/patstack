@@ -1,6 +1,6 @@
 ---
 name: readme-i18n
-description: Use when the user wants to translate a repository README, make a repo multilingual, localize docs, add a language switcher, internationalize the README, or update localized README variants in a GitHub-style repository.
+description: "Use when translating a repository README into other languages, or updating localized README variants and their language selector. Not for app or website i18n."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

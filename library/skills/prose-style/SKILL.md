@@ -1,6 +1,6 @@
 ---
 name: prose-style
-description: Diagnose sentence-level issues after structure is solid. Use when prose feels flat, sentences are monotonous, word choices are generic, or voice is inconsistent.
+description: "Use when fiction or narrative prose has solid structure but reads flat: monotonous sentence rhythm, generic word choice or inconsistent voice. Not for filler in technical prose (unslop)."
 license: MIT
 metadata:
   blacktower-pack: creative
@@ -45,4 +45,4 @@ Diagnose sentence-level issues after structure is solid. Use when prose feels fl
 ## Resources
 
 - `references/detailed-guide.md` — detailed framework and edge cases; load only the sections needed for the task.
-- `scripts/` — deterministic helpers; inspect --help and side effects before use.
+- `scripts/` — deterministic helpers; inspect --help and side effects before use. They use Deno APIs (`deno run --allow-read scripts/prose-check.ts <file>`), so Bun or Node will not run them. If `deno` is missing, ask before installing it (for example `mise use deno`) or diagnose by hand.

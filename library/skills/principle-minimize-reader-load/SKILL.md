@@ -1,6 +1,6 @@
 ---
 name: principle-minimize-reader-load
-description: "Apply when reviewing or shaping code that's hard to trace. Count layers between question and answer, and hidden state in the reader's head; collapse one-caller wrappers and shrink mutable scope."
+description: "Use when code is hard to trace: count indirection layers and hidden mutable state, collapse one-caller wrappers and pass-through layers, and shrink state scope."
 disable-model-invocation: true
 ---
 

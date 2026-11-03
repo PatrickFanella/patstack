@@ -1,11 +1,6 @@
 ---
 name: pr-review-canvas
-description: >-
-  Render a PR diff review as a Cursor Canvas that groups changes by
-  reviewer importance, separates boilerplate from core logic, and
-  highlights tricky or unexpected code. Use when reviewing a pull
-  request, summarizing a diff for review, or when the user asks for a
-  PR review canvas, diff walkthrough, or change-set overview.
+description: "Use when asked for a PR review canvas or diff walkthrough: regroup a pull request diff by reviewer importance and flag tricky code. Cursor Canvas output; HTML or Markdown fallback elsewhere."
 ---
 
 # PR Review Canvas
@@ -14,11 +9,13 @@ Build a canvas that presents a PR diff reorganized for reviewer comprehension �
 
 ## Prerequisites
 
-Read `~/.cursor/skills-cursor/canvas/SKILL.md` first. It contains the generation policy, design guidance, slop rules, self-check, and file-path conventions you must follow. The full component and hook surface is declared in `~/.cursor/skills-cursor/canvas/sdk/index.d.ts` and its sibling `.d.ts` files — read them to discover exact exports and prop shapes rather than guessing.
+This skill targets Cursor Canvas. In Cursor, when `~/.cursor/skills-cursor/canvas/SKILL.md` exists, read it first. It contains the generation policy, design guidance, slop rules, self-check, and file-path conventions you must follow. The full component and hook surface is declared in `~/.cursor/skills-cursor/canvas/sdk/index.d.ts` and its sibling `.d.ts` files — read them to discover exact exports and prop shapes rather than guessing.
+
+In Codex, Claude Code or OpenCode there is no Canvas SDK. Produce the same grouped review as a single self-contained HTML file (or the client's artifact or preview tool when it has one), or as Markdown when the user wants plain text. The canvas-specific suggestions below then become ordinary HTML tables, diagrams and collapsible sections.
 
 ## Gather the diff
 
-Expect a GitHub PR link (a full URL like `https://github.com/<owner>/<repo>/pull/<n>`, or an equivalent `gh`-resolvable reference). Use `gh pr diff <pr>` to collect every file's path, additions, deletions, and hunks.
+Expect a PR link or number. Most repositories here live on Gitea (`https://git.subcult.tv/<owner>/<repo>/pulls/<n>`): fetch the diff with `tea api --login subcult-agent /repos/<owner>/<repo>/pulls/<n>.diff`. For a GitHub PR (`https://github.com/<owner>/<repo>/pull/<n>`), use `gh pr diff <pr>`. Collect every file's path, additions, deletions, and hunks.
 
 **If the user didn't provide a PR link, stop and ask.** Do not guess at the current branch, infer from recent history, or fall back to a local `git diff`. Ask the user which diff they want to review — a specific PR URL or number — and wait for their reply before continuing.
 
@@ -63,4 +60,4 @@ Keep commentary terse. One or two sentences per note.
 
 The sections above are a floor, not a ceiling. The goal is the fastest possible path for the reviewer to understand this specific change — so look at the diff in front of you and ask what representation would actually help. A tiny state diagram, a before/after call graph, a table of input→output pairs, a timeline of commits, a confidence annotation per file, a single large callout with everything else collapsed — whatever fits the change.
 
-The canvas SDK has charts, tables, diff views, DAG layout, cards, stats, interactive state, and more. Reach for whichever components best serve the change at hand. A review of a refactor looks different from a review of a bug fix looks different from a review of a new feature — let the canvas reflect that.
+The canvas SDK (or plain HTML in other clients) supports charts, tables, diff views, DAG layout, cards, stats, interactive state, and more. Reach for whichever components best serve the change at hand. A review of a refactor looks different from a review of a bug fix looks different from a review of a new feature — let the canvas reflect that.

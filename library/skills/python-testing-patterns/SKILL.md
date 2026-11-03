@@ -1,6 +1,6 @@
 ---
 name: python-testing-patterns
-description: Implement comprehensive testing strategies with pytest, fixtures, mocking, and test-driven development. Use when writing Python tests, setting up test suites, or implementing testing best practices.
+description: "Use when writing or restructuring pytest suites: fixtures, parametrization, mocking, async tests, coverage. Not for repository-wide test upkeep (repository-test-maintenance)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -39,3 +39,4 @@ Implement comprehensive testing strategies with pytest, fixtures, mocking, and t
 ## Resources
 
 - `references/detailed-guide.md` — detailed framework and edge cases; load only the sections needed for the task.
+- `references/advanced-patterns.md` — async tests, monkeypatching, conftest, property-based, database and CI patterns.

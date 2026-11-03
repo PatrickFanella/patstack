@@ -1,6 +1,6 @@
 ---
 name: react-pro
-description: React and Next.js professional development skill covering modern React, App Router, state management, reusable component APIs, performance, bundle hygiene, data fetching, and review. Use when building, refactoring, reviewing, or optimizing React/Next.js apps with TypeScript and Tailwind.
+description: "Use when building, refactoring, reviewing or optimizing React or Next.js code: App Router, state ownership, component APIs, data fetching, bundle and render performance. Not for React Native."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

@@ -1,6 +1,6 @@
 ---
 name: react-native-pro
-description: 'React Native/Expo implementation: navigation, native integration, offline behavior, lists, and mobile performance.'
+description: "Use for React Native or Expo work: navigation, native modules, offline sync, list and animation performance, mobile styling. Not for web React (react-pro)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

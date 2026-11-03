@@ -1,6 +1,6 @@
 ---
 name: ralph-loop
-description: Start a Ralph Loop for iterative self-referential development. Use when the user asks to run a ralph loop, start an iterative loop, or wants repeated autonomous iteration on a task until completion.
+description: "Use when the user asks to start a Ralph loop: the same prompt re-fed each turn until a completion promise or iteration cap. Needs a client stop hook (Cursor or the Claude Code plugin)."
 ---
 
 # Ralph Loop
@@ -9,7 +9,15 @@ description: Start a Ralph Loop for iterative self-referential development. Use 
 
 The user wants to start a Ralph loop. An iterative development loop where the same prompt is fed back after every turn, and the agent sees its own previous work each iteration.
 
-## Workflow
+## Runtime check
+
+The loop only works when the client has a Ralph stop hook installed. Check before promising a loop:
+
+- **Cursor** with the Ralph plugin: follow the workflow below (`.cursor/ralph/scratchpad.md`).
+- **Claude Code** with the official `ralph-loop` plugin: run its `/ralph-loop "<prompt>" --max-iterations N --completion-promise "TEXT"` command instead. Its state file is `.claude/ralph-loop.local.md`; do not write the Cursor file.
+- **Codex or OpenCode**, or no plugin installed: no stop hook re-feeds the prompt. Say so, then offer to work the task to completion in this turn, or suggest an external loop such as `while :; do codex exec "$(cat PROMPT.md)"; done` with an iteration cap.
+
+## Workflow (Cursor)
 
 1. Gather the user's task prompt and optional parameters:
    - `max_iterations` (number, default 0 for unlimited)

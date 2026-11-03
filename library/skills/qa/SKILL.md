@@ -1,6 +1,6 @@
 ---
 name: qa
-description: Interactive QA session where user reports bugs or issues conversationally, and the agent files GitHub issues. Explores the codebase in the background for context and domain language. Use when user wants to report bugs, do QA, file issues conversationally, or mentions "QA session".
+description: "Use when the user wants a QA session: they report bugs conversationally and you file durable, user-focused issues on the repo's Gitea or GitHub tracker. Not for fixing the bugs."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -10,7 +10,7 @@ metadata:
 
 # QA Session
 
-Run an interactive QA session. The user describes problems they're encountering. You clarify, explore the codebase for context, and file GitHub issues that are durable, user-focused, and use the project's domain language.
+Run an interactive QA session. The user describes problems they're encountering. You clarify, explore the codebase for context, and file issues on the repository's tracker (Gitea or GitHub) that are durable, user-focused, and use the project's domain language.
 
 ## For each issue the user raises
 
@@ -26,7 +26,7 @@ Do NOT over-interview. If the description is clear enough to file, move on.
 
 ### 2. Explore the codebase in the background
 
-While talking to the user, kick off an Agent (subagent_type=Explore) in the background to understand the relevant area. The goal is NOT to find a fix — it's to:
+While talking to the user, start a background read-only exploration of the relevant area: in Claude Code an `Agent` with `subagent_type=Explore`, in Codex or OpenCode a read-only subagent if the client offers one. Without subagents, do a short search yourself between questions. The goal is NOT to find a fix — it's to:
 
 - Learn the domain language used in that area (check UBIQUITOUS_LANGUAGE.md)
 - Understand what the feature is supposed to do
@@ -49,9 +49,9 @@ Keep as a single issue when:
 - It's one behavior that's wrong in one place
 - The symptoms are all caused by the same root behavior
 
-### 4. File the GitHub issue(s)
+### 4. File the issue(s)
 
-Create issues with `gh issue create`. Do NOT ask the user to review first — just file and share URLs.
+Check `git remote -v` to find the tracker. For Gitea (`git.subcult.tv`), use `tea issues create --login subcult-agent --repo <owner>/<repo> --title ... --description-file -`. For GitHub, use `gh issue create`. Do NOT ask the user to review first — just file and share URLs.
 
 Issues must be **durable** — they should still make sense after major refactors. Write from the user's perspective.
 

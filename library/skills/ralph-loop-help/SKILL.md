@@ -1,6 +1,6 @@
 ---
 name: ralph-loop-help
-description: Explain the Ralph Loop plugin, how it works, and available skills. Use when the user asks for help with ralph loop, wants to understand the technique, or needs usage examples.
+description: "Use when the user asks what a Ralph loop is, how it works, or how to start or cancel one. Not for starting a loop (ralph-loop) or stopping one (cancel-ralph)."
 ---
 
 # Ralph Loop Help
@@ -38,7 +38,7 @@ Options:
 - `--completion-promise "TEXT"` — phrase to signal completion
 
 How it works:
-1. Creates `.cursor/ralph/scratchpad.md` state file
+1. Creates a state file (`.cursor/ralph/scratchpad.md` in Cursor, `.claude/ralph-loop.local.md` with the Claude Code `ralph-loop` plugin; Codex and OpenCode have no stop hook, so the loop needs an external script)
 2. Agent works on the task
 3. Stop hook intercepts exit and feeds the same prompt back
 4. Agent sees its previous work and iterates
@@ -46,7 +46,7 @@ How it works:
 
 ### Cancelling a Ralph Loop
 
-Ask the agent to cancel the ralph loop. It will remove the state file and report the iteration count.
+Ask the agent to cancel the ralph loop (the `cancel-ralph` skill, or `/cancel-ralph` in Claude Code). It removes the state file and reports the iteration count.
 
 ### Completion Promises
 

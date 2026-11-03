@@ -1,6 +1,6 @@
 ---
 name: principle-experience-first
-description: "Apply when product, UX, or feature-scope tradeoffs come up. Choose user delight over implementation convenience; ship fewer polished features over more rough ones."
+description: "Use when product, UX or feature-scope tradeoffs arise: choose the user's experience over implementation convenience, and fewer polished features over many rough ones. Users include API consumers and maintainers."
 disable-model-invocation: true
 ---
 
