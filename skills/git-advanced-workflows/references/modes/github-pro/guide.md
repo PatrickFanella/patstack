@@ -1,6 +1,6 @@
 # GitHub Pro
 
-Single GitHub workflow skill. Runtime actions should use the `github-tools` OpenCode plugin tools where available; use `gh` CLI only as fallback or when a workflow specifically requires it.
+GitHub workflow procedure for repositories whose remote is `github.com`. Use the `gh` CLI with non-interactive flags. Most repositories in this setup live on Gitea at `git.subcult.tv`, where `gh` does not work: use `tea --login subcult-agent` (or `tea api` for endpoints it lacks) and treat GitHub copies as mirrors.
 
 ## Use When
 
@@ -13,13 +13,13 @@ Single GitHub workflow skill. Runtime actions should use the `github-tools` Open
 
 ## Integration Stance
 
-- **Primary runtime:** `plugins/github-tools/`.
-- **Fallback:** `gh` CLI with non-interactive flags.
-- **Not preferred in OpenCode:** GitHub MCP, to avoid duplicate GitHub surfaces.
+- **Primary:** `gh` CLI with non-interactive flags, after `gh auth status`.
+- **Optional:** a GitHub MCP server or plugin when the active client has one connected; do not use both for the same action.
+- **Gitea:** `tea`, not `gh`.
 
 ## Workflow
 
-1. Check repo/auth context with plugin status/doctor tools.
+1. Confirm the remote is GitHub (`git remote get-url origin`) and check auth with `gh auth status`.
 2. Inspect branch, diff, files, PR context, and CI before acting.
 3. Stage or modify only intended files.
 4. Use concise Conventional Commit messages when committing is explicitly requested.

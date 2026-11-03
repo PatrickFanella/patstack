@@ -1,6 +1,6 @@
 ---
 name: auth-implementation-patterns
-description: 'Implement or debug authentication and authorization: sessions, OAuth, tokens, roles, and access checks.'
+description: Use when implementing or debugging login, sessions, JWT or refresh tokens, OAuth2/OIDC, RBAC, or object-level access checks. Not for secret storage (secrets-management) or broad security audits.
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -25,8 +25,9 @@ Design and implement secure auth systems: AuthN (identity), AuthZ (permissions),
 
 ## Avoid This Skill When
 
-- You only need generic Node.js API scaffolding (use `nodejs-backend-patterns`)
-- You only need infra/network policy hardening (use `k8s-security-policies`)
+- You only need generic Node.js API scaffolding (use the `nodejs-backend-patterns` mode of `api-development`)
+- You only need secret storage or rotation (use `secrets-management`)
+- You only need cluster network policy hardening (use the optional `kubernetes-development` skill when installed)
 
 ## Workflow
 

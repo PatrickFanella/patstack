@@ -1,6 +1,6 @@
 ---
 name: database-migration
-description: 'Database schema and data migrations: compatibility, backfills, validation, cutover, and rollback.'
+description: "Use when changing a database schema or transforming data: ORM migrations, backfills, zero-downtime expand and contract, cutover and rollback. Not for query tuning; use postgres-pro."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

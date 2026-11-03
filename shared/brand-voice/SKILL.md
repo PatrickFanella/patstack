@@ -1,6 +1,6 @@
 ---
 name: brand-voice
-description: Define or review a product's written voice from existing brand guidance and real copy samples, with usable rules, examples, and tone shifts.
+description: "Use when defining or reviewing a product's written voice guide from brand sources and real copy samples. Not for visual identity, or for one-off copy edits that can follow an existing guide."
 ---
 
 # Brand voice

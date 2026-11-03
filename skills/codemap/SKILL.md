@@ -1,6 +1,6 @@
 ---
 name: codemap
-description: Map repository structure and update existing code maps incrementally using the bundled inventory helper.
+description: Use when orienting in an unfamiliar repository, or creating or incrementally updating codemap.md files with the bundled inventory script. Not for architecture redesign; use architecture-patterns.
 compatibility: Requires a git repository and a Node.js-compatible runtime or Bun for the bundled codemap helper.
 metadata:
   blacktower-pack: core

@@ -6,7 +6,7 @@ Consolidated skill for building on the Cloudflare platform. Use decision trees b
 
 ## Prerequisites
 
-- When sandboxing blocks the deployment network calls, rerun with `sandbox_permissions=require_escalated`.
+- When sandboxing blocks the deployment network calls, request network escalation through the active client (Codex: `sandbox_permissions=require_escalated`; Claude Code and OpenCode: the normal permission prompt).
 - The deployment might take a few minutes. Use appropriate timeout values.
 
 ## Authentication (Required Before Deploy)
@@ -212,7 +212,7 @@ Need IaC? → pulumi/ (Pulumi), terraform/ (Terraform), or api/ (REST API)
 
 ### Escalated Network Access
 
-If deployment fails due to network issues (timeouts, DNS errors, connection resets), rerun the deploy with escalated permissions (use `sandbox_permissions=require_escalated`). The deploy requires escalated network access when sandbox networking blocks outbound requests.
+If deployment fails due to network issues (timeouts, DNS errors, connection resets), rerun the deploy with escalated permissions (Codex: `sandbox_permissions=require_escalated`; other clients: their permission prompt). The deploy requires escalated network access when sandbox networking blocks outbound requests.
 
 Example guidance to the user:
 

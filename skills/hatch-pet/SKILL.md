@@ -1,6 +1,6 @@
 ---
 name: hatch-pet
-description: Create or repair Codex v2 animated pets; validate atlas geometry, directions, transparency, and packaging.
+description: "Use when creating, repairing, upgrading or validating a Codex app animated pet (v2 spritesheet atlas). Generation needs Codex's imagegen skill; validation and packaging run in any client."
 ---
 
 # Codex v2 animated pets
@@ -12,7 +12,7 @@ Choose the requested operation before loading generation instructions:
 - Look-direction generation or repair: [look-direction procedure](required-v2-look-direction-stage.md).
 - Inspection, validation, or packaging: [validation](validation.md). Validation alone performs no image generation.
 
-Use the installed imagegen skill for authorized visual generation. Keep character identity, approved references, source images, and manifest provenance recoverable. Use the bundled deterministic scripts for geometry and image assembly, not generated pictures of an atlas.
+Use the installed imagegen skill for authorized visual generation. It ships with Codex (`.system/imagegen`); in Claude Code or OpenCode it is normally absent, so limit work there to planning, validation, packaging, and deterministic repair, and say that generation needs a Codex session. Keep character identity, approved references, source images, and manifest provenance recoverable. Use the bundled deterministic scripts for geometry and image assembly, not generated pictures of an atlas.
 
 All script and reference paths are relative to this skill directory. Resolve available runtimes before using them. Scope generation, publishing, and final pet installation to the user's request.
 

@@ -383,13 +383,9 @@ After creating your evaluation file, you can use the provided evaluation harness
 
 1. **Install Dependencies**
 
+   Python runs through uv in this setup; no global install is needed:
    ```bash
-   pip install -r scripts/requirements.txt
-   ```
-
-   Or install manually:
-   ```bash
-   pip install anthropic mcp
+   uv run --with-requirements scripts/requirements.txt python scripts/evaluation.py --help
    ```
 
 2. **Set API Key**
@@ -553,7 +549,8 @@ Here's a complete example of creating and running an evaluation:
 2. **Install dependencies**:
 
 ```bash
-pip install -r scripts/requirements.txt
+# No global install: run the commands below as
+# uv run --with-requirements scripts/requirements.txt python scripts/evaluation.py ...
 export ANTHROPIC_API_KEY=your_api_key
 ```
 

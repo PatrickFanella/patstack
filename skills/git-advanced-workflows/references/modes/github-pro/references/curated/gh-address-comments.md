@@ -6,7 +6,6 @@ Curated from a previously merged skill. This file keeps the useful task guidance
 
 - `assets/gh-address-comments/`
 - `scripts/gh-address-comments/`
-- `assets/gh-address-comments/`
 
 ## Guidance
 
@@ -20,10 +19,10 @@ _Source topic: gh-address-comments_
 
 Guide to find the open PR for the current branch and address its comments with gh CLI. Run all `gh` commands with elevated network access.
 
-Prereq: ensure `gh` is authenticated (for example, run `gh auth login` once), then run `gh auth status` with escalated permissions (include workflow/repo scopes) so `gh` commands succeed. If sandboxing blocks `gh auth status`, rerun it with `sandbox_permissions=require_escalated`.
+Prereq: ensure `gh` is authenticated (for example, run `gh auth login` once), then run `gh auth status` with escalated permissions (include workflow/repo scopes) so `gh` commands succeed. If sandboxing blocks `gh auth status`, request network escalation through the active client (Codex: `sandbox_permissions=require_escalated`; Claude Code and OpenCode: the normal permission prompt).
 
 ## 1) Inspect comments needing attention
-- Run scripts/fetch_comments.py which will print out all the comments and review threads on the PR
+- Run `scripts/gh-address-comments/fetch_comments.py` (relative to the github-pro mode directory), which will print out all the comments and review threads on the PR
 
 ## 2) Ask the user for clarification
 - Number all the review threads and comments and provide a short summary of what would be required to apply a fix for it
@@ -36,10 +35,7 @@ Prereq: ensure `gh` is authenticated (for example, run `gh auth login` once), th
 
 ## Resources
 
-- `scripts/`
-  - `scripts/fetch_comments.py` — deterministic helper script or script support file.
-- `assets/`
-  - `assets/github-small.svg` — static asset used by the skill.
-  - `assets/github.png` — static asset used by the skill.
+- `scripts/gh-address-comments/fetch_comments.py` — deterministic helper script or script support file.
+- `assets/gh-address-comments/github-small.svg` and `github.png` — static assets used by the skill.
 
 Load these only when needed; keep `SKILL.md` as the activation workflow.

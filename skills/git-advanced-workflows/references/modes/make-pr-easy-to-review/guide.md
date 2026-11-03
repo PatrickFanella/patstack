@@ -15,7 +15,8 @@ Prepare a PR so a reviewer can quickly understand the intent, important files, a
 Only rewrite history when the user asks for it or agrees to the plan. Before rewriting:
 
 ```bash
-gh pr view <PR> --json title,headRefName,baseRefName,state,commits
+gh pr view <PR> --json title,headRefName,baseRefName,state,commits   # GitHub
+tea pulls <PR> --login subcult-agent                                  # Gitea: shows head and base branches
 git fetch origin <headRefName> <baseRefName>
 ORIGINAL_TREE=$(git rev-parse origin/<headRefName>^{tree})
 ```

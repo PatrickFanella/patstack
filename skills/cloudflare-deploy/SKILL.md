@@ -1,6 +1,6 @@
 ---
 name: cloudflare-deploy
-description: Cloudflare Workers and Pages deployment; follow the selected product and verify the deployed artifact.
+description: Use when deploying or configuring a project on Cloudflare Workers, Pages or related services (D1, R2, KV, Durable Objects), including wrangler auth and checking the deployed result.
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

@@ -1,6 +1,6 @@
 ---
 name: gdpr-data-handling
-description: 'Implement requested personal-data controls: consent, retention, deletion, portability, and auditability.'
+description: "Use when building personal-data controls: consent, retention, deletion, export and portability, data-subject requests, audit trails. Not legal advice, and not for secrets or auth."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

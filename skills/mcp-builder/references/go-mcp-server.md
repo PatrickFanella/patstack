@@ -9,6 +9,8 @@ Prefer Go for local or long-running MCP servers when the integration benefits fr
 - `internal/<service>/tools.go` — tool schemas and handlers.
 - `internal/<service>/errors.go` — actionable errors for agents.
 
+Use the official SDK, `github.com/modelcontextprotocol/go-sdk` (package `mcp`), unless the repository already uses another MCP library. Check its current release notes before relying on newer protocol features.
+
 ## Rules
 
 - Accept `context.Context` in every handler.

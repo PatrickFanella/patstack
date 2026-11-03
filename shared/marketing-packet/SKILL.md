@@ -1,6 +1,6 @@
 ---
 name: marketing-packet
-description: Create or refresh a product marketing packet with evidence, positioning, channel copy, a demo brief, reusable prompts, and a practical campaign plan.
+description: "Use when creating or refreshing a product marketing packet: brief, positioning, landing and channel copy, demo brief, campaign plan. Not for a single post, paid campaigns or publishing."
 ---
 
 # Marketing packet

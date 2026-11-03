@@ -1,6 +1,6 @@
 ---
 name: blacktower-development
-description: Blacktower plugin, session lifecycle, control UI, and release changes; use only in the Blacktower repository.
+description: Use in the Blacktower repository for plugin integration, delegated-session lifecycle bugs, control UI or TUI surfaces, and build or release artifacts. Not for consuming the Blacktower package elsewhere.
 ---
 
 # blacktower-development

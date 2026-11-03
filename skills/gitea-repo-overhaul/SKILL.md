@@ -1,6 +1,6 @@
 ---
 name: gitea-repo-overhaul
-description: Audit or modernize Gitea/Forgejo repository settings, issues, workflows, and release organization.
+description: "Use when auditing or normalizing Gitea/Forgejo repositories in bulk: settings, labels, issues, wiki, branch protection, default branches, workflows, releases. Not for code changes inside one repo."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

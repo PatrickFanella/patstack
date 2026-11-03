@@ -1,6 +1,6 @@
 ---
 name: clonedeps
-description: Inspect dependency source at the lockfile-resolved version; obtain only the repositories needed for the investigation.
+description: "Use when a question needs a dependency's real source at the lockfile-pinned version: SDK internals, framework behavior, library bugs. Not for API questions that documentation answers."
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow

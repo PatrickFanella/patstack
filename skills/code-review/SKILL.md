@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: Review code changes for actionable defects or requested maintainability concerns; keep repository audits separate.
+description: Use when reviewing a diff, branch, PR or working tree for defects, blast radius, or explicitly requested maintainability or security depth. Not for a whole-repository delivery audit.
 ---
 
 # code-review

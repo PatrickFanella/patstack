@@ -1,6 +1,6 @@
 ---
 name: dependency-upgrade
-description: Upgrade dependencies with lockfile evidence, breaking-change analysis, proportional testing, and rollback.
+description: Use when upgrading a dependency or framework across a major version, with breaking-change analysis, lockfile review and rollback. Not for a routine uv bump; use python-development.
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

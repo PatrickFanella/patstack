@@ -1,6 +1,6 @@
 ---
 name: codemod-surgeon
-description: Automate widespread source edits with structural transforms, bounded scope, repeatability, and semantic checks.
+description: Use when one mechanical change must land across many files (renames, API migrations, import rewrites) with AST tools and leftover scans. Not for behavior changes or a one-file refactor.
 compatibility: Requires Python 3 for the bundled leftover scanner; AST-aware rewrites require an available codemod or ast-grep runtime.
 metadata:
   blacktower-pack: engineering

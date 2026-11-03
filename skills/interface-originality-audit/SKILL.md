@@ -1,6 +1,6 @@
 ---
 name: interface-originality-audit
-description: Audit UI originality, product credibility, and missing interaction states; report evidence-backed design findings.
+description: Use when asked to audit a UI for generic or AI-looking design, unsupported product claims, or missing states. Reports findings only; use frontend-design to implement fixes.
 metadata:
   blacktower-pack: creative
   blacktower-kind: workflow

@@ -1,6 +1,6 @@
 ---
 name: architecture-patterns
-description: 'Architecture and domain modeling: module boundaries, dependency cycles, CQRS, and domain vocabulary.'
+description: "Use when deciding module boundaries, Clean/Hexagonal/DDD structure, CQRS, deep-module design, or a project's domain glossary and ADRs. Not for a local cleanup of existing code; use refactor."
 ---
 
 # architecture-patterns

@@ -1,6 +1,6 @@
 ---
 name: requirements-interview
-description: Clarify ambiguous work or run a grill-me / grill-with-docs design interview. Use when the requested outcome, constraints, acceptance criteria, or tradeoffs would materially change the implementation; skip it when repository evidence already makes the task clear.
+description: Use when ambiguity in outcome, scope, constraints or acceptance criteria would change the implementation, or on grill-me, grill-with-docs or a plan stress-test. Skip when the repository already answers it.
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow
@@ -66,9 +66,8 @@ grilling workflow is retained as optional background in
 ## Retained brainstorming resources
 
 Load `references/curated/brainstorming.md` only when a requirements interview
-needs the retained brainstorming guidance. Its extracted `scripts/brainstorming/`
-resource is retained with that guidance; inspect it only when that guidance calls
-for a brainstorming-specific resource.
+needs the retained brainstorming guidance. No brainstorming scripts were
+retained; follow the guidance as prose.
 
 ## Guardrails
 

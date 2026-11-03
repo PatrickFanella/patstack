@@ -1,6 +1,6 @@
 ---
 name: llm-evaluation
-description: Evaluate LLM behavior with representative datasets, baselines, task metrics, and reproducible results.
+description: "Use when measuring LLM or prompt behavior: eval datasets, baselines, task metrics, LLM-as-judge rubrics, regression comparisons. Not for retrieval quality; use rag-implementation."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

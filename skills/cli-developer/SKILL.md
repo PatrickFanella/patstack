@@ -1,6 +1,6 @@
 ---
 name: cli-developer
-description: 'CLI design and implementation: flags, subcommands, completions, interactive fallback, and automation contracts.'
+description: "Use when designing or building a command-line tool: argument parsing, subcommands, completions, prompts, exit codes, or agent-safe noninteractive use. Not for shell scripts; use shell-development."
 ---
 
 # cli-developer

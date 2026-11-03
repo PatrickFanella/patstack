@@ -1,6 +1,6 @@
 ---
 name: golang-pro
-description: Go concurrency, interfaces, errors, profiling, and tests; use relevant patterns for the existing application.
+description: "Use when writing, testing or profiling Go code: goroutines and channels, interfaces, generics, error handling, project layout, gRPC. Not for MCP server design; use mcp-builder."
 license: MIT
 metadata:
   blacktower-pack: engineering

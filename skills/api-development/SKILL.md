@@ -1,6 +1,6 @@
 ---
 name: api-development
-description: 'API contracts and backend protocols: REST/GraphQL, OpenAPI, Node services, and WebSocket lifecycle design.'
+description: Use when designing or changing REST or GraphQL contracts, OpenAPI specs, Node.js (Express/Fastify) services, or WebSocket/Socket.IO APIs. Not for login or access control; use auth-implementation-patterns.
 ---
 
 # api-development

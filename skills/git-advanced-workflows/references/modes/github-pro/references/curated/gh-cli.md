@@ -23,7 +23,7 @@ Thin GitHub CLI reference skill. Prefer the OpenCode GitHub plugin tools for iss
 
 ## Resources
 
-- `references/full-guide.md` — detailed guidance.
+- The former `full-guide.md` and `topic-map.md` are merged into the sections below.
 
 ## Notes
 
@@ -69,7 +69,7 @@ Decide which bucket the question belongs to before searching:
 - Monitoring, logs, and troubleshooting
 - Migration
 
-If you need a quick starting point, load `references/topic-map.md` and jump to the closest section.
+If you need a quick starting point, use the "From `topic-map.md`" section below and jump to the closest section.
 
 ### 2. Search official GitHub docs first
 
@@ -168,7 +168,7 @@ jobs:
 ...
 ```
 
-**Reference:** See `assets/test-workflow.yml`
+**Reference:** the original `test-workflow.yml` asset was not retained; adapt the example above.
 ...
 
 # .github/workflows/reusable-test.yml

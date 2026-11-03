@@ -1,6 +1,6 @@
 ---
 name: frontend-design
-description: Implement or refine web interface visuals, responsive layouts, and interaction states within the product design.
+description: "Use when implementing or refining web UI visuals: layout, typography, color, motion, responsive and interaction states. Not for React state or architecture (react-pro) or originality audits."
 license: Complete terms in LICENSE.txt
 metadata:
   blacktower-pack: engineering

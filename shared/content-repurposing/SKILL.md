@@ -1,6 +1,6 @@
 ---
 name: content-repurposing
-description: Adapt an existing article, demo, transcript, report, or approved product brief into requested social, newsletter, or video formats while preserving its evidence.
+description: Use when adapting an existing article, demo, transcript or report into requested social, newsletter or video drafts. Not for establishing product positioning; use marketing-packet.
 ---
 
 # Content repurposing

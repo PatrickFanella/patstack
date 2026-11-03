@@ -4,7 +4,7 @@ Curated from a previously merged skill. This file keeps the useful task guidance
 
 ## Extracted Resources
 
-- `scripts/brainstorming/`
+None retained. Any script or visual-companion step mentioned below is not bundled; skip it or describe the design in text.
 
 ## Guidance
 

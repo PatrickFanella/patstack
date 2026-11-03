@@ -44,7 +44,7 @@ unless the user gives a narrower list.
    - Identify GitHub mirror/upstream if a `github` remote or push mirror exists.
 
 2. **Snapshot**
-   - Save a machine-readable manifest outside the repo under `/tmp/opencode/` or
+   - Save a machine-readable manifest outside the repo under `${TMPDIR:-/tmp}/gitea-overhaul/` or
      a user-approved docs path.
    - Include current remotes, default branch, HEAD SHAs, repo settings, labels,
      milestones, open issue counts, wiki status, and branch protections.

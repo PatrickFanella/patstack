@@ -1,6 +1,6 @@
 ---
 name: implementation-plan
-description: Plan or implement a bounded feature from a spec; map acceptance criteria to changes and executable verification.
+description: Use when turning a feature spec into an ordered, verifiable change plan, or implementing a multi-step feature against acceptance criteria. Not for unresolved scope; use requirements-interview.
 ---
 
 # Implementation Plan

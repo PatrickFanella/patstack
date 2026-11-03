@@ -1,6 +1,6 @@
 ---
 name: session-handoff
-description: Preserve progress, decisions, blockers, and continuation steps when work will continue in another agent session or agent. Use before a context reset, ownership transfer, or long pause; do not trigger for an ordinary final summary.
+description: Use before a context reset, a handoff to another agent or session, or a long pause, to record progress, decisions, blockers and next steps. Not for an ordinary final summary.
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow

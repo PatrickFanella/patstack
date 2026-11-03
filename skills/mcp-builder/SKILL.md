@@ -1,6 +1,6 @@
 ---
 name: mcp-builder
-description: Build MCP servers with explicit tool contracts, transports, errors, and executable interoperability checks.
+description: "Use when building or extending an MCP server (Go preferred, TypeScript fallback): tool contracts, transports, errors, evaluation harnesses. Not for client registration; use mcp-integration-lifecycle."
 license: Complete terms in LICENSE.txt
 metadata:
   blacktower-pack: engineering

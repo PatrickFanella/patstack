@@ -16,13 +16,13 @@
      secret/webhook/runner changes, strict branch rules.
 3. Treat `destructive-admin` as always requiring explicit repo-specific approval.
 4. Confirm credentials:
-   - Gitea API token available without printing it.
-   - Git SSH access works for Gitea remotes.
+   - `tea api --login subcult-agent /user` returns `login: subcult-agent`; the token stays in `tea` config and is never printed.
+   - Git pushes to Gitea work through the installed HTTPS credential helper (fleet URL rules route SSH remotes through HTTPS).
    - GitHub access works when GitHub mirror/upstream comparison is needed.
 5. Create a run directory such as:
 
 ```text
-/tmp/opencode/gitea-overhaul/YYYYMMDD-HHMMSS/
+${TMPDIR:-/tmp}/gitea-overhaul/YYYYMMDD-HHMMSS/
 ```
 
 Store raw inventories and generated reports there unless the user requests a
