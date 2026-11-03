@@ -3,7 +3,8 @@
 
 One source, three clients: ~/.codex/AGENTS.md, ~/.claude/CLAUDE.md and
 ~/.config/opencode/AGENTS.md are generated per host from WORKING.md and
-hosts.json. Deployment is guarded: plan records the current state, apply
+hosts.json, along with directory context files (~/.agents/AGENTS.md and any
+listed in hosts.json) and, on RTK hosts, ~/.codex/RTK.md and ~/.claude/RTK.md. Deployment is guarded: plan records the current state, apply
 refuses anything that changed since, backups and receipts stay on the host,
 and rollback restores only files nobody edited after the deploy.
 """
@@ -22,6 +23,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CLIENTS = {'codex': '.codex/AGENTS.md', 'claude': '.claude/CLAUDE.md',
            'opencode': '.config/opencode/AGENTS.md'}
+# Directory-scoped context files: they apply only to sessions started in that folder.
+CONTEXT_FILES = ('.agents/AGENTS.md',)
+RTK_FILES = ('.codex/RTK.md', '.claude/RTK.md')
 STATE = '.local/state/agent-global-instructions'
 # Superseded by inlining WORKING.md; removed only if still the unedited deployed copy.
 RETIRED = ('.config/agent-instructions/WORKING.md', '.local/state/agent-working-style/latest.json')
@@ -80,6 +84,29 @@ def render(host, client, revision, source=ROOT / 'instructions'):
     return '\n'.join(lines).rstrip() + '\n'
 
 
+def render_context(host, revision, source=ROOT / 'instructions'):
+    info = json.loads((source / 'hosts.json').read_text())['hosts'][host]
+    return '\n'.join([
+        '<!-- Generated for ' + host + ' by codex-skills scripts/global-instructions.py at ' + revision[:12] + '. -->',
+        '# Homelab infrastructure context', '',
+        '@' + info['home'] + '/.homelab/HOMELAB.md', '',
+        'If your client does not expand `@` references, open that file yourself. '
+        'Your global client file carries the working rules; this file only adds directory context. '
+        'Read the nearest more-specific `AGENTS.md` when one exists. Live state overrides documentation.', ''])
+
+
+def render_all(host, revision, source=ROOT / 'instructions'):
+    """Every managed file for a host, keyed by path relative to its home."""
+    info = json.loads((source / 'hosts.json').read_text())['hosts'][host]
+    files = {CLIENTS[c]: render(host, c, revision, source) for c in CLIENTS}
+    for relative in CONTEXT_FILES + tuple(info.get('contextFiles', [])):
+        files[relative] = render_context(host, revision, source)
+    if info.get('rtk'):
+        for relative in RTK_FILES:
+            files[relative] = (source / 'RTK.md').read_text()
+    return files
+
+
 def state(path):
     if path.is_symlink():
         return {'link': os.readlink(path)}
@@ -118,7 +145,7 @@ def retired_targets(home):
 
 def remote(mode, payload, run_dir=None):
     home = Path.home()
-    files = {home / CLIENTS[c]: text.encode() for c, text in payload['files'].items()}
+    files = {home / relative: text.encode() for relative, text in payload['files'].items()}
     for path, data in files.items():
         if digest(data) != payload['hashes'][str(path.relative_to(home))]:
             raise RuntimeError('Invalid deployment payload.')
@@ -212,9 +239,9 @@ def remote(mode, payload, run_dir=None):
 
 
 def payload_for(host, revision):
-    files = {c: render(host, c, revision) for c in CLIENTS}
+    files = render_all(host, revision)
     return {'host': host, 'revision': revision, 'files': files,
-            'hashes': {CLIENTS[c]: digest(t.encode()) for c, t in files.items()}}
+            'hashes': {relative: digest(t.encode()) for relative, t in files.items()}}
 
 
 def remote_source():
@@ -227,7 +254,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument('mode', choices=('render', 'plan', 'apply', 'verify', 'rollback'))
     p.add_argument('--host', required=True)
-    p.add_argument('--client', choices=sorted(CLIENTS), help='render: one client file')
+    p.add_argument('--file', help='render: one managed path relative to home, such as .codex/AGENTS.md')
     p.add_argument('--run', help='rollback: receipt directory (default: latest)')
     p.add_argument('--python', default='python3')
     args = p.parse_args()
@@ -239,9 +266,9 @@ def main():
         raise RuntimeError('Commit instructions/ and the deploy script before applying.')
     payload = payload_for(args.host, revision)
     if args.mode == 'render':
-        for client, text in payload['files'].items():
-            if not args.client or args.client == client:
-                print('===== ' + CLIENTS[client] + '\n' + text)
+        for relative, text in payload['files'].items():
+            if not args.file or args.file == relative:
+                print('===== ' + relative + '\n' + text)
         return
     if args.host == 'kvant' and Path.home() == Path('/home/onnwee') and os.uname().nodename.startswith('kvant'):
         remote(args.mode, payload, args.run)

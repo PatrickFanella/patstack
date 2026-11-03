@@ -11,9 +11,9 @@ Author personal Codex skills, optional skill profiles, and Kvant's Codex bootstr
 | Optional reservoir | `library/skills/` | Eligible skills copied to `~/.agents/skills/` by the profile command |
 | Optional profile membership | `profiles/*.txt` | `~/.agents/skill-profiles` links here |
 | Switchyard OpenCode skill selection | `runtime-bundles/switchyard-opencode.json` and the selected skill owners | Generated image-owned snapshot in Switchyard, with source/export hashes in `services/opencode/skills.lock.json` |
-| Profile command | `scripts/skill-profile` | `~/.agents/bin/skill-profile` links here |
+| Profile command | `scripts/skill-profile` | The Subsets fleet adapter (`runtime-bundles/subsets-fleet/`) links `~/.agents/bin/skill-profile` to its generated source snapshot on each device; the workstation-link manifest no longer claims it |
 | Global client instructions | `instructions/WORKING.md` and `instructions/hosts.json` | Rendered per host into `~/.codex/AGENTS.md`, `~/.claude/CLAUDE.md` and `~/.config/opencode/AGENTS.md` by `scripts/global-instructions.py` |
-| RTK guidance | `instructions/RTK.md` | Kvant's `~/.codex/RTK.md` and `~/.claude/RTK.md` link here; rendered files carry the short rule on RTK hosts |
+| RTK guidance | `instructions/RTK.md` | Rendered to `~/.codex/RTK.md` and `~/.claude/RTK.md` on hosts with `rtk: true`; client files also carry the short rule |
 | Shared docs policy and HOMELAB | Machinum canonical policy/host briefings | Guarded `sync-briefings.py` generates `~/.homelab/HOMELAB.md` |
 | Blacktower package and fleet enablement | Blacktower source and Estate Config `skills/hosts.json` | Estate Config's host-selected deployment |
 | Four-vault instructions and local skills | `vault-agents/<vault>/AGENTS.md` and `vault-agents/<vault>/skills/`; deployment map in `catalog/vault-agents.json` | Each vault's `AGENTS.md`, `.agents/skills/`, and compatible `.opencode/skills/` copies via `scripts/vault-agents.py`; existing optional-library copies are also mapped. Blacktower package copies retain their package owner and need a separate release. |
@@ -85,7 +85,12 @@ shared part is `instructions/WORKING.md`: the owner's working preferences,
 written from observed failures in session history and kept as defaults a prompt
 can override. When a correction recurs, add a rule there with a short bad/good
 example. Per-host facts (home, RTK, vaults, Blacktower, local notes) live in
-`instructions/hosts.json`; client differences live in the renderer.
+`instructions/hosts.json`; client differences live in the renderer. The same
+run also manages directory context files, which apply only to sessions started
+in that folder: `~/.agents/AGENTS.md` everywhere and any `contextFiles` listed
+for a host (Soyuz's `~/AGENTS.md`). On RTK hosts it writes `~/.codex/RTK.md` and
+`~/.claude/RTK.md`, which `rtk init --show` checks. Almaz's `~/.agents/CLAUDE.md`
+belongs to the Agent Hub repository there and is not managed.
 
 Claude expands `@` imports; Codex does not (checked on 2026-11-03 with a
 no-tools probe that could not see HOMELAB content). Codex and OpenCode files
