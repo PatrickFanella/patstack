@@ -1,6 +1,6 @@
 ---
 name: secrets-management
-description: Implement secure secrets management for CI/CD pipelines using Vault, AWS Secrets Manager, or native platform solutions. Use when handling sensitive credentials, rotating secrets, or securing CI/CD environments.
+description: "Secrets for CI and runtime: storage, injection, rotation, revocation and leak scanning with Vault, cloud secret managers or native CI secrets. Use when moving or rotating credentials."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -25,7 +25,7 @@ Implement secure secret storage, injection, rotation, and scanning for CI/CD and
 - Secret classes: API keys, DB creds, cert/key, tokens
 - Environments: dev/stage/prod and blast radius boundaries
 - Rotation/SLA requirements and consumer downtime tolerance
-- CI/CD tooling: GitHub Actions, GitLab CI, Jenkins, Argo, etc.
+- CI/CD tooling: Gitea Actions (`tea actions secrets`), GitHub Actions, GitLab CI, Jenkins, Argo, etc.
 
 ## Quick Workflow
 

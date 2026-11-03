@@ -1,6 +1,6 @@
 ---
 name: revision
-description: Guide the edit pass after drafting. Use when revision feels overwhelming, when changes cascade unpredictably, when you can't see problems anymore, or when editing never ends.
+description: "Revise a drafted manuscript: plan the edit pass, control cascading changes, find problems you no longer see, decide when to stop. Use for fiction or nonfiction after a first draft."
 metadata:
   blacktower-pack: creative
   blacktower-kind: workflow

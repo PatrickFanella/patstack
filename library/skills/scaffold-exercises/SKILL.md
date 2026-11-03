@@ -1,6 +1,6 @@
 ---
 name: scaffold-exercises
-description: Scaffold coding exercises, solution directories, and explanatory material in the existing course format.
+description: "Scaffold course exercises (problem/solution/explainer folders, readmes) that pass `pnpm ai-hero-cli internal lint`. Use when stubbing or renumbering exercises in an AI Hero-format course repo."
 ---
 
 # Scaffold Exercises

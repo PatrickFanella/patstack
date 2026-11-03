@@ -1,6 +1,6 @@
 ---
 name: rust-pro
-description: Rust professional development skill covering async Rust, ownership, memory safety, Tokio, error handling, concurrency, and safe systems design. Use when writing, reviewing, debugging, or refactoring Rust code.
+description: "Rust work: ownership, lifetimes, async and Tokio, error handling, concurrency, safe systems design. Use when writing, reviewing, debugging or refactoring Rust. Not for Go (golang-pro)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -21,9 +21,6 @@ Use for Rust code that needs safe systems design, async/concurrent behavior, own
 ## Resources
 
 Load these only when needed; keep `SKILL.md` as the activation workflow.
-
-## Merged Skills
-
 
 ## Merged Skills
 

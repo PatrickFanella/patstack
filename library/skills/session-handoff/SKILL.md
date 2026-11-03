@@ -1,6 +1,6 @@
 ---
 name: session-handoff
-description: Preserve progress, decisions, blockers, and continuation steps when work will continue in another OpenCode session or agent. Use before a context reset, ownership transfer, or long pause; do not trigger for an ordinary final summary.
+description: "Write a continuation record (progress, decisions, blockers, next steps) when work moves to another session, agent or host. Use before a context reset, ownership transfer or long pause. Not for final summaries."
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow
@@ -14,7 +14,9 @@ metadata:
 
 Create a compact, evidence-backed continuation record. Use the repository's
 existing handoff convention; otherwise prefer `.blacktower/handoff.md`, unless
-the user requests another location.
+the user requests another location. When the next session runs on another host
+or client (T3 Code across hosts), commit or push the handoff, or give its
+absolute path and host, so the next agent can reach it.
 
 ## Workflow
 

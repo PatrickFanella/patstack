@@ -1,6 +1,6 @@
 ---
 name: sensitivity-check
-description: Evaluate representation and flag potential harm concerns. Use when writing characters from marginalized groups, depicting sensitive subject matter, or wanting to check for stereotypes and harmful tropes.
+description: "Check fiction for representation harm: stereotypes, harmful tropes, handling of sensitive subjects. Use when writing marginalized characters or difficult material, or for a sensitivity read."
 license: MIT
 metadata:
   blacktower-pack: creative

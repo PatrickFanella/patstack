@@ -1,6 +1,6 @@
 ---
 name: reverse-engineering
-description: Analyze executable binaries or network protocols; select disassembly or packet-analysis procedures as needed.
+description: "Reverse-engineer executable binaries or network protocols: disassembly, decompilation, control flow, packet dissection. Use for authorized analysis of compiled code or wire formats. Not for book outlines."
 ---
 
 # reverse-engineering

@@ -1,6 +1,6 @@
 ---
 name: review-doc-consistency
-description: 'Documentation consistency reviewer that checks alignment between code implementation and documentation. Use when user requests reviewing documentation vs code consistency, checking if README/docs are outdated, verifying API documentation accuracy. Applicable for (1) reviewing README vs implementation consistency (2) checking if docs/ directory content is outdated (3) verifying API/config documentation accuracy (4) generating documentation consistency reports. Trigger words include doc review, documentation consistency, check outdated docs, verify docs.'
+description: "Check README and docs against code, config and contracts; report outdated or wrong claims with evidence. Use for doc drift checks or API/config doc accuracy. Not for full quality review (review-quality)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

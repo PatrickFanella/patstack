@@ -1,6 +1,6 @@
 ---
 name: story-collaborator
-description: Act as an active writing partner who contributes content alongside the human writer. Use when the writer wants a collaborator who generates prose, dialogue, alternatives, and builds on their ideas. Applies Story Sense frameworks while actively contributing to the creative work. Contrasts with story-coach which never writes.
+description: "Co-write fiction with the writer: draft prose, dialogue and alternatives that build on their ideas, using Story Sense frameworks. Use when the writer wants generated content. Not for coaching only."
 license: MIT
 metadata:
   blacktower-pack: creative

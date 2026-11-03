@@ -1,6 +1,6 @@
 ---
 name: shared-world
-description: Maintain a wiki-style world bible for collaborative fiction. Use for long-running story worlds, shared universes, membership sites, or any fiction requiring persistent canonical reference.
+description: "Maintain a wiki-style world bible for shared or long-running fiction: canon entries, continuity, contributor reference. Use for shared universes or serial worlds that need persistent canon."
 license: MIT
 metadata:
   blacktower-pack: creative

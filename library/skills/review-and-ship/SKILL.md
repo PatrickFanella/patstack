@@ -1,6 +1,6 @@
 ---
 name: review-and-ship
-description: Review the current branch for bugs, intent fit, and test coverage; run or write tests; commit focused work; open or update a PR.
+description: "Ship the current branch: review for bugs and intent fit, run or add tests, commit focused work, open or update the PR (Gitea via tea, GitHub via gh). Use before handing off a branch. Not for read-only review."
 ---
 
 # Review and ship
@@ -24,15 +24,19 @@ Reviewing changes before shipping. Close key issues, verify behavior, and open o
 git fetch origin main
 git diff origin/main...HEAD
 git status
-gh pr checks --json name,bucket,state,workflow,link
+gh pr checks --json name,bucket,state,workflow,link   # GitHub remotes
+tea pulls list --login subcult-agent                   # Gitea remotes (git.subcult.tv)
+tea actions runs list --login subcult-agent
 ```
+
+Check `git remote -v` first. Gitea repositories on `git.subcult.tv` use `tea` with the `subcult-agent` login (`tea pulls create`, `tea actions runs list`); `gh` does not work for them.
 
 ## Guardrails
 
 - Prioritize correctness, security, and regressions over style-only comments.
 - Keep commits focused and avoid unrelated file changes.
 - If pre-commit checks fail, fix the issues rather than bypassing hooks.
-- Use `gh pr checks` instead of GitHub Actions-only commands when judging PR readiness.
+- Judge PR readiness from the hosted check results on the head commit: `gh pr checks` on GitHub, `tea actions runs list` or the commit status API on Gitea.
 
 ## Output
 

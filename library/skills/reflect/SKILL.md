@@ -1,6 +1,6 @@
 ---
 name: reflect
-description: Review recent work, find repeated workflow patterns, and suggest reusable skills, agents, commands, config changes, or playbooks. Use when the user asks to learn from past sessions, improve recurring workflows, or identify what should be turned into reusable agent instructions.
+description: "Reflect on recent sessions to find repeated workflow friction and propose the smallest reusable fix (skill, command, agent, config, playbook). Use for /reflect or learning from past work. Not for one-off debugging."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -43,8 +43,8 @@ Required behavior:
 - treat "create nothing" as a successful result when evidence is weak;
 - ask before changing prompts, skills, commands, agents, MCP access, or config;
 - avoid duplicating existing assets;
-- explain restart requirements for OpenCode config, prompt, agent, skill, MCP, or
-  plugin changes.
+- explain restart requirements for config, prompt, agent, skill, MCP, or plugin
+  changes in the client that will load them (OpenCode, Codex, or Claude Code).
 
 ## Evidence Sources
 
@@ -55,7 +55,7 @@ Use available evidence in this order:
    `.blacktower/`, notes, checkpoints, task progress files, and codemaps.
 3. Existing skills, commands, agents, prompt overrides, MCP permissions, and
    Blacktower configuration.
-4. Recent OpenCode logs or session artifacts if they are available and safe to
+4. Recent client logs or session artifacts (OpenCode, Codex, Claude Code) if they are available and safe to
    inspect.
 5. External docs only when a proposed workflow depends on a third-party tool or
    library whose behavior needs confirmation.
@@ -194,5 +194,5 @@ yet.
   exact reusable workflow.
 - Do not use private or sensitive material as examples in generated assets.
 - When config, prompt, agent, skill, MCP, or plugin files change, tell the user:
-  "This should apply on the next OpenCode run; restart OpenCode if you need it
+  "This should apply on the next run of <client>; restart <client> if you need it
   immediately."

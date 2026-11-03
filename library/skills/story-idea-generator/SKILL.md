@@ -1,6 +1,6 @@
 ---
 name: story-idea-generator
-description: Generate story concepts using a genre-first approach. Use when starting a new project, when brainstorming ideas, when a concept needs strengthening, or when you want to ensure emotional impact drives the story.
+description: "Generate or strengthen story concepts genre-first: emotional core, then setting, characters, plot. Use when starting a story, brainstorming premises, or fixing an emotionally vague concept."
 license: MIT
 metadata:
   blacktower-pack: creative

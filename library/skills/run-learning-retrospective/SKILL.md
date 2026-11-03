@@ -1,6 +1,6 @@
 ---
 name: run-learning-retrospective
-description: Evaluate learning progress, identify blockers, and adjust the learning plan
+description: "Retrospect on a learner's milestone: compare work to goals, find blockers and weak concepts, adjust pacing and the next checkpoint. Use after a study milestone. Not for software sprint retros."
 ---
 
 # Run a learning retrospective
@@ -19,7 +19,7 @@ Learner completed a milestone and needs data-driven adjustment to their plan.
 
 ## Tools
 
-- Use Ask user tool.
+- Ask the learner directly. Use the client's question tool when it has one (Claude Code `AskUserQuestion`, OpenCode `question`); otherwise ask in the reply and wait.
 
 ## Output
 

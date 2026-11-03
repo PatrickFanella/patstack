@@ -1,6 +1,6 @@
 ---
 name: setup-matt-pocock-skills
-description: "Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills."
+description: "Set up a repo for Matt Pocock's engineering skills: issue tracker (Gitea, GitHub, GitLab or local), triage labels, CONTEXT.md/ADR layout. Run once before to-tickets, triage or to-spec."
 disable-model-invocation: true
 ---
 
@@ -39,8 +39,9 @@ Lead each section with the recommended answer so the user can accept it in a wor
 
 > Explainer: The "issue tracker" is where issues live for this repo. Skills like `to-tickets`, `triage`, and `to-spec` read from and write to it. They need to know whether to call `gh issue create`, write a markdown file under `.scratch/`, or follow some other workflow you describe. Pick the place you actually track work for this repo.
 
-Default posture: these skills were designed for GitHub. If a `git remote` points at GitHub, propose that. If a `git remote` points at GitLab (`gitlab.com` or a self-hosted host), propose GitLab. Otherwise (or if the user prefers), offer:
+Default posture: these skills were designed for GitHub. If a `git remote` points at the Gitea host `git.subcult.tv`, propose Gitea. If it points at GitHub, propose that. If it points at GitLab (`gitlab.com` or a self-hosted host), propose GitLab. Otherwise (or if the user prefers), offer:
 
+- **Gitea**: issues live in the repo's Gitea Issues on `git.subcult.tv` (uses the `tea` CLI with `--login subcult-agent`; `gh` does not work here)
 - **GitHub**: issues live in the repo's GitHub Issues (uses the `gh` CLI)
 - **GitLab**: issues live in the repo's GitLab Issues (uses the [`glab`](https://gitlab.com/gitlab-org/cli) CLI)
 - **Local markdown**: issues live as files under `.scratch/<feature>/` in this repo (good for solo projects or repos without a remote)
@@ -108,6 +109,8 @@ Then write the docs files using the seed templates in this skill folder as a sta
 - [issue-tracker-local.md](./issue-tracker-local.md): local-markdown issue tracker
 - [triage-labels.md](./triage-labels.md): label mapping (only if `triage` is installed)
 - [domain.md](./domain.md): domain doc consumer rules + layout
+
+For Gitea, start from the GitHub template and swap in `tea` equivalents: `tea issues create --title ... --description ...`, `tea issues list`, `tea comments <n> "<body>"`, `tea issues edit <n> --add-labels ...`, `tea issues close <n>`, and `tea pulls` for PRs, each with `--login subcult-agent`. Drop GitHub-only features (sub-issues, native dependencies) or replace them with task lists and `Blocked by #n` lines, and check `tea <command> --help` before recording a flag.
 
 For "other" issue trackers, write `docs/agents/issue-tracker.md` from scratch using the user's description.
 

@@ -1,6 +1,6 @@
 ---
 name: solidity-security
-description: Implement or audit Solidity contracts for exploitable behavior, authorization, state transitions, and fund safety.
+description: "Write or audit Solidity contracts for reentrancy, access control, state-transition and upgrade risks, and fund safety. Use for DeFi, token, NFT or proxy hardening and audit prep."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

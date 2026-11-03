@@ -1,6 +1,6 @@
 ---
 name: reverse-outliner
-description: Reverse-engineer published books into structured scene-by-scene outlines for study. Use when analyzing craft, learning story structure from masters, or creating teaching materials from existing works.
+description: "Outline a published book scene by scene to study its structure. Use when analyzing craft from existing works or building teaching material. Not for outlining your own draft."
 license: MIT
 metadata:
   blacktower-pack: creative

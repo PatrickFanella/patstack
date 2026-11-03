@@ -1,6 +1,6 @@
 ---
 name: scheduled-tasks
-description: Create and manage scheduled tasks for OpenCode. Use when the user wants to schedule one-off or recurring tasks, check task status, or learn how to set up recurring task files. Provides guidance on permissions, cron schedules, and the scheduler daemon.
+description: "Schedule OpenCode tasks: one-off schedule_task runs, recurring cron task files, status and history, unattended permissions. Use only with the OpenCode scheduler plugin. Not for T3 or Claude schedules."
 metadata:
   blacktower-pack: integrations
   blacktower-kind: workflow

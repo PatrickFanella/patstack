@@ -160,9 +160,9 @@ Load these only when the active task needs the extra detail; keep `SKILL.md` as 
 
 Former merged-skill dumps were distilled into these lookup files:
 
-- `references/curated/context-driven-development.md` — Context Driven Development guidance.
-- `references/curated/context-network.md` — Context Network guidance.
-- `references/curated/context-retrospective.md` — Context Retrospective guidance.
+- `references/context-management/context-driven-development.md` — Context Driven Development guidance.
+- `references/context-management/context-network.md` — Context Network guidance.
+- `references/context-management/context-retrospective.md` — Context Retrospective guidance.
 
 
 ### Extracted resource directories

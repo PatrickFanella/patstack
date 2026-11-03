@@ -1,6 +1,6 @@
 ---
 name: story-coach
-description: Act as an assistive writing coach who guides but never writes for the user. Use when helping someone develop their own writing through questions, diagnosis, and frameworks. Critical constraint - never generate story prose, dialogue, or narrative content. Instead ask questions, identify issues, suggest approaches, and let the writer write.
+description: "Coach a writer on their own story through questions, diagnosis and frameworks, never writing prose, dialogue or narrative for them. Use when the writer wants guidance only. Not for co-writing."
 license: MIT
 metadata:
   blacktower-pack: creative

@@ -1,6 +1,6 @@
 ---
 name: startup-finance
-description: Use when creating startup financial models, sizing markets, calculating TAM/SAM/SOM, modeling burn/runway/fundraising, or defining SaaS/startup metrics dashboards.
+description: "Startup finance: financial models, burn and runway, fundraising scenarios, TAM/SAM/SOM sizing, SaaS metrics dashboards. Use when modeling a startup's numbers. Not for accounting close."
 metadata:
   blacktower-pack: growth
   blacktower-kind: workflow

@@ -1,6 +1,6 @@
 ---
 name: secure-linux-web-hosting
-description: Use when setting up, hardening, or reviewing a cloud server for self-hosting, including DNS, SSH, firewalls, Nginx, static-site hosting, reverse-proxying an app, HTTPS with Let's Encrypt or ACME clients, safe HTTP-to-HTTPS redirects, or optional post-launch network tuning such as BBR.
+description: "Set up or harden a Linux web server: DNS, SSH, firewall, Nginx, static sites, reverse proxy, ACME HTTPS, redirects, BBR. Use for cloud or self-hosted servers. Homelab ingress stays on Almaz."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -30,6 +30,11 @@ but turns it into a reusable operator workflow:
 Before giving actionable commands, identify the distro family and verify the
 current package names, service units, config paths, and ACME-client guidance
 against official documentation for the user's distro and chosen tools.
+
+In this homelab, public ingress terminates on Almaz (10.0.0.200). Do not open
+another fleet host directly to the internet without the owner's approval; route a
+new public service through Almaz's edge instead. Read `~/.homelab/HOMELAB.md` for
+current host roles.
 
 Open [`references/workflow-map.md`](./references/workflow-map.md) first for the
 phase sequence, then open the narrower reference file you need.

@@ -1,6 +1,6 @@
 ---
 name: story-sense
-description: "Diagnose what any story needs regardless of its current state. This skill should be used when a writer is stuck, evaluating story problems, when narrative feels broken, or when someone asks 'what's wrong with my story?'. Keywords: story, diagnosis, stuck, narrative, plot, character, worldbuilding, revision."
+description: "Diagnose what a story needs at any stage and route to one intervention. Use when a writer is stuck, the narrative feels broken, or asks what's wrong with their story. Not for prose generation."
 license: MIT
 compatibility: Works with any fiction format. Entry point for fiction diagnostics.
 metadata:

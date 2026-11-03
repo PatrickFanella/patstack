@@ -1,6 +1,6 @@
 ---
 name: release-engineer
-description: Prepare and verify Blacktower builds, package artifacts, installers, generated schemas, bundled skills, migrations, and release notes. Use when work touches package publishing, CLI install/update behavior, schema generation, release validation scripts, or compatibility promises.
+description: "Release Blacktower packages: builds, installers, generated schemas, bundled skill index, migrations, release notes. Use when a Blacktower change alters what users install or upgrade. Not for other repositories."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: internal

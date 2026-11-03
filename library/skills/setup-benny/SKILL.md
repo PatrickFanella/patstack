@@ -1,6 +1,6 @@
 ---
 name: setup-benny
-description: Configure Benny and prepare its triage and repro automations. Use when installing Benny or changing its Slack, tracker, repository, routing, control, model, or budget settings.
+description: "Set up Benny, pstack's Cursor Slack triage and repro automation pack: copy the pack, configure Slack, tracker, repo, routing, models and budget. Use only when installing or reconfiguring Benny."
 disable-model-invocation: true
 ---
 

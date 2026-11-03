@@ -1,6 +1,6 @@
 ---
 name: seo-pro
-description: SEO professional skill covering technical SEO audits, AI search visibility, schema/JSON-LD, and programmatic SEO. Use for ranking/indexing issues, metadata, crawlability, structured data, AI citations, topic architecture, or generating SEO pages at scale.
+description: "SEO work: technical audits, indexing and crawlability, metadata, schema/JSON-LD, AI-search citations, programmatic SEO pages. Use for ranking or traffic problems or SEO implementation."
 metadata:
   blacktower-pack: growth
   blacktower-kind: workflow

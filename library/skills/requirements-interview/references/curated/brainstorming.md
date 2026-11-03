@@ -4,7 +4,7 @@ Curated from a previously merged skill. This file keeps the useful task guidance
 
 ## Extracted Resources
 
-- `scripts/brainstorming/`
+- `scripts/brainstorming/` (not retained in this copy)
 
 ## Guidance
 

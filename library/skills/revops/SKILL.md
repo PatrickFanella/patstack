@@ -1,6 +1,6 @@
 ---
 name: revops
-description: "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales handoff,' 'data hygiene,' 'leads aren't getting to sales,' 'pipeline management,' 'lead qualification,' or 'when should marketing hand off to sales.' Use this for anything involving the systems and processes that connect marketing to revenue. For cold outreach emails, see cold-email. For email drip campaigns, see email-sequence. For pricing decisions, see pricing-strategy."
+description: "RevOps systems: lead lifecycle, scoring, routing, MQL/SQL handoff, pipeline stages, deal desk, CRM automation and hygiene. Use when marketing-to-sales flow breaks. Not for drip sequences (email-sequence)."
 metadata:
   blacktower-pack: growth
   blacktower-kind: workflow

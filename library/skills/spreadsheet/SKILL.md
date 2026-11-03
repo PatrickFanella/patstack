@@ -1,6 +1,6 @@
 ---
 name: "spreadsheet"
-description: "Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) using Python (`openpyxl`, `pandas`), especially when formulas, references, and formatting need to be preserved and verified."
+description: "Create, edit, analyze or format .xlsx, .csv or .tsv with openpyxl and pandas while preserving formulas and formatting; render via LibreOffice for checks. Use for spreadsheet file work."
 compatibility: Requires Python 3 with openpyxl and pandas; visual conversion may require LibreOffice.
 metadata:
   blacktower-pack: engineering

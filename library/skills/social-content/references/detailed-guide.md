@@ -43,9 +43,9 @@ Gather this context (ask if not provided):
 | TikTok | Brand awareness, younger audiences | 1-4x/day | Short-form video |
 | Facebook | Communities, local businesses | 1-2x/day | Groups, native video |
 
-**For detailed platform strategies**: See [references/platforms.md](references/platforms.md)
+**For detailed platform strategies**: See [references/platforms.md](platforms.md)
 
-**For hashtag limits and character counts**: See [references/platform-limits.md](references/platform-limits.md)
+**For hashtag limits and character counts**: See [references/platform-limits.md](platform-limits.md)
 
 ---
 
@@ -98,7 +98,7 @@ The first line determines whether anyone reads the rest.
 - "[Common advice] is wrong. Here's why:"
 - "I stopped [common practice] and [positive result]."
 
-**For post templates and more hooks**: See [references/post-templates.md](references/post-templates.md)
+**For post templates and more hooks**: See [references/post-templates.md](post-templates.md)
 
 ---
 
@@ -300,7 +300,7 @@ Instead of guessing, analyze what's working for top creators in your niche:
 5. **Layer your voice** — Apply patterns with authenticity
 6. **Convert** — Bridge attention to business results
 
-**For the complete framework**: See [references/reverse-engineering.md](references/reverse-engineering.md)
+**For the complete framework**: See [references/reverse-engineering.md](reverse-engineering.md)
 
 ---
 
@@ -381,7 +381,7 @@ Tools: CapCut (free), Descript, Captions.ai, Premiere Pro
 5. **No CTA** — tell viewers what to do
 6. **Ignoring comments** — engagement in first hour matters
 
-**For video hook formulas and scripting templates**: See [references/short-form-video.md](references/short-form-video.md)
+**For video hook formulas and scripting templates**: See [references/short-form-video.md](short-form-video.md)
 
 ---
 

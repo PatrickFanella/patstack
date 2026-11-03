@@ -1,6 +1,6 @@
 ---
 name: skill-creator
-description: Create, evaluate, or improve an Agent Skills-compatible SKILL.md, including trigger descriptions, progressive disclosure, resources, and packaging. Use for skill authoring or catalog maintenance; do not trigger for generic prompt rewriting or ordinary project instructions.
+description: "Create, evaluate or improve an Agent Skills SKILL.md: trigger descriptions, progressive disclosure, resources, packaging, trigger evals. Use for skill authoring. Not for ordinary prompts or project instructions."
 compatibility: Requires Python 3 or Bun only when the selected validation or scaffolding script is used.
 metadata:
   blacktower-pack: engineering

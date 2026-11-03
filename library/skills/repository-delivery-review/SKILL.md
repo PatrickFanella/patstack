@@ -1,6 +1,6 @@
 ---
 name: repository-delivery-review
-description: Assess a repository's implementation status, completeness, delivery readiness, technical risks, or continued viability using instructions, architecture, documentation, plans, code, tests, and current verification evidence together. Use for comprehensive project audits, abandoned-project reviews, roadmap-versus-code comparisons, readiness reports, or requests to separate complete, incomplete, planned, and unverified capability. Do not use for reviewing only a local diff or a hosted pull request.
+description: "Audit a whole repository's delivery state: implemented, incomplete, planned and unverified work. Use for project audits, readiness or viability reports, roadmap-versus-code checks. Not for one diff or PR."
 ---
 
 # Repository Delivery Review

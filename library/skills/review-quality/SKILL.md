@@ -1,6 +1,6 @@
 ---
 name: review-quality
-description: "Unified codebase quality review: merge readiness verdict + maintainability (Clean Code) + docs-vs-code consistency. Use for code review, quality check, refactor check, outdated docs check, or merge/production readiness."
+description: "Review code quality in one pass: merge-readiness verdict, clean-code maintainability, and docs-vs-code consistency. Use for quality or production-readiness checks. Not for defect-only diff review (review-agent)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -22,9 +22,6 @@ Run unified code quality review: merge readiness, clean-code maintainability, do
 ## Resources
 
 - `references/full-guide.md` — detailed guidance.
-
-## Merged Skills
-
 
 ## Merged Skills
 

@@ -1,6 +1,6 @@
 ---
 name: statistical-distance
-description: Transform clichéd story elements by pushing along the emotional vector toward statistical edges. Use when first instincts are too predictable, when elements feel generic, or when you need the core methodology for avoiding statistical-center defaults.
+description: "Replace a cliched story element with a fresher one that keeps its emotional function, moving from the statistical center to the edge. Use when a first idea feels generic or predictable."
 license: MIT
 metadata:
   blacktower-pack: creative

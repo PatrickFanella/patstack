@@ -1,6 +1,6 @@
 ---
 name: skill-installer
-description: Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).
+description: "Install Codex skills into $CODEX_HOME/skills from openai/skills lists or a GitHub path. Use for an ad hoc Codex install. Not for skills managed by codex-skills profiles."
 metadata:
   short-description: Install curated skills from openai/skills or other repos
 ---
@@ -15,6 +15,8 @@ Use the helper scripts based on the task:
 - Install from another repo when the user provides a GitHub repo/path (including private repos).
 
 Install skills with the helper scripts.
+
+In this setup, durable skills are authored in the `codex-skills` repository on Kvant and deployed by its profile command; installed copies are deployment targets. Use this installer only for an ad hoc Codex install the user asked for, and tell the user it bypasses `codex-skills` drift tracking.
 
 ## Communication
 

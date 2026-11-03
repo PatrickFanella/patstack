@@ -1,6 +1,6 @@
 ---
 name: request-refactor-plan
-description: Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps.
+description: "Plan a refactor as tiny safe commits through a user interview, then file it as an issue in the repo's tracker (Gitea via tea, GitHub via gh). Use for refactor RFCs. Not for performing the refactor."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -24,7 +24,7 @@ This skill will be invoked when the user wants to create a refactor request. You
 
 7. Break the implementation into a plan of tiny commits. Remember Martin Fowler's advice to "make each refactoring step as small as possible, so that you can always see the program working."
 
-8. Create a GitHub issue with the refactor plan. Use the following template for the issue description:
+8. Create an issue with the refactor plan in the repository's tracker. Check `git remote -v`: for Gitea repositories on `git.subcult.tv`, use `tea issues create --login subcult-agent --title ... --description-file -`; for GitHub, use `gh issue create`. Use the following template for the issue description:
 
 <refactor-plan-template>
 

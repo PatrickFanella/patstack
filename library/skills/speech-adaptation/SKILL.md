@@ -1,6 +1,6 @@
 ---
 name: speech-adaptation
-description: "Transform comprehensive written content into purposeful spoken guidance. Use when adapting for speech, converting to spoken format, optimizing for listening, or creating audio content from written material. Keywords: speech, audio, spoken, listening, adaptation, podcast."
+description: "Adapt written content for listening: compress, front-load value, restructure for podcasts, talks, voice assistants or audio scripts. Use when converting text to spoken form."
 license: MIT
 metadata:
   blacktower-pack: creative

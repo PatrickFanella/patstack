@@ -1,6 +1,6 @@
 ---
 name: simplify
-description: Simplifies code for clarity without changing behavior. Use for readability, maintainability, and complexity reduction after behavior is understood.
+description: "Simplify working code for readability without changing behavior: flatten nesting, clarify names, remove duplication, scoped to recent changes. Use after tests pass. Not for structural refactors (refactor)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
