@@ -10,6 +10,8 @@ Imported `AGENTS.md`, SKILL.md, scripts and examples inside reference collection
 
 Start at Home.md and Focus.md. Keep the home quiet and do not infer new priorities. Personal captures belong in 000 Inbox, inquiries and practice in 001 Projects/Threads, independent outputs in 001 Projects/Works, responsibilities in 002 Areas, and personal media/templates/periodic notes in 003 Resources. Preserve daily-note and coaching ledgers.
 
+Copilot keeps its conversations, skills, projects and memory in `003 Resources/copilot/`. Write generated files, drafts and intermediates to `003 Resources/copilot/outputs/` unless the user names another destination; do not create `copilot/` or `outputs/` at the vault root.
+
 Homelab notes now belong in Machinum. The retired System Docs Vault subtree is temporarily read-only; do not bypass its guard. SUBCULT product and publishing work belongs in SUBCULT, and social/Patreon source content belongs in `~/Work/Subcult/subcult-tv/studio/content/`. Bulk Karakeep imports are owned by Archivum.
 
 Migration paths are recorded in scripts/vault-split/layout.json. For registry checks run `rtk proxy python scripts/documentation.py audit`. Legacy structural/maintenance checks still have monolithic assumptions: report findings separately and do not rebuild retired folders to make them pass. Do not push the split deletion set as a website update before the publisher has been migrated.

@@ -10,7 +10,7 @@
     {
       "source": "vault-agents/ars-malefica/AGENTS.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/AGENTS.md",
-      "previous_sha256": "f184189c900106464f07b70d3e365453682e576b587b7da3076e3098106baaa5"
+      "previous_sha256": "4d1bd95d159eeadceec80cb16de81271acaca128e2a535bbddabf55c71cfcaff"
     },
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/SKILL.md",
