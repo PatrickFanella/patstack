@@ -9,9 +9,14 @@ def external_description_metrics(source_only=False):
     if source_only:
         return {'personalDescriptions': 0, 'personalBodies': 0,
                 'unverifiedExternalOwners': ['omarchy', 'diagnose-crash']}
-    result={'personalDescriptions': 0, 'personalBodies': 0, 'unverifiedExternalOwners': []}
+    result={'personalDescriptions': 0, 'personalBodies': 0, 'unverifiedExternalOwners': [], 'absentExternalOwners': []}
     for name in ['omarchy','diagnose-crash']:
-        p=pathlib.Path.home()/'.codex/skills'/name/'SKILL.md';_,front,body=p.read_text().split('---',2)
+        folder=pathlib.Path.home()/'.codex/skills'/name
+        # OS owners are per host (Omarchy now runs only on Sputnik). No link means not installed;
+        # a dangling link still fails below.
+        if not folder.exists() and not folder.is_symlink():
+            result['absentExternalOwners'].append(name);continue
+        p=folder/'SKILL.md';_,front,body=p.read_text().split('---',2)
         result['personalDescriptions']+=len(yaml.safe_load(front)['description'])
         result['personalBodies']+=len(body)
     return result
@@ -21,6 +26,8 @@ def capability_path_errors(caps, source_only=False):
     for capability in caps:
         if source_only and capability.get('kind') in {'external','system'}:
             unverified.append(capability['owner'])
+        elif capability.get('kind') in {'external','system'} and not (ROOT/capability['path']).exists() and not (ROOT/capability['path']).is_symlink():
+            continue  # OS owner not installed on this host
         elif not (ROOT/capability['path']).exists():
             errors.append(f'unreachable capability {capability}')
     return errors,sorted(set(unverified))
@@ -73,6 +80,7 @@ def main(source_only=False):
     for key in ['personalDescriptions','personalBodies']:metrics[key]+=external[key]
     metrics['sourceOnly']=source_only
     metrics['unverifiedExternalOwners']=external['unverifiedExternalOwners']
+    metrics['absentExternalOwners']=external.get('absentExternalOwners',[])
     metrics['personalDescriptionScope']='repository sources' if source_only else 'sources and installed OS owners'
     metrics['personalEntrypoints']=len(actual)
     if len(actual)!=54:errors.append(f'personal entrypoint count {len(actual)} != 54')

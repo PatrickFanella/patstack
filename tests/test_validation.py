@@ -19,11 +19,24 @@ class ExternalOwnerTests(unittest.TestCase):
         self.assertEqual(len(errors),1)
         self.assertIn('source owner',errors[0])
 
-    def test_default_still_checks_installed_capability_paths(self):
+    def test_default_skips_os_owner_not_installed_on_host(self):
         errors,unverified=validation.capability_path_errors([
             {'kind': 'external', 'owner': 'OS owner', 'path': '/unavailable/os-owner'}])
-        self.assertEqual(len(errors),1)
+        self.assertEqual(errors,[])
         self.assertEqual(unverified,[])
+
+    def test_default_rejects_dangling_os_owner_link(self):
+        with tempfile.TemporaryDirectory() as directory:
+            link=Path(directory)/'os-owner'
+            link.symlink_to(Path(directory)/'removed-package')
+            errors,_=validation.capability_path_errors([
+                {'kind': 'external', 'owner': 'OS owner', 'path': str(link)}])
+        self.assertEqual(len(errors),1)
+
+    def test_default_still_rejects_missing_repository_capability(self):
+        errors,_=validation.capability_path_errors([
+            {'kind': 'personal', 'owner': 'source owner', 'path': 'missing-capability-source'}])
+        self.assertEqual(len(errors),1)
 
     def test_source_only_never_reads_installed_skills_and_reports_boundary(self):
         with patch.object(validation.pathlib.Path, 'home', side_effect=AssertionError('must not read installed owners')):
@@ -31,8 +44,17 @@ class ExternalOwnerTests(unittest.TestCase):
         self.assertEqual(result['unverifiedExternalOwners'], ['omarchy', 'diagnose-crash'])
         self.assertEqual(result['personalDescriptions'], 0)
 
-    def test_default_still_requires_external_owners(self):
+    def test_default_reports_external_owners_absent_from_host(self):
         with tempfile.TemporaryDirectory() as directory, patch.object(validation.pathlib.Path, 'home', return_value=Path(directory)):
+            result = validation.external_description_metrics()
+        self.assertEqual(result['absentExternalOwners'], ['omarchy', 'diagnose-crash'])
+        self.assertEqual(result['personalDescriptions'], 0)
+
+    def test_default_still_rejects_dangling_external_owner_link(self):
+        with tempfile.TemporaryDirectory() as directory, patch.object(validation.pathlib.Path, 'home', return_value=Path(directory)):
+            skills = Path(directory)/'.codex/skills'
+            skills.mkdir(parents=True)
+            (skills/'omarchy').symlink_to(Path(directory)/'removed-package/omarchy')
             with self.assertRaises(FileNotFoundError):
                 validation.external_description_metrics()
 
