@@ -151,7 +151,11 @@ def selection_for(names: list[str], activate_all: bool) -> set[str]:
     selected = set(skill_dirs(LIBRARY)) if activate_all else read_manifest("core")
     for name in names:
         selected |= read_manifest(name)
-    missing = selected - set(skill_dirs(LIBRARY)) - set(managed_shared())
+    # A profile may name a curated owner; the curated base provides it and
+    # reserved_names() keeps it out of the optional selection.
+    catalog = json.loads((SOURCE / "catalog/proposed-catalog.json").read_text())
+    curated = {item["name"] for item in catalog if item.get("scope", "personal") == "personal"}
+    missing = selected - set(skill_dirs(LIBRARY)) - set(managed_shared()) - curated
     if missing:
         fail(f"profile manifests reference missing skills: {', '.join(sorted(missing))}")
     return (selected - reserved_names()) | set(managed_shared())
