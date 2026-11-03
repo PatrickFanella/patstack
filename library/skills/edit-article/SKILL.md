@@ -1,6 +1,6 @@
 ---
 name: edit-article
-description: Edit and improve articles by restructuring sections, improving clarity, and tightening prose. Use when user wants to edit, revise, or improve an article draft.
+description: "Article editing: restructure, clarify and tighten an existing article draft section by section. Not for prose-pattern cleanup alone (unslop)."
 metadata:
   blacktower-pack: creative
   blacktower-kind: workflow

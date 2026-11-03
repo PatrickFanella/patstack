@@ -7,10 +7,10 @@ Transparent-image requests use built-in `image_gen` first. It has no true transp
 1. Generate the requested subject on a perfectly flat solid chroma-key background.
 2. Use `#00ff00` by default; use `#ff00ff` for green subjects and avoid `#0000ff` for blue subjects. Never choose a key color present in the subject.
 3. Move or copy the selected source from `$CODEX_HOME/generated_images/...` into the workspace or `tmp/imagegen/`.
-4. Run the installed helper, not a project-relative script:
+4. Run this skill's bundled helper (`$IMAGEGEN_SKILL` is the directory holding this skill's `SKILL.md`), not a project script:
 
 ```bash
-python "${CODEX_HOME:-$HOME/.codex}/skills/.system/imagegen/scripts/remove_chroma_key.py" \
+python "$IMAGEGEN_SKILL/scripts/remove_chroma_key.py" \
   --input <source> \
   --out <final.png> \
   --auto-key border \

@@ -1,6 +1,6 @@
 ---
 name: dna-extraction
-description: Extract the functional DNA from existing works (TV, film, books, plays). Use when adapting a source work, when analyzing what makes something work, when creating trope maps for reuse, or when you need to separate structural necessity from stylistic choice.
+description: "Story DNA: extract the functional structure of a TV show, film, book or play for adaptation or trope mapping, separating structural necessity from stylistic choice."
 license: MIT
 metadata:
   blacktower-pack: creative
@@ -80,7 +80,7 @@ Rule: **function over form**.
 
 - Full guide: `references/full-guide.md`
 - Scripts:
-  - `scripts/extract-functions.ts`
+  - `scripts/extract-functions.ts` (Scripts are Deno programs (`deno run --allow-read ...`). Deno is not installed on the fleet by default; `mise exec deno -- deno run ...` runs one without a global install.)
   - `scripts/emotional-beat-map.ts`
   - `scripts/structural-stylistic.ts`
 - Data:

@@ -1,6 +1,6 @@
 ---
 name: dialogue
-description: Diagnose flat dialogue, same-voice characters, and lack of subtext. Use when conversations feel wooden, characters sound alike, or dialogue only does one thing at a time.
+description: "Fiction dialogue: diagnose flat or wooden dialogue, characters who sound alike, or missing subtext, and suggest revisions."
 license: MIT
 metadata:
   blacktower-pack: creative
@@ -45,4 +45,4 @@ Diagnose flat dialogue, same-voice characters, and lack of subtext. Use when con
 ## Resources
 
 - `references/detailed-guide.md` — detailed framework and edge cases; load only the sections needed for the task.
-- `scripts/` — deterministic helpers; inspect --help and side effects before use.
+- `scripts/` — deterministic helpers; inspect --help and side effects before use. Scripts are Deno programs (`deno run --allow-read ...`). Deno is not installed on the fleet by default; `mise exec deno -- deno run ...` runs one without a global install.

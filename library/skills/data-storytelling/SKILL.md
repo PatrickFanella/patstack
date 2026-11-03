@@ -1,6 +1,6 @@
 ---
 name: data-storytelling
-description: Transform data into compelling narratives using visualization, context, and persuasive structure. Use when presenting analytics to stakeholders, creating data reports, or building executive presentations.
+description: "Data narrative: turn analysis results into a stakeholder report or presentation with context, chosen charts and a clear recommendation."
 metadata:
   blacktower-pack: growth
   blacktower-kind: workflow

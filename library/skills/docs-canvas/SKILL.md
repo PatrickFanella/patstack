@@ -1,12 +1,6 @@
 ---
 name: docs-canvas
-description: >-
-  Render a documentation-style Cursor Canvas that organizes architecture
-  notes, API references, walkthroughs, and how-tos into a navigable layout
-  with sections, tables of contents, and cross-references. Use when the
-  user asks for a docs canvas, documentation overview, architecture
-  walkthrough, API reference page, or wants to render structured
-  documentation as an interactive canvas.
+description: "Cursor docs canvas: render architecture notes, API references or walkthroughs as a navigable Cursor Canvas. Cursor only; the procedure is still a placeholder outline."
 ---
 
 # Docs Canvas

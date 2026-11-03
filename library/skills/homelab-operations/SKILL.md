@@ -1,6 +1,6 @@
 ---
 name: homelab-operations
-description: Route homelab health, incidents, backups and service changes to current Machinum inventory and operating procedures across workspaces.
+description: "Homelab operations: route fleet health checks, incidents, backups and service changes to Machinum inventory and runbooks before acting on a host."
 ---
 
 # Homelab operations

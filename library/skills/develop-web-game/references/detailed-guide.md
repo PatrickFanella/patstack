@@ -7,12 +7,12 @@ Build games in small steps and validate every change. Treat each iteration as: i
 ## Skill paths (set once)
 
 ```bash
-export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
-export WEB_GAME_CLIENT="$CODEX_HOME/skills/develop-web-game/scripts/web_game_playwright_client.js"
-export WEB_GAME_ACTIONS="$CODEX_HOME/skills/develop-web-game/references/action_payloads.json"
+export WEB_GAME_SKILL="${WEB_GAME_SKILL:-$HOME/.agents/skills/develop-web-game}"
+export WEB_GAME_CLIENT="$WEB_GAME_SKILL/scripts/web_game_playwright_client.js"
+export WEB_GAME_ACTIONS="$WEB_GAME_SKILL/references/action_payloads.json"
 ```
 
-User-scoped skills install under `$CODEX_HOME/skills` (default: `~/.codex/skills`).
+Set `WEB_GAME_SKILL` to the directory that holds this skill's `SKILL.md`. Optional skills deploy to `~/.agents/skills` for Codex and OpenCode; Claude Code copies live under `~/.claude/skills`.
 
 ## Workflow
 
@@ -138,11 +138,11 @@ At the end of your work, leave TODOs and suggestions for the next agent in `prog
 
 ## Scripts
 
-- `$WEB_GAME_CLIENT` (installed default: `$CODEX_HOME/skills/develop-web-game/scripts/web_game_playwright_client.js`) — Playwright-based action loop with virtual-time stepping, screenshot capture, and console error buffering. You must pass an action burst via `--actions-file`, `--actions-json`, or `--click`.
+- `$WEB_GAME_CLIENT` (default: `$WEB_GAME_SKILL/scripts/web_game_playwright_client.js`) — Playwright-based action loop with virtual-time stepping, screenshot capture, and console error buffering. You must pass an action burst via `--actions-file`, `--actions-json`, or `--click`.
 
 ## References
 
-- `$WEB_GAME_ACTIONS` (installed default: `$CODEX_HOME/skills/develop-web-game/references/action_payloads.json`) — example action payloads (keyboard + mouse, per-frame capture). Use these to build your burst.
+- `$WEB_GAME_ACTIONS` (default: `$WEB_GAME_SKILL/references/action_payloads.json`) — example action payloads (keyboard + mouse, per-frame capture). Use these to build your burst.
 
 ## Resources
 

@@ -1,8 +1,6 @@
 ---
 name: game-design-theory
-description: |
-  Comprehensive game design theory covering MDA framework, player psychology,
-  balance principles, and progression systems. Master why games are fun.
+description: "Game design theory: apply MDA, player psychology, balance and progression principles to explain or improve why a game is fun. Not for building the game (develop-web-game)."
 metadata:
   blacktower-pack: creative
   blacktower-kind: workflow

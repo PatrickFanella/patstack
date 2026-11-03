@@ -1,6 +1,6 @@
 ---
 name: customize-opencode
-description: Use ONLY when editing or creating OpenCode's own configuration, including opencode.json/jsonc, .opencode files, ~/.config/opencode files, OpenCode agents, skills, plugins, MCP servers, or permission rules.
+description: "OpenCode configuration: edit opencode.json/jsonc, .opencode or ~/.config/opencode agents, skills, plugins, MCP servers or permissions. Not for Codex or Claude Code settings."
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow

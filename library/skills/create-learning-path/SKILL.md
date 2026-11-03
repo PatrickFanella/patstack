@@ -1,6 +1,6 @@
 ---
 name: create-learning-path
-description: Build a personalized learning roadmap with milestones and practice checkpoints
+description: "Learning roadmap: plan a multi-session path through a topic with milestones, practice exercises and progress checkpoints. Not for in-session tutoring (gentle-teaching)."
 ---
 
 # Create a learning path
@@ -19,7 +19,7 @@ Building capability in a topic over multiple sessions.
 
 ## Tools
 
-- Use Ask user tool.
+- Ask the user for baseline, goals and available time. Use the client's structured question tool when it has one; otherwise ask in plain text.
 
 ## Guardrails
 

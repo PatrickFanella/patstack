@@ -1,12 +1,6 @@
 ---
 name: diagnose-crash
-description: >
-  Diagnose why a program crashed on this machine, from a systemd-coredump core dump.
-  Use when a process has segfaulted, aborted, or otherwise dumped core, when asked
-  why an application crashed or disappeared, or when a "Process crashed:" desktop
-  notification is acted on. Triggers: crash, segfault, SIGSEGV, SIGABRT, core dump,
-  coredumpctl, "why did X crash", "X keeps crashing", backtrace symbolization.
-  Covers reporting a confirmed Omarchy bug upstream — see reporting.md.
+description: "Linux crash diagnosis: explain a segfault, abort or core dump from systemd-coredump (coredumpctl), including backtrace symbolization. Covers filing confirmed Omarchy bugs from Sputnik."
 ---
 
 # Diagnosing a Crash
@@ -53,13 +47,21 @@ that it is actually implicated.
 
 ## Symbolize when you can
 
-This is Arch, which runs a public debuginfod server:
+Check `/etc/os-release` first. Kvant runs Debian 13; Sputnik runs Omarchy on
+Arch. Both distributions run a public debuginfod server:
+
+- Debian: `https://debuginfod.debian.net`
+- Arch/Omarchy: `https://debuginfod.archlinux.org`
+
+On Debian, `coredumpctl` comes from the `systemd-coredump` package; if it is
+missing, no cores were captured and the journal is the only evidence. Report
+that rather than installing it during diagnosis.
 
 ```bash
 core=$(mktemp -t crash-XXXXXX.core)
 trap 'rm -f "$core"' EXIT
 coredumpctl dump <pid> --output="$core"
-DEBUGINFOD_URLS="https://debuginfod.archlinux.org" \
+DEBUGINFOD_URLS="<debuginfod URL for this distribution>" \
   gdb -q <executable> "$core" \
   -batch -ex 'set debuginfod enabled on' -ex 'bt'
 ```
@@ -91,7 +93,7 @@ above, which is a copy of the crashed process's memory.
 
 ## If it is an Omarchy bug
 
-Most application crashes are upstream bugs in those applications, not Omarchy's
+This applies only on an Omarchy host such as Sputnik. Most application crashes are upstream bugs in those applications, not Omarchy's
 doing. In the minority of cases where the cause really does sit within Omarchy's
 sphere of control, read [`reporting.md`](reporting.md) before offering to file
 anything.

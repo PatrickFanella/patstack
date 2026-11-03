@@ -1,6 +1,6 @@
 ---
 name: gentle-teaching
-description: Guide AI-assisted learning that empowers learners while maintaining appropriate boundaries. Use when teaching, explaining concepts, or helping someone who is struggling to understand.
+description: "Teaching: explain a concept or coach someone who is struggling so they build the understanding themselves. Not for planning a curriculum (create-learning-path)."
 license: MIT
 metadata:
   blacktower-pack: creative

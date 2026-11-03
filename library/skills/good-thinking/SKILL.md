@@ -1,6 +1,6 @@
 ---
 name: good-thinking
-description: Diagnose thinking failures and maintain process-sovereignty by auditing cognitive orientation and operation balance.
+description: "Thinking audit: diagnose a stuck or distorted reasoning process by checking cognitive orientation and the balance of thinking operations."
 license: MIT
 metadata:
   blacktower-pack: creative

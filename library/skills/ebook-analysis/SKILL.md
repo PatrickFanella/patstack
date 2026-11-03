@@ -1,6 +1,6 @@
 ---
 name: ebook-analysis
-description: Parse ebooks, extract concepts and entities with citation traceability, classify by type/layer, and synthesize across book collections.
+description: "Ebook analysis: parse ebooks, extract concepts and entities with citations, classify them, and synthesize across a book collection. Needs Bun or a Node TypeScript runtime."
 compatibility: Requires Bun or a Node.js-compatible TypeScript runtime and local access to the ebook source files.
 license: MIT
 metadata:

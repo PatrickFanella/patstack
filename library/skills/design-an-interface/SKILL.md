@@ -1,6 +1,6 @@
 ---
 name: design-an-interface
-description: Generate multiple radically different interface designs for a module using parallel sub-agents. Use when user wants to design an API, explore interface options, compare module shapes, or mentions "design it twice".
+description: "Interface alternatives: design a module or API several radically different ways in parallel and compare them, for 'design it twice'. Not for implementing the chosen design."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -28,7 +28,7 @@ Ask: "What does this module need to do? Who will use it?"
 
 ### 2. Generate Designs (Parallel Sub-Agents)
 
-Spawn 3+ sub-agents simultaneously using Task tool. Each must produce a **radically different** approach.
+Spawn 3+ sub-agents simultaneously with the client's subagent tool (Claude Code Agent tool, Codex or OpenCode subagents). If none is available, draft each design in turn under its own constraint without reading the others first. Each must produce a **radically different** approach.
 
 ```
 Prompt template for each sub-agent:

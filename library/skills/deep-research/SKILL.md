@@ -1,6 +1,6 @@
 ---
 name: deep-research
-description: "Research a topic thoroughly in this repo and return a structured summary with file references. Use when you need to understand how something works, find patterns across modules, or audit implementations."
+description: "Repository research: investigate how something works across this codebase and return cited findings, key files and open questions, without editing. Not for web research (web-search)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -22,6 +22,9 @@ Research $ARGUMENTS thoroughly.
 3. **Open questions / unknowns**: what you could not confirm from the repo
 
 ## Method
+
+Glob, Grep and Read are Claude Code tool names. In Codex or OpenCode, use `rg --files`, `rg` and ordinary file reads for the same steps.
+
 
 - Start broad: use Glob to find likely modules.
 - Then go deep: use Grep to locate exact identifiers and call sites.

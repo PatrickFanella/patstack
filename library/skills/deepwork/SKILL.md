@@ -1,6 +1,6 @@
 ---
 name: deepwork
-description: Orchestrator-only workflow for heavy coding sessions, multi-phase implementation, and risky refactors. Use for complex work that needs planning, review gates, and persistent progress tracking.
+description: "OpenCode deepwork: orchestrate a long, risky multi-phase coding task with Blacktower @oracle reviews, delegated phases and a progress file. Needs OpenCode with Blacktower agents."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -13,6 +13,10 @@ metadata:
 Deepwork is an orchestrator workflow for heavy coding sessions. Use it when the
 work is broad, risky, multi-file, or likely to span several implementation
 phases. Do not use it for trivial edits, quick docs changes, or simple bug fixes.
+
+This workflow assumes OpenCode with the Blacktower agents (`@oracle`, `@librarian`,
+`@designer`, `@fixer`) and OpenCode todos. In Codex or Claude Code, use the
+`implementation-plan` skill for a long effort instead of imitating these agents.
 
 ## Core Contract
 

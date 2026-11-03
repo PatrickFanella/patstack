@@ -1,6 +1,6 @@
 ---
 name: create-plugin-scaffold
-description: Create a new Cursor plugin scaffold with a valid manifest, component directories, and marketplace wiring. Use when starting a new plugin or adding a plugin to a multi-plugin repository.
+description: "Cursor plugin scaffold: create a new Cursor plugin with manifest, component folders and marketplace entry. Not for Claude Code, Codex or OpenCode plugins."
 ---
 
 # Create plugin scaffold

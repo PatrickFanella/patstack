@@ -1,6 +1,6 @@
 ---
 name: "imagegen"
-description: "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas."
+description: "Raster image generation: create or edit bitmap images (photos, sprites, textures, transparent cutouts) with Codex image_gen or the OpenAI CLI fallback. Not for SVG, icons or code-native visuals."
 ---
 
 # Image Generation Skill
@@ -12,6 +12,8 @@ Generate or edit raster assets for the current project: photos, illustrations, t
 Use for new bitmap assets, bitmap edits, reference-guided variants, and transparent-background cutouts. Do not use for an established SVG/vector/logo system, simple code-native diagrams or shapes, editable native source assets, or deterministic code-native output.
 
 ## Core mode rules
+
+- Built-in `image_gen` exists only in Codex, which also ships its own system `imagegen` skill. In Claude Code or OpenCode, say that only the CLI fallback is available and use it on an explicit request.
 
 - Use built-in `image_gen` by default for generation, edits, and simple transparency requests; it does not need `OPENAI_API_KEY`.
 - Use `scripts/image_gen.py` only when the user explicitly requests CLI/API/model controls, or explicitly confirms the true-transparency fallback. It requires `OPENAI_API_KEY`; never create a one-off SDK runner or modify the script.
@@ -47,5 +49,5 @@ Use for new bitmap assets, bitmap edits, reference-guided variants, and transpar
 - [Image API reference](references/image-api.md): CLI model, size, quality, mask, and output parameters.
 - [Network setup](references/codex-network.md): CLI network/sandbox troubleshooting.
 - `scripts/image_gen.py`: fallback-only implementation; load/use only after CLI is explicitly selected.
-- `$CODEX_HOME/skills/.system/imagegen/scripts/remove_chroma_key.py`: installed helper for built-in transparent-image post-processing.
+- `scripts/remove_chroma_key.py`: bundled helper for built-in transparent-image post-processing.
 - `assets/`: presentation metadata icons; they are not generation inputs.

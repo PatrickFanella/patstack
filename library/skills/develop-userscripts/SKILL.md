@@ -1,6 +1,6 @@
 ---
 name: develop-userscripts
-description: 'Userscript implementation and debugging: page lifecycle, browser permissions, injection, and update behavior.'
+description: "Userscripts: build or debug browser userscripts, covering page lifecycle, injection, manager permissions and update behavior. Not for full browser extensions."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

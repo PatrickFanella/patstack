@@ -1,6 +1,6 @@
 ---
 name: genre-conventions
-description: Diagnose genre problems and generate genre-specific elements. Use when genre promise is unclear, when elements feel misplaced, when secondary genres compete with primary, or when you need genre-specific entropy. Covers all 11 elemental genres from the Writing Excuses framework.
+description: "Genre diagnosis: fix an unclear genre promise, misplaced elements or competing genres, or generate genre-specific elements from the Writing Excuses elemental genres."
 license: MIT
 metadata:
   blacktower-pack: creative
@@ -45,4 +45,4 @@ Diagnose genre problems and generate genre-specific elements. Use when genre pro
 ## Resources
 
 - `references/detailed-guide.md` — detailed framework and edge cases; load only the sections needed for the task.
-- `scripts/` — deterministic helpers; inspect --help and side effects before use.
+- `scripts/` — deterministic helpers; inspect --help and side effects before use. Scripts are Deno programs (`deno run --allow-read ...`). Deno is not installed on the fleet by default; `mise exec deno -- deno run ...` runs one without a global install.

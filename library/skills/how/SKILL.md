@@ -1,6 +1,6 @@
 ---
 name: how
-description: "Use for \"how does X work\", code walkthroughs before changing something, and placement / ownership / layering questions (\"where should this live\", \"which package owns this\", \"is this the right layer\"). Explains subsystem architecture, runtime flow, onboarding mental models. Can critique architecture. Use why for motivation."
+description: "Code walkthrough: explain how a subsystem or flow works, or where code should live, before changing it; optional architecture critique. Not for why it exists (why)."
 ---
 
 # How
@@ -11,6 +11,10 @@ Two modes:
 
 1. **Explain** (default). Explore the codebase and produce a clear explanation
 2. **Critique.** Explain first, then spawn multiple models to independently identify architectural issues
+
+## Client mapping
+
+The `subagent_type`, `model` and `readonly` fields below come from Cursor. Map them to the client in use: Claude Code's Agent tool (Explore or general-purpose subagent), Codex subagents, or OpenCode subagents. When no model is configured, use the client's default. When the client has no subagents, run the explorer angles yourself in sequence, read-only, then write the explanation.
 
 ## Explain Mode
 

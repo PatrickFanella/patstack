@@ -1,6 +1,6 @@
 ---
 name: fact-check
-description: Verify claims in generated output against sources. Use as a separate pass AFTER content generation to catch hallucinations. Critical constraint - cannot be reliably combined with generation in a single pass.
+description: "Fact check: verify claims in already generated output against sources, as a separate pass after writing. Not for generating the content."
 license: MIT
 metadata:
   blacktower-pack: core

@@ -1,6 +1,6 @@
 ---
 name: "doc"
-description: "Use when the task involves reading, creating, or editing `.docx` documents, especially when formatting or layout fidelity matters; prefer `python-docx` plus the bundled `scripts/render_docx.py` for visual checks."
+description: "DOCX files: read, create or edit .docx documents with python-docx and render pages to check layout. Not for PDFs or Markdown docs."
 compatibility: Requires Python 3 and python-docx; visual rendering additionally requires LibreOffice and Poppler.
 metadata:
   blacktower-pack: engineering
