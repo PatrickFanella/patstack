@@ -15,12 +15,12 @@
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.agents/skills/vault-monthly-maintenance/SKILL.md",
-      "previous_sha256": "46dcfbef052db6a783ad0d2e42a7be1fef0d0d2462d87049f3126cf152e2b58f"
+      "previous_sha256": "da7ba32e947e5192658cdf3b96820bc50cd842e2b19ebe835c8b07a9a5aa9c86"
     },
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/SKILL.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/vault-monthly-maintenance/SKILL.md",
-      "previous_sha256": "46dcfbef052db6a783ad0d2e42a7be1fef0d0d2462d87049f3126cf152e2b58f"
+      "previous_sha256": "da7ba32e947e5192658cdf3b96820bc50cd842e2b19ebe835c8b07a9a5aa9c86"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-inbox-intake/SKILL.md",
@@ -195,7 +195,7 @@
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-workflows/scripts/validate-workflows.py",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.agents/skills/ars-malefica-workflows/scripts/validate-workflows.py",
-      "previous_sha256": null
+      "previous_sha256": "0692cd92c8c9154b7c5e27c321090a01f293db41bc2ba89229723d67e4343a69"
     },
     {
       "source": "vault-agents/ars-malefica/skills/ars-malefica-workflows/scripts/validate-workflows.py",
@@ -305,12 +305,12 @@
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/references/monthly-checklist.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.agents/skills/vault-monthly-maintenance/references/monthly-checklist.md",
-      "previous_sha256": "d3d4f05ba841759a64d9ad5dbb0aeea26dcaa4480bba32a8ebfa352b26c08707"
+      "previous_sha256": "5194c6c01ac3bfe20875c1019b131ba8e2858c53bdc18526bfa79c29bc4159e8"
     },
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/references/monthly-checklist.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/.opencode/skills/vault-monthly-maintenance/references/monthly-checklist.md",
-      "previous_sha256": "d3d4f05ba841759a64d9ad5dbb0aeea26dcaa4480bba32a8ebfa352b26c08707"
+      "previous_sha256": "5194c6c01ac3bfe20875c1019b131ba8e2858c53bdc18526bfa79c29bc4159e8"
     },
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/assets/monthly-maintenance-note.md",
@@ -570,7 +570,7 @@
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/SKILL.md",
       "destination": "/home/onnwee/Work/Tools/codex-skills/library/skills/vault-monthly-maintenance/SKILL.md",
-      "previous_sha256": "46dcfbef052db6a783ad0d2e42a7be1fef0d0d2462d87049f3126cf152e2b58f"
+      "previous_sha256": "da7ba32e947e5192658cdf3b96820bc50cd842e2b19ebe835c8b07a9a5aa9c86"
     },
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/agents/openai.yaml",
@@ -580,7 +580,7 @@
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/references/monthly-checklist.md",
       "destination": "/home/onnwee/Work/Tools/codex-skills/library/skills/vault-monthly-maintenance/references/monthly-checklist.md",
-      "previous_sha256": "d3d4f05ba841759a64d9ad5dbb0aeea26dcaa4480bba32a8ebfa352b26c08707"
+      "previous_sha256": "5194c6c01ac3bfe20875c1019b131ba8e2858c53bdc18526bfa79c29bc4159e8"
     },
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/assets/monthly-maintenance-note.md",

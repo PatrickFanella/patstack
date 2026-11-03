@@ -40,7 +40,7 @@ Use this skill for the recurring monthly pass over `/home/onnwee/Work/Vaults/Ars
    - Do not leave active unmanaged markdown in Inbox.
 
 3. **Review active work**
-   - Open `001 Projects/Works/Active Work Dashboard.md`.
+   - Open `001 Projects/Works/Works Index.md`.
    - Check active works, paused works, stale workbenches, open decisions, and recent inbox/imports.
    - Review personal active work. Inspect SUBCULT product/blog boards or Studio social plans only when the requested review includes those owners.
    - Update workbench notes before editing project bodies.
