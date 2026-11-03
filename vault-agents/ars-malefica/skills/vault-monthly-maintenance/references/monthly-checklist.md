@@ -19,7 +19,7 @@ Use this checklist for a 15-30 minute monthly upkeep pass.
 
 ## 3. Active work
 
-- [ ] Open `001 Projects/Works/Active Work Dashboard.md`.
+- [ ] Open `001 Projects/Works/Works Index.md`.
 - [ ] Review active works.
 - [ ] Review paused works.
 - [ ] Review stale workbenches.
