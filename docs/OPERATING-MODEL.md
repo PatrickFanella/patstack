@@ -13,6 +13,7 @@ Author personal Codex skills, optional skill profiles, and Kvant's Codex bootstr
 | Switchyard OpenCode skill selection | `runtime-bundles/switchyard-opencode.json` and the selected skill owners | Generated image-owned snapshot in Switchyard, with source/export hashes in `services/opencode/skills.lock.json` |
 | Profile command | `scripts/skill-profile` | `~/.agents/bin/skill-profile` links here |
 | Global Codex context and RTK | `instructions/` | `~/.codex/AGENTS.md` and `RTK.md` link here |
+| Owner working style | `instructions/WORKING.md` | `~/.config/agent-instructions/WORKING.md` on every host via `scripts/working-style-host.py`; client files import it |
 | Shared docs policy and HOMELAB | Machinum canonical policy/host briefings | Guarded `sync-briefings.py` generates `~/.homelab/HOMELAB.md` |
 | Blacktower package and fleet enablement | Blacktower source and Estate Config `skills/hosts.json` | Estate Config's host-selected deployment |
 | Four-vault instructions and local skills | `vault-agents/<vault>/AGENTS.md` and `vault-agents/<vault>/skills/`; deployment map in `catalog/vault-agents.json` | Each vault's `AGENTS.md`, `.agents/skills/`, and compatible `.opencode/skills/` copies via `scripts/vault-agents.py`; existing optional-library copies are also mapped. Blacktower package copies retain their package owner and need a separate release. |
@@ -76,6 +77,23 @@ source-link installer.
 
 Claude keeps its own runtime, model, permissions, hooks, authentication, and
 memory. A linked skill that needs a missing tool must report the limitation.
+
+## Owner working style
+
+`instructions/WORKING.md` holds the owner's working preferences for every agent
+and client. Write it from observed failures in session history, not copied
+templates; keep each rule a default the owner can override in a prompt. When a
+correction recurs, add a rule here with a short bad/good example.
+
+Deploy per host with `python scripts/working-style-host.py plan --host HOST`,
+review, then `apply` and `verify`. The script writes the shared copy, appends one
+`@` import to user-controlled `~/.codex/AGENTS.md`, `~/.claude/CLAUDE.md` and
+`~/.config/opencode/AGENTS.md`, and skips client files that are symlinks into
+this repository (Kvant imports it from `instructions/AGENTS.md`). It refuses a
+hand-edited deployed copy and any change between plan and apply. Receipts and
+private backups are under `~/.local/state/agent-working-style/`; `rollback`
+restores the latest run only when every touched file still matches its receipt.
+Start a fresh agent session to load a change.
 
 ## Runtime instruction chain
 
