@@ -1,6 +1,6 @@
 ---
 name: test-suite-pruner
-description: "Use when a test suite is oversized, slow, flaky or brittle: baseline it, delete obsolete tests with evidence, reshape around contracts. Not for test-first work (tdd)."
+description: "Use when a test suite is oversized, slow, flaky or brittle: baseline it, delete obsolete tests with evidence, reshape around contracts. Not for test-first work (red-green-loop)."
 ---
 
 # test-suite-pruner

@@ -1,6 +1,6 @@
 ---
 name: fiction-line-edit
-description: "Use when fiction or narrative prose has solid structure but reads flat: monotonous sentence rhythm, generic word choice or inconsistent voice. Not for filler in technical prose (unslop)."
+description: "Use when fiction or narrative prose has solid structure but reads flat: monotonous sentence rhythm, generic word choice or inconsistent voice. Not for filler in technical prose (prose-unslop)."
 license: MIT
 metadata:
   blacktower-pack: creative

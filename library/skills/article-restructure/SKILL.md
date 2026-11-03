@@ -1,6 +1,6 @@
 ---
 name: article-restructure
-description: "Article editing: restructure, clarify and tighten an existing article draft section by section. Not for prose-pattern cleanup alone (unslop)."
+description: "Article editing: restructure, clarify and tighten an existing article draft section by section. Not for prose-pattern cleanup alone (prose-unslop)."
 metadata:
   blacktower-pack: creative
   blacktower-kind: workflow

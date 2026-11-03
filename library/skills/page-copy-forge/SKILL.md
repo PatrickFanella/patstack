@@ -1,6 +1,6 @@
 ---
 name: page-copy-forge
-description: "Marketing page copy: write or rewrite homepage, landing, pricing, feature or about-page text, headlines, CTAs and value propositions. Not for email flows (drip-sequence-planner) or prose cleanup (unslop)."
+description: "Marketing page copy: write or rewrite homepage, landing, pricing, feature or about-page text, headlines, CTAs and value propositions. Not for email flows (drip-sequence-planner) or prose cleanup (prose-unslop)."
 metadata:
   blacktower-pack: growth
   blacktower-kind: workflow

@@ -1,6 +1,6 @@
 ---
 name: desktop-capture
-description: "Screenshot the desktop, a window, an app or a pixel region with OS tools. Use when explicitly asked or a tool's own capture is unavailable. Not for web pages (playwright) or headless Kvant."
+description: "Screenshot the desktop, a window, an app or a pixel region with OS tools. Use when explicitly asked or a tool's own capture is unavailable. Not for web pages (playwright-cli-driver) or headless Kvant."
 compatibility: Requires Python 3 plus OS screenshot utilities and screen-capture permission on the host.
 metadata:
   blacktower-pack: integrations

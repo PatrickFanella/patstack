@@ -1,6 +1,6 @@
 ---
 name: build-plan-writer
-description: "Implementation plan: turn a spec or requirements for a multi-step coding task into a bite-sized, test-first plan before touching code. Not for multi-session maps; use wayfinder."
+description: "Implementation plan: turn a spec or requirements for a multi-step coding task into a bite-sized, test-first plan before touching code. Not for multi-session maps; use wayfinder-map."
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow

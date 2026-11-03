@@ -1,6 +1,6 @@
 ---
 name: tech-doc-writer
-description: Use when writing or restructuring technical docs, RFCs or READMEs, translating README variants, or checking docs against code. Not for a quick prose pass (unslop).
+description: Use when writing or restructuring technical docs, RFCs or READMEs, translating README variants, or checking docs against code. Not for a quick prose pass (prose-unslop).
 ---
 
 # tech-doc-writer
