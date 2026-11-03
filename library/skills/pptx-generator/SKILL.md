@@ -1,6 +1,6 @@
 ---
 name: pptx-generator
-description: "Create and manipulate PowerPoint PPTX files programmatically. Use when the user needs to generate presentations, modify PPTX templates, extract slide content, create thumbnail previews, or automate PowerPoint workflows. Supports both template-based generation (for branding compliance) and from-scratch creation. Keywords: PowerPoint, PPTX, presentation, slides, template, deck, slideshow, corporate, branding."
+description: "PowerPoint PPTX automation: generate decks from templates or scratch, edit slides, extract content, render thumbnails. Use for programmatic .pptx files; not for deck design advice."
 license: MIT
 compatibility: Requires Deno with --allow-read, --allow-write permissions
 metadata:

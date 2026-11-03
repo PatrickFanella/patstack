@@ -1,6 +1,6 @@
 ---
 name: "playwright"
-description: "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script."
+description: "Real browser automation from the terminal with playwright-cli: navigate, fill forms, snapshot, screenshot, extract data and debug UI flows."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: tool-wrapper

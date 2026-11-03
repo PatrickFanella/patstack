@@ -1,6 +1,6 @@
 ---
 name: presentation-design
-description: "Design and evaluate presentations that communicate effectively. Use when designing a presentation, creating slides, getting presentation feedback, structuring a talk, or reviewing slides. Keywords: presentation, slides, talk, PowerPoint, Keynote, reveal.js."
+description: "Presentation design and critique: structure a talk, design slides, review a deck for clarity and flow. Not for building .pptx files programmatically (pptx-generator)."
 license: MIT
 metadata:
   blacktower-pack: creative

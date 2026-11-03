@@ -1,6 +1,6 @@
 ---
 name: orchestrate
-description: Use only when the user explicitly types `/orchestrate <goal>` to decompose a large task, spawn a tree of parallel cloud-agent workers/subplanners/verifiers via the Cursor SDK, and collect structured handoffs; do not invoke autonomously.
+description: "Explicit /orchestrate <goal> only: fan a large task out to Cursor SDK cloud agents (planners, workers, verifiers) with structured handoffs. Needs a Cursor API key; never auto-invoke."
 disable-model-invocation: true
 ---
 
@@ -12,6 +12,7 @@ An explicit `/orchestrate <goal>` fans out a large task across parallel Cursor c
 
 ## Setup
 
+- This fleet usually runs Codex, Claude Code and OpenCode. This skill works only with a Cursor account and the Cursor SDK; without `CURSOR_API_KEY`, say so and coordinate local subagents with `multi-agent-workflows` instead.
 - `CURSOR_API_KEY` must be a personal/user key. Create it from [Cursor Dashboard > Integrations](https://cursor.com/dashboard/integrations), then read `cursor-sdk` Auth before using it.
 - `SLACK_BOT_TOKEN` is optional. When set, pass `--slack-channel <id>` to `kickoff` or the first `run --root`, or set `SLACK_CHANNEL_ID`. The script stores the channel in `plan.slackChannel`, posts the kickoff thread there, mirrors task status, and reads Andon reactions. When the token is unset, the script logs once and runs without Slack visibility; correctness does not change.
 

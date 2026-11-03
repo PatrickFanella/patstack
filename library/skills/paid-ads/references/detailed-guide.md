@@ -99,7 +99,7 @@ LI_LeadGen_CMOs-SaaS_Whitepaper_Mar24
 **Social Proof Lead:**
 > [Impressive stat or testimonial] → [What you do] → [CTA]
 
-**For detailed templates and headline formulas**: See [references/ad-copy-templates.md](references/ad-copy-templates.md)
+**For detailed templates and headline formulas**: See [references/ad-copy-templates.md](ad-copy-templates.md)
 
 ---
 
@@ -119,7 +119,7 @@ LI_LeadGen_CMOs-SaaS_Whitepaper_Mar24
 - **Retargeting**: Segment by funnel stage (visitors vs. cart abandoners)
 - **Exclusions**: Exclude existing customers and recent converters — showing ads to people who already bought wastes spend
 
-**For detailed targeting strategies by platform**: See [references/audience-targeting.md](references/audience-targeting.md)
+**For detailed targeting strategies by platform**: See [references/audience-targeting.md](audience-targeting.md)
 
 ---
 
@@ -238,9 +238,9 @@ LI_LeadGen_CMOs-SaaS_Whitepaper_Mar24
 
 Before launching campaigns, ensure proper tracking and account setup.
 
-**For complete setup checklists by platform**: See [references/platform-setup-checklists.md](references/platform-setup-checklists.md)
+**For complete setup checklists by platform**: See [references/platform-setup-checklists.md](platform-setup-checklists.md)
 
-**For conversion pixel installation and event setup**: See [references/conversion-tracking.md](references/conversion-tracking.md)
+**For conversion pixel installation and event setup**: See [references/conversion-tracking.md](conversion-tracking.md)
 
 ### Universal Pre-Launch Checklist
 - [ ] Conversion tracking tested with real conversion

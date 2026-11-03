@@ -15,7 +15,7 @@ LLMs are good at research, categorization, and quality control. Scripts are good
 
 ## Dataset Maturity Levels
 
-See [references/dataset-quality-criteria.md](references/dataset-quality-criteria.md) for complete criteria.
+See [references/dataset-quality-criteria.md](dataset-quality-criteria.md) for complete criteria.
 
 | Level | Size | Status | Use Case |
 |-------|------|--------|----------|

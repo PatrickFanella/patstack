@@ -1,6 +1,6 @@
 ---
 name: list-builder
-description: Build comprehensive randomization lists for creative entropy. Use when you need to create or expand lists of story elements (professions, locations, objects, names, etc.) for use with entropy tools. Leverages research sources like Kiwix/Wikipedia to build lists with good variety and size.
+description: Randomization lists for creative entropy tools. Use to create or expand varied lists of story elements (professions, places, objects, names) from Kiwix or Wikipedia-style sources.
 license: MIT
 metadata:
   blacktower-pack: creative

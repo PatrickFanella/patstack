@@ -1,6 +1,6 @@
 ---
 name: patreon-manager
-description: Patreon, changemaker, subcult.tv, Super Productivity, and Obsidian-vault promotion operations. Use when planning, drafting, scheduling, reviewing, or auditing Patreon supporter posts, public social promotion, changemaker-derived updates, subcult.tv companion posts, recurring Super Productivity tasks, or the Patreon docs in /home/onnwee/Work/Subcult/subcult-tv/studio/content/patreon.
+description: "SUBCULT Patreon operations: draft supporter posts and promo snippets from the changemaker digest or subcult.tv, plan the schedule, sync Super Productivity tasks, audit studio Patreon docs."
 metadata:
   blacktower-pack: personal
   blacktower-kind: workflow
@@ -20,7 +20,9 @@ Manage the Patreon growth system as an editorial + operations loop:
 
 > Public channels show the output. Patreon shows the process.
 
-Default workspace: `/home/onnwee/Work/Subcult/subcult-tv/studio/content/patreon`.
+Default workspace: `/home/onnwee/Work/Subcult/subcult-tv/studio/content/patreon` on Kvant.
+
+`changemaker` here means the daily changelog. Switchyard's native `changemaker-daily-digest` workflow on Kvant now produces it; the standalone Changemaker tool is history. Check the Kvant host briefing (`~/.homelab/HOMELAB.md`) for the current digest and posting-dashboard state before relying on older notes.
 
 ## Quick routing
 

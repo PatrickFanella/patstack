@@ -1,6 +1,6 @@
 ---
 name: naming
-description: Diagnose why names don't work and guide creation of names that do. Use for brand names, product names, character names, place names, and titles when something feels off or when systematic naming is needed.
+description: Naming diagnosis and generation for brands, products, characters, places and titles. Use when a name feels off or a set of names needs a systematic method.
 license: MIT
 metadata:
   blacktower-pack: creative

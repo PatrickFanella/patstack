@@ -1,6 +1,6 @@
 ---
 name: lyric-diagnostic
-description: Diagnose lyric problems across prosody, rhyme, meaning, register, sound, and structure. Use when AI-generated or human lyrics feel flat, cliched, awkward, or mismatched.
+description: Lyric diagnosis across prosody, rhyme, meaning, register, sound and structure. Use when human or AI-written lyrics feel flat, cliched, awkward or mismatched.
 license: MIT
 metadata:
   blacktower-pack: creative

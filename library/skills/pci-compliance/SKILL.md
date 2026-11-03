@@ -1,6 +1,6 @@
 ---
 name: pci-compliance
-description: Implement PCI DSS compliance requirements for secure handling of payment card data and payment systems. Use when securing payment processing, achieving PCI compliance, or implementing payment card security measures.
+description: "PCI DSS work for card payment systems: scope reduction, tokenization, cardholder data handling, segmentation and audit evidence. Use when building or reviewing payment flows."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

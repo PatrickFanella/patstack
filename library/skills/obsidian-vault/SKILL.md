@@ -1,6 +1,6 @@
 ---
 name: obsidian-vault
-description: Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Use when user wants to find, create, or organize notes in Obsidian.
+description: "Obsidian vault notes: search, create and organize notes with wikilinks and index notes. Use when finding, filing or linking notes in a vault."
 metadata:
   blacktower-pack: integrations
   blacktower-kind: workflow

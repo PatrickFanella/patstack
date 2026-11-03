@@ -1,6 +1,6 @@
 ---
 name: k8s-security-policies
-description: Implement Kubernetes security policies including NetworkPolicy, PodSecurityPolicy, and RBAC for production-grade security. Use when securing Kubernetes clusters, implementing network isolation, or enforcing pod security standards.
+description: "Kubernetes workload security: NetworkPolicy, Pod Security Admission labels and RBAC. Use when isolating namespaces, restricting pod privileges or scoping service accounts."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

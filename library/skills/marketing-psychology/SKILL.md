@@ -1,6 +1,6 @@
 ---
 name: marketing-psychology
-description: "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context."
+description: "Behavioral science in marketing: cognitive biases, anchoring, social proof, scarcity, loss aversion, framing and nudges. Use to explain or apply why people buy and decide."
 metadata:
   blacktower-pack: growth
   blacktower-kind: workflow

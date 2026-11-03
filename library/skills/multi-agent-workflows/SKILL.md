@@ -1,6 +1,6 @@
 ---
 name: multi-agent-workflows
-description: Coordinate bounded OpenCode or Blacktower subagents with explicit ownership, dependency-aware sequencing, result handoffs, and integration checks. Use for genuinely parallel work or specialist review; avoid it when one agent can finish the task more cheaply and safely.
+description: "Parallel subagent coordination (Claude Code, Codex, OpenCode, Blacktower): ownership, sequencing, handoffs and integration checks. Not when one agent can finish more cheaply."
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow
@@ -62,4 +62,4 @@ team shape, resolving file ownership, or designing a multi-stage collaboration.
 - `references/file-ownership.md`
 - `references/merge-strategies.md`
 - `references/messaging-patterns.md`
-- `references/full-guide.md`
+- `references/communication-guide.md`

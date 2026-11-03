@@ -1,6 +1,6 @@
 ---
 name: memory-forensics
-description: Master memory forensics techniques including memory acquisition, process analysis, and artifact extraction using Volatility and related tools. Use when analyzing memory dumps, investigating incidents, or performing malware analysis from RAM captures.
+description: "Memory forensics on RAM captures: acquisition, Volatility 3 process and network analysis, artifact extraction and malware triage. Use during incident response or dump analysis."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

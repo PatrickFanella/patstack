@@ -1,6 +1,6 @@
 ---
 name: observe-and-tune
-description: Autonomous observation loop for monitoring and improving a running software system. Use when asked to observe, tune, monitor, or loop over a system to assess health, output quality, and goal alignment — then make surgical fixes. Triggers on "observe", "tune", "monitor system", "check health", or when paired with /loop for recurring checks.
+description: "Observation loop for a running system: check recent activity, output quality and goal fit, then make surgical fixes. Use for \"observe\", \"tune\", or recurring health checks."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -16,6 +16,8 @@ Run one observation cycle, or pair with `/loop` for recurring monitoring:
 /observe-and-tune                    # one cycle now
 /loop 60m /observe-and-tune          # every hour
 ```
+
+`/loop` is a Claude Code command. In Codex or OpenCode, repeat the cycle with a T3 Code scheduled task or by rerunning the skill.
 
 ## Cycle Protocol
 

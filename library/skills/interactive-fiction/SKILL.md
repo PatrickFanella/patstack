@@ -1,6 +1,6 @@
 ---
 name: interactive-fiction
-description: Diagnose branching narrative problems. Use when choices feel meaningless, when branching is unmanageable, when player agency conflicts with authored story, or when interactive elements break narrative flow.
+description: Branching narrative diagnosis. Use when player choices feel meaningless, branches grow unmanageable, agency fights the authored story, or interactive elements break narrative flow.
 license: MIT
 metadata:
   blacktower-pack: creative

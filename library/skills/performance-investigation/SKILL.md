@@ -1,6 +1,6 @@
 ---
 name: performance-investigation
-description: Diagnose measurable performance regressions before optimizing. Use when an endpoint, job, query, build, render, or process is unexpectedly slow, CPU or memory usage is high, or a change needs benchmark-backed performance verification. Do not use for speculative optimization without an observed problem or target.
+description: "Measured performance regressions: slow endpoints, jobs, queries, builds or renders, high CPU or memory, benchmark-backed verification. Not for speculative optimization without a target."
 compatibility: Profiling and benchmark commands depend on the project runtime; use only tools already available in the target environment unless the user approves installation.
 metadata:
   blacktower-pack: engineering

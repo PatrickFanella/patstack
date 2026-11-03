@@ -1,6 +1,6 @@
 ---
 name: karakeep
-description: Official skill for how to use karakeep (the bookmark manager) and interact with it programmatically.
+description: "Karakeep bookmark manager through its CLI or API: add, search and tag bookmarks, manage lists, highlights and rules. Requires KARAKEEP_API_KEY and the server address."
 metadata:
   tags: bookmarks, bookmark manager, 2nd brain, productivity
   openclaw:

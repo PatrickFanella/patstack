@@ -1,6 +1,6 @@
 ---
 name: language-evolution
-description: Design evolving language systems for fictional worlds. Use when creating language families, dialects, linguistic history, or when language should reflect cultural and historical development.
+description: "Fictional language design. Use when creating language families, dialects, sound changes or linguistic history that should reflect a world's cultures and past."
 license: MIT
 metadata:
   blacktower-pack: creative

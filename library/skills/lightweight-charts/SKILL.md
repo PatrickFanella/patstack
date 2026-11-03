@@ -1,6 +1,6 @@
 ---
 name: lightweight-charts
-description: 'TradingView Lightweight Charts implementation: series, time scales, live updates, plugins, and framework integration.'
+description: "TradingView Lightweight Charts v5 code: series, time and price scales, realtime updates, markers, panes, plugins and primitives, React or Vue wrappers. Not for other chart libraries."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

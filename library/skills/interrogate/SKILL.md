@@ -1,6 +1,6 @@
 ---
 name: interrogate
-description: "Use for \"interrogate\", \"adversarial review\", \"multi-model review\", \"challenge this\", \"stress test this code\", \"find blind spots\", or \"tear this apart\". Multiple LLM reviewers challenge changes from independent angles."
+description: "Multi-model adversarial code review on explicit request: \"interrogate\", \"challenge this\", \"stress test this code\", \"find blind spots\". Not for routine single-reviewer review (code-review)."
 disable-model-invocation: true
 ---
 
@@ -33,7 +33,7 @@ Write one clear paragraph. Reviewers challenge whether the work achieves the int
 
 ## Step 3, Spawn Reviewers
 
-Launch all reviewers in a single message using the Task tool. Use the `interrogate reviewers` list from `~/.cursor/rules/pstack-models.mdc` when present, one reviewer per entry, extending or shrinking the Reviewer A/B/C/D labels below to the configured entry count; otherwise use the table defaults.
+Launch all reviewers in a single message using the client's subagent tool (Cursor's Task tool; Claude Code's Agent tool, whose `model` override accepts only Claude models). Where the client cannot pick models from other families, run the extra reviewers through the other installed CLIs instead, for example `codex exec`, `claude -p` and `opencode run`, each read-only and given the same filled prompt; if only one model family is available, say the review lacks model diversity. Use the `interrogate reviewers` list from `~/.cursor/rules/pstack-models.mdc` when present, one reviewer per entry, extending or shrinking the Reviewer A/B/C/D labels below to the configured entry count; otherwise use the table defaults.
 
 | Subagent | Default model |
 |----------|---------------|

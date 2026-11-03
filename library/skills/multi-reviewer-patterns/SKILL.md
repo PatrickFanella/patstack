@@ -1,6 +1,6 @@
 ---
 name: multi-reviewer-patterns
-description: Coordinate parallel code reviews across multiple quality dimensions with finding deduplication, severity calibration, and consolidated reporting. Use this skill when organizing multi-reviewer code reviews, calibrating finding severity, or consolidating review results.
+description: "Multi-reviewer code review orchestration: split review by quality dimension, deduplicate findings, calibrate severity and consolidate one report."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

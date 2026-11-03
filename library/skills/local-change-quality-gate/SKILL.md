@@ -1,6 +1,6 @@
 ---
 name: local-change-quality-gate
-description: Review a local Git working tree before commit, handoff, or pull-request preparation. Use when asked for a pre-commit check, local diff review, scope and test assessment, handoff readiness, or verification of uncommitted and staged changes without publishing them. Do not use for GitHub-hosted review comments, failing remote CI, committing, pushing, or opening a pull request.
+description: "Pre-commit review of a local working tree: staged and unstaged diff, scope, tests and handoff readiness. Not for hosted PR comments, remote CI, committing or pushing."
 ---
 
 # Local Change Quality Gate

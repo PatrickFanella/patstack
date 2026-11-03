@@ -1,6 +1,6 @@
 ---
 name: opentui
-description: Build OpenTUI terminal interfaces with the correct renderer lifecycle, input handling, and framework bindings.
+description: "OpenTUI terminal UI code: renderer lifecycle, layout, keyboard input, components, testing, and React or Solid bindings. Not for other TUI frameworks."
 metadata:
   blacktower-pack: integrations
   blacktower-kind: workflow

@@ -1,6 +1,6 @@
 ---
 name: loop-me
-description: Grill me about specs for the workflows I want to build, within this workspace.
+description: "Workflow-spec grilling on explicit request: interview the user about recurring loops worth delegating and write implementer-ready specs under workflows/*.md."
 disable-model-invocation: true
 argument-hint: "A workflow to design, or nothing to go find one"
 ---

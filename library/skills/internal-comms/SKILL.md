@@ -1,6 +1,6 @@
 ---
 name: internal-comms
-description: Draft internal communications in an organization's established formats, including status reports, leadership updates, newsletters, FAQs, incident reports, and project updates. Use when the audience and purpose are internal; do not trigger for external marketing copy.
+description: "Internal communications drafts in the organization's formats: status reports, leadership updates, newsletters, FAQs, incident reports, project updates. Not for external marketing copy."
 license: Complete terms in LICENSE.txt
 metadata:
   blacktower-pack: growth

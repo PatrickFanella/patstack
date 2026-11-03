@@ -1,6 +1,6 @@
 ---
 name: obsidian-cli
-description: Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and more. Also supports plugin and theme development with commands to reload plugins, run JavaScript, capture errors, take screenshots, and inspect the DOM. Use when the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from the command line, or develop and debug Obsidian plugins and themes.
+description: "Obsidian CLI against a running Obsidian app: read, create, search and edit notes, tasks and properties; reload plugins, run JS, capture errors and inspect the DOM during plugin work."
 compatibility: Requires the obsidian CLI, a local vault, and a running Obsidian application.
 metadata:
   blacktower-pack: integrations

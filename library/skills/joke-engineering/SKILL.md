@@ -1,6 +1,6 @@
 ---
 name: joke-engineering
-description: Diagnose and improve humor using systems thinking. Use when jokes fall flat, when humor feels forced, when punchlines don't land, or when you want to systematically enhance comedic writing. Treats jokes as engineerable connection systems.
+description: Humor diagnosis and repair. Use when jokes fall flat, humor feels forced, punchlines miss, or comedic writing needs systematic setup, misdirection and payoff work.
 license: MIT
 metadata:
   blacktower-pack: creative

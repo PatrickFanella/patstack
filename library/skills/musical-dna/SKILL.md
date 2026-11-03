@@ -1,6 +1,6 @@
 ---
 name: musical-dna
-description: Extract descriptive musical characteristics from any artist or band without using their name, building a vocabulary of sonic qualities for AI music generation, music description, or creative recombination.
+description: "Artist sound description without names. Use to extract an artist's or band's sonic traits into vocabulary for AI music prompts, music writing or creative recombination."
 license: MIT
 metadata:
   blacktower-pack: creative

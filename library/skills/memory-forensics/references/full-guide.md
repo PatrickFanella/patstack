@@ -49,7 +49,7 @@ virsh dump <domain> memory.raw --memory-only
 ## Volatility 3 Setup
 
 ```bash
-pip install volatility3
+uv tool install volatility3   # or pipx; Debian blocks system-wide pip installs
 vol -f memory.raw <plugin>
 vol -f memory.raw -s /path/to/symbols windows.pslist
 ```

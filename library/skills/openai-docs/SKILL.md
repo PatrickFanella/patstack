@@ -1,6 +1,6 @@
 ---
 name: "openai-docs"
-description: "Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations, help choosing the latest model for a use case, or explicit GPT-5.4 upgrade and prompt-upgrade guidance; prioritize OpenAI docs MCP tools, use bundled references only as helper context, and restrict any fallback browsing to official OpenAI domains."
+description: "OpenAI developer docs with citations: API and product questions, choosing the current model, model or prompt upgrades. Uses the OpenAI docs MCP; fallback browsing only on official OpenAI domains."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -34,10 +34,10 @@ Provide authoritative, current guidance from OpenAI developer docs using the dev
 
 If MCP tools fail or no OpenAI docs resources are available:
 
-1. Run the install command yourself: `codex mcp add openaiDeveloperDocs --url https://developers.openai.com/mcp`
+1. Run the install command for the current client yourself. Codex: `codex mcp add openaiDeveloperDocs --url https://developers.openai.com/mcp`. Claude Code: `claude mcp add --transport http openaiDeveloperDocs https://developers.openai.com/mcp`. OpenCode: add a `remote` MCP entry with that URL to `opencode.json`.
 2. If it fails due to permissions/sandboxing, immediately retry the same command with escalated permissions and include a 1-sentence justification for approval. Do not ask the user to run it yet.
 3. Only if the escalated attempt fails, ask the user to run the install command.
-4. Ask the user to restart Codex.
+4. Ask the user to restart the client (or start a new session) so the MCP tools load.
 5. Re-run the doc search/fetch after restart.
 
 ## Workflow

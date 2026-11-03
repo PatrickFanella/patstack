@@ -1,6 +1,6 @@
 ---
 name: mcp-builder
-description: Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, preferably in Go using the MCP API, with TypeScript as the primary fallback.
+description: "MCP server construction: tool contracts, transports, errors and evaluations, preferring Go with a TypeScript fallback. Not for registering or debugging an existing server."
 license: Complete terms in LICENSE.txt
 metadata:
   blacktower-pack: engineering

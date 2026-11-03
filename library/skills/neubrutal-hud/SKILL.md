@@ -1,20 +1,6 @@
 ---
 name: neubrutal-hud
-description: >
-  Neubrutal HUD design system for high-contrast broadcast interfaces,
-  dashboards, and control panels. Semantic HSL color tokens via CSS
-  variables, custom Tailwind v3 configuration, and 12 reusable React
-  primitives (ConsolePanel, HudSection, StatusLed, TabButton,
-  MessageRow, RecordCard, etc.). Dark-only theme with hard-edged
-  neubrutalist aesthetic: flat colors, hard borders, monospace
-  micro-labels, and scannable uppercase typography. 16:9 broadcast
-  framing, two-SPA architecture pattern (public overlay + operator
-  dashboard), and HUD CSS utilities (corner brackets, LEDs, scanlines,
-  prompt markers). Use when building any broadcast overlay, live
-  dashboard, control panel, or data-heavy terminal-style interface.
-  Use for Tailwind config setup, HUD component composition, semantic
-  color theming, overlay/sidebar layouts, accessibility-first
-  interaction patterns, or CSS-driven HUD effects.
+description: "Neubrutal HUD design system: dark high-contrast broadcast overlays, operator dashboards and control panels with semantic HSL tokens, Tailwind v3 config and React HUD primitives."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
