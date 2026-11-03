@@ -80,6 +80,15 @@ class FleetProfilesTests(unittest.TestCase):
         self.assertTrue((self.home / '.agents/skills/optional').exists())
         self.assertEqual(list(elsewhere.iterdir()), [])
 
+    def test_profile_may_name_a_curated_owner_but_not_an_unknown_skill(self):
+        (self.source / 'catalog/proposed-catalog.json').write_text(json.dumps([{'name': 'curated-owner', 'scope': 'personal'}]))
+        (self.source / 'profiles/mixed.txt').write_text('curated-owner\noptional\n')
+        self.run_cli('activate', 'mixed')
+        self.assertTrue((self.home / '.agents/skills/optional').exists())
+        self.assertFalse((self.home / '.agents/skills/curated-owner').exists())
+        (self.source / 'profiles/bogus.txt').write_text('nothing-provides-this\n')
+        self.run_cli('activate', 'bogus', success=False)
+
     def test_linked_shared_root_is_refused_without_writes(self):
         shutil.rmtree(self.home / '.agents/skills')
         elsewhere = self.home / 'elsewhere'
