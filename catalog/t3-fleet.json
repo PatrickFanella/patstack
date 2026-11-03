@@ -28,7 +28,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "@upstash/context7-mcp"
+        "@upstash/context7-mcp@4.4.1"
       ]
     },
     "CrowdReply": {
@@ -36,13 +36,16 @@
     },
     "buffer": {
       "url": "https://mcp.buffer.com/mcp"
+    },
+    "clera": {
+      "url": "https://mcp.getclera.com"
     }
   },
   "hostMcpOverrides": {
     "soyuz": {
       "context7": {
         "env": {
-          "PATH": "/opt/homebrew/bin:/Users/onnwee/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+          "PATH": "/Users/onnwee/.local/share/mise/installs/node/lts/bin:/Users/onnwee/.local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
         }
       }
     }
