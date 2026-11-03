@@ -32,6 +32,16 @@ class RenderTests(unittest.TestCase):
         self.assertNotIn('blacktower', gi.render('soyuz', 'claude', 'x' * 40))
         self.assertNotIn('blacktower', gi.render('kvant', 'codex', 'x' * 40))
 
+    def test_context_and_rtk_files_follow_host_facts(self):
+        soyuz = gi.render_all('soyuz', 'x' * 40)
+        self.assertIn('AGENTS.md', soyuz)
+        self.assertIn('@/Users/onnwee/.homelab/HOMELAB.md', soyuz['.agents/AGENTS.md'])
+        self.assertEqual(soyuz['.claude/RTK.md'], (ROOT / 'instructions/RTK.md').read_text())
+        nuc = gi.render_all('nuc', 'x' * 40)
+        self.assertNotIn('.codex/RTK.md', nuc)
+        self.assertNotIn('AGENTS.md', nuc)
+        self.assertIn('.agents/AGENTS.md', nuc)
+
     def test_remote_script_compiles(self):
         compile(gi.remote_source(), 'remote-script', 'exec')
 
@@ -63,7 +73,7 @@ class DeployTests(unittest.TestCase):
         claude.parent.mkdir(parents=True)
         claude.symlink_to(source)
         self.deploy()
-        self.assertEqual(self.codex.read_text(), self.payload['files']['codex'])
+        self.assertEqual(self.codex.read_text(), self.payload['files']['.codex/AGENTS.md'])
         self.assertEqual(self.codex.stat().st_mode & 0o777, 0o600)
         self.assertFalse(claude.is_symlink())
         self.assertEqual(source.read_text(), 'linked\n')
@@ -91,7 +101,7 @@ class DeployTests(unittest.TestCase):
         self.deploy()
         newer = dict(self.payload)
         newer['files'] = {c: t + '\n- extra\n' for c, t in self.payload['files'].items()}
-        newer['hashes'] = {gi.CLIENTS[c]: gi.digest(t.encode()) for c, t in newer['files'].items()}
+        newer['hashes'] = {r: gi.digest(t.encode()) for r, t in newer['files'].items()}
         self.deploy(newer)
         self.assertTrue(self.codex.read_text().endswith('- extra\n'))
         self.codex.write_text('later edit\n')

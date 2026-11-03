@@ -8,7 +8,7 @@
     "almaz": {"home": "/home/onnwee", "rtk": true},
     "nuc": {"home": "/home/onnwee", "rtk": false},
     "dozor": {"home": "/home/onnwee", "rtk": false},
-    "soyuz": {"home": "/Users/onnwee", "rtk": true, "blacktowerCodex": true,
+    "soyuz": {"home": "/Users/onnwee", "rtk": true, "blacktowerCodex": true, "contextFiles": ["AGENTS.md"],
       "vaults": "/Users/onnwee/Work/Vaults: ars-malefica and machinum",
       "notes": ["The data volume is usually nearly full. Check `df -h ~` before downloads, images, builds or clones, and do repository work on another host when space is short."]}
   }
