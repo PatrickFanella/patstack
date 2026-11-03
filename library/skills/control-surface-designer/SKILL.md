@@ -1,6 +1,6 @@
 ---
 name: control-surface-designer
-description: Design and review Blacktower control surfaces, including TUI sidebar, OpenTUI dashboard, control-center web UI, status boards, terminal UX, accessibility, state displays, and operator-facing copy.
+description: "Operator UI design: design or review Blacktower control surfaces such as the TUI sidebar, dashboards, status boards and agent-status copy, including accessibility."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: internal

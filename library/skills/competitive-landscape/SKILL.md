@@ -1,6 +1,6 @@
 ---
 name: competitive-landscape
-description: Analyze competition, identify differentiation opportunities, and develop winning market positioning strategies using Porter's Five Forces, Blue Ocean Strategy, and positioning maps. Use this skill when evaluating competitors, assessing market positioning, identifying sustainable competitive advantages, or preparing competitive strategy analysis for a startup or investor pitch.
+description: "Market positioning: analyze competitors with Five Forces, Blue Ocean or positioning maps and find differentiation for strategy or a pitch. Not for per-competitor profiles."
 metadata:
   blacktower-pack: growth
   blacktower-kind: workflow

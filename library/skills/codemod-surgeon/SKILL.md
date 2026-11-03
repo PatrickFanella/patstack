@@ -1,6 +1,6 @@
 ---
 name: codemod-surgeon
-description: Plan and execute safe repo-wide mechanical refactors, API migrations, subsystem removals, renames, generated-index moves, and AST-grep/codemod rewrites. Use when many files must change consistently with low semantic ambiguity.
+description: "Codemods: plan and run repo-wide mechanical rewrites, API migrations, renames or subsystem removals with AST-grep or codemod tools and a leftover scan."
 compatibility: Requires Python 3 for the bundled leftover scanner; AST-aware rewrites require an available codemod or ast-grep runtime.
 metadata:
   blacktower-pack: engineering

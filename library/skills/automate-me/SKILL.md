@@ -1,6 +1,6 @@
 ---
 name: automate-me
-description: "Use for \"automate me\", \"create/update/refresh my -mode skill\", \"turn/capture my preferences or working style into a skill\", or wanting agents to follow how the user works. Drafts or revises a personal -mode skill via create-skill + unslop, optionally pulling fresh evidence from recent transcripts."
+description: "Use for automate me or create/update my -mode skill: mine this workspace's recent sessions and interview the user to capture their working style as a personal -mode skill."
 disable-model-invocation: true
 ---
 
@@ -9,6 +9,16 @@ disable-model-invocation: true
 A guided flow for turning the user's working conventions into a skill agents will follow. The output is one `-mode` skill tailored to them (e.g. `jay-mode`, `priya-mode`).
 
 This skill orchestrates three others: an inline mining pass (see step 1), Cursor's built-in `create-skill` (authoring), and the **unslop** skill (prose discipline). It sequences them; it doesn't replace them.
+
+## In this setup
+
+This skill came from Cursor. Read its Cursor names as follows:
+
+- `.cursor/skills/` and `~/.cursor/skills/`: personal skills live in the canonical `codex-skills` repository (`~/Work/Tools/codex-skills` on Kvant, Gitea `subculture-collective/codex-skills`). Search `skills/`, `library/skills/` and installed copies under `~/.codex/skills`, `~/.agents/skills` and `~/.claude/skills`, but edit only the repository source.
+- `AskQuestion`: Claude Code `AskUserQuestion`; in Codex or OpenCode use their structured question tool if one is offered, otherwise ask a short numbered multiple-choice question in chat.
+- Cursor's `create-skill`: the `skill-creator` skill (Codex `.system/skill-creator`, or the library `skill-creator`).
+- `agent-transcripts/`: the current client's own history for this workspace only. Codex keeps sessions under `~/.codex/sessions/`, Claude Code under `~/.claude/projects/<workspace-slug>/`; for OpenCode or T3, use the session export the client provides. Do not read other workspaces' history.
+- Landing (step 6): branch in a worktree, commit as the agent identity, push to Gitea and open the PR with `tea` (login `subcult-agent`), not `gh`.
 
 ## Flow
 

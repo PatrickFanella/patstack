@@ -1,6 +1,6 @@
 ---
 name: claude-handoff
-description: Hand the current conversation off to a fresh background agent that picks up the work immediately.
+description: "Use for /claude-handoff in Claude Code: summarize this conversation and start a background claude --bg session to continue it. Other clients: session-handoff."
 argument-hint: "What will the next session be used for?"
 disable-model-invocation: true
 ---
@@ -16,3 +16,5 @@ Do not duplicate content already captured in other artifacts (specs, plans, ADRs
 Redact any sensitive information, such as API keys, passwords, or personally identifiable information, since the summary becomes the agent's prompt.
 
 If the user passed arguments, treat them as a description of what the next session will focus on and tailor the summary accordingly.
+
+This needs the Claude Code CLI (`claude --bg`). In Codex or OpenCode, or when `claude` is not on PATH, use the `session-handoff` skill instead and tell the user.

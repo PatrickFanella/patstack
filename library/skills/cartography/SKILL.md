@@ -1,6 +1,6 @@
 ---
 name: cartography
-description: Repository understanding and hierarchical codemap generation
+description: "Codemap atlas: generate or incrementally refresh hierarchical codemap.md files with change tracking for an unfamiliar repository, only when the user asks for one."
 compatibility: Requires a git repository, Python 3, and a Node.js-compatible runtime or Bun for bundled helpers.
 metadata:
   blacktower-pack: engineering
@@ -24,16 +24,18 @@ Create and maintain hierarchical codemaps for repository onboarding and navigati
 
 ## Command Sequence
 
+Set `SKILL_DIR` to this skill's installed folder (for example `~/.agents/skills/cartography`, or wherever the client loaded this `SKILL.md`).
+
 ```bash
-python3 ~/.config/opencode/skills/cartography/scripts/cartographer.py init \
+python3 "$SKILL_DIR"/scripts/cartographer.py init \
   --root ./ \
   --include "src/**/*.ts" \
   --exclude "**/*.test.ts" --exclude "dist/**" --exclude "node_modules/**"
 
-python3 ~/.config/opencode/skills/cartography/scripts/cartographer.py changes \
+python3 "$SKILL_DIR"/scripts/cartographer.py changes \
   --root ./
 
-python3 ~/.config/opencode/skills/cartography/scripts/cartographer.py update \
+python3 "$SKILL_DIR"/scripts/cartographer.py update \
   --root ./
 ```
 

@@ -1,6 +1,6 @@
 ---
 name: ars-malefica-source-intake
-description: Create Resources catalog cards for reusable sources (books, courses, podcasts, articles, films, games, music, YouTube). Use when capturing a new book to read, adding a course reference, saving a podcast episode, logging a film, or creating any Media entry that is reusable across Threads. Knows the Media directory structure, catalog card frontmatter conventions, and how to wire entries into the Media Index.
+description: "Ars Malefica source card: create a Media catalog card for a book, course, podcast, article, film, game, music or video and wire it into the Media Index."
 ---
 
 # Ars Malefica Source Intake

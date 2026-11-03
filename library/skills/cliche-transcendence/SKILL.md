@@ -1,6 +1,6 @@
 ---
 name: cliche-transcendence
-description: Transform predictable story elements into fresh, original versions. Use when something feels generic, when feedback says "I've seen this before," when elements orbit the protagonist too conveniently, or when you want to make a familiar trope feel new. Applies the 8-step CTF process and Orthogonality Principle.
+description: "Cliche fixes: make a generic story element, familiar trope or too-convenient protagonist orbit feel fresh. Not for line-level prose edits."
 license: MIT
 metadata:
   blacktower-pack: creative

@@ -1,6 +1,6 @@
 ---
 name: ars-malefica-inbox-intake
-description: Route inbox items to their owning vault and personal destinations following the Ars Malefica conventions. Use when triaging the inbox, processing captured clippings/articles/PDFs, intaking a large batch of new material, or cleaning up 000 Inbox. Knows the Resources-and-Threads boundary, the Sources/Raw-vs-Research-vs-Notes split, and the Media directory structure.
+description: "Ars Malefica inbox triage: classify and move 000 Inbox items, clippings and batch imports to their owning vault and folder. Not for one catalog card (ars-malefica-source-intake)."
 ---
 
 # Ars Malefica Inbox Intake

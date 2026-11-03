@@ -7,9 +7,8 @@ user asks to repair the local desktop setup.
 
 | Component | Owner | Boundary |
 | --- | --- | --- |
-| `/opt/codex-desktop` | pacman `codex-desktop` package | Never edit, replace, or delete it manually. |
-| `codex-update-manager.service` | user-level service | Inspect with `systemctl --user`; do not restart, enable, disable, or replace it without approval. |
-| `~/.local/bin/codex` | Omarchy command wrapper | Never replace it with a global npm installation merely to satisfy `codex doctor`. |
+| `/usr/lib/chatgpt`, `/usr/bin/codex-desktop` | pacman `openai-codex-desktop` (AUR) package | Never edit, replace, or delete them manually. |
+| `~/.local/bin/codex` | link to the mise `codex` shim | Never replace it with a global npm installation merely to satisfy `codex doctor`; CLI versions come from mise. |
 | `~/.codex/config.toml` | user configuration | Validate first; change only the smallest relevant setting with approval. |
 
 The collector is evidence, not permission for remediation. Do not use `sudo`,
@@ -21,17 +20,14 @@ has explicitly requested that exact class of repair.
 - **Package missing or runtime path absent:** report the package and path
   evidence. A package-manager repair belongs to the user-approved Arch package
   workflow, not an ad-hoc file copy.
-- **Updater service inactive or unavailable:** collect `systemctl --user
-  status codex-update-manager.service` and relevant user journal entries
-  read-only. Distinguish a disabled service, an absent unit, and a failed unit
-  before proposing an action.
-- **Launcher missing or not executable:** preserve the diagnosis; the Omarchy
-  wrapper owner should restore it. Do not substitute `npm install -g`.
+- **CLI launcher missing or not executable:** preserve the diagnosis; restore
+  it through mise (`mise which codex`, `mise install`). Do not substitute
+  `npm install -g`.
 - **Config parse failure:** run the repository validator where available and
   identify the exact configuration error. Do not conflate it with package
   health.
 - **`codex doctor` update-path mismatch only:** explain that the launcher can
-  resolve through Omarchy tooling and an npm target mismatch is expected. No
+  resolve through mise and an npm target mismatch is expected. No
   repair is indicated without an actual launch or update failure.
 
 ## Evidence after an approved repair

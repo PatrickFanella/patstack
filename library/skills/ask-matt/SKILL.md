@@ -1,12 +1,14 @@
 ---
 name: ask-matt
-description: Ask which skill or flow fits your situation. A router over the skills in this repo.
+description: "Use for /ask-matt: choose which Matt Pocock flow or skill fits the situation, from idea to ship, bug hunts, issue triage or codebase upkeep."
 disable-model-invocation: true
 ---
 
 # Ask Matt
 
 You don't remember every skill, so ask.
+
+In this catalog, `/grill-me` and `/grill-with-docs` are provided by the `requirements-interview` skill's modes, and `/handoff` can be `session-handoff`. `/to-spec` and `/resolving-merge-conflicts` may not be installed (the latter is available as `mattpocock-skills:resolving-merge-conflicts` in Claude Code). Check the client's skill list and say which named skill is missing instead of improvising it.
 
 A **flow** is a path through the skills. Most paths run along one **main flow**, and two **on-ramps** merge onto it. Everything else is standalone, or a vocabulary layer that runs underneath.
 

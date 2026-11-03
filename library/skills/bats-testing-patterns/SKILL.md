@@ -1,6 +1,6 @@
 ---
 name: bats-testing-patterns
-description: Master Bash Automated Testing System (Bats) for comprehensive shell script testing. Use when writing tests for shell scripts, CI/CD pipelines, or requiring test-driven development of shell utilities.
+description: "Bats tests: write or fix Bats tests, fixtures and mocks for shell scripts and run them in CI. Not for hardening the script itself (bash-defensive-patterns)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

@@ -41,7 +41,7 @@ You help users understand and map repositories by creating hierarchical codemaps
 3. **Run codemap.mjs init**:
 
 ```bash
-node ~/.config/opencode/skills/codemap/scripts/codemap.mjs init \
+node "$SKILL_DIR"/scripts/codemap/codemap.mjs init \
   --root ./ \
   --include "src/**/*.ts" \
   --exclude "**/*.test.ts" --exclude "dist/**" --exclude "node_modules/**"

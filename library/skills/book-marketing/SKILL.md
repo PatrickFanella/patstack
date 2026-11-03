@@ -1,6 +1,6 @@
 ---
 name: book-marketing
-description: Diagnose book marketing copy problems and generate platform-optimized blurbs, descriptions, taglines, and query pitches. Use when marketing copy feels weak, when descriptions aren't converting, or when starting marketing from scratch.
+description: "Book marketing copy: diagnose weak blurbs, or write retailer descriptions, taglines and query pitches. Not for general product marketing."
 license: MIT
 metadata:
   blacktower-pack: growth

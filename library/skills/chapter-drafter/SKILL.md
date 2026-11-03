@@ -1,6 +1,6 @@
 ---
 name: chapter-drafter
-description: Autonomously draft and polish chapters through multi-skill editorial passes. Use when you have a complete outline and want to produce a polished first draft with iterative refinement.
+description: "Chapter drafting: turn a complete outline into a polished chapter through iterative editorial passes. Needs an outline; not for outlining or diagnosing a draft."
 license: MIT
 metadata:
   blacktower-pack: creative

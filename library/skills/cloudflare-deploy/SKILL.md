@@ -1,6 +1,6 @@
 ---
 name: cloudflare-deploy
-description: Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare.
+description: "Cloudflare deploys: deploy or host a project on Workers, Pages or related Cloudflare services and verify the deployed result."
 allowed-tools: Bash Read Grep Glob Edit Write
 metadata:
   blacktower-pack: engineering

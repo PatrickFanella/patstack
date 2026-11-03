@@ -1,6 +1,6 @@
 ---
 name: blind-spot-detective
-description: Systematically identify what's missing in non-fiction writing—both blind spots (inherent limitations) and blank spots (gaps that could be addressed). Use before finalizing non-fiction or when feedback feels incomplete.
+description: "Non-fiction gap check: find blind spots and blank spots in a draft before finalizing it, or when feedback feels incomplete. Not for verifying claims (fact-check)."
 license: MIT
 metadata:
   blacktower-pack: creative

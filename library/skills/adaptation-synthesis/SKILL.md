@@ -1,6 +1,6 @@
 ---
 name: adaptation-synthesis
-description: Synthesize new works from extracted functional DNA documents. Use when adapting a source work to a new context, when combining multiple source extractions, or when generating variations that preserve function while changing form.
+description: "Fiction adaptation: move a source work into a new setting, merge several functional-DNA extractions, or generate variations that keep function while changing form."
 license: MIT
 metadata:
   blacktower-pack: creative

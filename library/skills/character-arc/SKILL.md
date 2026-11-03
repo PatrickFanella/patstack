@@ -1,6 +1,6 @@
 ---
 name: character-arc
-description: Design and troubleshoot character transformation arcs. Use when characters feel static, when transformation feels unearned or abrupt, when you can't articulate what false belief needs to die, or when characters serve plot without having internal journeys. Covers positive, negative, and flat arcs.
+description: "Character arcs: design or fix positive, negative or flat arcs when characters feel static, change feels unearned, or the false belief to overturn is unclear."
 license: MIT
 metadata:
   blacktower-pack: creative

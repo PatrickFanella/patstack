@@ -1,6 +1,6 @@
 ---
 name: cancel-ralph
-description: Cancel an active Ralph Loop. Use when the user wants to stop, cancel, or abort a running ralph loop.
+description: "Ralph loop cancel: stop, cancel or abort an active Ralph loop started by ralph-loop."
 ---
 
 # Cancel Ralph

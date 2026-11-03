@@ -1,6 +1,6 @@
 ---
 name: claim-investigation
-description: Systematically investigate social media claims and viral content. Use when fact-checking complex claims, when decomposing multi-part assertions, or when investigating narratives that mix facts with interpretation.
+description: "Viral claims: investigate a social media claim or narrative, split multi-part assertions, separate fact from interpretation and triangulate sources. Not for checking own output."
 license: MIT
 metadata:
   blacktower-pack: core

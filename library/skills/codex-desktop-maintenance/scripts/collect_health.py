@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Collect read-only health evidence for the local Arch/Omarchy Codex setup."""
+"""Collect read-only health evidence for the Codex Desktop setup on Sputnik (Arch/Omarchy)."""
 
 from __future__ import annotations
 
@@ -15,10 +15,14 @@ from pathlib import Path
 from typing import Any
 
 
-RUNTIME_PATH = Path("/opt/codex-desktop")
-LAUNCHER_PATH = Path.home() / ".local/bin/codex"
+# Layout observed on Sputnik on 2026-11-03: AUR package openai-codex-desktop
+# installs the app under /usr/lib/chatgpt with /usr/bin/codex-desktop -> chatgpt;
+# the codex CLI is a mise shim reached through ~/.local/bin/codex.
+PACKAGE = "openai-codex-desktop"
+RUNTIME_PATH = Path("/usr/lib/chatgpt")
+DESKTOP_LAUNCHER_PATH = Path("/usr/bin/codex-desktop")
+CLI_PATH = Path.home() / ".local/bin/codex"
 CONFIG_PATH = Path.home() / ".codex/config.toml"
-UPDATER_UNIT = "codex-update-manager.service"
 
 
 def path_status(path: Path) -> dict[str, Any]:
@@ -100,28 +104,18 @@ def collect() -> dict[str, Any]:
         },
         "expected_components": {
             "desktop_runtime": path_status(RUNTIME_PATH),
-            "omarchy_launcher": path_status(LAUNCHER_PATH),
+            "desktop_launcher": path_status(DESKTOP_LAUNCHER_PATH),
+            "cli_launcher": path_status(CLI_PATH),
             "config": config_status(CONFIG_PATH),
         },
         "resolved_codex_command": shutil.which("codex"),
-        "pacman_codex_desktop": run_readonly(["pacman", "-Q", "codex-desktop"]),
-        "update_manager": run_readonly(
-            [
-                "systemctl",
-                "--user",
-                "show",
-                UPDATER_UNIT,
-                "--property=LoadState,ActiveState,UnitFileState",
-                "--no-page",
-            ]
-        ),
+        "pacman_package": run_readonly(["pacman", "-Q", PACKAGE]),
     }
 
 
 def markdown(data: dict[str, Any]) -> str:
     components = data["expected_components"]
-    service = data["update_manager"]
-    package = data["pacman_codex_desktop"]
+    package = data["pacman_package"]
     lines = [
         "# Codex Desktop Health",
         "",
@@ -148,10 +142,9 @@ def markdown(data: dict[str, Any]) -> str:
     lines.extend(
         [
             "",
-            "## Package and updater service",
+            "## Package",
             "",
-            f"- `pacman -Q codex-desktop`: returncode={package.get('returncode', 'unavailable')}; {package.get('stdout') or package.get('error') or 'no output'}",
-            f"- `{UPDATER_UNIT}`: returncode={service.get('returncode', 'unavailable')}; {service.get('stdout') or service.get('error') or 'no output'}",
+            f"- `pacman -Q {PACKAGE}`: returncode={package.get('returncode', 'unavailable')}; {package.get('stdout') or package.get('error') or 'no output'}",
         ]
     )
     return "\n".join(lines)

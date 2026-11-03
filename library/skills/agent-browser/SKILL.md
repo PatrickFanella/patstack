@@ -1,6 +1,6 @@
 ---
 name: agent-browser
-description: Automate a clean browser or Electron session through the optional agent-browser CLI. Use when the user explicitly requests agent-browser or its accessibility-snapshot and element-ref workflow; do not trigger when the task depends on an existing logged-in browser, a purpose-built connector, an API, or another already-available browser tool.
+description: "agent-browser CLI: use only when the user names agent-browser or its snapshot and @ref workflow. Not for logged-in browsers, connectors, APIs or an already available browser tool."
 compatibility: Requires the agent-browser CLI or npx access to install it.
 allowed-tools: Bash(agent-browser:*) Bash(npx agent-browser:*)
 metadata:

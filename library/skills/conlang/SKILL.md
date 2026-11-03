@@ -1,6 +1,6 @@
 ---
 name: conlang
-description: Generate phonologically consistent constructed languages for fiction. Use when you need naming languages, alien speech, or fantasy tongues without deep linguistics knowledge.
+description: "Conlangs for fiction: generate phonologically consistent naming languages, alien speech or fantasy tongues without deep linguistics."
 license: MIT
 metadata:
   blacktower-pack: creative

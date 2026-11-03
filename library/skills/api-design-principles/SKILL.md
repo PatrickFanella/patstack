@@ -1,6 +1,6 @@
 ---
 name: api-design-principles
-description: Master REST and GraphQL API design principles to build intuitive, scalable, and maintainable APIs that delight developers. Use when designing new APIs, reviewing API specifications, or establishing API design standards.
+description: "API design: shape REST or GraphQL resources, errors, pagination and versioning, review an API spec, or set API standards. Not for building one endpoint's backend logic."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

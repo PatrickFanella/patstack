@@ -1,6 +1,6 @@
 ---
 name: codex-skills-maintenance
-description: Audit, validate, and improve a Codex skill catalog across personal, repository, system, runtime, and plugin-managed skills. Use for full skill inventories, trigger-collision reviews, progressive-disclosure and metadata optimization, broken reference/script checks, post-upgrade skill health checks, or safe improvement passes that must preserve managed caches.
+description: "Skill catalog audit: inventory and validate personal, repository, system and plugin skills, find trigger collisions and broken references, or run a post-upgrade pass."
 ---
 
 # Codex Skills Maintenance

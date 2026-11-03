@@ -1,6 +1,6 @@
 ---
 name: binary-analysis-patterns
-description: Master binary analysis patterns including disassembly, decompilation, control flow analysis, and code pattern recognition. Use when analyzing executables, understanding compiled code, or performing static analysis on binaries.
+description: "Binary analysis: disassemble or decompile an executable, recover control flow, and recognize compiled-code patterns during static analysis of native binaries."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

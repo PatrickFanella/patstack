@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\"."
+description: "Two-axis review: check changes since a commit, branch or merge-base against repo standards and the originating issue or spec, in parallel subagents."
 ---
 
 Two-axis review of the diff between `HEAD` and a fixed point the user supplies:
@@ -10,7 +10,7 @@ Two-axis review of the diff between `HEAD` and a fixed point the user supplies:
 
 Both axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings.
 
-The issue tracker should have been provided to you. If `docs/agents/issue-tracker.md` is missing, tell the user to run `/setup-matt-pocock-skills`.
+The issue tracker should have been provided to you. If `docs/agents/issue-tracker.md` is missing, infer the tracker from `git remote -v`: for `git.subcult.tv` (Gitea) read issues with `tea issues <number> --login subcult-agent` or `tea api`, and use `gh` only for GitHub remotes. Suggest `/setup-matt-pocock-skills` only when the tracker still cannot be determined.
 
 ## Process
 

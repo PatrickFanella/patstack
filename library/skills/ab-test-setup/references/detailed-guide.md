@@ -86,7 +86,7 @@ We'll know this is true when [metrics].
 - [Evan Miller's](https://www.evanmiller.org/ab-testing/sample-size.html)
 - [Optimizely's](https://www.optimizely.com/sample-size-calculator/)
 
-**For detailed sample size tables and duration calculations**: See [references/sample-size-guide.md](references/sample-size-guide.md)
+**For detailed sample size tables and duration calculations**: See [sample-size-guide.md](sample-size-guide.md)
 
 ---
 
@@ -220,7 +220,7 @@ Document every test with:
 - Results (sample, metrics, significance)
 - Decision and learnings
 
-**For templates**: See [references/test-templates.md](references/test-templates.md)
+**For templates**: See [test-templates.md](test-templates.md)
 
 ---
 

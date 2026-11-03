@@ -1,6 +1,6 @@
 ---
 name: control-cli
-description: Build or adapt a local harness to drive, inspect, and profile an interactive CLI or TUI without external services. Use for CLI UX checks, startup regressions, memory leaks, hangs, prompt flows, or terminal demos.
+description: "CLI/TUI harness: drive an interactive terminal app with tmux or a PTY script to reproduce bugs, check prompts and keys, or profile startup, hangs and leaks."
 ---
 
 # Control CLI
@@ -48,7 +48,7 @@ tmux kill-session -t "$SESSION"
 For Node CLIs:
 
 ```bash
-NODE_OPTIONS="--inspect=127.0.0.1:0" tmux new-session -d -s "$SESSION" -- <node-cli-command>
+tmux new-session -d -s "$SESSION" -- env NODE_OPTIONS="--inspect=127.0.0.1:0" <node-cli-command>
 ```
 
 Read the terminal output to find the inspector URL, then use Chrome DevTools-compatible tooling if profiling is needed.

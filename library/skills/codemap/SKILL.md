@@ -1,6 +1,6 @@
 ---
 name: codemap
-description: Generate comprehensive hierarchical codemaps for UNFAMILIAR repositories. Expensive operation - only use when explicitly asked for codebase documentation or initial repository mapping
+description: "Codemaps: generate hierarchical codemap.md files for an unfamiliar repository, only when the user asks for codebase documentation or a first repository map."
 compatibility: Requires a git repository and a Node.js-compatible runtime or Bun for the bundled codemap helper.
 metadata:
   blacktower-pack: core
@@ -43,10 +43,10 @@ If neither file exists: Continue to Step 2 (Initialize).
      - Docs: `docs/**`, `*.md` (except root `README.md` if needed), `LICENSE`
      - Build/Deps: `node_modules/**`, `dist/**`, `build/**`, `*.min.js`
    - Respect `.gitignore` automatically
-3. **Run codemap.mjs init**:
+3. **Run codemap.mjs init** (set `SKILL_DIR` to this skill's installed folder, such as `~/.agents/skills/codemap`):
 
 ```bash
-node ~/.config/opencode/skills/codemap/scripts/codemap.mjs init \
+node "$SKILL_DIR"/scripts/codemap.mjs init \
   --root ./ \
   --include "src/**/*.ts" \
   --exclude "**/*.test.ts" --exclude "dist/**" --exclude "node_modules/**"
@@ -63,7 +63,7 @@ This creates:
 1. **Run codemap.mjs changes** to see what changed:
 
 ```bash
-node ~/.config/opencode/skills/codemap/scripts/codemap.mjs changes \
+node "$SKILL_DIR"/scripts/codemap.mjs changes \
   --root ./
 ```
 
@@ -77,7 +77,7 @@ node ~/.config/opencode/skills/codemap/scripts/codemap.mjs changes \
 4. **Run update** to save new state:
 
 ```bash
-node ~/.config/opencode/skills/codemap/scripts/codemap.mjs update \
+node "$SKILL_DIR"/scripts/codemap.mjs update \
   --root ./
 ```
 

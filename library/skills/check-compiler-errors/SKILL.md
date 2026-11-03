@@ -1,6 +1,6 @@
 ---
 name: check-compiler-errors
-description: Run compile and type-check commands and report failures
+description: "Compile errors: run a repo's compile and type-check commands, group failures by file, and fix them until clean or blocked."
 ---
 
 # Check compiler errors
