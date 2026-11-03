@@ -41,6 +41,10 @@ class RenderTests(unittest.TestCase):
         self.assertNotIn('.codex/RTK.md', nuc)
         self.assertNotIn('AGENTS.md', nuc)
         self.assertIn('.agents/AGENTS.md', nuc)
+        almaz = gi.render_all('almaz', 'x' * 40)
+        self.assertIn('Agent Hub repository', almaz['.agents/CLAUDE.md'])
+        self.assertEqual(almaz['.agents/CLAUDE.md'], almaz['.agents/AGENTS.md'])
+        self.assertNotIn('Agent Hub', nuc['.agents/AGENTS.md'])
 
     def test_remote_script_compiles(self):
         compile(gi.remote_source(), 'remote-script', 'exec')

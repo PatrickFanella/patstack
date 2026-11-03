@@ -86,13 +86,16 @@ def render(host, client, revision, source=ROOT / 'instructions'):
 
 def render_context(host, revision, source=ROOT / 'instructions'):
     info = json.loads((source / 'hosts.json').read_text())['hosts'][host]
-    return '\n'.join([
+    lines = [
         '<!-- Generated for ' + host + ' by codex-skills scripts/global-instructions.py at ' + revision[:12] + '. -->',
         '# Homelab infrastructure context', '',
         '@' + info['home'] + '/.homelab/HOMELAB.md', '',
         'If your client does not expand `@` references, open that file yourself. '
         'Your global client file carries the working rules; this file only adds directory context. '
-        'Read the nearest more-specific `AGENTS.md` when one exists. Live state overrides documentation.', ''])
+        'Read the nearest more-specific `AGENTS.md` when one exists. Live state overrides documentation.', '']
+    if info.get('contextNote'):
+        lines += [info['contextNote'], '']
+    return '\n'.join(lines)
 
 
 def render_all(host, revision, source=ROOT / 'instructions'):
