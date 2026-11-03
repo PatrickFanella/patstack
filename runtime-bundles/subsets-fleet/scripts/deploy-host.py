@@ -35,6 +35,10 @@ def main():
     # Preserve every pre-existing shared skill, not only category collisions.
     active = home / '.agents/skills'
     existing = {str(p): install.snapshot(p) for p in active.iterdir()} if active.is_dir() else {}
+    # Entries this adapter placed may be replaced or retired by the new selection;
+    # every other pre-existing shared entry must come through unchanged.
+    selector_state = install.read(install.statefile(home / '.local/state/subsets-fleet/profiles'), {'paths': {}})
+    adapter_owned = set(selector_state['paths'])
     profile_cmd = [args.python, str(source / 'scripts/skill-profile')]
     plans = {}
     for profile in sorted(p.stem for p in (source / 'profiles').glob('*.txt')):
@@ -44,7 +48,7 @@ def main():
     (run / 'category-plans.json').write_text(json.dumps(plans, indent=2) + '\n')
     subprocess.run(profile_cmd + ['activate', 'core'], check=True, stdout=subprocess.DEVNULL)
     for path, before in existing.items():
-        if install.snapshot(path) != before:
+        if path not in adapter_owned and install.snapshot(path) != before:
             raise RuntimeError('Existing shared skill changed: ' + path)
     operations = []
     def replace(path, *, content=None, target=None):

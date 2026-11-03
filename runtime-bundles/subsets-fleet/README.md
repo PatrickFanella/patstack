@@ -24,3 +24,10 @@ The installed app is pinned separately from the category source. A source manife
 records the canonical revision and tree hashes. Device rollout receipts record
 the previous launchers, hashes, source location and observed verification.
 Source parity and CLI checks do not prove discovery in an already-running client.
+
+To roll out a source change, build the deployment folder from a clean commit with
+`python runtime-bundles/subsets-fleet/scripts/build-bundle.py`, copy it to the same
+path on each host, and run its `scripts/deploy-host.py --node NODE --python PYTHON`.
+Redeploying switches the host to `core` from the new source. Entries this adapter
+placed earlier may be replaced or retired, for example after a rename; any other
+shared entry that changes stops the deploy.
