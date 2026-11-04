@@ -4,7 +4,7 @@ Direction: **A1 Rack + A3 Registration**, selected by the owner on November 3, 2
 
 ## What the system means
 
-- **Rack units are the fleet.** Hosts and installed trees are drawn as rack units: ears, slot number, host name, role, lamp and a state label. The rack carries real deployment information, never decoration. The rows in the exported artwork are the fleet as recorded on 2026-10-19; rebuild after a verified deployment so they stay true.
+- **Rack units are the fleet.** Hosts and installed trees are drawn as rack units: ears, slot number, host name, role, lamp and a state label. The rack carries real deployment information, never decoration. The rows in the exported artwork are the fleet as recorded on 2026-11-03, after the Subsets category rebuild (PR #26) was verified on all six hosts; rebuild after the next verified deployment so they stay true.
 - **Registered plates explain verify and drift.** Three offset plates stand for the installed tree, the plan (expected and desired trees) and the source tree. Registration means SHA-256 hashes, file modes and symlink targets agree. A misaligned plate is a refused apply.
 - **Status labels are true.** `[ACTIVE]`, `[WARNING]`, `[VETO]` and `[ARCHIVE]` are semantic: color and text agree with the installer's real result. Never use a state color for emphasis.
 - **Violet marks the tool, never a state.** It is the SUBCULT lineage cue in the mark block and the tag `A SUBCULT TOOL`.
