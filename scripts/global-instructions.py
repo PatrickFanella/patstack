@@ -44,7 +44,7 @@ def render(host, client, revision, source=ROOT / 'instructions'):
     homelab = '@' + home + '/.homelab/HOMELAB.md'
     gitea = '@' + home + '/.config/agent-identity/GITEA.md'
     lines = [
-        '<!-- Generated for ' + host + ' by codex-skills scripts/global-instructions.py at ' + revision[:12] + '.',
+        '<!-- Generated for ' + host + ' by patstack scripts/global-instructions.py at ' + revision[:12] + '.',
         '     Edit instructions/ in ' + authoring + ' on Kvant and redeploy; hand edits here are refused. -->',
         '# Global agent context (' + host + ')', '']
     if expands:
@@ -68,7 +68,7 @@ def render(host, client, revision, source=ROOT / 'instructions'):
                           'follow its routing guidance, and prefer Blacktower plugin skills when an equivalent exists.')
     host_lines += info.get('notes', [])
     where = '' if info.get('authoringCheckout') else ' on Kvant'
-    host_lines.append('Skill, profile and global-instruction changes are authored in codex-skills (`' + authoring +
+    host_lines.append('Skill, profile and global-instruction changes are authored in patstack (`' + authoring +
                       '`' + where + '); read its AGENTS.md and `docs/OPERATING-MODEL.md`. '
                       'Installed skills and this file are deployment targets.')
     host_lines.append('Load the `prose-unslop` skill once per session and apply it to user-facing prose and documentation edits.')
@@ -87,7 +87,7 @@ def render(host, client, revision, source=ROOT / 'instructions'):
 def render_context(host, revision, source=ROOT / 'instructions'):
     info = json.loads((source / 'hosts.json').read_text())['hosts'][host]
     lines = [
-        '<!-- Generated for ' + host + ' by codex-skills scripts/global-instructions.py at ' + revision[:12] + '. -->',
+        '<!-- Generated for ' + host + ' by patstack scripts/global-instructions.py at ' + revision[:12] + '. -->',
         '# Homelab infrastructure context', '',
         '@' + info['home'] + '/.homelab/HOMELAB.md', '',
         'If your client does not expand `@` references, open that file yourself. '

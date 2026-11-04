@@ -20,7 +20,7 @@ The reading bundle's `SOURCE-MANIFEST.json` records original source and reading-
 After reviewing, validating, and committing selected skill sources, create a new frozen payload with explicit packet paths:
 
 ```sh
-rtk proxy python3 scripts/marketing-fleet.py bundle --payload /path/to/new-payload.json --packet subsets=/path/to/subsets/docs/marketing --packet clpr=/path/to/clpr/docs/marketing --packet generic=/path/to/codex-skills/shared/launch-dossier/assets
+rtk proxy python3 scripts/marketing-fleet.py bundle --payload /path/to/new-payload.json --packet subsets=/path/to/subsets/docs/marketing --packet clpr=/path/to/clpr/docs/marketing --packet generic=/path/to/patstack/shared/launch-dossier/assets
 rtk proxy python3 scripts/marketing-fleet.py plan --payload /path/to/new-payload.json --host sputnik
 rtk proxy python3 scripts/marketing-fleet.py apply --payload /path/to/new-payload.json --host sputnik
 rtk proxy python3 scripts/marketing-fleet.py verify --payload /path/to/new-payload.json --host sputnik

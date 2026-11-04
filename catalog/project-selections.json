@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "projects": {
-    "codex-skills": {
-      "canonicalRoot": "/home/onnwee/Work/Tools/codex-skills",
+    "patstack": {
+      "canonicalRoot": "/home/onnwee/Work/Tools/patstack",
       "sources": [
-        "project-agents/codex-skills/skills/codex-skills-maintenance"
+        "project-agents/patstack/skills/codex-skills-maintenance"
       ],
       "clients": [
         "codex",
         "claude",
         "opencode"
       ],
-      "instructions": "project-agents/codex-skills/instructions.md",
+      "instructions": "project-agents/patstack/instructions.md",
       "baseline": {
         "AGENTS.md": {
           "type": "file",

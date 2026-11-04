@@ -1,11 +1,20 @@
-# Personal Codex skills
+# patstack
 
-This repository authors the personal collection independently of Blacktower’s package catalog. It contains 63 managed personal entrypoints, two shared-personal overrides, and one repository-local Blacktower entrypoint. Two externally owned OS symlinks complete the 65-entrypoint personal catalog.
+patstack is the owner's agent skill stack: the personal skills, shared skills,
+optional library, profiles, global agent instructions and the guarded tooling
+that deploys them to every host. It was called `codex-skills` until 2026-11-03,
+and Gitea redirects the old URL. It is separate from Blacktower's package catalog.
+
+It holds 52 curated personal skills (54 personal entrypoints with Omarchy's two
+OS-owned ones), 5 shared skills, one repository-local Blacktower skill, vault
+and project skills, and a 326-skill optional library. Names follow a distinct
+noun plus purpose (`bug-tracer`, `prose-unslop`, `relay-baton`);
+`catalog/retired-names.json` maps every old name to its owner.
 
 ## Layout and ownership
 
 - `skills/`: authored personal skills, installed as managed copies in `~/.codex/skills`.
-- `shared/`: canonical `scope-grill` and `relay-baton`, installed in `~/.agents/skills`. Duplicate Codex copies are retired.
+- `shared/`: the five shared skills (`scope-grill`, `relay-baton`, `voice-ledger`, `content-recaster`, `launch-dossier`), installed in `~/.agents/skills`. Duplicate Codex copies are retired.
 - `repository-skills/blacktower-development`: installed only in Blacktower’s `.agents/skills`, privately excluded through Git’s local exclude file.
 - `authoring/`: non-discovered guidance for maintaining the collection.
 - `catalog/proposed-catalog.json`: authoritative target; `capabilities.json` maps 138 imported capabilities and the authored T3 onboarding capability to owners and procedures. `retired-names.json` maps retired names, with no compatibility entrypoints.
@@ -23,7 +32,7 @@ Requires Python 3 on Linux; validation additionally needs PyYAML. The installer 
 ```sh
 python scripts/validate.py
 PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v
-python scripts/install.py plan > /tmp/codex-skills-plan.json
+python scripts/install.py plan > /tmp/patstack-plan.json
 python scripts/install.py apply --through 1
 # Use the run path printed by apply for both following batches:
 python scripts/install.py apply --resume <run-path> --through 2
@@ -78,3 +87,53 @@ Public License, version 3 or (at your option) any later version
 Third-party code, documentation, fonts, data, and other assets retain their own
 licenses, copyright notices, and attribution. This license does not replace
 those terms or grant rights to upstream material that its authors have not granted.
+
+## Subsets: choosing optional skills
+
+[Subsets](runtime-bundles/subsets-fleet/README.md) is the app on every host that
+switches which optional library skills are active. `core` is always on; add a
+category when the work calls for it, and drop back to `core` afterwards so
+discovery stays small and routing stays sharp.
+
+### Which category to pick
+
+| Category | Pick it when you are | Skills |
+|---|---|---|
+| `core` | always active: fact checks, summaries, web lookup, plus the shared skills | 5 |
+| `engineering` | writing or restructuring code in any language, Git work, architecture, delivery | 65 |
+| `testing-quality` | debugging, reviewing, verifying, QA, or cleaning up a test suite | 34 |
+| `ai-agents` | building agents, MCP servers, LLM workflows, evals or skills | 48 |
+| `tooling-homelab` | working on CLIs, desktop tools, plugins, Obsidian, browser control or the homelab | 48 |
+| `backend-data` | building APIs, services, auth, databases, search or payments | 20 |
+| `devops-reliability` | deploying, running infrastructure, observability or performance work | 16 |
+| `security` | doing a security review, threat model, secrets or compliance work | 17 |
+| `frontend-mobile` | building web UI, React, accessibility, mobile or browser automation | 13 |
+| `docs-research` | researching, writing technical docs or capturing knowledge | 16 |
+| `product-growth` | doing product strategy, customer research, SEO, marketing or sales | 23 |
+| `creative-media-design` | making visual design, slides, images, video, music, games or brand media | 15 |
+| `writing-worldbuilding` | writing or editing fiction, narrative, naming or worldbuilding | 46 |
+
+Focused one- or two-skill categories cover narrow jobs: `browser-extension-development`,
+`charting`, `infrastructure` (Kubernetes, Terraform), `learning-exercises`, `mobile`,
+`reverse-engineering`, `smart-contracts`, `temporal` and `terminal-ui`. Combine
+categories when a task spans them, for example `--engineering --testing-quality`.
+Skills that are curated already (always installed) are listed in categories for
+completeness but never installed twice.
+
+### How to switch
+
+1. Preview: `subsets apply --engineering --dry-run` (or open `subsets` and use the Groups view).
+2. Apply: `subsets apply --engineering`. Several flags can be combined.
+3. Start a fresh agent session; a running session keeps the skill list it started with.
+4. Return to the default: `subsets apply --group core`.
+5. Undo a switch: `~/.agents/bin/skill-profile rollback --run PATH`, newest run first, with the run folders under `~/.local/state/subsets-fleet/profiles/`. Rollback refuses files edited after the switch.
+
+### Changing categories for the fleet
+
+Edit `profiles/*.txt` here, commit, then build and roll out a new bundle:
+`python runtime-bundles/subsets-fleet/scripts/build-bundle.py`, copy the printed
+folder to the same path on each host, and run its
+`scripts/deploy-host.py --node NODE --python PYTHON`. The runtime paths each host
+uses are in its `~/.local/bin/subsets` launcher. See the
+[adapter README](runtime-bundles/subsets-fleet/README.md) for ownership and rollback.
+

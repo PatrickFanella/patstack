@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "owner": "codex-skills",
+  "owner": "patstack",
   "plugin": "tadooer-assistant@subcult-tadooer",
   "skillSource": "integrations/tadooer/plugin/skills/tadooer-workflow",
   "capabilities": [

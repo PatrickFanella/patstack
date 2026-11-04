@@ -909,7 +909,7 @@
     "original": "skills-cli",
     "owner": "codex-skills-maintenance",
     "kind": "adapted-local",
-    "path": "project-agents/codex-skills/skills/codex-skills-maintenance/references/external-intake.md"
+    "path": "project-agents/patstack/skills/codex-skills-maintenance/references/external-intake.md"
   },
   {
     "original": "subcult-brand-voice",
@@ -933,7 +933,7 @@
     "original": "codex-skills-maintenance",
     "owner": "codex-skills-maintenance",
     "kind": "local",
-    "path": "project-agents/codex-skills/skills/codex-skills-maintenance/SKILL.md"
+    "path": "project-agents/patstack/skills/codex-skills-maintenance/SKILL.md"
   },
   {
     "original": "homelab-operations",

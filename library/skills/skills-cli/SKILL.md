@@ -1,6 +1,6 @@
 ---
 name: skills-cli
-description: "Use the `skills` CLI (bunx/npx skills, skills.sh, skills-lock.json) to find, install, update, remove, back up or sync Agent Skills. Use for 'find a skill for X'. Not for codex-skills profile deployment."
+description: "Use the `skills` CLI (bunx/npx skills, skills.sh, skills-lock.json) to find, install, update, remove, back up or sync Agent Skills. Use for 'find a skill for X'. Not for patstack profile deployment."
 compatibility: Requires Bun or Node.js with npx; discovery and installation require network access.
 metadata:
   blacktower-pack: engineering

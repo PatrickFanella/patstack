@@ -5,7 +5,7 @@ description: "Patreon supporter planning. Use to plan supporter posts, prepare P
 
 # Patreon preparation
 
-Read the target vault's AGENTS.md. SUBCULT owns publishing plans; Studio at ~/Work/Subcult/subcult-tv/studio owns physical supporter content and preparation automation. Read subcult-tv's AGENTS.md, Studio's AGENTS.md and `.agents/skills/social-craft/SKILL.md` before preparing supporter copy or posts; the current offer is in `studio/content/patreon/support-redesign-2026-10/`. If the deployment is unavailable, read the canonical project-agents/subcult-tv source in codex-skills.
+Read the target vault's AGENTS.md. SUBCULT owns publishing plans; Studio at ~/Work/Subcult/subcult-tv/studio owns physical supporter content and preparation automation. Read subcult-tv's AGENTS.md, Studio's AGENTS.md and `.agents/skills/social-craft/SKILL.md` before preparing supporter copy or posts; the current offer is in `studio/content/patreon/support-redesign-2026-10/`. If the deployment is unavailable, read the canonical project-agents/subcult-tv source in patstack.
 
 The owner's newer direction uses shared light rewards and occasional material with no promised posting schedule. Older daily/Tuesday/Thursday/Sunday lanes and monthly-ledger promises are historical templates, not current benefits. The reviewed support redesign is a proposal until exact approval and live account/site/access readback establish activation. Do not reuse old tier-retirement instructions or fixed task IDs without fresh task-state lookup.
 
