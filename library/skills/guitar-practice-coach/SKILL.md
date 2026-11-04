@@ -1,6 +1,6 @@
 ---
 name: guitar-practice-coach
-description: Maintain an evidence-driven guitar practice curriculum in the Ars Malefica Guitar Thread and its Super Productivity project. Use when reviewing guitar practice, diagnosing a stalled passage or picking problem, adjusting the current week, intaking lesson PDFs or TuxGuitar studies, assessing a completed practice block, sourcing focused bluegrass, country, jazz, classical, or Bach material, or creating the next practice block.
+description: "Guitar practice coach. Use to review practice evidence, diagnose a stalled passage, intake lesson material, or plan the next block in the Ars Malefica Guitar Thread and its Super Productivity tasks."
 ---
 
 # Guitar Practice Coach
@@ -122,8 +122,8 @@ When sourcing from the Thread's known repositories:
 - **ArtistWorks Bluegrass Rhythm Toolkit** (`Sources/Raw/ArtistWorks/`): 7
   PDFs across Bryan Sutton, Chris Eldridge, and Tyler Grant, plus an index
   note. Covers rhythm toolbox, boom-chuck, walking/alternating bass, and
-  picking mechanics. Lesson videos live outside the vault at
-  `/home/onnwee/Videos/ArtistWorks/`.
+  picking mechanics. Lesson videos live outside the vault; see the state
+  contract for their last known location.
 
 Prefer the vaulted article or PDF over re-fetching the same source URL. When
 the vaulted copy lacks a needed fragment, follow the source link back to the

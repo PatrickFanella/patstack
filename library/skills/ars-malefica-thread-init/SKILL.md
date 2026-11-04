@@ -1,6 +1,6 @@
 ---
 name: ars-malefica-thread-init
-description: "Ars Malefica new Thread: scaffold the folder tree, home note and MOC for a sustained inquiry and add it to the Threads Index."
+description: "Ars Malefica Thread scaffold. Use to start a new Thread with its folders, home note, MOC and Threads Index entry. Not for adding notes or sources to an existing Thread."
 ---
 
 # Ars Malefica Thread Init

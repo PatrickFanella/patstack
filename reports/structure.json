@@ -1,45 +1,43 @@
 {
   "metrics": {
     "authoredPersonal": 52,
-    "personalDescriptions": 6890,
-    "personalBodies": 97971,
+    "personalDescriptions": 9233,
+    "personalBodies": 83482,
     "optionalCuratedEntrypoints": 13,
-    "sourceOnly": false,
-    "unverifiedExternalOwners": [],
-    "personalDescriptionScope": "sources and installed OS owners",
+    "sourceOnly": true,
+    "unverifiedExternalOwners": [
+      "omarchy",
+      "diagnose-crash"
+    ],
+    "absentExternalOwners": [],
+    "personalDescriptionScope": "repository sources",
     "personalEntrypoints": 54,
     "personalDescriptionBudget": 12000,
-    "personalDescriptionHeadroom": 5110,
-    "unverifiedCapabilityOwners": [],
-    "retiredNames": 98,
+    "personalDescriptionHeadroom": 2767,
+    "unverifiedCapabilityOwners": [
+      "diagnose-crash",
+      "omarchy",
+      "system review-agent"
+    ],
+    "retiredNames": 327,
     "mappedOriginals": 165
   },
   "errors": [],
   "scriptDependencies": [
     {
-      "path": "skills/verify-behavior/references/modes/webapp-testing/examples/console_logging.py",
+      "path": "skills/api-contract-smith/references/modes/api-design-principles/assets/rest-api-template.py",
       "mode": "0o644",
       "imports": [
-        "playwright"
+        "datetime",
+        "enum",
+        "fastapi",
+        "pydantic",
+        "typing",
+        "uvicorn"
       ]
     },
     {
-      "path": "skills/verify-behavior/references/modes/webapp-testing/examples/element_discovery.py",
-      "mode": "0o644",
-      "imports": [
-        "playwright"
-      ]
-    },
-    {
-      "path": "skills/verify-behavior/references/modes/webapp-testing/examples/static_html_automation.py",
-      "mode": "0o644",
-      "imports": [
-        "os",
-        "playwright"
-      ]
-    },
-    {
-      "path": "skills/verify-behavior/references/modes/webapp-testing/scripts/with_server.py",
+      "path": "skills/behavior-proof/references/modes/webapp-testing/scripts/with_server.py",
       "mode": "0o755",
       "imports": [
         "argparse",
@@ -50,7 +48,73 @@
       ]
     },
     {
-      "path": "skills/security-ownership-map/scripts/build_ownership_map.py",
+      "path": "skills/behavior-proof/references/modes/webapp-testing/examples/static_html_automation.py",
+      "mode": "0o644",
+      "imports": [
+        "os",
+        "playwright"
+      ]
+    },
+    {
+      "path": "skills/behavior-proof/references/modes/webapp-testing/examples/element_discovery.py",
+      "mode": "0o644",
+      "imports": [
+        "playwright"
+      ]
+    },
+    {
+      "path": "skills/behavior-proof/references/modes/webapp-testing/examples/console_logging.py",
+      "mode": "0o644",
+      "imports": [
+        "playwright"
+      ]
+    },
+    {
+      "path": "skills/bus-factor-map/scripts/run_ownership_map.py",
+      "mode": "0o644",
+      "imports": [
+        "__future__",
+        "argparse",
+        "networkx",
+        "pathlib",
+        "subprocess",
+        "sys"
+      ]
+    },
+    {
+      "path": "skills/bus-factor-map/scripts/query_ownership.py",
+      "mode": "0o644",
+      "imports": [
+        "__future__",
+        "argparse",
+        "collections",
+        "csv",
+        "json",
+        "pathlib",
+        "sys",
+        "typing"
+      ]
+    },
+    {
+      "path": "skills/bus-factor-map/scripts/community_maintainers.py",
+      "mode": "0o644",
+      "imports": [
+        "__future__",
+        "argparse",
+        "collections",
+        "csv",
+        "datetime",
+        "json",
+        "math",
+        "pathlib",
+        "re",
+        "subprocess",
+        "sys",
+        "typing"
+      ]
+    },
+    {
+      "path": "skills/bus-factor-map/scripts/build_ownership_map.py",
       "mode": "0o644",
       "imports": [
         "__future__",
@@ -71,89 +135,44 @@
       ]
     },
     {
-      "path": "skills/security-ownership-map/scripts/community_maintainers.py",
-      "mode": "0o644",
-      "imports": [
-        "__future__",
-        "argparse",
-        "collections",
-        "csv",
-        "datetime",
-        "json",
-        "math",
-        "pathlib",
-        "re",
-        "subprocess",
-        "sys",
-        "typing"
-      ]
-    },
-    {
-      "path": "skills/security-ownership-map/scripts/query_ownership.py",
-      "mode": "0o644",
-      "imports": [
-        "__future__",
-        "argparse",
-        "collections",
-        "csv",
-        "json",
-        "pathlib",
-        "sys",
-        "typing"
-      ]
-    },
-    {
-      "path": "skills/security-ownership-map/scripts/run_ownership_map.py",
-      "mode": "0o644",
-      "imports": [
-        "__future__",
-        "argparse",
-        "networkx",
-        "pathlib",
-        "subprocess",
-        "sys"
-      ]
-    },
-    {
-      "path": "skills/repository-delivery-review/scripts/collect_repository_evidence.py",
+      "path": "skills/diff-inspector/references/modes/local-change-quality-gate/scripts/change_inventory.py",
       "mode": "0o755",
       "imports": [
         "__future__",
         "argparse",
         "json",
         "pathlib",
-        "re",
         "subprocess"
       ]
     },
     {
-      "path": "skills/mcp-integration-lifecycle/scripts/probe_stdio_mcp.py",
-      "mode": "0o755",
+      "path": "skills/git-surgery/references/modes/github-pro/scripts/gh-fix-ci/inspect_pr_checks.py",
+      "mode": "0o644",
       "imports": [
         "__future__",
         "argparse",
         "json",
-        "os",
-        "selectors",
+        "pathlib",
+        "re",
+        "shutil",
         "subprocess",
         "sys",
-        "threading",
-        "time",
         "typing"
       ]
     },
     {
-      "path": "skills/mcp-builder/scripts/connections.py",
+      "path": "skills/git-surgery/references/modes/github-pro/scripts/gh-address-comments/fetch_comments.py",
       "mode": "0o644",
       "imports": [
-        "abc",
-        "contextlib",
-        "mcp",
+        "__future__",
+        "json",
+        "subprocess",
+        "sys",
         "typing"
       ]
     },
     {
-      "path": "skills/mcp-builder/scripts/evaluation.py",
+      "path": "skills/mcp-server-forge/scripts/evaluation.py",
       "mode": "0o644",
       "imports": [
         "anthropic",
@@ -171,161 +190,116 @@
       ]
     },
     {
-      "path": "skills/hatch-pet/scripts/assemble_extended_atlas.py",
-      "mode": "0o755",
+      "path": "skills/mcp-server-forge/scripts/connections.py",
+      "mode": "0o644",
       "imports": [
-        "PIL",
-        "__future__",
-        "argparse",
-        "extract_strip_frames",
-        "json",
-        "math",
-        "pathlib",
-        "re",
-        "sys"
+        "abc",
+        "contextlib",
+        "mcp",
+        "typing"
       ]
     },
     {
-      "path": "skills/hatch-pet/scripts/combine_direction_blind_verdicts.py",
+      "path": "skills/mcp-wire-tracer/scripts/probe_stdio_mcp.py",
+      "mode": "0o755",
+      "imports": [
+        "__future__",
+        "argparse",
+        "json",
+        "os",
+        "selectors",
+        "subprocess",
+        "sys",
+        "threading",
+        "time",
+        "typing"
+      ]
+    },
+    {
+      "path": "skills/pet-hatchery/tests/test_direction_blind_consensus.py",
       "mode": "0o644",
       "imports": [
+        "json",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "unittest"
+      ]
+    },
+    {
+      "path": "skills/pet-hatchery/tests/test_direction_acceptance_policy.py",
+      "mode": "0o644",
+      "imports": [
+        "PIL",
+        "json",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "unittest"
+      ]
+    },
+    {
+      "path": "skills/pet-hatchery/tests/test_chroma_matte_decontamination.py",
+      "mode": "0o644",
+      "imports": [
+        "PIL",
+        "importlib",
+        "pathlib",
+        "unittest"
+      ]
+    },
+    {
+      "path": "skills/pet-hatchery/tests/test_assemble_extended_atlas.py",
+      "mode": "0o644",
+      "imports": [
+        "PIL",
+        "importlib",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "unittest"
+      ]
+    },
+    {
+      "path": "skills/pet-hatchery/scripts/validate_direction_blind_verdicts.py",
+      "mode": "0o755",
+      "imports": [
+        "__future__",
+        "argparse",
+        "json",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "skills/pet-hatchery/scripts/validate_atlas.py",
+      "mode": "0o755",
+      "imports": [
+        "PIL",
         "__future__",
         "argparse",
         "collections",
         "json",
-        "pathlib"
-      ]
-    },
-    {
-      "path": "skills/hatch-pet/scripts/compose_atlas.py",
-      "mode": "0o644",
-      "imports": [
-        "PIL",
-        "__future__",
-        "argparse",
-        "pathlib"
-      ]
-    },
-    {
-      "path": "skills/hatch-pet/scripts/compose_cardinal_anchor_strip.py",
-      "mode": "0o644",
-      "imports": [
-        "PIL",
-        "__future__",
-        "argparse",
-        "pathlib"
-      ]
-    },
-    {
-      "path": "skills/hatch-pet/scripts/derive_running_left_from_running_right.py",
-      "mode": "0o644",
-      "imports": [
-        "PIL",
-        "__future__",
-        "argparse",
-        "datetime",
-        "json",
-        "pathlib"
-      ]
-    },
-    {
-      "path": "skills/hatch-pet/scripts/despill_chroma_edges.py",
-      "mode": "0o755",
-      "imports": [
-        "PIL",
-        "__future__",
-        "argparse",
-        "json",
-        "pathlib",
-        "re"
-      ]
-    },
-    {
-      "path": "skills/hatch-pet/scripts/extract_cardinal_anchors.py",
-      "mode": "0o755",
-      "imports": [
-        "PIL",
-        "__future__",
-        "argparse",
-        "json",
         "math",
         "pathlib",
         "re"
       ]
     },
     {
-      "path": "skills/hatch-pet/scripts/extract_strip_frames.py",
+      "path": "skills/pet-hatchery/scripts/render_animation_previews.py",
       "mode": "0o644",
       "imports": [
         "PIL",
         "__future__",
         "argparse",
         "json",
-        "math",
-        "pathlib",
-        "re"
-      ]
-    },
-    {
-      "path": "skills/hatch-pet/scripts/inspect_frames.py",
-      "mode": "0o644",
-      "imports": [
-        "PIL",
-        "__future__",
-        "argparse",
-        "json",
-        "math",
-        "pathlib",
-        "statistics"
-      ]
-    },
-    {
-      "path": "skills/hatch-pet/scripts/make_contact_sheet.py",
-      "mode": "0o644",
-      "imports": [
-        "PIL",
-        "__future__",
-        "argparse",
         "pathlib"
       ]
     },
     {
-      "path": "skills/hatch-pet/scripts/make_direction_blind_qa_sheet.py",
-      "mode": "0o755",
-      "imports": [
-        "PIL",
-        "__future__",
-        "argparse",
-        "hashlib",
-        "json",
-        "pathlib",
-        "random"
-      ]
-    },
-    {
-      "path": "skills/hatch-pet/scripts/make_direction_qa_sheet.py",
-      "mode": "0o755",
-      "imports": [
-        "PIL",
-        "__future__",
-        "argparse",
-        "pathlib"
-      ]
-    },
-    {
-      "path": "skills/hatch-pet/scripts/measure_direction_continuity.py",
-      "mode": "0o644",
-      "imports": [
-        "PIL",
-        "__future__",
-        "argparse",
-        "json",
-        "pathlib",
-        "statistics"
-      ]
-    },
-    {
-      "path": "skills/hatch-pet/scripts/prepare_pet_run.py",
+      "path": "skills/pet-hatchery/scripts/prepare_pet_run.py",
       "mode": "0o755",
       "imports": [
         "PIL",
@@ -340,24 +314,70 @@
       ]
     },
     {
-      "path": "skills/hatch-pet/scripts/render_animation_previews.py",
+      "path": "skills/pet-hatchery/scripts/measure_direction_continuity.py",
       "mode": "0o644",
       "imports": [
         "PIL",
         "__future__",
         "argparse",
         "json",
-        "pathlib"
+        "pathlib",
+        "statistics"
       ]
     },
     {
-      "path": "skills/hatch-pet/scripts/validate_atlas.py",
+      "path": "skills/pet-hatchery/scripts/make_direction_qa_sheet.py",
       "mode": "0o755",
       "imports": [
         "PIL",
         "__future__",
         "argparse",
-        "collections",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "skills/pet-hatchery/scripts/make_direction_blind_qa_sheet.py",
+      "mode": "0o755",
+      "imports": [
+        "PIL",
+        "__future__",
+        "argparse",
+        "hashlib",
+        "json",
+        "pathlib",
+        "random"
+      ]
+    },
+    {
+      "path": "skills/pet-hatchery/scripts/make_contact_sheet.py",
+      "mode": "0o644",
+      "imports": [
+        "PIL",
+        "__future__",
+        "argparse",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "skills/pet-hatchery/scripts/inspect_frames.py",
+      "mode": "0o644",
+      "imports": [
+        "PIL",
+        "__future__",
+        "argparse",
+        "json",
+        "math",
+        "pathlib",
+        "statistics"
+      ]
+    },
+    {
+      "path": "skills/pet-hatchery/scripts/extract_strip_frames.py",
+      "mode": "0o644",
+      "imports": [
+        "PIL",
+        "__future__",
+        "argparse",
         "json",
         "math",
         "pathlib",
@@ -365,91 +385,120 @@
       ]
     },
     {
-      "path": "skills/hatch-pet/scripts/validate_direction_blind_verdicts.py",
+      "path": "skills/pet-hatchery/scripts/extract_cardinal_anchors.py",
       "mode": "0o755",
       "imports": [
+        "PIL",
         "__future__",
         "argparse",
+        "json",
+        "math",
+        "pathlib",
+        "re"
+      ]
+    },
+    {
+      "path": "skills/pet-hatchery/scripts/despill_chroma_edges.py",
+      "mode": "0o755",
+      "imports": [
+        "PIL",
+        "__future__",
+        "argparse",
+        "json",
+        "pathlib",
+        "re"
+      ]
+    },
+    {
+      "path": "skills/pet-hatchery/scripts/derive_running_left_from_running_right.py",
+      "mode": "0o644",
+      "imports": [
+        "PIL",
+        "__future__",
+        "argparse",
+        "datetime",
         "json",
         "pathlib"
       ]
     },
     {
-      "path": "skills/hatch-pet/tests/test_assemble_extended_atlas.py",
+      "path": "skills/pet-hatchery/scripts/compose_cardinal_anchor_strip.py",
       "mode": "0o644",
       "imports": [
         "PIL",
-        "importlib",
-        "pathlib",
-        "subprocess",
-        "sys",
-        "tempfile",
-        "unittest"
+        "__future__",
+        "argparse",
+        "pathlib"
       ]
     },
     {
-      "path": "skills/hatch-pet/tests/test_chroma_matte_decontamination.py",
+      "path": "skills/pet-hatchery/scripts/compose_atlas.py",
       "mode": "0o644",
       "imports": [
         "PIL",
-        "importlib",
-        "pathlib",
-        "unittest"
+        "__future__",
+        "argparse",
+        "pathlib"
       ]
     },
     {
-      "path": "skills/hatch-pet/tests/test_direction_acceptance_policy.py",
-      "mode": "0o644",
-      "imports": [
-        "PIL",
-        "json",
-        "pathlib",
-        "subprocess",
-        "sys",
-        "tempfile",
-        "unittest"
-      ]
-    },
-    {
-      "path": "skills/hatch-pet/tests/test_direction_blind_consensus.py",
-      "mode": "0o644",
-      "imports": [
-        "json",
-        "pathlib",
-        "subprocess",
-        "sys",
-        "tempfile",
-        "unittest"
-      ]
-    },
-    {
-      "path": "skills/git-advanced-workflows/references/modes/github-pro/scripts/gh-address-comments/fetch_comments.py",
+      "path": "skills/pet-hatchery/scripts/combine_direction_blind_verdicts.py",
       "mode": "0o644",
       "imports": [
         "__future__",
+        "argparse",
+        "collections",
         "json",
-        "subprocess",
-        "sys",
-        "typing"
+        "pathlib"
       ]
     },
     {
-      "path": "skills/git-advanced-workflows/references/modes/github-pro/scripts/gh-fix-ci/inspect_pr_checks.py",
-      "mode": "0o644",
+      "path": "skills/pet-hatchery/scripts/assemble_extended_atlas.py",
+      "mode": "0o755",
+      "imports": [
+        "PIL",
+        "__future__",
+        "argparse",
+        "extract_strip_frames",
+        "json",
+        "math",
+        "pathlib",
+        "re",
+        "sys"
+      ]
+    },
+    {
+      "path": "skills/ship-check/scripts/collect_repository_evidence.py",
+      "mode": "0o755",
       "imports": [
         "__future__",
         "argparse",
         "json",
         "pathlib",
         "re",
-        "shutil",
-        "subprocess",
-        "sys",
-        "typing"
+        "subprocess"
       ]
     },
     {
-      "path": "skills/frontend-design/scripts/tool-ui-ux-pro-max/core.py",
+      "path": "skills/sweep-rewriter/scripts/find_leftovers.py",
+      "mode": "0o755",
+      "imports": [
+        "__future__",
+        "pathlib",
+        "sys"
+      ]
+    },
+    {
+      "path": "skills/ui-craft/scripts/tool-ui-ux-pro-max/search.py",
+      "mode": "0o644",
+      "imports": [
+        "argparse",
+        "core",
+        "json"
+      ]
+    },
+    {
+      "path": "skills/ui-craft/scripts/tool-ui-ux-pro-max/core.py",
       "mode": "0o644",
       "imports": [
         "collections",
@@ -460,53 +509,11 @@
       ]
     },
     {
-      "path": "skills/frontend-design/scripts/tool-ui-ux-pro-max/search.py",
-      "mode": "0o644",
-      "imports": [
-        "argparse",
-        "core",
-        "json"
-      ]
-    },
-    {
-      "path": "skills/codemod-surgeon/scripts/find_leftovers.py",
+      "path": "repository-skills/blacktower-development/references/modes/plugin-integrator/scripts/list_plugin_touchpoints.py",
       "mode": "0o755",
       "imports": [
         "__future__",
-        "pathlib",
-        "sys"
-      ]
-    },
-    {
-      "path": "skills/code-review/references/modes/local-change-quality-gate/scripts/change_inventory.py",
-      "mode": "0o755",
-      "imports": [
-        "__future__",
-        "argparse",
-        "json",
-        "pathlib",
-        "subprocess"
-      ]
-    },
-    {
-      "path": "skills/api-development/references/modes/api-design-principles/assets/rest-api-template.py",
-      "mode": "0o644",
-      "imports": [
-        "datetime",
-        "enum",
-        "fastapi",
-        "pydantic",
-        "typing",
-        "uvicorn"
-      ]
-    },
-    {
-      "path": "repository-skills/blacktower-development/references/modes/session-warden/scripts/extract_session_events.py",
-      "mode": "0o755",
-      "imports": [
-        "__future__",
-        "pathlib",
-        "re",
+        "collections",
         "sys"
       ]
     },
@@ -520,16 +527,17 @@
       ]
     },
     {
-      "path": "repository-skills/blacktower-development/references/modes/plugin-integrator/scripts/list_plugin_touchpoints.py",
+      "path": "repository-skills/blacktower-development/references/modes/session-warden/scripts/extract_session_events.py",
       "mode": "0o755",
       "imports": [
         "__future__",
-        "collections",
+        "pathlib",
+        "re",
         "sys"
       ]
     },
     {
-      "path": "project-agents/codex-skills/skills/codex-skills-maintenance/scripts/audit_skills.py",
+      "path": "project-agents/patstack/skills/codex-skills-maintenance/scripts/audit_skills.py",
       "mode": "0o755",
       "imports": [
         "__future__",
