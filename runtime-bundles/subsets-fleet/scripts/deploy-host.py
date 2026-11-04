@@ -26,7 +26,7 @@ def main():
             raise RuntimeError('Source manifest mismatch: ' + relative)
     app = home / '.local/share/subsets-fleet/npm/node_modules/@subcult/subsets/dist/cli.js'
     version = subprocess.check_output([args.node, str(app), '--version'], text=True).strip()
-    if version != '0.2.0-alpha.3':
+    if version != '0.2.0-alpha.4':
         raise RuntimeError('Unexpected app version: ' + version)
     state = home / '.local/state/subsets-fleet'
     state.mkdir(parents=True, exist_ok=True, mode=0o700)
