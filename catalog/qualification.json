@@ -6,11 +6,17 @@
       "canonicalSource": "library/skills/split-test-planner",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -18,11 +24,17 @@
       "canonicalSource": "library/skills/story-dna-adapter",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -30,11 +42,17 @@
       "canonicalSource": "library/skills/ref-snapshot-browser",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -89,11 +107,17 @@
       "canonicalSource": "library/skills/sketch-first-design",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -120,11 +144,17 @@
       "canonicalSource": "library/skills/candidate-arena",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -227,11 +257,17 @@
       "canonicalSource": "library/skills/pocock-flow-router",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -258,11 +294,17 @@
       "canonicalSource": "library/skills/mode-skill-miner",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -270,11 +312,17 @@
       "canonicalSource": "library/skills/strategy-backtester",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -324,11 +372,17 @@
       "canonicalSource": "library/skills/blacktower",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -336,11 +390,17 @@
       "canonicalSource": "library/skills/change-blast-check",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -348,11 +408,17 @@
       "canonicalSource": "library/skills/nonfiction-gap-finder",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -360,11 +426,17 @@
       "canonicalSource": "library/skills/book-blurb-doctor",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -372,11 +444,17 @@
       "canonicalSource": "library/skills/plain-restate",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -384,11 +462,17 @@
       "canonicalSource": "library/skills/ralph-loop-stop",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -396,11 +480,17 @@
       "canonicalSource": "library/skills/codemap-atlas",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -422,11 +512,17 @@
       "canonicalSource": "library/skills/outline-to-chapter",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -434,11 +530,17 @@
       "canonicalSource": "library/skills/character-arc-doctor",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -481,11 +583,17 @@
       "canonicalSource": "library/skills/viral-claim-probe",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -493,11 +601,15 @@
       "canonicalSource": "library/skills/claude-bg-handoff",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -538,11 +650,17 @@
       "canonicalSource": "library/skills/trope-refresher",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -659,11 +777,17 @@
       "canonicalSource": "library/skills/codex-desktop-audit",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -713,11 +837,17 @@
       "canonicalSource": "library/skills/market-position-map",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -725,11 +855,17 @@
       "canonicalSource": "library/skills/vs-page-writer",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -737,11 +873,17 @@
       "canonicalSource": "library/skills/rival-dossier",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -749,11 +891,17 @@
       "canonicalSource": "library/skills/conlang-forge",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -761,11 +909,17 @@
       "canonicalSource": "library/skills/editorial-roadmap",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -827,11 +981,17 @@
       "canonicalSource": "library/skills/page-copy-forge",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -853,11 +1013,17 @@
       "canonicalSource": "library/skills/learning-roadmap",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -865,11 +1031,17 @@
       "canonicalSource": "library/skills/cursor-plugin-forge",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -877,11 +1049,17 @@
       "canonicalSource": "library/skills/verify-skill-forge",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -889,11 +1067,17 @@
       "canonicalSource": "library/skills/cursor-sdk-builder",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -901,11 +1085,17 @@
       "canonicalSource": "library/skills/customer-voice-miner",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -913,11 +1103,17 @@
       "canonicalSource": "library/skills/opencode-config-tuner",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -925,11 +1121,17 @@
       "canonicalSource": "library/skills/data-narrative",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -956,11 +1158,17 @@
       "canonicalSource": "library/skills/repo-research-trail",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -968,11 +1176,15 @@
       "canonicalSource": "library/skills/opencode-deepwork",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1013,11 +1225,17 @@
       "canonicalSource": "library/skills/interface-design-twice",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1041,8 +1259,9 @@
       "scope": "optional",
       "status": "selection-tested",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "task-specific project tools; see source procedure"
@@ -1059,11 +1278,17 @@
       "canonicalSource": "library/skills/web-game-loop",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1097,11 +1322,17 @@
       "canonicalSource": "library/skills/dialogue-doctor",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1123,11 +1354,17 @@
       "canonicalSource": "library/skills/story-dna-extractor",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1135,11 +1372,17 @@
       "canonicalSource": "library/skills/docx-editor",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1173,11 +1416,17 @@
       "canonicalSource": "library/skills/draft-unblocker",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1185,11 +1434,17 @@
       "canonicalSource": "library/skills/ebook-concept-miner",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1197,11 +1452,17 @@
       "canonicalSource": "library/skills/article-restructure",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1209,11 +1470,17 @@
       "canonicalSource": "library/skills/drip-sequence-planner",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1223,8 +1490,9 @@
       "scope": "optional",
       "status": "selection-tested",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "current client source retrieval/search tools when required"
@@ -1254,11 +1522,17 @@
       "canonicalSource": "library/skills/playbook-designer",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1299,11 +1573,17 @@
       "canonicalSource": "library/skills/game-fun-theory",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1311,11 +1591,17 @@
       "canonicalSource": "library/skills/rpg-game-master",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1342,11 +1628,17 @@
       "canonicalSource": "library/skills/genre-promise-check",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1354,11 +1646,17 @@
       "canonicalSource": "library/skills/patient-tutor",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1385,11 +1683,15 @@
       "canonicalSource": "library/skills/claude-git-guardrails",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1449,11 +1751,17 @@
       "canonicalSource": "library/skills/thinking-audit",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1552,16 +1860,16 @@
       "scope": "optional",
       "status": "structure-reviewed",
       "supportedClients": [
-        "codex",
         "claude",
+        "codex",
         "opencode"
       ],
       "requiredTools": [
         "accessible Machinum owner and task-specific host tools"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-03",
       "evidence": [
-        "reports/structure.json"
+        "docs/OPERATING-MODEL.md#skill-names"
       ],
       "positiveTask": "Investigate a cross-host backup or route incident through Machinum.",
       "nearMiss": "A generic local unit-test failure."
@@ -1570,11 +1878,17 @@
       "canonicalSource": "library/skills/code-walkthrough",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1596,11 +1910,17 @@
       "canonicalSource": "library/skills/marketing-imagery",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1608,11 +1928,17 @@
       "canonicalSource": "library/skills/raster-image-gen",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1620,11 +1946,17 @@
       "canonicalSource": "library/skills/spec-implementer",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1632,11 +1964,17 @@
       "canonicalSource": "library/skills/module-deepener",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1644,11 +1982,17 @@
       "canonicalSource": "library/skills/branch-doctor",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1656,11 +2000,17 @@
       "canonicalSource": "library/skills/status-memo-writer",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1668,11 +2018,17 @@
       "canonicalSource": "library/skills/model-crossfire",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1680,11 +2036,17 @@
       "canonicalSource": "library/skills/punchline-lab",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1720,11 +2082,17 @@
       "canonicalSource": "library/skills/karakeep-bookmarks",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1734,15 +2102,16 @@
       "scope": "optional",
       "status": "structure-reviewed",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-03",
       "evidence": [
-        "reports/structure.json"
+        "docs/OPERATING-MODEL.md#skill-names"
       ],
       "positiveTask": "Kubernetes manifests, Helm charts, and cluster workload policies; validate the requested deployment artifact.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -1751,11 +2120,17 @@
       "canonicalSource": "library/skills/conlang-drift",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1763,11 +2138,17 @@
       "canonicalSource": "library/skills/launch-runway",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1777,15 +2158,16 @@
       "scope": "optional",
       "status": "structure-reviewed",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-03",
       "evidence": [
-        "reports/structure.json"
+        "docs/OPERATING-MODEL.md#skill-names"
       ],
       "positiveTask": "'TradingView Lightweight Charts implementation: series, time scales, live updates, plugins, and framework integration.'",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -1794,11 +2176,17 @@
       "canonicalSource": "library/skills/entropy-lists",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1853,11 +2241,17 @@
       "canonicalSource": "library/skills/loop-spec-grill",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1879,11 +2273,17 @@
       "canonicalSource": "library/skills/lyric-doctor",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1891,11 +2291,17 @@
       "canonicalSource": "library/skills/verify-skill-audit",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1917,11 +2323,17 @@
       "canonicalSource": "library/skills/persuasion-levers",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -1967,11 +2379,17 @@
       "canonicalSource": "library/skills/ram-dump-sleuth",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2012,11 +2430,17 @@
       "canonicalSource": "library/skills/agent-fanout-plan",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2038,11 +2462,17 @@
       "canonicalSource": "library/skills/sonic-fingerprint",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2050,11 +2480,17 @@
       "canonicalSource": "library/skills/name-forge",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2062,11 +2498,17 @@
       "canonicalSource": "library/skills/brutal-hud-kit",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2114,11 +2556,17 @@
       "canonicalSource": "library/skills/observe-tune-loop",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2126,11 +2574,17 @@
       "canonicalSource": "library/skills/obsidian-cli-driver",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2164,11 +2618,17 @@
       "canonicalSource": "library/skills/openai-doc-lookup",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2190,11 +2650,17 @@
       "canonicalSource": "library/skills/oss-maintainer-coach",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2204,8 +2670,9 @@
       "scope": "optional",
       "status": "selection-tested",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "task-specific project tools; see source procedure"
@@ -2234,11 +2701,17 @@
       "canonicalSource": "library/skills/landing-page-cro",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2246,11 +2719,17 @@
       "canonicalSource": "library/skills/paid-media-plan",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2278,11 +2757,17 @@
       "canonicalSource": "library/skills/pci-scope-check",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2290,11 +2775,17 @@
       "canonicalSource": "library/skills/pdf-render-check",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2362,11 +2853,17 @@
       "canonicalSource": "library/skills/codex-plugin-scaffold",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2436,11 +2933,17 @@
       "canonicalSource": "library/skills/pptx-forge",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2448,11 +2951,17 @@
       "canonicalSource": "library/skills/diff-walkthrough",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2460,11 +2969,17 @@
       "canonicalSource": "library/skills/slide-story-design",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2780,11 +3295,17 @@
       "canonicalSource": "library/skills/fiction-line-edit",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2881,11 +3402,17 @@
       "canonicalSource": "library/skills/bug-intake-session",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2912,11 +3439,15 @@
       "canonicalSource": "library/skills/ralph-loop-start",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2924,11 +3455,17 @@
       "canonicalSource": "library/skills/ralph-loop-explainer",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -2938,8 +3475,9 @@
       "scope": "optional",
       "status": "selection-tested",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "task-specific project tools; see source procedure"
@@ -2989,11 +3527,17 @@
       "canonicalSource": "library/skills/context-recall",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3020,11 +3564,17 @@
       "canonicalSource": "library/skills/friction-miner",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3110,11 +3660,17 @@
       "canonicalSource": "library/skills/primary-source-notes",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3124,15 +3680,16 @@
       "scope": "optional",
       "status": "structure-reviewed",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-03",
       "evidence": [
-        "reports/structure.json"
+        "docs/OPERATING-MODEL.md#skill-names"
       ],
       "positiveTask": "Analyze executable binaries or network protocols; select disassembly or packet-analysis procedures as needed.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -3141,11 +3698,17 @@
       "canonicalSource": "library/skills/book-outliner",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3153,11 +3716,17 @@
       "canonicalSource": "library/skills/diff-auditor",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3165,11 +3734,17 @@
       "canonicalSource": "library/skills/branch-shipper",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3217,11 +3792,17 @@
       "canonicalSource": "library/skills/draft-reviser",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3229,11 +3810,17 @@
       "canonicalSource": "library/skills/lead-pipeline-ops",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3241,11 +3828,17 @@
       "canonicalSource": "library/skills/learning-retro",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3272,11 +3865,17 @@
       "canonicalSource": "library/skills/sales-collateral",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3300,8 +3899,9 @@
       "scope": "optional",
       "status": "selection-tested",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "task-specific project tools; see source procedure"
@@ -3318,11 +3918,15 @@
       "canonicalSource": "library/skills/opencode-cron",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3330,11 +3934,17 @@
       "canonicalSource": "library/skills/desktop-capture",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3361,11 +3971,17 @@
       "canonicalSource": "library/skills/web-host-hardening",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3430,11 +4046,17 @@
       "canonicalSource": "library/skills/sensitivity-read",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3442,11 +4064,17 @@
       "canonicalSource": "library/skills/search-rank-audit",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3499,11 +4127,17 @@
       "canonicalSource": "library/skills/tracker-bootstrap",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3551,11 +4185,17 @@
       "canonicalSource": "library/skills/world-bible",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3605,11 +4245,17 @@
       "canonicalSource": "library/skills/skill-forge",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3617,11 +4263,17 @@
       "canonicalSource": "library/skills/codex-skill-fetch",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3657,11 +4309,17 @@
       "canonicalSource": "library/skills/social-post-craft",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3671,15 +4329,16 @@
       "scope": "optional",
       "status": "structure-reviewed",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-03",
       "evidence": [
-        "reports/structure.json"
+        "docs/OPERATING-MODEL.md#skill-names"
       ],
       "positiveTask": "Implement or audit Solidity contracts for exploitable behavior, authorization, state transitions, and fund safety.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -3688,11 +4347,17 @@
       "canonicalSource": "library/skills/speech-shaper",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3700,11 +4365,17 @@
       "canonicalSource": "library/skills/sheet-wrangler",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3712,11 +4383,17 @@
       "canonicalSource": "library/skills/runway-modeler",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3724,11 +4401,17 @@
       "canonicalSource": "library/skills/cliche-escape",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3736,11 +4419,17 @@
       "canonicalSource": "library/skills/story-mentor",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3748,11 +4437,17 @@
       "canonicalSource": "library/skills/story-cowriter",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3760,11 +4455,17 @@
       "canonicalSource": "library/skills/premise-forge",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3772,11 +4473,17 @@
       "canonicalSource": "library/skills/story-diagnosis",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3798,11 +4505,17 @@
       "canonicalSource": "library/skills/stripe-checkout-wiring",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3854,8 +4567,9 @@
       "scope": "optional",
       "status": "selection-tested",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "current client source retrieval/search tools when required"
@@ -3871,11 +4585,17 @@
       "canonicalSource": "library/skills/sp-upkeep-router",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3883,11 +4603,17 @@
       "canonicalSource": "library/skills/sp-mcp-doctor",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3895,11 +4621,17 @@
       "canonicalSource": "library/skills/sp-day-planner",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3907,11 +4639,17 @@
       "canonicalSource": "library/skills/worker-swarm-fanout",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3919,11 +4657,17 @@
       "canonicalSource": "library/skills/switchyard-runtime-desk",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3950,11 +4694,17 @@
       "canonicalSource": "library/skills/table-tone-tuner",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -3981,11 +4731,17 @@
       "canonicalSource": "library/skills/lesson-workspace",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4012,11 +4768,17 @@
       "canonicalSource": "library/skills/tetrad-impact-lens",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4026,8 +4788,9 @@
       "scope": "optional",
       "status": "selection-tested",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "task-specific project tools; see source procedure"
@@ -4046,15 +4809,16 @@
       "scope": "optional",
       "status": "structure-reviewed",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-03",
       "evidence": [
-        "reports/structure.json"
+        "docs/OPERATING-MODEL.md#skill-names"
       ],
       "positiveTask": "Create reusable Terraform modules with explicit inputs, provider constraints, examples, and validation.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -4091,11 +4855,17 @@
       "canonicalSource": "library/skills/thermo-twin-audit",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4103,11 +4873,17 @@
       "canonicalSource": "library/skills/prd-from-context",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4115,11 +4891,17 @@
       "canonicalSource": "library/skills/decision-questionnaire",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4127,11 +4909,17 @@
       "canonicalSource": "library/skills/tracer-ticket-split",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4139,11 +4927,17 @@
       "canonicalSource": "library/skills/issue-state-triage",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4290,11 +5084,17 @@
       "canonicalSource": "library/skills/video-production-lab",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4302,11 +5102,17 @@
       "canonicalSource": "library/skills/voice-fingerprint",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4316,8 +5122,9 @@
       "scope": "optional",
       "status": "selection-tested",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "task-specific project tools; see source procedure"
@@ -4348,11 +5155,17 @@
       "canonicalSource": "library/skills/wayfinder-map",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4381,8 +5194,9 @@
       "scope": "optional",
       "status": "selection-tested",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "current client source retrieval/search tools when required"
@@ -4426,11 +5240,17 @@
       "canonicalSource": "library/skills/weekly-commit-recap",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4438,11 +5258,17 @@
       "canonicalSource": "library/skills/commit-recap",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4450,11 +5276,17 @@
       "canonicalSource": "library/skills/rationale-dig",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4481,11 +5313,17 @@
       "canonicalSource": "library/skills/chat-preference-miner",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4495,8 +5333,9 @@
       "scope": "optional",
       "status": "selection-tested",
       "supportedClients": [
+        "claude",
         "codex",
-        "claude"
+        "opencode"
       ],
       "requiredTools": [
         "task-specific project tools; see source procedure"
@@ -4513,11 +5352,17 @@
       "canonicalSource": "library/skills/worktree-lanes",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4525,11 +5370,17 @@
       "canonicalSource": "library/skills/world-fate-ledger",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4537,11 +5388,17 @@
       "canonicalSource": "library/skills/world-diagnostics",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4549,11 +5406,17 @@
       "canonicalSource": "library/skills/article-beat-path",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4575,11 +5438,17 @@
       "canonicalSource": "library/skills/fragment-harvest",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4587,11 +5456,17 @@
       "canonicalSource": "library/skills/build-plan-writer",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },
@@ -4599,11 +5474,17 @@
       "canonicalSource": "library/skills/article-shaping",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "unreviewed",
-      "supportedClients": [],
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
       "requiredTools": [],
-      "lastReviewed": null,
-      "evidence": [],
+      "lastReviewed": "2026-11-03",
+      "evidence": [
+        "docs/OPERATING-MODEL.md#skill-names"
+      ],
       "positiveTask": null,
       "nearMiss": null
     },

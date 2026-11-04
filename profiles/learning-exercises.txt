@@ -1,2 +1,0 @@
-# Focused optional profile: learning-exercises
-exercise-scaffold

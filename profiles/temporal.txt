@@ -1,3 +1,0 @@
-# Focused optional profile: temporal
-temporal-flow-design
-temporal-py-tests

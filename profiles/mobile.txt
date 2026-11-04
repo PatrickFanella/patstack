@@ -1,2 +1,0 @@
-# Focused optional profile: mobile
-rn-expo-builder

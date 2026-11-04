@@ -1,17 +1,14 @@
-# Research, documentation, structured artifacts, technical writing, and knowledge capture.
-learning-roadmap
-repo-research-trail
+data-narrative
+decision-questionnaire
 docx-editor
-github-pro
+ebook-concept-miner
 openai-doc-lookup
 pdf-render-check
 pptx-forge
-readme-i18n
-review-doc-consistency
-learning-retro
+primary-source-notes
+repo-research-trail
 sheet-wrangler
-tech-doc-writer
-prd-from-context
-decision-questionnaire
-writing-for-agents
-build-plan-writer
+status-memo-writer
+tetrad-impact-lens
+thinking-audit
+viral-claim-probe

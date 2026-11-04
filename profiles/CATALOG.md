@@ -1,136 +1,90 @@
 # Skill Profile Catalog
 
-Generated from current sources and qualification filters on October 3, 2026. Counts include core and exclude global, retired, local-only and blocked owners.
+Rebuilt on 2026-11-03 from the reviewed library. Counts are optional library skills; curated, shared, retired, vault-local and blocked owners are excluded.
 
-**Library source folders:** 325
-**Eligible shared owners:** 168
-**Universal core:** 5
-**Profiles:** 21
+**Activatable library skills:** 162
+**Categories:** 14
 
-Core: `claim-verifier`, `scope-grill`, `relay-baton`, `summarization`, `web-lookup`
+## core (3)
 
-## ai-agents (24 including core)
+Always active.
 
-Agent systems, MCP, LLM workflows, skills, orchestration, and automation runtimes.
+`claim-verifier`, `digest-distiller`, `web-lookup`
 
-`arena`, `mode-skill-miner`, `blacktower`, `ralph-loop-stop`, `continual-learning`, `cursor-plugin-forge`, `cursor-sdk-builder`, `opencode-config-tuner`, `repo-research-trail`, `agent-fanout-plan`, `orchestrate`, `codex-plugin-scaffold`, `ralph-loop-start`, `ralph-loop-explainer`, `recall`, `reflect`, `review-plugin-submission`, `setup-pstack`, `swarm`
+## ai-agents (25)
 
-## backend-data (8 including core)
+Agent orchestration, client configuration and skill authoring.
 
-APIs, services, authentication, databases, search, payments, and data quality.
+`agent-fanout-plan`, `blacktower`, `candidate-arena`, `chat-preference-miner`, `claude-bg-handoff`, `codex-plugin-scaffold`, `codex-skill-fetch`, `context-recall`, `cursor-plugin-forge`, `cursor-sdk-builder`, `diff-auditor`, `friction-miner`, `mode-skill-miner`, `model-crossfire`, `openai-doc-lookup`, `opencode-config-tuner`, `opencode-deepwork`, `plain-restate`, `ralph-loop-explainer`, `ralph-loop-start`, `ralph-loop-stop`, `skill-forge`, `switchyard-runtime-desk`, `worker-swarm-fanout`, `worktree-lanes`
 
-`userscript-workshop`, `stripe-checkout-wiring`, `temporal-flow-design`
+## engineering (23)
 
-## browser-extension-development (7 including core)
+Planning, understanding and delivering code changes.
 
-Focused optional profile: browser-extension-development
+`bug-intake-session`, `build-plan-writer`, `code-walkthrough`, `codemap-atlas`, `commit-recap`, `interface-design-twice`, `issue-state-triage`, `loop-spec-grill`, `module-deepener`, `observe-tune-loop`, `playbook-designer`, `pocock-flow-router`, `prd-from-context`, `primary-source-notes`, `rationale-dig`, `repo-research-trail`, `sketch-first-design`, `spec-implementer`, `tracer-ticket-split`, `tracker-bootstrap`, `wayfinder-map`, `weekly-commit-recap`, `worktree-lanes`
 
-`userscript-workshop`, `vscode-extension-lab`
+## testing-quality (12)
 
-## charting (6 including core)
+Review, verification and test work.
 
-Focused optional specialist profile: charting
+`branch-shipper`, `bug-intake-session`, `change-blast-check`, `diff-auditor`, `diff-walkthrough`, `issue-state-triage`, `module-deepener`, `strategy-backtester`, `temporal-py-tests`, `thermo-twin-audit`, `verify-skill-audit`, `verify-skill-forge`
 
-`tv-candle-charts`
+## backend-devops (8)
 
-## creative-media-design (14 including core)
+Service code, payments, workflows and infrastructure.
 
-Visual design, presentations, images, video, music, games, and brand media.
+`fleet-ops-router`, `kube-artifact-smith`, `strategy-backtester`, `stripe-checkout-wiring`, `temporal-flow-design`, `temporal-py-tests`, `terraform-module-smith`, `web-host-hardening`
 
-`web-game-loop`, `ebook-concept-miner`, `game-fun-theory`, `image`, `sonic-fingerprint`, `brutal-hud-kit`, `pptx-forge`, `slide-story-design`, `video`
+## security (6)
 
-## devops-reliability (8 including core)
+Security review, forensics and hardening.
 
-Cloud, deployment, infrastructure, observability, performance, and operational safety.
+`binary-dissector`, `pci-scope-check`, `ram-dump-sleuth`, `solidity-audit`, `stripe-checkout-wiring`, `web-host-hardening`
 
-`fleet-ops-router`, `kube-artifact-smith`, `terraform-module-smith`
+## frontend-mobile (8)
 
-## docs-research (16 including core)
+Web, mobile, terminal and editor interfaces.
 
-Research, documentation, structured artifacts, technical writing, and knowledge capture.
+`brutal-hud-kit`, `opentui-screens`, `ref-snapshot-browser`, `rn-expo-builder`, `tv-candle-charts`, `userscript-workshop`, `vscode-extension-lab`, `web-game-loop`
 
-`learning-roadmap`, `repo-research-trail`, `doc`, `docs-canvas`, `pdf`, `pptx-forge`, `learning-retro`, `spreadsheet`, `prd-from-context`, `decision-questionnaire`, `build-plan-writer`
+## tooling-homelab (15)
 
-## engineering (35 including core)
+Personal tools, homelab services and client setup.
 
-Languages, Git, architecture, refactoring, implementation, and general software delivery.
+`blacktower`, `claude-git-guardrails`, `codex-desktop-audit`, `decision-questionnaire`, `desktop-capture`, `fleet-ops-router`, `karakeep-bookmarks`, `obsidian-cli-driver`, `opencode-config-tuner`, `opencode-cron`, `oss-maintainer-coach`, `sp-day-planner`, `sp-mcp-doctor`, `sp-upkeep-router`, `switchyard-runtime-desk`
 
-`architect`, `pocock-flow-router`, `bro`, `cartography`, `claude-bg-handoff`, `repo-research-trail`, `deepwork`, `interface-design-twice`, `playbook-designer`, `how`, `implement`, `interrogate`, `loop-spec-grill`, `agent-fanout-plan`, `no-comments`, `observe-tune-loop`, `qa`, `reproduce-and-fix-issues`, `research`, `setup-benny`, `prd-from-context`, `tracer-ticket-split`, `triage-issue-reports`, `wayfinder`, `weekly-commit-recap`, `commit-recap`, `why`, `chat-preference-miner`, `worktrees`, `build-plan-writer`
+## docs-research (14)
 
-## frontend-mobile (10 including core)
+Office documents, research and reports.
 
-Web UI, React, browser automation, accessibility, mobile, and interface systems.
+`data-narrative`, `decision-questionnaire`, `docx-editor`, `ebook-concept-miner`, `openai-doc-lookup`, `pdf-render-check`, `pptx-forge`, `primary-source-notes`, `repo-research-trail`, `sheet-wrangler`, `status-memo-writer`, `tetrad-impact-lens`, `thinking-audit`, `viral-claim-probe`
 
-`ref-snapshot-browser`, `tv-candle-charts`, `brutal-hud-kit`, `rn-expo-builder`, `vscode-extension-lab`
+## learning (5)
 
-## infrastructure (7 including core)
+Courses, tutoring and practice.
 
-Focused optional specialist profile: infrastructure
+`exercise-scaffold`, `learning-retro`, `learning-roadmap`, `lesson-workspace`, `patient-tutor`
 
-`kube-artifact-smith`, `terraform-module-smith`
+## product-growth (21)
 
-## learning-exercises (6 including core)
+Product strategy, marketing and sales.
 
-Focused optional profile: learning-exercises
+`book-blurb-doctor`, `customer-voice-miner`, `data-narrative`, `drip-sequence-planner`, `editorial-roadmap`, `landing-page-cro`, `launch-runway`, `lead-pipeline-ops`, `market-position-map`, `page-copy-forge`, `paid-media-plan`, `persuasion-levers`, `rival-dossier`, `runway-modeler`, `sales-collateral`, `search-rank-audit`, `slide-story-design`, `social-post-craft`, `split-test-planner`, `status-memo-writer`, `vs-page-writer`
 
-`exercise-scaffold`
+## creative-media-design (10)
 
-## mobile (6 including core)
+Images, video, sound, slides and game design.
 
-Focused optional profile: mobile
+`brutal-hud-kit`, `game-fun-theory`, `lyric-doctor`, `marketing-imagery`, `pptx-forge`, `raster-image-gen`, `slide-story-design`, `sonic-fingerprint`, `video-production-lab`, `web-game-loop`
 
-`rn-expo-builder`
+## writing-nonfiction (11)
 
-## product-growth (27 including core)
+Articles, essays, talks and voice.
 
-Product strategy, finance, customer research, SEO, marketing, sales, and conversion.
+`article-beat-path`, `article-restructure`, `article-shaping`, `draft-reviser`, `editorial-roadmap`, `fragment-harvest`, `name-forge`, `nonfiction-gap-finder`, `speech-shaper`, `viral-claim-probe`, `voice-fingerprint`
 
-`split-test-planner`, `book-blurb-doctor`, `market-position-map`, `vs-page-writer`, `rival-dossier`, `editorial-roadmap`, `copywriting`, `customer-voice-miner`, `data-narrative`, `repo-research-trail`, `drip-sequence-planner`, `status-memo-writer`, `launch-runway`, `persuasion-levers`, `landing-page-cro`, `paid-media-plan`, `slide-story-design`, `revops`, `sales-collateral`, `search-rank-audit`, `social-post-craft`, `runway-modeler`
+## writing-worldbuilding (30)
 
-## binary-dissector (6 including core)
+Fiction craft, worldbuilding and tabletop play.
 
-Focused optional specialist profile: binary-dissector
-
-`binary-dissector`
-
-## security (11 including core)
-
-Application, infrastructure, identity, secrets, threat modeling, and compliance overlay.
-
-`ram-dump-sleuth`, `pci-scope-check`, `binary-dissector`, `web-host-hardening`, `solidity-audit`, `stripe-checkout-wiring`
-
-## smart-contracts (6 including core)
-
-Focused optional specialist profile: smart-contracts
-
-`solidity-audit`
-
-## temporal (7 including core)
-
-Focused optional profile: temporal
-
-`temporal-py-tests`, `temporal-flow-design`
-
-## terminal-ui (6 including core)
-
-Focused optional profile: terminal-ui
-
-`opentui`
-
-## testing-quality (15 including core)
-
-Testing, debugging, review, verification, QA, and maintainability overlay.
-
-`strategy-backtester`, `change-blast-check`, `verify-skill-forge`, `module-deepener`, `verify-skill-audit`, `diff-walkthrough`, `branch-shipper`, `temporal-py-tests`, `thermos`, `triage`
-
-## tooling-homelab (26 including core)
-
-CLI and desktop tools, integrations, plugins, browser control, Obsidian, and homelab operations.
-
-`ref-snapshot-browser`, `blacktower`, `codex-desktop-audit`, `opencode-config-tuner`, `claude-git-guardrails`, `fleet-ops-router`, `karakeep`, `obsidian-cli-driver`, `oss-maintainer-coach`, `opentui`, `exercise-scaffold`, `opencode-cron`, `screenshot`, `tracker-bootstrap`, `sp-upkeep-router`, `sp-mcp-doctor`, `sp-day-planner`, `switchyard-runtime-desk`, `teach`, `decision-questionnaire`, `vscode-extension-lab`
-
-## writing-worldbuilding (49 including core)
-
-Writing craft, editing, narrative, fiction, naming, and worldbuilding.
-
-`story-dna-adapter`, `nonfiction-gap-finder`, `book-blurb-doctor`, `outline-to-chapter`, `character-arc-doctor`, `viral-claim-probe`, `trope-refresher`, `conlang`, `editorial-roadmap`, `copywriting`, `repo-research-trail`, `dialogue`, `story-dna-extractor`, `drafting`, `article-restructure`, `rpg-game-master`, `genre-promise-check`, `patient-tutor`, `thinking-audit`, `branch-doctor`, `punchline-lab`, `conlang-drift`, `entropy-lists`, `lyric-doctor`, `naming`, `fiction-line-edit`, `book-outliner`, `revision`, `sensitivity-read`, `world-bible`, `speech-shaper`, `cliche-escape`, `story-mentor`, `story-cowriter`, `premise-forge`, `story-diagnosis`, `table-tone-tuner`, `tetrad-impact-lens`, `voice-fingerprint`, `world-fate-ledger`, `worldbuilding`, `article-beat-path`, `fragment-harvest`, `article-shaping`
+`book-blurb-doctor`, `book-outliner`, `branch-doctor`, `character-arc-doctor`, `cliche-escape`, `conlang-drift`, `conlang-forge`, `dialogue-doctor`, `draft-reviser`, `draft-unblocker`, `entropy-lists`, `fiction-line-edit`, `genre-promise-check`, `lyric-doctor`, `name-forge`, `outline-to-chapter`, `premise-forge`, `punchline-lab`, `rpg-game-master`, `sensitivity-read`, `story-cowriter`, `story-diagnosis`, `story-dna-adapter`, `story-dna-extractor`, `story-mentor`, `table-tone-tuner`, `trope-refresher`, `world-bible`, `world-diagnostics`, `world-fate-ledger`
