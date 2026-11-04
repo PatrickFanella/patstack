@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "description": "Public patstack edition, published as the generic-skills repository and the @subcult/patstack npm package. Only these skills are exported; scripts/public-edition.py applies the substitutions and refuses the export if a forbidden pattern remains.",
+  "skills": [
+    "api-contract-smith",
+    "auth-gatekeeper",
+    "bash-script-craft",
+    "behavior-proof",
+    "boundary-drafter",
+    "bug-tracer",
+    "build-sequencer",
+    "bus-factor-map",
+    "cf-edge-deploy",
+    "ci-medic",
+    "cli-contract-smith",
+    "dep-source-clone",
+    "dep-upgrade-pilot",
+    "diff-inspector",
+    "eval-bench",
+    "git-surgery",
+    "gitea-fleet-tidy",
+    "go-craft",
+    "mcp-server-forge",
+    "mcp-wire-tracer",
+    "mtls-trust-chain",
+    "perf-hotpath-probe",
+    "pg-plan-reader",
+    "playwright-cli-driver",
+    "privacy-controls",
+    "prose-unslop",
+    "python-uv-workbench",
+    "react-render-tuner",
+    "red-green-loop",
+    "relay-baton",
+    "repo-atlas",
+    "retrieval-pipeline",
+    "rust-ownership-async",
+    "safe-refactor-pass",
+    "schema-migrator",
+    "scope-grill",
+    "secret-rotation-flow",
+    "secure-code-audit",
+    "setup-wizard-script",
+    "ship-check",
+    "stride-threat-map",
+    "sweep-rewriter",
+    "tech-doc-writer",
+    "telemetry-signal-forge",
+    "throwaway-prototype",
+    "ts-type-design",
+    "ui-craft",
+    "wcag-a11y-audit"
+  ],
+  "substitutions": [
+    [
+      "Repositories on `git.subcult.tv` are Gitea: use `tea` with `--login subcult-agent` and the Gitea API.",
+      "Repositories on a Gitea or Forgejo host: use `tea` with `--login <login>` and the Gitea API."
+    ],
+    [
+      "Gitea (`git.subcult.tv`):",
+      "Gitea or Forgejo:"
+    ],
+    [
+      "Most repositories in this setup live on Gitea at `git.subcult.tv`, where `gh` does not work: use `tea --login subcult-agent` (or `tea api` for endpoints it lacks) and treat GitHub copies as mirrors.",
+      "For Gitea or Forgejo remotes `gh` does not work: use `tea --login <login>` (or `tea api` for endpoints it lacks)."
+    ],
+    [
+      "On Gitea (git.subcult.tv) use instead:",
+      "On Gitea or Forgejo use instead:"
+    ],
+    [
+      "returns `login: subcult-agent`",
+      "returns the expected account"
+    ],
+    [
+      "Most repositories here live on Gitea (`https://git.subcult.tv`); `gh secret` does not reach them.",
+      "For Gitea or Forgejo repositories, `gh secret` does not reach them."
+    ],
+    [
+      "The GitHub examples in the full guide apply only to GitHub mirrors and personal repos.",
+      "The GitHub examples in the full guide apply to GitHub repositories."
+    ],
+    [
+      "(via tea, e.g. git.subcult.tv)",
+      "(via tea)"
+    ],
+    [
+      "--login subcult-agent",
+      "--login <login>"
+    ]
+  ],
+  "forbidden": [
+    "subcult-agent",
+    "git\\.subcult\\.tv",
+    "onnwee",
+    "\\b10\\.0\\.0\\.(?!0\\b)\\d+",
+    "\\b(Kvant|Almaz|Sputnik|Soyuz|Dozor|Kuznya|Volga|Machinum|Switchyard|Ars Malefica|Archivum)\\b",
+    "\\bhomelab\\b",
+    "\\.homelab/",
+    "estate-config",
+    "patstack/(skills|library|shared)"
+  ],
+  "metadataFields": [
+    "compatibility"
+  ]
+}
