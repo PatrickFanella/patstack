@@ -1,2 +1,0 @@
-# Focused optional specialist profile: reverse-engineering
-binary-dissector

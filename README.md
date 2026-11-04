@@ -81,7 +81,7 @@ The application source lives in the sibling `subsets` repository. Original appli
 ```sh
 uv tool install --editable ../subsets
 subsets
-subsets apply --mobile --dry-run
+subsets apply --frontend-mobile --dry-run
 ```
 
 System and plugin directories retain their owners. Existing installer-managed roots use explicit backends. See the [discovery and ownership guidelines](https://git.subcult.tv/subculture-collective/subsets/src/branch/main/docs/discovery-ownership.md) before adopting another folder.
@@ -95,28 +95,31 @@ discovery stays small and routing stays sharp.
 
 ### Which category to pick
 
+Counts are the optional library skills each category adds; the 52 curated
+skills and the shared skills are always installed and are not listed.
+
 | Category | Pick it when you are | Skills |
 |---|---|---|
-| `core` | always active: fact checks, summaries, web lookup, plus the shared skills | 5 |
-| `engineering` | writing or restructuring code in any language, Git work, architecture, delivery | 65 |
-| `testing-quality` | debugging, reviewing, verifying, QA, or cleaning up a test suite | 34 |
-| `ai-agents` | building agents, MCP servers, LLM workflows, evals or skills | 48 |
-| `tooling-homelab` | working on CLIs, desktop tools, plugins, Obsidian, browser control or the homelab | 48 |
-| `backend-data` | building APIs, services, auth, databases, search or payments | 20 |
-| `devops-reliability` | deploying, running infrastructure, observability or performance work | 16 |
-| `security` | doing a security review, threat model, secrets or compliance work | 17 |
-| `frontend-mobile` | building web UI, React, accessibility, mobile or browser automation | 13 |
-| `docs-research` | researching, writing technical docs or capturing knowledge | 16 |
-| `product-growth` | doing product strategy, customer research, SEO, marketing or sales | 23 |
-| `creative-media-design` | making visual design, slides, images, video, music, games or brand media | 15 |
-| `writing-worldbuilding` | writing or editing fiction, narrative, naming or worldbuilding | 46 |
+| `core` | always active: fact checks, summaries and web lookup, plus the five shared skills | 3 |
+| `ai-agents` | running or configuring agents: parallel candidates and swarms, Ralph loops, handoffs, mining your own sessions, skill authoring, Blacktower/OpenCode/Codex/Cursor setup | 25 |
+| `engineering` | planning, understanding or shipping code: implementation plans, specs, tickets, code walkthroughs, design alternatives, commit recaps | 23 |
+| `testing-quality` | reviewing or proving a change: blast radius, branch shipping, double reviews, verification skills, issue triage, test design | 12 |
+| `backend-devops` | building services or infrastructure: Stripe, Temporal, Kubernetes, Terraform, web server hardening, fleet operations, backtests | 8 |
+| `security` | doing security-sensitive work: PCI scope, memory forensics, binary reverse engineering, Solidity audits, server hardening | 6 |
+| `frontend-mobile` | building interfaces: React Native/Expo, terminal UIs, VS Code extensions, userscripts, charts, HUD design, web games | 8 |
+| `tooling-homelab` | working with your own tools: Obsidian, Karakeep, Super Productivity, desktop capture, Switchyard, Blacktower, client guardrails | 15 |
+| `docs-research` | working with documents or research: DOCX, PDF, spreadsheets, PPTX, ebooks, source research, memos, claim probes | 14 |
+| `learning` | teaching or learning: multi-session courses, roadmaps, tutoring, retrospectives, exercise scaffolds | 5 |
+| `product-growth` | marketing or selling: positioning, landing pages, SEO, ads, email flows, social posts, sales collateral, launch plans | 21 |
+| `creative-media-design` | making media: marketing images, raster art, video, music prompts, slides, game design | 10 |
+| `writing-nonfiction` | writing articles or talks: shaping drafts, restructuring, fragments, speech adaptation, voice capture, naming | 11 |
+| `writing-worldbuilding` | writing fiction or building worlds: story diagnosis, arcs, dialogue, conlangs, tropes, tabletop play, world bibles | 30 |
 
-Focused one- or two-skill categories cover narrow jobs: `browser-extension-development`,
-`charting`, `infrastructure` (Kubernetes, Terraform), `learning-exercises`, `mobile`,
-`reverse-engineering`, `smart-contracts`, `temporal` and `terminal-ui`. Combine
-categories when a task spans them, for example `--engineering --testing-quality`.
-Skills that are curated already (always installed) are listed in categories for
-completeness but never installed twice.
+Every activatable library skill belongs to at least one category, and some sit
+in two where the work overlaps (for example `stripe-checkout-wiring` is in
+`backend-devops` and `security`). Combine categories when a task spans them,
+for example `--engineering --testing-quality`. The categories also appear in
+the Groups view of the `subsets` TUI and work with `subsets apply --group NAME`.
 
 ### How to switch
 

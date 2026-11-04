@@ -1,28 +1,18 @@
 # Optional skill profiles
 
-Source: `patstack/profiles`. Run `~/.agents/bin/skill-profile list` for live eligible counts and `plan PROFILE` for the exact selection. Profiles add optional shared skills alongside the curated Codex base. Managed interview/handoff skills remain present. Global curated or retired entrypoint names are filtered out, even under `--all`.
+Source: `patstack/profiles`. Each `NAME.txt` lists the optional library skills
+one Subsets category adds; `core.txt` is always active. Curated personal skills
+and the shared skills are installed separately and are never listed here.
+Retired names, vault-local skills and blocked qualifications are filtered out
+even if a profile names them. See `CATALOG.md` for every category's members and
+the README's Subsets section for when to pick each one.
 
-Use `activate PROFILE`, `deactivate` for core, and `status` for drift. Restart agent sessions after a change. Edit and commit canonical sources in `patstack`; installed copies are not independent authorship locations. See `docs/OPERATING-MODEL.md` in that repository.
+Switch with `subsets apply --NAME` (or `--group NAME`), preview with
+`--dry-run`, and return with `subsets apply --group core`. The lower-level
+selector is `~/.agents/bin/skill-profile` (`list`, `plan`, `activate`,
+`deactivate`, `status`, `rollback --run PATH`). Restart agent sessions after a
+change. Claude links are created only for skills whose
+`catalog/qualification.json` record lists `claude`.
 
-The following specialists are optional. Their curated procedures live under
-`library/skills/`; older optional source versions are archived under
-`authoring/optional-originals/2026-10-03/` with file hashes in the catalog.
-
-| Profile | Adds to the five-skill core |
-|---|---|
-| infrastructure | kube-artifact-smith, terraform-module-smith |
-| charting | tv-candle-charts |
-| binary-dissector | binary-dissector |
-| smart-contracts | solidity-audit |
-
-For example, run `rtk proxy ~/.agents/bin/skill-profile plan infrastructure`,
-then `activate infrastructure` when needed. Profiles can be combined. Use
-`deactivate` to return to core. These selections govern Codex optional shared
-skills; Claude uses explicit source links and needs its own deliberate link
-selection. No specialist is active in the default core.
-
-Additional focused profiles are mobile, terminal-ui, browser-extension-development,
-temporal and learning-exercises. They respectively select React Native, OpenTUI,
-userscript/VS Code extension work, the two Temporal procedures, and exercise scaffolding.
-Known blocked qualifications are filtered even under --all. See docs/PROJECT-SKILLS.md
-for guarded local/worktree selections and matching Claude optional links.
+Edit and commit profiles here, then build and deploy a new Subsets bundle; see
+`runtime-bundles/subsets-fleet/README.md`.

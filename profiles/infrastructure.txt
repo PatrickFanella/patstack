@@ -1,3 +1,0 @@
-# Focused optional specialist profile: infrastructure
-kube-artifact-smith
-terraform-module-smith

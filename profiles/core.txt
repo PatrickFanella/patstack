@@ -1,6 +1,3 @@
-# Always active
 claim-verifier
-scope-grill
-relay-baton
 digest-distiller
 web-lookup

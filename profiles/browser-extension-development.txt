@@ -1,3 +1,0 @@
-# Focused optional profile: browser-extension-development
-userscript-workshop
-vscode-extension-lab

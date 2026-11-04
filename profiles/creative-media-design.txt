@@ -1,16 +1,10 @@
-# Visual design, presentations, images, video, music, games, and brand media.
-control-surface-designer
-web-game-loop
-ebook-concept-miner
-ui-craft
-game-fun-theory
-guitar-practice-coach
-marketing-imagery
-sonic-fingerprint
 brutal-hud-kit
+game-fun-theory
+lyric-doctor
+marketing-imagery
 pptx-forge
+raster-image-gen
 slide-story-design
-subcult-brand-voice
-subcult-visual-design
-subcult-worldbuilding
+sonic-fingerprint
 video-production-lab
+web-game-loop

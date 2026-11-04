@@ -1,18 +1,6 @@
-# Application, infrastructure, identity, secrets, threat modeling, and compliance overlay.
-auth-gatekeeper
-bash-defensive-patterns
-privacy-controls
-github-pro
-k8s-security-policies
-ram-dump-sleuth
-mtls-trust-chain
+binary-dissector
 pci-scope-check
-sast-configuration
-secret-rotation-flow
-web-host-hardening
-secure-code-audit
-bus-factor-map
-stride-threat-map
+ram-dump-sleuth
 solidity-audit
 stripe-checkout-wiring
-binary-dissector
+web-host-hardening

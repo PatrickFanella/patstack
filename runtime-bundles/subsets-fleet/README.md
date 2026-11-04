@@ -10,8 +10,8 @@ Only paths recorded by this adapter can be removed when switching categories.
 Local changes to those paths stop a switch. Unqualified Claude entries remain
 available through the shared Codex selection and appear in `claudeExcluded`.
 
-Preview with `subsets apply --mobile --dry-run`, then select with
-`subsets apply --mobile`. Return to core with `subsets apply --group core`.
+Preview with `subsets apply --frontend-mobile --dry-run`, then select with
+`subsets apply --frontend-mobile`. Return to core with `subsets apply --group core`.
 Start a fresh client session after switching. Existing unrelated skills remain
 active; a category selection does not disable installations owned by other tools.
 
