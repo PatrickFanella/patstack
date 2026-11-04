@@ -1,18 +1,18 @@
 # Project and client skill selections
 
-Author sources and mappings in codex-skills. `catalog/project-selections.json` registers the canonical Git owner, source folders, clients and short root instruction block. `.agent-skills.json` in each checkout is a generated receipt of its selection and hashes, not a second editable source. Copies under .agents/skills are generated deployments; Claude and OpenCode use relative links to those copies.
+Author sources and mappings in patstack. `catalog/project-selections.json` registers the canonical Git owner, source folders, clients and short root instruction block. `.agent-skills.json` in each checkout is a generated receipt of its selection and hashes, not a second editable source. Copies under .agents/skills are generated deployments; Claude and OpenCode use relative links to those copies.
 
 The project installer checks the target’s Git common directory against its registered owner, refuses path escape, symlink parents, unsupported client contracts and destination drift, and preserves every unrelated skill. A checkout gets its own private transaction and verified backups. Root AGENTS text outside the managed block is preserved; later root edits require a reviewed baseline rather than silent overwriting. The current deployed source and code must match committed bytes.
 
 ```sh
-rtk proxy python -B scripts/project-skills.py plan --project codex-skills --root /home/onnwee/Work/Tools/codex-skills
-rtk proxy python -B scripts/project-skills.py apply --project codex-skills --root /home/onnwee/Work/Tools/codex-skills
-rtk proxy python -B scripts/project-skills.py verify --project codex-skills --root /home/onnwee/Work/Tools/codex-skills
+rtk proxy python -B scripts/project-skills.py plan --project patstack --root /home/onnwee/Work/Tools/patstack
+rtk proxy python -B scripts/project-skills.py apply --project patstack --root /home/onnwee/Work/Tools/patstack
+rtk proxy python -B scripts/project-skills.py verify --project patstack --root /home/onnwee/Work/Tools/patstack
 ```
 
 Use the same project ID and the actual isolated checkout path for a worktree. This does not change a global profile. New projects can select reviewed optional library sources through a registered mapping; merely writing a declaration without materializing it does not establish discovery. Existing local facts and procedures should stay with their project owner.
 
-The initial mappings cover codex-skills maintenance, Studio preparation and its subcult-tv consumer. Root instructions trigger procedures only for the relevant task. CLI `rollback --run PATH` restores this root’s recorded transaction while preserving intervening edits. Discovery and filesystem readback do not prove a model followed the procedure or that external services work.
+The initial mappings cover patstack maintenance, Studio preparation and its subcult-tv consumer. Root instructions trigger procedures only for the relevant task. CLI `rollback --run PATH` restores this root’s recorded transaction while preserving intervening edits. Discovery and filesystem readback do not prove a model followed the procedure or that external services work.
 
 ## Copied worktrees without an installation record
 
@@ -20,7 +20,7 @@ A Git-created worktree can contain committed generated skills without this host'
 
 ## Studio skill ownership
 
-Canonical Studio skill instructions live under `project-agents/subcult-tv/skills/` in codex-skills. The current subcult-tv selection includes `social-craft`, `studio-brand-system`, `studio-reference-study`, `studio-brand-audit` and `studio-brand-handoff`. Their ownership and routing are registered in `catalog/local-owners.json`, `catalog/capabilities.json` and `catalog/qualification.json`; `catalog/project-selections.json` selects the project deployment.
+Canonical Studio skill instructions live under `project-agents/subcult-tv/skills/` in patstack. The current subcult-tv selection includes `social-craft`, `studio-brand-system`, `studio-reference-study`, `studio-brand-audit` and `studio-brand-handoff`. Their ownership and routing are registered in `catalog/local-owners.json`, `catalog/capabilities.json` and `catalog/qualification.json`; `catalog/project-selections.json` selects the project deployment.
 
 Studio's guides, studies, brand masters and resulting assets remain in `subcult-tv/studio/`. Worktree `.agents/skills/` copies, Claude/OpenCode links and `.agent-skills.json` are generated destinations. Edit the canonical instruction once, validate and commit it, then use the project installer for each intended checkout. System, OS and plugin skills retain their package owners.
 

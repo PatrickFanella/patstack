@@ -5,8 +5,8 @@
     "deployment": "/home/onnwee/Work/Subcult/edda/.agents/skills/play-edda"
   },
   "codex-skills-maintenance": {
-    "owner": "codex-skills",
-    "source": "project-agents/codex-skills/skills/codex-skills-maintenance"
+    "owner": "patstack",
+    "source": "project-agents/patstack/skills/codex-skills-maintenance"
   },
   "social-craft": {
     "owner": "Studio",
@@ -29,7 +29,7 @@
     "source": "project-agents/subcult-tv/skills/studio-brand-handoff"
   },
   "tadooer-workflow": {
-    "owner": "codex-skills Tadooer assistant plugin",
+    "owner": "patstack Tadooer assistant plugin",
     "source": "integrations/tadooer/plugin/skills/tadooer-workflow",
     "deployment": "native Codex and Claude plugin installers; catalog/tadooer-assistant.json"
   }

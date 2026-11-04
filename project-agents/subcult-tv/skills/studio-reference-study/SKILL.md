@@ -5,7 +5,7 @@ description: "Studio design reference study. Use to write, refresh or catalog a 
 
 # Studio reference study
 
-Turn design evidence into a study someone can reuse without mistaking interpretation for observation. Work from the active `subcult-tv` checkout. Read root and `studio/AGENTS.md`, inspect Git status, and preserve unrelated files. `studio/references/` owns the studies; skill instructions are authored in codex-skills.
+Turn design evidence into a study someone can reuse without mistaking interpretation for observation. Work from the active `subcult-tv` checkout. Read root and `studio/AGENTS.md`, inspect Git status, and preserve unrelated files. `studio/references/` owns the studies; skill instructions are authored in patstack.
 
 ## Choose the mode
 

@@ -97,7 +97,7 @@
 | `homelab` | `operations-vault` | [procedure](../vault-agents/Operations/skills/operations-vault/references/operational-evidence.md) |
 | `nuc` | `operations-vault` | [procedure](../vault-agents/Operations/skills/operations-vault/references/operational-evidence.md) |
 | `almaz` | `operations-vault` | [procedure](../vault-agents/Operations/skills/operations-vault/references/operational-evidence.md) |
-| `skills-cli` | `codex-skills-maintenance` | [procedure](../project-agents/codex-skills/skills/codex-skills-maintenance/references/external-intake.md) |
+| `skills-cli` | `codex-skills-maintenance` | [procedure](../project-agents/patstack/skills/codex-skills-maintenance/references/external-intake.md) |
 | `subcult-brand-voice` | `social-craft` | [procedure](../project-agents/subcult-tv/skills/social-craft/SKILL.md) |
 | `subcult-visual-design` | `studio-brand-system` | [procedure](../project-agents/subcult-tv/skills/studio-brand-system/SKILL.md) |
 | `subcult-worldbuilding` | `studio-brand-system` | [procedure](../project-agents/subcult-tv/skills/studio-brand-system/SKILL.md) |

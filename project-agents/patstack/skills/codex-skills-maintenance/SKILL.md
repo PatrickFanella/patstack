@@ -5,7 +5,7 @@ description: "Codex-skills repository upkeep. Use to inventory skills, change a 
 
 # Skill maintenance
 
-Read root AGENTS.md and docs/OPERATING-MODEL.md in the canonical codex-skills checkout. Installed personal/shared copies and project selections are deployments; system, OS and plugin packages keep their owners. Inspect current Git status and destination drift before proposing a change.
+Read root AGENTS.md and docs/OPERATING-MODEL.md in the canonical patstack checkout. Installed personal/shared copies and project selections are deployments; system, OS and plugin packages keep their owners. Inspect current Git status and destination drift before proposing a change.
 
 For an inventory, run the bundled `scripts/audit_skills.py`; its defaults include both personal and shared installations. Metadata/structure findings are review clues, not proof that a procedure works. Use `catalog/qualification.json` for canonical owner, client contract, evidence and blocked entries. Compare task-visible discovery, a fresh local app-server probe and installed plugin state rather than treating recursive cache counts as active skills.
 

@@ -373,7 +373,7 @@
   },
   "skills-cli": {
     "owner": "codex-skills-maintenance",
-    "procedure": "project-agents/codex-skills/skills/codex-skills-maintenance/references/external-intake.md"
+    "procedure": "project-agents/patstack/skills/codex-skills-maintenance/references/external-intake.md"
   },
   "subcult-brand-voice": {
     "owner": "social-craft",

@@ -1,7 +1,7 @@
 {
   "links": {
-    "/home/onnwee/.agents/skill-library": "/home/onnwee/Work/Tools/codex-skills/library",
-    "/home/onnwee/.agents/skill-profiles": "/home/onnwee/Work/Tools/codex-skills/profiles",
+    "/home/onnwee/.agents/skill-library": "/home/onnwee/Work/Tools/patstack/library",
+    "/home/onnwee/.agents/skill-profiles": "/home/onnwee/Work/Tools/patstack/profiles",
     "/home/onnwee/.claude/skills/sandbox-desktop": "/home/onnwee/.codex/skills/sandbox-desktop",
     "/home/onnwee/.claude/skills/api-contract-smith": "/home/onnwee/.codex/skills/api-contract-smith",
     "/home/onnwee/.claude/skills/boundary-drafter": "/home/onnwee/.codex/skills/boundary-drafter",
@@ -57,7 +57,7 @@
     "/home/onnwee/.claude/skills/relay-baton": "/home/onnwee/.agents/skills/relay-baton",
     "/home/onnwee/.claude/skills/digest-distiller": "/home/onnwee/.agents/skills/digest-distiller",
     "/home/onnwee/.claude/skills/web-lookup": "/home/onnwee/.agents/skills/web-lookup",
-    "/home/onnwee/.local/bin/claude": "/home/onnwee/Work/Tools/codex-skills/scripts/claude-launcher",
+    "/home/onnwee/.local/bin/claude": "/home/onnwee/Work/Tools/patstack/scripts/claude-launcher",
     "/home/onnwee/.claude/skills/t3-repo-onboard": "/home/onnwee/.codex/skills/t3-repo-onboard",
     "/home/onnwee/.claude/skills/stripe-billing-guard": "/home/onnwee/.codex/skills/stripe-billing-guard"
   },

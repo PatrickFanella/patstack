@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: codex-skills-${{ gitea.ref }}
+  group: patstack-${{ gitea.ref }}
   cancel-in-progress: ${{ gitea.event_name == 'pull_request' }}
 
 jobs:

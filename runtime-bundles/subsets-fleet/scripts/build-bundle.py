@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Subsets fleet deployment folder from a clean codex-skills commit.
+"""Build the Subsets fleet deployment folder from a clean patstack commit.
 
 The folder holds this adapter's scripts and README, the source installer and
 profile selector, and the catalog, library, profiles and shared trees, with a

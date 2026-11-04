@@ -1,12 +1,12 @@
 {
-  "authoring": "/home/onnwee/Work/Tools/codex-skills",
+  "authoring": "/home/onnwee/Work/Tools/patstack",
   "hosts": {
     "kvant": {"home": "/home/onnwee", "rtk": true, "authoringCheckout": true,
       "vaults": "/home/onnwee/Work/Vaults: Ars Malefica, SUBCULT, Machinum and Archivum (plus BX Research Vault)"},
     "sputnik": {"home": "/home/onnwee", "rtk": true,
       "vaults": "/home/onnwee/Work/Vaults: Ars Malefica, SUBCULT, Machinum and Archivum"},
     "almaz": {"home": "/home/onnwee", "rtk": true, "contextFiles": [".agents/CLAUDE.md"],
-      "contextNote": "On Almaz, `~/.agents` is also the Agent Hub repository (`onnwee/.agents` on Gitea and GitHub, dormant since 2026-08-16). Read its `README.md`, `CONTRIBUTING.md` and `docs/HUB_OPERATIONS.md` before changing hub files. `skills/` and `bin/` here are deployment targets of codex-skills and Subsets; edit their sources there."},
+      "contextNote": "On Almaz, `~/.agents` is also the Agent Hub repository (`onnwee/.agents` on Gitea and GitHub, dormant since 2026-08-16). Read its `README.md`, `CONTRIBUTING.md` and `docs/HUB_OPERATIONS.md` before changing hub files. `skills/` and `bin/` here are deployment targets of patstack and Subsets; edit their sources there."},
     "nuc": {"home": "/home/onnwee", "rtk": false},
     "dozor": {"home": "/home/onnwee", "rtk": false},
     "soyuz": {"home": "/Users/onnwee", "rtk": true, "blacktowerCodex": true, "contextFiles": ["AGENTS.md"],

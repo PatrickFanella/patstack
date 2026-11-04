@@ -14,7 +14,7 @@ This skill orchestrates three others: an inline mining pass (see step 1), Cursor
 
 This skill came from Cursor. Read its Cursor names as follows:
 
-- `.cursor/skills/` and `~/.cursor/skills/`: personal skills live in the canonical `codex-skills` repository (`~/Work/Tools/codex-skills` on Kvant, Gitea `subculture-collective/codex-skills`). Search `skills/`, `library/skills/` and installed copies under `~/.codex/skills`, `~/.agents/skills` and `~/.claude/skills`, but edit only the repository source.
+- `.cursor/skills/` and `~/.cursor/skills/`: personal skills live in the canonical `patstack` repository (`~/Work/Tools/patstack` on Kvant, Gitea `subculture-collective/patstack`). Search `skills/`, `library/skills/` and installed copies under `~/.codex/skills`, `~/.agents/skills` and `~/.claude/skills`, but edit only the repository source.
 - `AskQuestion`: Claude Code `AskUserQuestion`; in Codex or OpenCode use their structured question tool if one is offered, otherwise ask a short numbered multiple-choice question in chat.
 - Cursor's `create-skill`: the `skill-forge` skill (Codex `.system/skill-creator`, or the library `skill-forge`).
 - `agent-transcripts/`: the current client's own history for this workspace only. Codex keeps sessions under `~/.codex/sessions/`, Claude Code under `~/.claude/projects/<workspace-slug>/`; for OpenCode or T3, use the session export the client provides. Do not read other workspaces' history.

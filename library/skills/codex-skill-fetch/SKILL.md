@@ -1,6 +1,6 @@
 ---
 name: codex-skill-fetch
-description: "Install Codex skills into $CODEX_HOME/skills from openai/skills lists or a GitHub path. Use for an ad hoc Codex install. Not for skills managed by codex-skills profiles."
+description: "Install Codex skills into $CODEX_HOME/skills from openai/skills lists or a GitHub path. Use for an ad hoc Codex install. Not for skills managed by patstack profiles."
 metadata:
   short-description: Install curated skills from openai/skills or other repos
 ---
@@ -16,7 +16,7 @@ Use the helper scripts based on the task:
 
 Install skills with the helper scripts.
 
-In this setup, durable skills are authored in the `codex-skills` repository on Kvant and deployed by its profile command; installed copies are deployment targets. Use this installer only for an ad hoc Codex install the user asked for, and tell the user it bypasses `codex-skills` drift tracking.
+In this setup, durable skills are authored in the `patstack` repository on Kvant and deployed by its profile command; installed copies are deployment targets. Use this installer only for an ad hoc Codex install the user asked for, and tell the user it bypasses `patstack` drift tracking.
 
 ## Communication
 
