@@ -1,0 +1,73 @@
+{
+  "source": "subculture-collective/subcult-tv studio/brands/patstack",
+  "revision": "24262d618ce309f79d21ba56bb54990797246664",
+  "dirty_source": false,
+  "files": [
+    {
+      "file": "tokens.json",
+      "source": "studio/brands/patstack/tokens.json",
+      "sha256": "57688698a7eb49b16f2060896e8dca8f4333eb25a359113b12a59c6bd5d7ed0c"
+    },
+    {
+      "file": "tokens.css",
+      "source": "studio/brands/patstack/tokens.css",
+      "sha256": "64d66a5138638eb368368753774e3c132e3733dd0900e5fed7324c98d54e53c0"
+    },
+    {
+      "file": "mark-primary.svg",
+      "source": "studio/brands/patstack/logos/mark-primary.svg",
+      "sha256": "e564ec311901ecf766b71955eb50fa6af297c35befce36f90e6c214d59114696"
+    },
+    {
+      "file": "mark-light.svg",
+      "source": "studio/brands/patstack/logos/mark-light.svg",
+      "sha256": "602584a74d900e986814371d31f8cd381c36a3a11315a2e021796845c612ea35"
+    },
+    {
+      "file": "mark-mono-dark.svg",
+      "source": "studio/brands/patstack/logos/mark-mono-dark.svg",
+      "sha256": "0f615af52adf84be4e6e9e1238ae0cc12286784fa5932badab9fbb7371853a00"
+    },
+    {
+      "file": "mark-mono-light.svg",
+      "source": "studio/brands/patstack/logos/mark-mono-light.svg",
+      "sha256": "defcebc1d1a45e71ed4f0a077c84b249022cbc35d0fc4f1c3a47a334468189f9"
+    },
+    {
+      "file": "lockup-primary-outlined.svg",
+      "source": "studio/brands/patstack/logos/lockup-primary-outlined.svg",
+      "sha256": "cfbd9d3accddb2159562a67bfc42e7a9b1aec5403e03fb31f29f0932dcc5c2f2"
+    },
+    {
+      "file": "lockup-light-outlined.svg",
+      "source": "studio/brands/patstack/logos/lockup-light-outlined.svg",
+      "sha256": "c84eabfbbb40c05c690cbdddf487e8fdf7d1e17f41759dbb5d178401b8c00394"
+    },
+    {
+      "file": "og.png",
+      "source": "studio/brands/patstack/product/og.png",
+      "sha256": "d1d7d9d79ccb9a3894c5613510ec906255e7a2b239d04fc6953e9bc669046fb4"
+    },
+    {
+      "file": "repo-avatar.png",
+      "source": "studio/brands/patstack/product/repo-avatar.png",
+      "sha256": "9dd84f16e22886b35c665ff23efdf937b1513d03aab23c4214b18c7a786144b7"
+    },
+    {
+      "file": "readme-banner.svg",
+      "source": "studio/brands/patstack/product/readme-banner.svg",
+      "sha256": "3951b6a1db7652ab0cc4878f6781ec4080ba795d387844eebaf04ee819861420"
+    },
+    {
+      "file": "readme-banner.png",
+      "source": "studio/brands/patstack/product/readme-banner.png",
+      "sha256": "f8499490a6e0eba2be4ad9be131946c81bc607c81d341ded4c45cff7bf06bb82"
+    },
+    {
+      "file": "favicon-64.png",
+      "source": "studio/brands/patstack/product/favicon-64.png",
+      "sha256": "c3539d53e57ebd608db1749885ad2599b118e7a4d79f8f74596e4161fe0567cf"
+    }
+  ],
+  "note": "Copied from Studio. Change the masters in Studio and rerun the export; do not edit these copies."
+}

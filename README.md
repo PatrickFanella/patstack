@@ -1,5 +1,7 @@
 # patstack
 
+![patstack: the rack mark and wordmark beside three registered plates](brand/readme-banner.png)
+
 patstack is the owner's agent skill stack: the personal skills, shared skills,
 optional library, profiles, global agent instructions and the guarded tooling
 that deploys them to every host. It was called `codex-skills` until 2026-11-03,
@@ -15,6 +17,10 @@ OS-owned ones), 5 shared skills, one repository-local Blacktower skill, vault
 and project skills, and a 326-skill optional library. Names follow a distinct
 noun plus purpose (`bug-tracer`, `prose-unslop`, `relay-baton`);
 `catalog/retired-names.json` maps every old name to its owner.
+
+## Brand
+
+patstack has a selected identity: the **A1 Rack system with A3 Registration's plates**, chosen on November 3, 2026 from nine candidates. Rack units stand for the fleet, registered plates for the verify guarantee, and the status labels `[ACTIVE]`, `[WARNING]`, `[VETO]` and `[ARCHIVE]` always agree with the installer's real result. The masters live in SUBCULT Studio; [brand/GUIDE.md](brand/GUIDE.md) explains the rules and `brand/studio-assets.json` records where each copied file came from.
 
 ## Layout and ownership
 
