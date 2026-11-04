@@ -1,5 +1,5 @@
 ---
-description: "Ars Malefica capture flows: build or fix QuickAdd and Templater captures, journal and media notes, thread synthesis, work metadata, or Obsidian REST/MCP/CLI automation."
+description: "Ars Malefica capture setup. Use to build or fix QuickAdd, Templater or periodic-note captures, routing prompts, or Obsidian CLI/REST automation. Not for triaging existing inbox items."
 name: ars-malefica-workflows
 metadata:
   blacktower-pack: personal
@@ -31,7 +31,7 @@ Use for capture and routing work in the vault.
 2. Inspect current QuickAdd, Templater and periodic-note configuration; counts and capabilities must come from the installed configuration.
 3. Preserve the personal daily folder `003 Resources/Periodic Notes` and existing templates unless the task changes that workflow.
 4. Change only the relevant capture choice or helper, back up local configuration, and test its actual destination and generated note.
-5. Use the installed Obsidian CLI or an available authenticated integration. On Kvant, the CLI may require `env -u ELECTRON_RUN_AS_NODE obsidian "vault=Ars Malefica" ...`. Never print integration credentials.
+5. Use the installed Obsidian CLI or an available authenticated integration; both need a running Obsidian desktop app. Kvant (Debian since 2026-11-03) has only the headless `ob` sync client, so edit files directly there and test captures in Obsidian on a desktop device such as Sputnik or Soyuz. Never print integration credentials.
 
 Journal entries record lived experience; task recurrence remains in Super Productivity. Archivum's Karakeep importer owns bulk clippings. Personal resource cards may link to those sources without copying the imported bodies.
 

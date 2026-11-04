@@ -16,7 +16,7 @@ Resolve all paths relative to the Ars Malefica vault root.
 | Local lesson artifacts | `001 Projects/Threads/Guitar/Practice/Materials/` and `001 Projects/Threads/Guitar/Tabs/` |
 | Country Guitar Online archive | `001 Projects/Threads/Guitar/Sources/Raw/Country Guitar Online/` |
 | ArtistWorks Bluegrass Rhythm Toolkit | `001 Projects/Threads/Guitar/Sources/Raw/ArtistWorks/` |
-| External lesson videos | `/home/onnwee/Videos/ArtistWorks/` and `/home/onnwee/Videos/Country Guitar Online/Free Lessons/` |
+| External lesson videos | Historically `~/Videos/ArtistWorks/` and `~/Videos/Country Guitar Online/Free Lessons/` on Kvant. Neither was present on Kvant on 2026-11-03; locate the copy before linking to it. |
 
 The stable pointer contains one `active-block` property and one wikilink to the
 named active block. Completed blocks remain named files; do not turn the pointer
@@ -64,6 +64,8 @@ and label the take `baseline`, `weekly`, `midpoint`, or `final`. State what the
 take is intended to demonstrate. Do not create an empty Recordings directory.
 
 ## Super Productivity discovery
+
+Access is through the `sp-mcp` server (on Kvant, `~/.local/bin/sp-mcp`). If the current client has no Super Productivity tool, list the exact task changes for the user instead of claiming them.
 
 Find the project by exact title `Guitar Practice`; verify its live ID rather than
 assuming an old ID. Read the daily parent, subtasks, review tasks, and recurrence

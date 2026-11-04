@@ -1,4 +1,4 @@
 interface:
   display_name: "Vault Monthly Maintenance"
   short_description: "Monthly upkeep workflow for the ars-malefica vault."
-  default_prompt: "Run the monthly vault maintenance workflow for ars-malefica."
+  default_prompt: "Use $vault-monthly-maintenance to run the monthly Ars Malefica vault upkeep pass."

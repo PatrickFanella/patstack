@@ -14,7 +14,7 @@ Resolve all paths relative to the Ars Malefica vault root.
 | Threads index | `001 Projects/Threads/Threads Index.md` |
 | Works index | `001 Projects/Works/` |
 | Archives | `004 Archives/` |
-| External video storage | `/home/onnwee/Videos/` |
+| External video storage | `~/Videos/` on Kvant; confirm the path on other devices |
 
 ## Medium directories in Resources/Media
 

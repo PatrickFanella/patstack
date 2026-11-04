@@ -1,6 +1,6 @@
 ---
 name: ars-malefica-source-intake
-description: "Ars Malefica source card: create a Media catalog card for a book, course, podcast, article, film, game, music or video and wire it into the Media Index."
+description: "Ars Malefica media cards. Use to add a reusable book, article, course, film, game, music, podcast or YouTube source to 003 Resources/Media. Not for Thread-only sources or inbox triage."
 ---
 
 # Ars Malefica Source Intake

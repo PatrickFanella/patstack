@@ -1,6 +1,6 @@
 ---
 name: ars-malefica-inbox-intake
-description: "Ars Malefica inbox triage: classify and move 000 Inbox items, clippings and batch imports to their owning vault and folder. Not for one catalog card (ars-malefica-source-intake)."
+description: "Ars Malefica inbox triage. Use to classify and route 000 Inbox items, clippings, PDFs or bulk imports to their owning vault and folder. Not for one reusable source card (ars-malefica-source-intake)."
 ---
 
 # Ars Malefica Inbox Intake
@@ -97,7 +97,7 @@ sqlite3):
 1. Identify text/knowledge content (markdown, PDF study materials, JSON
    manifests) — route these normally.
 2. Identify reference media — move outside the vault to
-   `/home/onnwee/Videos/` or the appropriate external path.
+   `~/Videos/` on Kvant or the appropriate external path on the current device.
 3. Never stage video or large binary files for git. Update `.gitignore` if
    residual directories will remain.
 
