@@ -1,12 +1,12 @@
 {
   "source": "subculture-collective/subcult-tv studio/brands/patstack",
-  "revision": "24262d618ce309f79d21ba56bb54990797246664",
+  "revision": "159489c9d8d5ebc4b7503c27c76646c51e033dbd",
   "dirty_source": false,
   "files": [
     {
       "file": "tokens.json",
       "source": "studio/brands/patstack/tokens.json",
-      "sha256": "57688698a7eb49b16f2060896e8dca8f4333eb25a359113b12a59c6bd5d7ed0c"
+      "sha256": "fe8d6af29546bfe6ea4ae3dd2565d29f135b416740e0d7b92f4d78c095636e0f"
     },
     {
       "file": "tokens.css",
@@ -46,7 +46,7 @@
     {
       "file": "og.png",
       "source": "studio/brands/patstack/product/og.png",
-      "sha256": "d1d7d9d79ccb9a3894c5613510ec906255e7a2b239d04fc6953e9bc669046fb4"
+      "sha256": "f6a648500f03e0e5b3905f4bb85b77669a1d8b1e4042782ec7ed5890d540fde3"
     },
     {
       "file": "repo-avatar.png",
