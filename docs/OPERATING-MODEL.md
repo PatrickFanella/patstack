@@ -96,6 +96,25 @@ deploys and tunes them by path), `play-edda` (edda repository),
 skills and `codex-skills-maintenance` keep their names until their deployers
 can retire an old destination.
 
+## Public edition
+
+`catalog/public-edition.json` lists the 48 skills published publicly as the
+`generic-skills` repository and the `@subcult/patstack` npm package, which
+Subsets offers as its default optional pack. Export from a reviewed checkout:
+
+```sh
+python scripts/public-edition.py --check ../generic-skills   # stage and leak-check only
+python scripts/public-edition.py ../generic-skills           # export, refresh provenance and README
+```
+
+The export copies current sources, keeps each skill's license from the
+published copy, rewrites Blacktower notices to the public attribution, moves
+frontmatter fields the public validator rejects into `metadata`, and applies the
+listed substitutions. It refuses the export if any `forbidden` pattern (fleet
+account names, private hosts and paths) remains. Add a substitution or
+generalize the source when it does. Review the diff in `generic-skills`, run its
+`scripts/validate.py`, open a PR there, and tag a release to publish.
+
 ## Global client instructions
 
 Every host's Codex, Claude Code and OpenCode global file is generated. The
