@@ -32,5 +32,10 @@
     "owner": "patstack Tadooer assistant plugin",
     "source": "integrations/tadooer/plugin/skills/tadooer-workflow",
     "deployment": "native Codex and Claude plugin installers; catalog/tadooer-assistant.json"
+  },
+  "blacktower": {
+    "owner": "Blacktower application/package",
+    "source": "library/skills/blacktower",
+    "deployment": "Native Blacktower distribution; preserve existing application views"
   }
 }

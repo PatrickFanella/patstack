@@ -71,12 +71,11 @@ Everyday repository work, debugging, delivery, web/API changes, tools, documenta
 
 Build and configure agents, MCP servers, CLIs, retrieval, evaluations and development environments.
 
-29 additions; 69 selected in total.
+28 additions; 68 selected in total.
 
 | Skill | Purpose |
 |---|---|
 | [`agent-fanout-plan`](../library/skills/agent-fanout-plan/SKILL.md) | Parallel subagent coordination (Claude Code, Codex, OpenCode, Blacktower): ownership, sequencing, handoffs and integration checks. Not when one agent can finish more cheaply. |
-| [`blacktower`](../library/skills/blacktower/SKILL.md) | Blacktower config: tune its OpenCode agents, models, presets, prompts, custom agents, skills, MCPs or plugin behavior for the current user. |
 | [`candidate-arena`](../library/skills/candidate-arena/SKILL.md) | Use for /arena or arena this: run N parallel candidates on one non-trivial task, cross-judge them, pick a base and graft the best parts of the rest into it. |
 | [`chat-preference-miner`](../library/skills/chat-preference-miner/SKILL.md) | Preferences from chats: mine recent Codex, Claude Code or OpenCode transcripts for durable working preferences and turn them into skills, rules or workflow docs. |
 | [`claude-bg-handoff`](../library/skills/claude-bg-handoff/SKILL.md) | Use for /claude-handoff in Claude Code: summarize this conversation and start a background claude --bg session to continue it. Other clients: relay-baton. |
@@ -300,11 +299,10 @@ Build and test mobile, terminal, editor, browser and interactive interfaces.
 
 Operate services and personal tools, investigate incidents, change infrastructure and verify recovery.
 
-27 additions; 67 selected in total.
+26 additions; 66 selected in total.
 
 | Skill | Purpose |
 |---|---|
-| [`blacktower`](../library/skills/blacktower/SKILL.md) | Blacktower config: tune its OpenCode agents, models, presets, prompts, custom agents, skills, MCPs or plugin behavior for the current user. |
 | [`cf-edge-deploy`](../skills/cf-edge-deploy/SKILL.md) | Use when deploying or configuring a project on Cloudflare Workers, Pages or related services (D1, R2, KV, Durable Objects), including wrangler auth and checking the deployed result. |
 | [`claude-git-guardrails`](../library/skills/claude-git-guardrails/SKILL.md) | Claude Code git guardrails: install a PreToolUse hook that blocks git push, reset --hard, clean -f, branch -D and similar commands. Claude Code only. |
 | [`codex-desktop-audit`](../library/skills/codex-desktop-audit/SKILL.md) | Codex Desktop on Sputnik: audit the Arch/Omarchy openai-codex-desktop install after an update, or when the desktop app or codex launcher fails, before proposing any repair. |
