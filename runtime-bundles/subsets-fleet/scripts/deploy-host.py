@@ -20,6 +20,7 @@ def main():
     args = parser.parse_args()
     source = Path(__file__).resolve().parents[1]
     home = Path.home()
+    existing_launcher = (home / '.local/bin/subsets').exists()
     metadata = install.read(source / 'deployment-source.json')
     for relative, expected in metadata['files'].items():
         if install.snapshot(source / relative) != expected:
@@ -46,7 +47,17 @@ def main():
     profile_cmd = [args.python, str(source / 'scripts/skill-profile')]
     plans = {}
     for profile in sorted(p.stem for p in (source / 'profiles').glob('*.txt')):
-        plan = json.loads(subprocess.check_output(profile_cmd + ['plan', profile], text=True))
+        attempt = subprocess.run(profile_cmd + ['plan', profile], capture_output=True, text=True)
+        if attempt.returncode:
+            if profile == 'core':
+                raise RuntimeError(attempt.stderr.strip())
+            # Local edits may block a specialist set without blocking a safe
+            # core rollout. Keep that stack visibly unavailable, never overwrite.
+            plans[profile] = {'unavailable': attempt.stderr.strip()}
+            continue
+        plan = json.loads(attempt.stdout)
+        if profile == 'core':
+            adapter_owned.update(plan.get('transferredPaths', []))
         plans[profile] = {'selected': len(plan['skills']), 'preserved': list(plan['protected']),
                           'claudeExcluded': plan['claudeExcluded']}
     (run / 'category-plans.json').write_text(json.dumps(plans, indent=2) + '\n')
@@ -83,12 +94,12 @@ def main():
     replace(home / '.agents/bin/skill-profile', target=source / 'scripts/skill-profile')
     # Both interactive and login shells need the user launcher directory.
     shell = Path(os.environ.get('SHELL', '/bin/bash')).name
-    rc_files = ['.zshrc', '.zprofile'] if shell == 'zsh' else ['.bashrc', '.bash_profile']
+    rc_files = [] if existing_launcher else ['.zshrc', '.zprofile'] if shell == 'zsh' else ['.bashrc', '.bash_profile']
     addition = '\n# Subsets user executables\ncase ":$PATH:" in\n  *":$HOME/.local/bin:"*) ;;\n  *) export PATH="$HOME/.local/bin:$PATH" ;;\nesac\n'
     for name in rc_files:
         rc = home / name
         if rc.is_symlink():
-            raise RuntimeError('Shell configuration has another source owner: ' + str(rc))
+            continue  # The shell's configuration owner supplies its own PATH.
         content = rc.read_text() if rc.exists() else ''
         if '# Subsets user executables' not in content:
             replace(rc, content=content + addition)

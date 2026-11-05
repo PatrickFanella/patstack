@@ -78,6 +78,8 @@ def plan(source, home, state, profiles, link_mode):
     migrated = marker.exists()
     prior_owners = {}
     manifests = {}
+    historical_protected = {}
+    preserved_edits = []
     if not migrated:
         for relative in config['migrationReceipts']:
             path = home / relative
@@ -89,6 +91,10 @@ def plan(source, home, state, profiles, link_mode):
                 for dest, expected in data['paths'].items():
                     if expected is not None:
                         prior_owners.setdefault(dest, []).append(expected)
+        from fleet_predecessors import evidence
+        proven, historical_protected, preserved_edits = evidence(source, home, roots, sources)
+        for dest, expected in proven.items():
+            prior_owners.setdefault(dest, []).append(expected)
     wanted = {}
     excluded = {}
     for name in selected:
@@ -135,7 +141,7 @@ def plan(source, home, state, profiles, link_mode):
         operations.append({'destination': dest, 'expected': expected, 'desired': desired,
                            'source': None, 'payload': None, 'group': 1,
                            'action': 'unchanged' if actual == desired else 'retire' if desired is None else 'link'})
-    protected = {}
+    protected = dict(historical_protected)
     metadata = install.read(source / 'deployment-source.json')
     for relative, expected in metadata.get('files', {}).items():
         path = source / relative
@@ -162,7 +168,8 @@ def plan(source, home, state, profiles, link_mode):
                                'releasedTo': str(marker)}
                 operations.append(text_op(path, install.snapshot(path), replacement, 'release-owner'))
         operations.append(text_op(marker, None, {'owner': 'subsets', 'schemaVersion': 1,
-            'roots': {k: str(v) for k, v in roots.items()}, 'transferredPaths': sorted(transferred)}, 'take-ownership'))
+            'roots': {k: str(v) for k, v in roots.items()}, 'transferredPaths': sorted(transferred),
+            'preservedLocalEdits': preserved_edits}, 'take-ownership'))
     else:
         ownership = install.read(marker)
         if ownership.get('owner') != 'subsets' or ownership['roots'] != {k: str(v) for k, v in roots.items()}:

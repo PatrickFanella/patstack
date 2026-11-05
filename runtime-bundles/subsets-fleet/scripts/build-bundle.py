@@ -35,6 +35,7 @@ def build(out):
         if script.is_file() and script.name != 'build-bundle.py':
             shutil.copy2(script, out / 'scripts' / script.name)
     shutil.copy2(ROOT / 'scripts/install.py', out / 'scripts/install.py')
+    shutil.copy2(ROOT / 'scripts/discovery.py', out / 'scripts/discovery.py')
     shutil.copy2(ROOT / 'scripts/skill-profile', out / 'scripts/profile-selector')
     for tree in TREES:
         shutil.copytree(ROOT / tree, out / tree, ignore=ignore)

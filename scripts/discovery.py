@@ -3,8 +3,8 @@
 import argparse,json,queue,subprocess,threading,time
 from pathlib import Path
 
-def discover(cwds):
- proc=subprocess.Popen(['codex','app-server','--stdio'],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True)
+def discover(cwds, codex='codex'):
+ proc=subprocess.Popen([codex,'app-server','--stdio'],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True)
  messages=queue.Queue()
  def pump():
   for line in proc.stdout:
@@ -31,6 +31,6 @@ def discover(cwds):
   except subprocess.TimeoutExpired:proc.kill();proc.wait()
 
 if __name__=='__main__':
- p=argparse.ArgumentParser(description=__doc__);p.add_argument('--cwd',action='append',required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args()
- result=discover(a.cwd);a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(result,indent=2)+'\n')
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--cwd',action='append',required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--codex',default='codex');a=p.parse_args()
+ result=discover(a.cwd,a.codex);a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(result,indent=2)+'\n')
  data=result['skills'];print('Discovery saved:',a.output,'response keys:',list(data))
