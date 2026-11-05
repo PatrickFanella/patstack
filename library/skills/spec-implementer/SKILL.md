@@ -13,3 +13,7 @@ Run typechecking regularly, single test files regularly, and the full test suite
 Once done, use /code-review to review the work.
 
 Commit your work to the current branch.
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.

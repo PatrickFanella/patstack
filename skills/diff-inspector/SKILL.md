@@ -18,3 +18,7 @@ Default to read-only, defect-first review of the requested change. Pin the compa
 - Only when explicitly requested: Comprehensive security and correctness audit of a branch's changes. Read [the procedure](references/modes/thermo-nuclear-review/guide.md).
 
 Resource paths inside a mode are relative to that mode directory. Run its scripts from that directory or use absolute script paths, passing the target repository explicitly.
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.

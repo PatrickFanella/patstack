@@ -1,5 +1,11 @@
 # Optional skill profiles
 
+See [the skills and groups guide](../docs/SKILL-GROUPS.md) for defaults, group
+membership, and required/optional companion relationships. The default
+`skill-stack-router` can load a specialist from the managed source without
+switching profiles. Switch for a sustained change of directly discoverable
+skills, or when the client cannot read the library.
+
 Source: `patstack/profiles`. Each `NAME.txt` lists the optional library skills
 one Subsets category adds; `core.txt` is always active. Curated personal skills
 and the shared skills are installed separately and are never listed here.

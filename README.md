@@ -13,7 +13,7 @@ Gitea pushes it to the private GitHub mirror
 on every commit and every 8 hours; open PRs on Gitea, not on GitHub.
 
 It holds 52 curated personal skills (54 personal entrypoints with Omarchy's two
-OS-owned ones), 5 shared skills, one repository-local Blacktower skill, vault
+OS-owned ones), 6 shared skills, one repository-local Blacktower skill, vault
 and project skills, and a 326-skill optional library. Names follow a distinct
 noun plus purpose (`bug-tracer`, `prose-unslop`, `relay-baton`);
 `catalog/retired-names.json` maps every old name to its owner.
@@ -25,7 +25,7 @@ patstack has a selected identity: the **A1 Rack system with A3 Registration's pl
 ## Layout and ownership
 
 - `skills/`: authored personal skills, installed as managed copies in `~/.codex/skills`.
-- `shared/`: the five shared skills (`scope-grill`, `relay-baton`, `voice-ledger`, `content-recaster`, `launch-dossier`), installed in `~/.agents/skills`. Duplicate Codex copies are retired.
+- `shared/`: the six shared skills (`scope-grill`, `relay-baton`, `voice-ledger`, `content-recaster`, `launch-dossier`, `skill-stack-router`), installed in `~/.agents/skills`. Duplicate Codex copies are retired.
 - `repository-skills/blacktower-development`: installed only in Blacktower’s `.agents/skills`, privately excluded through Git’s local exclude file.
 - `library/skills/`: the optional reservoir. `profiles/*.txt` group it into the Subsets categories described below.
 - `vault-agents/`: root `AGENTS.md` files and local skills for the four vaults, deployed by `scripts/vault-agents.py` (`catalog/vault-agents.json` maps each file, including the library copies of vault skills).
@@ -94,6 +94,13 @@ System and plugin directories retain their owners. Existing installer-managed ro
 
 ## Subsets: choosing optional skills
 
+Start with [the skills and groups guide](docs/SKILL-GROUPS.md) for every default
+skill, all 14 groups, full membership links, and required/optional relationships.
+The default `skill-stack-router` loads qualified specialists on demand; ordinary
+tasks do not require switching profiles. Companion references also connect
+specialists to one another. Switch when you want a different set directly
+discoverable for sustained work or need a different client/tool environment.
+
 [Subsets](runtime-bundles/subsets-fleet/README.md) is the app on every host that
 switches which optional library skills are active. `core` is always on; add a
 category when the work calls for it, and drop back to `core` afterwards so
@@ -106,7 +113,7 @@ skills and the shared skills are always installed and are not listed.
 
 | Category | Pick it when you are | Skills |
 |---|---|---|
-| `core` | always active: fact checks, summaries and web lookup, plus the five shared skills | 3 |
+| `core` | always active: fact checks, summaries and web lookup, plus the six shared skills | 3 |
 | `ai-agents` | running or configuring agents: parallel candidates and swarms, Ralph loops, handoffs, mining your own sessions, skill authoring, Blacktower/OpenCode/Codex/Cursor setup | 25 |
 | `engineering` | planning, understanding or shipping code: implementation plans, specs, tickets, code walkthroughs, design alternatives, commit recaps | 23 |
 | `testing-quality` | reviewing or proving a change: blast radius, branch shipping, double reviews, verification skills, issue triage, test design | 12 |

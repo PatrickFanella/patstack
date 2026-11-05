@@ -10,6 +10,7 @@ Author personal Codex skills, optional skill profiles, and Kvant's Codex bootstr
 | Shared interview and handoff | `shared/` | `~/.agents/skills/`; preserved by profile switching |
 | Optional reservoir | `library/skills/` | Eligible skills copied to `~/.agents/skills/` by the profile command |
 | Optional profile membership | `profiles/*.txt` | `~/.agents/skill-profiles` links here |
+| Conditional skill relationships | `catalog/skill-routes.json` and each owner's `references/skill-routes.md` | Default `skill-stack-router` resolves qualified sources without changing profiles |
 | Switchyard OpenCode skill selection | `runtime-bundles/switchyard-opencode.json` and the selected skill owners | Generated image-owned snapshot in Switchyard, with source/export hashes in `services/opencode/skills.lock.json` |
 | Profile command | `scripts/skill-profile` | The Subsets fleet adapter (`runtime-bundles/subsets-fleet/`) links `~/.agents/bin/skill-profile` to its generated source snapshot on each device; the workstation-link manifest no longer claims it |
 | Global client instructions | `instructions/WORKING.md` and `instructions/hosts.json` | Rendered per host into `~/.codex/AGENTS.md`, `~/.claude/CLAUDE.md` and `~/.config/opencode/AGENTS.md` by `scripts/global-instructions.py` |
@@ -34,6 +35,12 @@ rtk proxy ~/.agents/bin/skill-profile deactivate
 ```
 
 These profiles change the optional shared skills, not the curated Codex base or plugin skills. Start a fresh agent session after changing discovery. The current conversation retains the catalog loaded at its start.
+
+For ordinary specialist work, the shared default `skill-stack-router` reads the
+needed procedure from the managed source instead of changing a profile. Required
+and optional companion links apply only under their stated conditions; they do
+not authorize broader work or provide missing tools. The [skills and groups
+guide](SKILL-GROUPS.md) lists defaults, categories, and the routing limits.
 
 Use `scope-grill` for a requested `grill-me` or `grill-with-docs`; its named mode supports deeper rounds without turning ordinary tasks into interviews. `unslop` is required for every user-facing prose response and documentation edit. Load it once per session; preserve facts and uncertainty. `diff-inspector` owns change-blast-check review. `build-sequencer` owns a reviewable decision trail for long efforts.
 

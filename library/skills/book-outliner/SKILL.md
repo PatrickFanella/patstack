@@ -46,3 +46,7 @@ Reverse-engineer published books into structured scene-by-scene outlines for stu
 
 - `references/detailed-guide.md` — detailed framework and edge cases; load only the sections needed for the task.
 - `scripts/` — deterministic helpers; inspect --help and side effects before use.
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.

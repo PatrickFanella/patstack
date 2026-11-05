@@ -31,3 +31,7 @@ Former merged-skill dumps were distilled into these lookup files:
 - `references/curated/react-native-architecture.md` — React Native Architecture guidance.
 - `references/curated/react-native-design.md` — React Native Design guidance.
 - `references/curated/vercel-react-native-skills.md` — Vercel React Native Skills guidance.
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.

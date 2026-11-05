@@ -19,3 +19,7 @@ Execute database migrations across ORMs and platforms with zero-downtime strateg
 ## Resources
 
 - `references/detailed-guide.md` — detailed framework and edge cases; load only the sections needed for the task.
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.

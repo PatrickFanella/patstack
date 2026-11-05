@@ -32,3 +32,7 @@ Building capability in a topic over multiple sessions.
 - Week-by-week or milestone-based plan
 - Practice assignments
 - Progress review rubric
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.

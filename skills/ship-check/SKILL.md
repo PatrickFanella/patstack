@@ -55,3 +55,7 @@ presence into verified capability.
 Finish only when the major claims have file-level evidence, planned state is
 separated from implemented state, verification limits are explicit, and the
 verdict answers the requested delivery or viability question directly.
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.

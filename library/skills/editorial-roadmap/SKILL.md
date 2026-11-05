@@ -41,3 +41,7 @@ When the user wants to plan a content strategy, decide what content to create, o
 
 - `references/detailed-guide.md` — detailed framework and edge cases; load only the sections needed for the task.
 - `evals/` — trigger and output evaluation fixtures; not execution guidance.
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.

@@ -32,3 +32,7 @@ Former merged-skill dumps were distilled into these lookup files:
 - `references/curated/novel-revision.md` — Novel Revision guidance.
 - `references/curated/story-analysis.md` — Story Analysis guidance.
 - `references/curated/story-zoom.md` — Story Zoom guidance.
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.

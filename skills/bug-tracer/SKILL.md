@@ -18,3 +18,7 @@ Resource paths inside a mode are relative to that mode directory. Run its script
 ## Conditional design notes
 
 - [fix root causes](references/principles/fix-root-causes.md) — consult only for this specific design or execution concern.
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.

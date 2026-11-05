@@ -88,7 +88,7 @@ def main(source_only=False):
     metrics['personalDescriptionHeadroom']=PERSONAL_DESCRIPTION_BUDGET-metrics['personalDescriptions']
     if metrics['personalDescriptionHeadroom']<0:errors.append(f'description budget {metrics}')
     caps=json.loads((ROOT/'catalog/capabilities.json').read_text())
-    if len(caps)!=165 or len({x['original'] for x in caps})!=165:errors.append('incomplete capability mapping')
+    if len(caps)!=167 or len({x['original'] for x in caps})!=167:errors.append('incomplete capability mapping')
     capability_errors,unverified=capability_path_errors(caps,source_only)
     errors.extend(capability_errors)
     metrics['unverifiedCapabilityOwners']=unverified

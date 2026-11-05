@@ -205,10 +205,11 @@
   },
   {
     "name": "ui-cliche-audit",
-    "description": "Audit UI originality, product credibility, and missing interaction states; report evidence-backed design findings.",
+    "description": "Audit UI originality, scan frontend design patterns with the pinned avoid-ai-design scanner, and review product credibility and missing states; report findings without editing.",
     "scope": "personal",
     "sources": [
-      "interface-originality-audit"
+      "interface-originality-audit",
+      "avoid-ai-design"
     ]
   },
   {
@@ -618,5 +619,11 @@
       "okara:brand-voice",
       "okara:repurposing"
     ]
+  },
+  {
+    "name": "skill-stack-router",
+    "description": "Route default and optional companion skills through the managed library without switching the active Subsets selection.",
+    "scope": "shared",
+    "sources": []
   }
 ]
