@@ -52,3 +52,7 @@ Autonomously draft and polish chapters through multi-skill editorial passes. Use
 - `references/detailed-guide.md` — detailed framework and edge cases; load only the sections needed for the task.
 - `scripts/` — deterministic helpers; inspect --help and side effects before use.
 - `templates/` — reusable output skeletons.
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.

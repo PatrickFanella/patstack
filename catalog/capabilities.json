@@ -988,5 +988,17 @@
     "owner": "launch-dossier",
     "kind": "shared",
     "path": "shared/launch-dossier/SKILL.md"
+  },
+  {
+    "original": "avoid-ai-design",
+    "owner": "ui-cliche-audit",
+    "kind": "merged",
+    "path": "skills/ui-cliche-audit/references/avoid-ai-design/workflow.md"
+  },
+  {
+    "original": "skill-stack-router",
+    "owner": "skill-stack-router",
+    "kind": "shared",
+    "path": "shared/skill-stack-router/SKILL.md"
   }
 ]

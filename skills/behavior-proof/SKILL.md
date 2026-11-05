@@ -36,3 +36,7 @@ Resource paths inside a mode are relative to that mode directory. Run its script
 
 - [prove it works](references/principles/prove-it-works.md) — consult only for this specific design or execution concern.
 - [make operations idempotent](references/principles/make-operations-idempotent.md) — consult only for this specific design or execution concern.
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.

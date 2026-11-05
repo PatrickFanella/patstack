@@ -28,3 +28,7 @@ Run or design tabletop/narrative game facilitation. Use merged D&D/game-master c
 Former merged-skill dumps were distilled into these lookup files:
 
 - `references/curated/game-master.md` — Game Master guidance.
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.

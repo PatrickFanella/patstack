@@ -43,3 +43,7 @@ Check `git remote -v` first. Gitea repositories on `git.subcult.tv` use `tea` wi
 - Findings summary (critical, warning, note)
 - Tests run and outcomes
 - PR URL
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.

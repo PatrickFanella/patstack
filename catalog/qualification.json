@@ -521,7 +521,8 @@
       "requiredTools": [],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -716,7 +717,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": "Review code changes for actionable defects or requested maintainability concerns; keep repository audits separate.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -882,7 +884,8 @@
       "requiredTools": [],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -918,7 +921,8 @@
       "requiredTools": [],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -1022,7 +1026,8 @@
       "requiredTools": [],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -1149,7 +1154,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": "'Database schema and data migrations: compatibility, backfills, validation, cutover, and rollback.'",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -1562,12 +1568,16 @@
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-04",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "catalog/avoid-ai-design-intake-2026-11-04.json",
+        "docs/reviews/2026-11-04-avoid-ai-design.md",
+        "tests/test_ui_design_intake.py",
+        "catalog/skill-routes.json"
       ],
-      "positiveTask": "Implement or refine web interface visuals, responsive layouts, and interaction states within the product design.",
-      "nearMiss": "Unrelated work without this technology or requested procedure."
+      "positiveTask": "Implement a product-specific UI using existing brand tokens; scan before and after authorized edits and explain remaining deliberate choices.",
+      "nearMiss": "Just audit this page and report its generic patterns; do not edit code or generate DESIGN.md."
     },
     "game-fun-theory": {
       "canonicalSource": "library/skills/game-fun-theory",
@@ -1600,7 +1610,8 @@
       "requiredTools": [],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -1955,7 +1966,8 @@
       "requiredTools": [],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -2351,7 +2363,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": "Build MCP servers with explicit tool contracts, transports, errors, and executable interoperability checks.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -2978,7 +2991,8 @@
       "requiredTools": [],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -3485,7 +3499,8 @@
       "lastReviewed": "2026-10-03",
       "evidence": [
         "reports/structure.json",
-        "reports/six-recommendations-verification-2026-10-03.json"
+        "reports/six-recommendations-verification-2026-10-03.json",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": "'React Native/Expo implementation: navigation, native integration, offline behavior, lists, and mobile performance.'",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -3606,7 +3621,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": "Audit a repository against its intended capabilities; separate implemented, incomplete, planned, and unverified work.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -3669,7 +3685,8 @@
       "requiredTools": [],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -3707,7 +3724,8 @@
       "requiredTools": [],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -3743,7 +3761,8 @@
       "requiredTools": [],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -3801,7 +3820,8 @@
       "requiredTools": [],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -3909,7 +3929,8 @@
       "lastReviewed": "2026-10-03",
       "evidence": [
         "reports/structure.json",
-        "reports/six-recommendations-verification-2026-10-03.json"
+        "reports/six-recommendations-verification-2026-10-03.json",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": "Scaffold coding exercises, solution directories, and explanatory material in the existing course format.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -4194,7 +4215,8 @@
       "requiredTools": [],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -4446,7 +4468,8 @@
       "requiredTools": [],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -4482,7 +4505,8 @@
       "requiredTools": [],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -4685,7 +4709,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": "Reproduce and diagnose a defect; choose a tight failing check, isolate the cause, and verify the repair.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -4818,7 +4843,8 @@
       ],
       "lastReviewed": "2026-11-03",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#skill-names",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": "Create reusable Terraform modules with explicit inputs, provider constraints, examples, and validation.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -5343,7 +5369,8 @@
       "lastReviewed": "2026-10-03",
       "evidence": [
         "reports/structure.json",
-        "reports/six-recommendations-verification-2026-10-03.json"
+        "reports/six-recommendations-verification-2026-10-03.json",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": "Design Temporal workflows and activities with durable state, deterministic execution, and failure recovery.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -5559,7 +5586,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": "Plan or implement a bounded feature from a spec; map acceptance criteria to changes and executable verification.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -5574,14 +5602,19 @@
         "claude"
       ],
       "requiredTools": [
-        "task-specific project tools; see source procedure"
+        "Node 18+ for optional scanner; manual audit without Node",
+        "current client browser only when permitted and available"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-04",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "catalog/avoid-ai-design-intake-2026-11-04.json",
+        "docs/reviews/2026-11-04-avoid-ai-design.md",
+        "tests/test_ui_design_intake.py",
+        "catalog/skill-routes.json"
       ],
-      "positiveTask": "Audit UI originality, product credibility, and missing interaction states; report evidence-backed design findings.",
-      "nearMiss": "Unrelated work without this technology or requested procedure."
+      "positiveTask": "Audit src/Page.tsx for generic frontend design patterns; scan and report rule IDs and source locations without changing files.",
+      "nearMiss": "Keep an approved Inter/purple design system intact; fix a backend API bug without changing frontend visuals."
     },
     "telemetry-signal-forge": {
       "canonicalSource": "skills/telemetry-signal-forge",
@@ -5711,7 +5744,8 @@
       ],
       "lastReviewed": "2026-10-03",
       "evidence": [
-        "reports/structure.json"
+        "reports/structure.json",
+        "catalog/skill-routes.json"
       ],
       "positiveTask": "Verify UI, CLI, API, build, or performance claims using runnable evidence; distinguish smoke checks from regressions.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -5981,6 +6015,29 @@
       ],
       "positiveTask": "Create docs/marketing for Subsets with claims, copy, a demo, and a measured 30-day plan.",
       "nearMiss": "Install Node dependencies or inspect a CLI error without requesting marketing work."
+    },
+    "skill-stack-router": {
+      "canonicalSource": "shared/skill-stack-router",
+      "owner": "patstack",
+      "scope": "shared",
+      "status": "selection-tested",
+      "supportedClients": [
+        "codex",
+        "claude",
+        "opencode"
+      ],
+      "requiredTools": [
+        "filesystem read access",
+        "Python 3.9+ for optional read-only lookup"
+      ],
+      "lastReviewed": "2026-11-04",
+      "evidence": [
+        "catalog/skill-routes.json",
+        "tests/test_skill_routes.py",
+        "docs/SKILL-GROUPS.md"
+      ],
+      "positiveTask": "Resolve a React Native specialist and its verification companion while keeping the core selection unchanged.",
+      "nearMiss": "Load every library skill, auto-switch profiles, run an explicit-only workflow without a request, or grant a missing tool."
     }
   }
 }

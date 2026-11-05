@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 1,
+  "policy": "Required and optional edges apply only under their when condition. Current authorization, client tools and invocation restrictions remain authoritative. Do not recursively preload the graph.",
+  "skills": {
+    "ui-craft": [
+      {
+        "skill": "behavior-proof",
+        "kind": "required",
+        "when": "Before claiming the edited UI or interaction works."
+      },
+      {
+        "skill": "ui-cliche-audit",
+        "kind": "optional",
+        "when": "For generic-design checks before and after visual edits."
+      },
+      {
+        "skill": "rn-expo-builder",
+        "kind": "optional",
+        "when": "When the target is a React Native/Expo interface rather than a web page."
+      }
+    ],
+    "ui-cliche-audit": [
+      {
+        "skill": "ui-craft",
+        "kind": "optional",
+        "when": "Only when the user also authorizes implementation of the findings."
+      },
+      {
+        "skill": "wcag-a11y-audit",
+        "kind": "optional",
+        "when": "When observed contrast, keyboard or semantic defects need a focused accessibility review."
+      }
+    ],
+    "build-sequencer": [
+      {
+        "skill": "behavior-proof",
+        "kind": "required",
+        "when": "When an implementation task reaches verification; not for a plan-only request."
+      },
+      {
+        "skill": "scope-grill",
+        "kind": "optional",
+        "when": "When an unresolved product choice changes the implementation."
+      },
+      {
+        "skill": "spec-implementer",
+        "kind": "optional",
+        "when": "When the user explicitly requests its spec/ticket implementation flow."
+      },
+      {
+        "skill": "temporal-flow-design",
+        "kind": "optional",
+        "when": "When the feature contains durable Temporal workflows."
+      },
+      {
+        "skill": "terraform-module-smith",
+        "kind": "optional",
+        "when": "When the requested deliverable includes Terraform modules."
+      },
+      {
+        "skill": "rn-expo-builder",
+        "kind": "optional",
+        "when": "When implementing a React Native/Expo feature."
+      }
+    ],
+    "bug-tracer": [
+      {
+        "skill": "behavior-proof",
+        "kind": "required",
+        "when": "Before claiming the reproducer is fixed."
+      },
+      {
+        "skill": "perf-hotpath-probe",
+        "kind": "optional",
+        "when": "When the observed defect is a measured performance regression."
+      },
+      {
+        "skill": "dep-source-clone",
+        "kind": "optional",
+        "when": "When diagnosis depends on the pinned dependency implementation."
+      }
+    ],
+    "behavior-proof": [
+      {
+        "skill": "temporal-py-tests",
+        "kind": "optional",
+        "when": "When verifying Python Temporal replay, timers or determinism."
+      },
+      {
+        "skill": "playwright-cli-driver",
+        "kind": "optional",
+        "when": "When the client permits terminal browser QA and no more specific browser contract takes precedence."
+      }
+    ],
+    "diff-inspector": [
+      {
+        "skill": "tech-doc-writer",
+        "kind": "optional",
+        "when": "When changed documentation may disagree with implementation."
+      },
+      {
+        "skill": "thermo-twin-audit",
+        "kind": "optional",
+        "when": "Only when a double-review procedure is explicitly requested and delegation is authorized."
+      }
+    ],
+    "mcp-server-forge": [
+      {
+        "skill": "behavior-proof",
+        "kind": "required",
+        "when": "Before claiming the server/tool contract works."
+      },
+      {
+        "skill": "mcp-wire-tracer",
+        "kind": "optional",
+        "when": "When client registration, initialization or tool discovery needs diagnosis."
+      },
+      {
+        "skill": "go-craft",
+        "kind": "optional",
+        "when": "When implementing the server in Go."
+      },
+      {
+        "skill": "ts-type-design",
+        "kind": "optional",
+        "when": "When implementing a TypeScript server contract."
+      }
+    ],
+    "schema-migrator": [
+      {
+        "skill": "behavior-proof",
+        "kind": "required",
+        "when": "Before claiming migration, compatibility or rollback success."
+      },
+      {
+        "skill": "pg-plan-reader",
+        "kind": "optional",
+        "when": "When a PostgreSQL migration needs real-schema query or index evidence."
+      }
+    ],
+    "ship-check": [
+      {
+        "skill": "behavior-proof",
+        "kind": "required",
+        "when": "When the readiness assessment makes tested or runtime capability claims."
+      },
+      {
+        "skill": "repo-atlas",
+        "kind": "optional",
+        "when": "When repository structure is unknown."
+      },
+      {
+        "skill": "branch-shipper",
+        "kind": "optional",
+        "when": "Only when the user asks to ship changes after the read-only readiness assessment."
+      }
+    ],
+    "spec-implementer": [
+      {
+        "skill": "red-green-loop",
+        "kind": "required",
+        "when": "For the explicitly requested test-first implementation flow."
+      },
+      {
+        "skill": "diff-inspector",
+        "kind": "required",
+        "when": "For the final code review specified by this implementation flow."
+      },
+      {
+        "skill": "behavior-proof",
+        "kind": "required",
+        "when": "Before reporting the implementation as working."
+      },
+      {
+        "skill": "build-sequencer",
+        "kind": "optional",
+        "when": "When the spec needs an ordered acceptance plan."
+      }
+    ],
+    "branch-shipper": [
+      {
+        "skill": "diff-inspector",
+        "kind": "required",
+        "when": "For the pre-shipping correctness review."
+      },
+      {
+        "skill": "behavior-proof",
+        "kind": "required",
+        "when": "For behavior checks before shipping."
+      },
+      {
+        "skill": "git-surgery",
+        "kind": "required",
+        "when": "When preparing or updating the hosted PR."
+      },
+      {
+        "skill": "ci-medic",
+        "kind": "optional",
+        "when": "When PR checks need diagnosis or an authorized wait for completion."
+      }
+    ],
+    "primary-source-notes": [
+      {
+        "skill": "claim-verifier",
+        "kind": "required",
+        "when": "For the final source-to-claim check on the research note."
+      },
+      {
+        "skill": "web-lookup",
+        "kind": "optional",
+        "when": "When official sources need locating or refreshing; retain the existing delegation limit."
+      }
+    ],
+    "rival-dossier": [
+      {
+        "skill": "claim-verifier",
+        "kind": "required",
+        "when": "Before delivering sourced competitor claims."
+      },
+      {
+        "skill": "web-lookup",
+        "kind": "optional",
+        "when": "When finding or refreshing public competitor sources."
+      },
+      {
+        "skill": "vs-page-writer",
+        "kind": "optional",
+        "when": "When the user also requests comparison-page copy from the researched profiles."
+      },
+      {
+        "skill": "sales-collateral",
+        "kind": "optional",
+        "when": "When the user also requests sales battle cards."
+      }
+    ],
+    "editorial-roadmap": [
+      {
+        "skill": "voice-ledger",
+        "kind": "optional",
+        "when": "When an approved written voice must guide the editorial plan."
+      },
+      {
+        "skill": "content-recaster",
+        "kind": "optional",
+        "when": "When existing assets need adaptation into the planned channels."
+      },
+      {
+        "skill": "search-rank-audit",
+        "kind": "optional",
+        "when": "When the requested roadmap depends on a search-content audit."
+      }
+    ],
+    "draft-reviser": [
+      {
+        "skill": "prose-unslop",
+        "kind": "required",
+        "when": "Before delivering the revised prose."
+      },
+      {
+        "skill": "article-restructure",
+        "kind": "optional",
+        "when": "When the revision requires changing article structure."
+      },
+      {
+        "skill": "nonfiction-gap-finder",
+        "kind": "optional",
+        "when": "When an argument has evidence or coverage gaps."
+      },
+      {
+        "skill": "voice-fingerprint",
+        "kind": "optional",
+        "when": "When matching a supplied writing sample is requested."
+      }
+    ],
+    "story-diagnosis": [
+      {
+        "skill": "character-arc-doctor",
+        "kind": "optional",
+        "when": "When the diagnosed problem concerns character motivation or development."
+      },
+      {
+        "skill": "dialogue-doctor",
+        "kind": "optional",
+        "when": "When the diagnosed problem concerns dialogue."
+      },
+      {
+        "skill": "genre-promise-check",
+        "kind": "optional",
+        "when": "When reader expectations depend on genre promises."
+      }
+    ],
+    "book-outliner": [
+      {
+        "skill": "story-diagnosis",
+        "kind": "optional",
+        "when": "When the studied book needs structural interpretation beyond the scene inventory."
+      },
+      {
+        "skill": "learning-roadmap",
+        "kind": "optional",
+        "when": "When turning the analysis into a multi-session craft study plan."
+      }
+    ],
+    "outline-to-chapter": [
+      {
+        "skill": "prose-unslop",
+        "kind": "required",
+        "when": "Before delivering drafted prose; preserve the fiction voice."
+      },
+      {
+        "skill": "story-diagnosis",
+        "kind": "optional",
+        "when": "When scene order or causal structure is unclear."
+      },
+      {
+        "skill": "character-arc-doctor",
+        "kind": "optional",
+        "when": "When a drafted scene fails the established character arc."
+      },
+      {
+        "skill": "dialogue-doctor",
+        "kind": "optional",
+        "when": "When a dialogue pass is needed."
+      },
+      {
+        "skill": "trope-refresher",
+        "kind": "optional",
+        "when": "When a conventional beat needs alternatives."
+      },
+      {
+        "skill": "fiction-line-edit",
+        "kind": "optional",
+        "when": "When the draft reaches sentence-level revision."
+      }
+    ],
+    "story-cowriter": [
+      {
+        "skill": "prose-unslop",
+        "kind": "required",
+        "when": "Before delivering generated prose; preserve the writer's voice."
+      },
+      {
+        "skill": "outline-to-chapter",
+        "kind": "optional",
+        "when": "When the writer supplies a complete chapter outline."
+      },
+      {
+        "skill": "dialogue-doctor",
+        "kind": "optional",
+        "when": "When requested alternatives focus on dialogue."
+      },
+      {
+        "skill": "world-bible",
+        "kind": "optional",
+        "when": "When new material must be checked against persistent canon."
+      }
+    ],
+    "rpg-game-master": [
+      {
+        "skill": "table-tone-tuner",
+        "kind": "optional",
+        "when": "When a session needs tone or player-expectation calibration."
+      },
+      {
+        "skill": "world-bible",
+        "kind": "optional",
+        "when": "When running a persistent setting with recorded canon."
+      },
+      {
+        "skill": "world-fate-ledger",
+        "kind": "optional",
+        "when": "When tracking consequential changes across sessions."
+      }
+    ],
+    "world-bible": [
+      {
+        "skill": "world-diagnostics",
+        "kind": "optional",
+        "when": "When checking systemic consistency across canon entries."
+      },
+      {
+        "skill": "conlang-forge",
+        "kind": "optional",
+        "when": "When the requested canon work includes constructed-language design."
+      },
+      {
+        "skill": "world-fate-ledger",
+        "kind": "optional",
+        "when": "When the world's evolving state needs consequence tracking."
+      }
+    ],
+    "learning-roadmap": [
+      {
+        "skill": "patient-tutor",
+        "kind": "optional",
+        "when": "When the work moves from planning to an actual tutoring session."
+      },
+      {
+        "skill": "exercise-scaffold",
+        "kind": "optional",
+        "when": "When an AI Hero-format course repository needs exercise folders."
+      },
+      {
+        "skill": "learning-retro",
+        "kind": "optional",
+        "when": "When reviewing progress to adjust the roadmap."
+      }
+    ],
+    "exercise-scaffold": [
+      {
+        "skill": "behavior-proof",
+        "kind": "required",
+        "when": "Before claiming course lint and exercise checks passed."
+      },
+      {
+        "skill": "learning-roadmap",
+        "kind": "optional",
+        "when": "When exercise order needs alignment with course milestones."
+      }
+    ],
+    "rn-expo-builder": [
+      {
+        "skill": "behavior-proof",
+        "kind": "required",
+        "when": "Before claiming mobile behavior works; honor the current client's device-tool contract."
+      },
+      {
+        "skill": "auth-gatekeeper",
+        "kind": "optional",
+        "when": "When the feature adds login or access checks."
+      },
+      {
+        "skill": "perf-hotpath-probe",
+        "kind": "optional",
+        "when": "When list, animation or startup performance has a measured problem."
+      }
+    ],
+    "terraform-module-smith": [
+      {
+        "skill": "behavior-proof",
+        "kind": "required",
+        "when": "Before claiming validation, plan or Terratest results."
+      },
+      {
+        "skill": "secret-rotation-flow",
+        "kind": "optional",
+        "when": "When the module work includes authorized secret delivery or rotation."
+      },
+      {
+        "skill": "kube-artifact-smith",
+        "kind": "optional",
+        "when": "When requested infrastructure includes Kubernetes workload artifacts."
+      }
+    ],
+    "temporal-flow-design": [
+      {
+        "skill": "temporal-py-tests",
+        "kind": "required",
+        "when": "When delivering a Python Temporal implementation that needs replay/determinism proof; not for a design-only request."
+      },
+      {
+        "skill": "schema-migrator",
+        "kind": "optional",
+        "when": "When workflow evolution changes persisted application data."
+      },
+      {
+        "skill": "bug-tracer",
+        "kind": "optional",
+        "when": "When a failure or replay mismatch needs isolation."
+      }
+    ],
+    "slide-story-design": [
+      {
+        "skill": "pptx-forge",
+        "kind": "optional",
+        "when": "When a deck file must be built and the client has no preferred native presentation owner."
+      },
+      {
+        "skill": "data-narrative",
+        "kind": "optional",
+        "when": "When slide structure needs to communicate supplied quantitative evidence."
+      },
+      {
+        "skill": "speech-shaper",
+        "kind": "optional",
+        "when": "When adapting the slide story into a spoken script."
+      }
+    ]
+  }
+}

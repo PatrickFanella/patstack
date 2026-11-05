@@ -59,7 +59,8 @@
     "/home/onnwee/.claude/skills/web-lookup": "/home/onnwee/.agents/skills/web-lookup",
     "/home/onnwee/.local/bin/claude": "/home/onnwee/Work/Tools/patstack/scripts/claude-launcher",
     "/home/onnwee/.claude/skills/t3-repo-onboard": "/home/onnwee/.codex/skills/t3-repo-onboard",
-    "/home/onnwee/.claude/skills/stripe-billing-guard": "/home/onnwee/.codex/skills/stripe-billing-guard"
+    "/home/onnwee/.claude/skills/stripe-billing-guard": "/home/onnwee/.codex/skills/stripe-billing-guard",
+    "/home/onnwee/.claude/skills/skill-stack-router": "/home/onnwee/.agents/skills/skill-stack-router"
   },
   "baseline": {
     "/home/onnwee/.agents/skill-library": {
@@ -14419,7 +14420,8 @@
       "mode": 493
     },
     "/home/onnwee/.claude/skills/t3-repo-onboard": null,
-    "/home/onnwee/.claude/skills/stripe-billing-guard": null
+    "/home/onnwee/.claude/skills/stripe-billing-guard": null,
+    "/home/onnwee/.claude/skills/skill-stack-router": null
   },
   "retiredLinks": [
     "/home/onnwee/.claude/skills/solidity-audit",

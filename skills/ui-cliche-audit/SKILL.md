@@ -1,6 +1,6 @@
 ---
 name: ui-cliche-audit
-description: Use when asked to audit a UI for generic or AI-looking design, unsupported product claims, or missing states. Reports findings only; use ui-craft to implement fixes.
+description: Use when asked to audit a UI for generic or AI-looking design, scan frontend code for design tells, review unsupported claims, or find missing states. Reports findings only; ui-craft implements fixes.
 metadata:
   blacktower-pack: creative
   blacktower-kind: workflow
@@ -16,26 +16,26 @@ Do not treat familiar components, colors, fonts, or effects as universally forbi
 
 ## Gather evidence
 
-1. Read the existing brand and design-system guidance.
+1. Read the existing brand and design-system guidance and the requested source files.
 2. Identify the product, audience, task, and page goal.
 3. Inspect the running interface or representative screenshots when available.
-4. Distinguish deliberate repetition from an unexamined template default.
+4. For generic-design or AI-look reviews, use [the avoid-ai-design scanner and workflow](references/avoid-ai-design/workflow.md). Node 18+ is optional; a manual review remains available. Keep audits read-only.
 
 If the evidence is incomplete, state what was unavailable. Screenshots support visual findings; use observed interactions for behavioral claims. Review quality and specificity without asserting AI authorship from appearance.
 
-For a requested AI-look/generic-design review, or when judging an apparent cluster of defaults, read [the research and task checks](references/research-informed-interface-review.md). It distinguishes measured patterns, practitioner observations, and review heuristics.
+For research context, read [the task checks](references/research-informed-interface-review.md), which separate measured patterns from review heuristics.
 
 ## Audit lenses
 
 ### Borrowed aesthetic
 
-Look for clusters of fashionable defaults that could belong to any product: decorative gradients or glowing orbs, neon or pastel palettes, purple-on-black themes, glass effects, uniformly soft corners, generic shadows, sparkle motifs, default icon sets, and fashionable typefaces used without a typographic system.
+Look for clusters of defaults without a product reason: gradients, glass, uniform rounded cards, fashionable typefaces, cream with terracotta, near-black with lime, and repeated mono/all-caps labels.
 
 Ask what each choice communicates about this product. A justified choice can stay. Replace an unjustified cluster with a coherent direction grounded in the brand, content, and audience.
 
 ### Templated composition
 
-Check whether the information architecture has been forced into familiar demo layouts: arbitrary three-card or three-tier groups, bento grids without meaningful hierarchy, colored accent stripes, fake terminal windows, repeated checkmark bullets, decorative arrows, and hover or motion effects that do not explain state.
+Check for arbitrary three-card groups, bento grids without hierarchy, fake windows, decorative numbering, and effects that do not explain state.
 
 Recommend the number, grouping, and interaction pattern the content actually needs.
 
@@ -66,4 +66,8 @@ Separate evidence-based defects from subjective taste. End with the two or three
 ## Related skills
 
 - Use `ui-craft` to design and implement the recommended interface changes.
-- Use `unslop` to remove generic AI phrasing and unsupported promotional language from interface copy.
+- Use `prose-unslop` for generic interface copy; never invent product claims.
+
+## Companion skills
+
+Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.
