@@ -8,7 +8,7 @@ App/package/system and project/vault skills retain their locations and owners.
 
 See [the task guide](../../docs/SKILL-GROUPS.md) and
 [membership reference](../../profiles/CATALOG.md). The pinned application is
-`@subcult/subsets@0.2.0-alpha.5`; the source bundle is versioned independently.
+`@subcult/subsets@0.2.0-alpha.6`; the source bundle is versioned independently.
 
 ## Build and preview
 

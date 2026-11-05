@@ -274,7 +274,7 @@ class UnifiedStackTests(unittest.TestCase):
                 if args[0] != 'fixture-node':
                     return check_output(args, **kwargs)
                 if args[-1] == '--version':
-                    return '0.2.0-alpha.5\n'
+                    return '0.2.0-alpha.6\n'
                 if args[-2:] == ['groups', '--json']:
                     return json.dumps({'existingProfiles': ['core', 'extra']})
                 return json.dumps({'skills': [], 'warnings': []})

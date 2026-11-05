@@ -28,3 +28,10 @@ first, then the separate reconciliation transaction.
 Validation requires every task set to plan without collisions on both hosts,
 real activation of the formerly blocked union, return to core, preservation
 of Blacktower views, and fresh discovery at the expected selected sources.
+
+The real combined-set exercise exposed Subsets' two-minute subprocess timeout:
+it terminated the Python writer while its journal was progressing. Subsets
+alpha.6 retains the read timeout and allows journaled write commands to finish
+under their existing locks and drift checks. The partial host transaction was
+resumed from its original journal; no baseline or progress entry was reset.
+The deployment pin now requires alpha.6 for the repaired task-set rollout.
