@@ -91,11 +91,10 @@ def plan(source, home, state, profiles, link_mode):
                 for dest, expected in data['paths'].items():
                     if expected is not None:
                         prior_owners.setdefault(dest, []).append(expected)
-        if (source / 'catalog/fleet-skill-predecessors.json').exists():
-            from fleet_predecessors import evidence
-            proven, historical_protected, preserved_edits = evidence(source, home, roots, sources)
-            for dest, expected in proven.items():
-                prior_owners.setdefault(dest, []).append(expected)
+        from fleet_predecessors import evidence
+        proven, historical_protected, preserved_edits = evidence(source, home, roots, sources)
+        for dest, expected in proven.items():
+            prior_owners.setdefault(dest, []).append(expected)
     wanted = {}
     excluded = {}
     for name in selected:

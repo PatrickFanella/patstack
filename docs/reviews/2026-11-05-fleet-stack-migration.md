@@ -19,6 +19,10 @@ The legacy generated Claude root on Almaz can be detached with
 profile layout, backs up the original link, and creates individual views to
 the same backing entries. It does not write the backing sources. Undo the
 selection transaction before undoing this separate root migration.
+The selector accepts the resulting child views only when the complete root
+still matches that transaction's installed receipt, its journal is complete,
+and the original root-link backup matches. It replaces views for canonical
+skills while retaining their original backing copies and unknown app views.
 
 Deployment still requires a safe core plan. Specialist sets blocked by local
 collisions are recorded as unavailable in the host's category-plan receipt;

@@ -29,6 +29,41 @@ def normalized_tree(tree):
     return result
 
 
+def generated_views(home, roots, sources):
+    """Use custody from the completed, backed-up root-detachment transaction."""
+    state = home / '.local/state/subsets-fleet/client-root-migration'
+    receipt = state / 'installed.json'
+    if not receipt.exists():
+        return {}, {}
+    if any(p.is_symlink() for p in [receipt, *receipt.parents]):
+        raise RuntimeError('Linked client-root receipt retains its owner')
+    data = install.read(receipt)
+    run = Path(data['run'])
+    if run.parent != state or any(p.is_symlink() for p in [run, *run.parents]):
+        raise RuntimeError('Unexpected client-root migration transaction')
+    journal_path = run / 'journal.json'
+    journal = install.read(journal_path)
+    root = roots['claude']
+    expected = data['paths'].get(str(root))
+    operations = journal['plan']['operations']
+    if (journal['status'] != 'complete' or len(operations) != 1
+            or operations[0]['destination'] != str(root)
+            or operations[0]['action'] != 'detach-generated-view'
+            or operations[0]['desired'] != expected
+            or not expected or expected['type'] != 'directory'
+            or install.snapshot(root) != expected):
+        raise RuntimeError('Client-root migration receipt or view drift; recover it first')
+    original = operations[0]['expected']
+    backup = run / 'backups/0'
+    if (original['type'] != 'symlink' or install.snapshot(backup) != original
+            or not (root.parent / original['target']).resolve().is_relative_to(
+                home / '.agents/.generated/skill-profiles')):
+        raise RuntimeError('Client-root migration backup or predecessor changed')
+    proven = {str(root / name): snapshot for name, snapshot in expected['entries'].items()
+              if name in sources and snapshot['type'] == 'symlink'}
+    return proven, {str(p): install.snapshot(p) for p in [receipt, journal_path, backup]}
+
+
 def evidence(source, home, roots, sources):
     ledger = install.read(source / 'catalog/fleet-skill-predecessors.json', {'revisions': {}})
     candidates = {}
@@ -68,4 +103,7 @@ def evidence(source, home, roots, sources):
         if (path.parent in roots.values() and str(Path(target)) in proven and actual
                 and actual['type'] == 'symlink' and actual['target'] == target):
             proven[dest] = actual
+    generated, custody = generated_views(home, roots, sources)
+    proven.update(generated)
+    protected.update(custody)
     return proven, protected, sorted(edited)
