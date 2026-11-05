@@ -1,33 +1,66 @@
-# Subsets fleet profiles
+# Subsets user skill stacks
 
-This adapter exposes the canonical Kvant categories through Subsets' existing
-backend. Its generated deployment contains committed profiles, shared sources,
-the optional library, ownership catalogs and the original selection filter.
+This adapter is the Subsets owner for the user-level skills from patstack's
+`skills/`, `shared/` and qualified `library/skills/` sources. One selection
+combines the 40-skill core with requested task sets. Individual links expose the
+same reviewed sources under Agents, Codex, Claude, Copilot, Cursor and OpenCode.
+App/package/system and project/vault skills retain their locations and owners.
 
-The adapter installs missing shared skills and qualified Claude links individually.
-Existing directories and links keep their owners, including edited core skills.
-Only paths recorded by this adapter can be removed when switching categories.
-Local changes to those paths stop a switch. Unqualified Claude entries remain
-available through the shared Codex selection and appear in `claudeExcluded`.
+See [the task guide](../../docs/SKILL-GROUPS.md) and
+[membership reference](../../profiles/CATALOG.md). The pinned application is
+`@subcult/subsets@0.2.0-alpha.5`; the source bundle is versioned independently.
 
-Preview with `subsets apply --frontend-mobile --dry-run`, then select with
-`subsets apply --frontend-mobile`. Return to core with `subsets apply --group core`.
-Start a fresh client session after switching. Existing unrelated skills remain
-active; a category selection does not disable installations owned by other tools.
+## Build and preview
 
-Transactions and verified backups live in
-`~/.local/state/subsets-fleet/profiles/run-*`. To roll back, use
-`~/.agents/bin/skill-profile rollback --run PATH`, newest transaction first.
-Rollback refuses subsequent edits. Preserve this state while recovery is needed.
+Validate, test and commit the source first. Build from an `umask 022` checkout:
 
-The installed app is pinned separately from the category source. A source manifest
-records the canonical revision and tree hashes. Device rollout receipts record
-the previous launchers, hashes, source location and observed verification.
-Source parity and CLI checks do not prove discovery in an already-running client.
+```sh
+rtk proxy python -B scripts/validate.py
+rtk proxy python -B -m unittest discover -s tests -v
+rtk proxy python -B scripts/stack-catalog.py --check
+rtk proxy python -B runtime-bundles/subsets-fleet/scripts/build-bundle.py
+```
 
-To roll out a source change, build the deployment folder from a clean commit with
-`python runtime-bundles/subsets-fleet/scripts/build-bundle.py`, copy it to the same
-path on each host, and run its `scripts/deploy-host.py --node NODE --python PYTHON`.
-Redeploying switches the host to `core` from the new source. Entries this adapter
-placed earlier may be replaced or retired, for example after a rename; any other
-shared entry that changes stops the deploy.
+The command prints an immutable deployment folder. Its manifest records the
+source revision and file snapshots. Use that folder's `scripts/skill-profile`
+with `plan core` before deployment. Inspect all changed paths, transfer records,
+client exclusions and protected entries. Do not reset a baseline to pass drift.
+
+Deploy that folder's `scripts/deploy-host.py` with `--node` and `--python` set to
+the target host's inspected runtime paths. The application must already be the
+pinned version. Deployment preserves unrelated launchers/state and records a
+host receipt; it returns to core from the new source.
+
+## First migration
+
+`catalog/skill-stacks.json` names supported user roots and predecessor receipts.
+Takeover locks those predecessors and checks exact current snapshots before
+changing skill paths. Only recorded known owners can transfer. The same
+transaction backs up/replaces the active views, releases transferred path
+records from the old manifests, and writes the Subsets ownership marker.
+Unknown entries and hidden/system skills are protected; collisions and linked
+client roots refuse migration. The source-link installer skips transferred
+views; the legacy personal and optional installers refuse user selection.
+
+The public Subsets package is a separate product from this personal bundle.
+Updating a local package is not npm publication or a fleet rollout.
+
+## Switch, verify and recover
+
+```sh
+rtk proxy subsets apply --operate-homelab --dry-run
+rtk proxy subsets apply --operate-homelab
+rtk proxy subsets apply --group core
+rtk proxy ~/.agents/bin/skill-profile verify core
+```
+
+Start a fresh agent session after switching. File/link verification does not
+establish missing tools, authentication, application restart or execution in
+all clients. The router can read an inactive specialist without a switch.
+
+Transactions are under `~/.local/state/subsets-fleet/profiles/run-*`. Use the
+recorded directory with `~/.agents/bin/skill-profile rollback --run`, newest run
+first. Rollback restores original paths and manifests only when current state
+still matches that run; it refuses later edits. Retain backups and immutable
+source folders while needed for recovery. Removing a view is deactivation, not
+canonical source deletion.

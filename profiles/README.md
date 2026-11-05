@@ -1,24 +1,20 @@
-# Optional skill profiles
+# Task profiles
 
-See [the skills and groups guide](../docs/SKILL-GROUPS.md) for defaults, group
-membership, and required/optional companion relationships. The default
-`skill-stack-router` can load a specialist from the managed source without
-switching profiles. Switch for a sustained change of directly discoverable
-skills, or when the client cannot read the library.
+Subsets selects `core` plus the union of requested task sets. Core contains 40
+skills for everyday work; the 11 other sets combine disciplines around an
+outcome. There is no separate always-installed personal or shared layer.
 
-Source: `patstack/profiles`. Each `NAME.txt` lists the optional library skills
-one Subsets category adds; `core.txt` is always active. Curated personal skills
-and the shared skills are installed separately and are never listed here.
-Retired names, vault-local skills and blocked qualifications are filtered out
-even if a profile names them. See `CATALOG.md` for every category's members and
-the README's Subsets section for when to pick each one.
+See [the guide](../docs/SKILL-GROUPS.md) for purposes, client views and recovery,
+and [the membership catalog](CATALOG.md) for every addition. An inactive skill
+can be read through the default router without switching the whole stack.
 
-Switch with `subsets apply --NAME` (or `--group NAME`), preview with
-`--dry-run`, and return with `subsets apply --group core`. The lower-level
-selector is `~/.agents/bin/skill-profile` (`list`, `plan`, `activate`,
-`deactivate`, `status`, `rollback --run PATH`). Restart agent sessions after a
-change. Claude links are created only for skills whose
-`catalog/qualification.json` record lists `claude`.
+Preview with `subsets apply --build-and-ship --dry-run`, apply with
+`subsets apply --build-and-ship`, and return with `subsets apply --group core`.
+Start a fresh session after changing discovery. Use the lower-level selector
+only for its recorded status, verification or rollback commands.
 
-Edit and commit profiles here, then build and deploy a new Subsets bundle; see
-`runtime-bundles/subsets-fleet/README.md`.
+Edit and commit profiles here. Regenerate the guide with
+`python scripts/stack-catalog.py`, then build and deploy a reviewed bundle as
+[the adapter runbook](../runtime-bundles/subsets-fleet/README.md) describes.
+Previous category files are archived outside discovery under
+`authoring/profile-history/2026-11-05/`.

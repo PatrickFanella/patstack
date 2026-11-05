@@ -23,12 +23,14 @@ Subsets group, register tools, or install dependencies.
    ```
 
    `<skill-root>` is this loaded router's directory; `--client` is the current
-   client (`codex`, `claude`, or `opencode`), never an assumed provider.
-3. For a task outside the active defaults, select a category from
+   client (`codex`, `claude`, `opencode`, `copilot`, or `cursor`). Cursor and
+   Copilot use the configured Claude-compatible file contract, not assumed
+   tool or provider equivalence.
+3. For a task outside the active defaults, select a task stack from
    [the group map](references/groups.md), then list or resolve specialists:
 
    ```sh
-   python3 <skill-root>/scripts/lookup.py --group frontend-mobile --client codex
+   python3 <skill-root>/scripts/lookup.py --group mobile-and-interfaces --client codex
    python3 <skill-root>/scripts/lookup.py --skill rn-expo-builder --client codex
    ```
 

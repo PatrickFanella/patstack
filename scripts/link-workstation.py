@@ -11,7 +11,11 @@ def plan(only_links=None):
     previous=install.read(install.statefile(STATE), {'paths':{}})
     operations=[]
     links=dict(config['links'])
+    ownership=install.read(Path.home()/'.local/state/subsets-fleet/profiles/ownership.json',{})
+    managed={Path(p) for p in ownership.get('roots',{}).values()}
+    links={dest:source for dest,source in links.items() if Path(dest).parent not in managed}
     for dest in config.get('retiredLinks', []):
+        if Path(dest).parent in managed:continue
         if dest in links:raise RuntimeError('Link cannot be active and retired: '+dest)
         links[dest]=None
     if only_links:

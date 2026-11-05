@@ -54,6 +54,8 @@ def main():
     parser.add_argument('--profile', action='append', default=[])
     parser.add_argument('--run', type=Path)
     args = parser.parse_args()
+    if (Path.home() / '.local/state/subsets-fleet/profiles/ownership.json').exists():
+        parser.error('Subsets owns all user client views; use subsets apply')
     if args.command == 'plan':
         proposal = plan(args.profile)
         print(json.dumps({'selection': proposal['selection'], 'operations': [

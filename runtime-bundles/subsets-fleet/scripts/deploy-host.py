@@ -26,7 +26,7 @@ def main():
             raise RuntimeError('Source manifest mismatch: ' + relative)
     app = home / '.local/share/subsets-fleet/npm/node_modules/@subcult/subsets/dist/cli.js'
     version = subprocess.check_output([args.node, str(app), '--version'], text=True).strip()
-    if version != '0.2.0-alpha.4':
+    if version != '0.2.0-alpha.5':
         raise RuntimeError('Unexpected app version: ' + version)
     state = home / '.local/state/subsets-fleet'
     state.mkdir(parents=True, exist_ok=True, mode=0o700)
@@ -39,6 +39,10 @@ def main():
     # every other pre-existing shared entry must come through unchanged.
     selector_state = install.read(install.statefile(home / '.local/state/subsets-fleet/profiles'), {'paths': {}})
     adapter_owned = set(selector_state['paths'])
+    if (source / 'catalog/skill-stacks.json').exists():
+        config = install.read(source / 'catalog/skill-stacks.json')
+        for relative in config['migrationReceipts']:
+            adapter_owned.update(install.read(home / relative, {'paths': {}})['paths'])
     profile_cmd = [args.python, str(source / 'scripts/skill-profile')]
     plans = {}
     for profile in sorted(p.stem for p in (source / 'profiles').glob('*.txt')):

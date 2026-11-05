@@ -1,0 +1,27 @@
+# Reproduce a failure, inspect code/runtime evidence, repair it and prove the result.
+binary-dissector
+branch-shipper
+bug-intake-session
+bug-tracer
+bus-factor-map
+change-blast-check
+dep-source-clone
+diff-auditor
+diff-walkthrough
+issue-state-triage
+mcp-wire-tracer
+module-deepener
+pci-scope-check
+perf-hotpath-probe
+pg-plan-reader
+ram-dump-sleuth
+solidity-audit
+strategy-backtester
+stripe-checkout-wiring
+telemetry-signal-forge
+temporal-py-tests
+test-suite-pruner
+thermo-twin-audit
+verify-skill-audit
+verify-skill-forge
+web-host-hardening
