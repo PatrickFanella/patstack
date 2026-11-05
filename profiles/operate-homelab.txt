@@ -1,5 +1,4 @@
 # Operate services and personal tools, investigate incidents, change infrastructure and verify recovery.
-blacktower
 cf-edge-deploy
 claude-git-guardrails
 codex-desktop-audit

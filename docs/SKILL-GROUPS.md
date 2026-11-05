@@ -30,13 +30,13 @@ inactive sources from the same library.
 
 The **11 task sets** combine disciplines around an outcome. Core is always
 included. Sets overlap deliberately; they are not exclusive professional
-categories. Several can be combined. All **220 selectable owners**
+categories. Several can be combined. All **219 selectable owners**
 belong to at least one set, including core.
 
 | Stack | Added beyond core | Total selected | Use it for |
 |---|---|---|---|
 | [`core`](../profiles/CATALOG.md#core) | 0 | 40 | Everyday repository work, debugging, delivery, web/API changes, tools, documentation and basic operations. |
-| [`build-agent-tools`](../profiles/CATALOG.md#build-agent-tools) | 29 | 69 | Build and configure agents, MCP servers, CLIs, retrieval, evaluations and development environments. |
+| [`build-agent-tools`](../profiles/CATALOG.md#build-agent-tools) | 28 | 68 | Build and configure agents, MCP servers, CLIs, retrieval, evaluations and development environments. |
 | [`build-and-ship`](../profiles/CATALOG.md#build-and-ship) | 34 | 74 | Take a feature from understanding and design through implementation, review, tests and a PR. |
 | [`creative-production`](../profiles/CATALOG.md#creative-production) | 14 | 54 | Plan and produce visual, audio, video or slide material with a coherent voice and delivery format. |
 | [`data-and-decisions`](../profiles/CATALOG.md#data-and-decisions) | 10 | 50 | Investigate evidence, analyze data, compare alternatives and communicate a decision. |
@@ -44,7 +44,7 @@ belong to at least one set, including core.
 | [`fiction-and-worlds`](../profiles/CATALOG.md#fiction-and-worlds) | 31 | 71 | Develop stories and settings, draft scenes, revise character/dialogue, and maintain continuity. |
 | [`learn-and-practice`](../profiles/CATALOG.md#learn-and-practice) | 9 | 49 | Plan learning, study examples, tutor, build exercises and review progress. |
 | [`mobile-and-interfaces`](../profiles/CATALOG.md#mobile-and-interfaces) | 10 | 50 | Build and test mobile, terminal, editor, browser and interactive interfaces. |
-| [`operate-homelab`](../profiles/CATALOG.md#operate-homelab) | 27 | 67 | Operate services and personal tools, investigate incidents, change infrastructure and verify recovery. |
+| [`operate-homelab`](../profiles/CATALOG.md#operate-homelab) | 26 | 66 | Operate services and personal tools, investigate incidents, change infrastructure and verify recovery. |
 | [`product-and-launch`](../profiles/CATALOG.md#product-and-launch) | 25 | 65 | Research a market, choose positioning, prepare brand/product copy, refine the interface and plan a launch. |
 | [`research-and-write`](../profiles/CATALOG.md#research-and-write) | 26 | 66 | Find and check sources, develop an argument, write or revise, and produce documents. |
 

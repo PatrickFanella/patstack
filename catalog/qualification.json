@@ -370,8 +370,8 @@
     },
     "blacktower": {
       "canonicalSource": "library/skills/blacktower",
-      "owner": "optional-library",
-      "scope": "optional",
+      "owner": "Blacktower application/package",
+      "scope": "application-local",
       "status": "structure-reviewed",
       "supportedClients": [
         "claude",
@@ -379,12 +379,13 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-05",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "docs/OPERATING-MODEL.md#ownership",
+        "docs/reviews/2026-11-05-task-stack-owner-conflicts.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Configure Blacktower using its native application workflow.",
+      "nearMiss": "Select a general personal task set or configure an unrelated MCP server."
     },
     "change-blast-check": {
       "canonicalSource": "library/skills/change-blast-check",

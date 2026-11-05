@@ -1,7 +1,6 @@
 # Build and configure agents, MCP servers, CLIs, retrieval, evaluations and development environments.
 agent-fanout-plan
 behavior-proof
-blacktower
 candidate-arena
 chat-preference-miner
 claude-bg-handoff
