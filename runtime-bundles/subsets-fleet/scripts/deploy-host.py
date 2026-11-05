@@ -56,6 +56,8 @@ def main():
             plans[profile] = {'unavailable': attempt.stderr.strip()}
             continue
         plan = json.loads(attempt.stdout)
+        if profile == 'core':
+            adapter_owned.update(plan.get('transferredPaths', []))
         plans[profile] = {'selected': len(plan['skills']), 'preserved': list(plan['protected']),
                           'claudeExcluded': plan['claudeExcluded']}
     (run / 'category-plans.json').write_text(json.dumps(plans, indent=2) + '\n')

@@ -252,3 +252,40 @@ class UnifiedStackTests(unittest.TestCase):
         finally:
             sys.path.remove(str(ROOT / 'scripts'))
             sys.path.remove(str(module))
+
+    def test_deploy_preservation_check_recognizes_historical_ownership_transfer(self):
+        from unittest.mock import patch
+        module = ROOT / 'runtime-bundles/subsets-fleet/scripts'
+        sys.path[:0] = [str(ROOT / 'scripts'), str(module)]
+        try:
+            from fleet_predecessors import fingerprint
+            path = self.roots['shared'] / 'optional'
+            shutil.copytree(self.source / 'library/skills/optional', path)
+            self.write(self.source / 'catalog/fleet-skill-predecessors.json', {'revisions': {
+                'pinned': {'library/skills/optional': fingerprint(installer.snapshot(path))}}})
+            self.write(self.home / '.local/state/skill-review-20261103/run/receipt.json', {
+                'revision': 'pinned', 'current': [str(path)]})
+            self.write(self.source / 'deployment-source.json', {'sourceRevision': 'fixture', 'files': {}})
+            spec = importlib.util.spec_from_file_location('fixture_deploy', self.source / 'scripts/deploy-host.py')
+            deploy = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(deploy)
+            check_output = subprocess.check_output
+            def node_output(args, **kwargs):
+                if args[0] != 'fixture-node':
+                    return check_output(args, **kwargs)
+                if args[-1] == '--version':
+                    return '0.2.0-alpha.5\n'
+                if args[-2:] == ['groups', '--json']:
+                    return json.dumps({'existingProfiles': ['core', 'extra']})
+                return json.dumps({'skills': [], 'warnings': []})
+            env = {**os.environ, 'HOME': str(self.home)}
+            with patch.object(Path, 'home', return_value=self.home), patch.dict(os.environ, env), \
+                    patch.object(sys, 'argv', ['deploy-host.py', '--node', 'fixture-node', '--python', sys.executable]), \
+                    patch.object(subprocess, 'check_output', side_effect=node_output):
+                deploy.main()
+            self.assertFalse(path.exists())
+            self.assertIn(str(path), json.loads((self.state / 'ownership.json').read_text())['transferredPaths'])
+            self.assertTrue((self.roots['copilot'] / 'app-tool').is_symlink())
+        finally:
+            sys.path.remove(str(ROOT / 'scripts'))
+            sys.path.remove(str(module))
