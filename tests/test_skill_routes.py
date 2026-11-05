@@ -35,7 +35,7 @@ class SkillRouteTests(unittest.TestCase):
         self.assertTrue(any(r['name'] == 'outline-to-chapter' and r['scope'] == 'optional' for r in routes))
         explicit = router.resolve(ROOT, 'spec-implementer', 'codex')
         self.assertTrue(explicit['explicitOnly'])
-        self.assertEqual(router.resolve(ROOT, 'rn-expo-builder', 'codex')['groups'], ['frontend-mobile'])
+        self.assertEqual(router.resolve(ROOT, 'rn-expo-builder', 'codex')['groups'], ['mobile-and-interfaces'])
 
     def test_rejected_routes_and_listing_do_not_mutate_selection(self):
         for name in ['poteto-mode', 'ui-architect', 'ars-malefica-maintenance', 'tadooer-workflow', '../ui-craft']:
@@ -51,7 +51,7 @@ class SkillRouteTests(unittest.TestCase):
             marker.write_text('{"profiles":["core"]}\n')
             before = marker.read_bytes()
             with patch.object(Path, 'home', return_value=Path(tmp)):
-                routes = router.lookup(ROOT, 'codex', group='frontend-mobile')
+                routes = router.lookup(ROOT, 'codex', group='mobile-and-interfaces')
             self.assertEqual(marker.read_bytes(), before)
             self.assertEqual(list(Path(tmp).rglob('*.json')), [marker])
             self.assertTrue(any(r.get('name') == 'rn-expo-builder' and 'path' in r for r in routes))

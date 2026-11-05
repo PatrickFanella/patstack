@@ -47,6 +47,8 @@ def statefile(state):return Path(state)/'installed.json'
 
 def prepare(root=ROOT,state=DEFAULT_STATE,only_skills=None,only_shared=None):
  root=Path(root);config=read(root/'catalog/installation.json');baseline=read(root/'catalog/baseline.json');installed=read(statefile(state),{'paths':{}})
+ marker=Path.home()/'.local/state/subsets-fleet/profiles/ownership.json'
+ if marker.exists() and config['personalRoot'] in read(marker).get('roots',{}).values():raise RuntimeError('Subsets owns user skill selection; use subsets apply instead of the legacy personal installer')
  destinations={};groups={}
  for p in (root/'skills').iterdir():
   if (p/'SKILL.md').exists():

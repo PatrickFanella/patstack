@@ -12,11 +12,13 @@ Gitea pushes it to the private GitHub mirror
 [subculture-collective/patstack](https://github.com/subculture-collective/patstack)
 on every commit and every 8 hours; open PRs on Gitea, not on GitHub.
 
-It holds 52 curated personal skills (54 personal entrypoints with Omarchy's two
-OS-owned ones), 6 shared skills, one repository-local Blacktower skill, vault
-and project skills, and a 326-skill optional library. Names follow a distinct
-noun plus purpose (`bug-tracer`, `prose-unslop`, `relay-baton`);
-`catalog/retired-names.json` maps every old name to its owner.
+Subsets manages the user-level skill selection and generated views across
+Agents, Codex, Claude, Copilot, Cursor and OpenCode. Patstack owns 220 selectable
+skill sources, a 40-skill everyday core, and 11 overlapping task sets. App,
+package, repository and vault skills retain their local owners.
+
+Start with [the task-stack guide](docs/SKILL-GROUPS.md) and
+[complete membership reference](profiles/CATALOG.md).
 
 ## Brand
 
@@ -24,16 +26,16 @@ patstack has a selected identity: the **A1 Rack system with A3 Registration's pl
 
 ## Layout and ownership
 
-- `skills/`: authored personal skills, installed as managed copies in `~/.codex/skills`.
-- `shared/`: the six shared skills (`scope-grill`, `relay-baton`, `voice-ledger`, `content-recaster`, `launch-dossier`, `skill-stack-router`), installed in `~/.agents/skills`. Duplicate Codex copies are retired.
+- `skills/`: curated skill sources; selected and exposed by Subsets, not an always-installed Codex base.
+- `shared/`: portable workflow sources; Subsets selects them through the same core/task profiles as other skills.
 - `repository-skills/blacktower-development`: installed only in Blacktower’s `.agents/skills`, privately excluded through Git’s local exclude file.
-- `library/skills/`: the optional reservoir. `profiles/*.txt` group it into the Subsets categories described below.
+- `library/skills/`: specialist source reservoir. Task profiles combine eligible sources from here, `skills/`, and `shared/`.
 - `vault-agents/`: root `AGENTS.md` files and local skills for the four vaults, deployed by `scripts/vault-agents.py` (`catalog/vault-agents.json` maps each file, including the library copies of vault skills).
 - `project-agents/`: project skills and instruction blocks, deployed by `scripts/project-skills.py` (`catalog/project-selections.json`).
 - `instructions/`: the shared working rules (`WORKING.md`), per-host facts (`hosts.json`), Gitea identity and RTK guidance that `scripts/global-instructions.py` renders into every client's global file.
 - `runtime-bundles/subsets-fleet/`: the Subsets adapter bundle built and deployed per host.
 - `authoring/`: non-discovered guidance for maintaining the collection.
-- `catalog/proposed-catalog.json`: authoritative target; `capabilities.json` maps 138 imported capabilities and the authored T3 onboarding capability to owners and procedures. `retired-names.json` maps retired names, with no compatibility entrypoints.
+- `catalog/proposed-catalog.json`: authoritative target; `capabilities.json` maps imported and authored capabilities to owners and procedures. `retired-names.json` maps retired names, with no compatibility entrypoints.
 - `catalog/baseline.json`: pre-migration hashes, modes, and symlinks. `installation.json` records this host’s destinations and immutable archive location.
 - `evaluations/`, `tests/`, `reports/`: bounded behavior trials, deterministic tests, discovery measurements, and rollout evidence.
 
@@ -43,28 +45,15 @@ Original trees are recoverable at `/home/onnwee/.codex/skill-backups/20260908T03
 
 ## Installation
 
-Requires Python 3 on Linux; validation additionally needs PyYAML. The installer uses only the standard library. Run from this repository after committing reviewed sources:
+User skills are installed through the reviewed Subsets bundle. Validate and
+commit source changes, then build and deploy using the
+[adapter runbook](runtime-bundles/subsets-fleet/README.md). The first migration
+requires exact predecessor receipts and records recoverable backups. Later
+switches modify only registered paths and preserve app/package/project owners.
 
-```sh
-python scripts/validate.py
-PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v
-python scripts/install.py plan > /tmp/patstack-plan.json
-python scripts/install.py apply --through 1
-# Use the run path printed by apply for both following batches:
-python scripts/install.py apply --resume <run-path> --through 2
-python scripts/install.py apply --resume <run-path> --through 3
-python scripts/install.py verify
-```
-
-Review `plan` before applying. It is read-only and records source revision, destinations, expected/desired trees, ownership, and retired names. Each tree records SHA-256, executable modes, and symlink targets. `apply` writes a journal and verified original backups under `~/.codex/skill-installations/codex-skills/run-*`. Completed operations gain `backupLocation` and actual original state. The installed manifest is `~/.codex/skill-installations/codex-skills/installed.json`; the state folder keeps the pre-rename name so existing receipts stay valid.
-
-Apply rejects drift from the recorded baseline or last installed snapshot. Preserve intervening edits and review a reconciliation before updating the baseline; never bypass drift by overwriting it blindly. A repeated successful apply is idempotent. An unfinished batch must be resumed or rolled back. Completed paths are reverified when a later batch resumes.
-
-```sh
-python scripts/install.py rollback --run <run-path>
-```
-
-Rollback restores only that transaction’s changed destinations and the preceding installed manifest. It preflights all affected paths and preserves intervening edits. Interrupted apply and rollback can resume from journaled stages. Backups and originals remain outside discovery. Retain the repository and run directory until rollback is no longer needed.
+The old personal and optional installers are historical migration tools. They
+must not reclaim user skill paths after Subsets takes ownership. Vault and
+project-local deployment remain separate.
 
 ## Maintenance
 
@@ -92,64 +81,28 @@ subsets apply --frontend-mobile --dry-run
 
 System and plugin directories retain their owners. Existing installer-managed roots use explicit backends. See the [discovery and ownership guidelines](https://git.subcult.tv/subculture-collective/subsets/src/branch/main/docs/discovery-ownership.md) before adopting another folder.
 
-## Subsets: choosing optional skills
+## Subsets task stacks
 
-Start with [the skills and groups guide](docs/SKILL-GROUPS.md) for every default
-skill, all 14 groups, full membership links, and required/optional relationships.
-The default `skill-stack-router` loads qualified specialists on demand; ordinary
-tasks do not require switching profiles. Companion references also connect
-specialists to one another. Switch when you want a different set directly
-discoverable for sustained work or need a different client/tool environment.
+`core` is the complete everyday default, with 40 skills. Additional stacks mix
+planning, implementation, verification, research and communication around a task.
+They overlap deliberately and can be combined. There is no hidden, separately
+installed personal base.
 
-[Subsets](runtime-bundles/subsets-fleet/README.md) is the app on every host that
-switches which optional library skills are active. `core` is always on; add a
-category when the work calls for it, and drop back to `core` afterwards so
-discovery stays small and routing stays sharp.
+```sh
+rtk proxy subsets apply --build-and-ship --dry-run
+rtk proxy subsets apply --build-and-ship
+rtk proxy subsets apply --research-and-write --product-and-launch
+rtk proxy subsets apply --group core
+```
 
-### Which category to pick
+The default router can read an inactive specialist for a one-off task without
+switching stacks. Required and optional companion references remain conditional.
+Start a fresh client session after changing directly discoverable skills.
 
-Counts are the optional library skills each category adds; the 52 curated
-skills and the shared skills are always installed and are not listed.
-
-| Category | Pick it when you are | Skills |
-|---|---|---|
-| `core` | always active: fact checks, summaries and web lookup, plus the six shared skills | 3 |
-| `ai-agents` | running or configuring agents: parallel candidates and swarms, Ralph loops, handoffs, mining your own sessions, skill authoring, Blacktower/OpenCode/Codex/Cursor setup | 25 |
-| `engineering` | planning, understanding or shipping code: implementation plans, specs, tickets, code walkthroughs, design alternatives, commit recaps | 23 |
-| `testing-quality` | reviewing or proving a change: blast radius, branch shipping, double reviews, verification skills, issue triage, test design | 12 |
-| `backend-devops` | building services or infrastructure: Stripe, Temporal, Kubernetes, Terraform, web server hardening, fleet operations, backtests | 8 |
-| `security` | doing security-sensitive work: PCI scope, memory forensics, binary reverse engineering, Solidity audits, server hardening | 6 |
-| `frontend-mobile` | building interfaces: React Native/Expo, terminal UIs, VS Code extensions, userscripts, charts, HUD design, web games | 8 |
-| `tooling-homelab` | working with your own tools: Obsidian, Karakeep, Super Productivity, desktop capture, Switchyard, Blacktower, client guardrails | 15 |
-| `docs-research` | working with documents or research: DOCX, PDF, spreadsheets, PPTX, ebooks, source research, memos, claim probes | 14 |
-| `learning` | teaching or learning: multi-session courses, roadmaps, tutoring, retrospectives, exercise scaffolds | 5 |
-| `product-growth` | marketing or selling: positioning, landing pages, SEO, ads, email flows, social posts, sales collateral, launch plans | 21 |
-| `creative-media-design` | making media: marketing images, raster art, video, music prompts, slides, game design | 10 |
-| `writing-nonfiction` | writing articles or talks: shaping drafts, restructuring, fragments, speech adaptation, voice capture, naming | 11 |
-| `writing-worldbuilding` | writing fiction or building worlds: story diagnosis, arcs, dialogue, conlangs, tropes, tabletop play, world bibles | 30 |
-
-Every activatable library skill belongs to at least one category, and some sit
-in two where the work overlaps (for example `stripe-checkout-wiring` is in
-`backend-devops` and `security`). Combine categories when a task spans them,
-for example `--engineering --testing-quality`. The categories also appear in
-the Groups view of the `subsets` TUI and work with `subsets apply --group NAME`.
-
-### How to switch
-
-1. Preview: `subsets apply --engineering --dry-run` (or open `subsets` and use the Groups view).
-2. Apply: `subsets apply --engineering`. Several flags can be combined.
-3. Start a fresh agent session; a running session keeps the skill list it started with.
-4. Return to the default: `subsets apply --group core`.
-5. Undo a switch: `~/.agents/bin/skill-profile rollback --run PATH`, newest run first, with the run folders under `~/.local/state/subsets-fleet/profiles/`. Rollback refuses files edited after the switch.
-
-### Changing categories for the fleet
-
-Edit `profiles/*.txt` here, commit, then build and roll out a new bundle:
-`python runtime-bundles/subsets-fleet/scripts/build-bundle.py`, copy the printed
-folder to the same path on each host, and run its
-`scripts/deploy-host.py --node NODE --python PYTHON`. The runtime paths each host
-uses are in its `~/.local/bin/subsets` launcher. See the
-[adapter README](runtime-bundles/subsets-fleet/README.md) for ownership and rollback.
+[The guide](docs/SKILL-GROUPS.md) lists every stack, its purpose, selected counts,
+client roots, exceptions and recovery. [The membership catalog](profiles/CATALOG.md)
+lists each core skill and each stack's additions with source links. Regenerate
+both with `python scripts/stack-catalog.py`; use `--check` to detect drift.
 
 ## License
 

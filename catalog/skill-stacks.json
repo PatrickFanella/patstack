@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "owner": "subsets",
+  "sourceKinds": [
+    "skills",
+    "shared",
+    "library/skills"
+  ],
+  "core": "core",
+  "stackDescriptions": {
+    "core": "Everyday repository work, debugging, delivery, web/API changes, tools, documentation and basic operations.",
+    "build-and-ship": "Take a feature from understanding and design through implementation, review, tests and a PR.",
+    "diagnose-and-repair": "Reproduce a failure, inspect code/runtime evidence, repair it and prove the result.",
+    "operate-homelab": "Operate services and personal tools, investigate incidents, change infrastructure and verify recovery.",
+    "build-agent-tools": "Build and configure agents, MCP servers, CLIs, retrieval, evaluations and development environments.",
+    "research-and-write": "Find and check sources, develop an argument, write or revise, and produce documents.",
+    "product-and-launch": "Research a market, choose positioning, prepare brand/product copy, refine the interface and plan a launch.",
+    "creative-production": "Plan and produce visual, audio, video or slide material with a coherent voice and delivery format.",
+    "fiction-and-worlds": "Develop stories and settings, draft scenes, revise character/dialogue, and maintain continuity.",
+    "learn-and-practice": "Plan learning, study examples, tutor, build exercises and review progress.",
+    "mobile-and-interfaces": "Build and test mobile, terminal, editor, browser and interactive interfaces.",
+    "data-and-decisions": "Investigate evidence, analyze data, compare alternatives and communicate a decision."
+  },
+  "clients": {
+    "shared": {
+      "root": ".agents/skills",
+      "contract": "shared"
+    },
+    "codex": {
+      "root": ".codex/skills",
+      "contract": "codex"
+    },
+    "claude": {
+      "root": ".claude/skills",
+      "contract": "claude"
+    },
+    "copilot": {
+      "root": ".copilot/skills",
+      "contract": "claude"
+    },
+    "cursor": {
+      "root": ".cursor/skills",
+      "contract": "claude"
+    },
+    "opencode": {
+      "root": ".config/opencode/skills",
+      "contract": "opencode"
+    },
+    "opencode-legacy": {
+      "root": ".opencode/skills",
+      "contract": "opencode"
+    }
+  },
+  "migrationReceipts": [
+    ".codex/skill-installations/codex-skills/installed.json",
+    ".codex/skill-installations/codex-source-links/installed.json"
+  ],
+  "clientPolicy": "Cursor and Copilot receive Claude-compatible Agent Skills files, not an assertion of tool equivalence. Runtime tool checks still apply. Package-owned, application-specific and project-local skills retain their owners."
+}

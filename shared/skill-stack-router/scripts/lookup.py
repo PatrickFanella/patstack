@@ -34,7 +34,9 @@ def resolve(root, name, client):
     record = records.get(name)
     if not record or record['status'] in {'blocked', 'archived', 'unreviewed'}:
         raise ValueError('Skill is not qualified for routing: ' + name)
-    if client not in record['supportedClients']:
+    config = read(root / 'catalog/skill-stacks.json') if (root / 'catalog/skill-stacks.json').exists() else {}
+    contract = config.get('clients', {}).get(client, {}).get('contract', client)
+    if contract not in record['supportedClients']:
         raise ValueError('Skill does not support this client: ' + name)
     if name in read(root / 'catalog/retired-names.json'):
         raise ValueError('Retired skill: ' + name)
@@ -105,7 +107,7 @@ def main():
     selector.add_argument('--skill')
     selector.add_argument('--group')
     selector.add_argument('--from', dest='origin')
-    parser.add_argument('--client', required=True, choices=['codex', 'claude', 'opencode'])
+    parser.add_argument('--client', required=True, choices=['codex', 'claude', 'opencode', 'copilot', 'cursor'])
     parser.add_argument('--source', type=Path)
     args = parser.parse_args()
     try:

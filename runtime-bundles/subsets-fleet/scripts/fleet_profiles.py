@@ -7,12 +7,26 @@ from pathlib import Path
 import runpy
 import subprocess
 import sys
+from contextlib import ExitStack
 
 import install
 
 SOURCE = Path(__file__).resolve().parents[1]
 HOME = Path.home()
 STATE = HOME / '.local/state/subsets-fleet/profiles'
+
+
+def lock_predecessors(stack):
+    config = install.read(SOURCE / 'catalog/skill-stacks.json', {})
+    for relative in config.get('migrationReceipts', []):
+        parent = (HOME / relative).parent
+        if parent.exists():
+            predecessor = stack.enter_context((parent / 'installer.lock').open('a'))
+            fcntl.flock(predecessor, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            pending = [p for p in parent.glob('run-*/journal.json')
+                       if install.read(p)['status'] in {'applying', 'partial', 'rolling-back'}]
+            if pending:
+                raise RuntimeError('Finish predecessor transaction before migration/recovery: ' + str(pending[0]))
 
 
 def link_mode():
@@ -33,6 +47,9 @@ def manager():
 
 
 def proposal(profiles):
+    if (SOURCE / 'catalog/skill-stacks.json').exists():
+        from stack_selection import plan
+        return plan(SOURCE, HOME, STATE, profiles, link_mode())
     m = manager()
     selected = sorted(m['selection_for'](profiles, False))
     sources = m['sources']()
@@ -101,8 +118,11 @@ def proposal(profiles):
 
 def activate(profiles):
     STATE.mkdir(parents=True, exist_ok=True, mode=0o700)
-    with (STATE / 'installer.lock').open('a') as lock:
+    with ExitStack() as stack:
+        lock = stack.enter_context((STATE / 'installer.lock').open('a'))
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        if (SOURCE / 'catalog/skill-stacks.json').exists() and not (STATE / 'ownership.json').exists():
+            lock_predecessors(stack)
         unfinished = [p for p in STATE.glob('run-*/journal.json')
                       if install.read(p)['status'] in {'applying', 'partial', 'rolling-back'}]
         if unfinished:
@@ -142,8 +162,10 @@ def main(client=False):
     elif args.command == 'rollback':
         if not args.run or args.run.resolve().parent != STATE.resolve():
             parser.error('--run must name a fleet profile transaction')
-        with (STATE / 'installer.lock').open('a') as lock:
+        with ExitStack() as stack:
+            lock = stack.enter_context((STATE / 'installer.lock').open('a'))
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            lock_predecessors(stack)
             install.rollback(args.run, STATE)
         print(json.dumps({'rolledBack': str(args.run)}))
     elif args.command == 'plan':

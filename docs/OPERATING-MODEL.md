@@ -1,107 +1,111 @@
 # Agent configuration source of truth
 
-Author personal Codex skills, optional skill profiles, and Kvant's Codex bootstrap in this repository. Installed copies are deployments. Edit a source once, validate, commit, preview, apply, and verify. Keep the source repository private until redistribution and publication scope are reviewed.
+Patstack owns skill sources, task profiles, relationships and global agent
+instructions. Subsets owns user-level skill selection and client views.
+Installed files are deployments. Edit source once, validate, commit, preview,
+apply and verify. Keep this source repository private until publication scope
+and redistribution rights are reviewed.
 
 ## Ownership
 
 | Material | Authority | Deployment |
 |---|---|---|
-| Curated personal skills | `skills/` and `catalog/proposed-catalog.json` | `~/.codex/skills/` via `scripts/install.py` |
-| Shared interview and handoff | `shared/` | `~/.agents/skills/`; preserved by profile switching |
-| Optional reservoir | `library/skills/` | Eligible skills copied to `~/.agents/skills/` by the profile command |
-| Optional profile membership | `profiles/*.txt` | `~/.agents/skill-profiles` links here |
-| Conditional skill relationships | `catalog/skill-routes.json` and each owner's `references/skill-routes.md` | Default `skill-stack-router` resolves qualified sources without changing profiles |
-| Switchyard OpenCode skill selection | `runtime-bundles/switchyard-opencode.json` and the selected skill owners | Generated image-owned snapshot in Switchyard, with source/export hashes in `services/opencode/skills.lock.json` |
-| Profile command | `scripts/skill-profile` | The Subsets fleet adapter (`runtime-bundles/subsets-fleet/`) links `~/.agents/bin/skill-profile` to its generated source snapshot on each device; the workstation-link manifest no longer claims it |
-| Global client instructions | `instructions/WORKING.md` and `instructions/hosts.json` | Rendered per host into `~/.codex/AGENTS.md`, `~/.claude/CLAUDE.md` and `~/.config/opencode/AGENTS.md` by `scripts/global-instructions.py` |
-| RTK guidance | `instructions/RTK.md` | Rendered to `~/.codex/RTK.md` and `~/.claude/RTK.md` on hosts with `rtk: true`; client files also carry the short rule |
-| Shared docs policy and HOMELAB | Machinum canonical policy/host briefings | Guarded `sync-briefings.py` generates `~/.homelab/HOMELAB.md` |
-| Blacktower package and fleet enablement | Blacktower source and Estate Config `skills/hosts.json` | Estate Config's host-selected deployment |
-| Four-vault instructions and local skills | `vault-agents/<vault>/AGENTS.md` and `vault-agents/<vault>/skills/`; deployment map in `catalog/vault-agents.json` | Each vault's `AGENTS.md`, `.agents/skills/`, and compatible `.opencode/skills/` copies via `scripts/vault-agents.py`; existing optional-library copies are also mapped. Blacktower package copies retain their package owner and need a separate release. |
-| OS/system/plugin skills | Their owning package or plugin | Their managed directories; never edit their caches |
+| Curated, shared and specialist sources | `skills/`, `shared/`, `library/skills/`, qualification and provenance catalogs | One reviewed Subsets bundle |
+| Everyday core and task sets | `profiles/*.txt`, `catalog/skill-stacks.json` | Subsets selects core plus requested task sets |
+| User skill views | Bundle sources and Subsets transaction receipts | Individual links under `.agents`, `.codex`, `.claude`, `.copilot`, `.cursor` and OpenCode user roots |
+| Conditional companions | `catalog/skill-routes.json`, each owner's companion reference | Default router reads the needed source without a whole-stack switch |
+| App, package and system skills | Their owning application/package | Preserved in place; never adopt caches or OS skills |
+| Project and worktree skills | `project-agents/`, project selection catalog | Guarded `project-skills.py` deployment |
+| Vault instructions and skills | `vault-agents/`, vault deployment catalog | Guarded `vault-agents.py` deployment |
+| Global client instructions | `instructions/WORKING.md`, `instructions/hosts.json` | Guarded `global-instructions.py` deployment |
+| Source workstation links outside skill views | `catalog/workstation-links.json` | Guarded `link-workstation.py`; transferred skill paths are excluded |
+| HOMELAB and documentation policy | Canonical Machinum notes | Documentation-Hub's guarded briefing sync |
+| Switchyard OpenCode image skills | `runtime-bundles/switchyard-opencode.json` | Image-owned export and lockfile; separate runtime distribution |
+| Blacktower distribution | Blacktower and Estate Config | Its package/release owner; not replaced by personal Subsets selections |
 
-The 322-skill reservoir is preserved for selection and research, not a blanket endorsement. Some entries have been superseded by curated owners. Profiles filter curated and retired names, so old entrypoints cannot silently undo consolidation. Keep substantial optional procedures behind references in the owning skill.
-
-Blacktower and personal Codex are separate distributions. Do not copy one over the other. Sputnik's `codex-skills` command uses Estate Config and toggles Codex configuration; Kvant's profile command manages optional shared copies. A future shared UI should call these explicit backends and show ownership, pending changes, and restart requirements. It must never edit package caches directly or pretend one profile applies identically to all clients.
+The historical `personal`, `shared` and `optional` source labels describe
+provenance and source layout. They no longer determine an always-active runtime
+layer. Core is the complete everyday default. The 326-entry reservoir retains
+archived and superseded sources for provenance; only eligible canonical owners
+are selectable. Retired names have no compatibility entrypoints.
 
 ## Daily use
 
 ```sh
+rtk proxy subsets apply --build-and-ship --dry-run
+rtk proxy subsets apply --build-and-ship
+rtk proxy subsets apply --research-and-write --product-and-launch
+rtk proxy subsets apply --group core
 rtk proxy ~/.agents/bin/skill-profile status
-rtk proxy ~/.agents/bin/skill-profile list
-rtk proxy ~/.agents/bin/skill-profile plan docs-research
-rtk proxy ~/.agents/bin/skill-profile activate docs-research
-rtk proxy ~/.agents/bin/skill-profile deactivate
 ```
 
-These profiles change the optional shared skills, not the curated Codex base or plugin skills. Start a fresh agent session after changing discovery. The current conversation retains the catalog loaded at its start.
+Start a fresh session after changing discovery. Existing sessions retain their
+initial skill metadata. The router can load a one-off specialist from the
+managed library without changing the selected stack. Required and optional
+companion links apply only under their condition and within current scope.
+See [the task guide](SKILL-GROUPS.md) and [membership catalog](../profiles/CATALOG.md).
 
-For ordinary specialist work, the shared default `skill-stack-router` reads the
-needed procedure from the managed source instead of changing a profile. Required
-and optional companion links apply only under their stated conditions; they do
-not authorize broader work or provide missing tools. The [skills and groups
-guide](SKILL-GROUPS.md) lists defaults, categories, and the routing limits.
+## Source changes and deployment
 
-Use `scope-grill` for a requested `grill-me` or `grill-with-docs`; its named mode supports deeper rounds without turning ordinary tasks into interviews. `unslop` is required for every user-facing prose response and documentation edit. Load it once per session; preserve facts and uncertainty. `diff-inspector` owns change-blast-check review. `build-sequencer` owns a reviewable decision trail for long efforts.
+1. Inspect source status and destination drift. Preserve installed edits and
+   unrelated work. Read the maintenance skill and relevant authoring guidance.
+2. Edit source and any affected qualification, provenance, profiles or routes.
+   New imported procedures need a pinned revision/license and positive/near-miss
+   cases. Preserve invocation and client tool contracts.
+3. Regenerate the guide with `python scripts/stack-catalog.py`. Run
+   `python -B scripts/validate.py` and
+   `python -B -m unittest discover -s tests -v`. Use bounded behavioral fixtures;
+   distinguish structural proof from fresh-model and actual client execution.
+4. Commit reviewed source and build the Subsets bundle with
+   `python -B runtime-bundles/subsets-fleet/scripts/build-bundle.py`.
+   Use `umask 022`; mode drift is real drift to the installers.
+5. Follow the [adapter runbook](../runtime-bundles/subsets-fleet/README.md) to
+   preview, deploy and verify. Confirm protected paths, ownership transfer,
+   selected skills and fresh discovery. A local deployment does not prove fleet
+   parity, remote CI, authentication or runtime behavior in every client.
 
-## Maintenance
+The legacy `install.py` personal installer, source `skill-profile` command and
+`optional-clients.py` must not reclaim user skill paths after takeover. Their
+transaction primitives remain used for backups/recovery and historical tests.
+The source-link installer skips transferred skill views while retaining its
+other links. Do not bypass a guard or reset an ownership baseline to get a pass.
 
-Read the repository AGENTS.md, then the relevant `authoring/writing-for-agents/` reference when editing agent instructions. Define a specific trigger, an observable result, and nearby cases that should not trigger it. Preserve existing invocation policies; upstream Cursor/Claude frontmatter is not automatically Codex policy.
+## Initial ownership transfer and recovery
 
-1. Check Git status and installed drift. Preserve intentional installed changes back into their source after reviewing the diff. Never rewrite the installer baseline just to obtain a pass.
-2. Edit source files and any changed catalog ownership. Keep upstream URL, exact revision, file hash, license, and adaptation notes in the review ledger.
-3. Run `rtk proxy python scripts/validate.py` and `rtk proxy python -m unittest discover -s tests -v`. Use behavioral trials for changed workflows and report which were simulated versus run in a new model session.
-4. Commit reviewed source. Run `rtk proxy python scripts/install.py plan` and inspect changed destinations, then `apply` and `verify`. The installer compares file modes, so plan from a checkout created with `umask 022`; Kvant's Debian default `umask 0002` makes a fresh checkout look like drift everywhere. OS, Codex `.system` and Omarchy owners are snapshotted at plan time and listed under `externalOwnersChangedSinceBaseline` when their owner has changed them; apply and verify still refuse any change to them during the run. The install journal records verified backups and supports `rollback --run PATH`.
-5. For source links, use `scripts/link-workstation.py plan`, inspect, then `apply`. Its recorded before-state guards replacements and its journal supports rollback.
-6. Capture fresh discovery with `scripts/discovery.py`. Check owners appear once, retired names stay absent, and repo-local skills remain local.
+Subsets adopts a known user skill path only when its current snapshot matches
+its predecessor receipt. It releases just those path records from the old
+personal and source-link manifests in the same transaction as the generated
+views and ownership marker. Original files and both manifests have verified
+backups. Unknown entries, app-specific skills and package/system owners remain
+untouched; a conflicting selected name stops migration for review.
 
-To update an optional skill already active, edit its canonical library source and reconcile the active copy deliberately; drift is a stop, not a reason to overwrite. `promote` exists for an intentional active edit/new skill, preserves the replaced library version, and refuses curated owners. Review and commit its repository diff afterward.
+The adapter holds its selection lock and predecessor locks during takeover.
+Subsequent switches change only recorded paths and preserve local drift.
+Rollback restores the preceding selection; rollback of the initial takeover
+also restores predecessor ownership. Undo later runs first. Later edits stop
+rollback before restoration. Keep transaction directories under
+`~/.local/state/subsets-fleet/profiles/` while recovery is needed.
 
-## Claude Code on Kvant
+## Claude and other clients
 
-Claude's `~/.claude/CLAUDE.md` is rendered like every host's (see Global client
-instructions). The workstation link manifest exposes the current
-63 curated personal skills and five active shared skills through individual
-links in `~/.claude/skills/`. Its two existing OS-owned skills and account-synced
-skills keep their owners. System and Codex plugin skills are not copied.
-After changing optional profile membership, review Claude's links too; the
-manifest records this selection and does not automatically follow new names.
+The same selector generates all configured native views, not a second Claude
+link pass. File compatibility is not tool equivalence. Cursor and Copilot use
+Claude-compatible Agent Skills content; OpenCode native views follow declared
+OpenCode source contracts. Shared compatibility roots can also be read by
+clients. Never infer tool access or identical invocation behavior from a link.
 
-Use `python scripts/claude-mcp.py plan`, then `apply` and `verify`, to add
-portable Codex MCP entries to Claude's user configuration. The script preserves
-other state, refuses conflicting entries, and saves a private backup before
-writing. It excludes the Codex desktop bridge and invalid or unsupported
-entries. Registration does not establish connectivity or transfer OAuth login.
-Run Claude's MCP health check separately and start a fresh session after changes.
-To undo an added MCP entry, remove it only if it still matches the imported
-entry; do not restore the entire backup over newer Claude state. Source-link
-rollback uses the recorded `link-workstation.py` transaction.
-
-The local `claude` launcher links to `scripts/claude-launcher`. It retains mise
-version selection and resolves the executable with `mise which` to avoid
-recursing through its own PATH entry. Its former wrapper is backed up by the
-source-link installer.
-
-Claude keeps its own runtime, model, permissions, hooks, authentication, and
-memory. A linked skill that needs a missing tool must report the limitation.
+Claude's runtime, hooks, permissions, authentication and MCP remain separate.
+`claude-mcp.py` still manages its bounded MCP imports with private backup and
+conflict refusal. Registration does not prove connectivity or transfer OAuth.
+The local Claude launcher retains mise selection; see its source script.
 
 ## Skill names
 
-Skill names follow a distinct noun plus purpose (`bug-tracer`, `prose-unslop`,
-`ship-check`) and must not match a name shipped by an installed plugin or system
-package. The 2026-11-03 review renamed 218 curated, shared and library skills.
-Each old name is in `catalog/retired-names.json` with its new owner and procedure
-path, so profiles filter it and readers can follow it. Entries with
-`owner: null` are retired without a replacement; their `reason` says why.
-`scripts/build_collection.py` regenerates that file from `capabilities.json`,
-so rerunning it would drop these entries; add them back if you rerun it.
-
-Kept names, by owner: `social-craft` and the `studio-*` skills (subcult-tv
-deploys and tunes them by path), `play-edda` (edda repository),
-`blacktower` and `blacktower-development` (Blacktower package),
-`omarchy` and `diagnose-crash` (mirror Omarchy's own skills). The 12 vault
-skills and `codex-skills-maintenance` keep their names until their deployers
-can retire an old destination.
+Use distinct names such as `bug-tracer`, `prose-unslop` and `ship-check`.
+`catalog/retired-names.json` records earlier names, canonical owners and
+procedures. Do not regenerate the historical collection builder over curated
+sources or add discovery aliases for retired names. Project/vault skill names
+retain their deployer ownership until those deployers can retire old paths.
 
 ## Public edition
 
@@ -212,19 +216,16 @@ Keep infrastructure history and operating notes in Machinum. Keep executable con
 
 The canonical Agent Documentation Policy in Machinum requires unslop for every prose response and documentation edit, regardless of optional profile selection. It includes direct file paths so the requirement also works when a client does not automatically select the skill. Load once per session. Kvant uses this repository's managed skill. Almaz, Dozor, and NUC received the same source with hash receipts at `~/.codex/skill-installations/required-unslop.json`; Soyuz and Sputnik retain their existing owners. Review those receipts and preserve local drift before updating remote personal copies. Full personal-catalog fleet deployment remains separate.
 
-## Installing one personal skill
+## Updating a user skill
 
-Shared marketing procedures and their bounded cross-device reading bundle are documented in [Shared marketing tools](MARKETING-TOOLS.md). Skill sources remain in this repository; product packets remain in their project repositories, and synced reading copies carry provenance rather than becoming competing editing masters.
+Edit its canonical source, validate and commit, then build a new Subsets bundle.
+Preview the intended stack and deploy the bundle. Do not reinstall a personal
+copy outside the selected stack. Inactive sources remain readable through the
+router. Project and vault changes keep their own guarded deployers.
 
-Use `python scripts/install.py plan --only-skill NAME`, then `apply` and `verify`
-with the same selector for a bounded personal-skill change. Selected destinations
-retain the normal source, drift, backup, and transaction checks. Other skills and
-repository-local installs are left untouched; this does not repair or verify
-unrelated drift. Saved transactions retain their original scope during resume
-and rollback.
-
-`t3-repo-onboard` owns onboarding repositories into the T3 development launcher.
-Its operational guide and recipe schema remain owned by `t3-dev-environments`.
+Shared marketing procedures and reading bundles are described in
+[Shared marketing tools](MARKETING-TOOLS.md). Product packets remain owned by
+their project; a reading copy does not become a competing authoring master.
 
 ## Vault-local agent configuration
 
