@@ -5,6 +5,7 @@ import os
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -66,7 +67,7 @@ class UnifiedStackTests(unittest.TestCase):
         path.write_text(json.dumps(data))
 
     def cli(self, *args, success=True):
-        r = subprocess.run(['python3', str(self.source / 'scripts/skill-profile'), *args],
+        r = subprocess.run([sys.executable, str(self.source / 'scripts/skill-profile'), *args],
                            env={**os.environ, 'HOME': str(self.home)}, capture_output=True, text=True)
         if success:
             self.assertEqual(r.returncode, 0, r.stderr)
@@ -170,6 +171,70 @@ class UnifiedStackTests(unittest.TestCase):
                 coverage.update(names)
             self.assertEqual(coverage, set(all_sources))
             self.assertEqual(len(stack_selection.selection(ROOT, [])[0]), 40)
+        finally:
+            sys.path.remove(str(ROOT / 'scripts'))
+            sys.path.remove(str(module))
+
+    def test_historical_source_evidence_and_native_links_transfer_without_a_fake_receipt(self):
+        module = ROOT / 'runtime-bundles/subsets-fleet/scripts'
+        sys.path[:0] = [str(ROOT / 'scripts'), str(module)]
+        try:
+            from fleet_predecessors import fingerprint
+            expected = {prefix + '/' + name: fingerprint(installer.snapshot(self.source / prefix / name))
+                        for prefix, name in [('skills', 'base'), ('shared', 'shared')]}
+            self.write(self.source / 'catalog/fleet-skill-predecessors.json', {'revisions': {'pinned': expected}})
+            receipt = self.home / '.local/state/skill-review-20261103/run/receipt.json'
+            self.write(receipt, {'revision': 'pinned', 'current': [str(self.roots['codex'] / 'base'), str(self.roots['shared'] / 'shared')],
+                                 'links': [{'from': str(self.roots['claude'] / 'old-base'), 'to': str(self.roots['codex'] / 'base')}]})
+            self.personal.unlink()
+            self.links.unlink()
+            result = self.cli('plan')
+            self.assertEqual(len(result['transferredPaths']), 3)
+            self.assertTrue(receipt.exists())
+            run = self.cli('activate')
+            self.cli('verify', 'core')
+            self.cli('rollback', '--run', run['run'])
+            path = self.roots['codex'] / 'base/SKILL.md'
+            path.write_text('later edit')
+            self.cli('activate', success=False)
+            self.assertEqual(path.read_text(), 'later edit')
+        finally:
+            sys.path.remove(str(ROOT / 'scripts'))
+            sys.path.remove(str(module))
+
+    def test_generated_claude_root_detaches_and_recovers_without_mutating_its_sources(self):
+        generated = self.home / '.agents/.generated/skill-profiles/full/skills'
+        generated.mkdir(parents=True)
+        (generated / 'base').symlink_to(self.roots['codex'] / 'base')
+        (generated / 'app-tool').mkdir()
+        (generated / 'app-tool/SKILL.md').write_text('application-owned')
+        shutil.rmtree(self.roots['claude'])
+        self.roots['claude'].symlink_to(generated)
+        before = installer.snapshot(generated)
+        helper = self.source / 'scripts/prepare-client-root.py'
+        def command(*args):
+            result = subprocess.run([sys.executable, str(helper), *args], env={**os.environ, 'HOME': str(self.home)}, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            return json.loads(result.stdout)
+        self.assertTrue(command('plan')['needed'])
+        receipt = command('apply')
+        self.assertFalse(self.roots['claude'].is_symlink())
+        self.assertTrue((self.roots['claude'] / 'app-tool').is_symlink())
+        self.assertEqual(installer.snapshot(generated), before)
+        command('rollback', '--run', receipt['run'])
+        self.assertTrue(self.roots['claude'].is_symlink())
+        self.assertEqual(installer.snapshot(generated), before)
+
+    def test_source_fingerprint_accepts_only_the_documented_umask_difference(self):
+        module = ROOT / 'runtime-bundles/subsets-fleet/scripts'
+        sys.path[:0] = [str(ROOT / 'scripts'), str(module)]
+        try:
+            from fleet_predecessors import fingerprint
+            base = {'type': 'file', 'mode': 0o644, 'sha256': 'same-bytes'}
+            self.assertEqual(fingerprint(base), fingerprint({**base, 'mode': 0o664}))
+            self.assertNotEqual(fingerprint(base), fingerprint({**base, 'mode': 0o744}))
+            self.assertNotEqual(fingerprint(base), fingerprint({**base, 'mode': 0o646}))
+            self.assertNotEqual(fingerprint(base), fingerprint({**base, 'sha256': 'different'}))
         finally:
             sys.path.remove(str(ROOT / 'scripts'))
             sys.path.remove(str(module))
