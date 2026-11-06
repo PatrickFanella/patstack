@@ -100,7 +100,7 @@ def timestamp() -> str:
     return dt.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
 
-def default_filename(fmt: str, prefix: str = "desktop-capture") -> str:
+def default_filename(fmt: str, prefix: str = "screenshot") -> str:
     return f"{prefix}-{timestamp()}.{fmt}"
 
 
