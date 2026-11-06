@@ -80,7 +80,7 @@ def remote(command, payload):
     plan = json.loads(planfile.read_text())
     if plan.get('subsetsOwned', []) != payload['subsetsOwned']:
         raise RuntimeError('Subsets ownership changed since plan; preview again')
-    if plan['draft-reviser'] != payload['draft-reviser'] or plan['skills'] != payload['skills'] or plan['mcpServers'] != payload['mcpServers'] or plan.get('additive') != payload.get('additive'):
+    if plan.get('revision') != payload['revision'] or plan['skills'] != payload['skills'] or plan['mcpServers'] != payload['mcpServers'] or plan.get('additive') != payload.get('additive'):
         raise RuntimeError('Source changed since plan; preview again')
     managed_skills = {p: files for p, files in payload['skills'].items() if p not in plan.get('preservedSkills', [])}
     if command == 'apply':
@@ -171,7 +171,7 @@ def remote(command, payload):
                 failures.append(client + ':' + name)
     if failures:
         raise RuntimeError('Verification failed: ' + ', '.join(failures))
-    print(json.dumps({'verifiedSkillDirectories': len(managed_skills), 'preservedSkills': plan.get('preservedSkills', []), 'subsetsOwned': payload['subsetsOwned'], 'sharedMcpServers': list(payload['mcpServers']), 'draft-reviser': payload['draft-reviser']}))
+    print(json.dumps({'verifiedSkillDirectories': len(managed_skills), 'preservedSkills': plan.get('preservedSkills', []), 'subsetsOwned': payload['subsetsOwned'], 'sharedMcpServers': list(payload['mcpServers']), 'revision': payload['revision']}))
 
 
 def rollback(home, run):
@@ -245,7 +245,7 @@ def main():
             skills[root + '/' + source.name] = files
             skills['.claude/skills/' + source.name] = {'link': host_home + '/' + root + '/' + source.name}
     mcp_servers = {name: {**spec, **manifest.get('hostMcpOverrides', {}).get(args.host, {}).get(name, {})} for name, spec in manifest['mcpServers'].items()}
-    payload = {'additive': args.additive, 'draft-reviser': revision, 'skills': skills, 'mcpServers': mcp_servers, 'claudeAccountManaged': manifest.get('claudeAccountManaged', []), 'run': args.run}
+    payload = {'additive': args.additive, 'revision': revision, 'skills': skills, 'mcpServers': mcp_servers, 'claudeAccountManaged': manifest.get('claudeAccountManaged', []), 'run': args.run}
     code = "__file__ = '/tmp/t3-fleet-deployer.py'\n" + Path(__file__).read_text().replace("if __name__ == '__main__':\n    main()", "remote(sys.argv[1], json.load(sys.stdin))")
     command = [host_python, '-c', code, args.command] if args.host == 'kvant' else ['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', args.host, shlex.join([host_python, '-c', code, args.command])]
     subprocess.run(command, input=json.dumps(payload), text=True, check=True)

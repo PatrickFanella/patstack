@@ -207,7 +207,7 @@ def main():
     p.add_argument('--python',default='python3')
     args=p.parse_args()
     reviewed=json.loads((ROOT/'catalog/tadooer-assistant.json').read_text())['runtime']
-    if args.revision!=reviewed['draft-reviser'] or digest(args.runtime.read_bytes())!=reviewed['sha256']:
+    if args.revision!=reviewed['revision'] or digest(args.runtime.read_bytes())!=reviewed['sha256']:
         raise RuntimeError('Runtime and --revision must match the reviewed entry in catalog/tadooer-assistant.json.')
     payload=payload_for(args.runtime,args.node,args.url,args.revision)
     if args.host=='kvant': remote(args.mode,payload)

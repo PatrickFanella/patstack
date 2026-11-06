@@ -203,7 +203,7 @@ def remote(mode, payload, run_dir=None):
     for path in retired_targets(home):
         actions[str(path)] = 'remove retired copy'
     before = {p: state(Path(p)) for p in actions}
-    summary = {'host': payload['host'], 'sourceRevision': payload['draft-reviser'], 'actions': actions}
+    summary = {'host': payload['host'], 'sourceRevision': payload['revision'], 'actions': actions}
 
     if mode == 'plan':
         write(plan_path, json.dumps({'before': before, 'hashes': payload['hashes']}, indent=2).encode(), 0o600)
@@ -251,7 +251,7 @@ def remote(mode, payload, run_dir=None):
 
 def payload_for(host, revision):
     files = render_all(host, revision)
-    return {'host': host, 'draft-reviser': revision, 'files': files,
+    return {'host': host, 'revision': revision, 'files': files,
             'hashes': {relative: digest(t.encode()) for relative, t in files.items()}}
 
 
