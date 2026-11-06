@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: design-review,visual-originality,product-credibility
 ---
 
-# Interface originality audit
+# ui-cliche-audit
 
 Find places where defaults have replaced design decisions. Review the interface in its actual context, then recommend the smallest changes that make it specific to the product.
 

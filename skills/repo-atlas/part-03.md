@@ -35,7 +35,7 @@ This creates:
 - `.blacktower/codemap.json` - File and folder hashes for change detection
 - Empty `codemap.md` files in all relevant subdirectories
 
-4. **Delegate codemap writing to Fixer agents** - Spawn one fixer per folder to read code and create or update its specific `codemap.md` file.
+4. **Write each folder's codemap** - When the client supports subagents, delegate one folder per subagent to read the code and create or update that folder's `codemap.md`; otherwise write them yourself, folder by folder.
 
 ### Step 3: Detect Changes (If state already exists)
 
@@ -52,7 +52,7 @@ node <skill-root>/scripts/codemap.mjs changes \
    - Modified files
    - Affected folders
 
-3. **Only update affected codemaps** - Spawn one fixer per affected folder to update its `codemap.md`.
+3. **Only update affected codemaps** - Update each affected folder's `codemap.md`, delegating one folder per subagent when the client supports it.
 4. **Run update** to save new state:
 
 ```bash
@@ -62,7 +62,7 @@ node <skill-root>/scripts/codemap.mjs update \
 
 ### Step 4: Finalize Repository Atlas (Root Codemap)
 
-Once all specific directories are mapped, the Orchestrator must create or update the root `codemap.md`. This file serves as the **Master Entry Point** for any agent or human entering the repository.
+Once all specific directories are mapped, create or update the root `codemap.md`. This file serves as the **Master Entry Point** for any agent or human entering the repository.
 
 1.  **Map Root Assets**: Document the root-level files (e.g., `package.json`, `index.ts`, `plugin.json`) and the project's overall purpose.
 2.  **Aggregate Sub-Maps**: Create a "Repository Directory Map" section. For every folder that has a `codemap.md`, extract its **Responsibility** summary and include it in a table or list in the root map.

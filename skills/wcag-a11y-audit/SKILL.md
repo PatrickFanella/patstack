@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: mobile-apps,wcag,audit,patterns
 ---
 
-# WCAG Audit Patterns
+# wcag-a11y-audit
 
 Use for web accessibility audits and fixes. Screen-reader-specific material is available as merged reference, but the active workflow is WCAG-first.
 

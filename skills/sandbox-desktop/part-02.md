@@ -1,4 +1,4 @@
-## Critical Boundaries
+## Setup and installation
 
 ### Use the dedicated Codex for Linux feature page for setup
 Codex for Linux owns Agent Workspace setup through the **Agent Workspaces** page:
@@ -19,11 +19,3 @@ Codex MCP entries left by older installs; restart or reconnect Codex afterward.
 
 Skip unless: the user asks how to install/register the backend or why the tool
 family should not be loaded at startup.
-
-### Never target the host desktop
-Use this skill only for the hidden workspace. For the user's real Linux desktop,
-real Chrome profile, existing tabs, or host focus/mouse/keyboard, use the
-appropriate host-desktop or browser tool instead.
-
-Skip unless: the requested action can run inside the isolated workspace display
-or workspace-owned browser.

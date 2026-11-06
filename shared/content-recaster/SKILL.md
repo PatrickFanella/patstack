@@ -3,7 +3,7 @@ name: content-recaster
 description: Use when adapting an existing article, demo, transcript or report into requested social, newsletter or video drafts. Not for establishing product positioning; use launch-dossier.
 ---
 
-# Content repurposing
+# content-recaster
 
 Use when there is an actual source asset to adapt into other formats. If the user needs a product's facts and positioning established first, create that context before treating it as approved material. A single rewrite does not require a distribution plan.
 

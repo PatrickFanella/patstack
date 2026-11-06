@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: frontend-ui,react,pro
 ---
 
-# React Pro
+# react-render-tuner
 
 Use for React/Next.js implementation and review in the preferred stack: TypeScript, React/Next.js, Tailwind, Go/Postgres backends where relevant.
 

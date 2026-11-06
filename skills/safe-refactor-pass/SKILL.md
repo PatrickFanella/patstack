@@ -3,7 +3,7 @@ name: safe-refactor-pass
 description: Use when restructuring or simplifying code without changing behavior, removing AI slop, or writing a refactor plan. Not for repeated mechanical edits across many files (sweep-rewriter).
 ---
 
-# refactor
+# safe-refactor-pass
 
 Preserve observable behavior and existing repository conventions. Select cleanup or a refactor plan; planning does not authorize implementation or filing an issue. Use sweep-rewriter for repeated structural transformations.
 
@@ -18,7 +18,7 @@ Resource paths inside a mode are relative to that mode directory. Run its script
 
 ## Conditional design notes
 
-- [laziness protocol](references/principles/laziness-protocol.md) — consult only for this specific design or execution concern.
-- [migrate callers then delete legacy apis](references/principles/migrate-callers-then-delete-legacy-apis.md) — consult only for this specific design or execution concern.
-- [minimize reader load](references/principles/minimize-reader-load.md) — consult only for this specific design or execution concern.
-- [subtract before you add](references/principles/subtract-before-you-add.md) — consult only for this specific design or execution concern.
+- [laziness protocol](references/principles/laziness-protocol.md): read when choosing how small the change can be, or before deleting an abstraction.
+- [migrate callers then delete legacy apis](references/principles/migrate-callers-then-delete-legacy-apis.md): read when retiring an internal API that still has callers.
+- [minimize reader load](references/principles/minimize-reader-load.md): read when indirection or hidden mutable state makes code hard to follow.
+- [subtract before you add](references/principles/subtract-before-you-add.md): read when obsolete code or duplication sits in the path of the requested change.

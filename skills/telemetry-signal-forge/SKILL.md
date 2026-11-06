@@ -3,7 +3,7 @@ name: telemetry-signal-forge
 description: "Use when adding or fixing metrics, traces, dashboards, alerts or SLOs: Prometheus, Grafana, OpenTelemetry, Jaeger/Tempo, error budgets. Not for profiling slow code (perf-hotpath-probe)."
 ---
 
-# observability
+# telemetry-signal-forge
 
 Start with the operational question and signal. Choose metrics, tracing, dashboards, or SLO design; keep signal names, labels, units, and time windows consistent across the selected artifacts.
 

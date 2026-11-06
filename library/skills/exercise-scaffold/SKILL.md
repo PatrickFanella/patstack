@@ -3,7 +3,7 @@ name: exercise-scaffold
 description: "Scaffold course exercises (problem/solution/explainer folders, readmes) that pass `pnpm ai-hero-cli internal lint`. Use when stubbing or renumbering exercises in an AI Hero-format course repo."
 ---
 
-# Scaffold Exercises
+# exercise-scaffold
 
 Create exercise directory structures that pass `pnpm ai-hero-cli internal lint`, then commit with `git commit`.
 

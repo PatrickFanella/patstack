@@ -1,8 +1,6 @@
-# Focused procedures
+# repo-atlas procedures
 
-Select the procedure relevant to the requested operation. Paths and scripts in these procedures are relative to this directory; pass the target repository explicitly.
+The rules in `SKILL.md` apply to every task. Paths are relative to this directory; pass the target repository explicitly.
 
-- [Overview](part-01.md) — read when this part of the workflow is needed.
-- [When to Use](part-02.md) — read when this part of the workflow is needed.
-- [Workflow](part-03.md) — read when this part of the workflow is needed.
-- [Codemap Content](part-04.md) — read when this part of the workflow is needed.
+- [Codemap workflow](part-03.md): read when creating or updating codemaps: state check, init, change detection, root atlas and the AGENTS.md entry.
+- [Codemap content](part-04.md): read when writing or reviewing a folder or root `codemap.md`.

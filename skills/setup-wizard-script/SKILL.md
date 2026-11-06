@@ -3,7 +3,7 @@ name: setup-wizard-script
 description: "Use when setup or migration needs human steps in dashboards or browsers: generate a bash wizard that walks each stage, hides secret entry, writes .env and Gitea or GitHub CI secrets."
 ---
 
-# Wizard
+# setup-wizard-script
 
 A **wizard** is a bash script that walks a human, step by step, through a manual procedure that's tedious to do by hand and tedious to re-explain to an AI every time. It opens each URL, says exactly what to click and copy, captures the values, writes them where they belong (`.env`, Gitea or GitHub Actions secrets), confirms at every stage, and shows how many stages are left. It might configure third-party services, run a one-off migration, or move the project from one state to another.
 

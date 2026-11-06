@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: language-go-rust,rust,pro
 ---
 
-# Rust Pro
+# rust-ownership-async
 
 Use for Rust code that needs safe systems design, async/concurrent behavior, ownership correctness, performance-aware structure, and idiomatic error handling.
 

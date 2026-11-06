@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: security,secrets,management
 ---
 
-# Secrets Management
+# secret-rotation-flow
 
 Implement secure secret storage, injection, rotation, and scanning for CI/CD and runtime systems.
 

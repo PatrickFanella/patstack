@@ -1,6 +1,6 @@
 ---
 name: web-lookup
-description: "Web search: look up current facts, releases or sources outside the repository with the client's search tool, Exa, Brave or Tavily. Not for codebase search or library docs."
+description: "Web search: look up current facts, releases or sources outside the repository with the client's search tool, Exa, Brave or Tavily. Not for codebase search, library docs, or a cited primary-source research note (primary-source-notes)."
 compatibility: Requires network access and a configured web-lookup backend; Brave and Tavily paths require their respective credentials.
 metadata:
   blacktower-pack: core

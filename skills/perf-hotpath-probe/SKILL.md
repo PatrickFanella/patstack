@@ -9,7 +9,7 @@ metadata:
   blacktower-capabilities: performance profiling,slow endpoint,high cpu,memory leak,latency regression,benchmark verification
 ---
 
-# Performance Investigation
+# perf-hotpath-probe
 
 Treat performance as an evidence problem. Preserve behavior, measure the same
 workload before and after changes, and avoid optimizing code that is not on the

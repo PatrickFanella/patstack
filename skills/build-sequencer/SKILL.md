@@ -3,7 +3,7 @@ name: build-sequencer
 description: Use when turning a feature spec into an ordered, verifiable change plan, or implementing a multi-step feature against acceptance criteria. Not for unresolved scope; use scope-grill.
 ---
 
-# Implementation Plan
+# build-sequencer
 
 Turn a feature request into an executable change sequence. Follow the user's requested stopping point: a planning request produces a plan; an implementation request continues through verification.
 
@@ -26,10 +26,10 @@ Report which acceptance criteria are verified, which remain unverified, and why.
 
 ## Conditional design notes
 
-- [guard the context window](references/principles/guard-the-context-window.md) — consult only for this specific design or execution concern.
-- [never block on the human](references/principles/never-block-on-the-human.md) — consult only for this specific design or execution concern.
-- [outcome oriented execution](references/principles/outcome-oriented-execution.md) — consult only for this specific design or execution concern.
-- [sequence verifiable units](references/principles/sequence-verifiable-units.md) — consult only for this specific design or execution concern.
+- [guard the context window](references/principles/guard-the-context-window.md): read when source files or tool output are large, or when considering delegating bounded work.
+- [never block on the human](references/principles/never-block-on-the-human.md): read before stopping to ask the user a question.
+- [outcome oriented execution](references/principles/outcome-oriented-execution.md): read when a migration tempts you to add temporary compatibility code.
+- [sequence verifiable units](references/principles/sequence-verifiable-units.md): read when ordering dependent work into steps.
 
 For requested “show me your work” or a long unattended effort, use the [decision trail](references/decision-trail.md) beside the existing plan.
 

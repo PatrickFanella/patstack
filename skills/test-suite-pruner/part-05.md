@@ -12,7 +12,7 @@ Tests and test helpers should not leak into production artifacts. For example, G
 
 ### Coverage decisions
 
-Do not lower thresholds, broaden exclusions, or delete failing tests simply to produce green output. Preserve functioning gates by default. Repair uncovered crucial behavior with meaningful tests before considering policy changes.
+The no-green-by-deletion rule in `SKILL.md` governs this section. Repair uncovered crucial behavior with meaningful tests before considering policy changes.
 
 If an inherited global gate already fails, report that baseline honestly. Replacing it with module-specific floors is a policy change, not an automatic cleanup step. Consider whether it fits the user's authorized overhaul and the repository's requirements. Make the tradeoff explicit; otherwise retain the gate and identify the unresolved failure.
 
@@ -24,5 +24,3 @@ When module-specific floors are appropriate:
 - Explain lower existing floors as gaps, not completeness.
 - Verify that a missing critical exercise causes a gate failure.
 - Update contracts when moving modules, and raise floors when strengthening tests.
-
-Do not add trivial tests just to raise an average. Coverage cannot establish assertion quality.

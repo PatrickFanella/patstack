@@ -9,7 +9,7 @@ metadata:
   blacktower-capabilities: frontend-ui,frontend,design
 ---
 
-# Frontend Design
+# ui-craft
 
 Implement UI with clear priorities and coherent styling. Use for code-level visual work; use `react-render-tuner` for React architecture, state, or performance.
 

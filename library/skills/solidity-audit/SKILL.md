@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: security,solidity
 ---
 
-# Solidity Security
+# solidity-audit
 
 Use secure Solidity patterns to prevent critical exploits in production contracts.
 

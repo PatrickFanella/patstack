@@ -3,7 +3,7 @@ name: prose-unslop
 description: "Required for every user-facing prose response and documentation edit: cut filler, keep facts, uncertainty and voice. Also use when an explanation did not land."
 ---
 
-# Unslop
+# prose-unslop
 
 Apply to every user-facing prose response and documentation edit. Read this skill once per session and apply it before sending or saving text; do not reread it on every turn.
 

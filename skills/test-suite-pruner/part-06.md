@@ -13,5 +13,3 @@ Report:
 - Checks actually run, their results, and any baseline failures or unexecuted tiers.
 - Coverage-policy changes and remaining gaps.
 - Artifact location and whether changes are uncommitted, committed, or published.
-
-Local verification does not imply a release. Keep commit, push, merge, deployment, and outward communication within the user's existing authorization.

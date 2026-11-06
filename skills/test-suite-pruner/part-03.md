@@ -10,7 +10,7 @@ Classify candidates by purpose rather than filename alone:
 
 Treat analyzer output as candidates, not deletion authority. Whole-file reachability does not prove every export is used. Conversely, a symbol referenced only by its own tests may still be a supported external API. Follow the actual entry-point model.
 
-Remove obsolete implementations, their exclusive tests, unused exports/helpers, and stale documentation references together. Keep unrelated dirty work and uncertain untracked material intact. Avoid broad destructive cleanup commands that erase files without classification.
+Remove obsolete implementations, their exclusive tests, unused exports/helpers, and stale documentation references together.
 
 When retiring an external integration, establish outstanding provider and database obligations before removing servicing code. Preserve migration history, audit records, and personal-data export access; an unused billing API does not imply its historical data should disappear. Audit constructors, schedulers, shutdown hooks, configuration, CSP allowances, email dispatch, CLI tools, and generated API contracts as well as ordinary callers. Match complete symbols: similarly named subscription or webhook systems may have unrelated responsibilities.
 

@@ -1,4 +1,4 @@
-## Constraints
+## Maintaining this skill
 
 - Keep activation low-noise: only use this skill for isolated GUI/browser work.
 - Keep context small: frontmatter loads by default; body loads on activation;

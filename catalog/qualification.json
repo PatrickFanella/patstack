@@ -2941,7 +2941,7 @@
       ],
       "positiveTask": null,
       "nearMiss": null,
-      "blockedReason": "Folder name differs from source frontmatter; original personal-style import is not qualified for activation."
+      "blockedReason": "Original personal-style import is not qualified for activation; it depends on Cursor and pstack features and was retired on 2026-11-03."
     },
     "pptx-forge": {
       "canonicalSource": "library/skills/pptx-forge",

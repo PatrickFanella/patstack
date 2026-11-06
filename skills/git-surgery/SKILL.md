@@ -1,6 +1,6 @@
 ---
 name: git-surgery
-description: Use when resolving merge conflicts, rebasing, bisecting, using worktrees or reflog recovery, automating changelogs, or preparing a PR on Gitea or GitHub. Not for reviewing code changes.
+description: Use when resolving merge conflicts, rebasing, bisecting, using worktrees or reflog recovery, automating changelogs, or preparing a PR on Gitea or GitHub. Not for reviewing code changes or running parallel agent lanes (worktree-lanes).
 ---
 
 # git-surgery

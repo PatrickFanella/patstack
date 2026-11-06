@@ -1,9 +1,9 @@
 ---
 name: ship-check
-description: "Use when asked how complete, ready or viable a repository is: trace claimed capabilities to code and tests; separate implemented, partial, planned, unverified. Not for diff review."
+description: "Use when asked how complete, ready or viable a repository is: trace claimed capabilities to code and tests; separate implemented, partial, planned, unverified. Not for diff review, or proving one change works; use behavior-proof."
 ---
 
-# Repository Delivery Review
+# ship-check
 
 Build a defensible project-state assessment without promoting plans or file
 presence into verified capability.
@@ -33,7 +33,8 @@ presence into verified capability.
    - Read [references/evidence-rubric.md](references/evidence-rubric.md) before
      assigning completeness, readiness, or viability judgments.
    - Distinguish missing implementation from migration debt, operational work,
-     documentation drift, and evidence gaps.
+     documentation drift, and evidence gaps. A full docs-vs-code consistency
+     review belongs to `tech-doc-writer`; here, drift is evidence for the verdict.
 6. **Deliver the assessment.**
    - State the verdict first.
    - Cover implemented capability, incomplete/planned work, verification

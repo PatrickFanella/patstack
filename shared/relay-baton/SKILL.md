@@ -10,11 +10,12 @@ metadata:
   version: '2.0'
 ---
 
-# Session Handoff
+# relay-baton
 
 Create a compact, evidence-backed continuation record. Use the repository's
-existing handoff convention; otherwise prefer `.blacktower/handoff.md`, unless
-the user requests another location.
+existing handoff convention, such as `.blacktower/handoff.md` in a Blacktower
+project. Otherwise write `HANDOFF.md` at the repository root and leave it
+uncommitted, unless the user requests another location.
 
 ## Workflow
 

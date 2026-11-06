@@ -1,6 +1,6 @@
 ---
 name: boundary-drafter
-description: "Use when deciding module boundaries, Clean/Hexagonal/DDD structure, CQRS, deep-module design, or a project's domain glossary and ADRs. Not for a local cleanup of existing code; use safe-refactor-pass."
+description: "Use when deciding module boundaries, Clean/Hexagonal/DDD structure, CQRS, deep-module design, or a project's domain glossary and ADRs. Not for local cleanup (safe-refactor-pass), hunting shallow modules to refactor (module-deepener) or enforcing TS package boundaries (ts-type-design)."
 ---
 
 # boundary-drafter
@@ -19,10 +19,10 @@ Resource paths inside a mode are relative to that mode directory. Run its script
 
 ## Conditional design notes
 
-- [boundary discipline](references/principles/boundary-discipline.md) — consult only for this specific design or execution concern.
-- [exhaust the design space](references/principles/exhaust-the-design-space.md) — consult only for this specific design or execution concern.
-- [experience first](references/principles/experience-first.md) — consult only for this specific design or execution concern.
-- [foundational thinking](references/principles/foundational-thinking.md) — consult only for this specific design or execution concern.
-- [model the domain](references/principles/model-the-domain.md) — consult only for this specific design or execution concern.
-- [redesign from first principles](references/principles/redesign-from-first-principles.md) — consult only for this specific design or execution concern.
-- [separate before serializing shared state](references/principles/separate-before-serializing-shared-state.md) — consult only for this specific design or execution concern.
+- [boundary discipline](references/principles/boundary-discipline.md): read when adding, moving or removing input validation at a boundary.
+- [exhaust the design space](references/principles/exhaust-the-design-space.md): read when a consequential design choice is still uncertain.
+- [experience first](references/principles/experience-first.md): read when a structural choice changes the user journey or accessibility.
+- [foundational thinking](references/principles/foundational-thinking.md): read before adding behavior that depends on unsettled data structures, ownership or invariants.
+- [model the domain](references/principles/model-the-domain.md): read when the data model allows contradictory states.
+- [redesign from first principles](references/principles/redesign-from-first-principles.md): read when a new requirement exposes a structural mismatch.
+- [separate before serializing shared state](references/principles/separate-before-serializing-shared-state.md): read when several writers share one resource.

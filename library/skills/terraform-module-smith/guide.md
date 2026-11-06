@@ -1,15 +1,10 @@
-# Focused procedures
+# terraform-module-smith procedures
 
-Select the procedure relevant to the requested operation. Paths and scripts in these procedures are relative to this directory; pass the target repository explicitly.
+The rules in `SKILL.md` apply to every task. Paths are relative to this directory; pass the target repository explicitly.
 
-- [Overview](part-01.md) — read when this part of the workflow is needed.
-- [Purpose](part-02.md) — read when this part of the workflow is needed.
-- [When to Use](part-03.md) — read when this part of the workflow is needed.
-- [Module Structure](part-04.md) — read when this part of the workflow is needed.
-- [Standard Module Pattern](part-05.md) — read when this part of the workflow is needed.
-- [AWS VPC Module Example](part-06.md) — read when this part of the workflow is needed.
-- [Best Practices](part-07.md) — read when this part of the workflow is needed.
-- [Module Composition](part-08.md) — read when this part of the workflow is needed.
-- [Testing](part-09.md) — read when this part of the workflow is needed.
-- [Related Skills](part-10.md) — read when this part of the workflow is needed.
-- [Resources](part-11.md) — read when this part of the workflow is needed.
+- [Module library layout](part-04.md): read when organizing modules for several clouds in one repository.
+- [AWS VPC module example](part-06.md): read when writing a module's `main.tf`, `variables.tf` and `outputs.tf` from scratch.
+- [AWS modules](references/aws-modules.md): read when the module targets AWS.
+- [OCI modules](references/oci-modules.md): read when the module targets Oracle Cloud.
+- [Module composition](part-08.md): read when wiring several modules together in a root configuration.
+- [Testing](part-09.md): read when adding Terratest coverage to a module.

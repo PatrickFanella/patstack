@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: mobile-apps,react,native,pro
 ---
 
-# React Native Pro
+# rn-expo-builder
 
 Use for production React Native / Expo work across architecture, visual design, animations, platform APIs, navigation, performance, and native integrations.
 

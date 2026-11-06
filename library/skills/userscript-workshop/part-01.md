@@ -1,1 +1,0 @@
-Userscript work usually breaks at the runtime and metadata boundary, not in the page logic. Choose the runtime first, declare the minimum permissions up front, then debug in the environment where the script actually runs.

@@ -3,7 +3,7 @@ name: stripe-billing-guard
 description: "Use before any Stripe account action: invoices, refunds, subscriptions, customers or prices. Confirms account and test/live mode, prevents duplicate effects, reads back results."
 ---
 
-# Stripe billing operations
+# stripe-billing-guard
 
 This personal overlay supplies the operation discipline. Keep Stripe's managed skills, tool schemas and current documentation as the provider authority; do not modify plugin caches or assume the old wrapper's tool names and limitations remain current.
 Account operations require an authenticated Stripe connector, CLI or Dashboard.

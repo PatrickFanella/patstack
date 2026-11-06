@@ -16,10 +16,9 @@ Thin GitHub CLI reference skill. Prefer the OpenCode GitHub plugin tools for iss
 
 ## Workflow
 
-1. Use this skill only when the request matches the frontmatter description.
-2. Keep the main context short: read only the relevant reference file for the exact subtask.
-3. Prefer existing scripts/templates/assets in this skill before writing ad hoc code.
-4. Stop and ask when required credentials, CLIs, project context, or user confirmation are missing.
+1. Keep the main context short: read only the relevant reference file for the exact subtask.
+2. Prefer existing scripts/templates/assets in this skill before writing ad hoc code.
+3. Stop and ask when required credentials, CLIs, project context, or user confirmation are missing.
 
 ## Resources
 
