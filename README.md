@@ -13,7 +13,7 @@ Gitea pushes it to the private GitHub mirror
 on every commit and every 8 hours; open PRs on Gitea, not on GitHub.
 
 Subsets manages the user-level skill selection and generated views across
-Agents, Codex, Claude, Copilot, Cursor and OpenCode. Patstack owns 220 selectable
+Agents, Codex, Claude, Copilot, Cursor and OpenCode. Patstack owns 219 selectable
 skill sources, a 40-skill everyday core, and 11 overlapping task sets. App,
 package, repository and vault skills retain their local owners.
 
@@ -39,7 +39,7 @@ patstack has a selected identity: the **A1 Rack system with A3 Registration's pl
 - `catalog/baseline.json`: pre-migration hashes, modes, and symlinks. `installation.json` records this host’s destinations and immutable archive location.
 - `evaluations/`, `tests/`, `reports/`: bounded behavior trials, deterministic tests, discovery measurements, and rollout evidence.
 
-`omarchy` and `diagnose-crash` remain OS-owned symlinks. Their links and `/usr/share/omarchy` targets are protected. The personal `diff-auditor` duplicate is removed; its system owner is unchanged. Managed plugin caches are outside this installer’s authority.
+`omarchy` and `diagnose-crash` are OS-owned symlinks on hosts that still run Omarchy; Debian hosts lack them, and validation reports them as absent. Where they exist, their links and `/usr/share/omarchy` targets are protected. The personal `diff-auditor` duplicate is removed; its system owner is unchanged. Managed plugin caches are outside this installer’s authority.
 
 Original trees are recoverable at `/home/onnwee/.codex/skill-backups/20260908T034154Z-before-consolidation`, outside discovered roots. Imported scripts, assets, and notices remain beside their applicable mode. Resource paths in a mode resolve from that mode’s directory. `<skill-root>` in command examples means the resolved directory of the loaded entrypoint, not the current project directory.
 

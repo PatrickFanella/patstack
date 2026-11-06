@@ -81,17 +81,16 @@ def export(target, check_only=False):
             if path.name == 'blacktower-mit.md' and path.parent.name == 'notices':
                 path.write_text(NOTICE)
                 continue
-            if path.suffix not in TEXT:
-                continue
             try:
                 text = path.read_text()
             except UnicodeDecodeError:
-                continue
+                continue  # binary assets carry no text to substitute or leak-check
             new = text
             if path.name == 'SKILL.md' and path.parent == dest:
                 new = move_to_metadata(new, config.get('metadataFields', []))
-            for before, after in config['substitutions']:
-                new = new.replace(before, after)
+            if path.suffix in TEXT:
+                for before, after in config['substitutions']:
+                    new = new.replace(before, after)
             if new != text:
                 path.write_text(new)
             for pattern in forbidden:

@@ -254,7 +254,7 @@ Recommended pages to create with priority order based on search volume.
 ## Related Skills
 
 - **programmatic-seo**: For building competitor pages at scale
-- **copywriting**: For writing compelling comparison copy
+- **page-copy-forge**: For writing compelling comparison copy
 - **seo-audit**: For optimizing competitor pages
 - **schema-markup**: For FAQ and comparison schema
 - **sales-collateral**: For internal sales collateral, decks, and objection docs

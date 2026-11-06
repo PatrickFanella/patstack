@@ -87,6 +87,14 @@
     [
       "--login subcult-agent",
       "--login <login>"
+    ],
+    [
+      "Use the default `skill-stack-router` to resolve these names from the managed\nsource library without switching Subsets. Open the selected `SKILL.md` and its\nneeded references, resolving resources from that directory. If the router is\nunavailable, use the current skill catalog or inspected managed source paths;\ndo not guess a tool, run a profile switch, or load the whole group.",
+      "Load a listed skill only if the current client has it installed. Open the\nselected `SKILL.md` and its needed references, resolving resources from that\ndirectory. If a skill is not installed, say so; do not guess a tool or load\nthe whole group."
+    ],
+    [
+      "read the sibling `ui-cliche-audit` skill's `references/avoid-ai-design/workflow.md` in implementation mode. Use its scanner",
+      "read the `ui-cliche-audit` skill's `references/avoid-ai-design/workflow.md` in implementation mode when that skill is installed, and use its scanner"
     ]
   ],
   "forbidden": [
@@ -98,7 +106,10 @@
     "\\bhomelab\\b",
     "\\.homelab/",
     "estate-config",
-    "patstack/(skills|library|shared)"
+    "patstack/(skills|library|shared)",
+    "skill-stack-router",
+    "\\bSubsets\\b",
+    "sibling `ui-cliche-audit`"
   ],
   "metadataFields": [
     "compatibility"

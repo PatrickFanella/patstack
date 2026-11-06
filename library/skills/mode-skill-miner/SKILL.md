@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 A guided flow for turning the user's working conventions into a skill agents will follow. The output is one `-mode` skill tailored to them (e.g. `jay-mode`, `priya-mode`).
 
-This skill orchestrates three others: an inline mining pass (see step 1), Cursor's built-in `create-skill` (authoring), and the **unslop** skill (prose discipline). It sequences them; it doesn't replace them.
+This skill orchestrates three others: an inline mining pass (see step 1), Cursor's built-in `create-skill` (authoring), and the **prose-unslop** skill (prose discipline). It sequences them; it doesn't replace them.
 
 ## In this setup
 
@@ -70,7 +70,7 @@ Group the combined signals into sections. Common ones (use only what applies):
 - **Process**: git worktrees, commits, PRs, review/merge tooling.
 - **Skills**: skill-authoring habits, fix-the-skill-first, proposing new skills.
 
-The **poteto-mode** skill shows the shape. Read it for granularity. Don't copy its content; the user's rules are not the same as poteto-mode's.
+For granularity, model each mined mode on one existing task-mode skill in this collection, such as `api-contract-smith`. Don't copy its content; the user's rules are not the same.
 
 ### 4. Draft the skill
 
@@ -84,7 +84,7 @@ Use Cursor's built-in `create-skill` skill to author the skill. Placement:
 
 ### 5. Iterate on prose
 
-Apply the **unslop** skill and `create-skill`'s writing guidelines to every line. Both apply to any agent-read prose, not just skills.
+Apply the **prose-unslop** skill and `create-skill`'s writing guidelines to every line. Both apply to any agent-read prose, not just skills.
 
 Show the draft to the user and take feedback. Expect multiple iterations. Cut ruthlessly; a mode skill is not a manual.
 
@@ -114,6 +114,5 @@ Run a description-optimization loop only if the skill's trigger accuracy turns o
 
 ## Reference files
 
-- The **poteto-mode** skill: example of the output shape.
-- The **unslop** skill: prose discipline for every line.
+- The **prose-unslop** skill: prose discipline for every line.
 - Cursor's built-in `create-skill` skill: skill authoring process and writing guidelines.

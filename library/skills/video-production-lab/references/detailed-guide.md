@@ -322,7 +322,7 @@ Output: Ready-to-publish video
 ## Related Skills
 
 - **social-post-craft**: For video content strategy, hooks, and what to post
-- **copywriting**: For video scripts and messaging
+- **page-copy-forge**: For video scripts and messaging
 - **persuasion-levers**: For hooks and persuasion in video
 
 ## Resources

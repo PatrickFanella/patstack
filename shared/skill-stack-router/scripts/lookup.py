@@ -57,11 +57,8 @@ def resolve(root, name, client):
             raise ValueError('Skill is not an activatable optional owner: ' + name)
     source = root / record['canonicalSource'] / 'SKILL.md'
     boundary = root
-    # Subsets bundles carry optional/shared sources; personal owners are installed
-    # separately. Never fall back to a different optional or plugin owner.
-    if scope == 'personal' and not source.exists():
-        boundary = Path.home() / '.codex/skills'
-        source = boundary / name / 'SKILL.md'
+    # Subsets bundles carry personal, shared and optional sources. Never fall back
+    # to an installed view, plugin or different owner.
     path = source.resolve()
     if not path.is_relative_to(boundary.resolve()) or not path.is_file():
         raise ValueError('Missing or escaping source: ' + name)

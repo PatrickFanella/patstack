@@ -322,7 +322,7 @@ Generate OG images programmatically for pages with dynamic content (blog posts, 
 ## Related Skills
 
 - **ad-creative**: For paid ad image creative, platform-specific ad specs, and scaled ad production
-- **video**: For AI video production and programmatic video
+- **video-production-lab**: For AI video production and programmatic video
 - **social-post-craft**: For what to post and content strategy
 - **landing-page-cro**: For image placement and conversion optimization on landing pages
 - **seo-audit**: For image SEO (alt text, file names, lazy loading)

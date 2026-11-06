@@ -269,4 +269,4 @@ These phrases often add little without a specific connection. Evaluate their fun
 - "This begs the question..."
 - "Let's delve into..."
 
-Use `unslop` for the deeper evidence-informed copy review. There is no complete, reliable phrase list that determines AI authorship.
+Use `prose-unslop` for the deeper evidence-informed copy review. There is no complete, reliable phrase list that determines AI authorship.

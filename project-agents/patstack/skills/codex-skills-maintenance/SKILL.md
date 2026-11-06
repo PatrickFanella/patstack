@@ -1,6 +1,6 @@
 ---
 name: codex-skills-maintenance
-description: "Codex-skills repository upkeep. Use to inventory skills, change a skill's scope, profile or deploy map, import or update upstream skills, or check discovery after an upgrade. Not for running a skill's own task."
+description: "Patstack repository upkeep. Use to inventory skills, change a skill's scope, profile or deploy map, import or update upstream skills, or check discovery after an upgrade. Not for running a skill's own task."
 ---
 
 # Skill maintenance

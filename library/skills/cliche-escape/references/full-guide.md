@@ -156,7 +156,7 @@ Inbound:
 - `brainstorming` (raw options)
 
 Outbound:
-- `worldbuilding`, `character-arc-doctor`, `dialogue`
+- `world-diagnostics`, `character-arc-doctor`, `dialogue-doctor`
 
 Complementary:
 - `trope-refresher` (orthogonality lens)

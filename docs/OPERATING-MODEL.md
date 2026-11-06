@@ -109,9 +109,11 @@ retain their deployer ownership until those deployers can retire old paths.
 
 ## Public edition
 
-`catalog/public-edition.json` lists the 48 skills published publicly as the
+`catalog/public-edition.json` lists the 48 skills exported to the
 `generic-skills` repository and the `@subcult/patstack` npm package, which
-Subsets offers as its default optional pack. Export from a reviewed checkout:
+Subsets offers as its default optional pack. `generic-skills` has been private
+on Gitea since 2026-11-03; its older public GitHub copy is retained but no
+longer receives updates. Export from a reviewed checkout:
 
 ```sh
 python scripts/public-edition.py --check ../generic-skills   # stage and leak-check only
@@ -214,7 +216,7 @@ Keep infrastructure history and operating notes in Machinum. Keep executable con
 
 ## Required prose policy across hosts
 
-The canonical Agent Documentation Policy in Machinum requires unslop for every prose response and documentation edit, regardless of optional profile selection. It includes direct file paths so the requirement also works when a client does not automatically select the skill. Load once per session. Kvant uses this repository's managed skill. Almaz, Dozor, and NUC received the same source with hash receipts at `~/.codex/skill-installations/required-unslop.json`; Soyuz and Sputnik retain their existing owners. Review those receipts and preserve local drift before updating remote personal copies. Full personal-catalog fleet deployment remains separate.
+The canonical Agent Documentation Policy in Machinum requires `prose-unslop` for every prose response and documentation edit, regardless of the selected task stack. It includes direct file paths so the requirement also works when a client does not automatically select the skill. Load once per session. `prose-unslop` is in the core profile, so every host receives it through its Subsets deployment. The older `~/.codex/skill-installations/required-unslop.json` receipts on Almaz, Dozor and NUC record the pre-Subsets copies and are historical.
 
 ## Updating a user skill
 

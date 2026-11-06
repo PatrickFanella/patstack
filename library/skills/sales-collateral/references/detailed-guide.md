@@ -347,9 +347,9 @@ For partner sales enablement, see the :
 ## Related Skills
 
 - **vs-page-writer**: For public-facing comparison and alternative pages
-- **copywriting**: For marketing website copy
+- **page-copy-forge**: For marketing website copy
 - **cold-email**: For outbound prospecting emails
-- **revops**: For lead lifecycle, scoring, routing, and pipeline management
+- **lead-pipeline-ops**: For lead lifecycle, scoring, routing, and pipeline management
 - **pricing-strategy**: For pricing decisions and packaging
 - **product-marketing-context**: For foundational positioning and messaging
 

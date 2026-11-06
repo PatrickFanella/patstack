@@ -400,8 +400,8 @@ deno run --allow-read scripts/representation-map.ts characters.json
 |-------|------------------|
 | **story-diagnosis** | Sensitivity concerns affect story coherence |
 | **character-arc-doctor** | Marginalized characters need full arcs too |
-| **dialogue** | Voice distinctiveness includes authentic speech patterns |
-| **worldbuilding** | Worlds reflect real power dynamics; examine them |
+| **dialogue-doctor** | Voice distinctiveness includes authentic speech patterns |
+| **world-diagnostics** | Worlds reflect real power dynamics; examine them |
 | **genre-promise-check** | Some genre conventions are problematic tropes |
 
 ### When to Hand Off

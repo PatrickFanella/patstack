@@ -256,7 +256,7 @@ Don't ask all five at once — lead with #1 and #2, then follow up as needed.
 
 | When to hand off | Skill |
 |-----------------|-------|
-| Writing copy informed by the research | `copywriting` |
+| Writing copy informed by the research | `page-copy-forge` |
 | Optimizing a page using VOC insights | `landing-page-cro` |
 | Building a competitor comparison page | `vs-page-writer` |
 | Creating a churn prevention strategy from churn research | `churn-prevention` |

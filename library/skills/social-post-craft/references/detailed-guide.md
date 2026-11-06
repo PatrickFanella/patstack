@@ -300,7 +300,7 @@ Instead of guessing, analyze what's working for top creators in your niche:
 5. **Layer your voice** — Apply patterns with authenticity
 6. **Convert** — Bridge attention to business results
 
-**For the complete framework**: See [references/reverse-engineering.md](binary-dissector.md)
+**For the complete framework**: See [reverse-engineering.md](reverse-engineering.md)
 
 ---
 
@@ -398,7 +398,7 @@ Tools: CapCut (free), Descript, Captions.ai, Premiere Pro
 
 ## Related Skills
 
-- **copywriting**: For longer-form content that feeds social
+- **page-copy-forge**: For longer-form content that feeds social
 - **launch-runway**: For coordinating social with launches
 - **drip-sequence-planner**: For nurturing social audience via email
 - **persuasion-levers**: For understanding what drives engagement

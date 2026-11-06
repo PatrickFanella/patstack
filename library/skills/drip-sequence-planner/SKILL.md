@@ -306,9 +306,9 @@ For implementation, see the . Key email tools:
 
 ## Related Skills
 
-- **copywriting**: For landing pages emails link to
+- **page-copy-forge**: For landing pages emails link to
 - **split-test-planner**: For testing email elements
-- **revops**: For lifecycle stages that trigger email sequences
+- **lead-pipeline-ops**: For lifecycle stages that trigger email sequences
 
 ## Resources
 

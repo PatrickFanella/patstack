@@ -75,5 +75,5 @@ Ensure concept decisions serve reader feeling, not setting label.
 ## Integration / Handoffs
 
 - Inbound: `brainstorming`
-- Outbound: `trope-refresher`, `character-arc-doctor`, `worldbuilding`
+- Outbound: `trope-refresher`, `character-arc-doctor`, `world-diagnostics`
 - Complementary: `genre-promise-check`, `story-diagnosis`

@@ -67,3 +67,31 @@ class ExternalOwnerTests(unittest.TestCase):
             result = validation.external_description_metrics()
         self.assertEqual(result['personalDescriptions'], 10)
         self.assertEqual(result['unverifiedExternalOwners'], [])
+
+
+class SourceReferenceTests(unittest.TestCase):
+    def fixture(self, directory):
+        root = Path(directory)
+        for folder in ['skills/alpha', 'profiles', 'catalog', 'vault-agents/vault', 'vault-agents/shared']:
+            (root / folder).mkdir(parents=True)
+        (root / 'README.md').write_text('[guide](docs/missing.md) and `[code](not-a-link.md)`\n')
+        (root / 'AGENTS.md').write_text('')
+        (root / 'profiles/core.txt').write_text('# comment\nalpha\n')
+        (root / 'vault-agents/shared/ref.md').write_text('shared')
+        (root / 'vault-agents/vault/AGENTS.md').write_text('[ref](.agents/references/ref.md)\n')
+        rows = [{'source': 'vault-agents/vault/AGENTS.md', 'destination': '/v/AGENTS.md'},
+                {'source': 'vault-agents/shared/ref.md', 'destination': '/other/.agents/references/ref.md'},
+                {'source': 'vault-agents/shared/ref.md', 'destination': '/v/.agents/references/ref.md'}]
+        (root / 'catalog/vault-agents.json').write_text(validation.json.dumps({'files': rows}))
+        (root / 'skills/alpha/SKILL.md').write_text('Apply the **oldname** skill. Use `frontend-design` skill.\n')
+        return root
+
+    def test_links_resolve_in_repository_or_at_vault_destination(self):
+        with tempfile.TemporaryDirectory() as directory, patch.object(validation, 'ROOT', self.fixture(directory)):
+            self.assertEqual(validation.link_errors(), ['broken link README.md -> docs/missing.md'])
+
+    def test_retired_skill_reference_is_reported_but_external_owner_is_not(self):
+        retired = {'oldname': {'owner': 'newname'}, 'frontend-design': {'owner': 'ui-craft'}}
+        with tempfile.TemporaryDirectory() as directory, patch.object(validation, 'ROOT', self.fixture(directory)):
+            errors = validation.retired_reference_errors(retired)
+        self.assertEqual(errors, ['retired skill name skills/alpha/SKILL.md:1: oldname -> newname'])

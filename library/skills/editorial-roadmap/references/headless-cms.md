@@ -161,7 +161,7 @@ Use CMS as the data source for programmatic pages. Store structured data (FAQs, 
 
 ### Copywriting
 
-CMS content models enforce consistent structure. Define fields that match your copy frameworks (headline, subheadline, social proof, CTA). See **copywriting** skill.
+CMS content models enforce consistent structure. Define fields that match your copy frameworks (headline, subheadline, social proof, CTA). See **page-copy-forge** skill.
 
 ### Site Architecture
 

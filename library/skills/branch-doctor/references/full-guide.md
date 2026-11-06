@@ -104,7 +104,7 @@ Suggested file pattern:
 ### Handoffs
 - `scene-sequencing` for branch scene structure
 - `character-arc-doctor` for player-driven transformation consistency
-- `dialogue` for choice/subtext quality
+- `dialogue-doctor` for choice/subtext quality
 
 ## Operating Boundaries
 

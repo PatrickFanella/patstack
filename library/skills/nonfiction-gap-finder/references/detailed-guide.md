@@ -217,5 +217,5 @@ Read as if you:
 
 **Complementary:**
 - `non-fiction-revision`: For implementing fixes
-- `summarization`: For testing thesis clarity
-- `research`: For filling evidence gaps
+- `digest-distiller`: For testing thesis clarity
+- `primary-source-notes`: For filling evidence gaps

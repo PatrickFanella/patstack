@@ -625,5 +625,23 @@
     "description": "Route default and optional companion skills through the managed library without switching the active Subsets selection.",
     "scope": "shared",
     "sources": []
+  },
+  {
+    "name": "relay-baton",
+    "description": "Record progress, decisions, blockers and next steps before a context reset, a handoff to another agent or session, or a long pause.",
+    "scope": "shared",
+    "sources": [
+      "handoff",
+      "session-handoff"
+    ]
+  },
+  {
+    "name": "scope-grill",
+    "description": "Interview the user to resolve scope, requirements and terminology before planning, in plain or documentation-backed mode.",
+    "scope": "shared",
+    "sources": [
+      "grilling",
+      "requirements-interview"
+    ]
   }
 ]

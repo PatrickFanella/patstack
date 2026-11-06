@@ -444,7 +444,7 @@ When facing a marketing challenge, consider:
 ## Related Skills
 
 - **landing-page-cro**: Apply psychology to page optimization
-- **copywriting**: Write copy using psychological principles
+- **page-copy-forge**: Write copy using psychological principles
 - **popup-cro**: Use triggers and psychology in popups
 - **pricing-page optimization**: See landing-page-cro for pricing psychology
 - **split-test-planner**: Test psychological hypotheses
