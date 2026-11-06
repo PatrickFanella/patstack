@@ -145,7 +145,7 @@
       "recommended_vowels": ["a", "e", "i", "o", "u"],
       "avoid_features": ["clicks", "ejectives", "implosives", "tones"]
     },
-    "name-forge": {
+    "naming": {
       "description": "Consistent language for character/place naming",
       "consonants": { "target": 18, "min": 15, "max": 22 },
       "vowels": { "target": 7, "min": 5, "max": 9 },

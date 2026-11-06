@@ -891,19 +891,19 @@
     "original": "homelab",
     "owner": "operations-vault",
     "kind": "adapted-local",
-    "path": "vault-agents/Operations/skills/operations-vault/references/operational-evidence.md"
+    "path": "vault-agents/Machinum/skills/operations-vault/references/operational-evidence.md"
   },
   {
     "original": "nuc",
     "owner": "operations-vault",
     "kind": "adapted-local",
-    "path": "vault-agents/Operations/skills/operations-vault/references/operational-evidence.md"
+    "path": "vault-agents/Machinum/skills/operations-vault/references/operational-evidence.md"
   },
   {
     "original": "almaz",
     "owner": "operations-vault",
     "kind": "adapted-local",
-    "path": "vault-agents/Operations/skills/operations-vault/references/operational-evidence.md"
+    "path": "vault-agents/Machinum/skills/operations-vault/references/operational-evidence.md"
   },
   {
     "original": "skills-cli",

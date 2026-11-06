@@ -1035,7 +1035,7 @@ def main() -> None:
         row_retry_prompt_dir,
         look_anchor_repair_prompt_dir,
         run_dir / "decoded",
-        run_dir / "bug-intake-session",
+        run_dir / "qa",
     ]:
         directory.mkdir(parents=True, exist_ok=True)
 

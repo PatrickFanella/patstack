@@ -251,16 +251,6 @@ deno run --allow-read --allow-write scripts/build-index.ts world-bible/
 
 Updates all _index.md files with current entries.
 
-### Operation: Export Reference
-
-Generate a single-file reference document:
-
-```bash
-deno run --allow-read scripts/export-reference.ts world-bible/ --format md
-```
-
-Creates a portable reference document for writers.
-
 ---
 
 ## Integration with Worldbuilding Skill
@@ -403,12 +393,6 @@ Scan for potential contradictions.
 
 ### build-index.ts
 Regenerate index files.
-
-### export-reference.ts
-Generate portable reference documents.
-
-### link-validator.ts
-Check that wiki-links resolve to real entries.
 
 ---
 

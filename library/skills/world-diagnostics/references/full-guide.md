@@ -151,5 +151,5 @@ Non-humans with minor cosmetic differences.
 - **belief-systems** - Deep theological design
 - **economic-systems** - Economic logic
 - **governance-systems** - Political structures
-- **conlang** - Language design
+- **conlang-forge** - Language design
 - **settlement-design** - Cities and geography

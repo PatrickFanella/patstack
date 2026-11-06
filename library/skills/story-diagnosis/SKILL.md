@@ -45,16 +45,16 @@ There is no permanent “stuck.” There is only unresolved diagnosis or wrong i
 |---|---|---|
 | 0 No story | Blank page | `premise-forge` |
 | 1 Weak foundation | Idea exists, thin grounding | `trope-refresher`, `key-moments` |
-| 2 World thin | Setting feels decorative | `worldbuilding` |
-| 3 Non-humans flat | Species read as reskinned humans | `conlang` |
+| 2 World thin | Setting feels decorative | `world-diagnostics` |
+| 3 Non-humans flat | Species read as reskinned humans | `conlang-forge` |
 | 4 Characters flat | Plot puppets, low agency | `character-arc-doctor` |
 | 4.5 Pacing weak | Scenes don’t accumulate | `scene-sequencing` |
 | 5 Meaning weak | Events lack thematic force | `moral-parallax`, `key-moments` |
-| 5.5 Dialogue flat | Same-voice / lifeless talk | `dialogue` |
+| 5.5 Dialogue flat | Same-voice / lifeless talk | `dialogue-doctor` |
 | 5.75 Ending weak | Resolution underdelivers | `endings` |
-| 5.85 Draft blocked | Planning done, no drafting | `drafting` |
+| 5.85 Draft blocked | Planning done, no drafting | `draft-unblocker` |
 | 5.9 Prose flat | Functional but not vivid | `fiction-line-edit` |
-| 6 Revision stage | Draft exists, edits overwhelming | `revision` |
+| 6 Revision stage | Draft exists, edits overwhelming | `draft-reviser` |
 | 7 Evaluation stage | Story complete, quality unknown | `sensitivity-read`, `story-analysis` |
 
 ## Anti-Patterns

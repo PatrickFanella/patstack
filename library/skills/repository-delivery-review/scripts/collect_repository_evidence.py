@@ -63,7 +63,7 @@ def categorize(paths: list[str]) -> dict[str, list[str]]:
         if PLAN_PATTERN.search(lowered):
             categories["plans_and_runbooks"].append(value)
         if path.suffix.lower() in DOC_SUFFIXES or path.name.lower().startswith(
-            ("readme", "repo-atlas", "architecture")
+            ("readme", "codemap", "architecture")
         ):
             categories["architecture_and_docs"].append(value)
         if TEST_PATTERN.search(lowered):

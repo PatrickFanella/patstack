@@ -131,13 +131,6 @@ deno run --allow-read scripts/validate-list.ts data.json professions
 - Average item length (too short = vague, too long = unwieldy)
 - Variety assessment (if dimensions specified)
 
-### merge-lists.ts
-Combines multiple list sources, deduplicates, and formats.
-
-```bash
-deno run --allow-read scripts/merge-lists.ts source1.json source2.json --output combined.json
-```
-
 ## Research Prompts
 
 When you need to research a specific category, use prompts like:

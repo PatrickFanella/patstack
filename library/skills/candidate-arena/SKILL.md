@@ -10,7 +10,7 @@ Fan out N parallel attempts at the same task. Read every candidate end to end. P
 
 ## Start
 
-Principle skills named below in bold are installed as `principle-<name>` (for example `principle-prove-it-works`).
+Principles named below in bold are the current owner skills that absorbed the original `principle-*` skills.
 
 Open a todolist with one entry per phase before launching anything. The arena runs autonomously and the list keeps phases from silently disappearing.
 

@@ -5785,7 +5785,7 @@
       "nearMiss": "Work owned by another vault."
     },
     "operations-vault": {
-      "canonicalSource": "vault-agents/Operations/skills/operations-vault",
+      "canonicalSource": "vault-agents/Machinum/skills/operations-vault",
       "owner": "Machinum",
       "scope": "vault-local",
       "status": "selection-tested",
@@ -5805,7 +5805,7 @@
       "nearMiss": "Work owned by another vault."
     },
     "library-vault": {
-      "canonicalSource": "vault-agents/Library/skills/library-vault",
+      "canonicalSource": "vault-agents/Archivum/skills/library-vault",
       "owner": "Library",
       "scope": "vault-local",
       "status": "structure-reviewed",

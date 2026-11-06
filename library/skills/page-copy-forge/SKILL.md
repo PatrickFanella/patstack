@@ -11,7 +11,7 @@ metadata:
 
 # Copywriting
 
-Write marketing copy that helps the intended reader understand the offer and decide what to do. Treat conversion improvement as a hypothesis until measured. Use `unslop` for prose cleanup and its deeper review when generic AI phrasing is the concern.
+Write marketing copy that helps the intended reader understand the offer and decide what to do. Treat conversion improvement as a hypothesis until measured. Use `prose-unslop` for prose cleanup and its deeper review when generic AI phrasing is the concern.
 
 ## Before Writing
 
@@ -252,7 +252,7 @@ For headlines and CTAs, provide 2-3 options:
 
 ## Related Skills
 
-- **unslop**: For prose cleanup and an evidence-informed review of generic AI phrasing
+- **prose-unslop**: For prose cleanup and an evidence-informed review of generic AI phrasing
 - **landing-page-cro**: If page structure/strategy needs work, not just copy
 - **drip-sequence-planner**: For email copywriting
 - **split-test-planner**: To test copy variations

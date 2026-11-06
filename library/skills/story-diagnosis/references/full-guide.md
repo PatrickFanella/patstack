@@ -36,12 +36,12 @@ Is there anything on the page?
 ### State 2: World Without Life
 
 - Symptom: setting exists but does not produce consequences.
-- Intervention: `worldbuilding` and subsystem work (belief/economy/governance).
+- Intervention: `world-diagnostics` and subsystem work (belief/economy/governance).
 
 ### State 3: Flat Non-Humans
 
 - Symptom: species differ cosmetically only.
-- Intervention: `conlang` + species logic constraints.
+- Intervention: `conlang-forge` + species logic constraints.
 
 ### State 4: Characters Without Dimension
 
@@ -61,7 +61,7 @@ Is there anything on the page?
 ### State 5.5: Dialogue Feels Flat
 
 - Symptom: same voice across characters, no subtext.
-- Intervention: `dialogue`.
+- Intervention: `dialogue-doctor`.
 
 ### State 5.75: Ending Doesn’t Land
 
@@ -71,7 +71,7 @@ Is there anything on the page?
 ### State 5.85: Draft Not Progressing
 
 - Symptom: planning complete, pages not produced.
-- Intervention: `drafting`.
+- Intervention: `draft-unblocker`.
 
 ### State 5.9: Prose Feels Flat
 
@@ -81,7 +81,7 @@ Is there anything on the page?
 ### State 6: Draft Complete, Needs Revision
 
 - Symptom: draft exists, revision paralysis.
-- Intervention: `revision`.
+- Intervention: `draft-reviser`.
 
 ### State 7: Ready for Evaluation
 

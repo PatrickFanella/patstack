@@ -479,7 +479,7 @@ Example: `starfall-marketing-2025-01-15.md`
 | **story-diagnosis** | Book should be substantially complete before marketing makes sense |
 | **genre-promise-check** | Genre promise must match marketing promise |
 | **trope-refresher** | Avoid marketing cliches too |
-| **naming** | Sound-meaning principles apply to taglines |
+| **name-forge** | Sound-meaning principles apply to taglines |
 
 ### When to Hand Off
 

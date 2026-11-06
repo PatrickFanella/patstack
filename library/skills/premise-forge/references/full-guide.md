@@ -108,7 +108,7 @@ Inbound:
 Outbound:
 - `trope-refresher`
 - `character-arc-doctor`
-- `worldbuilding`
+- `world-diagnostics`
 
 Complementary:
 - `genre-promise-check`

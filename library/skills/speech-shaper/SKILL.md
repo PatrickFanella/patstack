@@ -170,7 +170,7 @@ Parse the original question/content for intent:
 
 **Complementary:**
 - `slide-story-design`: For visual + spoken coordination
-- `dialogue`: For conversational delivery patterns
+- `dialogue-doctor`: For conversational delivery patterns
 
 ## Anti-Patterns
 

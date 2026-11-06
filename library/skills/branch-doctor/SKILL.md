@@ -80,4 +80,4 @@ Balance player choice + narrative craft in designed possibility space.
 
 - `scene-sequencing` for branch scene craft
 - `character-arc-doctor` for transformation consistency across paths
-- `dialogue` for player-choice expression/subtext quality
+- `dialogue-doctor` for player-choice expression/subtext quality

@@ -322,7 +322,7 @@ Fix the most damaging issue first:
 ### Complementary
 - **fiction-line-edit** - for sentence-level craft (overlaps with sound/clarity)
 - **trope-refresher** - for escaping default patterns
-- **naming** - for sound symbolism and word selection
+- **name-forge** - for sound symbolism and word selection
 
 ---
 

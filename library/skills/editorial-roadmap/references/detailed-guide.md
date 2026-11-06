@@ -351,7 +351,7 @@ Visual or structured representation of how content interconnects.
 
 ## Related Skills
 
-- **copywriting**: For writing individual content pieces
+- **page-copy-forge**: For writing individual content pieces
 - **seo-audit**: For technical SEO and on-page optimization
 - **ai-seo**: For optimizing content for AI search engines and getting cited by LLMs
 - **programmatic-seo**: For scaled content generation

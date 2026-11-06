@@ -10,7 +10,7 @@ metadata:
 
 # Worktrees Orchestration Protocol
 
-The `worktrees` skill provides an opinionated, safe orchestration protocol for
+The `worktree-lanes` skill provides an opinionated, safe orchestration protocol for
 managing Git worktrees as isolated coding lanes. Its value is giving the Orchestrator a consistent Blacktower workflow for parallel agents, risky experiments, integration review, and cleanup.
 
 ## Core Contract

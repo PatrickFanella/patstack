@@ -5,7 +5,7 @@ description: "Why questions: design rationale, 'why we picked Y', regressions, p
 
 # Why
 
-Investigate the motivation and intent behind code: the constraints, edge cases, alternatives, and product, business, or operational forces that shaped it. Use the companion `how` skill for runtime behavior and mechanics.
+Investigate the motivation and intent behind code: the constraints, edge cases, alternatives, and product, business, or operational forces that shaped it. Use the companion `code-walkthrough` skill for runtime behavior and mechanics.
 
 ## Trigger and posture
 

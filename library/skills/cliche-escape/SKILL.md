@@ -69,5 +69,5 @@ Keep same emotional vector. Move from statistical center to statistical edge.
 ## Integration / Handoffs
 
 - Inbound: `story-diagnosis`, `brainstorming`
-- Outbound: `worldbuilding`, `character-arc-doctor`, `dialogue`
+- Outbound: `world-diagnostics`, `character-arc-doctor`, `dialogue-doctor`
 - Complementary: `trope-refresher`

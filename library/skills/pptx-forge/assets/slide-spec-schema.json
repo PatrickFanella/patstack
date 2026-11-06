@@ -63,7 +63,7 @@
               "pattern": "^[0-9A-Fa-f]{6}$",
               "description": "Background color as 6-digit hex (no # prefix)"
             },
-            "marketing-imagery": {
+            "image": {
               "type": "string",
               "description": "Path to background image file"
             }
@@ -83,7 +83,7 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["text", "marketing-imagery", "table", "shape", "chart"],
+          "enum": ["text", "image", "table", "shape", "chart"],
           "description": "Element type"
         },
         "x": {

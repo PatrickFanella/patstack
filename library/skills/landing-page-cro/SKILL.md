@@ -182,7 +182,7 @@ When recommending experiments, consider tests for:
 - **signup-flow-cro**: If the issue is in the signup process itself
 - **form-cro**: If forms on the page need optimization
 - **popup-cro**: If considering popups as part of the strategy
-- **copywriting**: If the page needs a complete copy rewrite
+- **page-copy-forge**: If the page needs a complete copy rewrite
 - **split-test-planner**: To properly test recommended changes
 
 ## Resources

@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -36,7 +37,7 @@ class FleetProfilesTests(unittest.TestCase):
 
     def run_cli(self, *args, success=True):
         import os
-        result = subprocess.run(['python3', str(self.source / 'scripts/skill-profile'), *args],
+        result = subprocess.run([sys.executable, str(self.source / 'scripts/skill-profile'), *args],
                                 env={**os.environ, 'HOME': str(self.home)}, text=True,
                                 capture_output=True)
         if success:

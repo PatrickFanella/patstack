@@ -308,7 +308,7 @@ For tracking setup, see
 ## Related Skills
 
 - **ad-creative**: For generating and iterating ad headlines, descriptions, and creative at scale
-- **copywriting**: For landing page copy that converts ad traffic
+- **page-copy-forge**: For landing page copy that converts ad traffic
 - **analytics-tracking**: For proper conversion tracking setup
 - **split-test-planner**: For landing page testing to improve ROAS
 - **landing-page-cro**: For optimizing post-click conversion rates

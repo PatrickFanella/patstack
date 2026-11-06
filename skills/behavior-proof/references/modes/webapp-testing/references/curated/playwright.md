@@ -28,7 +28,7 @@ export PWCLI="/absolute/path/to/webapp-testing/scripts/playwright/playwright_cli
 "$PWCLI" snapshot
 ```
 
-Open the page, snapshot to get element refs, act on refs from the latest snapshot, and snapshot again after navigation or large DOM changes. Do not pivot to `@playwright/test` unless the user asks for test files. The separate `playwright` skill, when installed, carries the full CLI workflow. The command reference and workflows follow below.
+Open the page, snapshot to get element refs, act on refs from the latest snapshot, and snapshot again after navigation or large DOM changes. Do not pivot to `@playwright/test` unless the user asks for test files. The separate `playwright-cli-driver` skill, when installed, carries the full CLI workflow. The command reference and workflows follow below.
 
 ### From `cli.md`
 

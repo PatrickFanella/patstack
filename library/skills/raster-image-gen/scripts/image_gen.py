@@ -803,7 +803,7 @@ def _edit(args: argparse.Namespace) -> None:
 
     if args.dry_run:
         payload_preview = dict(payload)
-        payload_preview["marketing-imagery"] = [str(p) for p in image_paths]
+        payload_preview["image"] = [str(p) for p in image_paths]
         if mask_path:
             payload_preview["mask"] = str(mask_path)
         _print_request(
@@ -825,7 +825,7 @@ def _edit(args: argparse.Namespace) -> None:
 
     with _open_files(image_paths) as image_files, _open_mask(mask_path) as mask_file:
         request = dict(payload)
-        request["marketing-imagery"] = image_files if len(image_files) > 1 else image_files[0]
+        request["image"] = image_files if len(image_files) > 1 else image_files[0]
         if mask_file is not None:
             request["mask"] = mask_file
         result = client.images.edit(**request)

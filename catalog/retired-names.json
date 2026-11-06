@@ -361,15 +361,15 @@
   },
   "homelab": {
     "owner": "operations-vault",
-    "procedure": "vault-agents/Operations/skills/operations-vault/references/operational-evidence.md"
+    "procedure": "vault-agents/Machinum/skills/operations-vault/references/operational-evidence.md"
   },
   "nuc": {
     "owner": "operations-vault",
-    "procedure": "vault-agents/Operations/skills/operations-vault/references/operational-evidence.md"
+    "procedure": "vault-agents/Machinum/skills/operations-vault/references/operational-evidence.md"
   },
   "almaz": {
     "owner": "operations-vault",
-    "procedure": "vault-agents/Operations/skills/operations-vault/references/operational-evidence.md"
+    "procedure": "vault-agents/Machinum/skills/operations-vault/references/operational-evidence.md"
   },
   "skills-cli": {
     "owner": "codex-skills-maintenance",
