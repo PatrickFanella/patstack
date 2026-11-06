@@ -12,5 +12,3 @@ await page.getByRole("button", { name: /submit/i }).click();
 await page.screenshot({ path: "/tmp/ui-harness-after.png", fullPage: true });
 await browser.close();
 ```
-
-Do not add Playwright as a project dependency just for this probe unless the user asks. Prefer existing dev dependencies or external browser tools already available in the environment.

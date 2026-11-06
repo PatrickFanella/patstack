@@ -1,6 +1,6 @@
 ## Codemap Content
 
-Fixers are responsible for writing `codemap.md` files during this workflow. Use precise technical terminology to document the implementation:
+When writing a `codemap.md` file, use precise technical terminology to document the implementation:
 
 - **Responsibility** - Define the specific role of this directory using standard software engineering terms (e.g., "Service Layer", "Data Access Object", "Middleware").
 - **Design Patterns** - Identify and name specific patterns used (e.g., "Observer", "Singleton", "Factory", "Strategy"). Detail the abstractions and interfaces.

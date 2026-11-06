@@ -1,4 +1,4 @@
-## Guidance for This Repository
+## TypeScript codebases
 
 - Prefer straightforward TypeScript over clever compression
 - Preserve existing runtime behavior, tests, and hooks

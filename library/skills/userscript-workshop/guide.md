@@ -1,13 +1,8 @@
-# Focused procedures
+# userscript-workshop procedures
 
-Select the procedure relevant to the requested operation. Paths and scripts in these procedures are relative to this directory; pass the target repository explicitly.
+The rules in `SKILL.md` apply to every task. Paths are relative to this directory; pass the target repository explicitly.
 
-- [Overview](part-01.md) — read when this part of the workflow is needed.
-- [When to Use](part-02.md) — read when this part of the workflow is needed.
-- [Runtime Selection](part-03.md) — read when this part of the workflow is needed.
-- [Preflight](part-04.md) — read when this part of the workflow is needed.
-- [Workflow](part-05.md) — read when this part of the workflow is needed.
-- [Quick Reference](part-06.md) — read when this part of the workflow is needed.
-- [Common Mistakes](part-07.md) — read when this part of the workflow is needed.
-- [References](part-08.md) — read when this part of the workflow is needed.
-- [Resources](part-09.md) — read when this part of the workflow is needed.
+- [Runtime selection](part-03.md): read when unsure whether the task needs a foreground script, a ScriptCat background or crontab script, or a subscription package.
+- [Quick reference](part-06.md): read when mapping an intent such as cross-origin requests, scheduling or user settings to its default choice.
+- [Metadata and API map](references/metadata-and-api-map.md): read when writing metadata headers or calling `GM_*` APIs.
+- [ScriptCat extensions](references/scriptcat-extensions.md): read when using `@background`, `@crontab`, `==UserConfig==` or `==UserSubscribe==`.

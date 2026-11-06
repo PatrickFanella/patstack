@@ -1,10 +1,6 @@
-# Focused procedures
+# opentui-screens procedures
 
-Select the procedure relevant to the requested operation. Paths and scripts in these procedures are relative to this directory; pass the target repository explicitly.
+The rules in `SKILL.md` apply to every task. Paths are relative to this directory; pass the target repository explicitly.
 
-- [Overview](part-01.md) — read when this part of the workflow is needed.
-- [Critical Rules](part-02.md) — read when this part of the workflow is needed.
-- [How to Use This Skill](part-03.md) — read when this part of the workflow is needed.
-- [Quick Decision Trees](part-04.md) — read when this part of the workflow is needed.
-- [Product Index](part-05.md) — read when this part of the workflow is needed.
-- [Resources](part-06.md) — read when this part of the workflow is needed.
+- [Quick decision trees](part-04.md): read when choosing a framework, or finding the reference for a display, input, layout, animation, testing or troubleshooting need.
+- [Product index](part-05.md): read when you need the entry file for a framework, cross-cutting concept or component category.
