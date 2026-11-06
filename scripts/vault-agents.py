@@ -6,12 +6,32 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 import shutil
+import stat
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else None
+
+
+def mode(source):
+    # Normalize like the other deployers; a umask-0002 checkout must not deploy 0664.
+    return 0o755 if source.stat().st_mode & 0o111 else 0o644
+
+
+def uncommitted(rows):
+    """Sources whose bytes or executable bit differ from the committed tree."""
+    tree = {}
+    for item in subprocess.check_output(['git', 'ls-tree', '-r', '-z', 'HEAD', '--', 'vault-agents'], cwd=ROOT, text=True).split('\0'):
+        if item:
+            meta, path = item.split('\t', 1)
+            tree[path] = (meta.split()[0], meta.split()[2])
+    paths = [row['source'] for row in rows]
+    blobs = subprocess.check_output(['git', 'hash-object', '--stdin-paths'], cwd=ROOT, text=True,
+                                    input='\n'.join(paths) + '\n').split()
+    return [p for p, blob in zip(paths, blobs) if tree.get(p) != (oct(0o100000 | mode(ROOT / p))[2:], blob)]
 
 
 def plan(rows):
@@ -26,9 +46,9 @@ def plan(rows):
             errors.append(f'Symlink destination: {target}')
             continue
         wanted, actual = digest(source), digest(target)
-        if actual == wanted:
+        if actual == wanted and stat.S_IMODE(target.stat().st_mode) == mode(source):
             continue
-        if actual != row['previous_sha256'] or (target.exists() and not target.is_file()):
+        if actual not in (wanted, row['previous_sha256']) or (target.exists() and not target.is_file()):
             errors.append(f'Local drift: {target}')
             continue
         changes.append((source, target, actual, wanted))
@@ -47,6 +67,8 @@ def main():
             parser.error('Unknown destinations: ' + ', '.join(sorted(unknown)))
         manifest['files'] = [row for row in manifest['files'] if row['destination'] in args.only_destination]
     changes, errors = plan(manifest['files'])
+    if args.mode == 'apply':
+        errors += ['Commit reviewed source: ' + p for p in uncommitted(manifest['files'])]
     print(json.dumps({'mode': args.mode, 'changes': len(changes), 'errors': errors}, indent=2))
     if errors:
         return 1
@@ -76,7 +98,7 @@ def main():
         temporary = target.with_name(target.name + '.vault-agents-next')
         with temporary.open('xb') as stream:
             stream.write(source.read_bytes())
-        temporary.chmod(source.stat().st_mode & 0o777)
+        temporary.chmod(mode(source))
         if digest(target) != before:
             temporary.unlink()
             raise SystemExit('Concurrent destination change; backup retained')

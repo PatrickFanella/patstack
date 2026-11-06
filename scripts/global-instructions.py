@@ -159,7 +159,11 @@ def remote(mode, payload, run_dir=None):
     latest = read_json(receipts / 'latest.json')
 
     if mode == 'rollback':
-        run = Path(run_dir) if run_dir else Path(latest.get('run', '/nonexistent'))
+        if not latest:
+            raise RuntimeError('No deployment to roll back on this host.')
+        run = Path(latest['run'])
+        if run_dir and Path(run_dir).resolve() != run.resolve():
+            raise RuntimeError('Only the latest run can be rolled back: ' + str(run))
         receipt = read_json(run / 'receipt.json')
         if not receipt:
             raise RuntimeError('No receipt at ' + str(run))
@@ -175,7 +179,11 @@ def remote(mode, payload, run_dir=None):
             elif before:
                 shutil.copy2(run / entry['backup'], path)
                 path.chmod(before['mode'])
-        (receipts / 'latest.json').unlink()
+        # Restored files match the preceding run's records again; keep hand edits refused.
+        if receipt.get('previousLatest'):
+            write(receipts / 'latest.json', json.dumps(receipt['previousLatest'], indent=2).encode(), 0o600)
+        else:
+            (receipts / 'latest.json').unlink()
         print(json.dumps({'host': payload['host'], 'rolledBack': str(run)}))
         return
 
@@ -195,7 +203,7 @@ def remote(mode, payload, run_dir=None):
     for path in retired_targets(home):
         actions[str(path)] = 'remove retired copy'
     before = {p: state(Path(p)) for p in actions}
-    summary = {'host': payload['host'], 'sourceRevision': payload['draft-reviser'], 'actions': actions}
+    summary = {'host': payload['host'], 'sourceRevision': payload['revision'], 'actions': actions}
 
     if mode == 'plan':
         write(plan_path, json.dumps({'before': before, 'hashes': payload['hashes']}, indent=2).encode(), 0o600)
@@ -227,7 +235,7 @@ def remote(mode, payload, run_dir=None):
                 write(path, files[path], mode_bits)
             entry['after'] = state(path)
             entries.append(entry)
-        write(run / 'receipt.json', json.dumps({'summary': summary, 'files': entries}, indent=2).encode(), 0o600)
+        write(run / 'receipt.json', json.dumps({'summary': summary, 'files': entries, 'previousLatest': latest}, indent=2).encode(), 0o600)
         after = {str(p): state(p) for p in files}
         write(receipts / 'latest.json', json.dumps({'run': str(run), 'after': after}, indent=2).encode(), 0o600)
         plan_path.unlink()
@@ -243,7 +251,7 @@ def remote(mode, payload, run_dir=None):
 
 def payload_for(host, revision):
     files = render_all(host, revision)
-    return {'host': host, 'draft-reviser': revision, 'files': files,
+    return {'host': host, 'revision': revision, 'files': files,
             'hashes': {relative: digest(t.encode()) for relative, t in files.items()}}
 
 
@@ -258,7 +266,7 @@ def main():
     p.add_argument('mode', choices=('render', 'plan', 'apply', 'verify', 'rollback'))
     p.add_argument('--host', required=True)
     p.add_argument('--file', help='render: one managed path relative to home, such as .codex/AGENTS.md')
-    p.add_argument('--run', help='rollback: receipt directory (default: latest)')
+    p.add_argument('--run', help='rollback: receipt directory; only the latest run can be rolled back')
     p.add_argument('--python', default='python3')
     args = p.parse_args()
     revision = subprocess.run(['git', '-C', str(ROOT), 'rev-parse', 'HEAD'],

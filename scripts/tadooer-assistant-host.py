@@ -184,7 +184,12 @@ def payload_for(runtime,node,url,revision):
     files={'runtime/main.mjs':runtime.read_bytes()}
     source=ROOT/'integrations/tadooer'
     for p in source.rglob('*'):
-        if p.is_file(): files['marketplace/'+str(p.relative_to(source))]=p.read_bytes()
+        if not p.is_file(): continue
+        relative=str(p.relative_to(ROOT))
+        committed=subprocess.run(['git','show','HEAD:'+relative],cwd=ROOT,capture_output=True)
+        if committed.returncode or committed.stdout!=p.read_bytes():
+            raise RuntimeError('Commit plugin source before deployment: '+relative)
+        files['marketplace/'+str(p.relative_to(source))]=committed.stdout
     return {'node':node,'url':url,'sourceRevision':revision,'files':{k:base64.b64encode(v).decode() for k,v in files.items()},'hashes':{k:digest(v) for k,v in files.items()}}
 
 def remote_source():
@@ -201,6 +206,9 @@ def main():
     p.add_argument('--revision',required=True)
     p.add_argument('--python',default='python3')
     args=p.parse_args()
+    reviewed=json.loads((ROOT/'catalog/tadooer-assistant.json').read_text())['runtime']
+    if args.revision!=reviewed['revision'] or digest(args.runtime.read_bytes())!=reviewed['sha256']:
+        raise RuntimeError('Runtime and --revision must match the reviewed entry in catalog/tadooer-assistant.json.')
     payload=payload_for(args.runtime,args.node,args.url,args.revision)
     if args.host=='kvant': remote(args.mode,payload)
     else:

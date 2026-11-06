@@ -43,6 +43,18 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest() if path.exists() else None
 
 
+def require(condition, message):
+    # Explicit so the guards survive python -O.
+    if not condition:
+        raise RuntimeError(message)
+
+
+def global_gitconfig(home, config_home):
+    """The file `git config --global` edits: ~/.gitconfig unless only the XDG file exists."""
+    xdg = config_home / "git/config"
+    return xdg if not (home / ".gitconfig").exists() and xdg.exists() else home / ".gitconfig"
+
+
 def api(tea, path, explicit=True, cwd=None):
     args = [tea, "api"]
     if explicit:
@@ -55,22 +67,23 @@ def api(tea, path, explicit=True, cwd=None):
 
 def verify(tea, require_repository_context=True):
     me = api(tea, "/user", explicit=False)
-    assert me["login"] == LOGIN
+    require(me["login"] == LOGIN, "Default tea login is not " + LOGIN)
     credential = run(["git", "credential", "fill"],
                      data="protocol=https\nhost=git.subcult.tv\n\n")
     values = dict(line.split("=", 1) for line in credential.splitlines() if "=" in line)
-    assert values.get("username") == LOGIN and values.get("password")
+    require(values.get("username") == LOGIN and values.get("password"),
+            "Git credential helper does not return " + LOGIN)
     with tempfile.TemporaryDirectory(prefix="gitea-agent-proof-") as td:
         run(["git", "init", "--quiet", td])
         run(["git", "-C", td, "remote", "add", "origin",
              URL + "/subculture-collective/project-template.git"])
         context_identity = api(tea, "/user", explicit=False, cwd=td)
         if require_repository_context:
-            assert context_identity["login"] == LOGIN
+            require(context_identity["login"] == LOGIN, "Repository-context tea login is not " + LOGIN)
         author = run(["git", "-C", td, "var", "GIT_AUTHOR_IDENT"]).strip()
-        assert author.startswith("SUBCULT Agent <info@subcult.tv>")
+        require(author.startswith("SUBCULT Agent <info@subcult.tv>"), "Agent commit identity is not selected")
         transport = run(["git", "-C", td, "remote", "get-url", "origin"]).strip()
-        assert transport.startswith(URL + "/")
+        require(transport.startswith(URL + "/"), "Gitea remote does not use HTTPS")
         run(["git", "-C", td, "fetch", "--quiet", "--depth=1", "origin", "HEAD"])
         run(["git", "-C", td, "push", "--dry-run", "origin",
              "FETCH_HEAD:refs/heads/agent-identity-verification"], timeout=60)
@@ -99,10 +112,11 @@ def main():
         isolated_config = config_home / "agent-identity/tea/config.yml"
         targets = [(tea_config, payload["main"]), (isolated_config, payload["isolated"])]
         for path, item in targets:
-            assert digest(path) == item["expected_sha256"], "Credential configuration drift"
+            require(digest(path) == item["expected_sha256"], "Credential configuration drift")
             agent = item["config"]["logins"][0]
-            assert agent["name"] == LOGIN and agent["user"] == LOGIN and agent["default"]
-            assert agent["token"] == payload["token"]
+            require(agent["name"] == LOGIN and agent["user"] == LOGIN and agent["default"],
+                    "Replacement config does not default to " + LOGIN)
+            require(agent["token"] == payload["token"], "Replacement config token mismatch")
         state = home / ".local/state/gitea-agent" / ("admin-scope-" + payload["run_id"])
         state.mkdir(parents=True, exist_ok=True)
         if (state / "receipt.json").exists():
@@ -122,13 +136,14 @@ def main():
                 path.chmod(0o600)
                 written_hashes[str(path)] = digest(path)
             me = api(args.tea, "/user", explicit=False)
-            assert me["login"] == LOGIN and me["is_admin"]
+            require(me["login"] == LOGIN and me["is_admin"], "Rotated token is not the admin agent")
             users = api(args.tea, "/admin/users?limit=1", explicit=False)
-            assert isinstance(users, list) and users
+            require(isinstance(users, list) and users, "Admin API read failed")
             credential = run(["git", "credential", "fill"],
                              data="protocol=https\nhost=git.subcult.tv\n\n")
             values = dict(line.split("=", 1) for line in credential.splitlines() if "=" in line)
-            assert values.get("username") == LOGIN and values.get("password") == payload["token"]
+            require(values.get("username") == LOGIN and values.get("password") == payload["token"],
+                    "Git credential helper does not return the rotated token")
             receipt["verification"] = {"api_login": me["login"], "site_admin": True,
                                        "admin_api_read": True, "credential_login": LOGIN}
             for entry in receipt["files"]:
@@ -156,9 +171,10 @@ def main():
     receipt = json.loads(receipt_path.read_text()) if receipt_path.exists() else {
         "token_id": payload["token_id"], "host": payload["host"], "files": []}
     if args.mode == "normalize":
-        assert digest(tea_config) == payload["expected_config_sha256"]
+        require(digest(tea_config) == payload["expected_config_sha256"], "Credential configuration drift")
         config = payload["tea_config"]
-        assert config["logins"][0]["name"] == LOGIN and config["logins"][0]["default"]
+        require(config["logins"][0]["name"] == LOGIN and config["logins"][0]["default"],
+                "Normalized config does not default to " + LOGIN)
         snapshot = state / "before-context-normalization.yml"
         if not snapshot.exists():
             shutil.copyfile(tea_config, snapshot)
@@ -188,7 +204,7 @@ def main():
         (state / "receipt.json").write_text(json.dumps(receipt, indent=2))
 
     backup(tea_config)
-    backup(home / ".gitconfig")
+    backup(global_gitconfig(home, config_home))
     has_login = False
     try:
         has_login = api(args.tea, "/user")["login"] == LOGIN
