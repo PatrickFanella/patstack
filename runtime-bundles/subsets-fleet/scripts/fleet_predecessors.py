@@ -29,6 +29,12 @@ def normalized_tree(tree):
     return result
 
 
+def managed_entries_match(current, expected):
+    """Compare only the entries a detach receipt manages; later additions stay foreign."""
+    return (current is not None and current['type'] == 'directory' and current['mode'] == expected['mode']
+            and all(current['entries'].get(name) == entry for name, entry in expected['entries'].items()))
+
+
 def generated_views(home, roots, sources):
     """Use custody from the completed, backed-up root-detachment transaction."""
     state = home / '.local/state/subsets-fleet/client-root-migration'
@@ -38,6 +44,8 @@ def generated_views(home, roots, sources):
     if any(p.is_symlink() for p in [receipt, *receipt.parents]):
         raise RuntimeError('Linked client-root receipt retains its owner')
     data = install.read(receipt)
+    if not data.get('run'):
+        return {}, {}  # The detachment was rolled back.
     run = Path(data['run'])
     if run.parent != state or any(p.is_symlink() for p in [run, *run.parents]):
         raise RuntimeError('Unexpected client-root migration transaction')
@@ -51,7 +59,7 @@ def generated_views(home, roots, sources):
             or operations[0]['action'] != 'detach-generated-view'
             or operations[0]['desired'] != expected
             or not expected or expected['type'] != 'directory'
-            or install.snapshot(root) != expected):
+            or not managed_entries_match(install.snapshot(root), expected)):
         raise RuntimeError('Client-root migration receipt or view drift; recover it first')
     original = operations[0]['expected']
     backup = run / 'backups/0'

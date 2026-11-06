@@ -8,6 +8,42 @@ import sys
 from pathlib import Path
 
 import install
+from fleet_predecessors import managed_entries_match
+
+
+def preserve_added_entries(run, root):
+    """Move entries added after detachment into the run so restoring the link loses none."""
+    journal = install.read(run / 'journal.json')
+    operation = journal['plan']['operations'][0]
+    desired = operation['desired']
+    current = install.snapshot(root)
+    if (journal['status'] != 'complete' or not desired or not managed_entries_match(current, desired)
+            or install.snapshot(run / 'backups/0') != operation.get('original')):
+        return []  # The transaction rollback applies its own checks and refusals.
+    added = sorted(set(current['entries']) - set(desired['entries']))
+    if not added:
+        return []
+    journal['preservedEntries'] = {**journal.get('preservedEntries', {}),
+                                   **{name: current['entries'][name] for name in added}}
+    install.save(run / 'journal.json', journal)
+    keep = run / 'preserved-entries'
+    keep.mkdir(mode=0o700, exist_ok=True)
+    moved = []
+    for name in added:
+        entry, copy = root / name, keep / name
+        if not (copy.exists() or copy.is_symlink()):
+            install.copy(entry, copy)
+        if install.snapshot(copy) != current['entries'][name] or install.snapshot(entry) != current['entries'][name]:
+            raise RuntimeError('Preserve the changed client-root entry first: ' + str(entry))
+        install.remove(entry)
+        moved.append(str(copy))
+    return moved
+
+
+def remove_stage(stage, desired):
+    # Only this helper's verified staging view is removed; anything else is reviewed.
+    if (stage.exists() or stage.is_symlink()) and install.snapshot(stage) == desired:
+        install.remove(stage)
 
 
 def main():
@@ -23,8 +59,12 @@ def main():
             parser.error('--run must name a client-root migration')
         with (state / 'installer.lock').open('a') as lock:
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            if (home / '.local/state/subsets-fleet/profiles/ownership.json').exists():
+                raise RuntimeError('Roll back the Subsets ownership transfer before the client-root detachment')
+            preserved = preserve_added_entries(args.run, root)
             install.rollback(args.run, state)
-        print(json.dumps({'rolledBack': str(args.run)}))
+            remove_stage(state / 'view-source', install.read(args.run / 'journal.json')['plan']['operations'][0]['desired'])
+        print(json.dumps({'rolledBack': str(args.run), 'preservedEntries': preserved}))
         return
     if not root.is_symlink():
         print(json.dumps({'needed': False, 'root': str(root)}))
@@ -61,14 +101,17 @@ def main():
         if any(install.read(p)['status'] in {'applying', 'partial', 'rolling-back'} for p in state.glob('run-*/journal.json')):
             raise RuntimeError('Recover the pending client-root transaction first')
         stage = state / 'view-source'
-        if stage.exists():
+        remove_stage(stage, desired)  # Left by an apply that failed before its run began.
+        if stage.exists() or stage.is_symlink():
             raise RuntimeError('Review the existing client-root staging directory')
-        stage.mkdir(mode=0o755)
+        stage.mkdir()
+        stage.chmod(0o755)  # Independent of the caller's umask.
         for name, value in entries.items():
             (stage / name).symlink_to(value['target'])
         plan['operations'][0]['source'] = str(stage)
         run = install.apply(plan, state)
         install.verify(plan, state)
+        remove_stage(stage, desired)
         print(json.dumps({'run': str(run), 'root': str(root), 'entriesPreserved': len(entries)}))
 
 

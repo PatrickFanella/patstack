@@ -160,12 +160,16 @@ def apply(plan,state,fault=None,resume=None,through=3):
    if fault:fault('after_remove',i)
    journal['progress'][key]='installing';save(run/'journal.json',journal)
    if op['desired'] is not None:
-    stage=dest.parent/('.'+dest.name+'.stage-'+run.name)
+    stage=stage_path(dest,run)
     if stage.exists() or stage.is_symlink():remove(stage)
-    if op['payload'] is not None:stage.write_text(op['payload']);stage.chmod(op['desired']['mode'])
-    else:copy(op['source'],stage)
-    if snapshot(stage)!=op['desired']:raise RuntimeError(f'Staging failed: {dest}')
-    os.replace(stage,dest)
+    try:
+     if op['payload'] is not None:stage.write_text(op['payload']);stage.chmod(op['desired']['mode'])
+     else:copy(op['source'],stage)
+     if snapshot(stage)!=op['desired']:raise RuntimeError(f'Staging failed: {dest}')
+     os.replace(stage,dest)
+    finally:
+     # Never leave a partial stage beside other owners' entries.
+     if stage.exists() or stage.is_symlink():remove(stage)
    if fault:fault('after_install',i)
   if snapshot(op['destination'])!=op['desired']:raise RuntimeError(f'Post-install verification failed: {op["destination"]}')
   journal['progress'][key]='complete';save(run/'journal.json',journal)
@@ -177,6 +181,30 @@ def apply(plan,state,fault=None,resume=None,through=3):
  save(run/'journal.json',journal)
  return run
 
+def stage_path(dest,run):return Path(dest).parent/('.'+Path(dest).name+'.stage-'+Path(run).name)
+
+def released_merge(op,backup):
+ """Payload restoring only the path records a takeover released from a manifest.
+
+ Later writers (link-workstation applies) may re-save that manifest; their other
+ records are kept. Returns None when a released record was claimed or changed."""
+ dest=Path(op['destination'])
+ if op.get('action')!='release-owner' or op.get('original') is None or dest.is_symlink() or not dest.is_file():return None
+ original=json.loads(Path(backup).read_text());replacement=json.loads(op['payload'])
+ released=set(original['paths'])-set(replacement['paths'])
+ try:current=json.loads(dest.read_text())
+ except ValueError:return None
+ if not isinstance(current,dict) or not isinstance(current.get('paths'),dict):return None
+ if any(k in current['paths'] and current['paths'][k]!=original['paths'][k] for k in released):return None
+ merged={k:v for k,v in current.items() if not (k=='releasedTo' and v==replacement.get('releasedTo'))}
+ merged['paths']={**current['paths'],**{k:original['paths'][k] for k in released}}
+ return json.dumps(merged,indent=2)+'\n'
+
+def rollback_allowed(journal,i,op):
+ allowed=[op['desired'],op.get('original')]
+ if journal['progress'].get(str(i)) in {'removing','installing'} or journal.get('rollbackProgress',{}).get(str(i))=='restoring':allowed.append(None)
+ return allowed
+
 def rollback(run,state):
  run=Path(run);journal=read(run/'journal.json');plan=journal['plan']
  if journal['status']=='rolled-back':return
@@ -184,28 +212,56 @@ def rollback(run,state):
  for i,op in enumerate(plan['operations']):
   phase=journal['progress'].get(str(i),'pending')
   if phase=='pending':continue
-  actual=snapshot(op['destination'])
-  allowed=[op['desired'],op.get('original')]
-  if phase in {'removing','installing'} or journal.get('rollbackProgress',{}).get(str(i))=='restoring':allowed.append(None)
-  if actual not in allowed:raise RuntimeError(f'Rollback preserves intervening edits at {op["destination"]}')
   if snapshot(run/'backups'/str(i))!=op.get('original'):raise RuntimeError('Rollback backup hash mismatch')
+  if snapshot(op['destination']) not in rollback_allowed(journal,i,op) and released_merge(op,run/'backups'/str(i)) is None:
+   raise RuntimeError(f'Rollback preserves intervening edits at {op["destination"]}')
  journal['status']='rolling-back';save(run/'journal.json',journal)
  for i in reversed(range(len(plan['operations']))):
-  if journal['progress'].get(str(i),'pending')=='pending':continue
   op=plan['operations'][i];dest=Path(op['destination']);backup=run/'backups'/str(i)
+  # A crash between staging and replacement leaves a stage named for this run.
+  stale=stage_path(dest,run)
+  if stale.exists() or stale.is_symlink():remove(stale)
+  if journal['progress'].get(str(i),'pending')=='pending':continue
   if snapshot(dest)==op.get('original'):continue
   stage=dest.parent/('.'+dest.name+'.rollback-stage-'+run.name)
+  if snapshot(dest) not in rollback_allowed(journal,i,op):
+   # A later writer re-saved a released manifest: restore just the released records.
+   merged=released_merge(op,backup)
+   if merged is None:raise RuntimeError(f'Rollback preserves intervening edits at {dest}')
+   wanted={'type':'file','mode':snapshot(dest)['mode'],'sha256':hashlib.sha256(merged.encode()).hexdigest()}
+   if snapshot(dest)!=wanted:
+    if stage.exists() or stage.is_symlink():remove(stage)
+    stage.write_text(merged);stage.chmod(wanted['mode'])
+    if snapshot(stage)!=wanted:raise RuntimeError('Rollback staging verification failed')
+    # Recheck the live manifest immediately before replacing it.
+    if released_merge(op,backup)!=merged:
+     remove(stage);raise RuntimeError(f'Rollback preserves intervening edits at {dest}')
+    os.replace(stage,dest)
+   journal.setdefault('rollbackProgress',{})[str(i)]='merged-records';save(run/'journal.json',journal)
+   continue
   if op.get('original') is not None:
    if stage.exists() or stage.is_symlink():
     if snapshot(stage)!=op['original']:remove(stage)
    if not stage.exists() and not stage.is_symlink():copy(backup,stage)
    if snapshot(stage)!=op['original']:raise RuntimeError('Rollback staging verification failed')
   journal.setdefault('rollbackProgress',{})[str(i)]='restoring';save(run/'journal.json',journal)
+  # Recheck immediately before removal; the preflight may be stale by now.
+  if snapshot(dest) not in rollback_allowed(journal,i,op):raise RuntimeError(f'Rollback preserves intervening edits at {dest}')
   remove(dest)
   if op.get('original') is not None:os.replace(stage,dest)
   if snapshot(dest)!=op.get('original'):raise RuntimeError('Rollback verification failed')
   journal['rollbackProgress'][str(i)]='restored';save(run/'journal.json',journal)
  save(statefile(state),plan['previousInstalled']);journal['status']='rolled-back';save(run/'journal.json',journal)
+
+def refuse_released(run):
+ """Predecessor rollbacks must not write paths released to Subsets back into their manifests."""
+ marker=Path.home()/'.local/state/subsets-fleet/profiles/ownership.json'
+ journal=read(Path(run)/'journal.json')
+ if not marker.exists() or journal['status']=='rolled-back':return
+ released=set(read(marker).get('transferredPaths',[]));plan=journal['plan']
+ claims=[p for p in plan['previousInstalled']['paths'] if p in released]
+ claims+=[op['destination'] for i,op in enumerate(plan['operations']) if journal['progress'].get(str(i),'pending')!='pending' and op['destination'] in released]
+ if claims:raise RuntimeError('Subsets owns released skill paths; this rollback would reclaim '+sorted(claims)[0])
 
 def verify(plan,state):
  failures=[]
@@ -230,7 +286,7 @@ def main():
   fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
   if args.command=='rollback':
    if not args.run:parser.error('--run is required for rollback')
-   rollback(args.run,args.state);print('Rolled back',args.run)
+   refuse_released(args.run);rollback(args.run,args.state);print('Rolled back',args.run)
   else:
    if not args.resume:
     unfinished=[p for p in args.state.glob('run-*/journal.json') if read(p)['status'] in {'applying','partial','rolling-back'}]

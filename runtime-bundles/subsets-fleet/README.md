@@ -60,7 +60,16 @@ all clients. The router can read an inactive specialist without a switch.
 
 Transactions are under `~/.local/state/subsets-fleet/profiles/run-*`. Use the
 recorded directory with `~/.agents/bin/skill-profile rollback --run`, newest run
-first. Rollback restores original paths and manifests only when current state
-still matches that run; it refuses later edits. Retain backups and immutable
-source folders while needed for recovery. Removing a view is deactivation, not
-canonical source deletion.
+first; an older run refuses while a newer one is recorded. Rollback restores
+original paths only when current state still matches that run; it refuses later
+edits. Rolling back the takeover puts the released records back into the
+predecessor manifests and keeps records that `link-workstation.py` wrote later.
+After takeover, predecessor rollbacks refuse to reclaim transferred paths.
+Activation rechecks catalogs, stack lists and selected skill folders against
+the bundle manifest, including files added after the build.
+
+Roll back a detached Claude root with `prepare-client-root.py rollback --run`
+after the Subsets takeover rollback. Entries added to the root after detachment
+move to that run's `preserved-entries/` folder before the link is restored.
+Retain backups and immutable source folders while needed for recovery. Removing
+a view is deactivation, not canonical source deletion.

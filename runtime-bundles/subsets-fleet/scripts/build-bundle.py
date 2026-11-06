@@ -19,6 +19,15 @@ import install  # noqa: E402
 TREES = ('catalog', 'library', 'profiles', 'shared', 'skills')
 
 
+def normalize_modes(out):
+    """Make the manifest independent of checkout modes and the builder's umask."""
+    for path in [out, *out.rglob('*')]:
+        if path.is_symlink():
+            continue
+        executable = path.is_dir() or path.stat().st_mode & 0o111
+        path.chmod(0o755 if executable else 0o644)
+
+
 def build(out):
     if subprocess.check_output(['git', 'status', '--porcelain', '--', *TREES, 'scripts', 'runtime-bundles'],
                                cwd=ROOT, text=True).strip():
@@ -39,6 +48,7 @@ def build(out):
     shutil.copy2(ROOT / 'scripts/skill-profile', out / 'scripts/profile-selector')
     for tree in TREES:
         shutil.copytree(ROOT / tree, out / tree, ignore=ignore)
+    normalize_modes(out)
     files = {str(p.relative_to(out)): install.snapshot(p) for p in sorted(out.rglob('*')) if p.is_file()}
     install.save(out / 'deployment-source.json', {'sourceRevision': revision, 'sourceOwner': str(ROOT), 'files': files})
     return out
