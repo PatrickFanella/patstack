@@ -1,6 +1,6 @@
 ---
 name: module-deepener
-description: "Architecture deepening: find shallow modules and refactors that improve testability, guided by CONTEXT.md and ADRs. Not for reviewing a single change (diff-inspector)."
+description: "Architecture deepening: find shallow modules and refactors that improve testability, guided by CONTEXT.md and ADRs. Not for reviewing a single change (diff-inspector) or designing new boundaries (boundary-drafter)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow

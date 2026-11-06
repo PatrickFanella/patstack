@@ -1,6 +1,6 @@
 ## Generation Delegation
 
-Use `$raster-image-gen` for all normal visual generation.
+Use `$raster-image-gen` for all normal visual generation. For how to bound each image-heavy rollout to a lightweight subagent, read [lightweight visual workers](lightweight-visual-workers.md).
 
 Before generating base art, row strips, or repair rows, load and follow the installed image generation skill:
 

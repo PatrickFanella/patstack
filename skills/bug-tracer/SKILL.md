@@ -1,6 +1,6 @@
 ---
 name: bug-tracer
-description: "Use when a bug, failing test or unexpected behavior needs a root cause: reproduce, isolate one variable at a time, verify the fix. Also for recurring-failure postmortems."
+description: "Use when a bug or reproducible failing test needs a root cause: reproduce, isolate one variable at a time, verify the fix; also recurring-failure postmortems. A red CI check starts in ci-medic; slowness goes to perf-hotpath-probe."
 ---
 
 # bug-tracer
@@ -9,15 +9,17 @@ Establish a failing observation before selecting a cause. Change one causal vari
 
 ## Select a mode
 
-- Diagnosis loop for hard bugs and performance regressions. Read [the procedure](references/modes/diagnosing-bugs/guide.md).
+- Hard or intermittent bugs that resist a first pass: build a tight red/green feedback loop, minimise the repro, rank hypotheses. Read [the procedure](references/modes/diagnosing-bugs/guide.md).
 - Analyze recurring failures and produce prevention-focused postmortems. Read [the procedure](references/modes/failure-anthropologist/guide.md).
-- Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes. Read [the procedure](references/modes/systematic-debugging/guide.md).
+- Default for an ordinary bug, test failure or unexpected behavior: the root-cause pass before proposing any fix. Read [the procedure](references/modes/systematic-debugging/guide.md).
+
+Performance regressions belong to `perf-hotpath-probe`. A failing CI check starts in `ci-medic`; come back here once a failing test reproduces and needs a root cause.
 
 Resource paths inside a mode are relative to that mode directory. Run its scripts from that directory or use absolute script paths, passing the target repository explicitly.
 
 ## Conditional design notes
 
-- [fix root causes](references/principles/fix-root-causes.md) — consult only for this specific design or execution concern.
+- [fix root causes](references/principles/fix-root-causes.md): read before applying a fix, to check it addresses the cause rather than hiding the failing state.
 
 ## Companion skills
 

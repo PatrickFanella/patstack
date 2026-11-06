@@ -3,7 +3,7 @@ name: voice-ledger
 description: "Use when defining or reviewing a product's written voice guide from brand sources and real copy samples. Not for visual identity, or for one-off copy edits that can follow an existing guide."
 ---
 
-# Brand voice
+# voice-ledger
 
 Use for an explicit voice guide, voice alignment review, or a marketing packet that lacks a usable voice reference. A small copy edit can use the existing guide without rebuilding it. Visual identity and logo production retain their brand/design owner.
 
@@ -17,4 +17,4 @@ Read the project's brand and voice sources first. Preserve an approved voice; pr
 
 Save the guide in the project's existing brand/marketing location, link its source, date the review, and label proposed direction. Return the guide, examples, unresolved decisions, and source references. Writing a guide does not authorize a profile change or publication.
 
-Upstream reference: [Okara Brand Voice](https://okara.ai/skills/voice-ledger), authenticated capture October 19, 2026 Chicago. Adaptation adds project ownership, source-backed examples, tone for failure states, and a distinction between proposed and approved voice. Source hash and private-use provenance travel in `provenance.json`.
+Upstream reference: [Okara Brand Voice](https://okara.ai/skills/brand-voice), authenticated capture October 19, 2026 Chicago. Adaptation adds project ownership, source-backed examples, tone for failure states, and a distinction between proposed and approved voice. Source hash and private-use provenance travel in `provenance.json`.

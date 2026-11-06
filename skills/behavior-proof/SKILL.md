@@ -1,9 +1,9 @@
 ---
 name: behavior-proof
-description: "Use before claiming a UI, CLI, API, build or performance change works: run a conformance, regression or baseline check and report PASS, FAIL or INCONCLUSIVE with evidence."
+description: "Use before claiming a UI, CLI, API, build or performance change works: run a conformance, regression or baseline check and report PASS, FAIL or INCONCLUSIVE with evidence. Not for a repository readiness audit (ship-check)."
 ---
 
-# Verify Behavior
+# behavior-proof
 
 Translate the requested claim into observable behavior and choose a verification mode:
 
@@ -34,8 +34,8 @@ Resource paths inside a mode are relative to that mode directory. Run its script
 
 ## Conditional design notes
 
-- [prove it works](references/principles/prove-it-works.md) — consult only for this specific design or execution concern.
-- [make operations idempotent](references/principles/make-operations-idempotent.md) — consult only for this specific design or execution concern.
+- [prove it works](references/principles/prove-it-works.md): read when deciding what evidence a "works" claim needs.
+- [make operations idempotent](references/principles/make-operations-idempotent.md): read when the operation under test may be retried or resumed after interruption.
 
 ## Companion skills
 

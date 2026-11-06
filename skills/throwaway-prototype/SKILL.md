@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: dev-workflows,prototype
 ---
 
-# Prototype
+# throwaway-prototype
 
 A prototype is **throwaway code that answers a question**. The question decides the shape.
 

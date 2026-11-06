@@ -1,6 +1,6 @@
 ---
 name: ts-type-design
-description: Use for TypeScript type design, tsconfig and module settings, or JS-to-TS work; on request, shoehorn test migration or dependency-cruiser deep modules. Not for React (react-render-tuner).
+description: Use for TypeScript type design, tsconfig and module settings, or JS-to-TS work; on request, shoehorn test migration or dependency-cruiser deep modules. Not for React (react-render-tuner) or choosing module boundaries (boundary-drafter).
 ---
 
 # ts-type-design
@@ -18,4 +18,4 @@ Resource paths inside a mode are relative to that mode directory. Run its script
 
 ## Conditional design notes
 
-- [type system discipline](references/principles/type-system-discipline.md) — consult only for this specific design or execution concern.
+- [type system discipline](references/principles/type-system-discipline.md): read when choosing how strongly to type a value, or when adding a type assertion.

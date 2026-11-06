@@ -46,7 +46,7 @@ Key pages to review:
 #### 1.3 Study Framework Documentation
 
 **Recommended stack:**
-- **Primary language**: Go using the MCP API/SDK when available
+- **Default language**: Go with the official SDK when the server benefits from static binaries, low memory use, simple deployment or strong concurrency. The bundled Go guide covers layout and rules only, so take API detail from the SDK's own documentation.
 - **Fallback language**: TypeScript (high-quality SDK support and good compatibility in many execution environments e.g. MCPB. Plus AI models are good at generating TypeScript code, benefiting from its broad usage, static typing and good linting tools)
 - **Transport**: Streamable HTTP for remote servers, using stateless JSON (simpler to scale and maintain, as opposed to stateful sessions and streaming responses). stdio for local servers.
 
@@ -54,15 +54,16 @@ Key pages to review:
 
 - **MCP Best Practices**: [📋 View Best Practices](../reference/mcp_best_practices.md) - Core guidelines
 
-**For Go (preferred):**
-- Use official MCP Go API/SDK docs when available; design typed request/response structs, context-aware handlers, and small transport adapters.
-- [Go Guide](./go-mcp-server.md) - Go patterns and examples
+**For Go (default when it fits):**
+- Use the official SDK docs, `github.com/modelcontextprotocol/go-sdk`, for the API; design typed request/response structs, context-aware handlers, and small transport adapters.
+- [Go Guide](./go-mcp-server.md) - layout, SDK choice and rules (brief; no worked examples)
 
 **For TypeScript (fallback):**
 - **TypeScript SDK**: Use WebFetch to load `https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/main/README.md`
 - [⚡ TypeScript Guide](../reference/node_mcp_server.md) - TypeScript patterns and examples
 
 **For Python:**
+- [🐍 Python Guide](../reference/python_mcp_server.md) - FastMCP and Pydantic patterns, response formats, pagination, error handling
 
 #### 1.4 Plan Your Implementation
 
@@ -81,6 +82,7 @@ Prioritize comprehensive API coverage. List endpoints to implement, starting wit
 See language-specific guides for project setup:
 - [Go Guide](./go-mcp-server.md) - module structure, transport adapter, typed handlers
 - [⚡ TypeScript Guide](../reference/node_mcp_server.md) - project structure, package.json, tsconfig.json
+- [🐍 Python Guide](../reference/python_mcp_server.md) - FastMCP server layout and Pydantic models
 
 #### 2.2 Implement Core Infrastructure
 
@@ -212,7 +214,8 @@ Load these resources as needed during development:
 - **TypeScript SDK**: Fetch from `https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/main/README.md`
 
 ### Language-Specific Implementation Guides (Load During Phase 2)
-- [Go Implementation Guide](./go-mcp-server.md) - Go MCP server patterns.
+- [Go Implementation Guide](./go-mcp-server.md) - Go MCP server layout and rules.
+- [🐍 Python Implementation Guide](../reference/python_mcp_server.md) - FastMCP, Pydantic v2, response formats, pagination and error handling.
 - [⚡ TypeScript Implementation Guide](../reference/node_mcp_server.md) - Complete TypeScript guide with:
   - Project structure
   - Zod schema patterns

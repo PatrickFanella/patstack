@@ -1,6 +1,6 @@
 ---
 name: dep-source-clone
-description: "Use when a question needs a dependency's real source at the lockfile-pinned version: SDK internals, framework behavior, library bugs. Not for API questions that documentation answers."
+description: "Use when a question needs a dependency's real source at the lockfile-pinned version: SDK internals, framework behavior, library bugs. Not for API questions that documentation answers (web-lookup, primary-source-notes)."
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow
@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: dependency source inspection,upstream implementation,sdk internals,pinned source checkout
 ---
 
-# clonedeps
+# dep-source-clone
 
 ## Use this skill
 

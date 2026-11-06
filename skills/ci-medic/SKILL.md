@@ -1,6 +1,6 @@
 ---
 name: ci-medic
-description: Use when a CI run or PR check fails, when watching checks until green on Gitea Actions or GitHub, or when designing pipelines, SAST scanning or pre-commit hooks. Not for test-suite design.
+description: Use when a CI run or PR check fails, when watching checks until green on Gitea Actions or GitHub, or when designing pipelines, SAST scanning or pre-commit hooks. Not for test-suite design, or root-causing a test that also fails locally (bug-tracer).
 ---
 
 # ci-medic

@@ -8,7 +8,7 @@ Copy this directory into a project's `docs/marketing/`. Copy the adjacent [promp
 4. Use the prompts to produce variants, then check every factual claim and final asset.
 5. Name the campaign owner, choose dates and channels, and publish through the project's normal approval process.
 
-The matching Studio visual starter is `branding/2026-10-01-packs/starter-template/` in `subculture-collective/subcult-studio`. It creates visual layouts, tokens, and asset records. Point this marketing kit at the resulting brand pack. Give each project its own voice, promise, audience, and demonstration; the CLPR palette, tone, and clip-stack motif belong to CLPR.
+If the project has a visual brand starter that produces layouts, tokens, and asset records, point this marketing kit at the resulting brand pack. Give each project its own voice, promise, audience, and demonstration; one product's palette, tone, and motifs belong to that product.
 
 ## Completion checklist
 

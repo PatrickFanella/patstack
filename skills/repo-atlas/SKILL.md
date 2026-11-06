@@ -1,6 +1,6 @@
 ---
 name: repo-atlas
-description: Use when orienting in an unfamiliar repository, or creating or incrementally updating codemap.md files with the bundled inventory script. Not for architecture redesign; use boundary-drafter.
+description: Use when orienting in an unfamiliar repository, or creating or incrementally updating codemap.md files with the bundled inventory script. Not for one how-does-X-work question (repo-research-trail) or architecture redesign (boundary-drafter).
 compatibility: Requires a git repository and a Node.js-compatible runtime or Bun for the bundled codemap helper.
 metadata:
   blacktower-pack: core

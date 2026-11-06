@@ -9,7 +9,7 @@ metadata:
   blacktower-capabilities: dev-workflows,codemod,surgeon
 ---
 
-# Codemod Surgeon
+# sweep-rewriter
 
 Use this skill for broad mechanical edits where consistency matters more than
 local cleverness.
@@ -42,5 +42,5 @@ matches after a migration.
 
 ## Conditional design notes
 
-- [build the lever](references/principles/build-the-lever.md) — consult only for this specific design or execution concern.
-- [encode lessons in structure](references/principles/encode-lessons-in-structure.md) — consult only for this specific design or execution concern.
+- [build the lever](references/principles/build-the-lever.md): read when deciding between a script or codemod and direct edits.
+- [encode lessons in structure](references/principles/encode-lessons-in-structure.md): read when a recurring failure has a precise invariant that a check could enforce.

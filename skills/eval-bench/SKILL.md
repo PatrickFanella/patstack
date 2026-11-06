@@ -14,10 +14,9 @@ Design and run LLM evaluation workflows. Use references for metrics, judge desig
 
 ## Workflow
 
-1. Use this skill only when the request matches the frontmatter description.
-2. Keep the main context short: read only the relevant reference file for the exact subtask.
-3. Prefer existing scripts/templates/assets in this skill before writing ad hoc code.
-4. Resolve repository facts and available tooling first. Ask only for missing information or authorization required for the requested action; continue independent authorized work.
+1. Keep the main context short: read only the relevant reference file for the exact subtask.
+2. Prefer existing scripts/templates/assets in this skill before writing ad hoc code.
+3. Resolve repository facts and available tooling first. Ask only for missing information or authorization required for the requested action; continue independent authorized work.
 
 ## Resources
 

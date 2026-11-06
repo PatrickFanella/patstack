@@ -8,7 +8,7 @@ metadata:
   blacktower-capabilities: security,mtls,configuration
 ---
 
-# mTLS Configuration
+# mtls-trust-chain
 
 Configure and enforce mutual TLS for zero-trust service-to-service traffic.
 

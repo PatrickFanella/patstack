@@ -10,7 +10,7 @@ metadata:
   version: '2.0'
 ---
 
-# Requirements Interview
+# scope-grill
 
 Resolve only the ambiguity that blocks a safe decision. This workflow combines
 the former `grill-me`, `grill-with-docs`, and scope-grill skills.

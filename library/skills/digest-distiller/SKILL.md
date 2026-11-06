@@ -14,7 +14,7 @@ metadata:
   domain: writing
 ---
 
-# Summarization
+# digest-distiller
 
 ## Purpose
 
@@ -22,45 +22,15 @@ Create effective summaries by matching summarization type to purpose, audience, 
 
 ## Core Principle
 
-**Summarization is translation, not just reduction.** Different purposes require different summary types. Clarify the need before condensing.
+**Summarization is translation, not just reduction.** Different purposes require different summary types. Match the type to the need before condensing.
 
 ---
 
-## Clarifying Questions
+## Defaults
 
-Before summarizing, consider:
+Summarize without asking first. Infer purpose, audience and length from the request and the source. When they are unstated, write a brief summary (a paragraph or a few bullets) that leads with the main point, for a reader who has not seen the source, and say in one line what you assumed.
 
-1. **Purpose:** What will this summary be used for?
-   - Decision-making
-   - Background information
-   - Further research
-   - Quick understanding
-   - Reference/recall
-
-2. **Audience:** Who will read it?
-   - Technical experts
-   - General audience
-   - Decision makers
-   - Familiar/unfamiliar with topic
-
-3. **Scope:** How comprehensive?
-   - Ultra-brief (single sentence)
-   - Brief (paragraph)
-   - Moderate (page)
-   - Extended (multiple pages)
-
-4. **Emphasis:** What aspects are most important?
-   - Methodology
-   - Findings/results
-   - Arguments/claims
-   - Context/background
-   - Implications/applications
-
-5. **Format:** What structure?
-   - Narrative text
-   - Bullet points
-   - Hierarchical outline
-   - Visual representation
+Ask before summarizing only when the target audience or length is genuinely ambiguous and the choice changes the result, such as an executive summary versus an academic abstract of the same paper. Then use [the question groups](references/clarifying-questions.md) and ask about the dimension that matters.
 
 ---
 

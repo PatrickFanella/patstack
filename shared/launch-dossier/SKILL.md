@@ -3,7 +3,7 @@ name: launch-dossier
 description: "Use when creating or refreshing a product marketing packet: brief, positioning, landing and channel copy, demo brief, campaign plan. Not for a single post, paid campaigns or publishing."
 ---
 
-# Marketing packet
+# launch-dossier
 
 Use for a product's marketing packet, reusable marketing starter, or refresh of an existing packet. A single post can use the established product context directly. Repository implementation audits, visual identity creation, paid campaign operation, and publishing retain their separate workflows.
 
@@ -16,4 +16,4 @@ Use for a product's marketing packet, reusable marketing starter, or refresh of 
 
 Return the actual saved packet, source record, checks run, and remaining verification. Preserve imported reference material separately. Drafting and syncing the files does not authorize messages, paid placements, automation, or publication. For cross-device requests, use the environment's guarded sync/deployment owner and verify each destination; do not overwrite dirty project docs.
 
-This procedure combines the original Subcult packet structure with reviewed ideas from Okara's Content Brief, Brand Voice, and Repurposing. The portable assets contain original Subcult prompts and templates. See `provenance.json`; unreviewed third-party libraries remain outside discovery.
+This procedure combines this collection's original packet structure with reviewed ideas from Okara's Content Brief, Brand Voice, and Repurposing. The portable assets contain this collection's original prompts and templates. See `provenance.json`; unreviewed third-party libraries remain outside discovery.

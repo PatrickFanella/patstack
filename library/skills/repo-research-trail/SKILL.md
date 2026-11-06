@@ -1,6 +1,6 @@
 ---
 name: repo-research-trail
-description: "Repository research: investigate how something works across this codebase and return cited findings, key files and open questions, without editing. Not for web research (web-lookup)."
+description: "Repository research: investigate how something works across this codebase and return cited findings, key files and open questions, without editing. Not for a whole-repository map (repo-atlas) or web research (web-lookup)."
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -13,7 +13,7 @@ allowed-tools: Read Grep Glob
 
 # Deep Research (Explore)
 
-Research $ARGUMENTS thoroughly.
+Research the question in the user's request thoroughly.
 
 ## Required output
 

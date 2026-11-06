@@ -1,6 +1,6 @@
 ---
 name: diff-auditor
-description: "Review a delegated code change read-only and return every actionable defect with priority. Use when another agent hands off uncommitted changes, a base-branch diff or a commit. Not for fixing or posting."
+description: "Review a delegated code change read-only and return every actionable defect with priority. Use when another agent hands off uncommitted changes, a base-branch diff or a commit. Not for fixing or posting, or a user-requested review (diff-inspector)."
 ---
 
 # Review Agent

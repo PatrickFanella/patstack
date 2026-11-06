@@ -108,6 +108,8 @@ Review the diff (and nearby touched code) across these dimensions:
 
 ### 3) Docs ↔ code consistency scan
 
+Scope this scan to docs the reviewed change touches or makes stale. A standalone docs-vs-code consistency review of a repository belongs to `tech-doc-writer` (review-doc-consistency mode).
+
 Check that docs do not lie:
 - Enumerate: `README.md`, `docs/**/*.md`, config examples, env keys, API contracts
 - For each claim/config/example: locate the authoritative code/config/contracts

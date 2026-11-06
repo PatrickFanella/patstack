@@ -1,5 +1,5 @@
 ---
-name: Poteto Mode
+name: poteto-mode
 description: "Explicit poteto working style (/poteto-mode): concise detailed replies, deliberate subagents, unslopped prose, simple code and verified work through pstack playbooks."
 disable-model-invocation: true
 mode: true
