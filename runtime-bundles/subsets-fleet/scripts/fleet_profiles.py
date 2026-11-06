@@ -29,6 +29,19 @@ def lock_predecessors(stack):
                 raise RuntimeError('Finish predecessor transaction before migration/recovery: ' + str(pending[0]))
 
 
+def require_newest(run):
+    """Undo later runs first: only the run the selection state records may roll back."""
+    journal = install.read(run / 'journal.json')
+    if journal['status'] == 'rolled-back':
+        return
+    recorded = Path(install.read(install.statefile(STATE), {}).get('run') or '').name
+    # An interrupted apply never recorded itself; its predecessor is still current.
+    allowed = (Path(journal['plan']['previousInstalled'].get('run') or '').name
+               if journal['status'] == 'applying' else run.name)
+    if recorded != allowed:
+        raise RuntimeError('Roll back the newer transaction first: ' + str(STATE / recorded))
+
+
 def link_mode():
     # macOS applies umask to symlink modes; Linux always reports 0777.
     mask = os.umask(0)
@@ -166,6 +179,7 @@ def main(client=False):
             lock = stack.enter_context((STATE / 'installer.lock').open('a'))
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
             lock_predecessors(stack)
+            require_newest(args.run)
             install.rollback(args.run, STATE)
         print(json.dumps({'rolledBack': str(args.run)}))
     elif args.command == 'plan':

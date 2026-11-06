@@ -42,7 +42,7 @@ def main():
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         if args.command=='rollback':
             if not args.run:parser.error('--run required')
-            install.rollback(args.run,STATE);return
+            install.refuse_released(args.run);install.rollback(args.run,STATE);return
         if args.only_link:
             # A bounded link deployment must still use a committed manifest and installer.
             # Unrelated dirty sources do not authorize copying or linking their changes.

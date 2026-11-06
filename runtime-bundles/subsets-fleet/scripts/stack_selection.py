@@ -1,7 +1,9 @@
 """One Subsets owner for portable user skills and generated client views."""
 import hashlib
 import json
+import os
 from pathlib import Path
+import re
 
 import install
 
@@ -57,11 +59,36 @@ def text_op(path, actual, payload, action):
             'action': 'unchanged' if actual == desired else action}
 
 
+def reviewed_files(source, metadata, folders):
+    """Refuse bundle files that differ from, or are missing in, the build manifest."""
+    if 'files' not in metadata:
+        return
+    files = metadata['files']
+    for folder in folders:
+        prefix = folder.relative_to(source).as_posix() + '/'
+        for relative, expected in files.items():
+            if relative.startswith(prefix) and install.snapshot(source / relative) != expected:
+                raise RuntimeError('Selected source drift: ' + relative)
+        for parent, dirs, names in os.walk(folder):
+            # Running a bundled script writes bytecode caches; the build excludes them too.
+            dirs[:] = [d for d in dirs if d != '__pycache__']
+            names = [n for n in names if not n.endswith('.pyc')]
+            for name in names + [d for d in dirs if (Path(parent) / d).is_symlink()]:
+                relative = (Path(parent) / name).relative_to(source).as_posix()
+                if relative not in files:
+                    raise RuntimeError('Selected source drift: unreviewed file ' + relative)
+
+
 def plan(source, home, state, profiles, link_mode):
+    metadata = install.read(source / 'deployment-source.json')
+    # Catalogs and stack lists decide ownership; recheck them at every activation.
+    reviewed_files(source, metadata, [source / 'catalog', source / 'profiles'])
     config = install.read(source / 'catalog/skill-stacks.json')
     selected, sources = selection(source, profiles)
     qualification = install.read(source / 'catalog/qualification.json')['skills']
     previous = install.read(install.statefile(state), {'paths': {}})
+    # A completed retirement leaves a None record; that name is no longer owned.
+    owned = {dest: snapshot for dest, snapshot in previous['paths'].items() if snapshot is not None}
     for row in config['clients'].values():
         relative = Path(row['root'])
         if relative.is_absolute() or '..' in relative.parts:
@@ -112,7 +139,7 @@ def plan(source, home, state, profiles, link_mode):
     # Retire recorded views for deselected skills, and migrate only known source
     # names with matching predecessor receipts. Unknown/app-owned entries stay put.
     candidates = set(wanted)
-    for dest in previous['paths']:
+    for dest in owned:
         if Path(dest).parent in roots.values():
             candidates.add(dest)
     if not migrated:
@@ -126,8 +153,8 @@ def plan(source, home, state, profiles, link_mode):
         if path.parent not in roots.values() or path.name.startswith('.'):
             raise RuntimeError('Unexpected managed destination: ' + dest)
         actual = install.snapshot(path)
-        if dest in previous['paths']:
-            expected = previous['paths'][dest]
+        if dest in owned:
+            expected = owned[dest]
             if actual != expected:
                 raise RuntimeError('Preserve local edits before switching: ' + dest)
         elif actual is None:
@@ -142,17 +169,18 @@ def plan(source, home, state, profiles, link_mode):
                            'source': None, 'payload': None, 'group': 1,
                            'action': 'unchanged' if actual == desired else 'retire' if desired is None else 'link'})
     protected = dict(historical_protected)
-    metadata = install.read(source / 'deployment-source.json')
+    reviewed_files(source, metadata, [sources[name] for name in selected])
     for relative, expected in metadata.get('files', {}).items():
         path = source / relative
         if any(path.is_relative_to(sources[name]) for name in selected):
-            if install.snapshot(path) != expected:
-                raise RuntimeError('Selected source drift: ' + relative)
             protected[str(path)] = expected
+    # Stages named for one of this owner's runs are removed by that run's rollback.
+    runs = {p.name for p in state.glob('run-*') if (p / 'journal.json').is_file()}
     for root in roots.values():
         if root.is_dir():
             for path in root.iterdir():
-                if str(path) not in candidates:
+                stage = re.fullmatch(r'\..+\.stage-(run-[0-9a-f]+)', path.name)
+                if str(path) not in candidates and not (stage and stage.group(1) in runs):
                     protected[str(path)] = install.snapshot(path)
     if not migrated:
         # A path recorded by the old fleet adapter is already owned by Subsets;
@@ -183,7 +211,7 @@ def plan(source, home, state, profiles, link_mode):
         raise RuntimeError('Selection state changed; preserve it before switching')
     operations.append(text_op(selection_path, actual,
                               {'profiles': profiles or ['core'], 'skills': selected}, 'select'))
-    return {'sourceRoot': str(source), 'sourceRevision': install.read(source / 'deployment-source.json')['sourceRevision'],
+    return {'sourceRoot': str(source), 'sourceRevision': metadata['sourceRevision'],
             'operations': operations, 'protected': protected, 'previousInstalled': previous,
             'profiles': profiles or ['core'], 'skills': selected, 'clientExcluded': excluded,
             'claudeExcluded': excluded.get('claude', []), 'transferredPaths': sorted(transferred),

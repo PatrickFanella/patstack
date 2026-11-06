@@ -66,6 +66,12 @@ class UnifiedStackTests(unittest.TestCase):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(data))
 
+    def manifest(self):
+        # The same file inventory build-bundle.py records for a deployed bundle.
+        files = {str(p.relative_to(self.source)): installer.snapshot(p) for p in sorted(self.source.rglob('*'))
+                 if p.is_file() and '__pycache__' not in p.parts and p.name != 'deployment-source.json'}
+        self.write(self.source / 'deployment-source.json', {'sourceRevision': 'fixture', 'files': files})
+
     def cli(self, *args, success=True):
         r = subprocess.run([sys.executable, str(self.source / 'scripts/skill-profile'), *args],
                            env={**os.environ, 'HOME': str(self.home)}, capture_output=True, text=True)
@@ -265,7 +271,7 @@ class UnifiedStackTests(unittest.TestCase):
                 'pinned': {'library/skills/optional': fingerprint(installer.snapshot(path))}}})
             self.write(self.home / '.local/state/skill-review-20261103/run/receipt.json', {
                 'revision': 'pinned', 'current': [str(path)]})
-            self.write(self.source / 'deployment-source.json', {'sourceRevision': 'fixture', 'files': {}})
+            self.manifest()
             spec = importlib.util.spec_from_file_location('fixture_deploy', self.source / 'scripts/deploy-host.py')
             deploy = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(deploy)
@@ -289,3 +295,250 @@ class UnifiedStackTests(unittest.TestCase):
         finally:
             sys.path.remove(str(ROOT / 'scripts'))
             sys.path.remove(str(module))
+
+    # Recovery paths: later writers, interrupted transactions and reruns.
+    def env(self):
+        return {**os.environ, 'HOME': str(self.home)}
+
+    def faulted_activate(self, action, phase, dest=None, profiles=()):
+        """Run activation in-process and stop it at one installer fault boundary."""
+        driver = '\n'.join([
+            'import sys', f'sys.path.insert(0, {str(self.source / "scripts")!r})',
+            'import install, fleet_profiles', 'real = install.apply',
+            'def apply(plan, state, **kw):',
+            f'    index = next(i for i, op in enumerate(plan["operations"]) if op["action"] == {action!r}'
+            f' and ({dest!r} is None or op["destination"] == {dest!r}))',
+            '    def fault(name, i):',
+            f'        if name == {phase!r} and i == index: raise SystemExit("injected fault")',
+            '    return real(plan, state, fault=fault)',
+            'install.apply = apply', f'fleet_profiles.activate({list(profiles)!r})'])
+        result = subprocess.run([sys.executable, '-c', driver], env=self.env(), capture_output=True, text=True)
+        self.assertIn('injected fault', result.stderr)
+        return next(self.state.glob('run-*'))
+
+    def detach_helper(self, *args, umask=None):
+        result = subprocess.run([sys.executable, str(self.source / 'scripts/prepare-client-root.py'), *args],
+                                env=self.env(), capture_output=True, text=True,
+                                preexec_fn=(lambda: os.umask(umask)) if umask is not None else None)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        return json.loads(result.stdout)
+
+    def generated_root(self):
+        generated = self.home / '.agents/.generated/skill-profiles/full/skills'
+        generated.mkdir(parents=True)
+        (generated / 'base').symlink_to(self.roots['codex'] / 'base')
+        (generated / 'shared').symlink_to(self.roots['shared'] / 'shared')
+        shutil.rmtree(self.roots['claude'])
+        self.roots['claude'].symlink_to(generated)
+        return generated
+
+    def test_unrelated_entry_in_detached_root_is_preserved_through_activation_and_rollback(self):
+        generated = self.generated_root()
+        before = installer.snapshot(generated)
+        detach = self.detach_helper('apply')
+        plugin = self.roots['claude'] / 'new-plugin-skill'
+        plugin.mkdir()
+        (plugin / 'SKILL.md').write_text('added by a plugin after detachment')
+        selection = self.cli('activate')
+        self.assertIn(str(plugin), selection['preserved'])
+        self.cli('verify', 'core')
+        refused = subprocess.run([sys.executable, str(self.source / 'scripts/prepare-client-root.py'),
+                                  'rollback', '--run', detach['run']], env=self.env(), capture_output=True, text=True)
+        self.assertIn('Subsets ownership transfer', refused.stderr)
+        self.cli('rollback', '--run', selection['run'])
+        restored = self.detach_helper('rollback', '--run', detach['run'])
+        self.assertTrue(self.roots['claude'].is_symlink())
+        self.assertEqual(installer.snapshot(generated), before)
+        kept = Path(detach['run']) / 'preserved-entries/new-plugin-skill/SKILL.md'
+        self.assertEqual(restored['preservedEntries'], [str(kept.parent)])
+        self.assertEqual(kept.read_text(), 'added by a plugin after detachment')
+
+    def test_detach_reruns_after_rollback_and_ignores_the_caller_umask(self):
+        generated = self.generated_root()
+        before = installer.snapshot(self.roots['claude'])
+        stage = self.home / '.local/state/subsets-fleet/client-root-migration/view-source'
+        for _ in range(2):
+            run = self.detach_helper('apply', umask=0o027)['run']
+            self.assertFalse(stage.exists())
+            self.assertFalse(self.roots['claude'].is_symlink())
+            self.detach_helper('rollback', '--run', run, umask=0o027)
+            self.assertFalse(stage.exists())
+            self.assertEqual(installer.snapshot(self.roots['claude']), before)
+        self.assertTrue((generated / 'base').is_symlink())
+
+    def test_takeover_rollback_restores_released_records_beside_later_link_records(self):
+        receipt = self.cli('activate')
+        later = {str(self.home / '.local/bin/tool'): {'type': 'symlink', 'target': '/elsewhere', 'mode': 0o777}}
+        # link-workstation.py re-saves its manifest for its remaining non-skill links.
+        installer.save(self.links, {'sourceRevision': 'later', 'run': str(self.links.parent / 'run-later'), 'paths': later})
+        self.cli('rollback', '--run', receipt['run'])
+        restored = json.loads(self.links.read_text())
+        self.assertEqual(restored['paths'], {**later, str(self.roots['claude'] / 'base'): self.original[self.roots['claude'] / 'base']})
+        self.assertNotIn('releasedTo', restored)
+        for path in [self.personal, self.roots['codex'] / 'base', self.roots['claude'] / 'base']:
+            self.assertEqual(installer.snapshot(path), self.original[path])
+        # A later claim on a released record is real content: refuse, change nothing.
+        receipt = self.cli('activate')
+        released = self.links.read_bytes()
+        claimed = json.loads(released)
+        claimed['paths'][str(self.roots['claude'] / 'base')] = {'type': 'symlink', 'target': '/other', 'mode': 0o777}
+        installer.save(self.links, claimed)
+        view = installer.snapshot(self.roots['claude'] / 'base')
+        self.cli('rollback', '--run', receipt['run'], success=False)
+        self.assertEqual(installer.snapshot(self.roots['claude'] / 'base'), view)
+        self.links.write_bytes(released)
+        self.cli('rollback', '--run', receipt['run'])
+
+    def test_predecessor_rollbacks_refuse_to_reclaim_released_paths(self):
+        self.cli('activate')
+        old = self.links.parent / 'run-before-takeover'
+        self.write(old / 'journal.json', {'status': 'complete', 'progress': {}, 'plan': {
+            'operations': [], 'previousInstalled': {'paths': {str(self.roots['claude'] / 'base'): self.original[self.roots['claude'] / 'base']}}}})
+        manifest = installer.snapshot(self.links)
+        for command in [[str(ROOT / 'scripts/link-workstation.py'), 'rollback', '--run', str(old)],
+                        [str(ROOT / 'scripts/install.py'), 'rollback', '--state', str(self.links.parent), '--run', str(old)]]:
+            result = subprocess.run([sys.executable, *command], env=self.env(), capture_output=True, text=True)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn('Subsets owns released skill paths', result.stderr)
+        self.assertEqual(installer.snapshot(self.links), manifest)
+
+    def test_retired_name_reused_by_another_owner_stays_foreign(self):
+        self.cli('activate', 'extra')
+        self.cli('deactivate')
+        foreign = self.roots['cursor'] / 'optional'
+        foreign.mkdir()
+        (foreign / 'SKILL.md').write_text('another owner')
+        result = self.cli('deactivate')
+        self.assertIn(str(foreign), result['preserved'])
+        refused = self.cli('activate', 'extra', success=False)
+        self.assertIn('Unmanaged collision', refused.stderr)
+        self.assertEqual((foreign / 'SKILL.md').read_text(), 'another owner')
+
+    def test_rollback_rechecks_each_path_immediately_before_removal(self):
+        from unittest.mock import patch
+        target, source, state = self.home / 'target', self.home / 'new', self.home / 'toy-state'
+        target.write_text('old')
+        source.write_text('new')
+        plan = {'sourceRoot': str(self.home), 'sourceRevision': 'toy', 'protected': {}, 'previousInstalled': {'paths': {}},
+                'operations': [{'destination': str(target), 'source': str(source), 'expected': installer.snapshot(target),
+                                'desired': installer.snapshot(source), 'group': 1, 'payload': None, 'action': 'install'}]}
+        run = installer.apply(plan, state)
+        save = installer.save
+        def edit_after_preflight(path, value):
+            save(path, value)
+            if isinstance(value, dict) and value.get('rollbackProgress', {}).get('0') == 'restoring':
+                target.write_text('user edit')
+        with patch.object(installer, 'save', side_effect=edit_after_preflight):
+            with self.assertRaisesRegex(RuntimeError, 'intervening edits'):
+                installer.rollback(run, state)
+        self.assertEqual(target.read_text(), 'user edit')
+
+    def test_failed_staging_leaves_no_stage_and_rollback_removes_a_crashed_one(self):
+        from unittest.mock import patch
+        target, source, state = self.home / 'target', self.home / 'new', self.home / 'toy-state'
+        target.write_text('old')
+        source.write_text('new')
+        plan = {'sourceRoot': str(self.home), 'sourceRevision': 'toy', 'protected': {}, 'previousInstalled': {'paths': {}},
+                'operations': [{'destination': str(target), 'source': str(source), 'expected': installer.snapshot(target),
+                                'desired': installer.snapshot(source), 'group': 1, 'payload': None, 'action': 'install'}]}
+        copy = installer.copy
+        def corrupt_stage(src, dst):
+            copy(src, dst)
+            if '.stage-' in Path(dst).name:
+                Path(dst).write_text('corrupt')
+        with patch.object(installer, 'copy', side_effect=corrupt_stage):
+            with self.assertRaisesRegex(RuntimeError, 'Staging failed'):
+                installer.apply(plan, state)
+        self.assertEqual(list(self.home.glob('.target.stage-*')), [])
+        run = next(state.glob('run-*'))
+        installer.rollback(run, state)
+        self.assertEqual(target.read_text(), 'old')
+        # A hard crash after staging leaves an entry named for the run in a client root.
+        shared = str(self.roots['shared'] / 'base')
+        run = self.faulted_activate('link', 'after_remove', dest=shared)
+        stage = self.roots['shared'] / ('.base.stage-' + run.name)
+        stage.symlink_to(self.source / 'skills/base')
+        self.assertNotIn(str(stage), self.cli('plan')['protected'])
+        self.cli('rollback', '--run', str(run))
+        self.assertFalse(stage.is_symlink())
+        for path, before in self.original.items():
+            self.assertEqual(installer.snapshot(path), before)
+
+    def test_interrupted_takeover_between_release_and_marker_rolls_back(self):
+        run = self.faulted_activate('take-ownership', 'after_backup')
+        self.assertEqual(json.loads(self.links.read_text())['paths'], {})
+        self.assertFalse((self.state / 'ownership.json').exists())
+        refused = self.cli('activate', success=False)
+        self.assertIn('Roll back unfinished transaction', refused.stderr)
+        self.cli('rollback', '--run', str(run))
+        for path, before in self.original.items():
+            self.assertEqual(installer.snapshot(path), before)
+        self.cli('activate')
+        self.cli('verify', 'core')
+
+    def test_older_run_rollback_refuses_while_a_newer_run_exists(self):
+        first = self.cli('activate', 'extra')
+        second = self.cli('activate', 'extra')
+        refused = self.cli('rollback', '--run', first['run'], success=False)
+        self.assertIn('newer transaction first', refused.stderr)
+        self.cli('verify', 'extra')
+        self.cli('rollback', '--run', second['run'])
+        self.cli('rollback', '--run', first['run'])
+        for path, before in self.original.items():
+            self.assertEqual(installer.snapshot(path), before)
+
+    def test_unreviewed_selected_file_and_catalog_or_profile_drift_refuse_activation(self):
+        self.manifest()
+        added = self.source / 'skills/base/scripts/run.sh'
+        added.parent.mkdir()
+        added.write_text('#!/bin/sh\necho unreviewed\n')
+        self.assertIn('unreviewed file skills/base/scripts/run.sh', self.cli('activate', success=False).stderr)
+        shutil.rmtree(added.parent)
+        cache = self.source / 'skills/base/__pycache__/helper.cpython-311.pyc'
+        cache.parent.mkdir()
+        cache.write_bytes(b'bytecode written by running a bundled script')
+        cached = self.cli('activate', 'core')
+        self.cli('rollback', '--run', cached['run'])
+        shutil.rmtree(cache.parent)
+        core = self.source / 'profiles/core.txt'
+        core.write_text('base\n')
+        self.assertIn('profiles/core.txt', self.cli('activate', success=False).stderr)
+        core.write_text('base\nshared\n')
+        self.write(self.source / 'catalog/extra-owner.json', {})
+        self.assertIn('catalog/extra-owner.json', self.cli('activate', success=False).stderr)
+        (self.source / 'catalog/extra-owner.json').unlink()
+        self.assertFalse((self.state / 'ownership.json').exists())
+        self.cli('activate')
+
+    def test_deploy_failure_after_core_activation_reruns_and_rolls_back(self):
+        from unittest.mock import patch
+        self.manifest()
+        spec = importlib.util.spec_from_file_location('fixture_deploy_retry', self.source / 'scripts/deploy-host.py')
+        deploy = importlib.util.module_from_spec(spec)
+        sys.path[:0] = [str(self.source / 'scripts')]
+        self.addCleanup(sys.path.remove, str(self.source / 'scripts'))
+        spec.loader.exec_module(deploy)
+        check_output = subprocess.check_output
+        def run_deploy(groups, stamp):
+            def node_output(args, **kwargs):
+                if args[0] != 'fixture-node':
+                    return check_output(args, **kwargs)
+                if args[-1] == '--version':
+                    return '0.2.0-alpha.6\n'
+                if args[-2:] == ['groups', '--json']:
+                    return json.dumps({'existingProfiles': groups})
+                return json.dumps({'skills': [], 'warnings': []})
+            with patch.object(Path, 'home', return_value=self.home), patch.dict(os.environ, self.env()), \
+                    patch.object(sys, 'argv', ['deploy-host.py', '--node', 'fixture-node', '--python', sys.executable]), \
+                    patch.object(subprocess, 'check_output', side_effect=node_output), \
+                    patch.object(deploy.time, 'strftime', return_value=stamp):
+                deploy.main()
+        with self.assertRaisesRegex(RuntimeError, 'category readback mismatch'):
+            run_deploy(['core'], '20261106T000000Z')
+        self.assertTrue((self.state / 'ownership.json').exists())
+        run_deploy(['core', 'extra'], '20261106T000001Z')
+        self.cli('verify', 'core')
+        while run := installer.read(installer.statefile(self.state), {}).get('run'):
+            self.cli('rollback', '--run', run)
+        for path, before in self.original.items():
+            self.assertEqual(installer.snapshot(path), before)

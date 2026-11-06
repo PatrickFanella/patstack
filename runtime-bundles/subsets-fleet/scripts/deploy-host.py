@@ -39,7 +39,7 @@ def main():
     # Entries this adapter placed may be replaced or retired by the new selection;
     # every other pre-existing shared entry must come through unchanged.
     selector_state = install.read(install.statefile(home / '.local/state/subsets-fleet/profiles'), {'paths': {}})
-    adapter_owned = set(selector_state['paths'])
+    adapter_owned = {path for path, record in selector_state['paths'].items() if record is not None}
     if (source / 'catalog/skill-stacks.json').exists():
         config = install.read(source / 'catalog/skill-stacks.json')
         for relative in config['migrationReceipts']:
