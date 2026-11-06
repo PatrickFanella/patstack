@@ -70,6 +70,9 @@ def reviewed_files(source, metadata, folders):
             if relative.startswith(prefix) and install.snapshot(source / relative) != expected:
                 raise RuntimeError('Selected source drift: ' + relative)
         for parent, dirs, names in os.walk(folder):
+            # Running a bundled script writes bytecode caches; the build excludes them too.
+            dirs[:] = [d for d in dirs if d != '__pycache__']
+            names = [n for n in names if not n.endswith('.pyc')]
             for name in names + [d for d in dirs if (Path(parent) / d).is_symlink()]:
                 relative = (Path(parent) / name).relative_to(source).as_posix()
                 if relative not in files:

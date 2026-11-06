@@ -494,6 +494,12 @@ class UnifiedStackTests(unittest.TestCase):
         added.write_text('#!/bin/sh\necho unreviewed\n')
         self.assertIn('unreviewed file skills/base/scripts/run.sh', self.cli('activate', success=False).stderr)
         shutil.rmtree(added.parent)
+        cache = self.source / 'skills/base/__pycache__/helper.cpython-311.pyc'
+        cache.parent.mkdir()
+        cache.write_bytes(b'bytecode written by running a bundled script')
+        cached = self.cli('activate', 'core')
+        self.cli('rollback', '--run', cached['run'])
+        shutil.rmtree(cache.parent)
         core = self.source / 'profiles/core.txt'
         core.write_text('base\n')
         self.assertIn('profiles/core.txt', self.cli('activate', success=False).stderr)
