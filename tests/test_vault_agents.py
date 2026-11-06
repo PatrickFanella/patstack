@@ -28,7 +28,7 @@ class DeploymentGuardTests(unittest.TestCase):
             root = Path(folder)
             source, target = root / 'source', root / 'target'
             source.write_text('same')
-            target.write_text('same')
+            target.write_text('same'); target.chmod(0o644)
             self.assertEqual(module.plan([{'source': str(source), 'destination': str(target), 'previous_sha256': None}]), ([], []))
 
     def test_symlink_parent_is_rejected(self):
@@ -41,6 +41,21 @@ class DeploymentGuardTests(unittest.TestCase):
             changes, errors = module.plan([{'source': str(source), 'destination': str(root / 'linked/target'), 'previous_sha256': None}])
             self.assertFalse(changes)
             self.assertTrue(errors)
+
+    def test_group_writable_target_is_normalized(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            source, target = root / 'source', root / 'target'
+            source.write_text('same'); source.chmod(0o664)
+            target.write_text('same'); target.chmod(0o664)
+            changes, errors = module.plan([{'source': str(source), 'destination': str(target), 'previous_sha256': None}])
+            self.assertEqual((len(changes), errors), (1, []))
+            self.assertEqual(module.mode(source), 0o644)
+
+    def test_committed_sources_pass(self):
+        rows = [{'source': 'vault-agents/ars-malefica/AGENTS.md'},
+                {'source': 'vault-agents/ars-malefica/skills/guitar-practice-coach/scripts/validate-practice-system.py'}]
+        self.assertEqual(module.uncommitted(rows), [])
 
 
 if __name__ == '__main__':

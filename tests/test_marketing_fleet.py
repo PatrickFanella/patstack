@@ -1,5 +1,6 @@
 import importlib.util
 import base64
+import json
 from pathlib import Path
 import tempfile
 import unittest
@@ -53,6 +54,21 @@ class MarketingFleetTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, 'retains its owner'):
                 fleet.receive('plan', payload, home)
             self.assertEqual((dest/'SKILL.md').read_text(), 'other owner')
+
+    def test_subsets_owned_skill_roots_are_left_alone(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            home = Path(tmp); payload = self.payload()
+            marker = home/'.local/state/subsets-fleet/profiles/ownership.json'
+            marker.parent.mkdir(parents=True)
+            marker.write_text(json.dumps({'owner': 'subsets', 'roots': {
+                'shared': str(home/'.agents/skills'), 'claude': str(home/'.claude/skills')}}))
+            result = fleet.receive('plan', payload, home)
+            self.assertEqual([o['destination'] for o in result['operations']],
+                             [str(home/'Work/Research/Marketing-Packets/2026-10-19')])
+            fleet.receive('apply', payload, home)
+            self.assertFalse((home/'.agents/skills/launch-dossier').exists())
+            self.assertFalse((home/'.claude/skills/launch-dossier').is_symlink())
+            self.assertTrue((home/'Work/Research/Marketing-Packets/2026-10-19/README.md').exists())
 
 
 if __name__ == '__main__':

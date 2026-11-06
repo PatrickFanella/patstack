@@ -112,6 +112,21 @@ class DeployTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, 'Changed since deployment'):
             gi.remote('rollback', newer)
 
+    def test_rollback_keeps_previous_run_protection_and_refuses_older_runs(self):
+        self.deploy()
+        first = json.loads((self.home / gi.STATE / 'latest.json').read_text())['run']
+        newer = dict(self.payload)
+        newer['files'] = {c: t + '\n- extra\n' for c, t in self.payload['files'].items()}
+        newer['hashes'] = {r: gi.digest(t.encode()) for r, t in newer['files'].items()}
+        self.deploy(newer)
+        with self.assertRaisesRegex(RuntimeError, 'Only the latest run'):
+            gi.remote('rollback', newer, first)
+        gi.remote('rollback', newer)
+        self.assertEqual(self.codex.read_text(), self.payload['files']['.codex/AGENTS.md'])
+        self.codex.write_text(self.codex.read_text() + 'local tweak\n')
+        with self.assertRaisesRegex(RuntimeError, 'Hand-edited'):
+            gi.remote('plan', self.payload)
+
     def test_retired_working_copy_removed_only_when_unedited(self):
         dest = self.home / gi.RETIRED[0]
         dest.parent.mkdir(parents=True)

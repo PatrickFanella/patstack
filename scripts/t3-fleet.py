@@ -33,6 +33,14 @@ def remote(command, payload):
     state = home / '.local/state/t3-fleet'
     state.mkdir(parents=True, exist_ok=True, mode=0o700)
     planfile = state / 'plan.json'
+    if command == 'rollback':
+        return rollback(home, state / Path(payload['run']).name)
+    # Subsets owns user skill views after takeover; skip its roots and keep managing MCP config.
+    ownership = home / '.local/state/subsets-fleet/profiles/ownership.json'
+    owned = set(json.loads(ownership.read_text()).get('roots', {}).values()) if ownership.exists() else set()
+    payload = dict(payload)
+    payload['subsetsOwned'] = sorted(p for p in payload['skills'] if str((home / p).parent) in owned)
+    payload['skills'] = {p: files for p, files in payload['skills'].items() if p not in payload['subsetsOwned']}
     if command == 'plan':
         payload['before'] = {p: snapshot(home / p) for p in payload['skills']}
         payload['preservedSkills'] = [p for p, before in payload['before'].items()
@@ -51,7 +59,7 @@ def remote(command, payload):
                 if client == 'claude' and name in payload.get('claudeAccountManaged', []):
                     if name in current:
                         backups = list(state.glob('*/before/.claude.json'))
-                        introduced = any(name not in json.loads(p.read_text()).get('mcpServers', {}) for p in backups)
+                        introduced = any(name not in json.loads(p.read_text() or '{}').get('mcpServers', {}) for p in backups)
                         if current[name] != wanted or not introduced:
                             raise RuntimeError('Preserve preexisting account MCP entry: ' + name)
                         removals.append(name)
@@ -65,9 +73,13 @@ def remote(command, payload):
         payload['removeClaudeDuplicates'] = removals
         planfile.write_text(json.dumps(payload))
         planfile.chmod(0o600)
-        print(json.dumps({'skillsChanged': [p for p, before in payload['before'].items() if p not in payload['preservedSkills'] and before != desired_snapshot(payload['skills'][p])], 'preservedSkills': payload['preservedSkills'], 'mcpAdditions': additions, 'removeClaudeDuplicates': removals}))
+        print(json.dumps({'skillsChanged': [p for p, before in payload['before'].items() if p not in payload['preservedSkills'] and before != desired_snapshot(payload['skills'][p])], 'preservedSkills': payload['preservedSkills'], 'subsetsOwned': payload['subsetsOwned'], 'mcpAdditions': additions, 'removeClaudeDuplicates': removals}))
         return
+    if not planfile.exists():
+        raise RuntimeError('No preview at ' + str(planfile) + '; run plan first')
     plan = json.loads(planfile.read_text())
+    if plan.get('subsetsOwned', []) != payload['subsetsOwned']:
+        raise RuntimeError('Subsets ownership changed since plan; preview again')
     if plan['draft-reviser'] != payload['draft-reviser'] or plan['skills'] != payload['skills'] or plan['mcpServers'] != payload['mcpServers'] or plan.get('additive') != payload.get('additive'):
         raise RuntimeError('Source changed since plan; preview again')
     managed_skills = {p: files for p, files in payload['skills'].items() if p not in plan.get('preservedSkills', [])}
@@ -138,7 +150,11 @@ def remote(command, payload):
                 content = json.dumps(config, indent=2) + '\n'
             path.parent.mkdir(parents=True, exist_ok=True)
             temp = path.with_name(path.name + '.t3-fleet-new')
-            temp.write_text(content);temp.chmod(0o600);os.replace(temp, path)
+            temp.write_text(content);temp.chmod(0o600)
+            if (path.read_bytes() if path.exists() else b'') != old:
+                temp.unlink()
+                raise RuntimeError('Config changed during deployment; preview again: ' + relative)
+            os.replace(temp, path)
         (run / 'after.json').write_text(json.dumps({p: snapshot(home / p) for p in {**plan['before'], **plan['configBefore']}}))
         print('Backup and deployment receipt: ' + str(run))
     failures = [p for p, files in managed_skills.items() if snapshot(home / p) != desired_snapshot(files)]
@@ -155,7 +171,34 @@ def remote(command, payload):
                 failures.append(client + ':' + name)
     if failures:
         raise RuntimeError('Verification failed: ' + ', '.join(failures))
-    print(json.dumps({'verifiedSkillDirectories': len(managed_skills), 'preservedSkills': plan.get('preservedSkills', []), 'sharedMcpServers': list(payload['mcpServers']), 'draft-reviser': payload['draft-reviser']}))
+    print(json.dumps({'verifiedSkillDirectories': len(managed_skills), 'preservedSkills': plan.get('preservedSkills', []), 'subsetsOwned': payload['subsetsOwned'], 'sharedMcpServers': list(payload['mcpServers']), 'draft-reviser': payload['draft-reviser']}))
+
+
+def rollback(home, run):
+    plan = json.loads((run / 'plan.json').read_text())
+    after = json.loads((run / 'after.json').read_text())
+    before = {**plan['before'], **plan['configBefore']}
+    changed = [p for p in after if after[p] != before[p]]
+    for relative in changed:
+        if snapshot(home / relative) != after[relative]:
+            raise RuntimeError('Changed since deployment; preserve it: ' + relative)
+    for relative in changed:
+        path, backup = home / relative, run / 'before' / relative
+        if path.is_dir() and not path.is_symlink():
+            shutil.rmtree(path)
+        elif path.exists() or path.is_symlink():
+            path.unlink()
+        if before[relative] is None:
+            continue
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if backup.is_symlink():
+            path.symlink_to(os.readlink(backup))
+        elif backup.is_dir():
+            shutil.copytree(backup, path, symlinks=True)
+        else:
+            shutil.copy2(backup, path)
+            path.chmod(before[relative]['mode'])
+    print(json.dumps({'restored': changed, 'run': str(run)}))
 
 
 def desired_snapshot(files):
@@ -174,10 +217,13 @@ def desired_snapshot(files):
 def main():
     manifest = json.loads((ROOT / 'catalog/t3-fleet.json').read_text())
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=['plan', 'apply', 'verify'])
+    parser.add_argument('command', choices=['plan', 'apply', 'verify', 'rollback'])
     parser.add_argument('--host', required=True, choices=manifest['hosts'])
     parser.add_argument('--additive', action='store_true', help='Install missing skills while preserving differing existing owners and linked roots')
+    parser.add_argument('--run', help='Receipt directory name for rollback')
     args = parser.parse_args()
+    if args.command == 'rollback' and not args.run:
+        parser.error('--run required')
     host_home = manifest.get('hostHomes', {}).get(args.host, '/home/onnwee')
     host_python = manifest.get('hostPython', {}).get(args.host, 'python3')
     revision = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
@@ -199,7 +245,7 @@ def main():
             skills[root + '/' + source.name] = files
             skills['.claude/skills/' + source.name] = {'link': host_home + '/' + root + '/' + source.name}
     mcp_servers = {name: {**spec, **manifest.get('hostMcpOverrides', {}).get(args.host, {}).get(name, {})} for name, spec in manifest['mcpServers'].items()}
-    payload = {'additive': args.additive, 'draft-reviser': revision, 'skills': skills, 'mcpServers': mcp_servers, 'claudeAccountManaged': manifest.get('claudeAccountManaged', [])}
+    payload = {'additive': args.additive, 'draft-reviser': revision, 'skills': skills, 'mcpServers': mcp_servers, 'claudeAccountManaged': manifest.get('claudeAccountManaged', []), 'run': args.run}
     code = "__file__ = '/tmp/t3-fleet-deployer.py'\n" + Path(__file__).read_text().replace("if __name__ == '__main__':\n    main()", "remote(sys.argv[1], json.load(sys.stdin))")
     command = [host_python, '-c', code, args.command] if args.host == 'kvant' else ['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', args.host, shlex.join([host_python, '-c', code, args.command])]
     subprocess.run(command, input=json.dumps(payload), text=True, check=True)

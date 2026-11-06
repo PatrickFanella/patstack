@@ -15,11 +15,12 @@ def discover(cwds, codex='codex'):
   proc.stdin.write(json.dumps({'id':i,'method':method,'params':params})+'\n');proc.stdin.flush()
   deadline=time.monotonic()+40
   while time.monotonic()<deadline:
-   msg=messages.get(timeout=max(0.1,deadline-time.monotonic()))
+   try:msg=messages.get(timeout=max(0.1,deadline-time.monotonic()))
+   except queue.Empty:break
    if msg.get('id')==i:
     if 'error' in msg:raise RuntimeError(msg['error'])
     return msg['result']
-  raise TimeoutError(method)
+  raise TimeoutError('Codex app-server did not answer '+method+' within 40 seconds')
  try:
   server=request(1,'initialize',{'clientInfo':{'name':'personal-skill-audit','version':'1.0.0'},'capabilities':{'experimentalApi':True}})
   proc.stdin.write(json.dumps({'method':'initialized'})+'\n');proc.stdin.flush()

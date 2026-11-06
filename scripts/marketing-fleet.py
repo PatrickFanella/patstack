@@ -11,6 +11,7 @@ import re
 import shlex
 import subprocess
 import sys
+import time
 from urllib.parse import quote, unquote
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,6 +39,9 @@ def receive(command, payload, home=None):
         if command == 'plan':
             operations, preserved = [], {}
             stage = home / '.local/share/marketing-fleet/sources' / digest
+            # Subsets owns user skill views after takeover; leave its roots alone.
+            ownership = read(home / '.local/state/subsets-fleet/profiles/ownership.json', {})
+            owned = set(ownership.get('roots', {}).values())
             for relative, spec in sorted(desired_map.items()):
                 parts = PurePosixPath(relative).parts
                 if not parts or relative.startswith('/') or '..' in parts:
@@ -46,6 +50,9 @@ def receive(command, payload, home=None):
                         or relative.startswith('Work/Research/Marketing-Packets/')):
                     raise RuntimeError('Unexpected destination scope')
                 dest = home / relative
+                if str(dest.parent) in owned:
+                    preserved[str(dest)] = snapshot(dest)
+                    continue
                 linked_parent = next((p for p in dest.parents if p.is_symlink()), None)
                 if linked_parent:
                     if relative.startswith('.claude/skills/'):
@@ -169,7 +176,7 @@ def bundle(packets):
     notes = '# Marketing reading bundle\n\nThese are dated reading copies. Edit the owning project or skill source, then prepare a new reviewed sync.\n\n'
     notes += '\n'.join('- '+k+': `'+v+'`' for k,v in packet_sources.items())+'\n'
     files['README.md'] = base64.b64encode(notes.encode()).decode()
-    destinations['Work/Research/Marketing-Packets/2026-10-19'] = {'files': files}
+    destinations['Work/Research/Marketing-Packets/'+time.strftime('%Y-%m-%d', time.gmtime())] = {'files': files}
     installer = (ROOT / 'scripts/install.py').read_text()
     return {'sourceRoot': str(ROOT), 'sourceRevision': revision,
             'installer': installer, 'destinations': destinations, 'packetSources': packet_sources}

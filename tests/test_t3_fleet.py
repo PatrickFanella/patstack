@@ -89,6 +89,42 @@ class FleetDeploymentTests(unittest.TestCase):
         backups = list((self.home / '.local/state/t3-fleet').glob('*/before/.codex/skills/example'))
         self.assertTrue(backups[0].is_symlink())
 
+    def test_skips_subsets_owned_roots_but_manages_mcp(self):
+        marker = self.home / '.local/state/subsets-fleet/profiles/ownership.json'
+        marker.parent.mkdir(parents=True)
+        marker.write_text(json.dumps({'owner': 'subsets', 'roots': {'codex': str(self.home / '.codex/skills')}}))
+        self.run_stage('plan'); self.run_stage('apply'); self.run_stage('verify')
+        self.assertFalse((self.home / '.codex/skills/example').exists())
+        self.assertIn('example.com/mcp', (self.home / '.codex/config.toml').read_text())
+
+    def test_rollback_restores_backups_and_refuses_later_edits(self):
+        skill = self.home / '.codex/skills/example'
+        skill.mkdir(parents=True)
+        (skill / 'SKILL.md').write_text('old skill')
+        self.run_stage('plan'); self.run_stage('apply')
+        run = next(p for p in (self.home / '.local/state/t3-fleet').iterdir() if p.is_dir())
+        self.payload['run'] = run.name
+        (self.home / '.claude.json').write_text('{}')
+        with self.assertRaisesRegex(RuntimeError, 'preserve it'):
+            self.run_stage('rollback')
+        (self.home / '.claude.json').write_text(json.dumps({'mcpServers': {'docs': {'type': 'http', 'url': 'https://example.com/mcp'}}}, indent=2) + '\n')
+        self.run_stage('rollback')
+        self.assertEqual((skill / 'SKILL.md').read_text(), 'old skill')
+        self.assertFalse((self.home / '.claude.json').exists())
+        self.assertFalse((self.home / '.codex/config.toml').exists())
+
+    def test_plan_accepts_empty_backup_of_absent_claude_config(self):
+        self.payload['claudeAccountManaged'] = ['docs']
+        backup = self.home / '.local/state/t3-fleet/1/before/.claude.json'
+        backup.parent.mkdir(parents=True)
+        backup.write_text('')
+        (self.home / '.claude.json').write_text(json.dumps({'mcpServers': {'docs': {'type': 'http', 'url': 'https://example.com/mcp'}}}))
+        self.run_stage('plan')
+
+    def test_verify_without_plan_explains(self):
+        with self.assertRaisesRegex(RuntimeError, 'run plan first'):
+            self.run_stage('verify')
+
 
 if __name__ == '__main__':
     unittest.main()
