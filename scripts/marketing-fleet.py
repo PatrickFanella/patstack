@@ -11,7 +11,6 @@ import re
 import shlex
 import subprocess
 import sys
-import time
 from urllib.parse import quote, unquote
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -176,7 +175,9 @@ def bundle(packets):
     notes = '# Marketing reading bundle\n\nThese are dated reading copies. Edit the owning project or skill source, then prepare a new reviewed sync.\n\n'
     notes += '\n'.join('- '+k+': `'+v+'`' for k,v in packet_sources.items())+'\n'
     files['README.md'] = base64.b64encode(notes.encode()).decode()
-    destinations['Work/Research/Marketing-Packets/'+time.strftime('%Y-%m-%d', time.gmtime())] = {'files': files}
+    # Date the reading copy by its source commit so plan and apply agree on one folder.
+    dated = subprocess.check_output(['git', 'log', '-1', '--format=%cs', revision], cwd=ROOT, text=True).strip()
+    destinations['Work/Research/Marketing-Packets/'+dated] = {'files': files}
     installer = (ROOT / 'scripts/install.py').read_text()
     return {'sourceRoot': str(ROOT), 'sourceRevision': revision,
             'installer': installer, 'destinations': destinations, 'packetSources': packet_sources}

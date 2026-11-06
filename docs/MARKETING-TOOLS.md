@@ -9,7 +9,7 @@ Use `$voice-ledger` to define or review written voice, `$content-recaster` to ad
 - Subsets editing source: `~/Work/Tools/subsets/docs/marketing/` on Kvant.
 - CLPR editing source for this task: `/home/onnwee/.t3/worktrees/clpr/t3-471fd5e5/docs/marketing/` on Kvant.
 - Generic template editing source: `shared/launch-dossier/assets/` in this repository.
-- Synced reading bundle on each device: `~/Work/Research/Marketing-Packets/2026-10-19/`, containing `subsets/`, `clpr/`, and `generic/`.
+- Synced reading bundle on each device: `~/Work/Research/Marketing-Packets/<source-commit-date>/` (for example `2026-10-19/`), containing `subsets/`, `clpr/`, and `generic/`.
 
 The reading bundle's `SOURCE-MANIFEST.json` records original source and reading-copy hashes. Internal packet links remain local. Links into other repository documents are rewritten to their source revision on Gitea so the reading copy does not assume a matching checkout on every device. This is a versioned, manual sync snapshot; no recurring scheduler or automatic bidirectional writer was configured.
 
