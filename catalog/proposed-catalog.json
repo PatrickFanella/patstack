@@ -204,6 +204,12 @@
     "sources": []
   },
   {
+    "name": "roadmap-slicer",
+    "description": "Publish a finished plan to Gitea as a Roadmap tracking issue, optional Epics and one dependency-ordered issue per PR.",
+    "scope": "personal",
+    "sources": []
+  },
+  {
     "name": "ui-cliche-audit",
     "description": "Audit UI originality, scan frontend design patterns with the pinned avoid-ai-design scanner, and review product credibility and missing states; report findings without editing.",
     "scope": "personal",
@@ -413,7 +419,7 @@
   },
   {
     "name": "secret-rotation-flow",
-    "description": "Implement CI/runtime secret storage, delivery, and rotation using the environment\u2019s existing secret provider.",
+    "description": "Implement CI/runtime secret storage, delivery, and rotation using the environment’s existing secret provider.",
     "scope": "personal",
     "sources": [
       "secrets-management"

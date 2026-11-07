@@ -1,0 +1,103 @@
+{
+  "slug": "magic-link-login",
+  "roadmap": {
+    "title": "Passwordless sign-in with magic links",
+    "goal": "Let users sign in with a one-time emailed link instead of a password, without breaking existing password sessions.",
+    "plan": "docs/plans/magic-link-login.md at commit 4f2c9e1",
+    "decisions": [
+      "Links expire after 15 minutes and work once.",
+      "Password login stays available until the rollout flag is removed."
+    ],
+    "rules": [
+      "New behaviour ships behind the `magic_link` flag until the rollout issue closes.",
+      "Each PR keeps existing session tests green."
+    ],
+    "out_of_scope": ["SSO providers", "Removing password login"]
+  },
+  "epics": [
+    {
+      "key": "tokens",
+      "title": "Issue and redeem sign-in tokens",
+      "summary": "Server side: create, email and redeem single-use tokens.",
+      "exit": ["A token can be requested, emailed and redeemed end to end behind the flag."]
+    },
+    {
+      "key": "client",
+      "title": "Sign-in screens and rollout",
+      "summary": "Web screens, rate limits and the staged rollout.",
+      "exit": ["The flag is on for all users and the password fallback still works."]
+    }
+  ],
+  "issues": [
+    {
+      "key": "mail-provider-spike",
+      "epic": "tokens",
+      "kind": "spike",
+      "title": "Choose the transactional mail provider",
+      "summary": "Pick the provider the token email will use.",
+      "question": "Which provider meets our deliverability and cost limits, and what does its API need from us?",
+      "timebox": "half a day",
+      "mode": "hitl",
+      "hitl_reason": "The owner decides on a paid account."
+    },
+    {
+      "key": "token-model",
+      "epic": "tokens",
+      "title": "Store single-use sign-in tokens",
+      "summary": "Add the token table and a service that creates, hashes and expires tokens.",
+      "size": "S",
+      "acceptance": ["Tokens are stored hashed and expire after 15 minutes.", "A redeemed token cannot be used again."],
+      "verify": ["`make test-auth`"],
+      "paths": ["server/auth/"]
+    },
+    {
+      "key": "send-link",
+      "epic": "tokens",
+      "title": "Email a sign-in link on request",
+      "summary": "POST /auth/magic-link creates a token and emails the link through the chosen provider.",
+      "blocked_by": ["token-model", "mail-provider-spike"],
+      "acceptance": ["Requesting a link for a known address sends one email.", "Unknown addresses get the same response and no email."],
+      "verify": ["`make test-auth`", "Manual send to a test inbox"]
+    },
+    {
+      "key": "redeem-link",
+      "epic": "tokens",
+      "title": "Sign in by redeeming a link",
+      "summary": "GET /auth/magic-link/:token creates a normal session and redirects home.",
+      "blocked_by": ["token-model"],
+      "risk": "high",
+      "acceptance": ["A valid link signs the user in.", "Expired or reused links show the retry page."],
+      "verify": ["`make test-auth`"]
+    },
+    {
+      "key": "signin-screen",
+      "epic": "client",
+      "title": "Add the email-link option to the sign-in screen",
+      "summary": "Users can request a link from the sign-in page behind the flag.",
+      "blocked_by": ["send-link", "redeem-link"],
+      "acceptance": ["With the flag on, the page offers 'Email me a link'.", "With the flag off, the page is unchanged."],
+      "verify": ["`npm run test:e2e -- signin`"]
+    },
+    {
+      "key": "rate-limit",
+      "epic": "client",
+      "title": "Rate-limit link requests",
+      "summary": "Limit requests per address and per IP so the endpoint cannot be used to spam inboxes.",
+      "blocked_by": ["send-link"],
+      "size": "S",
+      "acceptance": ["The sixth request in ten minutes for one address is refused with 429."],
+      "verify": ["`make test-auth`"]
+    },
+    {
+      "key": "rollout",
+      "epic": "client",
+      "title": "Roll magic links out to everyone",
+      "summary": "Turn the flag on in stages and record the result.",
+      "blocked_by": ["signin-screen", "rate-limit"],
+      "mode": "hitl",
+      "hitl_reason": "Production flag changes need the owner.",
+      "acceptance": ["The flag is on for all users.", "Sign-in error rate stays within the previous week's range."],
+      "verify": ["Dashboard check after each stage"]
+    }
+  ]
+}

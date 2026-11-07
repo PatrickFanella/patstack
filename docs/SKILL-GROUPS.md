@@ -30,14 +30,14 @@ inactive sources from the same library.
 
 The **11 task sets** combine disciplines around an outcome. Core is always
 included. Sets overlap deliberately; they are not exclusive professional
-categories. Several can be combined. All **219 selectable owners**
+categories. Several can be combined. All **220 selectable owners**
 belong to at least one set, including core.
 
 | Stack | Added beyond core | Total selected | Use it for |
 |---|---|---|---|
 | [`core`](../profiles/CATALOG.md#core) | 0 | 40 | Everyday repository work, debugging, delivery, web/API changes, tools, documentation and basic operations. |
 | [`build-agent-tools`](../profiles/CATALOG.md#build-agent-tools) | 28 | 68 | Build and configure agents, MCP servers, CLIs, retrieval, evaluations and development environments. |
-| [`build-and-ship`](../profiles/CATALOG.md#build-and-ship) | 34 | 74 | Take a feature from understanding and design through implementation, review, tests and a PR. |
+| [`build-and-ship`](../profiles/CATALOG.md#build-and-ship) | 35 | 75 | Take a feature from understanding and design through implementation, review, tests and a PR. |
 | [`creative-production`](../profiles/CATALOG.md#creative-production) | 14 | 54 | Plan and produce visual, audio, video or slide material with a coherent voice and delivery format. |
 | [`data-and-decisions`](../profiles/CATALOG.md#data-and-decisions) | 10 | 50 | Investigate evidence, analyze data, compare alternatives and communicate a decision. |
 | [`diagnose-and-repair`](../profiles/CATALOG.md#diagnose-and-repair) | 20 | 60 | Reproduce a failure, inspect code/runtime evidence, repair it and prove the result. |
