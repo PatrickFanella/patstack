@@ -12,6 +12,7 @@ Prefer available client-native owners and read invocation limits before use.
 | `temporal-flow-design` | optional | When the feature contains durable Temporal workflows. |
 | `terraform-module-smith` | optional | When the requested deliverable includes Terraform modules. |
 | `rn-expo-builder` | optional | When implementing a React Native/Expo feature. |
+| `roadmap-slicer` | optional | When the finished plan should be published as Gitea issues with a roadmap. |
 
 Use the default `skill-stack-router` to resolve these names from the managed
 source library without switching Subsets. Open the selected `SKILL.md` and its

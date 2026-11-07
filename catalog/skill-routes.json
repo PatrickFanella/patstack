@@ -61,6 +61,23 @@
         "skill": "rn-expo-builder",
         "kind": "optional",
         "when": "When implementing a React Native/Expo feature."
+      },
+      {
+        "skill": "roadmap-slicer",
+        "kind": "optional",
+        "when": "When the finished plan should be published as Gitea issues with a roadmap."
+      }
+    ],
+    "roadmap-slicer": [
+      {
+        "skill": "scope-grill",
+        "kind": "optional",
+        "when": "When an open product decision changes the breakdown and investigation cannot settle it."
+      },
+      {
+        "skill": "build-sequencer",
+        "kind": "optional",
+        "when": "When the plan lacks an ordered change sequence or acceptance criteria to slice from."
       }
     ],
     "bug-tracer": [

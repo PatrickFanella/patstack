@@ -109,7 +109,7 @@ retain their deployer ownership until those deployers can retire old paths.
 
 ## Public edition
 
-`catalog/public-edition.json` lists the 48 skills exported to the
+`catalog/public-edition.json` lists the 49 skills exported to the
 `generic-skills` repository and the `@subcult/patstack` npm package, which
 Subsets offers as its default optional pack. `generic-skills` has been private
 on Gitea since 2026-11-03; its older public GitHub copy is retained but no

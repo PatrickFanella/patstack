@@ -108,7 +108,7 @@ Build and configure agents, MCP servers, CLIs, retrieval, evaluations and develo
 
 Take a feature from understanding and design through implementation, review, tests and a PR.
 
-34 additions; 74 selected in total.
+35 additions; 75 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -131,6 +131,7 @@ Take a feature from understanding and design through implementation, review, tes
 | [`rationale-dig`](../library/skills/rationale-dig/SKILL.md) | Why questions: design rationale, 'why we picked Y', regressions, postmortems or data-backed thresholds, answered with cited evidence from git, trackers, docs and chat. Not for runtime behavior; use code-walkthrough. |
 | [`red-green-loop`](../skills/red-green-loop/SKILL.md) | Use when asked for test-first work: red-green-refactor in vertical slices, test boundaries, mocks only at system edges. Not for pruning an existing suite (test-suite-pruner). |
 | [`repo-research-trail`](../library/skills/repo-research-trail/SKILL.md) | Repository research: investigate how something works across this codebase and return cited findings, key files and open questions, without editing. Not for a whole-repository map (repo-atlas) or web research (web-lookup). |
+| [`roadmap-slicer`](../skills/roadmap-slicer/SKILL.md) | Use when a finished plan, spec or design doc should become Gitea issues: a Roadmap tracking issue listing work in dependency order, optional Epics, and one issue per mergeable PR, wired with native blocking dependencies. Also to extend or refresh such a roadmap. Not for writing the plan (build-sequencer, scope-grill) or triaging incoming issues (issue-state-triage). |
 | [`rust-ownership-async`](../skills/rust-ownership-async/SKILL.md) | Use for Rust code: ownership, lifetimes and smart pointers, async/Tokio and cancellation, concurrency, error handling, within the existing crate design. |
 | [`sketch-first-design`](../library/skills/sketch-first-design/SKILL.md) | Use for /architect or architect this: sketch types, signatures and module boundaries with parallel candidates before writing code, then implement against the chosen sketch. |
 | [`spec-implementer`](../library/skills/spec-implementer/SKILL.md) | Implement from spec: on /implement, build work described in a spec or tickets with TDD, regular checks, a code review and a commit. |

@@ -3986,7 +3986,7 @@
       "evidence": [
         "reports/structure.json"
       ],
-      "positiveTask": "Implement CI/runtime secret storage, delivery, and rotation using the environment\u2019s existing secret provider.",
+      "positiveTask": "Implement CI/runtime secret storage, delivery, and rotation using the environment’s existing secret provider.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "web-host-hardening": {
@@ -5592,6 +5592,28 @@
       ],
       "positiveTask": "Plan or implement a bounded feature from a spec; map acceptance criteria to changes and executable verification.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
+    },
+    "roadmap-slicer": {
+      "canonicalSource": "skills/roadmap-slicer",
+      "owner": "patstack",
+      "scope": "personal",
+      "status": "behavior-tested",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "python3",
+        "tea with a login that can write issues"
+      ],
+      "lastReviewed": "2026-11-07",
+      "evidence": [
+        "tests/test_roadmap_slicer.py",
+        "skills/roadmap-slicer/references/gitea.md",
+        "catalog/skill-routes.json"
+      ],
+      "positiveTask": "Turn a finished plan into a Gitea Roadmap tracking issue, optional Epics and dependency-ordered single-PR issues.",
+      "nearMiss": "Write or sequence the plan itself (build-sequencer), resolve open product decisions (scope-grill), or triage incoming issues (issue-state-triage)."
     },
     "ui-cliche-audit": {
       "canonicalSource": "skills/ui-cliche-audit",

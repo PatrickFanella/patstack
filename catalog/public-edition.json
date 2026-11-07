@@ -34,6 +34,7 @@
     "relay-baton",
     "repo-atlas",
     "retrieval-pipeline",
+    "roadmap-slicer",
     "rust-ownership-async",
     "safe-refactor-pass",
     "schema-migrator",
