@@ -649,5 +649,11 @@
       "grilling",
       "requirements-interview"
     ]
+  },
+  {
+    "name": "studio-brand-system",
+    "description": "Compare visual directions, write brand guides and tokens, produce asset packs, or launch a SUBCULT product's brand, marketing and small site.",
+    "scope": "personal",
+    "sources": []
   }
 ]

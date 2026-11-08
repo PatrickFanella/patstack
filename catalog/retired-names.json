@@ -381,11 +381,11 @@
   },
   "subcult-visual-design": {
     "owner": "studio-brand-system",
-    "procedure": "project-agents/subcult-tv/skills/studio-brand-system/SKILL.md"
+    "procedure": "skills/studio-brand-system/SKILL.md"
   },
   "subcult-worldbuilding": {
     "owner": "studio-brand-system",
-    "procedure": "project-agents/subcult-tv/skills/studio-brand-system/SKILL.md"
+    "procedure": "skills/studio-brand-system/SKILL.md"
   },
   "studio-preparation": {
     "owner": "social-craft",

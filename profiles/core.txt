@@ -33,6 +33,7 @@ secret-rotation-flow
 secure-code-audit
 ship-check
 skill-stack-router
+studio-brand-system
 tech-doc-writer
 telemetry-signal-forge
 ts-type-design
