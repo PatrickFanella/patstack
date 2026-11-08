@@ -14,7 +14,7 @@ on every commit and every 8 hours; open PRs on Gitea, not on GitHub.
 
 Subsets manages the user-level skill selection and generated views across
 Agents, Codex, Claude, Copilot, Cursor and OpenCode. Patstack owns 219 selectable
-skill sources, a 40-skill everyday core, and 11 overlapping task sets. App,
+skill sources, a 41-skill everyday core, and 11 overlapping task sets. App,
 package, repository and vault skills retain their local owners.
 
 Start with [the task-stack guide](docs/SKILL-GROUPS.md) and
@@ -83,7 +83,7 @@ System and plugin directories retain their owners. Existing installer-managed ro
 
 ## Subsets task stacks
 
-`core` is the complete everyday default, with 40 skills. Additional stacks mix
+`core` is the complete everyday default, with 41 skills. Additional stacks mix
 planning, implementation, verification, research and communication around a task.
 They overlap deliberately and can be combined. There is no hidden, separately
 installed personal base.

@@ -18,7 +18,6 @@ primary-source-notes
 rationale-dig
 red-green-loop
 repo-research-trail
-roadmap-slicer
 rust-ownership-async
 sketch-first-design
 spec-implementer

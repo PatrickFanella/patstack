@@ -22,7 +22,7 @@ See [the guide](../docs/SKILL-GROUPS.md) for selection, ownership and recovery.
 
 Everyday repository work, debugging, delivery, web/API changes, tools, documentation and basic operations.
 
-40 core members; 40 selected in total.
+41 core members; 41 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -52,6 +52,7 @@ Everyday repository work, debugging, delivery, web/API changes, tools, documenta
 | [`react-render-tuner`](../skills/react-render-tuner/SKILL.md) | Use for React or Next.js code: component APIs, server/client boundaries, state and data loading, rerenders, bundle size. Not for visual design direction (ui-craft). |
 | [`relay-baton`](../shared/relay-baton/SKILL.md) | Use before a context reset, a handoff to another agent or session, or a long pause, to record progress, decisions, blockers and next steps. Not for an ordinary final summary. |
 | [`repo-atlas`](../skills/repo-atlas/SKILL.md) | Use when orienting in an unfamiliar repository, or creating or incrementally updating codemap.md files with the bundled inventory script. Not for one how-does-X-work question (repo-research-trail) or architecture redesign (boundary-drafter). |
+| [`roadmap-slicer`](../skills/roadmap-slicer/SKILL.md) | Use when a finished plan, spec or design doc should become Gitea issues: a Roadmap tracking issue listing work in dependency order, optional Epics, and one issue per mergeable PR, wired with native blocking dependencies. Also to extend or refresh such a roadmap. Not for writing the plan (build-sequencer, scope-grill) or triaging incoming issues (issue-state-triage). |
 | [`safe-refactor-pass`](../skills/safe-refactor-pass/SKILL.md) | Use when restructuring or simplifying code without changing behavior, removing AI slop, or writing a refactor plan. Not for repeated mechanical edits across many files (sweep-rewriter). |
 | [`schema-migrator`](../skills/schema-migrator/SKILL.md) | Use when changing a database schema or transforming data: ORM migrations, backfills, zero-downtime expand and contract, cutover and rollback. Not for query tuning; use pg-plan-reader. |
 | [`scope-grill`](../shared/scope-grill/SKILL.md) | Use when ambiguity in outcome, scope, constraints or acceptance criteria would change the implementation, or on grill-me, grill-with-docs or a plan stress-test. Skip when the repository already answers it. |
@@ -71,7 +72,7 @@ Everyday repository work, debugging, delivery, web/API changes, tools, documenta
 
 Build and configure agents, MCP servers, CLIs, retrieval, evaluations and development environments.
 
-28 additions; 68 selected in total.
+28 additions; 69 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -108,7 +109,7 @@ Build and configure agents, MCP servers, CLIs, retrieval, evaluations and develo
 
 Take a feature from understanding and design through implementation, review, tests and a PR.
 
-35 additions; 75 selected in total.
+34 additions; 75 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -131,7 +132,6 @@ Take a feature from understanding and design through implementation, review, tes
 | [`rationale-dig`](../library/skills/rationale-dig/SKILL.md) | Why questions: design rationale, 'why we picked Y', regressions, postmortems or data-backed thresholds, answered with cited evidence from git, trackers, docs and chat. Not for runtime behavior; use code-walkthrough. |
 | [`red-green-loop`](../skills/red-green-loop/SKILL.md) | Use when asked for test-first work: red-green-refactor in vertical slices, test boundaries, mocks only at system edges. Not for pruning an existing suite (test-suite-pruner). |
 | [`repo-research-trail`](../library/skills/repo-research-trail/SKILL.md) | Repository research: investigate how something works across this codebase and return cited findings, key files and open questions, without editing. Not for a whole-repository map (repo-atlas) or web research (web-lookup). |
-| [`roadmap-slicer`](../skills/roadmap-slicer/SKILL.md) | Use when a finished plan, spec or design doc should become Gitea issues: a Roadmap tracking issue listing work in dependency order, optional Epics, and one issue per mergeable PR, wired with native blocking dependencies. Also to extend or refresh such a roadmap. Not for writing the plan (build-sequencer, scope-grill) or triaging incoming issues (issue-state-triage). |
 | [`rust-ownership-async`](../skills/rust-ownership-async/SKILL.md) | Use for Rust code: ownership, lifetimes and smart pointers, async/Tokio and cancellation, concurrency, error handling, within the existing crate design. |
 | [`sketch-first-design`](../library/skills/sketch-first-design/SKILL.md) | Use for /architect or architect this: sketch types, signatures and module boundaries with parallel candidates before writing code, then implement against the chosen sketch. |
 | [`spec-implementer`](../library/skills/spec-implementer/SKILL.md) | Implement from spec: on /implement, build work described in a spec or tickets with TDD, regular checks, a code review and a commit. |
@@ -152,7 +152,7 @@ Take a feature from understanding and design through implementation, review, tes
 
 Plan and produce visual, audio, video or slide material with a coherent voice and delivery format.
 
-14 additions; 54 selected in total.
+14 additions; 55 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -175,7 +175,7 @@ Plan and produce visual, audio, video or slide material with a coherent voice an
 
 Investigate evidence, analyze data, compare alternatives and communicate a decision.
 
-10 additions; 50 selected in total.
+10 additions; 51 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -194,7 +194,7 @@ Investigate evidence, analyze data, compare alternatives and communicate a decis
 
 Reproduce a failure, inspect code/runtime evidence, repair it and prove the result.
 
-20 additions; 60 selected in total.
+20 additions; 61 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -223,7 +223,7 @@ Reproduce a failure, inspect code/runtime evidence, repair it and prove the resu
 
 Develop stories and settings, draft scenes, revise character/dialogue, and maintain continuity.
 
-31 additions; 71 selected in total.
+31 additions; 72 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -263,7 +263,7 @@ Develop stories and settings, draft scenes, revise character/dialogue, and maint
 
 Plan learning, study examples, tutor, build exercises and review progress.
 
-9 additions; 49 selected in total.
+9 additions; 50 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -281,7 +281,7 @@ Plan learning, study examples, tutor, build exercises and review progress.
 
 Build and test mobile, terminal, editor, browser and interactive interfaces.
 
-10 additions; 50 selected in total.
+10 additions; 51 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -300,7 +300,7 @@ Build and test mobile, terminal, editor, browser and interactive interfaces.
 
 Operate services and personal tools, investigate incidents, change infrastructure and verify recovery.
 
-26 additions; 66 selected in total.
+26 additions; 67 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -335,7 +335,7 @@ Operate services and personal tools, investigate incidents, change infrastructur
 
 Research a market, choose positioning, prepare brand/product copy, refine the interface and plan a launch.
 
-25 additions; 65 selected in total.
+25 additions; 66 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -369,7 +369,7 @@ Research a market, choose positioning, prepare brand/product copy, refine the in
 
 Find and check sources, develop an argument, write or revise, and produce documents.
 
-26 additions; 66 selected in total.
+26 additions; 67 selected in total.
 
 | Skill | Purpose |
 |---|---|
