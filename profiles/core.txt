@@ -25,6 +25,7 @@ python-uv-workbench
 react-render-tuner
 relay-baton
 repo-atlas
+roadmap-slicer
 safe-refactor-pass
 schema-migrator
 scope-grill
