@@ -5887,12 +5887,13 @@
         "current client browser for authenticated references and visual inspection",
         "affected brand generator dependencies for production"
       ],
-      "lastReviewed": "2026-10-05",
+      "lastReviewed": "2026-11-08",
       "evidence": [
         "catalog/project-selections.json",
-        "project-agents/subcult-tv/skills/studio-brand-system/references/workflow.md"
+        "project-agents/subcult-tv/skills/studio-brand-system/references/workflow.md",
+        "project-agents/subcult-tv/skills/studio-brand-system/references/product-launch.md"
       ],
-      "positiveTask": "Compare design systems for SUBCULT.TV using Studio references, then document the chosen direction and create a reproducible brand pack.",
+      "positiveTask": "Pick twelve design references for a new SUBCULT product, review mixed directions with the owner, then create its brand pack, marketing packet and product site.",
       "nearMiss": "Write a weekly caption (social-craft), catalog a reference (studio-reference-study), audit an existing brand (studio-brand-audit), or integrate a selected pack (studio-brand-handoff)."
     },
     "studio-reference-study": {

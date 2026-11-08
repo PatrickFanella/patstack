@@ -1,21 +1,22 @@
 ---
 name: studio-brand-system
-description: "Studio brand system. Use to compare visual directions, write brand guides and tokens, or produce asset packs for SUBCULT.TV or a SUBCULT product in subcult-tv/studio. Not for routine UI fixes."
+description: "Studio brand system. Use to compare visual directions, write brand guides and tokens, produce asset packs, or take a SUBCULT product through branding, marketing and a small product site, working from subcult-tv/studio. Not for routine UI fixes."
 ---
 
 # Studio brand system
 
-Create a coherent visual system that someone can apply to a website and its supporting artwork. Work from the active `subcult-tv` checkout; `studio/` contains the brand sources and design references. Read root and Studio `AGENTS.md`, inspect Git status, and preserve unrelated work and user-edited masters.
+Work from the active `subcult-tv` checkout; `studio/` contains the brand sources and design references. The separate `subcult-studio` repository is stale. Read root and Studio `AGENTS.md`, inspect Git status, and preserve unrelated work and user-edited masters.
 
 ## Choose the mode
 
 - **Select:** research and compare directions, or refine the selected system. Produce a brief, source-linked shortlist and comparable previews with a recommendation.
 - **Document:** turn a selected direction into maintained brand and interface rules, tokens and provenance.
 - **Produce:** create or revise the requested assets from the selected rules and authoritative masters; regenerate and verify their derivatives.
+- **Launch:** brand a new product, then build its marketing and small site, using [the launch workflow](references/product-launch.md).
 
 For a complete branding request, carry the modes through the requested outcome. A request for options ends with reviewable options. Honor an existing selection or explicit authorization to choose; otherwise keep a recommendation marked proposed and wait for the owner's selection before treating it as the production identity. Continue reversible research and previews while that decision is pending.
 
-Read [the workflow and deliverables](references/workflow.md) for the selected mode. Use `studio-reference-study` for reference intake, `studio-brand-audit` for implementation review, `studio-brand-handoff` for integration and `social-craft` for post writing. Routine UI fixes do not require a new brand system.
+Read [the workflow and deliverables](references/workflow.md) for the selected mode. Use `studio-reference-study` for reference intake, `studio-brand-audit` for implementation review, `studio-brand-handoff` for integration and `social-craft` for post writing.
 
 ## Start from Studio
 
@@ -34,7 +35,7 @@ Resolve current ownership and selection from these files. `studio/studies/archiv
 
 Keep each product's identity distinct. For SUBCULT itself, inspect the current logo selection and preserved artwork before proposing changes. Do not redraw approved marks or replace owner selections as a side effect of asset generation.
 
-Edit the owning generator and authoritative master together where appropriate; rebuild only the affected brand. Use `studio/brand-tools/starter-template/` only for a new pack, after reading its README. Placeholder initials and sample copy are drafts.
+Edit the owning generator and authoritative master together where appropriate; rebuild only the affected brand. Use `studio/brand-tools/starter-template/` only for a new pack, after reading its README.
 
 Keep sources, private packs and reference assets in Studio. Public exports require explicit file selection, source hashes and the repository's existing allowlist/export path. Brand selection, asset review, website deployment and social publication are separate outcomes; perform only the actions authorized by the request.
 
