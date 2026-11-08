@@ -22,7 +22,7 @@ See [the guide](../docs/SKILL-GROUPS.md) for selection, ownership and recovery.
 
 Everyday repository work, debugging, delivery, web/API changes, tools, documentation and basic operations.
 
-41 core members; 41 selected in total.
+42 core members; 42 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -60,6 +60,7 @@ Everyday repository work, debugging, delivery, web/API changes, tools, documenta
 | [`secure-code-audit`](../skills/secure-code-audit/SKILL.md) | Use only when asked for a security review or secure-by-default code in Python, JavaScript/TypeScript or Go web stacks. Not for general code review or threat models. |
 | [`ship-check`](../skills/ship-check/SKILL.md) | Use when asked how complete, ready or viable a repository is: trace claimed capabilities to code and tests; separate implemented, partial, planned, unverified. Not for diff review, or proving one change works; use behavior-proof. |
 | [`skill-stack-router`](../shared/skill-stack-router/SKILL.md) | Use when a task needs skills beyond the active list, or a procedure has required or optional companion skills. Route through default owners and load qualified specialists on demand; keep the current Subsets selection unless a different working stack is requested. |
+| [`studio-brand-system`](../skills/studio-brand-system/SKILL.md) | Studio brand system. Use to compare visual directions, write brand guides and tokens, produce asset packs, or take a SUBCULT product through branding, marketing and a small product site, working from subcult-tv/studio. Not for routine UI fixes. |
 | [`tech-doc-writer`](../skills/tech-doc-writer/SKILL.md) | Use when writing or restructuring technical docs, RFCs or READMEs, translating README variants, or checking docs against code. Not for a quick prose pass (prose-unslop). |
 | [`telemetry-signal-forge`](../skills/telemetry-signal-forge/SKILL.md) | Use when adding or fixing metrics, traces, dashboards, alerts or SLOs: Prometheus, Grafana, OpenTelemetry, Jaeger/Tempo, error budgets. Not for profiling slow code (perf-hotpath-probe). |
 | [`ts-type-design`](../skills/ts-type-design/SKILL.md) | Use for TypeScript type design, tsconfig and module settings, or JS-to-TS work; on request, shoehorn test migration or dependency-cruiser deep modules. Not for React (react-render-tuner) or choosing module boundaries (boundary-drafter). |
@@ -72,7 +73,7 @@ Everyday repository work, debugging, delivery, web/API changes, tools, documenta
 
 Build and configure agents, MCP servers, CLIs, retrieval, evaluations and development environments.
 
-28 additions; 69 selected in total.
+28 additions; 70 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -109,7 +110,7 @@ Build and configure agents, MCP servers, CLIs, retrieval, evaluations and develo
 
 Take a feature from understanding and design through implementation, review, tests and a PR.
 
-34 additions; 75 selected in total.
+34 additions; 76 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -152,7 +153,7 @@ Take a feature from understanding and design through implementation, review, tes
 
 Plan and produce visual, audio, video or slide material with a coherent voice and delivery format.
 
-14 additions; 55 selected in total.
+14 additions; 56 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -175,7 +176,7 @@ Plan and produce visual, audio, video or slide material with a coherent voice an
 
 Investigate evidence, analyze data, compare alternatives and communicate a decision.
 
-10 additions; 51 selected in total.
+10 additions; 52 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -194,7 +195,7 @@ Investigate evidence, analyze data, compare alternatives and communicate a decis
 
 Reproduce a failure, inspect code/runtime evidence, repair it and prove the result.
 
-20 additions; 61 selected in total.
+20 additions; 62 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -223,7 +224,7 @@ Reproduce a failure, inspect code/runtime evidence, repair it and prove the resu
 
 Develop stories and settings, draft scenes, revise character/dialogue, and maintain continuity.
 
-31 additions; 72 selected in total.
+31 additions; 73 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -263,7 +264,7 @@ Develop stories and settings, draft scenes, revise character/dialogue, and maint
 
 Plan learning, study examples, tutor, build exercises and review progress.
 
-9 additions; 50 selected in total.
+9 additions; 51 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -281,7 +282,7 @@ Plan learning, study examples, tutor, build exercises and review progress.
 
 Build and test mobile, terminal, editor, browser and interactive interfaces.
 
-10 additions; 51 selected in total.
+10 additions; 52 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -300,7 +301,7 @@ Build and test mobile, terminal, editor, browser and interactive interfaces.
 
 Operate services and personal tools, investigate incidents, change infrastructure and verify recovery.
 
-26 additions; 67 selected in total.
+26 additions; 68 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -335,7 +336,7 @@ Operate services and personal tools, investigate incidents, change infrastructur
 
 Research a market, choose positioning, prepare brand/product copy, refine the interface and plan a launch.
 
-25 additions; 66 selected in total.
+25 additions; 67 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -369,7 +370,7 @@ Research a market, choose positioning, prepare brand/product copy, refine the in
 
 Find and check sources, develop an argument, write or revise, and produce documents.
 
-26 additions; 67 selected in total.
+26 additions; 68 selected in total.
 
 | Skill | Purpose |
 |---|---|

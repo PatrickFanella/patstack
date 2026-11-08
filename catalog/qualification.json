@@ -5871,9 +5871,9 @@
       "nearMiss": "Brand system or asset production (studio-brand-system); product implementation."
     },
     "studio-brand-system": {
-      "canonicalSource": "project-agents/subcult-tv/skills/studio-brand-system",
+      "canonicalSource": "skills/studio-brand-system",
       "owner": "Studio",
-      "scope": "project-local",
+      "scope": "personal",
       "status": "authored",
       "supportedClients": [
         "codex",
@@ -5889,9 +5889,8 @@
       ],
       "lastReviewed": "2026-11-08",
       "evidence": [
-        "catalog/project-selections.json",
-        "project-agents/subcult-tv/skills/studio-brand-system/references/workflow.md",
-        "project-agents/subcult-tv/skills/studio-brand-system/references/product-launch.md"
+        "skills/studio-brand-system/references/workflow.md",
+        "skills/studio-brand-system/references/product-launch.md"
       ],
       "positiveTask": "Pick twelve design references for a new SUBCULT product, review mixed directions with the owner, then create its brand pack, marketing packet and product site.",
       "nearMiss": "Write a weekly caption (social-craft), catalog a reference (studio-reference-study), audit an existing brand (studio-brand-audit), or integrate a selected pack (studio-brand-handoff)."

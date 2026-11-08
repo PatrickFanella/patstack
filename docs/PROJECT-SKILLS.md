@@ -20,7 +20,7 @@ A Git-created worktree can contain committed generated skills without this host'
 
 ## Studio skill ownership
 
-Canonical Studio skill instructions live under `project-agents/subcult-tv/skills/` in patstack. The current subcult-tv selection includes `social-craft`, `studio-brand-system`, `studio-reference-study`, `studio-brand-audit` and `studio-brand-handoff`. Their ownership and routing are registered in `catalog/local-owners.json`, `catalog/capabilities.json` and `catalog/qualification.json`; `catalog/project-selections.json` selects the project deployment.
+Canonical Studio skill instructions live under `project-agents/subcult-tv/skills/` in patstack. The current subcult-tv selection includes `social-craft`, `studio-reference-study`, `studio-brand-audit` and `studio-brand-handoff`. `studio-brand-system` moved to the Subsets core on November 8, 2026. Their ownership and routing are registered in `catalog/local-owners.json`, `catalog/capabilities.json` and `catalog/qualification.json`; `catalog/project-selections.json` selects the project deployment.
 
 Studio's guides, studies, brand masters and resulting assets remain in `subcult-tv/studio/`. Worktree `.agents/skills/` copies, Claude/OpenCode links and `.agent-skills.json` are generated destinations. Edit the canonical instruction once, validate and commit it, then use the project installer for each intended checkout. System, OS and plugin skills retain their package owners.
 

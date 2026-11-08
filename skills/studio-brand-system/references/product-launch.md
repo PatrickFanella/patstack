@@ -2,7 +2,7 @@
 
 Take one SUBCULT product from no identity to an owner-selected brand, a marketing packet and a small product site. Pult is the worked example: `studio/studies/theme-tender-directions/` for the review, `studio/brands/pult/` for the pack, and `site/` plus `deploy/` in `subculture-collective/pult` for the site.
 
-Work from a worktree on current `origin/main` when the `subcult-tv` checkout is dirty or behind; recent packs and studies are missing otherwise.
+Work from a worktree on current `origin/main` when the `subcult-tv` checkout is dirty or behind; recent packs and studies are missing otherwise. The canonical checkout is on Kvant, so from another host work there over SSH rather than cloning. `studio-brand-handoff`, `studio-brand-audit` and `social-craft` are selected only inside `subcult-tv`; read them from its `.agents/skills/` when your session started elsewhere.
 
 | Stage | Output | Ends when |
 | --- | --- | --- |

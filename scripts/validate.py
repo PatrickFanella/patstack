@@ -120,7 +120,7 @@ def main(source_only=False,write_report=False):
     metrics['absentExternalOwners']=external.get('absentExternalOwners',[])
     metrics['personalDescriptionScope']='repository sources' if source_only else 'sources and installed OS owners'
     metrics['personalEntrypoints']=len(actual)
-    if len(actual)!=55:errors.append(f'personal entrypoint count {len(actual)} != 55')
+    if len(actual)!=56:errors.append(f'personal entrypoint count {len(actual)} != 56')
     metrics['personalDescriptionBudget']=PERSONAL_DESCRIPTION_BUDGET
     metrics['personalDescriptionHeadroom']=PERSONAL_DESCRIPTION_BUDGET-metrics['personalDescriptions']
     if metrics['personalDescriptionHeadroom']<0:errors.append(f'description budget {metrics}')

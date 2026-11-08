@@ -921,13 +921,13 @@
     "original": "subcult-visual-design",
     "owner": "studio-brand-system",
     "kind": "adapted-local",
-    "path": "project-agents/subcult-tv/skills/studio-brand-system/SKILL.md"
+    "path": "skills/studio-brand-system/SKILL.md"
   },
   {
     "original": "subcult-worldbuilding",
     "owner": "studio-brand-system",
     "kind": "adapted-local",
-    "path": "project-agents/subcult-tv/skills/studio-brand-system/SKILL.md"
+    "path": "skills/studio-brand-system/SKILL.md"
   },
   {
     "original": "codex-skills-maintenance",
@@ -951,7 +951,7 @@
     "original": "studio-brand-system",
     "owner": "studio-brand-system",
     "kind": "local",
-    "path": "project-agents/subcult-tv/skills/studio-brand-system/SKILL.md"
+    "path": "skills/studio-brand-system/SKILL.md"
   },
   {
     "original": "studio-reference-study",
