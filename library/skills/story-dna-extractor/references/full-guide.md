@@ -188,16 +188,16 @@ Keep in conversation:
 ## Integration Graph
 
 ### Inbound
-- `story-diagnosis` → evaluation-ready source analysis
-- `genre-promise-check` → genre grounding for emotional core
+- `story-workbench` → evaluation-ready source analysis
+- `story-workbench` → genre grounding for emotional core
 
 ### Outbound
-- EX3 gaps → `genre-promise-check`
-- EX5 relationship gaps → `character-arc-doctor`
-- EX7 complete → `story-dna-adapter`
+- EX3 gaps → `story-workbench`
+- EX5 relationship gaps → `fiction-editor`
+- EX7 complete → `story-dna-extractor`
 
 ### Complementary
-- `trope-refresher`
-- `genre-promise-check`
-- `character-arc-doctor`
-- `story-diagnosis`
+- `fiction-editor`
+- `story-workbench`
+- `fiction-editor`
+- `story-workbench`

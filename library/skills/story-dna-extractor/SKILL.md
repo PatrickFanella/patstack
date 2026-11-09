@@ -1,6 +1,7 @@
 ---
 name: story-dna-extractor
-description: "Story DNA: extract the functional structure of a TV show, film, book or play for adaptation or trope mapping, separating structural necessity from stylistic choice."
+description: Analyze a source story's functional structure or adapt that structure
+  into a requested new context.
 license: MIT
 metadata:
   blacktower-pack: creative
@@ -8,87 +9,20 @@ metadata:
   blacktower-tier: standard
   blacktower-capabilities: worldbuilding-fiction,dna,extraction
   author: jwynia
-  version: "1.0"
+  version: '1.0'
   type: utility
   mode: evaluative
   domain: fiction
 ---
 
-# DNA Extraction
+# story-dna-extractor
 
-Extract functional DNA from existing works so adaptation keeps what matters.
+Separate structural necessity from stylistic choices and preserve source provenance. An analysis request does not authorize generating an adaptation.
 
-## Purpose
+Select the matching procedure below and load only that procedure and its needed resources. Each procedure retains its own client, tool and invocation limits. Internal handoffs use the matching procedure below rather than reloading this entrypoint. A reference does not authorize delegation, publication, deployment or an unrelated mutation.
 
-Find load-bearing functions under surface form.
+- **story dna extractor**: Story DNA: extract the functional structure of a TV show, film, book or play for adaptation or trope mapping, separating structural necessity from stylistic choice. Read [the procedure](references/base-workflow.md).
+- **story dna adapter**: Fiction adaptation: move a source work into a new setting, merge several functional-DNA extractions, or generate variations that keep function while changing form. Read [the procedure](references/modes/story-dna-adapter/guide.md).
+- **book outliner**: Outline a published book scene by scene to study its structure. Use when analyzing craft from existing works or building teaching material. Read [the procedure](references/modes/book-outliner/guide.md).
 
-Rule: **function over form**.
-
-## When to Use
-
-- Adapting an existing work to new setting/medium
-- Building trope maps/clusters for reuse
-- Diagnosing why a source work works emotionally
-- Separating structural necessity from style
-
-## When Not to Use
-
-- You only need plot summary
-- You already have complete extraction and are ready to synthesize (handoff to `story-dna-adapter`)
-
-## Workflow (Fast)
-
-1. **Diagnose extraction state** (EX0–EX7)
-   - EX0 no extraction
-   - EX1 surface reading
-   - EX2 single-axis extraction
-   - EX3 missing emotional core
-   - EX4 style/structure conflation
-   - EX5 missing relationship functions
-   - EX6 no hierarchy
-   - EX7 complete
-2. **Map emotional core first**
-   - primary/secondary genre
-   - key emotional beats
-3. **Run six-axis extraction for each major element**
-   - form, structural, character, emotional, thematic, relational
-4. **Classify structural vs stylistic**
-5. **Build hierarchy**
-   - primary (breaks story if removed)
-   - reinforcing (weakens story if removed)
-   - optional flavor
-6. **Validate readiness for synthesis**
-
-## Output Checklist
-
-- [ ] Source metadata captured (work/author/medium/depth/date)
-- [ ] Emotional core defined (genre + experience + beats)
-- [ ] Major elements extracted across all six axes
-- [ ] Relationship functions documented
-- [ ] Structural vs stylistic split complete
-- [ ] Non-negotiables vs adaptable elements listed
-- [ ] Cluster links recorded
-
-## Guardrails
-
-- Don’t accept plot-summary-as-extraction
-- Don’t mark everything essential
-- Don’t skip emotional core
-- Don’t confuse element names with functions
-
-## Resources
-
-- Full guide: `references/full-guide.md`
-- Scripts:
-  - `scripts/extract-functions.ts` (Scripts are Deno programs (`deno run --allow-read ...`). Deno is not installed on the fleet by default; `mise exec deno -- deno run ...` runs one without a global install.)
-  - `scripts/emotional-beat-map.ts`
-  - `scripts/structural-stylistic.ts`
-- Data:
-  - `data/function-categories.json`
-  - `data/extraction-templates.json`
-
-## Integration / Handoffs
-
-- Use `genre-promise-check` for emotional-core genre diagnosis gaps
-- Use `character-arc-doctor` for relationship/lie-want-need deepening
-- Handoff to `story-dna-adapter` only after EX7
+Read [conditional companions](references/skill-routes.md) only when their stated condition applies.

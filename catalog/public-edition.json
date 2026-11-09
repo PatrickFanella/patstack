@@ -7,25 +7,21 @@
     "bash-script-craft",
     "behavior-proof",
     "boundary-drafter",
+    "browser-workbench",
     "bug-tracer",
     "build-sequencer",
     "bus-factor-map",
-    "cf-edge-deploy",
     "ci-medic",
     "cli-contract-smith",
-    "dep-source-clone",
     "dep-upgrade-pilot",
     "diff-inspector",
     "eval-bench",
     "git-surgery",
-    "gitea-fleet-tidy",
     "go-craft",
     "mcp-server-forge",
     "mcp-wire-tracer",
-    "mtls-trust-chain",
     "perf-hotpath-probe",
-    "pg-plan-reader",
-    "playwright-cli-driver",
+    "postgres-workbench",
     "privacy-controls",
     "prose-unslop",
     "python-uv-workbench",
@@ -33,24 +29,20 @@
     "red-green-loop",
     "relay-baton",
     "repo-atlas",
+    "repo-research-trail",
     "retrieval-pipeline",
     "roadmap-slicer",
     "rust-ownership-async",
     "safe-refactor-pass",
-    "schema-migrator",
     "scope-grill",
     "secret-rotation-flow",
     "secure-code-audit",
-    "setup-wizard-script",
-    "ship-check",
     "stride-threat-map",
-    "sweep-rewriter",
-    "tech-doc-writer",
     "telemetry-signal-forge",
     "throwaway-prototype",
     "ts-type-design",
     "ui-craft",
-    "wcag-a11y-audit"
+    "writing-workbench"
   ],
   "substitutions": [
     [
@@ -94,8 +86,24 @@
       "Load a listed skill only if the current client has it installed. Open the\nselected `SKILL.md` and its needed references, resolving resources from that\ndirectory. If a skill is not installed, say so; do not guess a tool or load\nthe whole group."
     ],
     [
-      "read the sibling `ui-cliche-audit` skill's `references/avoid-ai-design/workflow.md` in implementation mode. Use its scanner",
-      "read the `ui-cliche-audit` skill's `references/avoid-ai-design/workflow.md` in implementation mode when that skill is installed, and use its scanner"
+      "git.subcult.tv",
+      "git.example.org"
+    ],
+    [
+      "subcult-agent",
+      "agent-account"
+    ],
+    [
+      "Kvant",
+      "Linux workstation"
+    ],
+    [
+      "Soyuz",
+      "macOS workstation"
+    ],
+    [
+      "Sputnik",
+      "Linux workstation"
     ]
   ],
   "forbidden": [
@@ -109,8 +117,7 @@
     "estate-config",
     "patstack/(skills|library|shared)",
     "skill-stack-router",
-    "\\bSubsets\\b",
-    "sibling `ui-cliche-audit`"
+    "\\bSubsets\\b"
   ],
   "metadataFields": [
     "compatibility"

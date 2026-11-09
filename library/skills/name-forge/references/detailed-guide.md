@@ -351,9 +351,9 @@ Random apostrophes for "exotic" feel.
 | Skill | Integration |
 |-------|-------------|
 | **conlang-forge** | Generate phoneme inventories for consistent naming systems |
-| **world-diagnostics** | Names should reflect cultural evolution |
-| **trope-refresher** | Avoid default names for character roles |
-| **sensitivity-read** | Audit for unintended associations |
+| **world-bible** | Names should reflect cultural evolution |
+| **fiction-editor** | Avoid default names for character roles |
+| **fiction-editor** | Audit for unintended associations |
 
 ### When to Hand Off
 

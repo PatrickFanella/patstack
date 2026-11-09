@@ -1,24 +1,20 @@
 ---
 name: repo-atlas
-description: Use when orienting in an unfamiliar repository, or creating or incrementally updating codemap.md files with the bundled inventory script. Not for one how-does-X-work question (repo-research-trail) or architecture redesign (boundary-drafter).
-compatibility: Requires a git repository and a Node.js-compatible runtime or Bun for the bundled codemap helper.
+description: Orient in a repository or create and incrementally refresh its codemaps
+  when requested.
 metadata:
   blacktower-pack: core
   blacktower-kind: tool-wrapper
   blacktower-tier: core
-  blacktower-capabilities: repository map,codebase orientation,module ownership,architecture navigation
+  blacktower-capabilities: repository map,codebase orientation,module ownership,architecture
+    navigation
 ---
 
 # repo-atlas
 
-Map repository structure and update existing code maps incrementally using the bundled inventory helper.
+Orientation is read-only. Write codemaps or register them in AGENTS.md only when requested; use one state engine per map.
 
-## Rules for every run
+Select the matching procedure below and load only that procedure and its needed resources. Each procedure retains its own client, tool and invocation limits. Internal handoffs use the matching procedure below rather than reloading this entrypoint. A reference does not authorize delegation, publication, deployment or an unrelated mutation.
 
-- For orientation alone, read existing `codemap.md` files, the tree and entry points, and report. Write `codemap.md` files, `.blacktower/codemap.json` or the `AGENTS.md` Repository Map section only when the user asked for codemaps.
-- Map core code and configuration only. Tests, documentation, translations, build output and dependencies stay out of the include patterns.
-- With existing state, update only the folders the change detection reports as affected.
-
-Read only the [task guide](guide.md) entries whose trigger matches the work.
-
-Keep the requested scope and repository conventions. Report evidence for the operation actually performed.
+- **repo atlas**: Use when orienting in an unfamiliar repository, or creating or incrementally updating codemap.md files with the bundled inventory script. Read [the procedure](references/base-workflow.md).
+- **codemap atlas**: Codemap atlas: generate or incrementally refresh hierarchical codemap.md files with change tracking for an unfamiliar repository, only when the user asks for one. Read [the procedure](references/modes/codemap-atlas/guide.md).

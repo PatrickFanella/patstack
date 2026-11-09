@@ -356,8 +356,8 @@ Visual or structured representation of how content interconnects.
 - **ai-seo**: For optimizing content for AI search engines and getting cited by LLMs
 - **programmatic-seo**: For scaled content generation
 - **site-architecture**: For page hierarchy, navigation design, and URL structure
-- **drip-sequence-planner**: For email-based content
-- **social-post-craft**: For social media content
+- **page-copy-forge**: For email-based content
+- **page-copy-forge**: For social media content
 
 ## Resources
 

@@ -458,7 +458,7 @@ Generated 2026-08-20 from `~/.agents/skills`.
 ### Plugin Bundle — Ralph Loop (3)
 
 - [`cancel-ralph`](./cancel-ralph/) — Cancel an active Ralph Loop. Use when the user wants to stop, cancel, or abort a running ralph loop.
-- [`ralph-loop`](./ralph-loop/) — Start a Ralph Loop for iterative self-referential development. Use when the user asks to run a ralph loop, start an iterative loop, or wants repeated autonomous iteration on a task until completion.
+- [`ralph-workflow`](./ralph-loop/) — Start a Ralph Loop for iterative self-referential development. Use when the user asks to run a ralph loop, start an iterative loop, or wants repeated autonomous iteration on a task until completion.
 - [`ralph-loop-help`](./ralph-loop-help/) — Explain the Ralph Loop plugin, how it works, and available skills. Use when the user asks for help with ralph loop, wants to understand the technique, or needs usage examples.
 
 ### Plugin Bundle — Teaching (2)

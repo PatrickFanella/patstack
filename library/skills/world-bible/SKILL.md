@@ -1,6 +1,7 @@
 ---
 name: world-bible
-description: "Maintain a wiki-style world bible for shared or long-running fiction: canon entries, continuity, contributor reference. Use for shared universes or serial worlds that need persistent canon."
+description: Maintain or diagnose a fictional world, its canon and persistent world-state,
+  or generate requested creative randomization resources.
 license: MIT
 metadata:
   blacktower-pack: creative
@@ -8,7 +9,7 @@ metadata:
   blacktower-tier: standard
   blacktower-capabilities: worldbuilding-fiction,shared,world
   author: jwynia
-  version: "1.0"
+  version: '1.0'
   type: utility
   mode: collaborative
   domain: worldbuilding
@@ -16,38 +17,13 @@ metadata:
 
 # world-bible
 
-## Use this skill
+Preserve established canon, uncertainty and source provenance. World-state changes and random tables should follow the writer's requested rules; do not silently normalize ambiguous material.
 
-Maintain a wiki-style world bible for collaborative fiction. Use for long-running story worlds, shared universes, membership sites, or any fiction requiring persistent canonical reference.
+Select the matching procedure below and load only that procedure and its needed resources. Each procedure retains its own client, tool and invocation limits. Internal handoffs use the matching procedure below rather than reloading this entrypoint. A reference does not authorize delegation, publication, deployment or an unrelated mutation.
 
-## Workflow
+- **world bible**: Maintain a wiki-style world bible for shared or long-running fiction: canon entries, continuity, contributor reference. Use for shared universes or serial worlds that need persistent canon. Read [the procedure](references/base-workflow.md).
+- **world diagnostics**: Worldbuilding fixes: diagnose thin settings, designed-feeling institutions, broken economies or species that read as humans in costume. Read [the procedure](references/modes/world-diagnostics/guide.md).
+- **world fate ledger**: World fates: track long-term fortune and the probabilistic fall of powerful entities so a shared campaign world changes over time with persistent consequences. Read [the procedure](references/modes/world-fate-ledger/guide.md).
+- **entropy lists**: Randomization lists for creative entropy tools. Use to create or expand varied lists of story elements (professions, places, objects, names) from Kiwix or Wikipedia-style sources. Read [the procedure](references/modes/entropy-lists/guide.md).
 
-1. Confirm the request matches this skill's stated intent; do not activate it
-   for a keyword-only near miss.
-2. Inspect the user's inputs, repository conventions, and available tools before
-   selecting an approach.
-3. Load only the relevant section of the detailed guide when the task needs
-   domain-specific patterns or edge cases.
-4. Perform the smallest complete unit of work and preserve existing behavior or
-   user data unless change is explicitly requested.
-5. Validate the result with the project's own checks plus any skill-specific
-   verification described in the detailed guide.
-
-## Constraints
-
-- Prefer the project's existing stack and conventions over generic examples.
-- State required credentials, network access, CLIs, and destructive side effects
-  before relying on them.
-- Use current authoritative documentation when provider or framework behavior is
-  version-sensitive.
-- Report concrete evidence, remaining risks, and any unverified assumptions.
-
-## Resources
-
-- `references/detailed-guide.md` — detailed framework and edge cases; load only the sections needed for the task.
-- `scripts/` — deterministic helpers; inspect --help and side effects before use.
-- `templates/` — reusable output skeletons.
-
-## Companion skills
-
-Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.
+Read [conditional companions](references/skill-routes.md) only when their stated condition applies.

@@ -1,6 +1,7 @@
 ---
 name: market-position-map
-description: "Market positioning: analyze competitors with Five Forces, Blue Ocean or positioning maps and find differentiation for strategy or a pitch. Not for per-competitor profiles."
+description: Research customers and competitors and develop evidence-backed product
+  positioning.
 metadata:
   blacktower-pack: growth
   blacktower-kind: workflow
@@ -9,60 +10,14 @@ metadata:
   version: 1.0.0
 ---
 
-# Competitive Landscape Analysis
+# market-position-map
 
-Run structured market competition analysis to choose defensible positioning and go-to-market direction.
+Keep interview observations, competitor facts and strategic inference distinct. Preserve sources; do not manufacture customer quotes or competitive claims.
 
-## Purpose
+Select the matching procedure below and load only that procedure and its needed resources. Each procedure retains its own client, tool and invocation limits. Internal handoffs use the matching procedure below rather than reloading this entrypoint. A reference does not authorize delegation, publication, deployment or an unrelated mutation.
 
-Use this skill to turn competitor noise into strategy: where to play, how to differentiate, and which advantages can last.
+- **market position map**: Market positioning: analyze competitors with Five Forces, Blue Ocean or positioning maps and find differentiation for strategy or a pitch. Read [the procedure](references/base-workflow.md).
+- **customer voice miner**: Customer research: analyze interviews, surveys, support tickets or reviews, mine forums for voice of customer, or build personas and JTBD. Read [the procedure](references/modes/customer-voice-miner/guide.md).
+- **rival dossier**: Competitor profiles: research competitors from their URLs and write structured profile files. Read [the procedure](references/modes/rival-dossier/guide.md).
 
-## When to Use This Skill
-
-- Building market strategy for startup/new product
-- Preparing investor/leadership strategic positioning analysis
-- Reassessing pricing, packaging, and segment focus
-- Auditing moat durability vs direct and substitute competitors
-
-## When Not to Use
-
-- Tactical campaign-level analysis only (use channel-specific skills)
-- Pure customer persona/JTBD deep dive without competitive objective
-
-## Workflow
-
-1. **Scope competitive set**
-   - Identify direct, indirect, and substitute competitors
-2. **Run Porter's Five Forces**
-   - Score entrant threat, supplier power, buyer power, substitutes, rivalry
-   - Build force intensity table and overall attractiveness readout
-3. **Map strategic space**
-   - Positioning map on 2 customer-critical dimensions
-   - Find white-space candidates, validate demand reality
-4. **Apply Blue Ocean framing**
-   - Eliminate / Reduce / Raise / Create matrix
-   - Test if value innovation lowers cost and raises value together
-5. **Profile top competitors deeply**
-   - Product, GTM, pricing, strengths, weaknesses, likely moves
-6. **Define differentiation + advantage durability**
-   - Product/service/brand/price plays
-   - Durability test: hard to copy, customer-relevant, executable, long-lived
-7. **Translate to GTM decision**
-   - Direct competition vs niche beachhead vs disruptive wedge vs platform play
-8. **Set monitoring cadence**
-   - Weekly signals, monthly position updates, quarterly deep reviews
-
-## Output Checklist
-
-- [ ] Five Forces scorecard with evidence
-- [ ] Positioning map with explicit axis rationale
-- [ ] Blue Ocean four-actions matrix
-- [ ] 3–5 competitor profiles with strategy inference
-- [ ] Pricing/packaging comparison matrix
-- [ ] Clear positioning statement and beachhead segment
-- [ ] Identified sustainable advantages + risks
-- [ ] Monitoring plan with cadence and owners
-
-## Resources
-
-- Full guide: `references/full-guide.md`
+Read [conditional companions](references/skill-routes.md) only when their stated condition applies.

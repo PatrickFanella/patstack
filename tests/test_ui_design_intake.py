@@ -1,4 +1,4 @@
-"""Keep the pinned upstream scanner executable and its provenance intact."""
+"""Keep the removed scanner recoverable outside discovery with its provenance intact."""
 import hashlib
 import json
 from pathlib import Path
@@ -22,7 +22,7 @@ class UIDesignIntakeTests(unittest.TestCase):
     @unittest.skipUnless(shutil.which('node'), 'Node 18+ required for scanner behavior checks')
     def test_upstream_scanner_positive_and_near_miss_cases(self):
         result = subprocess.run(
-            ['node', '--test', '--test-reporter=tap', 'skills/ui-cliche-audit/scripts/detect.test.mjs'],
+            ['node', '--test', '--test-reporter=tap', 'archive/removed-skills-2026-11-09/ui-cliche-audit/scripts/detect.test.mjs'],
             cwd=ROOT, capture_output=True, text=True, timeout=60,
         )
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)

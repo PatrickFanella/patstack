@@ -1,5 +1,5 @@
 import json,pathlib,subprocess,sys,tempfile,unittest
-SCRIPT=pathlib.Path(__file__).resolve().parents[1]/'skills/ship-check/scripts/collect_repository_evidence.py'
+SCRIPT=pathlib.Path(__file__).resolve().parents[1]/'skills/behavior-proof/references/modes/ship-check/scripts/collect_repository_evidence.py'
 class EvidenceTests(unittest.TestCase):
  def test_target_root_and_nested_rejection(self):
   with tempfile.TemporaryDirectory() as directory:

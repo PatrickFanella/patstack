@@ -320,8 +320,8 @@ Fix the most damaging issue first:
 - **LY6 (Structure)** → Use Structural Architecture section
 
 ### Complementary
-- **fiction-line-edit** - for sentence-level craft (overlaps with sound/clarity)
-- **trope-refresher** - for escaping default patterns
+- **fiction-editor** - for sentence-level craft (overlaps with sound/clarity)
+- **fiction-editor** - for escaping default patterns
 - **name-forge** - for sound symbolism and word selection
 
 ---

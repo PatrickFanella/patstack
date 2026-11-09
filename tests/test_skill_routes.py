@@ -31,10 +31,11 @@ class SkillRouteTests(unittest.TestCase):
                     self.assertIn('`' + edge['skill'] + '`', reference)
 
     def test_non_default_to_non_default_and_explicit_only_routes(self):
-        routes = router.lookup(ROOT, 'codex', origin='story-cowriter')
-        self.assertTrue(any(r['name'] == 'outline-to-chapter' and r['scope'] == 'optional' for r in routes))
-        explicit = router.resolve(ROOT, 'spec-implementer', 'codex')
-        self.assertTrue(explicit['explicitOnly'])
+        routes = router.lookup(ROOT, 'codex', origin='story-workbench')
+        self.assertTrue(any(r['name'] == 'fiction-editor' and r['scope'] == 'optional' for r in routes))
+        with self.assertRaises(ValueError):
+            router.resolve(ROOT, 'spec-implementer', 'codex')
+        self.assertFalse(router.resolve(ROOT, 'build-sequencer', 'codex')['explicitOnly'])
         self.assertEqual(router.resolve(ROOT, 'rn-expo-builder', 'codex')['groups'], ['mobile-and-interfaces'])
 
     def test_rejected_routes_and_listing_do_not_mutate_selection(self):

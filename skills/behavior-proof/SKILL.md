@@ -1,42 +1,18 @@
 ---
 name: behavior-proof
-description: "Use before claiming a UI, CLI, API, build or performance change works: run a conformance, regression or baseline check and report PASS, FAIL or INCONCLUSIVE with evidence. Not for a repository readiness audit (ship-check)."
+description: Verify an implementation, assess repository readiness, or create and
+  maintain a project-specific verification workflow.
 ---
 
 # behavior-proof
 
-Translate the requested claim into observable behavior and choose a verification mode:
+Distinguish proof of one changed behavior from whole-repository readiness. Report PASS, FAIL or INCONCLUSIVE with evidence; do not infer deployed behavior from local tests.
 
-- **Conformance:** Check a current property against explicit expectations. A new endpoint returning the required schema can pass without an older implementation.
-- **Regression:** Reproduce the defect in the relevant baseline and show the same check passing after the fix. Without a valid baseline, report the current result and the limit on the regression claim.
-- **Performance:** Compare baseline and treatment using the same workload, environment, and measurement method. Report noise or confounds instead of attributing every difference to the change.
+Select the matching procedure below and load only that procedure and its needed resources. Each procedure retains its own client, tool and invocation limits. Internal handoffs use the matching procedure below rather than reloading this entrypoint. A reference does not authorize delegation, publication, deployment or an unrelated mutation.
 
-Identify the surface the claim actually concerns. Build success verifies a build; it does not establish browser usability, deployed behavior, or data correctness.
+- **behavior proof**: Use before claiming a UI, CLI, API, build or performance change works: run a conformance, regression or baseline check and report PASS, FAIL or INCONCLUSIVE with evidence. Read [the procedure](references/base-workflow.md).
+- **ship check**: Use when asked how complete, ready or viable a repository is: trace claimed capabilities to code and tests; separate implemented, partial, planned, unverified. Read [the procedure](references/modes/ship-check/guide.md).
+- **verify skill forge**: Verification skill generator: on /create-verification-skill, write a project-local skill that launches, drives and proves a repo's UI, CLI or service. Read [the procedure](references/modes/verify-skill-forge/guide.md).
+- **verify skill audit**: Periodic audit of a project's verification skill and feature map against source and one live session, ending in at most one PR of proven fixes. Use for /maintain-verification-skill. Read [the procedure](references/modes/verify-skill-audit/guide.md).
 
-Reuse the repository's existing harness. For a missing harness, create the smallest isolated, deterministic probe needed for this claim. A user request for a reusable verification harness may produce a project-local skill under `.agents/skills`; keep its instructions specific to that application's launch command, test data, and expected behavior.
-
-Use a terminal/PTY harness for interactive CLI behavior, browser automation for UI behavior, and direct client requests for API behavior. Discover available tooling rather than assuming a named agent, MCP server, or another host's configuration path. Respect any more specific browser or runtime instructions.
-
-Inspect the result payload as well as process exit status. A command that exits zero with an error object has not satisfied the claim. Capture enough evidence to reproduce the conclusion, avoiding credentials and unnecessary user data.
-
-Conclude with PASS, FAIL, or INCONCLUSIVE for the named mode and claim. Include the command or interaction, artifact location, expected result, observed result, and material limitations. Keep local, staging, and production evidence distinct.
-
-## Surface procedures
-
-- Run compile and type-check commands and report failures. Read [the procedure](references/modes/check-compiler-errors/guide.md).
-- Build or adapt a local harness to drive, inspect, and profile an interactive CLI or TUI without external services. Read [the procedure](references/modes/control-cli/guide.md).
-- Build or adapt a local browser/CDP harness to drive and inspect a web, IDE, or Electron UI. Read [the procedure](references/modes/control-ui/guide.md).
-- For regression or performance comparisons only, capture a valid baseline and treatment and compare artifacts. Read [the procedure](references/modes/verify-this/guide.md).
-- Test local or remote web applications with browser automation and QA workflows. Read [the procedure](references/modes/webapp-testing/guide.md).
-- For live-session debugging, misleading fetch results, hidden DOM state, or save/publish evidence, read [browser diagnosis](references/browser-diagnosis.md). Keep the current client's browser/tool routing in force.
-
-Resource paths inside a mode are relative to that mode directory. Run its scripts from that directory or use absolute script paths, passing the target repository explicitly.
-
-## Conditional design notes
-
-- [prove it works](references/principles/prove-it-works.md): read when deciding what evidence a "works" claim needs.
-- [make operations idempotent](references/principles/make-operations-idempotent.md): read when the operation under test may be retried or resumed after interruption.
-
-## Companion skills
-
-Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.
+Read [conditional companions](references/skill-routes.md) only when their stated condition applies.

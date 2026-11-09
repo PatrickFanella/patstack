@@ -475,14 +475,14 @@ Options:
 
 | Skill | Integration |
 |-------|-------------|
-| **story-diagnosis** | Core narrative principles apply |
-| **world-diagnostics** | Consistency diagnostics for world |
-| **character-arc-doctor** | NPC transformation over campaign |
+| **story-workbench** | Core narrative principles apply |
+| **world-bible** | Consistency diagnostics for world |
+| **fiction-editor** | NPC transformation over campaign |
 | **scene-sequencing** | Pacing structure |
-| **dialogue-doctor** | NPC voice and subtext |
+| **fiction-editor** | NPC voice and subtext |
 | **world-bible** | Canon tracking across sessions |
-| **genre-promise-check** | Genre expectations and subversion |
-| **trope-refresher** | Avoiding tired tropes |
+| **story-workbench** | Genre expectations and subversion |
+| **fiction-editor** | Avoiding tired tropes |
 
 ---
 

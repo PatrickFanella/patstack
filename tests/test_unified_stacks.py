@@ -176,10 +176,44 @@ class UnifiedStackTests(unittest.TestCase):
                 names, _ = stack_selection.selection(ROOT, [profile.stem])
                 coverage.update(names)
             self.assertEqual(coverage, set(all_sources))
-            self.assertEqual(len(stack_selection.selection(ROOT, [])[0]), 42)
+            self.assertEqual(len(stack_selection.selection(ROOT, [])[0]), 37)
         finally:
             sys.path.remove(str(ROOT / 'scripts'))
             sys.path.remove(str(module))
+
+    def test_new_bundle_retires_old_owner_and_rollback_restores_old_bundle(self):
+        self.cli('activate', 'core')
+        before = {client: installer.snapshot(root / 'base') for client, root in self.roots.items()}
+        next_source = self.home / 'consolidated-source'
+        shutil.copytree(self.source, next_source)
+        (next_source / 'skills/base').rename(next_source / 'skills/renamed-base')
+        (next_source / 'skills/renamed-base/SKILL.md').write_text(
+            '---\nname: renamed-base\ndescription: Consolidated fixture owner.\n---\n')
+        records = installer.read(next_source / 'catalog/qualification.json')
+        records['skills']['base']['status'] = 'archived'
+        records['skills']['renamed-base'] = {
+            **records['skills']['base'], 'status': 'selection-tested',
+            'canonicalSource': 'skills/renamed-base'}
+        self.write(next_source / 'catalog/qualification.json', records)
+        self.write(next_source / 'catalog/retired-names.json', {'base': {'owner': 'renamed-base'}})
+        (next_source / 'profiles/core.txt').write_text('renamed-base\nshared\n')
+        self.write(next_source / 'deployment-source.json', {'sourceRevision': 'consolidated-fixture'})
+        command = [sys.executable, '-B', str(next_source / 'scripts/skill-profile')]
+        run = subprocess.run(command + ['activate', 'core'], env=self.env(), capture_output=True, text=True)
+        self.assertEqual(run.returncode, 0, run.stderr)
+        receipt = json.loads(run.stdout)
+        for client in ['shared', 'codex', 'claude', 'copilot', 'cursor']:
+            root = self.roots[client]
+            self.assertFalse((root / 'base').is_symlink())
+            self.assertEqual((root / 'renamed-base').resolve(), next_source / 'skills/renamed-base')
+        self.assertTrue((self.roots['copilot'] / 'app-tool').is_symlink())
+        rollback = subprocess.run(command + ['rollback', '--run', receipt['run']],
+                                  env=self.env(), capture_output=True, text=True)
+        self.assertEqual(rollback.returncode, 0, rollback.stderr)
+        self.cli('verify', 'core')
+        for client, root in self.roots.items():
+            self.assertEqual(installer.snapshot(root / 'base'), before[client])
+            self.assertFalse((root / 'renamed-base').is_symlink())
 
     def test_historical_source_evidence_and_native_links_transfer_without_a_fake_receipt(self):
         module = ROOT / 'runtime-bundles/subsets-fleet/scripts'

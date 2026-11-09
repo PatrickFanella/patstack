@@ -333,10 +333,10 @@ For implementation, see the . Key RevOps tools:
 ## Related Skills
 
 - **cold-email**: For outbound prospecting emails
-- **drip-sequence-planner**: For lifecycle and nurture email flows
+- **page-copy-forge**: For lifecycle and nurture email flows
 - **pricing-strategy**: For pricing decisions and packaging
 - **analytics-tracking**: For tracking pipeline metrics and attribution
-- **launch-runway**: For go-to-market launch planning
+- **launch-dossier**: For go-to-market launch planning
 - **sales-collateral**: For sales collateral, decks, and objection handling
 
 ## Resources

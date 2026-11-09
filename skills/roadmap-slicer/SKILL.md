@@ -1,35 +1,20 @@
 ---
 name: roadmap-slicer
-description: "Use when a finished plan, spec or design doc should become Gitea issues: a Roadmap tracking issue listing work in dependency order, optional Epics, and one issue per mergeable PR, wired with native blocking dependencies. Also to extend or refresh such a roadmap. Not for writing the plan (build-sequencer, scope-grill) or triaging incoming issues (issue-state-triage)."
+description: Create and maintain roadmaps and tracker issues, triage reports, or configure
+  repository contribution workflows.
 ---
 
 # roadmap-slicer
 
-Turn a finished plan into issues that a person or an agent can work from top to bottom. Gitea has no sub-issues, so the hierarchy is built from tracking issues, checklists and native dependencies:
+Choose intake, triage, setup, roadmap publication or maintainer guidance from the request. Filing a bug does not authorize fixing it. Read back authorized tracker writes.
 
-- **Roadmap**: one tracking issue per plan. Goal, decisions, epics, the full execution order in waves, critical path and graph. Pinned.
-- **Epic** (optional): a tracking issue for one feature that needs three or more PRs.
-- **Work issue**: exactly one reviewable PR. A **spike** is a work issue whose output is a recorded decision.
+Select the matching procedure below and load only that procedure and its needed resources. Each procedure retains its own client, tool and invocation limits. Internal handoffs use the matching procedure below rather than reloading this entrypoint. A reference does not authorize delegation, publication, deployment or an unrelated mutation.
 
-A PR is not an issue: it closes its work issue with `Closes #n`. Epics depend on their children and the roadmap depends on its epics, so tracking issues close last.
+- **roadmap slicer**: Use when a finished plan, spec or design doc should become Gitea issues: a Roadmap tracking issue listing work in dependency order, optional Epics, and one issue per mergeable PR, wired with native blocking dependencies. Also to extend or refresh such a roadmap. Read [the procedure](references/base-workflow.md).
+- **tracer ticket split**: Tickets from a plan: split a plan, spec or conversation into tracer-bullet tickets with blocking edges, published to the configured tracker (Gitea, GitHub, Linear or local files). Read [the procedure](references/modes/tracer-ticket-split/guide.md).
+- **tracker bootstrap**: Set up a repo for Matt Pocock's engineering skills: issue tracker (Gitea, GitHub, GitLab or local), triage labels, CONTEXT.md/ADR layout. Run once before tracer-ticket-split, triage or to-spec. Read [the procedure](references/modes/tracker-bootstrap/guide.md).
+- **issue state triage**: Issue triage: move incoming bugs and feature requests through needs-triage, needs-info and ready-for-agent states, write agent briefs, or show what needs attention on the tracker. Read [the procedure](references/modes/issue-state-triage/guide.md).
+- **bug intake session**: Use when the user wants a QA session: they report bugs conversationally and you file durable, user-focused issues on the repo's Gitea or GitHub tracker. Read [the procedure](references/modes/bug-intake-session/guide.md).
+- **oss maintainer coach**: Open source project guidance from opensource.guide: starting, contributing, onboarding, governance, codes of conduct, funding, security, metrics, legal basics, maintainer burnout. Read [the procedure](references/modes/oss-maintainer-coach/guide.md).
 
-## Workflow
-
-1. **Read the whole plan.** Finished means the goal, scope and product decisions are settled. If an open question can be answered by investigation, make it a spike. If it needs the user's judgement and changes the breakdown, ask or route to `scope-grill`. Never invent the decision.
-2. **Inspect the target repository.** Confirm the Gitea login your environment designates (`tea api /user`), that issue dependencies are enabled (`internal_tracker.enable_issue_dependencies`), and the existing labels, milestones and open roadmaps. Read enough code to name boundaries and verification commands.
-3. **Slice and order.** Read [the breakdown method](references/breakdown-method.md). Write the plan file described in [the plan format](references/plan-format.md), starting from [the example](assets/plan.example.json). Keep it outside the repository unless the user wants it committed.
-4. **Check.** Run `python3 scripts/roadmap.py check PLAN`. Fix every error. Weigh each warning, then read `--preview` as the implementer of each issue would. Every issue should merge on its own and every edge should be a hard prerequisite.
-5. **Publish.** Run `python3 scripts/roadmap.py publish PLAN --repo OWNER/NAME [--login LOGIN]` as a dry run, review the actions, then add `--apply`. A request to create the issues authorizes this step. If the user asked only for a proposed breakdown, stop after step 4 and show the summary.
-6. **Report.** `--apply` reads everything back and exits non-zero on a mismatch. Open the roadmap once to confirm it renders. Report the roadmap link, the issue count, the frontier, the critical path, and any assumptions or warnings you accepted.
-
-Labels: the script creates only the exclusive `Planning/*` role labels it needs. Take other labels from the repository's existing taxonomy. Do not apply `ready-for-agent`, `agent:*` or other queue labels unless asked, because they can start automation.
-
-## After publishing
-
-- **The plan changed**: edit the plan file and publish again. Existing issues are matched by a hidden marker and skipped, new issues are created and wired, and the roadmap and epic bodies are regenerated. `--update` also rewrites existing titles, bodies and labels. Check for manual edits before using it.
-- **Progress**: `python3 scripts/roadmap.py refresh --repo OWNER/NAME --roadmap N --apply` ticks closed issues in the roadmap and epics and lists the frontier. Gitea will not close an issue while it has open blockers, even from a merged PR's `Closes #n`, and gives no warning. Refresh finds those issues and closes them once their blockers are closed.
-- **No Python or tea**: follow the manual path in [Gitea notes](references/gitea.md), which also covers the API calls, permissions and failure handling.
-
-The script needs Python 3 and `tea` with a login that can write issues. It changes only issues, labels, milestones, dependencies and the pin. If it stops partway, fix the cause and run it again; the markers make a rerun safe.
-
-For companion skills, read [the routes](references/skill-routes.md) only when their condition applies.
+Read [conditional companions](references/skill-routes.md) only when their stated condition applies.

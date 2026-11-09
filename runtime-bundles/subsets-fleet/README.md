@@ -2,7 +2,7 @@
 
 This adapter is the Subsets owner for the user-level skills from patstack's
 `skills/`, `shared/` and qualified `library/skills/` sources. One selection
-combines the 40-skill core with requested task sets. Individual links expose the
+combines the 37-skill core with requested task sets. Individual links expose the
 same reviewed sources under Agents, Codex, Claude, Copilot, Cursor and OpenCode.
 App/package/system and project/vault skills retain their locations and owners.
 

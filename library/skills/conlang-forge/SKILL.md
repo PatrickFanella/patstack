@@ -1,6 +1,7 @@
 ---
 name: conlang-forge
-description: "Conlangs for fiction: generate phonologically consistent naming languages, alien speech or fantasy tongues without deep linguistics."
+description: Design fictional naming languages, full conlangs, language families,
+  dialects or historical sound changes.
 license: MIT
 metadata:
   blacktower-pack: creative
@@ -8,41 +9,17 @@ metadata:
   blacktower-tier: standard
   blacktower-capabilities: worldbuilding-fiction,conlang
   author: jwynia
-  version: "1.0"
+  version: '1.0'
   type: generator
   mode: generative
   domain: worldbuilding
 ---
 
-# conlang
+# conlang-forge
 
-## Use this skill
+Match linguistic detail to the story's needs; preserve existing phonology and naming conventions and distinguish invented history from source canon.
 
-Generate phonologically consistent constructed languages for fiction. Use when you need naming languages, alien speech, or fantasy tongues without deep linguistics knowledge.
+Select the matching procedure below and load only that procedure and its needed resources. Each procedure retains its own client, tool and invocation limits. Internal handoffs use the matching procedure below rather than reloading this entrypoint. A reference does not authorize delegation, publication, deployment or an unrelated mutation.
 
-## Workflow
-
-1. Confirm the request matches this skill's stated intent; do not activate it
-   for a keyword-only near miss.
-2. Inspect the user's inputs, repository conventions, and available tools before
-   selecting an approach.
-3. Load only the relevant section of the detailed guide when the task needs
-   domain-specific patterns or edge cases.
-4. Perform the smallest complete unit of work and preserve existing behavior or
-   user data unless change is explicitly requested.
-5. Validate the result with the project's own checks plus any skill-specific
-   verification described in the detailed guide.
-
-## Constraints
-
-- Prefer the project's existing stack and conventions over generic examples.
-- State required credentials, network access, CLIs, and destructive side effects
-  before relying on them.
-- Use current authoritative documentation when provider or framework behavior is
-  version-sensitive.
-- Report concrete evidence, remaining risks, and any unverified assumptions.
-
-## Resources
-
-- `references/detailed-guide.md` — detailed framework and edge cases; load only the sections needed for the task.
-- `scripts/` — deterministic helpers; inspect --help and side effects before use.
+- **conlang forge**: Conlangs for fiction: generate phonologically consistent naming languages, alien speech or fantasy tongues without deep linguistics. Read [the procedure](references/base-workflow.md).
+- **conlang drift**: Fictional language design. Use when creating language families, dialects, sound changes or linguistic history that should reflect a world's cultures and past. Read [the procedure](references/modes/conlang-drift/guide.md).

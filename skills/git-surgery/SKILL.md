@@ -1,18 +1,17 @@
 ---
 name: git-surgery
-description: Use when resolving merge conflicts, rebasing, bisecting, using worktrees or reflog recovery, automating changelogs, or preparing a PR on Gitea or GitHub. Not for reviewing code changes or running parallel agent lanes (worktree-lanes).
+description: Manage Git history and worktrees or prepare and ship a focused branch
+  through its authorized PR workflow.
 ---
 
 # git-surgery
 
-Resolve the repository, requested comparison, and configured remote first. Preserve unrelated work. Read-only Git inspection, requested history edits, PR preparation, and publishing have separate authorization boundaries.
+Inspect the exact checkout, common directory, remotes and dirty state first. A PR request does not authorize merging, deployment or destructive history changes.
 
-## Select a mode
+Select the matching procedure below and load only that procedure and its needed resources. Each procedure retains its own client, tool and invocation limits. Internal handoffs use the matching procedure below rather than reloading this entrypoint. A reference does not authorize delegation, publication, deployment or an unrelated mutation.
 
-- Automate changelog generation from commits, PRs, and releases following Keep a Changelog format. Read [the procedure](references/modes/changelog-automation/guide.md).
-- Resolve merge conflicts non-interactively, validate build and tests, and finalize conflict resolution. Read [the procedure](references/modes/fix-merge-conflicts/guide.md).
-- Master advanced Git workflows including rebasing, cherry-picking, bisect, worktrees, and reflog to maintain clean history and recover from any situation. Read [the procedure](references/modes/git-advanced-workflows/guide.md).
-- GitHub-hosted repositories only: PR context, issues, review comments, and Actions failures through `gh`. For Gitea repositories use `tea --login subcult-agent`. Read [the procedure](references/modes/github-pro/guide.md).
-- Prepare PRs for review by cleaning noisy history, improving PR descriptions, and adding reviewer guidance without changing code behavior. Read [the procedure](references/modes/make-pr-easy-to-review/guide.md).
+- **git surgery**: Use when resolving merge conflicts, rebasing, bisecting, using worktrees or reflog recovery, automating changelogs, or preparing a PR on Gitea or GitHub. Read [the procedure](references/base-workflow.md).
+- **branch shipper**: Ship the current branch: review for bugs and intent fit, run or add tests, commit focused work, open or update the PR (Gitea via tea, GitHub via gh). Use before handing off a branch. Read [the procedure](references/modes/branch-shipper/guide.md).
+- **worktree lanes**: Worktree lanes: create, track, integrate and prune Git worktrees under .blacktower/worktrees for risky, parallel or multi-agent work. Read [the procedure](references/modes/worktree-lanes/guide.md).
 
-Resource paths inside a mode are relative to that mode directory. Run its scripts from that directory or use absolute script paths, passing the target repository explicitly.
+Read [conditional companions](references/skill-routes.md) only when their stated condition applies.

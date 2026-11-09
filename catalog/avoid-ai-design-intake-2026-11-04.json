@@ -18,37 +18,37 @@
       "upstreamPath": "LICENSE",
       "sha256": "fb80d085c4fea39d2e594fb21618cc380c749585f68b3ff013e7ea7add3d5ed6",
       "archivePath": "authoring/upstream/avoid-ai-design/2b7c71836b06cdf6b3d73265b56490c1b75ad5aa/LICENSE",
-      "installedPath": "skills/ui-cliche-audit/notices/avoid-ai-design-MIT.txt"
+      "installedPath": "archive/removed-skills-2026-11-09/ui-cliche-audit/notices/avoid-ai-design-MIT.txt"
     },
     {
       "upstreamPath": "scripts/detect.mjs",
       "sha256": "0b317eefbc27ad2c9ea35149734c14a1e421162d860b3dcec97072744a524fb5",
       "archivePath": "authoring/upstream/avoid-ai-design/2b7c71836b06cdf6b3d73265b56490c1b75ad5aa/scripts/detect.mjs",
-      "installedPath": "skills/ui-cliche-audit/scripts/detect.mjs"
+      "installedPath": "archive/removed-skills-2026-11-09/ui-cliche-audit/scripts/detect.mjs"
     },
     {
       "upstreamPath": "scripts/detect.test.mjs",
       "sha256": "378513c8a9a77005925013d1d39af40a4ca200507215e5f0b73f74ccc76e0304",
       "archivePath": "authoring/upstream/avoid-ai-design/2b7c71836b06cdf6b3d73265b56490c1b75ad5aa/scripts/detect.test.mjs",
-      "installedPath": "skills/ui-cliche-audit/scripts/detect.test.mjs"
+      "installedPath": "archive/removed-skills-2026-11-09/ui-cliche-audit/scripts/detect.test.mjs"
     },
     {
       "upstreamPath": "references/ai-tells-catalog.md",
       "sha256": "91c064363c395ab74c3aff376a5efb57bbe9ba1fe62d948335978bfb89ab42e0",
       "archivePath": "authoring/upstream/avoid-ai-design/2b7c71836b06cdf6b3d73265b56490c1b75ad5aa/references/ai-tells-catalog.md",
-      "installedPath": "skills/ui-cliche-audit/references/avoid-ai-design/ai-tells-catalog.md"
+      "installedPath": "archive/removed-skills-2026-11-09/ui-cliche-audit/references/avoid-ai-design/ai-tells-catalog.md"
     },
     {
       "upstreamPath": "references/aesthetic-directions.md",
       "sha256": "8f2cfc02bdab4df7d5eacedac3d8bb01b3bbd9de1c51d304db816e55ef2a5a91",
       "archivePath": "authoring/upstream/avoid-ai-design/2b7c71836b06cdf6b3d73265b56490c1b75ad5aa/references/aesthetic-directions.md",
-      "installedPath": "skills/ui-cliche-audit/references/avoid-ai-design/aesthetic-directions.md"
+      "installedPath": "archive/removed-skills-2026-11-09/ui-cliche-audit/references/avoid-ai-design/aesthetic-directions.md"
     },
     {
       "upstreamPath": "references/design-md-template.md",
       "sha256": "edc25f41802244e4f271969b8601b8988a47fb0f6f3c26f2ca1e5c85f3adfc89",
       "archivePath": "authoring/upstream/avoid-ai-design/2b7c71836b06cdf6b3d73265b56490c1b75ad5aa/references/design-md-template.md",
-      "installedPath": "skills/ui-cliche-audit/references/avoid-ai-design/design-md-template.md"
+      "installedPath": "archive/removed-skills-2026-11-09/ui-cliche-audit/references/avoid-ai-design/design-md-template.md"
     }
   ],
   "adaptations": [
@@ -62,5 +62,6 @@
   "evidence": [
     "docs/reviews/2026-11-04-avoid-ai-design.md",
     "tests/test_ui_design_intake.py"
-  ]
+  ],
+  "deploymentStatus": "Removed from discovery on 2026-11-09 by user request; installedPath records now resolve to the retained archive, not an active installation."
 }

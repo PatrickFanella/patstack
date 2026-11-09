@@ -1,16 +1,12 @@
 # Plan and produce visual, audio, video or slide material with a coherent voice and delivery format.
-brutal-hud-kit
-content-recaster
 game-fun-theory
 lyric-doctor
-marketing-imagery
-pet-hatchery
+page-copy-forge
 pptx-forge
 raster-image-gen
-slide-story-design
 sonic-fingerprint
-speech-shaper
 ui-craft
 video-production-lab
 voice-ledger
 web-game-loop
+writing-workbench

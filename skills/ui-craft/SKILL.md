@@ -25,7 +25,6 @@ Implement UI with clear priorities and coherent styling. Use for code-level visu
 
 1. Read available product and design context: primary task, audience language, supported capabilities, representative data, constraints, and existing design rules. Resolve missing information only when it changes the implementation.
 2. Explain how the hierarchy and visual direction serve the task. Choose sections and groupings from the content; do not impose a hero, three-card grid, bento layout, or generic KPI dashboard by default.
-3. For UI implementation and design fixes, read the sibling `ui-cliche-audit` skill's `references/avoid-ai-design/workflow.md` in implementation mode. Use its scanner before and after edits when Node 18+ is available; treat flags as context-sensitive review clues. Implement layout, typography, color, spacing, motion, and responsive states.
 4. Check accessibility basics: contrast, labels, focus, keyboard, semantics.
 5. Inspect the rendered interface and exercise the main task when browser tools are available. Include relevant empty, loading, error, permission, long-content, and narrow-screen conditions. Report unavailable checks; a screenshot does not prove working interactions.
 6. If more design data is needed, consult merged `tool-ui-ux-pro-max` references/scripts.
@@ -40,7 +39,6 @@ Implement UI with clear priorities and coherent styling. Use for code-level visu
 - [ ] Accessibility basics pass.
 - [ ] Visual QA findings include source-file fixes, not just comments.
 
-For an audit-only request, use `ui-cliche-audit` without editing. Use `prose-unslop` for interface copy. Keep visual judgment, usability evidence, and behavior checks distinct.
 
 ## Resources
 

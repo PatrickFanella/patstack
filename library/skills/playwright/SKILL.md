@@ -40,7 +40,7 @@ Once `npx` is present, proceed with the wrapper script. A global install of `pla
 
 ```bash
 export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
-export PWCLI="$CODEX_HOME/skills/playwright-cli-driver/scripts/playwright_cli.sh"
+export PWCLI="$CODEX_HOME/skills/browser-workbench/references/modes/playwright-cli-driver/scripts/playwright_cli.sh"
 ```
 
 User-scoped skills install under `$CODEX_HOME/skills` (default: `~/.codex/skills`).

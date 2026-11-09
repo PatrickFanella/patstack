@@ -1,65 +1,24 @@
 ---
 name: agent-fanout-plan
-description: "Parallel subagent coordination (Claude Code, Codex, OpenCode, Blacktower): ownership, sequencing, handoffs and integration checks. Not when one agent can finish more cheaply."
+description: Coordinate authorized parallel agent work, candidate comparisons or a
+  supported multi-phase agent workflow.
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow
   blacktower-tier: core
-  blacktower-capabilities: parallel delegation,subagent coordination,file ownership,agent handoff,integration sequencing
+  blacktower-capabilities: parallel delegation,subagent coordination,file ownership,agent
+    handoff,integration sequencing
   author: blacktower
   version: '2.0'
 ---
 
-# Multi-Agent Workflows
+# agent-fanout-plan
 
-Delegate only independent, concrete work that benefits from parallelism or a
-specialist perspective. The coordinating agent remains responsible for scope,
-integration, verification, and the final answer.
+Delegation requires the current task authorization. Respect client orchestration contracts, ownership and integration checks. OpenCode deepwork requires its actual Blacktower runtime; never invent agent types or providers.
 
-## Workflow
+Select the matching procedure below and load only that procedure and its needed resources. Each procedure retains its own client, tool and invocation limits. Internal handoffs use the matching procedure below rather than reloading this entrypoint. A reference does not authorize delegation, publication, deployment or an unrelated mutation.
 
-1. Split the goal into bounded tasks with explicit outputs and dependencies.
-2. Assign each task an owner, allowed files or read-only scope, and acceptance
-   criteria. Avoid overlapping write ownership.
-3. Pass only the context needed to complete the assignment, including applicable
-   repository instructions and known user-owned changes.
-4. Run independent tasks in parallel. Keep dependency-bound work sequential.
-5. Require each agent to report evidence, unresolved risks, and exact files
-   changed. A confident summary is not verification.
-6. Integrate centrally, resolve conflicts, run repository-wide checks, and review
-   the combined diff for inconsistencies between independently produced work.
-
-## Assignment Contract
-
-Every delegated task should state:
-
-```text
-Objective:
-Scope and ownership:
-Inputs and constraints:
-Expected output:
-Verification:
-Dependencies or handoff target:
-```
-
-Use messages for small coordination facts and a structured handoff when another
-agent must continue the work. Load the reference material only when choosing a
-team shape, resolving file ownership, or designing a multi-stage collaboration.
-
-## Guardrails
-
-- Do not delegate an ambiguous task merely to manufacture parallelism.
-- Do not let multiple agents edit the same files without an explicit integration
-  strategy.
-- Do not accept agent claims without inspecting their output or rerunning the
-  appropriate checks.
-- Stop or redirect agents whose work has become obsolete after a scope change.
-
-## References
-
-- `references/agent-type-selection.md`
-- `references/preset-teams.md`
-- `references/file-ownership.md`
-- `references/merge-strategies.md`
-- `references/messaging-patterns.md`
-- `references/communication-guide.md`
+- **agent fanout plan**: Parallel subagent coordination (Claude Code, Codex, OpenCode, Blacktower): ownership, sequencing, handoffs and integration checks. Not when one agent can finish more cheaply. Read [the procedure](references/base-workflow.md).
+- **worker swarm fanout**: Swarm fan-out: run N parallel subagents on separate slices or as a race, then return one aggregated report. Use for /swarm or 'swarm this'. Read [the procedure](references/modes/worker-swarm-fanout/guide.md).
+- **candidate arena**: Use for /arena or arena this: run N parallel candidates on one non-trivial task, cross-judge them, pick a base and graft the best parts of the rest into it. Read [the procedure](references/modes/candidate-arena/guide.md).
+- **opencode deepwork**: OpenCode deepwork: orchestrate a long, risky multi-phase coding task with Blacktower @oracle reviews, delegated phases and a progress file. Needs OpenCode with Blacktower agents. Read [the procedure](references/modes/opencode-deepwork/guide.md).
