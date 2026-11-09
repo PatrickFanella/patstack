@@ -17,8 +17,8 @@ The naming skill is derived from `frameworks/naming/naming-framework.md`, which 
 | Skill | Connection |
 |-------|------------|
 | **conlang-forge** | Phoneme inventories for consistent fictional naming systems |
-| **world-diagnostics** | Names reflecting cultural evolution |
-| **trope-refresher** | Avoiding default names for character roles |
+| **world-bible** | Names reflecting cultural evolution |
+| **fiction-editor** | Avoiding default names for character roles |
 
 ## Usage
 

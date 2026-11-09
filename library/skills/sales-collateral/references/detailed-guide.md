@@ -346,7 +346,7 @@ For partner sales enablement, see the :
 
 ## Related Skills
 
-- **vs-page-writer**: For public-facing comparison and alternative pages
+- **page-copy-forge**: For public-facing comparison and alternative pages
 - **page-copy-forge**: For marketing website copy
 - **cold-email**: For outbound prospecting emails
 - **lead-pipeline-ops**: For lead lifecycle, scoring, routing, and pipeline management

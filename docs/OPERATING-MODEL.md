@@ -101,7 +101,7 @@ The local Claude launcher retains mise selection; see its source script.
 
 ## Skill names
 
-Use distinct names such as `bug-tracer`, `prose-unslop` and `ship-check`.
+Use distinct names such as `bug-tracer`, `prose-unslop` and `behavior-proof`.
 `catalog/retired-names.json` records earlier names, canonical owners and
 procedures. Do not regenerate the historical collection builder over curated
 sources or add discovery aliases for retired names. Project/vault skill names
@@ -109,7 +109,7 @@ retain their deployer ownership until those deployers can retire old paths.
 
 ## Public edition
 
-`catalog/public-edition.json` lists the 49 skills exported to the
+`catalog/public-edition.json` lists the 42 skills exported to the
 `generic-skills` repository and the `@subcult/patstack` npm package, which
 Subsets offers as its default optional pack. `generic-skills` has been private
 on Gitea since 2026-11-03; its older public GitHub copy is retained but no

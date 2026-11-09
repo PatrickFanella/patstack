@@ -2,12 +2,12 @@
 claim-verifier
 data-narrative
 eval-bench
-pg-plan-reader
+landing-page-cro
+postgres-workbench
 primary-source-notes
 retrieval-pipeline
 runway-modeler
 sheet-wrangler
-split-test-planner
 strategy-backtester
 tetrad-impact-lens
 thinking-audit

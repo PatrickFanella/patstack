@@ -1,6 +1,7 @@
 ---
 name: rpg-game-master
-description: "RPG game master: run a tabletop or solo narrative RPG session with scene management, NPC portrayal and story continuity."
+description: Run a requested tabletop or solo narrative RPG session or adjust its
+  narration and table tone.
 metadata:
   blacktower-pack: creative
   blacktower-kind: workflow
@@ -10,25 +11,11 @@ metadata:
 
 # rpg-game-master
 
-Run or design tabletop/narrative game facilitation. Use merged D&D/game-master content as a reference, not a separate active skill.
+Preserve player agency, established rules and continuity. A tone review does not start or advance a session unless requested.
 
-## Workflow
+Select the matching procedure below and load only that procedure and its needed resources. Each procedure retains its own client, tool and invocation limits. Internal handoffs use the matching procedure below rather than reloading this entrypoint. A reference does not authorize delegation, publication, deployment or an unrelated mutation.
 
-1. Use this skill only when the request matches the frontmatter description.
-2. Keep the main context short: read only the relevant reference file for the exact subtask.
-3. Prefer existing scripts/templates/assets in this skill before writing ad hoc code. Scripts are Deno programs (`deno run --allow-read ...`). Deno is not installed on the fleet by default; `mise exec deno -- deno run ...` runs one without a global install.
-4. Stop and ask when required credentials, CLIs, project context, or user confirmation are missing.
+- **rpg game master**: RPG game master: run a tabletop or solo narrative RPG session with scene management, NPC portrayal and story continuity. Read [the procedure](references/base-workflow.md).
+- **table tone tuner**: Tabletop RPG tone: diagnose flat narration, jarring tone shifts, overlong descriptions or monotonous session energy, and calibrate delivery for the table. Read [the procedure](references/modes/table-tone-tuner/guide.md).
 
-## Resources
-
-- `references/full-guide.md` — detailed guidance.
-
-### Curated references
-
-Former merged-skill dumps were distilled into these lookup files:
-
-- `references/curated/game-master.md` — Game Master guidance.
-
-## Companion skills
-
-Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.
+Read [conditional companions](references/skill-routes.md) only when their stated condition applies.

@@ -104,16 +104,16 @@
     "procedure": "skills/git-surgery/references/modes/make-pr-easy-to-review/guide.md"
   },
   "helm-chart-scaffolding": {
-    "owner": "kube-artifact-smith",
-    "procedure": "library/skills/kube-artifact-smith/references/modes/helm-chart-scaffolding/guide.md"
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/kube-artifact-smith/references/modes/helm-chart-scaffolding/guide.md"
   },
   "k8s-manifest-generator": {
-    "owner": "kube-artifact-smith",
-    "procedure": "library/skills/kube-artifact-smith/references/modes/k8s-manifest-generator/guide.md"
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/kube-artifact-smith/references/modes/k8s-manifest-generator/guide.md"
   },
   "k8s-security-policies": {
-    "owner": "kube-artifact-smith",
-    "procedure": "library/skills/kube-artifact-smith/references/modes/k8s-security-policies/guide.md"
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/kube-artifact-smith/references/modes/k8s-security-policies/guide.md"
   },
   "distributed-tracing": {
     "owner": "telemetry-signal-forge",
@@ -132,8 +132,8 @@
     "procedure": "skills/telemetry-signal-forge/references/modes/slo-implementation/guide.md"
   },
   "postgres-data-quality": {
-    "owner": "pg-plan-reader",
-    "procedure": "skills/pg-plan-reader/references/modes/postgres-data-quality/guide.md"
+    "owner": "postgres-workbench",
+    "procedure": "skills/postgres-workbench/references/modes/postgres-data-quality/guide.md"
   },
   "python-configuration": {
     "owner": "python-uv-workbench",
@@ -200,12 +200,12 @@
     "procedure": "skills/bug-tracer/references/modes/failure-anthropologist/guide.md"
   },
   "readme-i18n": {
-    "owner": "tech-doc-writer",
-    "procedure": "skills/tech-doc-writer/references/modes/readme-i18n/guide.md"
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/tech-doc-writer/references/modes/readme-i18n/guide.md"
   },
   "review-doc-consistency": {
-    "owner": "tech-doc-writer",
-    "procedure": "skills/tech-doc-writer/references/modes/review-doc-consistency/guide.md"
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/tech-doc-writer/references/modes/review-doc-consistency/guide.md"
   },
   "migrate-to-shoehorn": {
     "owner": "ts-type-design",
@@ -284,12 +284,12 @@
     "procedure": "skills/safe-refactor-pass/references/principles/subtract-before-you-add.md"
   },
   "principle-build-the-lever": {
-    "owner": "sweep-rewriter",
-    "procedure": "skills/sweep-rewriter/references/principles/build-the-lever.md"
+    "owner": "safe-refactor-pass",
+    "procedure": "skills/safe-refactor-pass/references/modes/sweep-rewriter/references/principles/build-the-lever.md"
   },
   "principle-encode-lessons-in-structure": {
-    "owner": "sweep-rewriter",
-    "procedure": "skills/sweep-rewriter/references/principles/encode-lessons-in-structure.md"
+    "owner": "safe-refactor-pass",
+    "procedure": "skills/safe-refactor-pass/references/modes/sweep-rewriter/references/principles/encode-lessons-in-structure.md"
   },
   "principle-guard-the-context-window": {
     "owner": "build-sequencer",
@@ -397,8 +397,8 @@
     "renamed": "2026-11-03"
   },
   "content-repurposing": {
-    "owner": "content-recaster",
-    "procedure": "shared/content-recaster/SKILL.md",
+    "owner": "page-copy-forge",
+    "procedure": "library/skills/page-copy-forge/references/modes/content-recaster/guide.md",
     "renamed": "2026-11-03"
   },
   "marketing-packet": {
@@ -417,8 +417,8 @@
     "renamed": "2026-11-03"
   },
   "agent-workspace-linux": {
-    "owner": "sandbox-desktop",
-    "procedure": "skills/sandbox-desktop/SKILL.md",
+    "owner": "browser-workbench",
+    "procedure": "skills/browser-workbench/references/base-workflow.md",
     "renamed": "2026-11-03"
   },
   "api-development": {
@@ -447,13 +447,13 @@
     "renamed": "2026-11-03"
   },
   "clonedeps": {
-    "owner": "dep-source-clone",
-    "procedure": "skills/dep-source-clone/SKILL.md",
+    "owner": "repo-research-trail",
+    "procedure": "library/skills/repo-research-trail/references/modes/dep-source-clone/guide.md",
     "renamed": "2026-11-03"
   },
   "cloudflare-deploy": {
-    "owner": "cf-edge-deploy",
-    "procedure": "skills/cf-edge-deploy/SKILL.md",
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/cf-edge-deploy/guide.md",
     "renamed": "2026-11-03"
   },
   "code-review": {
@@ -467,13 +467,13 @@
     "renamed": "2026-11-03"
   },
   "codemod-surgeon": {
-    "owner": "sweep-rewriter",
-    "procedure": "skills/sweep-rewriter/SKILL.md",
+    "owner": "safe-refactor-pass",
+    "procedure": "skills/safe-refactor-pass/references/modes/sweep-rewriter/guide.md",
     "renamed": "2026-11-03"
   },
   "database-migration": {
-    "owner": "schema-migrator",
-    "procedure": "skills/schema-migrator/SKILL.md",
+    "owner": "postgres-workbench",
+    "procedure": "skills/postgres-workbench/references/modes/schema-migrator/guide.md",
     "renamed": "2026-11-03"
   },
   "dependency-upgrade": {
@@ -497,8 +497,8 @@
     "renamed": "2026-11-03"
   },
   "gitea-repo-overhaul": {
-    "owner": "gitea-fleet-tidy",
-    "procedure": "skills/gitea-fleet-tidy/SKILL.md",
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/gitea-fleet-tidy/guide.md",
     "renamed": "2026-11-03"
   },
   "golang-pro": {
@@ -507,8 +507,8 @@
     "renamed": "2026-11-03"
   },
   "hatch-pet": {
-    "owner": "pet-hatchery",
-    "procedure": "skills/pet-hatchery/SKILL.md",
+    "owner": "raster-image-gen",
+    "procedure": "library/skills/raster-image-gen/references/modes/pet-hatchery/guide.md",
     "renamed": "2026-11-03"
   },
   "implementation-plan": {
@@ -517,8 +517,8 @@
     "renamed": "2026-11-03"
   },
   "interface-originality-audit": {
-    "owner": "ui-cliche-audit",
-    "procedure": "skills/ui-cliche-audit/SKILL.md",
+    "owner": null,
+    "procedure": "archive/removed-skills-2026-11-09/ui-cliche-audit/entrypoint.md",
     "renamed": "2026-11-03"
   },
   "llm-evaluation": {
@@ -537,8 +537,8 @@
     "renamed": "2026-11-03"
   },
   "mtls-configuration": {
-    "owner": "mtls-trust-chain",
-    "procedure": "skills/mtls-trust-chain/SKILL.md",
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/mtls-trust-chain/guide.md",
     "renamed": "2026-11-03"
   },
   "observability": {
@@ -552,13 +552,13 @@
     "renamed": "2026-11-03"
   },
   "playwright": {
-    "owner": "playwright-cli-driver",
-    "procedure": "skills/playwright-cli-driver/SKILL.md",
+    "owner": "browser-workbench",
+    "procedure": "skills/browser-workbench/references/modes/playwright-cli-driver/guide.md",
     "renamed": "2026-11-03"
   },
   "postgres-pro": {
-    "owner": "pg-plan-reader",
-    "procedure": "skills/pg-plan-reader/SKILL.md",
+    "owner": "postgres-workbench",
+    "procedure": "skills/postgres-workbench/references/base-workflow.md",
     "renamed": "2026-11-03"
   },
   "prototype": {
@@ -587,8 +587,8 @@
     "renamed": "2026-11-03"
   },
   "repository-delivery-review": {
-    "owner": "ship-check",
-    "procedure": "skills/ship-check/SKILL.md",
+    "owner": "behavior-proof",
+    "procedure": "skills/behavior-proof/references/modes/ship-check/guide.md",
     "renamed": "2026-11-03"
   },
   "repository-test-maintenance": {
@@ -637,8 +637,8 @@
     "renamed": "2026-11-03"
   },
   "t3-repo-setup": {
-    "owner": "t3-repo-onboard",
-    "procedure": "skills/t3-repo-onboard/SKILL.md",
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/t3-repo-onboard/guide.md",
     "renamed": "2026-11-03"
   },
   "tdd": {
@@ -647,8 +647,8 @@
     "renamed": "2026-11-03"
   },
   "technical-writing": {
-    "owner": "tech-doc-writer",
-    "procedure": "skills/tech-doc-writer/SKILL.md",
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/tech-doc-writer/guide.md",
     "renamed": "2026-11-03"
   },
   "typescript-pro": {
@@ -667,48 +667,48 @@
     "renamed": "2026-11-03"
   },
   "wcag-audit-patterns": {
-    "owner": "wcag-a11y-audit",
-    "procedure": "skills/wcag-a11y-audit/SKILL.md",
+    "owner": null,
+    "procedure": "archive/removed-skills-2026-11-09/wcag-a11y-audit/entrypoint.md",
     "renamed": "2026-11-03"
   },
   "wizard": {
-    "owner": "setup-wizard-script",
-    "procedure": "skills/setup-wizard-script/SKILL.md",
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/setup-wizard-script/guide.md",
     "renamed": "2026-11-03"
   },
   "ab-test-setup": {
-    "owner": "split-test-planner",
-    "procedure": "library/skills/split-test-planner/SKILL.md",
+    "owner": "landing-page-cro",
+    "procedure": "library/skills/landing-page-cro/references/modes/split-test-planner/guide.md",
     "renamed": "2026-11-03"
   },
   "adaptation-synthesis": {
-    "owner": "story-dna-adapter",
-    "procedure": "library/skills/story-dna-adapter/SKILL.md",
+    "owner": "story-dna-extractor",
+    "procedure": "library/skills/story-dna-extractor/references/modes/story-dna-adapter/guide.md",
     "renamed": "2026-11-03"
   },
   "agent-browser": {
-    "owner": "ref-snapshot-browser",
-    "procedure": "library/skills/ref-snapshot-browser/SKILL.md",
+    "owner": "browser-workbench",
+    "procedure": "skills/browser-workbench/references/modes/ref-snapshot-browser/guide.md",
     "renamed": "2026-11-03"
   },
   "architect": {
-    "owner": "sketch-first-design",
-    "procedure": "library/skills/sketch-first-design/SKILL.md",
+    "owner": "boundary-drafter",
+    "procedure": "skills/boundary-drafter/references/modes/sketch-first-design/guide.md",
     "renamed": "2026-11-03"
   },
   "arena": {
-    "owner": "candidate-arena",
-    "procedure": "library/skills/candidate-arena/SKILL.md",
+    "owner": "agent-fanout-plan",
+    "procedure": "library/skills/agent-fanout-plan/references/modes/candidate-arena/guide.md",
     "renamed": "2026-11-03"
   },
   "ask-matt": {
-    "owner": "pocock-flow-router",
-    "procedure": "library/skills/pocock-flow-router/SKILL.md",
+    "owner": "build-sequencer",
+    "procedure": "skills/build-sequencer/references/modes/pocock-flow-router/guide.md",
     "renamed": "2026-11-03"
   },
   "automate-me": {
-    "owner": "mode-skill-miner",
-    "procedure": "library/skills/mode-skill-miner/SKILL.md",
+    "owner": "friction-miner",
+    "procedure": "library/skills/friction-miner/references/modes/mode-skill-miner/guide.md",
     "renamed": "2026-11-03"
   },
   "backtesting-frameworks": {
@@ -717,63 +717,63 @@
     "renamed": "2026-11-03"
   },
   "blast-radius": {
-    "owner": "change-blast-check",
-    "procedure": "library/skills/change-blast-check/SKILL.md",
+    "owner": "diff-inspector",
+    "procedure": "skills/diff-inspector/references/modes/change-blast-check/guide.md",
     "renamed": "2026-11-03"
   },
   "blind-spot-detective": {
-    "owner": "nonfiction-gap-finder",
-    "procedure": "library/skills/nonfiction-gap-finder/SKILL.md",
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/nonfiction-gap-finder/guide.md",
     "renamed": "2026-11-03"
   },
   "book-marketing": {
-    "owner": "book-blurb-doctor",
-    "procedure": "library/skills/book-blurb-doctor/SKILL.md",
+    "owner": "page-copy-forge",
+    "procedure": "library/skills/page-copy-forge/references/modes/book-blurb-doctor/guide.md",
     "renamed": "2026-11-03"
   },
   "bro": {
-    "owner": "plain-restate",
-    "procedure": "library/skills/plain-restate/SKILL.md",
+    "owner": "prose-unslop",
+    "procedure": "skills/prose-unslop/references/modes/plain-restate/guide.md",
     "renamed": "2026-11-03"
   },
   "cancel-ralph": {
-    "owner": "ralph-loop-stop",
-    "procedure": "library/skills/ralph-loop-stop/SKILL.md",
+    "owner": "ralph-workflow",
+    "procedure": "library/skills/ralph-workflow/references/modes/ralph-loop-stop/guide.md",
     "renamed": "2026-11-03"
   },
   "cartography": {
-    "owner": "codemap-atlas",
-    "procedure": "library/skills/codemap-atlas/SKILL.md",
+    "owner": "repo-atlas",
+    "procedure": "skills/repo-atlas/references/modes/codemap-atlas/guide.md",
     "renamed": "2026-11-03"
   },
   "chapter-drafter": {
-    "owner": "outline-to-chapter",
-    "procedure": "library/skills/outline-to-chapter/SKILL.md",
+    "owner": "story-workbench",
+    "procedure": "library/skills/story-workbench/references/modes/outline-to-chapter/guide.md",
     "renamed": "2026-11-03"
   },
   "character-arc": {
-    "owner": "character-arc-doctor",
-    "procedure": "library/skills/character-arc-doctor/SKILL.md",
+    "owner": "fiction-editor",
+    "procedure": "library/skills/fiction-editor/references/modes/character-arc-doctor/guide.md",
     "renamed": "2026-11-03"
   },
   "claim-investigation": {
-    "owner": "viral-claim-probe",
-    "procedure": "library/skills/viral-claim-probe/SKILL.md",
+    "owner": "claim-verifier",
+    "procedure": "library/skills/claim-verifier/references/modes/viral-claim-probe/guide.md",
     "renamed": "2026-11-03"
   },
   "claude-handoff": {
-    "owner": "claude-bg-handoff",
-    "procedure": "library/skills/claude-bg-handoff/SKILL.md",
+    "owner": "relay-baton",
+    "procedure": "shared/relay-baton/references/modes/claude-bg-handoff/guide.md",
     "renamed": "2026-11-03"
   },
   "cliche-transcendence": {
-    "owner": "trope-refresher",
-    "procedure": "library/skills/trope-refresher/SKILL.md",
+    "owner": "fiction-editor",
+    "procedure": "library/skills/fiction-editor/references/modes/trope-refresher/guide.md",
     "renamed": "2026-11-03"
   },
   "codex-desktop-maintenance": {
-    "owner": "codex-desktop-audit",
-    "procedure": "library/skills/codex-desktop-audit/SKILL.md",
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/codex-desktop-audit/guide.md",
     "renamed": "2026-11-03"
   },
   "competitive-landscape": {
@@ -782,13 +782,13 @@
     "renamed": "2026-11-03"
   },
   "competitor-alternatives": {
-    "owner": "vs-page-writer",
-    "procedure": "library/skills/vs-page-writer/SKILL.md",
+    "owner": "page-copy-forge",
+    "procedure": "library/skills/page-copy-forge/references/modes/vs-page-writer/guide.md",
     "renamed": "2026-11-03"
   },
   "competitor-profiling": {
-    "owner": "rival-dossier",
-    "procedure": "library/skills/rival-dossier/SKILL.md",
+    "owner": "market-position-map",
+    "procedure": "library/skills/market-position-map/references/modes/rival-dossier/guide.md",
     "renamed": "2026-11-03"
   },
   "conlang": {
@@ -807,18 +807,18 @@
     "renamed": "2026-11-03"
   },
   "create-learning-path": {
-    "owner": "learning-roadmap",
-    "procedure": "library/skills/learning-roadmap/SKILL.md",
+    "owner": "lesson-workspace",
+    "procedure": "library/skills/lesson-workspace/references/modes/learning-roadmap/guide.md",
     "renamed": "2026-11-03"
   },
   "create-plugin-scaffold": {
-    "owner": "cursor-plugin-forge",
-    "procedure": "library/skills/cursor-plugin-forge/SKILL.md",
+    "owner": "skill-forge",
+    "procedure": "library/skills/skill-forge/references/modes/cursor-plugin-forge/guide.md",
     "renamed": "2026-11-03"
   },
   "create-verification-skill": {
-    "owner": "verify-skill-forge",
-    "procedure": "library/skills/verify-skill-forge/SKILL.md",
+    "owner": "behavior-proof",
+    "procedure": "skills/behavior-proof/references/modes/verify-skill-forge/guide.md",
     "renamed": "2026-11-03"
   },
   "cursor-sdk": {
@@ -827,8 +827,8 @@
     "renamed": "2026-11-03"
   },
   "customer-research": {
-    "owner": "customer-voice-miner",
-    "procedure": "library/skills/customer-voice-miner/SKILL.md",
+    "owner": "market-position-map",
+    "procedure": "library/skills/market-position-map/references/modes/customer-voice-miner/guide.md",
     "renamed": "2026-11-03"
   },
   "customize-opencode": {
@@ -847,13 +847,13 @@
     "renamed": "2026-11-03"
   },
   "deepwork": {
-    "owner": "opencode-deepwork",
-    "procedure": "library/skills/opencode-deepwork/SKILL.md",
+    "owner": "agent-fanout-plan",
+    "procedure": "library/skills/agent-fanout-plan/references/modes/opencode-deepwork/guide.md",
     "renamed": "2026-11-03"
   },
   "design-an-interface": {
-    "owner": "interface-design-twice",
-    "procedure": "library/skills/interface-design-twice/SKILL.md",
+    "owner": "boundary-drafter",
+    "procedure": "skills/boundary-drafter/references/modes/interface-design-twice/guide.md",
     "renamed": "2026-11-03"
   },
   "develop-userscripts": {
@@ -867,8 +867,8 @@
     "renamed": "2026-11-03"
   },
   "dialogue": {
-    "owner": "dialogue-doctor",
-    "procedure": "library/skills/dialogue-doctor/SKILL.md",
+    "owner": "fiction-editor",
+    "procedure": "library/skills/fiction-editor/references/modes/dialogue-doctor/guide.md",
     "renamed": "2026-11-03"
   },
   "dna-extraction": {
@@ -882,23 +882,23 @@
     "renamed": "2026-11-03"
   },
   "drafting": {
-    "owner": "draft-unblocker",
-    "procedure": "library/skills/draft-unblocker/SKILL.md",
+    "owner": "story-workbench",
+    "procedure": "library/skills/story-workbench/references/modes/draft-unblocker/guide.md",
     "renamed": "2026-11-03"
   },
   "ebook-analysis": {
-    "owner": "ebook-concept-miner",
-    "procedure": "library/skills/ebook-concept-miner/SKILL.md",
+    "owner": "primary-source-notes",
+    "procedure": "library/skills/primary-source-notes/references/modes/ebook-concept-miner/guide.md",
     "renamed": "2026-11-03"
   },
   "edit-article": {
-    "owner": "article-restructure",
-    "procedure": "library/skills/article-restructure/SKILL.md",
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/article-restructure/guide.md",
     "renamed": "2026-11-03"
   },
   "email-sequence": {
-    "owner": "drip-sequence-planner",
-    "procedure": "library/skills/drip-sequence-planner/SKILL.md",
+    "owner": "page-copy-forge",
+    "procedure": "library/skills/page-copy-forge/references/modes/drip-sequence-planner/guide.md",
     "renamed": "2026-11-03"
   },
   "fact-check": {
@@ -907,8 +907,8 @@
     "renamed": "2026-11-03"
   },
   "figure-it-out": {
-    "owner": "playbook-designer",
-    "procedure": "library/skills/playbook-designer/SKILL.md",
+    "owner": "build-sequencer",
+    "procedure": "skills/build-sequencer/references/modes/playbook-designer/guide.md",
     "renamed": "2026-11-03"
   },
   "game-design-theory": {
@@ -922,13 +922,13 @@
     "renamed": "2026-11-03"
   },
   "genre-conventions": {
-    "owner": "genre-promise-check",
-    "procedure": "library/skills/genre-promise-check/SKILL.md",
+    "owner": "story-workbench",
+    "procedure": "library/skills/story-workbench/references/modes/genre-promise-check/guide.md",
     "renamed": "2026-11-03"
   },
   "gentle-teaching": {
-    "owner": "patient-tutor",
-    "procedure": "library/skills/patient-tutor/SKILL.md",
+    "owner": "lesson-workspace",
+    "procedure": "library/skills/lesson-workspace/references/modes/patient-tutor/guide.md",
     "renamed": "2026-11-03"
   },
   "git-guardrails-claude-code": {
@@ -947,13 +947,13 @@
     "renamed": "2026-11-03"
   },
   "how": {
-    "owner": "code-walkthrough",
-    "procedure": "library/skills/code-walkthrough/SKILL.md",
+    "owner": "repo-research-trail",
+    "procedure": "library/skills/repo-research-trail/references/modes/code-walkthrough/guide.md",
     "renamed": "2026-11-03"
   },
   "image": {
-    "owner": "marketing-imagery",
-    "procedure": "library/skills/marketing-imagery/SKILL.md",
+    "owner": "raster-image-gen",
+    "procedure": "library/skills/raster-image-gen/references/modes/marketing-imagery/guide.md",
     "renamed": "2026-11-03"
   },
   "imagegen": {
@@ -962,13 +962,13 @@
     "renamed": "2026-11-03"
   },
   "implement": {
-    "owner": "spec-implementer",
-    "procedure": "library/skills/spec-implementer/SKILL.md",
+    "owner": "build-sequencer",
+    "procedure": "skills/build-sequencer/references/modes/spec-implementer/guide.md",
     "renamed": "2026-11-03"
   },
   "improve-codebase-architecture": {
-    "owner": "module-deepener",
-    "procedure": "library/skills/module-deepener/SKILL.md",
+    "owner": "boundary-drafter",
+    "procedure": "skills/boundary-drafter/references/modes/module-deepener/guide.md",
     "renamed": "2026-11-03"
   },
   "interactive-fiction": {
@@ -977,18 +977,18 @@
     "renamed": "2026-11-03"
   },
   "internal-comms": {
-    "owner": "status-memo-writer",
-    "procedure": "library/skills/status-memo-writer/SKILL.md",
+    "owner": "page-copy-forge",
+    "procedure": "library/skills/page-copy-forge/references/modes/status-memo-writer/guide.md",
     "renamed": "2026-11-03"
   },
   "interrogate": {
-    "owner": "model-crossfire",
-    "procedure": "library/skills/model-crossfire/SKILL.md",
+    "owner": "diff-inspector",
+    "procedure": "skills/diff-inspector/references/modes/model-crossfire/guide.md",
     "renamed": "2026-11-03"
   },
   "joke-engineering": {
-    "owner": "punchline-lab",
-    "procedure": "library/skills/punchline-lab/SKILL.md",
+    "owner": "fiction-editor",
+    "procedure": "library/skills/fiction-editor/references/modes/punchline-lab/guide.md",
     "renamed": "2026-11-03"
   },
   "karakeep": {
@@ -997,18 +997,18 @@
     "renamed": "2026-11-03"
   },
   "kubernetes-development": {
-    "owner": "kube-artifact-smith",
-    "procedure": "library/skills/kube-artifact-smith/SKILL.md",
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/kube-artifact-smith/guide.md",
     "renamed": "2026-11-03"
   },
   "language-evolution": {
-    "owner": "conlang-drift",
-    "procedure": "library/skills/conlang-drift/SKILL.md",
+    "owner": "conlang-forge",
+    "procedure": "library/skills/conlang-forge/references/modes/conlang-drift/guide.md",
     "renamed": "2026-11-03"
   },
   "launch-strategy": {
-    "owner": "launch-runway",
-    "procedure": "library/skills/launch-runway/SKILL.md",
+    "owner": "launch-dossier",
+    "procedure": "shared/launch-dossier/references/modes/launch-runway/guide.md",
     "renamed": "2026-11-03"
   },
   "lightweight-charts": {
@@ -1017,13 +1017,13 @@
     "renamed": "2026-11-03"
   },
   "list-builder": {
-    "owner": "entropy-lists",
-    "procedure": "library/skills/entropy-lists/SKILL.md",
+    "owner": "world-bible",
+    "procedure": "library/skills/world-bible/references/modes/entropy-lists/guide.md",
     "renamed": "2026-11-03"
   },
   "loop-me": {
-    "owner": "loop-spec-grill",
-    "procedure": "library/skills/loop-spec-grill/SKILL.md",
+    "owner": "scope-grill",
+    "procedure": "shared/scope-grill/references/modes/loop-spec-grill/guide.md",
     "renamed": "2026-11-03"
   },
   "lyric-diagnostic": {
@@ -1032,13 +1032,13 @@
     "renamed": "2026-11-03"
   },
   "maintain-verification-skill": {
-    "owner": "verify-skill-audit",
-    "procedure": "library/skills/verify-skill-audit/SKILL.md",
+    "owner": "behavior-proof",
+    "procedure": "skills/behavior-proof/references/modes/verify-skill-audit/guide.md",
     "renamed": "2026-11-03"
   },
   "marketing-psychology": {
-    "owner": "persuasion-levers",
-    "procedure": "library/skills/persuasion-levers/SKILL.md",
+    "owner": "landing-page-cro",
+    "procedure": "library/skills/landing-page-cro/references/modes/persuasion-levers/guide.md",
     "renamed": "2026-11-03"
   },
   "memory-forensics": {
@@ -1062,8 +1062,8 @@
     "renamed": "2026-11-03"
   },
   "neubrutal-hud": {
-    "owner": "brutal-hud-kit",
-    "procedure": "library/skills/brutal-hud-kit/SKILL.md",
+    "owner": null,
+    "procedure": "archive/removed-skills-2026-11-09/brutal-hud-kit/entrypoint.md",
     "renamed": "2026-11-03"
   },
   "observe-and-tune": {
@@ -1077,13 +1077,13 @@
     "renamed": "2026-11-03"
   },
   "openai-docs": {
-    "owner": "openai-doc-lookup",
-    "procedure": "library/skills/openai-doc-lookup/SKILL.md",
+    "owner": "primary-source-notes",
+    "procedure": "library/skills/primary-source-notes/references/modes/openai-doc-lookup/guide.md",
     "renamed": "2026-11-03"
   },
   "opensource-guide-coach": {
-    "owner": "oss-maintainer-coach",
-    "procedure": "library/skills/oss-maintainer-coach/SKILL.md",
+    "owner": "roadmap-slicer",
+    "procedure": "skills/roadmap-slicer/references/modes/oss-maintainer-coach/guide.md",
     "renamed": "2026-11-03"
   },
   "opentui": {
@@ -1112,8 +1112,8 @@
     "renamed": "2026-11-03"
   },
   "plugin-creator": {
-    "owner": "codex-plugin-scaffold",
-    "procedure": "library/skills/codex-plugin-scaffold/SKILL.md",
+    "owner": "skill-forge",
+    "procedure": "library/skills/skill-forge/references/modes/codex-plugin-scaffold/guide.md",
     "renamed": "2026-11-03"
   },
   "pptx-generator": {
@@ -1122,33 +1122,28 @@
     "renamed": "2026-11-03"
   },
   "pr-review-canvas": {
-    "owner": "diff-walkthrough",
-    "procedure": "library/skills/diff-walkthrough/SKILL.md",
+    "owner": "diff-inspector",
+    "procedure": "skills/diff-inspector/references/modes/diff-walkthrough/guide.md",
     "renamed": "2026-11-03"
   },
   "presentation-design": {
-    "owner": "slide-story-design",
-    "procedure": "library/skills/slide-story-design/SKILL.md",
+    "owner": "pptx-forge",
+    "procedure": "library/skills/pptx-forge/references/modes/slide-story-design/guide.md",
     "renamed": "2026-11-03"
   },
   "prose-style": {
-    "owner": "fiction-line-edit",
-    "procedure": "library/skills/fiction-line-edit/SKILL.md",
+    "owner": "fiction-editor",
+    "procedure": "library/skills/fiction-editor/references/base-workflow.md",
     "renamed": "2026-11-03"
   },
   "qa": {
-    "owner": "bug-intake-session",
-    "procedure": "library/skills/bug-intake-session/SKILL.md",
-    "renamed": "2026-11-03"
-  },
-  "ralph-loop": {
-    "owner": "ralph-loop-start",
-    "procedure": "library/skills/ralph-loop-start/SKILL.md",
+    "owner": "roadmap-slicer",
+    "procedure": "skills/roadmap-slicer/references/modes/bug-intake-session/guide.md",
     "renamed": "2026-11-03"
   },
   "ralph-loop-help": {
-    "owner": "ralph-loop-explainer",
-    "procedure": "library/skills/ralph-loop-explainer/SKILL.md",
+    "owner": "ralph-workflow",
+    "procedure": "library/skills/ralph-workflow/references/base-workflow.md",
     "renamed": "2026-11-03"
   },
   "react-native-pro": {
@@ -1157,8 +1152,8 @@
     "renamed": "2026-11-03"
   },
   "recall": {
-    "owner": "context-recall",
-    "procedure": "library/skills/context-recall/SKILL.md",
+    "owner": "relay-baton",
+    "procedure": "shared/relay-baton/references/modes/context-recall/guide.md",
     "renamed": "2026-11-03"
   },
   "reflect": {
@@ -1177,23 +1172,23 @@
     "renamed": "2026-11-03"
   },
   "reverse-outliner": {
-    "owner": "book-outliner",
-    "procedure": "library/skills/book-outliner/SKILL.md",
+    "owner": "story-dna-extractor",
+    "procedure": "library/skills/story-dna-extractor/references/modes/book-outliner/guide.md",
     "renamed": "2026-11-03"
   },
   "review-agent": {
-    "owner": "diff-auditor",
-    "procedure": "library/skills/diff-auditor/SKILL.md",
+    "owner": "diff-inspector",
+    "procedure": "skills/diff-inspector/references/modes/diff-auditor/guide.md",
     "renamed": "2026-11-03"
   },
   "review-and-ship": {
-    "owner": "branch-shipper",
-    "procedure": "library/skills/branch-shipper/SKILL.md",
+    "owner": "git-surgery",
+    "procedure": "skills/git-surgery/references/modes/branch-shipper/guide.md",
     "renamed": "2026-11-03"
   },
   "revision": {
-    "owner": "draft-reviser",
-    "procedure": "library/skills/draft-reviser/SKILL.md",
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/draft-reviser/guide.md",
     "renamed": "2026-11-03"
   },
   "revops": {
@@ -1202,8 +1197,8 @@
     "renamed": "2026-11-03"
   },
   "run-learning-retrospective": {
-    "owner": "learning-retro",
-    "procedure": "library/skills/learning-retro/SKILL.md",
+    "owner": "lesson-workspace",
+    "procedure": "library/skills/lesson-workspace/references/modes/learning-retro/guide.md",
     "renamed": "2026-11-03"
   },
   "sales-enablement": {
@@ -1212,28 +1207,28 @@
     "renamed": "2026-11-03"
   },
   "scaffold-exercises": {
-    "owner": "exercise-scaffold",
-    "procedure": "library/skills/exercise-scaffold/SKILL.md",
+    "owner": "lesson-workspace",
+    "procedure": "library/skills/lesson-workspace/references/modes/exercise-scaffold/guide.md",
     "renamed": "2026-11-03"
   },
   "scheduled-tasks": {
-    "owner": "opencode-cron",
-    "procedure": "library/skills/opencode-cron/SKILL.md",
+    "owner": "opencode-config-tuner",
+    "procedure": "library/skills/opencode-config-tuner/references/modes/opencode-cron/guide.md",
     "renamed": "2026-11-03"
   },
   "screenshot": {
-    "owner": "desktop-capture",
-    "procedure": "library/skills/desktop-capture/SKILL.md",
+    "owner": "browser-workbench",
+    "procedure": "skills/browser-workbench/references/modes/desktop-capture/guide.md",
     "renamed": "2026-11-03"
   },
   "secure-linux-web-hosting": {
-    "owner": "web-host-hardening",
-    "procedure": "library/skills/web-host-hardening/SKILL.md",
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/web-host-hardening/guide.md",
     "renamed": "2026-11-03"
   },
   "sensitivity-check": {
-    "owner": "sensitivity-read",
-    "procedure": "library/skills/sensitivity-read/SKILL.md",
+    "owner": "fiction-editor",
+    "procedure": "library/skills/fiction-editor/references/modes/sensitivity-read/guide.md",
     "renamed": "2026-11-03"
   },
   "seo-pro": {
@@ -1242,8 +1237,8 @@
     "renamed": "2026-11-03"
   },
   "setup-matt-pocock-skills": {
-    "owner": "tracker-bootstrap",
-    "procedure": "library/skills/tracker-bootstrap/SKILL.md",
+    "owner": "roadmap-slicer",
+    "procedure": "skills/roadmap-slicer/references/modes/tracker-bootstrap/guide.md",
     "renamed": "2026-11-03"
   },
   "shared-world": {
@@ -1257,23 +1252,23 @@
     "renamed": "2026-11-03"
   },
   "skill-installer": {
-    "owner": "codex-skill-fetch",
-    "procedure": "library/skills/codex-skill-fetch/SKILL.md",
+    "owner": "skill-forge",
+    "procedure": "library/skills/skill-forge/references/modes/codex-skill-fetch/guide.md",
     "renamed": "2026-11-03"
   },
   "social-content": {
-    "owner": "social-post-craft",
-    "procedure": "library/skills/social-post-craft/SKILL.md",
+    "owner": "page-copy-forge",
+    "procedure": "library/skills/page-copy-forge/references/modes/social-post-craft/guide.md",
     "renamed": "2026-11-03"
   },
   "solidity-security": {
-    "owner": "solidity-audit",
-    "procedure": "library/skills/solidity-audit/SKILL.md",
+    "owner": null,
+    "procedure": "archive/removed-skills-2026-11-09/solidity-audit/entrypoint.md",
     "renamed": "2026-11-03"
   },
   "speech-adaptation": {
-    "owner": "speech-shaper",
-    "procedure": "library/skills/speech-shaper/SKILL.md",
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/speech-shaper/guide.md",
     "renamed": "2026-11-03"
   },
   "spreadsheet": {
@@ -1287,28 +1282,28 @@
     "renamed": "2026-11-03"
   },
   "statistical-distance": {
-    "owner": "cliche-escape",
-    "procedure": "library/skills/cliche-escape/SKILL.md",
+    "owner": "fiction-editor",
+    "procedure": "library/skills/fiction-editor/references/modes/cliche-escape/guide.md",
     "renamed": "2026-11-03"
   },
   "story-coach": {
-    "owner": "story-mentor",
-    "procedure": "library/skills/story-mentor/SKILL.md",
+    "owner": "story-workbench",
+    "procedure": "library/skills/story-workbench/references/modes/story-mentor/guide.md",
     "renamed": "2026-11-03"
   },
   "story-collaborator": {
-    "owner": "story-cowriter",
-    "procedure": "library/skills/story-cowriter/SKILL.md",
+    "owner": "story-workbench",
+    "procedure": "library/skills/story-workbench/references/modes/story-cowriter/guide.md",
     "renamed": "2026-11-03"
   },
   "story-idea-generator": {
-    "owner": "premise-forge",
-    "procedure": "library/skills/premise-forge/SKILL.md",
+    "owner": "story-workbench",
+    "procedure": "library/skills/story-workbench/references/modes/premise-forge/guide.md",
     "renamed": "2026-11-03"
   },
   "story-sense": {
-    "owner": "story-diagnosis",
-    "procedure": "library/skills/story-diagnosis/SKILL.md",
+    "owner": "story-workbench",
+    "procedure": "library/skills/story-workbench/references/base-workflow.md",
     "renamed": "2026-11-03"
   },
   "stripe-integration": {
@@ -1317,38 +1312,38 @@
     "renamed": "2026-11-03"
   },
   "summarization": {
-    "owner": "digest-distiller",
-    "procedure": "library/skills/digest-distiller/SKILL.md",
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/digest-distiller/guide.md",
     "renamed": "2026-11-03"
   },
   "super-productivity-maintenance": {
-    "owner": "sp-upkeep-router",
-    "procedure": "library/skills/sp-upkeep-router/SKILL.md",
+    "owner": "super-productivity-workflow",
+    "procedure": "library/skills/super-productivity-workflow/references/base-workflow.md",
     "renamed": "2026-11-03"
   },
   "super-productivity-mcp": {
-    "owner": "sp-mcp-doctor",
-    "procedure": "library/skills/sp-mcp-doctor/SKILL.md",
+    "owner": "super-productivity-workflow",
+    "procedure": "library/skills/super-productivity-workflow/references/modes/sp-mcp-doctor/guide.md",
     "renamed": "2026-11-03"
   },
   "super-productivity-planning": {
-    "owner": "sp-day-planner",
-    "procedure": "library/skills/sp-day-planner/SKILL.md",
+    "owner": "super-productivity-workflow",
+    "procedure": "library/skills/super-productivity-workflow/references/modes/sp-day-planner/guide.md",
     "renamed": "2026-11-03"
   },
   "swarm": {
-    "owner": "worker-swarm-fanout",
-    "procedure": "library/skills/worker-swarm-fanout/SKILL.md",
+    "owner": "agent-fanout-plan",
+    "procedure": "library/skills/agent-fanout-plan/references/modes/worker-swarm-fanout/guide.md",
     "renamed": "2026-11-03"
   },
   "switchyard-runtime": {
-    "owner": "switchyard-runtime-desk",
-    "procedure": "library/skills/switchyard-runtime-desk/SKILL.md",
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/switchyard-runtime-desk/guide.md",
     "renamed": "2026-11-03"
   },
   "table-tone": {
-    "owner": "table-tone-tuner",
-    "procedure": "library/skills/table-tone-tuner/SKILL.md",
+    "owner": "rpg-game-master",
+    "procedure": "library/skills/rpg-game-master/references/modes/table-tone-tuner/guide.md",
     "renamed": "2026-11-03"
   },
   "teach": {
@@ -1362,38 +1357,38 @@
     "renamed": "2026-11-03"
   },
   "temporal-python-testing": {
-    "owner": "temporal-py-tests",
-    "procedure": "library/skills/temporal-py-tests/SKILL.md",
+    "owner": "temporal-workflows",
+    "procedure": "library/skills/temporal-workflows/references/modes/temporal-py-tests/guide.md",
     "renamed": "2026-11-03"
   },
   "terraform-module-library": {
-    "owner": "terraform-module-smith",
-    "procedure": "library/skills/terraform-module-smith/SKILL.md",
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/terraform-module-smith/guide.md",
     "renamed": "2026-11-03"
   },
   "thermos": {
-    "owner": "thermo-twin-audit",
-    "procedure": "library/skills/thermo-twin-audit/SKILL.md",
+    "owner": "diff-inspector",
+    "procedure": "skills/diff-inspector/references/modes/thermo-twin-audit/guide.md",
     "renamed": "2026-11-03"
   },
   "to-prd": {
-    "owner": "prd-from-context",
-    "procedure": "library/skills/prd-from-context/SKILL.md",
+    "owner": "scope-grill",
+    "procedure": "shared/scope-grill/references/modes/prd-from-context/guide.md",
     "renamed": "2026-11-03"
   },
   "to-questionnaire": {
-    "owner": "decision-questionnaire",
-    "procedure": "library/skills/decision-questionnaire/SKILL.md",
+    "owner": "scope-grill",
+    "procedure": "shared/scope-grill/references/modes/decision-questionnaire/guide.md",
     "renamed": "2026-11-03"
   },
   "to-tickets": {
-    "owner": "tracer-ticket-split",
-    "procedure": "library/skills/tracer-ticket-split/SKILL.md",
+    "owner": "roadmap-slicer",
+    "procedure": "skills/roadmap-slicer/references/modes/tracer-ticket-split/guide.md",
     "renamed": "2026-11-03"
   },
   "triage": {
-    "owner": "issue-state-triage",
-    "procedure": "library/skills/issue-state-triage/SKILL.md",
+    "owner": "roadmap-slicer",
+    "procedure": "skills/roadmap-slicer/references/modes/issue-state-triage/guide.md",
     "renamed": "2026-11-03"
   },
   "video": {
@@ -1402,8 +1397,8 @@
     "renamed": "2026-11-03"
   },
   "voice-analysis": {
-    "owner": "voice-fingerprint",
-    "procedure": "library/skills/voice-fingerprint/SKILL.md",
+    "owner": "voice-ledger",
+    "procedure": "shared/voice-ledger/references/modes/voice-fingerprint/guide.md",
     "renamed": "2026-11-03"
   },
   "vscode-extension-development": {
@@ -1412,18 +1407,18 @@
     "renamed": "2026-11-03"
   },
   "wayfinder": {
-    "owner": "wayfinder-map",
-    "procedure": "library/skills/wayfinder-map/SKILL.md",
+    "owner": "build-sequencer",
+    "procedure": "skills/build-sequencer/references/modes/wayfinder-map/guide.md",
     "renamed": "2026-11-03"
   },
   "web-search": {
-    "owner": "web-lookup",
-    "procedure": "library/skills/web-lookup/SKILL.md",
+    "owner": "primary-source-notes",
+    "procedure": "library/skills/primary-source-notes/references/modes/web-lookup/guide.md",
     "renamed": "2026-11-03"
   },
   "weekly-review": {
-    "owner": "weekly-commit-recap",
-    "procedure": "library/skills/weekly-commit-recap/SKILL.md",
+    "owner": "commit-recap",
+    "procedure": "library/skills/commit-recap/references/modes/weekly-commit-recap/guide.md",
     "renamed": "2026-11-03"
   },
   "what-did-i-get-done": {
@@ -1432,53 +1427,53 @@
     "renamed": "2026-11-03"
   },
   "why": {
-    "owner": "rationale-dig",
-    "procedure": "library/skills/rationale-dig/SKILL.md",
+    "owner": "repo-research-trail",
+    "procedure": "library/skills/repo-research-trail/references/modes/rationale-dig/guide.md",
     "renamed": "2026-11-03"
   },
   "workflow-from-chats": {
-    "owner": "chat-preference-miner",
-    "procedure": "library/skills/chat-preference-miner/SKILL.md",
+    "owner": "friction-miner",
+    "procedure": "library/skills/friction-miner/references/modes/chat-preference-miner/guide.md",
     "renamed": "2026-11-03"
   },
   "workflow-orchestration-patterns": {
-    "owner": "temporal-flow-design",
-    "procedure": "library/skills/temporal-flow-design/SKILL.md",
+    "owner": "temporal-workflows",
+    "procedure": "library/skills/temporal-workflows/references/base-workflow.md",
     "renamed": "2026-11-03"
   },
   "worktrees": {
-    "owner": "worktree-lanes",
-    "procedure": "library/skills/worktree-lanes/SKILL.md",
+    "owner": "git-surgery",
+    "procedure": "skills/git-surgery/references/modes/worktree-lanes/guide.md",
     "renamed": "2026-11-03"
   },
   "world-fates": {
-    "owner": "world-fate-ledger",
-    "procedure": "library/skills/world-fate-ledger/SKILL.md",
+    "owner": "world-bible",
+    "procedure": "library/skills/world-bible/references/modes/world-fate-ledger/guide.md",
     "renamed": "2026-11-03"
   },
   "worldbuilding": {
-    "owner": "world-diagnostics",
-    "procedure": "library/skills/world-diagnostics/SKILL.md",
+    "owner": "world-bible",
+    "procedure": "library/skills/world-bible/references/modes/world-diagnostics/guide.md",
     "renamed": "2026-11-03"
   },
   "writing-beats": {
-    "owner": "article-beat-path",
-    "procedure": "library/skills/article-beat-path/SKILL.md",
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/article-beat-path/guide.md",
     "renamed": "2026-11-03"
   },
   "writing-fragments": {
-    "owner": "fragment-harvest",
-    "procedure": "library/skills/fragment-harvest/SKILL.md",
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/fragment-harvest/guide.md",
     "renamed": "2026-11-03"
   },
   "writing-plans": {
-    "owner": "build-plan-writer",
-    "procedure": "library/skills/build-plan-writer/SKILL.md",
+    "owner": "build-sequencer",
+    "procedure": "skills/build-sequencer/references/modes/build-plan-writer/guide.md",
     "renamed": "2026-11-03"
   },
   "writing-shape": {
-    "owner": "article-shaping",
-    "procedure": "library/skills/article-shaping/SKILL.md",
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/base-workflow.md",
     "renamed": "2026-11-03"
   },
   "orchestrate": {
@@ -1546,5 +1541,514 @@
     "procedure": null,
     "retired": "2026-11-03",
     "reason": "built on Cursor and pstack features"
+  },
+  "prd-from-context": {
+    "owner": "scope-grill",
+    "procedure": "shared/scope-grill/references/modes/prd-from-context/guide.md"
+  },
+  "loop-spec-grill": {
+    "owner": "scope-grill",
+    "procedure": "shared/scope-grill/references/modes/loop-spec-grill/guide.md"
+  },
+  "decision-questionnaire": {
+    "owner": "scope-grill",
+    "procedure": "shared/scope-grill/references/modes/decision-questionnaire/guide.md"
+  },
+  "build-plan-writer": {
+    "owner": "build-sequencer",
+    "procedure": "skills/build-sequencer/references/modes/build-plan-writer/guide.md"
+  },
+  "spec-implementer": {
+    "owner": "build-sequencer",
+    "procedure": "skills/build-sequencer/references/modes/spec-implementer/guide.md"
+  },
+  "playbook-designer": {
+    "owner": "build-sequencer",
+    "procedure": "skills/build-sequencer/references/modes/playbook-designer/guide.md"
+  },
+  "wayfinder-map": {
+    "owner": "build-sequencer",
+    "procedure": "skills/build-sequencer/references/modes/wayfinder-map/guide.md"
+  },
+  "pocock-flow-router": {
+    "owner": "build-sequencer",
+    "procedure": "skills/build-sequencer/references/modes/pocock-flow-router/guide.md"
+  },
+  "tracer-ticket-split": {
+    "owner": "roadmap-slicer",
+    "procedure": "skills/roadmap-slicer/references/modes/tracer-ticket-split/guide.md"
+  },
+  "tracker-bootstrap": {
+    "owner": "roadmap-slicer",
+    "procedure": "skills/roadmap-slicer/references/modes/tracker-bootstrap/guide.md"
+  },
+  "issue-state-triage": {
+    "owner": "roadmap-slicer",
+    "procedure": "skills/roadmap-slicer/references/modes/issue-state-triage/guide.md"
+  },
+  "bug-intake-session": {
+    "owner": "roadmap-slicer",
+    "procedure": "skills/roadmap-slicer/references/modes/bug-intake-session/guide.md"
+  },
+  "oss-maintainer-coach": {
+    "owner": "roadmap-slicer",
+    "procedure": "skills/roadmap-slicer/references/modes/oss-maintainer-coach/guide.md"
+  },
+  "module-deepener": {
+    "owner": "boundary-drafter",
+    "procedure": "skills/boundary-drafter/references/modes/module-deepener/guide.md"
+  },
+  "interface-design-twice": {
+    "owner": "boundary-drafter",
+    "procedure": "skills/boundary-drafter/references/modes/interface-design-twice/guide.md"
+  },
+  "sketch-first-design": {
+    "owner": "boundary-drafter",
+    "procedure": "skills/boundary-drafter/references/modes/sketch-first-design/guide.md"
+  },
+  "codemap-atlas": {
+    "owner": "repo-atlas",
+    "procedure": "skills/repo-atlas/references/modes/codemap-atlas/guide.md"
+  },
+  "code-walkthrough": {
+    "owner": "repo-research-trail",
+    "procedure": "library/skills/repo-research-trail/references/modes/code-walkthrough/guide.md"
+  },
+  "rationale-dig": {
+    "owner": "repo-research-trail",
+    "procedure": "library/skills/repo-research-trail/references/modes/rationale-dig/guide.md"
+  },
+  "dep-source-clone": {
+    "owner": "repo-research-trail",
+    "procedure": "library/skills/repo-research-trail/references/modes/dep-source-clone/guide.md"
+  },
+  "diff-auditor": {
+    "owner": "diff-inspector",
+    "procedure": "skills/diff-inspector/references/modes/diff-auditor/guide.md"
+  },
+  "diff-walkthrough": {
+    "owner": "diff-inspector",
+    "procedure": "skills/diff-inspector/references/modes/diff-walkthrough/guide.md"
+  },
+  "change-blast-check": {
+    "owner": "diff-inspector",
+    "procedure": "skills/diff-inspector/references/modes/change-blast-check/guide.md"
+  },
+  "thermo-twin-audit": {
+    "owner": "diff-inspector",
+    "procedure": "skills/diff-inspector/references/modes/thermo-twin-audit/guide.md"
+  },
+  "model-crossfire": {
+    "owner": "diff-inspector",
+    "procedure": "skills/diff-inspector/references/modes/model-crossfire/guide.md"
+  },
+  "ship-check": {
+    "owner": "behavior-proof",
+    "procedure": "skills/behavior-proof/references/modes/ship-check/guide.md"
+  },
+  "verify-skill-forge": {
+    "owner": "behavior-proof",
+    "procedure": "skills/behavior-proof/references/modes/verify-skill-forge/guide.md"
+  },
+  "verify-skill-audit": {
+    "owner": "behavior-proof",
+    "procedure": "skills/behavior-proof/references/modes/verify-skill-audit/guide.md"
+  },
+  "sweep-rewriter": {
+    "owner": "safe-refactor-pass",
+    "procedure": "skills/safe-refactor-pass/references/modes/sweep-rewriter/guide.md"
+  },
+  "branch-shipper": {
+    "owner": "git-surgery",
+    "procedure": "skills/git-surgery/references/modes/branch-shipper/guide.md"
+  },
+  "worktree-lanes": {
+    "owner": "git-surgery",
+    "procedure": "skills/git-surgery/references/modes/worktree-lanes/guide.md"
+  },
+  "weekly-commit-recap": {
+    "owner": "commit-recap",
+    "procedure": "library/skills/commit-recap/references/modes/weekly-commit-recap/guide.md"
+  },
+  "sandbox-desktop": {
+    "owner": "browser-workbench",
+    "procedure": "skills/browser-workbench/references/base-workflow.md"
+  },
+  "playwright-cli-driver": {
+    "owner": "browser-workbench",
+    "procedure": "skills/browser-workbench/references/modes/playwright-cli-driver/guide.md"
+  },
+  "ref-snapshot-browser": {
+    "owner": "browser-workbench",
+    "procedure": "skills/browser-workbench/references/modes/ref-snapshot-browser/guide.md"
+  },
+  "desktop-capture": {
+    "owner": "browser-workbench",
+    "procedure": "skills/browser-workbench/references/modes/desktop-capture/guide.md"
+  },
+  "pg-plan-reader": {
+    "owner": "postgres-workbench",
+    "procedure": "skills/postgres-workbench/references/base-workflow.md"
+  },
+  "schema-migrator": {
+    "owner": "postgres-workbench",
+    "procedure": "skills/postgres-workbench/references/modes/schema-migrator/guide.md"
+  },
+  "temporal-flow-design": {
+    "owner": "temporal-workflows",
+    "procedure": "library/skills/temporal-workflows/references/base-workflow.md"
+  },
+  "temporal-py-tests": {
+    "owner": "temporal-workflows",
+    "procedure": "library/skills/temporal-workflows/references/modes/temporal-py-tests/guide.md"
+  },
+  "cf-edge-deploy": {
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/cf-edge-deploy/guide.md"
+  },
+  "web-host-hardening": {
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/web-host-hardening/guide.md"
+  },
+  "kube-artifact-smith": {
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/kube-artifact-smith/guide.md"
+  },
+  "terraform-module-smith": {
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/terraform-module-smith/guide.md"
+  },
+  "gitea-fleet-tidy": {
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/gitea-fleet-tidy/guide.md"
+  },
+  "mtls-trust-chain": {
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/mtls-trust-chain/guide.md"
+  },
+  "setup-wizard-script": {
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/setup-wizard-script/guide.md"
+  },
+  "codex-desktop-audit": {
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/codex-desktop-audit/guide.md"
+  },
+  "switchyard-runtime-desk": {
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/switchyard-runtime-desk/guide.md"
+  },
+  "t3-repo-onboard": {
+    "owner": "fleet-ops-router",
+    "procedure": "library/skills/fleet-ops-router/references/modes/t3-repo-onboard/guide.md"
+  },
+  "worker-swarm-fanout": {
+    "owner": "agent-fanout-plan",
+    "procedure": "library/skills/agent-fanout-plan/references/modes/worker-swarm-fanout/guide.md"
+  },
+  "candidate-arena": {
+    "owner": "agent-fanout-plan",
+    "procedure": "library/skills/agent-fanout-plan/references/modes/candidate-arena/guide.md"
+  },
+  "opencode-deepwork": {
+    "owner": "agent-fanout-plan",
+    "procedure": "library/skills/agent-fanout-plan/references/modes/opencode-deepwork/guide.md"
+  },
+  "opencode-cron": {
+    "owner": "opencode-config-tuner",
+    "procedure": "library/skills/opencode-config-tuner/references/modes/opencode-cron/guide.md"
+  },
+  "codex-skill-fetch": {
+    "owner": "skill-forge",
+    "procedure": "library/skills/skill-forge/references/modes/codex-skill-fetch/guide.md"
+  },
+  "codex-plugin-scaffold": {
+    "owner": "skill-forge",
+    "procedure": "library/skills/skill-forge/references/modes/codex-plugin-scaffold/guide.md"
+  },
+  "cursor-plugin-forge": {
+    "owner": "skill-forge",
+    "procedure": "library/skills/skill-forge/references/modes/cursor-plugin-forge/guide.md"
+  },
+  "ralph-loop-explainer": {
+    "owner": "ralph-workflow",
+    "procedure": "library/skills/ralph-workflow/references/base-workflow.md"
+  },
+  "ralph-loop-start": {
+    "owner": "ralph-workflow",
+    "procedure": "library/skills/ralph-workflow/references/modes/ralph-loop-start/guide.md"
+  },
+  "ralph-loop-stop": {
+    "owner": "ralph-workflow",
+    "procedure": "library/skills/ralph-workflow/references/modes/ralph-loop-stop/guide.md"
+  },
+  "context-recall": {
+    "owner": "relay-baton",
+    "procedure": "shared/relay-baton/references/modes/context-recall/guide.md"
+  },
+  "claude-bg-handoff": {
+    "owner": "relay-baton",
+    "procedure": "shared/relay-baton/references/modes/claude-bg-handoff/guide.md"
+  },
+  "chat-preference-miner": {
+    "owner": "friction-miner",
+    "procedure": "library/skills/friction-miner/references/modes/chat-preference-miner/guide.md"
+  },
+  "mode-skill-miner": {
+    "owner": "friction-miner",
+    "procedure": "library/skills/friction-miner/references/modes/mode-skill-miner/guide.md"
+  },
+  "sp-upkeep-router": {
+    "owner": "super-productivity-workflow",
+    "procedure": "library/skills/super-productivity-workflow/references/base-workflow.md"
+  },
+  "sp-day-planner": {
+    "owner": "super-productivity-workflow",
+    "procedure": "library/skills/super-productivity-workflow/references/modes/sp-day-planner/guide.md"
+  },
+  "sp-mcp-doctor": {
+    "owner": "super-productivity-workflow",
+    "procedure": "library/skills/super-productivity-workflow/references/modes/sp-mcp-doctor/guide.md"
+  },
+  "web-lookup": {
+    "owner": "primary-source-notes",
+    "procedure": "library/skills/primary-source-notes/references/modes/web-lookup/guide.md"
+  },
+  "openai-doc-lookup": {
+    "owner": "primary-source-notes",
+    "procedure": "library/skills/primary-source-notes/references/modes/openai-doc-lookup/guide.md"
+  },
+  "ebook-concept-miner": {
+    "owner": "primary-source-notes",
+    "procedure": "library/skills/primary-source-notes/references/modes/ebook-concept-miner/guide.md"
+  },
+  "viral-claim-probe": {
+    "owner": "claim-verifier",
+    "procedure": "library/skills/claim-verifier/references/modes/viral-claim-probe/guide.md"
+  },
+  "article-shaping": {
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/base-workflow.md"
+  },
+  "article-beat-path": {
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/article-beat-path/guide.md"
+  },
+  "article-restructure": {
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/article-restructure/guide.md"
+  },
+  "fragment-harvest": {
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/fragment-harvest/guide.md"
+  },
+  "draft-reviser": {
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/draft-reviser/guide.md"
+  },
+  "nonfiction-gap-finder": {
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/nonfiction-gap-finder/guide.md"
+  },
+  "speech-shaper": {
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/speech-shaper/guide.md"
+  },
+  "tech-doc-writer": {
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/tech-doc-writer/guide.md"
+  },
+  "digest-distiller": {
+    "owner": "writing-workbench",
+    "procedure": "library/skills/writing-workbench/references/modes/digest-distiller/guide.md"
+  },
+  "plain-restate": {
+    "owner": "prose-unslop",
+    "procedure": "skills/prose-unslop/references/modes/plain-restate/guide.md"
+  },
+  "voice-fingerprint": {
+    "owner": "voice-ledger",
+    "procedure": "shared/voice-ledger/references/modes/voice-fingerprint/guide.md"
+  },
+  "social-post-craft": {
+    "owner": "page-copy-forge",
+    "procedure": "library/skills/page-copy-forge/references/modes/social-post-craft/guide.md"
+  },
+  "drip-sequence-planner": {
+    "owner": "page-copy-forge",
+    "procedure": "library/skills/page-copy-forge/references/modes/drip-sequence-planner/guide.md"
+  },
+  "content-recaster": {
+    "owner": "page-copy-forge",
+    "procedure": "library/skills/page-copy-forge/references/modes/content-recaster/guide.md"
+  },
+  "status-memo-writer": {
+    "owner": "page-copy-forge",
+    "procedure": "library/skills/page-copy-forge/references/modes/status-memo-writer/guide.md"
+  },
+  "book-blurb-doctor": {
+    "owner": "page-copy-forge",
+    "procedure": "library/skills/page-copy-forge/references/modes/book-blurb-doctor/guide.md"
+  },
+  "vs-page-writer": {
+    "owner": "page-copy-forge",
+    "procedure": "library/skills/page-copy-forge/references/modes/vs-page-writer/guide.md"
+  },
+  "launch-runway": {
+    "owner": "launch-dossier",
+    "procedure": "shared/launch-dossier/references/modes/launch-runway/guide.md"
+  },
+  "customer-voice-miner": {
+    "owner": "market-position-map",
+    "procedure": "library/skills/market-position-map/references/modes/customer-voice-miner/guide.md"
+  },
+  "rival-dossier": {
+    "owner": "market-position-map",
+    "procedure": "library/skills/market-position-map/references/modes/rival-dossier/guide.md"
+  },
+  "persuasion-levers": {
+    "owner": "landing-page-cro",
+    "procedure": "library/skills/landing-page-cro/references/modes/persuasion-levers/guide.md"
+  },
+  "split-test-planner": {
+    "owner": "landing-page-cro",
+    "procedure": "library/skills/landing-page-cro/references/modes/split-test-planner/guide.md"
+  },
+  "slide-story-design": {
+    "owner": "pptx-forge",
+    "procedure": "library/skills/pptx-forge/references/modes/slide-story-design/guide.md"
+  },
+  "marketing-imagery": {
+    "owner": "raster-image-gen",
+    "procedure": "library/skills/raster-image-gen/references/modes/marketing-imagery/guide.md"
+  },
+  "pet-hatchery": {
+    "owner": "raster-image-gen",
+    "procedure": "library/skills/raster-image-gen/references/modes/pet-hatchery/guide.md"
+  },
+  "story-diagnosis": {
+    "owner": "story-workbench",
+    "procedure": "library/skills/story-workbench/references/base-workflow.md"
+  },
+  "story-mentor": {
+    "owner": "story-workbench",
+    "procedure": "library/skills/story-workbench/references/modes/story-mentor/guide.md"
+  },
+  "story-cowriter": {
+    "owner": "story-workbench",
+    "procedure": "library/skills/story-workbench/references/modes/story-cowriter/guide.md"
+  },
+  "premise-forge": {
+    "owner": "story-workbench",
+    "procedure": "library/skills/story-workbench/references/modes/premise-forge/guide.md"
+  },
+  "genre-promise-check": {
+    "owner": "story-workbench",
+    "procedure": "library/skills/story-workbench/references/modes/genre-promise-check/guide.md"
+  },
+  "draft-unblocker": {
+    "owner": "story-workbench",
+    "procedure": "library/skills/story-workbench/references/modes/draft-unblocker/guide.md"
+  },
+  "outline-to-chapter": {
+    "owner": "story-workbench",
+    "procedure": "library/skills/story-workbench/references/modes/outline-to-chapter/guide.md"
+  },
+  "fiction-line-edit": {
+    "owner": "fiction-editor",
+    "procedure": "library/skills/fiction-editor/references/base-workflow.md"
+  },
+  "character-arc-doctor": {
+    "owner": "fiction-editor",
+    "procedure": "library/skills/fiction-editor/references/modes/character-arc-doctor/guide.md"
+  },
+  "dialogue-doctor": {
+    "owner": "fiction-editor",
+    "procedure": "library/skills/fiction-editor/references/modes/dialogue-doctor/guide.md"
+  },
+  "sensitivity-read": {
+    "owner": "fiction-editor",
+    "procedure": "library/skills/fiction-editor/references/modes/sensitivity-read/guide.md"
+  },
+  "punchline-lab": {
+    "owner": "fiction-editor",
+    "procedure": "library/skills/fiction-editor/references/modes/punchline-lab/guide.md"
+  },
+  "cliche-escape": {
+    "owner": "fiction-editor",
+    "procedure": "library/skills/fiction-editor/references/modes/cliche-escape/guide.md"
+  },
+  "trope-refresher": {
+    "owner": "fiction-editor",
+    "procedure": "library/skills/fiction-editor/references/modes/trope-refresher/guide.md"
+  },
+  "story-dna-adapter": {
+    "owner": "story-dna-extractor",
+    "procedure": "library/skills/story-dna-extractor/references/modes/story-dna-adapter/guide.md"
+  },
+  "book-outliner": {
+    "owner": "story-dna-extractor",
+    "procedure": "library/skills/story-dna-extractor/references/modes/book-outliner/guide.md"
+  },
+  "world-diagnostics": {
+    "owner": "world-bible",
+    "procedure": "library/skills/world-bible/references/modes/world-diagnostics/guide.md"
+  },
+  "world-fate-ledger": {
+    "owner": "world-bible",
+    "procedure": "library/skills/world-bible/references/modes/world-fate-ledger/guide.md"
+  },
+  "entropy-lists": {
+    "owner": "world-bible",
+    "procedure": "library/skills/world-bible/references/modes/entropy-lists/guide.md"
+  },
+  "conlang-drift": {
+    "owner": "conlang-forge",
+    "procedure": "library/skills/conlang-forge/references/modes/conlang-drift/guide.md"
+  },
+  "table-tone-tuner": {
+    "owner": "rpg-game-master",
+    "procedure": "library/skills/rpg-game-master/references/modes/table-tone-tuner/guide.md"
+  },
+  "learning-roadmap": {
+    "owner": "lesson-workspace",
+    "procedure": "library/skills/lesson-workspace/references/modes/learning-roadmap/guide.md"
+  },
+  "patient-tutor": {
+    "owner": "lesson-workspace",
+    "procedure": "library/skills/lesson-workspace/references/modes/patient-tutor/guide.md"
+  },
+  "learning-retro": {
+    "owner": "lesson-workspace",
+    "procedure": "library/skills/lesson-workspace/references/modes/learning-retro/guide.md"
+  },
+  "exercise-scaffold": {
+    "owner": "lesson-workspace",
+    "procedure": "library/skills/lesson-workspace/references/modes/exercise-scaffold/guide.md"
+  },
+  "ui-cliche-audit": {
+    "owner": null,
+    "procedure": "archive/removed-skills-2026-11-09/ui-cliche-audit/entrypoint.md",
+    "reason": "Explicit user deletion"
+  },
+  "wcag-a11y-audit": {
+    "owner": null,
+    "procedure": "archive/removed-skills-2026-11-09/wcag-a11y-audit/entrypoint.md",
+    "reason": "Explicit user deletion"
+  },
+  "brutal-hud-kit": {
+    "owner": null,
+    "procedure": "archive/removed-skills-2026-11-09/brutal-hud-kit/entrypoint.md",
+    "reason": "Explicit user deletion"
+  },
+  "solidity-audit": {
+    "owner": null,
+    "procedure": "archive/removed-skills-2026-11-09/solidity-audit/entrypoint.md",
+    "reason": "Explicit user deletion"
+  },
+  "ralph-loop": {
+    "owner": "ralph-workflow",
+    "procedure": "library/skills/ralph-workflow/references/modes/ralph-loop-start/guide.md",
+    "renamed": "2026-11-03"
   }
 }

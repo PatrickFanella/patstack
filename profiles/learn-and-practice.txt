@@ -1,10 +1,6 @@
 # Plan learning, study examples, tutor, build exercises and review progress.
-book-outliner
-code-walkthrough
-exercise-scaffold
-learning-retro
-learning-roadmap
 lesson-workspace
-patient-tutor
 primary-source-notes
 red-green-loop
+repo-research-trail
+story-dna-extractor

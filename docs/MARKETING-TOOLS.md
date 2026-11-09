@@ -1,6 +1,6 @@
 # Shared marketing tools
 
-The shared procedures `voice-ledger`, `content-recaster`, and `launch-dossier` are authored under `shared/` in this repository. Their source provenance identifies the reviewed Okara files by SHA-256. The full research archive remains separate at `~/Work/Research/Okara/2026-10-19` on Kvant. No public redistribution license was established for the imported originals.
+The shared procedures `voice-ledger`, `page-copy-forge`, and `launch-dossier` are authored under `shared/` in this repository. Their source provenance identifies the reviewed Okara files by SHA-256. The full research archive remains separate at `~/Work/Research/Okara/2026-10-19` on Kvant. No public redistribution license was established for the imported originals.
 
 Use `$voice-ledger` to define or review written voice, `$content-recaster` to adapt an actual source asset into selected channels, and `$launch-dossier` to create or refresh a complete product packet. Existing agent sessions keep their initial skill catalog; start a fresh session after installation. The launch-dossier skill includes the original Subcult starter and seven drafting prompts as portable assets.
 

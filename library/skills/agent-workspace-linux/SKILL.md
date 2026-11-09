@@ -11,7 +11,7 @@ metadata:
 # sandbox-desktop
 
 Drive an isolated, agent-owned Linux desktop and workspace-owned browser through
-the `sandbox-desktop` MCP server. The workspace runs apps, browser
+the `browser-workbench` MCP server. The workspace runs apps, browser
 automation, screenshots, clipboard, and input inside its own hidden display,
 never the user's real desktop, focus, or host Chrome.
 

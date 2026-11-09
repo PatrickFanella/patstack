@@ -13,8 +13,8 @@ Gitea pushes it to the private GitHub mirror
 on every commit and every 8 hours; open PRs on Gitea, not on GitHub.
 
 Subsets manages the user-level skill selection and generated views across
-Agents, Codex, Claude, Copilot, Cursor and OpenCode. Patstack owns 219 selectable
-skill sources, a 42-skill everyday core, and 11 overlapping task sets. App,
+Agents, Codex, Claude, Copilot, Cursor and OpenCode. Patstack owns 104 selectable
+skill sources, a 37-skill everyday core, and 11 overlapping task sets. App,
 package, repository and vault skills retain their local owners.
 
 Start with [the task-stack guide](docs/SKILL-GROUPS.md) and

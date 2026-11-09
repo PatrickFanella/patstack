@@ -1,66 +1,23 @@
 ---
 name: relay-baton
-description: Use before a context reset, a handoff to another agent or session, or a long pause, to record progress, decisions, blockers and next steps. Not for an ordinary final summary.
+description: Recall recent work or record a handoff before a context reset, session
+  continuation or explicitly requested background handoff.
 metadata:
   blacktower-pack: core
   blacktower-kind: workflow
   blacktower-tier: core
-  blacktower-capabilities: session continuation,context reset,ownership transfer,progress handoff,continuation record
+  blacktower-capabilities: session continuation,context reset,ownership transfer,progress
+    handoff,continuation record
   author: blacktower
   version: '2.0'
 ---
 
 # relay-baton
 
-Create a compact, evidence-backed continuation record. Use the repository's
-existing handoff convention, such as `.blacktower/handoff.md` in a Blacktower
-project. Otherwise write `HANDOFF.md` at the repository root and leave it
-uncommitted, unless the user requests another location.
+Recalling work is read-only. Preserve source provenance, unfinished changes and next steps. Starting a background session is a separate explicit request and uses the current client contract.
 
-## Workflow
+Select the matching procedure below and load only that procedure and its needed resources. Each procedure retains its own client, tool and invocation limits. Internal handoffs use the matching procedure below rather than reloading this entrypoint. A reference does not authorize delegation, publication, deployment or an unrelated mutation.
 
-1. Re-read the goal, current plan, `git status`, recent commits, and relevant
-   verification output.
-2. Distinguish finished work from work merely attempted or discussed.
-3. Record decisions and their reasons, especially choices not evident in code.
-4. Name blockers, open questions, risky assumptions, and unrelated dirty files.
-5. Give the next session the smallest safe continuation sequence with exact
-   paths and commands.
-6. On resume, verify the handoff against current repository state before acting.
-
-## Handoff Format
-
-```markdown
-# Handoff: <task>
-
-Date:
-Branch and worktree:
-Status: in-progress | blocked | ready-for-review
-
-## Goal and scope
-## Completed and verified
-## Remaining work
-## Decisions and rationale
-## Blockers, risks, and open questions
-## Key files and unrelated changes
-## Exact continuation steps
-```
-
-Keep the handoff scannable. Include file paths, symbols, command outcomes, and
-test status; omit conversational history that does not affect continuation.
-Point to existing specs, issues, plans and artifacts instead of copying them.
-Name the relevant skills and canonical source paths for the next task; do not
-assume another client exposes the same Skill tool or integrations.
-
-For longer-running context systems, load the relevant material in
-`references/context-management/` and the optional templates in
-`templates/context-network/`. Do not create a context network for a short,
-single-session task.
-
-## Guardrails
-
-- Never claim tests passed when they were not run or did not complete.
-- Preserve user-owned dirty changes and identify them explicitly.
-- Do not include secrets, personal data, tokens, or transient credentials.
-- A handoff is not a substitute for committing finished work when the user has
-  requested a commit.
+- **relay baton**: Use before a context reset, a handoff to another agent or session, or a long pause, to record progress, decisions, blockers and next steps. Read [the procedure](references/base-workflow.md).
+- **context recall**: Recall recent working context from chat transcripts, live repo state and the shared record. Use for 'catch me up', 'where did I leave off', 'recall my work on X'. Read [the procedure](references/modes/context-recall/guide.md).
+- **claude bg handoff**: Use for /claude-handoff in Claude Code: summarize this conversation and start a background claude --bg session to continue it. Other clients: relay-baton. Read [the procedure](references/modes/claude-bg-handoff/guide.md).

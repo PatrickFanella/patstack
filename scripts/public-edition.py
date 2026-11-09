@@ -44,7 +44,7 @@ def move_to_metadata(text, fields):
 
 
 def source_dir(name):
-    for base in ('skills', 'shared'):
+    for base in ('skills', 'shared', 'library/skills'):
         if (ROOT / base / name / 'SKILL.md').is_file():
             return ROOT / base / name
     raise SystemExit('Missing source skill: ' + name)

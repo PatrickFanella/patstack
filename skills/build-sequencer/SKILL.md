@@ -1,38 +1,20 @@
 ---
 name: build-sequencer
-description: Use when turning a feature spec into an ordered, verifiable change plan, or implementing a multi-step feature against acceptance criteria. Not for unresolved scope; use scope-grill.
+description: Plan or execute a feature, specification, migration or multi-session
+  implementation sequence.
 ---
 
 # build-sequencer
 
-Turn a feature request into an executable change sequence. Follow the user's requested stopping point: a planning request produces a plan; an implementation request continues through verification.
+A plan-only request stops at the plan. Spec execution, unusual playbooks and multi-session maps are conditional modes; do not impose test-first work or extra commits on every task.
 
-Inspect existing interfaces, repository instructions, relevant tests, and current changes. Resolve facts from those sources before asking about a material product choice. Preserve the user's stack and existing work.
+Select the matching procedure below and load only that procedure and its needed resources. Each procedure retains its own client, tool and invocation limits. Internal handoffs use the matching procedure below rather than reloading this entrypoint. A reference does not authorize delegation, publication, deployment or an unrelated mutation.
 
-For each acceptance criterion, identify the affected boundary, expected behavior, and smallest check that could disprove it. Separate required behavior from optional improvements. If the change is small, keep this mapping in the response rather than creating a planning file.
+- **build sequencer**: Use when turning a feature spec into an ordered, verifiable change plan, or implementing a multi-step feature against acceptance criteria. Read [the procedure](references/base-workflow.md).
+- **build plan writer**: Implementation plan: turn a spec or requirements for a multi-step coding task into a bite-sized, test-first plan before touching code. Read [the procedure](references/modes/build-plan-writer/guide.md).
+- **spec implementer**: Implement from spec: on /implement, build work described in a spec or tickets with TDD, regular checks, a code review and a commit. Read [the procedure](references/modes/spec-implementer/guide.md).
+- **playbook designer**: Playbook design: on /figure-it-out, design and run an auditable workflow for a large migration or multi-part change that no narrower playbook covers. Read [the procedure](references/modes/playbook-designer/guide.md).
+- **wayfinder map**: Wayfinder: plan work too large for one agent session as a map issue of decision tickets on the tracker, then resolve them one at a time. Read [the procedure](references/modes/wayfinder-map/guide.md).
+- **pocock flow router**: Use for /ask-matt: choose which Matt Pocock flow or skill fits the situation, from idea to ship, bug hunts, issue triage or codebase upkeep. Read [the procedure](references/modes/pocock-flow-router/guide.md).
 
-For larger changes, use the repository's existing plan location and record:
-
-- Ordered implementation units, their dependencies, and affected files.
-- Concrete verification commands or a named check to implement when none exists.
-- Compatibility, migration, and rollback requirements only where the change needs them.
-- Unresolved decisions with their impact and enough evidence to resolve them.
-
-Prefer units that leave a working, verifiable result. Do not invent code before inspecting the relevant interfaces or require a commit after each trivial step.
-
-When implementation is requested, execute the units using the relevant language or framework guidance. Update the plan after new evidence changes the approach. Run focused checks as each unit lands and broader checks when shared contracts or integration paths changed. Complete the user-visible flow when it is part of acceptance.
-
-Report which acceptance criteria are verified, which remain unverified, and why. A request to plan or implement does not by itself authorize publishing, deployment, messages, or unrelated repository changes.
-
-## Conditional design notes
-
-- [guard the context window](references/principles/guard-the-context-window.md): read when source files or tool output are large, or when considering delegating bounded work.
-- [never block on the human](references/principles/never-block-on-the-human.md): read before stopping to ask the user a question.
-- [outcome oriented execution](references/principles/outcome-oriented-execution.md): read when a migration tempts you to add temporary compatibility code.
-- [sequence verifiable units](references/principles/sequence-verifiable-units.md): read when ordering dependent work into steps.
-
-For requested “show me your work” or a long unattended effort, use the [decision trail](references/decision-trail.md) beside the existing plan.
-
-## Companion skills
-
-Load [required steps and optional helpers](references/skill-routes.md) only when their stated condition applies.
+Read [conditional companions](references/skill-routes.md) only when their stated condition applies.

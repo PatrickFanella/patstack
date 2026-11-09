@@ -27,7 +27,7 @@ Design and implement secure auth systems: AuthN (identity), AuthZ (permissions),
 
 - You only need generic Node.js API scaffolding (use the `nodejs-backend-patterns` mode of `api-contract-smith`)
 - You only need secret storage or rotation (use `secret-rotation-flow`)
-- You only need cluster network policy hardening (use the optional `kube-artifact-smith` skill when installed)
+- You only need cluster network policy hardening (use the optional `fleet-ops-router` skill when installed)
 
 ## Workflow
 

@@ -1,31 +1,14 @@
 ---
 name: commit-recap
-description: "Work recap for a chosen period: summarize your authored commits from yesterday, the last few days or a date range into a short status update. For a grouped weekly review, use weekly-commit-recap."
+description: Summarize authored commits for a requested date range as a short status
+  update or weekly review.
 ---
 
-# What did I get done
+# commit-recap
 
-## Trigger
+Resolve the actual date range and Git author. Describe evidenced changes, excluding merge noise; do not infer shipped or deployed state from commits.
 
-Need a short, high-signal summary of work completed in a specific time range (for example: yesterday, last 3 days, or last week).
+Select the matching procedure below and load only that procedure and its needed resources. Each procedure retains its own client, tool and invocation limits. Internal handoffs use the matching procedure below rather than reloading this entrypoint. A reference does not authorize delegation, publication, deployment or an unrelated mutation.
 
-## Workflow
-
-1. Resolve the requested time window into concrete dates.
-2. Read commits authored by the current git user email within that range.
-3. Exclude merge commits and uncommitted changes.
-4. Synthesize the most important shipped changes into a concise status update.
-5. Include the actual date range used in the final summary.
-
-## Guardrails
-
-- Be extremely concise and information-dense.
-- Prioritize substantial behavior or architecture changes.
-- Omit cosmetic-only changes (formatting, imports, minor renames).
-- Do not infer intent or motivation. Describe changes functionally.
-
-## Output
-
-- One short summary suitable for a status update
-- Real date range
-- Optional 2-5 bullets for major changes only
+- **commit recap**: Work recap for a chosen period: summarize your authored commits from yesterday, the last few days or a date range into a short status update. For a grouped weekly review, use weekly-commit-recap. Read [the procedure](references/base-workflow.md).
+- **weekly commit recap**: Weekly review: summarize your authored commits from the last 7-10 days as highlights grouped into bug fixes, tech debt and new work. Read [the procedure](references/modes/weekly-commit-recap/guide.md).

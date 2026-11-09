@@ -3,74 +3,59 @@
   "proofPolicy": "Supported clients declare procedure/deployment contracts; structure and selection evidence do not establish live task behavior. Unreviewed sources are retained for review, not endorsed. Blocked entries cannot be activated through profiles.",
   "skills": {
     "split-test-planner": {
-      "canonicalSource": "library/skills/split-test-planner",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/landing-page-cro/references/modes/split-test-planner/guide.md",
+      "owner": "landing-page-cro",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "story-dna-adapter": {
-      "canonicalSource": "library/skills/story-dna-adapter",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/story-dna-extractor/references/modes/story-dna-adapter/guide.md",
+      "owner": "story-dna-extractor",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "ref-snapshot-browser": {
-      "canonicalSource": "library/skills/ref-snapshot-browser",
-      "owner": "optional-library",
+      "canonicalSource": "skills/browser-workbench/references/modes/ref-snapshot-browser/guide.md",
+      "owner": "browser-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "sandbox-desktop": {
-      "canonicalSource": "skills/sandbox-desktop",
-      "owner": "patstack",
+      "canonicalSource": "skills/browser-workbench/references/base-workflow.md",
+      "owner": "browser-workbench",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Isolated agent desktop/browser workspace operations and QA; use its MCP surface rather than host desktop control.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -104,19 +89,15 @@
       "nearMiss": null
     },
     "sketch-first-design": {
-      "canonicalSource": "library/skills/sketch-first-design",
-      "owner": "optional-library",
+      "canonicalSource": "skills/boundary-drafter/references/modes/sketch-first-design/guide.md",
+      "owner": "boundary-drafter",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -133,27 +114,24 @@
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": "'Architecture and domain modeling: module boundaries, dependency cycles, CQRS, and domain vocabulary.'",
-      "nearMiss": "Unrelated work without this technology or requested procedure."
+      "positiveTask": "Design or critique architecture and module boundaries, compare interface alternatives, or plan deeper modules.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "candidate-arena": {
-      "canonicalSource": "library/skills/candidate-arena",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/agent-fanout-plan/references/modes/candidate-arena/guide.md",
+      "owner": "agent-fanout-plan",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -254,19 +232,15 @@
       "nearMiss": "Work owned by another vault."
     },
     "pocock-flow-router": {
-      "canonicalSource": "library/skills/pocock-flow-router",
-      "owner": "optional-library",
+      "canonicalSource": "skills/build-sequencer/references/modes/pocock-flow-router/guide.md",
+      "owner": "build-sequencer",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -291,19 +265,15 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "mode-skill-miner": {
-      "canonicalSource": "library/skills/mode-skill-miner",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/friction-miner/references/modes/mode-skill-miner/guide.md",
+      "owner": "friction-miner",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -388,109 +358,85 @@
       "nearMiss": "Select a general personal task set or configure an unrelated MCP server."
     },
     "change-blast-check": {
-      "canonicalSource": "library/skills/change-blast-check",
-      "owner": "optional-library",
+      "canonicalSource": "skills/diff-inspector/references/modes/change-blast-check/guide.md",
+      "owner": "diff-inspector",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "nonfiction-gap-finder": {
-      "canonicalSource": "library/skills/nonfiction-gap-finder",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/writing-workbench/references/modes/nonfiction-gap-finder/guide.md",
+      "owner": "writing-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "book-blurb-doctor": {
-      "canonicalSource": "library/skills/book-blurb-doctor",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/page-copy-forge/references/modes/book-blurb-doctor/guide.md",
+      "owner": "page-copy-forge",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "plain-restate": {
-      "canonicalSource": "library/skills/plain-restate",
-      "owner": "optional-library",
+      "canonicalSource": "skills/prose-unslop/references/modes/plain-restate/guide.md",
+      "owner": "prose-unslop",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "ralph-loop-stop": {
-      "canonicalSource": "library/skills/ralph-loop-stop",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/ralph-workflow/references/modes/ralph-loop-stop/guide.md",
+      "owner": "ralph-workflow",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "codemap-atlas": {
-      "canonicalSource": "library/skills/codemap-atlas",
-      "owner": "optional-library",
+      "canonicalSource": "skills/repo-atlas/references/modes/codemap-atlas/guide.md",
+      "owner": "repo-atlas",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -510,38 +456,29 @@
       "nearMiss": null
     },
     "outline-to-chapter": {
-      "canonicalSource": "library/skills/outline-to-chapter",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/story-workbench/references/modes/outline-to-chapter/guide.md",
+      "owner": "story-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "character-arc-doctor": {
-      "canonicalSource": "library/skills/character-arc-doctor",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/fiction-editor/references/modes/character-arc-doctor/guide.md",
+      "owner": "fiction-editor",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -582,35 +519,29 @@
       "nearMiss": null
     },
     "viral-claim-probe": {
-      "canonicalSource": "library/skills/viral-claim-probe",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/claim-verifier/references/modes/viral-claim-probe/guide.md",
+      "owner": "claim-verifier",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "claude-bg-handoff": {
-      "canonicalSource": "library/skills/claude-bg-handoff",
-      "owner": "optional-library",
+      "canonicalSource": "shared/relay-baton/references/modes/claude-bg-handoff/guide.md",
+      "owner": "relay-baton",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -649,57 +580,47 @@
       "nearMiss": null
     },
     "trope-refresher": {
-      "canonicalSource": "library/skills/trope-refresher",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/fiction-editor/references/modes/trope-refresher/guide.md",
+      "owner": "fiction-editor",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "dep-source-clone": {
-      "canonicalSource": "skills/dep-source-clone",
-      "owner": "patstack",
+      "canonicalSource": "library/skills/repo-research-trail/references/modes/dep-source-clone/guide.md",
+      "owner": "repo-research-trail",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Inspect dependency source at the lockfile-resolved version; obtain only the repositories needed for the investigation.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "cf-edge-deploy": {
-      "canonicalSource": "skills/cf-edge-deploy",
-      "owner": "patstack",
+      "canonicalSource": "library/skills/fleet-ops-router/references/modes/cf-edge-deploy/guide.md",
+      "owner": "fleet-ops-router",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Cloudflare Workers and Pages deployment; follow the selected product and verify the deployed artifact.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -716,13 +637,13 @@
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": "Review code changes for actionable defects or requested maintainability concerns; keep repository audits separate.",
-      "nearMiss": "Unrelated work without this technology or requested procedure."
+      "positiveTask": "Review a working-tree, branch, commit or PR diff for defects, downstream impact or a requested review walkthrough.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "codebase-design": {
       "canonicalSource": "library/skills/codebase-design",
@@ -750,46 +671,40 @@
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": "Map repository structure and update existing code maps incrementally using the bundled inventory helper.",
-      "nearMiss": "Unrelated work without this technology or requested procedure."
+      "positiveTask": "Orient in a repository or create and incrementally refresh its codemaps when requested.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "sweep-rewriter": {
-      "canonicalSource": "skills/sweep-rewriter",
-      "owner": "patstack",
+      "canonicalSource": "skills/safe-refactor-pass/references/modes/sweep-rewriter/guide.md",
+      "owner": "safe-refactor-pass",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Automate widespread source edits with structural transforms, bounded scope, repeatability, and semantic checks.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "codex-desktop-audit": {
-      "canonicalSource": "library/skills/codex-desktop-audit",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/fleet-ops-router/references/modes/codex-desktop-audit/guide.md",
+      "owner": "fleet-ops-router",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -847,46 +762,38 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Research customers and competitors and develop evidence-backed product positioning.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "vs-page-writer": {
-      "canonicalSource": "library/skills/vs-page-writer",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/page-copy-forge/references/modes/vs-page-writer/guide.md",
+      "owner": "page-copy-forge",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "rival-dossier": {
-      "canonicalSource": "library/skills/rival-dossier",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/market-position-map/references/modes/rival-dossier/guide.md",
+      "owner": "market-position-map",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -902,12 +809,13 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Design fictional naming languages, full conlangs, language families, dialects or historical sound changes.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "editorial-roadmap": {
       "canonicalSource": "library/skills/editorial-roadmap",
@@ -993,12 +901,13 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Write or adapt requested marketing pages, social posts, email sequences, internal updates, book blurbs or comparison copy.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "cqrs-implementation": {
       "canonicalSource": "library/skills/cqrs-implementation",
@@ -1015,56 +924,43 @@
       "nearMiss": null
     },
     "learning-roadmap": {
-      "canonicalSource": "library/skills/learning-roadmap",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/lesson-workspace/references/modes/learning-roadmap/guide.md",
+      "owner": "lesson-workspace",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "cursor-plugin-forge": {
-      "canonicalSource": "library/skills/cursor-plugin-forge",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/skill-forge/references/modes/cursor-plugin-forge/guide.md",
+      "owner": "skill-forge",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "verify-skill-forge": {
-      "canonicalSource": "library/skills/verify-skill-forge",
-      "owner": "optional-library",
+      "canonicalSource": "skills/behavior-proof/references/modes/verify-skill-forge/guide.md",
+      "owner": "behavior-proof",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -1088,19 +984,15 @@
       "nearMiss": null
     },
     "customer-voice-miner": {
-      "canonicalSource": "library/skills/customer-voice-miner",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/market-position-map/references/modes/customer-voice-miner/guide.md",
+      "owner": "market-position-map",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -1116,12 +1008,13 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Configure OpenCode agents, skills, plugins, MCP, permissions or its supported scheduler.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "data-narrative": {
       "canonicalSource": "library/skills/data-narrative",
@@ -1142,21 +1035,17 @@
       "nearMiss": null
     },
     "schema-migrator": {
-      "canonicalSource": "skills/schema-migrator",
-      "owner": "patstack",
+      "canonicalSource": "skills/postgres-workbench/references/modes/schema-migrator/guide.md",
+      "owner": "postgres-workbench",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "'Database schema and data migrations: compatibility, backfills, validation, cutover, and rollback.'",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -1172,25 +1061,24 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Investigate a codebase, explain a flow or design decision, or inspect a lockfile-pinned dependency implementation.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "opencode-deepwork": {
-      "canonicalSource": "library/skills/opencode-deepwork",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/agent-fanout-plan/references/modes/opencode-deepwork/guide.md",
+      "owner": "agent-fanout-plan",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -1229,19 +1117,15 @@
       "nearMiss": null
     },
     "interface-design-twice": {
-      "canonicalSource": "library/skills/interface-design-twice",
-      "owner": "optional-library",
+      "canonicalSource": "skills/boundary-drafter/references/modes/interface-design-twice/guide.md",
+      "owner": "boundary-drafter",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -1326,19 +1210,15 @@
       "nearMiss": null
     },
     "dialogue-doctor": {
-      "canonicalSource": "library/skills/dialogue-doctor",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/fiction-editor/references/modes/dialogue-doctor/guide.md",
+      "owner": "fiction-editor",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -1368,12 +1248,13 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Analyze a source story's functional structure or adapt that structure into a requested new context.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "docx-editor": {
       "canonicalSource": "library/skills/docx-editor",
@@ -1420,73 +1301,57 @@
       "nearMiss": null
     },
     "draft-unblocker": {
-      "canonicalSource": "library/skills/draft-unblocker",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/story-workbench/references/modes/draft-unblocker/guide.md",
+      "owner": "story-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "ebook-concept-miner": {
-      "canonicalSource": "library/skills/ebook-concept-miner",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/primary-source-notes/references/modes/ebook-concept-miner/guide.md",
+      "owner": "primary-source-notes",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "article-restructure": {
-      "canonicalSource": "library/skills/article-restructure",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/writing-workbench/references/modes/article-restructure/guide.md",
+      "owner": "writing-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "drip-sequence-planner": {
-      "canonicalSource": "library/skills/drip-sequence-planner",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/page-copy-forge/references/modes/drip-sequence-planner/guide.md",
+      "owner": "page-copy-forge",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -1495,7 +1360,7 @@
       "canonicalSource": "library/skills/claim-verifier",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "selection-tested",
+      "status": "structure-reviewed",
       "supportedClients": [
         "claude",
         "codex",
@@ -1504,12 +1369,13 @@
       "requiredTools": [
         "current client source retrieval/search tools when required"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/optional-specialists-verification-2026-10-03.json"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": "Verify specific generated claims against their supporting sources.",
-      "nearMiss": "An unrelated task without the named source review or synthesis request."
+      "positiveTask": "Check claims in generated text or a public narrative against cited sources as a separate verification pass.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "failure-anthropologist": {
       "canonicalSource": "library/skills/failure-anthropologist",
@@ -1526,19 +1392,15 @@
       "nearMiss": null
     },
     "playbook-designer": {
-      "canonicalSource": "library/skills/playbook-designer",
-      "owner": "optional-library",
+      "canonicalSource": "skills/build-sequencer/references/modes/playbook-designer/guide.md",
+      "owner": "build-sequencer",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -1609,13 +1471,13 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Run a requested tabletop or solo narrative RPG session or adjust its narration and table tone.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "privacy-controls": {
       "canonicalSource": "skills/privacy-controls",
@@ -1637,37 +1499,29 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "genre-promise-check": {
-      "canonicalSource": "library/skills/genre-promise-check",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/story-workbench/references/modes/genre-promise-check/guide.md",
+      "owner": "story-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "patient-tutor": {
-      "canonicalSource": "library/skills/patient-tutor",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/lesson-workspace/references/modes/patient-tutor/guide.md",
+      "owner": "lesson-workspace",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -1684,12 +1538,13 @@
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": "Git conflicts, worktrees, history repair, and PR preparation; hosted operations follow the configured remote.",
-      "nearMiss": "Unrelated work without this technology or requested procedure."
+      "positiveTask": "Manage Git history and worktrees or prepare and ship a focused branch through its authorized PR workflow.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "claude-git-guardrails": {
       "canonicalSource": "library/skills/claude-git-guardrails",
@@ -1708,20 +1563,17 @@
       "nearMiss": null
     },
     "gitea-fleet-tidy": {
-      "canonicalSource": "skills/gitea-fleet-tidy",
-      "owner": "patstack",
+      "canonicalSource": "library/skills/fleet-ops-router/references/modes/gitea-fleet-tidy/guide.md",
+      "owner": "fleet-ops-router",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Audit or modernize Gitea/Forgejo repository settings, issues, workflows, and release organization.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -1879,27 +1731,24 @@
       "requiredTools": [
         "accessible Machinum owner and task-specific host tools"
       ],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": "Investigate a cross-host backup or route incident through Machinum.",
-      "nearMiss": "A generic local unit-test failure."
+      "positiveTask": "Operate homelab services or use the matching infrastructure, repository-administration or host-runtime runbook.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "code-walkthrough": {
-      "canonicalSource": "library/skills/code-walkthrough",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/repo-research-trail/references/modes/code-walkthrough/guide.md",
+      "owner": "repo-research-trail",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -1919,19 +1768,15 @@
       "nearMiss": null
     },
     "marketing-imagery": {
-      "canonicalSource": "library/skills/marketing-imagery",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/raster-image-gen/references/modes/marketing-imagery/guide.md",
+      "owner": "raster-image-gen",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -1947,46 +1792,38 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Generate or edit raster images, prepare marketing graphics or package an explicitly requested animated pet.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "spec-implementer": {
-      "canonicalSource": "library/skills/spec-implementer",
-      "owner": "optional-library",
+      "canonicalSource": "skills/build-sequencer/references/modes/spec-implementer/guide.md",
+      "owner": "build-sequencer",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "module-deepener": {
-      "canonicalSource": "library/skills/module-deepener",
-      "owner": "optional-library",
+      "canonicalSource": "skills/boundary-drafter/references/modes/module-deepener/guide.md",
+      "owner": "boundary-drafter",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -2010,55 +1847,43 @@
       "nearMiss": null
     },
     "status-memo-writer": {
-      "canonicalSource": "library/skills/status-memo-writer",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/page-copy-forge/references/modes/status-memo-writer/guide.md",
+      "owner": "page-copy-forge",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "model-crossfire": {
-      "canonicalSource": "library/skills/model-crossfire",
-      "owner": "optional-library",
+      "canonicalSource": "skills/diff-inspector/references/modes/model-crossfire/guide.md",
+      "owner": "diff-inspector",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "punchline-lab": {
-      "canonicalSource": "library/skills/punchline-lab",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/fiction-editor/references/modes/punchline-lab/guide.md",
+      "owner": "fiction-editor",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -2110,57 +1935,45 @@
       "nearMiss": null
     },
     "kube-artifact-smith": {
-      "canonicalSource": "library/skills/kube-artifact-smith",
-      "owner": "patstack",
+      "canonicalSource": "library/skills/fleet-ops-router/references/modes/kube-artifact-smith/guide.md",
+      "owner": "fleet-ops-router",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Kubernetes manifests, Helm charts, and cluster workload policies; validate the requested deployment artifact.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "conlang-drift": {
-      "canonicalSource": "library/skills/conlang-drift",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/conlang-forge/references/modes/conlang-drift/guide.md",
+      "owner": "conlang-forge",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "launch-runway": {
-      "canonicalSource": "library/skills/launch-runway",
-      "owner": "optional-library",
+      "canonicalSource": "shared/launch-dossier/references/modes/launch-runway/guide.md",
+      "owner": "launch-dossier",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -2186,19 +1999,15 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "entropy-lists": {
-      "canonicalSource": "library/skills/entropy-lists",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/world-bible/references/modes/entropy-lists/guide.md",
+      "owner": "world-bible",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -2251,19 +2060,15 @@
       "nearMiss": null
     },
     "loop-spec-grill": {
-      "canonicalSource": "library/skills/loop-spec-grill",
-      "owner": "optional-library",
+      "canonicalSource": "shared/scope-grill/references/modes/loop-spec-grill/guide.md",
+      "owner": "scope-grill",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -2301,19 +2106,15 @@
       "nearMiss": null
     },
     "verify-skill-audit": {
-      "canonicalSource": "library/skills/verify-skill-audit",
-      "owner": "optional-library",
+      "canonicalSource": "skills/behavior-proof/references/modes/verify-skill-audit/guide.md",
+      "owner": "behavior-proof",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -2333,19 +2134,15 @@
       "nearMiss": null
     },
     "persuasion-levers": {
-      "canonicalSource": "library/skills/persuasion-levers",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/landing-page-cro/references/modes/persuasion-levers/guide.md",
+      "owner": "landing-page-cro",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -2422,20 +2219,17 @@
       "nearMiss": null
     },
     "mtls-trust-chain": {
-      "canonicalSource": "skills/mtls-trust-chain",
-      "owner": "patstack",
+      "canonicalSource": "library/skills/fleet-ops-router/references/modes/mtls-trust-chain/guide.md",
+      "owner": "fleet-ops-router",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "'Configure and diagnose mutual TLS: certificate identity, trust chains, rotation, and service authentication.'",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -2451,12 +2245,13 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Coordinate authorized parallel agent work, candidate comparisons or a supported multi-phase agent workflow.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "multi-reviewer-patterns": {
       "canonicalSource": "library/skills/multi-reviewer-patterns",
@@ -2509,19 +2304,15 @@
       "nearMiss": null
     },
     "brutal-hud-kit": {
-      "canonicalSource": "library/skills/brutal-hud-kit",
+      "canonicalSource": "archive/removed-skills-2026-11-09/brutal-hud-kit/entrypoint.md",
       "owner": "optional-library",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -2629,19 +2420,15 @@
       "nearMiss": null
     },
     "openai-doc-lookup": {
-      "canonicalSource": "library/skills/openai-doc-lookup",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/primary-source-notes/references/modes/openai-doc-lookup/guide.md",
+      "owner": "primary-source-notes",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -2661,19 +2448,15 @@
       "nearMiss": null
     },
     "oss-maintainer-coach": {
-      "canonicalSource": "library/skills/oss-maintainer-coach",
-      "owner": "optional-library",
+      "canonicalSource": "skills/roadmap-slicer/references/modes/oss-maintainer-coach/guide.md",
+      "owner": "roadmap-slicer",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -2722,12 +2505,13 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Analyze a marketing page or plan a conversion experiment and its behavioral hypothesis.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "paid-media-plan": {
       "canonicalSource": "library/skills/paid-media-plan",
@@ -2845,38 +2629,31 @@
       "nearMiss": "Unrelated repository work."
     },
     "playwright-cli-driver": {
-      "canonicalSource": "skills/playwright-cli-driver",
-      "owner": "patstack",
+      "canonicalSource": "skills/browser-workbench/references/modes/playwright-cli-driver/guide.md",
+      "owner": "browser-workbench",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Automate a browser with Playwright CLI for navigation, interaction, inspection, and evidence capture.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "codex-plugin-scaffold": {
-      "canonicalSource": "library/skills/codex-plugin-scaffold",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/skill-forge/references/modes/codex-plugin-scaffold/guide.md",
+      "owner": "skill-forge",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -2910,20 +2687,17 @@
       "nearMiss": null
     },
     "pg-plan-reader": {
-      "canonicalSource": "skills/pg-plan-reader",
-      "owner": "patstack",
+      "canonicalSource": "skills/postgres-workbench/references/base-workflow.md",
+      "owner": "postgres-workbench",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "PostgreSQL query plans, indexes, locks, replication, and data-quality checks against the real schema.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -2954,46 +2728,38 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Design, create, revise or inspect a presentation, including PowerPoint files and slide narrative.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "diff-walkthrough": {
-      "canonicalSource": "library/skills/diff-walkthrough",
-      "owner": "optional-library",
+      "canonicalSource": "skills/diff-inspector/references/modes/diff-walkthrough/guide.md",
+      "owner": "diff-inspector",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "slide-story-design": {
-      "canonicalSource": "library/skills/slide-story-design",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/pptx-forge/references/modes/slide-story-design/guide.md",
+      "owner": "pptx-forge",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -3307,19 +3073,15 @@
       "nearMiss": null
     },
     "fiction-line-edit": {
-      "canonicalSource": "library/skills/fiction-line-edit",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/fiction-editor/references/base-workflow.md",
+      "owner": "fiction-editor",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -3414,19 +3176,15 @@
       "nearMiss": null
     },
     "bug-intake-session": {
-      "canonicalSource": "library/skills/bug-intake-session",
-      "owner": "optional-library",
+      "canonicalSource": "skills/roadmap-slicer/references/modes/bug-intake-session/guide.md",
+      "owner": "roadmap-slicer",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -3451,35 +3209,29 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "ralph-loop-start": {
-      "canonicalSource": "library/skills/ralph-loop-start",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/ralph-workflow/references/modes/ralph-loop-start/guide.md",
+      "owner": "ralph-workflow",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "ralph-loop-explainer": {
-      "canonicalSource": "library/skills/ralph-loop-explainer",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/ralph-workflow/references/base-workflow.md",
+      "owner": "ralph-workflow",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -3540,19 +3292,15 @@
       "nearMiss": null
     },
     "context-recall": {
-      "canonicalSource": "library/skills/context-recall",
-      "owner": "optional-library",
+      "canonicalSource": "shared/relay-baton/references/modes/context-recall/guide.md",
+      "owner": "relay-baton",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -3569,12 +3317,13 @@
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": "Behavior-preserving refactoring and code simplification; plan changes when requested and verify public contracts.",
-      "nearMiss": "Unrelated work without this technology or requested procedure."
+      "positiveTask": "Refactor without changing behavior or perform a requested mechanical change across many files.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "friction-miner": {
       "canonicalSource": "library/skills/friction-miner",
@@ -3587,12 +3336,13 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Review recent sessions for durable working preferences and repeated friction, then propose or author the requested workflow improvement.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "release-engineer": {
       "canonicalSource": "library/skills/release-engineer",
@@ -3609,21 +3359,17 @@
       "nearMiss": null
     },
     "ship-check": {
-      "canonicalSource": "skills/ship-check",
-      "owner": "patstack",
+      "canonicalSource": "skills/behavior-proof/references/modes/ship-check/guide.md",
+      "owner": "behavior-proof",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Audit a repository against its intended capabilities; separate implemented, incomplete, planned, and unverified work.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -3658,7 +3404,7 @@
       "canonicalSource": "shared/scope-grill",
       "owner": "shared-core",
       "scope": "shared",
-      "status": "selection-tested",
+      "status": "structure-reviewed",
       "supportedClients": [
         "codex",
         "claude"
@@ -3666,12 +3412,13 @@
       "requiredTools": [
         "task-specific tools"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/optional-specialists-verification-2026-10-03.json"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": "Clarify ambiguous work or run a grill-me / grill-with-docs design interview. Use when the requested outcome, constraints, acceptance criteria, or tradeoffs would materially change the implementation; skip it when repository evidence already makes the task clear.",
-      "nearMiss": "An ordinary task without the named procedure."
+      "positiveTask": "Resolve requirements and produce a requested PRD, recurring-workflow specification or decision questionnaire.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "primary-source-notes": {
       "canonicalSource": "library/skills/primary-source-notes",
@@ -3684,13 +3431,13 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Research a question through quick web lookup, cited primary-source investigation, official OpenAI docs or a supplied ebook collection.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "binary-dissector": {
       "canonicalSource": "library/skills/binary-dissector",
@@ -3713,57 +3460,43 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "book-outliner": {
-      "canonicalSource": "library/skills/book-outliner",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/story-dna-extractor/references/modes/book-outliner/guide.md",
+      "owner": "story-dna-extractor",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "diff-auditor": {
-      "canonicalSource": "library/skills/diff-auditor",
-      "owner": "optional-library",
+      "canonicalSource": "skills/diff-inspector/references/modes/diff-auditor/guide.md",
+      "owner": "diff-inspector",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "branch-shipper": {
-      "canonicalSource": "library/skills/branch-shipper",
-      "owner": "optional-library",
+      "canonicalSource": "skills/git-surgery/references/modes/branch-shipper/guide.md",
+      "owner": "git-surgery",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -3809,20 +3542,15 @@
       "nearMiss": null
     },
     "draft-reviser": {
-      "canonicalSource": "library/skills/draft-reviser",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/writing-workbench/references/modes/draft-reviser/guide.md",
+      "owner": "writing-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -3846,19 +3574,15 @@
       "nearMiss": null
     },
     "learning-retro": {
-      "canonicalSource": "library/skills/learning-retro",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/lesson-workspace/references/modes/learning-retro/guide.md",
+      "owner": "lesson-workspace",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -3915,57 +3639,45 @@
       "nearMiss": null
     },
     "exercise-scaffold": {
-      "canonicalSource": "library/skills/exercise-scaffold",
-      "owner": "patstack",
+      "canonicalSource": "library/skills/lesson-workspace/references/modes/exercise-scaffold/guide.md",
+      "owner": "lesson-workspace",
       "scope": "optional",
-      "status": "selection-tested",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json",
-        "reports/six-recommendations-verification-2026-10-03.json",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Scaffold coding exercises, solution directories, and explanatory material in the existing course format.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "opencode-cron": {
-      "canonicalSource": "library/skills/opencode-cron",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/opencode-config-tuner/references/modes/opencode-cron/guide.md",
+      "owner": "opencode-config-tuner",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "desktop-capture": {
-      "canonicalSource": "library/skills/desktop-capture",
-      "owner": "optional-library",
+      "canonicalSource": "skills/browser-workbench/references/modes/desktop-capture/guide.md",
+      "owner": "browser-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -3986,23 +3698,19 @@
       "evidence": [
         "reports/structure.json"
       ],
-      "positiveTask": "Implement CI/runtime secret storage, delivery, and rotation using the environment’s existing secret provider.",
+      "positiveTask": "Implement CI/runtime secret storage, delivery, and rotation using the environment\u2019s existing secret provider.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "web-host-hardening": {
-      "canonicalSource": "library/skills/web-host-hardening",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/fleet-ops-router/references/modes/web-host-hardening/guide.md",
+      "owner": "fleet-ops-router",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -4065,19 +3773,15 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "sensitivity-read": {
-      "canonicalSource": "library/skills/sensitivity-read",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/fiction-editor/references/modes/sensitivity-read/guide.md",
+      "owner": "fiction-editor",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -4104,7 +3808,7 @@
       "canonicalSource": "shared/relay-baton",
       "owner": "shared-core",
       "scope": "shared",
-      "status": "selection-tested",
+      "status": "structure-reviewed",
       "supportedClients": [
         "codex",
         "claude"
@@ -4112,12 +3816,13 @@
       "requiredTools": [
         "task-specific tools"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/optional-specialists-verification-2026-10-03.json"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": "Preserve progress, decisions, blockers, and continuation steps when work will continue in another agent session or agent. Use before a context reset, ownership transfer, or long pause; do not trigger for an ordinary final summary.",
-      "nearMiss": "An ordinary task without the named procedure."
+      "positiveTask": "Recall recent work or record a handoff before a context reset, session continuation or explicitly requested background handoff.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "session-warden": {
       "canonicalSource": "library/skills/session-warden",
@@ -4146,19 +3851,15 @@
       "nearMiss": null
     },
     "tracker-bootstrap": {
-      "canonicalSource": "library/skills/tracker-bootstrap",
-      "owner": "optional-library",
+      "canonicalSource": "skills/roadmap-slicer/references/modes/tracker-bootstrap/guide.md",
+      "owner": "roadmap-slicer",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -4214,13 +3915,13 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Maintain or diagnose a fictional world, its canon and persistent world-state, or generate requested creative randomization resources.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "shellcheck-configuration": {
       "canonicalSource": "library/skills/shellcheck-configuration",
@@ -4275,27 +3976,24 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Create or evaluate agent skills, install an explicitly requested unmanaged skill, or scaffold a Codex or Cursor plugin.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "codex-skill-fetch": {
-      "canonicalSource": "library/skills/codex-skill-fetch",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/skill-forge/references/modes/codex-skill-fetch/guide.md",
+      "owner": "skill-forge",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -4329,57 +4027,45 @@
       "nearMiss": null
     },
     "social-post-craft": {
-      "canonicalSource": "library/skills/social-post-craft",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/page-copy-forge/references/modes/social-post-craft/guide.md",
+      "owner": "page-copy-forge",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "solidity-audit": {
-      "canonicalSource": "library/skills/solidity-audit",
+      "canonicalSource": "archive/removed-skills-2026-11-09/solidity-audit/entrypoint.md",
       "owner": "patstack",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Implement or audit Solidity contracts for exploitable behavior, authorization, state transitions, and fund safety.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "speech-shaper": {
-      "canonicalSource": "library/skills/speech-shaper",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/writing-workbench/references/modes/speech-shaper/guide.md",
+      "owner": "writing-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -4421,93 +4107,71 @@
       "nearMiss": null
     },
     "cliche-escape": {
-      "canonicalSource": "library/skills/cliche-escape",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/fiction-editor/references/modes/cliche-escape/guide.md",
+      "owner": "fiction-editor",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "story-mentor": {
-      "canonicalSource": "library/skills/story-mentor",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/story-workbench/references/modes/story-mentor/guide.md",
+      "owner": "story-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "story-cowriter": {
-      "canonicalSource": "library/skills/story-cowriter",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/story-workbench/references/modes/story-cowriter/guide.md",
+      "owner": "story-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "premise-forge": {
-      "canonicalSource": "library/skills/premise-forge",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/story-workbench/references/modes/premise-forge/guide.md",
+      "owner": "story-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "story-diagnosis": {
-      "canonicalSource": "library/skills/story-diagnosis",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/story-workbench/references/base-workflow.md",
+      "owner": "story-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -4587,111 +4251,87 @@
       "nearMiss": null
     },
     "digest-distiller": {
-      "canonicalSource": "library/skills/digest-distiller",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/writing-workbench/references/modes/digest-distiller/guide.md",
+      "owner": "writing-workbench",
       "scope": "optional",
-      "status": "selection-tested",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "current client source retrieval/search tools when required"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/optional-specialists-verification-2026-10-03.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Summarize a supplied document for its intended audience.",
       "nearMiss": "An unrelated task without the named source review or synthesis request."
     },
     "sp-upkeep-router": {
-      "canonicalSource": "library/skills/sp-upkeep-router",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/super-productivity-workflow/references/base-workflow.md",
+      "owner": "super-productivity-workflow",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "sp-mcp-doctor": {
-      "canonicalSource": "library/skills/sp-mcp-doctor",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/super-productivity-workflow/references/modes/sp-mcp-doctor/guide.md",
+      "owner": "super-productivity-workflow",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "sp-day-planner": {
-      "canonicalSource": "library/skills/sp-day-planner",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/super-productivity-workflow/references/modes/sp-day-planner/guide.md",
+      "owner": "super-productivity-workflow",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "worker-swarm-fanout": {
-      "canonicalSource": "library/skills/worker-swarm-fanout",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/agent-fanout-plan/references/modes/worker-swarm-fanout/guide.md",
+      "owner": "agent-fanout-plan",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "switchyard-runtime-desk": {
-      "canonicalSource": "library/skills/switchyard-runtime-desk",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/fleet-ops-router/references/modes/switchyard-runtime-desk/guide.md",
+      "owner": "fleet-ops-router",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -4717,19 +4357,15 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "table-tone-tuner": {
-      "canonicalSource": "library/skills/table-tone-tuner",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/rpg-game-master/references/modes/table-tone-tuner/guide.md",
+      "owner": "rpg-game-master",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -4764,28 +4400,26 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Plan or teach a course, tutor a concept, scaffold requested exercises or review learning progress.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "tech-doc-writer": {
-      "canonicalSource": "skills/tech-doc-writer",
-      "owner": "patstack",
+      "canonicalSource": "library/skills/writing-workbench/references/modes/tech-doc-writer/guide.md",
+      "owner": "writing-workbench",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Technical docs, RFCs, README localization, and docs-versus-code checks; preserve source meaning and working links.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -4809,43 +4443,33 @@
       "nearMiss": null
     },
     "temporal-py-tests": {
-      "canonicalSource": "library/skills/temporal-py-tests",
-      "owner": "patstack",
+      "canonicalSource": "library/skills/temporal-workflows/references/modes/temporal-py-tests/guide.md",
+      "owner": "temporal-workflows",
       "scope": "optional",
-      "status": "selection-tested",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json",
-        "reports/six-recommendations-verification-2026-10-03.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Test Temporal Python workflows with replay, time skipping, activities, mocks, and determinism checks.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "terraform-module-smith": {
-      "canonicalSource": "library/skills/terraform-module-smith",
-      "owner": "patstack",
+      "canonicalSource": "library/skills/fleet-ops-router/references/modes/terraform-module-smith/guide.md",
+      "owner": "fleet-ops-router",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Create reusable Terraform modules with explicit inputs, provider constraints, examples, and validation.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -4879,91 +4503,71 @@
       "nearMiss": null
     },
     "thermo-twin-audit": {
-      "canonicalSource": "library/skills/thermo-twin-audit",
-      "owner": "optional-library",
+      "canonicalSource": "skills/diff-inspector/references/modes/thermo-twin-audit/guide.md",
+      "owner": "diff-inspector",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "prd-from-context": {
-      "canonicalSource": "library/skills/prd-from-context",
-      "owner": "optional-library",
+      "canonicalSource": "shared/scope-grill/references/modes/prd-from-context/guide.md",
+      "owner": "scope-grill",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "decision-questionnaire": {
-      "canonicalSource": "library/skills/decision-questionnaire",
-      "owner": "optional-library",
+      "canonicalSource": "shared/scope-grill/references/modes/decision-questionnaire/guide.md",
+      "owner": "scope-grill",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "tracer-ticket-split": {
-      "canonicalSource": "library/skills/tracer-ticket-split",
-      "owner": "optional-library",
+      "canonicalSource": "skills/roadmap-slicer/references/modes/tracer-ticket-split/guide.md",
+      "owner": "roadmap-slicer",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "issue-state-triage": {
-      "canonicalSource": "library/skills/issue-state-triage",
-      "owner": "optional-library",
+      "canonicalSource": "skills/roadmap-slicer/references/modes/issue-state-triage/guide.md",
+      "owner": "roadmap-slicer",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -5039,12 +4643,13 @@
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": "Required for every user-facing prose response and documentation edit. Remove filler while preserving meaning, facts, uncertainty and voice; explain again in plain language when an explanation did not land.",
-      "nearMiss": "Unrelated work without this technology or requested procedure."
+      "positiveTask": "Required for user-facing prose and documentation: remove filler, preserve meaning and restate explanations that did not land.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "use-my-browser": {
       "canonicalSource": "library/skills/use-my-browser",
@@ -5126,19 +4731,15 @@
       "nearMiss": null
     },
     "voice-fingerprint": {
-      "canonicalSource": "library/skills/voice-fingerprint",
-      "owner": "optional-library",
+      "canonicalSource": "shared/voice-ledger/references/modes/voice-fingerprint/guide.md",
+      "owner": "voice-ledger",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -5179,58 +4780,47 @@
       "nearMiss": null
     },
     "wayfinder-map": {
-      "canonicalSource": "library/skills/wayfinder-map",
-      "owner": "optional-library",
+      "canonicalSource": "skills/build-sequencer/references/modes/wayfinder-map/guide.md",
+      "owner": "build-sequencer",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "wcag-a11y-audit": {
-      "canonicalSource": "skills/wcag-a11y-audit",
+      "canonicalSource": "archive/removed-skills-2026-11-09/wcag-a11y-audit/entrypoint.md",
       "owner": "patstack",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Audit or repair web accessibility using keyboard, semantics, contrast, and assistive-technology evidence.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "web-lookup": {
-      "canonicalSource": "library/skills/web-lookup",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/primary-source-notes/references/modes/web-lookup/guide.md",
+      "owner": "primary-source-notes",
       "scope": "optional",
-      "status": "selection-tested",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "current client source retrieval/search tools when required"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/optional-specialists-verification-2026-10-03.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Search current public information using available tools.",
       "nearMiss": "An unrelated task without the named source review or synthesis request."
@@ -5264,19 +4854,15 @@
       "nearMiss": null
     },
     "weekly-commit-recap": {
-      "canonicalSource": "library/skills/weekly-commit-recap",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/commit-recap/references/modes/weekly-commit-recap/guide.md",
+      "owner": "commit-recap",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -5292,158 +4878,126 @@
         "opencode"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": null,
-      "nearMiss": null
+      "positiveTask": "Summarize authored commits for a requested date range as a short status update or weekly review.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "rationale-dig": {
-      "canonicalSource": "library/skills/rationale-dig",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/repo-research-trail/references/modes/rationale-dig/guide.md",
+      "owner": "repo-research-trail",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "setup-wizard-script": {
-      "canonicalSource": "skills/setup-wizard-script",
-      "owner": "patstack",
+      "canonicalSource": "library/skills/fleet-ops-router/references/modes/setup-wizard-script/guide.md",
+      "owner": "fleet-ops-router",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Build an interactive setup script for steps requiring human input; keep secrets hidden and actions reviewable.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "chat-preference-miner": {
-      "canonicalSource": "library/skills/chat-preference-miner",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/friction-miner/references/modes/chat-preference-miner/guide.md",
+      "owner": "friction-miner",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "temporal-flow-design": {
-      "canonicalSource": "library/skills/temporal-flow-design",
-      "owner": "patstack",
+      "canonicalSource": "library/skills/temporal-workflows/references/base-workflow.md",
+      "owner": "temporal-workflows",
       "scope": "optional",
-      "status": "selection-tested",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json",
-        "reports/six-recommendations-verification-2026-10-03.json",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Design Temporal workflows and activities with durable state, deterministic execution, and failure recovery.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "worktree-lanes": {
-      "canonicalSource": "library/skills/worktree-lanes",
-      "owner": "optional-library",
+      "canonicalSource": "skills/git-surgery/references/modes/worktree-lanes/guide.md",
+      "owner": "git-surgery",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "world-fate-ledger": {
-      "canonicalSource": "library/skills/world-fate-ledger",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/world-bible/references/modes/world-fate-ledger/guide.md",
+      "owner": "world-bible",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "world-diagnostics": {
-      "canonicalSource": "library/skills/world-diagnostics",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/world-bible/references/modes/world-diagnostics/guide.md",
+      "owner": "world-bible",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "article-beat-path": {
-      "canonicalSource": "library/skills/article-beat-path",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/writing-workbench/references/modes/article-beat-path/guide.md",
+      "owner": "writing-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -5463,55 +5017,43 @@
       "nearMiss": null
     },
     "fragment-harvest": {
-      "canonicalSource": "library/skills/fragment-harvest",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/writing-workbench/references/modes/fragment-harvest/guide.md",
+      "owner": "writing-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "build-plan-writer": {
-      "canonicalSource": "library/skills/build-plan-writer",
-      "owner": "optional-library",
+      "canonicalSource": "skills/build-sequencer/references/modes/build-plan-writer/guide.md",
+      "owner": "build-sequencer",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
     },
     "article-shaping": {
-      "canonicalSource": "library/skills/article-shaping",
-      "owner": "optional-library",
+      "canonicalSource": "library/skills/writing-workbench/references/base-workflow.md",
+      "owner": "writing-workbench",
       "scope": "optional",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "claude",
-        "codex",
-        "opencode"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/OPERATING-MODEL.md#skill-names"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": null,
       "nearMiss": null
@@ -5555,20 +5097,17 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "pet-hatchery": {
-      "canonicalSource": "skills/pet-hatchery",
-      "owner": "patstack",
+      "canonicalSource": "library/skills/raster-image-gen/references/modes/pet-hatchery/guide.md",
+      "owner": "raster-image-gen",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Create or repair Codex v2 animated pets; validate atlas geometry, directions, transparency, and packaging.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -5585,38 +5124,16 @@
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": "Plan or implement a bounded feature from a spec; map acceptance criteria to changes and executable verification.",
-      "nearMiss": "Unrelated work without this technology or requested procedure."
+      "positiveTask": "Plan or execute a feature, specification, migration or multi-session implementation sequence.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "roadmap-slicer": {
       "canonicalSource": "skills/roadmap-slicer",
-      "owner": "patstack",
-      "scope": "personal",
-      "status": "behavior-tested",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
-      "requiredTools": [
-        "python3",
-        "tea with a login that can write issues"
-      ],
-      "lastReviewed": "2026-11-07",
-      "evidence": [
-        "tests/test_roadmap_slicer.py",
-        "skills/roadmap-slicer/references/gitea.md",
-        "catalog/skill-routes.json"
-      ],
-      "positiveTask": "Turn a finished plan into a Gitea Roadmap tracking issue, optional Epics and dependency-ordered single-PR issues.",
-      "nearMiss": "Write or sequence the plan itself (build-sequencer), resolve open product decisions (scope-grill), or triage incoming issues (issue-state-triage)."
-    },
-    "ui-cliche-audit": {
-      "canonicalSource": "skills/ui-cliche-audit",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -5625,16 +5142,30 @@
         "claude"
       ],
       "requiredTools": [
+        "python3",
+        "tea with a login that can write issues"
+      ],
+      "lastReviewed": "2026-11-09",
+      "evidence": [
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
+      ],
+      "positiveTask": "Create and maintain roadmaps and tracker issues, triage reports, or configure repository contribution workflows.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
+    },
+    "ui-cliche-audit": {
+      "canonicalSource": "archive/removed-skills-2026-11-09/ui-cliche-audit/entrypoint.md",
+      "owner": "patstack",
+      "scope": "personal",
+      "status": "archived",
+      "supportedClients": [],
+      "requiredTools": [
         "Node 18+ for optional scanner; manual audit without Node",
         "current client browser only when permitted and available"
       ],
-      "lastReviewed": "2026-11-04",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json",
-        "catalog/avoid-ai-design-intake-2026-11-04.json",
-        "docs/reviews/2026-11-04-avoid-ai-design.md",
-        "tests/test_ui_design_intake.py",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Audit src/Page.tsx for generic frontend design patterns; scan and report rule IDs and source locations without changing files.",
       "nearMiss": "Keep an approved Inter/purple design system intact; fix a backend API bug without changing frontend visuals."
@@ -5735,20 +5266,17 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "t3-repo-onboard": {
-      "canonicalSource": "skills/t3-repo-onboard",
-      "owner": "patstack",
+      "canonicalSource": "library/skills/fleet-ops-router/references/modes/t3-repo-onboard/guide.md",
+      "owner": "fleet-ops-router",
       "scope": "personal",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Onboard a repository into T3 development environments with isolated previews, local tests, and project actions.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
@@ -5765,13 +5293,13 @@
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "reports/structure.json",
-        "catalog/skill-routes.json"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": "Verify UI, CLI, API, build, or performance claims using runnable evidence; distinguish smoke checks from regressions.",
-      "nearMiss": "Unrelated work without this technology or requested procedure."
+      "positiveTask": "Verify an implementation, assess repository readiness, or create and maintain a project-specific verification workflow.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "studio-preparation": {
       "canonicalSource": "library/skills/studio-preparation",
@@ -5998,26 +5526,24 @@
         "claude"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-10-19",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/reviews/2026-10-19-marketing-skills.md"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": "Create a usable Subsets written voice guide from its approved Personal Utility identity and product README.",
-      "nearMiss": "Fix a CLI parser defect without changing product voice."
+      "positiveTask": "Extract or maintain a personal or product writing-voice guide from real source samples.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "content-recaster": {
-      "canonicalSource": "shared/content-recaster",
-      "owner": "patstack",
+      "canonicalSource": "library/skills/page-copy-forge/references/modes/content-recaster/guide.md",
+      "owner": "page-copy-forge",
       "scope": "shared",
-      "status": "structure-reviewed",
-      "supportedClients": [
-        "codex",
-        "claude"
-      ],
+      "status": "archived",
+      "supportedClients": [],
       "requiredTools": [],
-      "lastReviewed": "2026-10-19",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/reviews/2026-10-19-marketing-skills.md"
+        "catalog/consolidation-2026-11-09.json"
       ],
       "positiveTask": "Adapt the approved Subsets product brief into social, newsletter, community, and demo formats, preserving claim IDs.",
       "nearMiss": "Invent an acquisition campaign with no source product facts or source asset."
@@ -6032,12 +5558,13 @@
         "claude"
       ],
       "requiredTools": [],
-      "lastReviewed": "2026-10-19",
+      "lastReviewed": "2026-11-09",
       "evidence": [
-        "docs/reviews/2026-10-19-marketing-skills.md"
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
       ],
-      "positiveTask": "Create docs/marketing for Subsets with claims, copy, a demo, and a measured 30-day plan.",
-      "nearMiss": "Install Node dependencies or inspect a CLI error without requesting marketing work."
+      "positiveTask": "Prepare a product marketing packet or a requested product, feature or beta launch plan.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "skill-stack-router": {
       "canonicalSource": "shared/skill-stack-router",
@@ -6061,6 +5588,162 @@
       ],
       "positiveTask": "Resolve a React Native specialist and its verification companion while keeping the core selection unchanged.",
       "nearMiss": "Load every library skill, auto-switch profiles, run an explicit-only workflow without a request, or grant a missing tool."
+    },
+    "browser-workbench": {
+      "canonicalSource": "skills/browser-workbench",
+      "owner": "patstack",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-11-09",
+      "evidence": [
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
+      ],
+      "positiveTask": "Operate a permitted browser or isolated desktop, or capture a requested host screenshot using the current client tools.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
+    },
+    "postgres-workbench": {
+      "canonicalSource": "skills/postgres-workbench",
+      "owner": "patstack",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-11-09",
+      "evidence": [
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
+      ],
+      "positiveTask": "Diagnose PostgreSQL queries, locks and indexes, or plan and apply requested schema migrations and backfills.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
+    },
+    "temporal-workflows": {
+      "canonicalSource": "library/skills/temporal-workflows",
+      "owner": "patstack",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [
+        "task-specific project tools; see source procedure"
+      ],
+      "lastReviewed": "2026-11-09",
+      "evidence": [
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
+      ],
+      "positiveTask": "Design durable Temporal workflows and verify Python replay, timers, activities and determinism.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
+    },
+    "ralph-workflow": {
+      "canonicalSource": "library/skills/ralph-workflow",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [],
+      "lastReviewed": "2026-11-09",
+      "evidence": [
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
+      ],
+      "positiveTask": "Explain, start or stop a Ralph iteration loop when explicitly requested and supported by the current client.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
+    },
+    "super-productivity-workflow": {
+      "canonicalSource": "library/skills/super-productivity-workflow",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [],
+      "lastReviewed": "2026-11-09",
+      "evidence": [
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
+      ],
+      "positiveTask": "Plan tasks and routines or diagnose the Super Productivity MCP and plugin bridge.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
+    },
+    "writing-workbench": {
+      "canonicalSource": "library/skills/writing-workbench",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [],
+      "lastReviewed": "2026-11-09",
+      "evidence": [
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
+      ],
+      "positiveTask": "Develop or revise nonfiction, technical documentation, summaries or spoken adaptations from the supplied material.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
+    },
+    "story-workbench": {
+      "canonicalSource": "library/skills/story-workbench",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [],
+      "lastReviewed": "2026-11-09",
+      "evidence": [
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
+      ],
+      "positiveTask": "Develop a story through diagnosis, coaching, premises or requested prose and chapter drafting.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
+    },
+    "fiction-editor": {
+      "canonicalSource": "library/skills/fiction-editor",
+      "owner": "optional-library",
+      "scope": "optional",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
+      "requiredTools": [],
+      "lastReviewed": "2026-11-09",
+      "evidence": [
+        "catalog/consolidation-2026-11-09.json",
+        "docs/SKILL-CONSOLIDATION.md"
+      ],
+      "positiveTask": "Edit fiction for character, dialogue, prose, representation, humor or predictable story elements.",
+      "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     }
   }
 }

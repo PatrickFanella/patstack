@@ -1,5 +1,4 @@
 ---
-name: wcag-a11y-audit
 description: "WCAG 2.2 audit: check a site or component for accessibility violations with automated scans, manual and screen-reader checks, and remediation steps."
 metadata:
   blacktower-pack: engineering

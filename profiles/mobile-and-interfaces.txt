@@ -1,18 +1,13 @@
 # Build and test mobile, terminal, editor, browser and interactive interfaces.
 auth-gatekeeper
 behavior-proof
-brutal-hud-kit
+browser-workbench
 opentui-screens
-playwright-cli-driver
 react-render-tuner
-ref-snapshot-browser
 rn-expo-builder
-sandbox-desktop
 ts-type-design
 tv-candle-charts
-ui-cliche-audit
 ui-craft
 userscript-workshop
 vscode-extension-lab
-wcag-a11y-audit
 web-game-loop

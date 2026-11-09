@@ -1,6 +1,7 @@
 ---
 name: repo-research-trail
-description: "Repository research: investigate how something works across this codebase and return cited findings, key files and open questions, without editing. Not for a whole-repository map (repo-atlas) or web research (web-lookup)."
+description: Investigate a codebase, explain a flow or design decision, or inspect
+  a lockfile-pinned dependency implementation.
 metadata:
   blacktower-pack: engineering
   blacktower-kind: workflow
@@ -11,56 +12,13 @@ metadata:
 allowed-tools: Read Grep Glob
 ---
 
-# Deep Research (Explore)
+# repo-research-trail
 
-Research the question in the user's request thoroughly.
+Return cited source findings without editing. Explain what the code does separately from evidence of why it was chosen. Dependency research must use the pinned version.
 
-## Required output
+Select the matching procedure below and load only that procedure and its needed resources. Each procedure retains its own client, tool and invocation limits. Internal handoffs use the matching procedure below rather than reloading this entrypoint. A reference does not authorize delegation, publication, deployment or an unrelated mutation.
 
-1. **Findings**: 3-10 bullets, each backed by specific file references
-2. **Key code locations**: a short list of the most important paths to read next
-3. **Open questions / unknowns**: what you could not confirm from the repo
-
-## Method
-
-Glob, Grep and Read are Claude Code tool names. In Codex or OpenCode, use `rg --files`, `rg` and ordinary file reads for the same steps.
-
-
-- Start broad: use Glob to find likely modules.
-- Then go deep: use Grep to locate exact identifiers and call sites.
-- Read the top-ranked files and follow references until the flow is clear.
-- Stop when you hit diminishing returns (two additional searches yield no new information).
-
-## Depth guidelines
-
-- **Quick scan** (< 5 files): Answer a specific question about one module or function.
-- **Standard research** (5-15 files): Trace a flow across modules, map dependencies.
-- **Deep audit** (15+ files): Full cross-module investigation, pattern analysis, consistency check.
-
-Default to standard depth. Escalate to deep audit when the user says "thorough", "audit", or "comprehensive".
-
-## Rules
-
-- Be evidence-driven: always cite file paths.
-- Do not implement changes; this skill is for investigation only.
-- Prefer Grep with specific patterns over broad Glob sweeps.
-- When tracing a call chain, follow imports and function references, not just text matches.
-- If the repo has tests, check them too — tests often reveal intended behavior better than implementation.
-
-## Resources
-
-Load these only when the active task needs the extra detail; keep `SKILL.md` as the activation workflow.
-
-### Curated references
-
-Former merged-skill dumps were distilled into these lookup files:
-
-- `references/curated/research.md` — Research guidance.
-- `references/curated/research-workflow.md` — Research Workflow guidance.
-
-
-### Extracted resource directories
-
-- `references/` — curated resources extracted from prior merged skill material.
-- `scripts/` — curated resources extracted from prior merged skill material.
-- `assets/` — curated resources extracted from prior merged skill material.
+- **repo research trail**: Repository research: investigate how something works across this codebase and return cited findings, key files and open questions, without editing. Read [the procedure](references/base-workflow.md).
+- **code walkthrough**: Code walkthrough: explain how a subsystem or flow works, or where code should live, before changing it; optional architecture critique. Read [the procedure](references/modes/code-walkthrough/guide.md).
+- **rationale dig**: Why questions: design rationale, 'why we picked Y', regressions, postmortems or data-backed thresholds, answered with cited evidence from git, trackers, docs and chat. Read [the procedure](references/modes/rationale-dig/guide.md).
+- **dep source clone**: Use when a question needs a dependency's real source at the lockfile-pinned version: SDK internals, framework behavior, library bugs. Read [the procedure](references/modes/dep-source-clone/guide.md).

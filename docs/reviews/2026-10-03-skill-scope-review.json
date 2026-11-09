@@ -791,8 +791,8 @@
       }
     },
     {
-      "name": "ralph-loop",
-      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/ralph-loop/SKILL.md",
+      "name": "ralph-workflow",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/ralph-workflow/SKILL.md",
       "sha256": "3583d0868329b2b1a0f081cd7d0d1ef51cf5a12696e407edbc6b8cdca41f8a09",
       "decision": "client-specific",
       "proposed_home": "Installed Ralph runtime",
@@ -807,7 +807,7 @@
     },
     {
       "name": "ralph-loop-help",
-      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/ralph-loop-help/SKILL.md",
+      "source": "/home/onnwee/Work/Tools/codex-skills/library/skills/ralph-workflow-help/SKILL.md",
       "sha256": "a33a6719a95002f2c2bebf1f63a965954ee166130da17fdf514d719bb394ac65",
       "decision": "client-specific",
       "proposed_home": "Installed Ralph runtime",
