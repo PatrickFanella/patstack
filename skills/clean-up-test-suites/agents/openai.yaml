@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repository & Test Maintenance"
+  short_description: "Prune dead code and keep crucial test coverage"
+  default_prompt: "Use $clean-up-test-suites to update this checkout, remove obsolete artifacts and unused code, and simplify the test suite while preserving crucial behavior and maintainable gates."

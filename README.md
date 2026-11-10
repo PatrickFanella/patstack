@@ -14,7 +14,7 @@ on every commit and every 8 hours; open PRs on Gitea, not on GitHub.
 
 Subsets manages the user-level skill selection and generated views across
 Agents, Codex, Claude, Copilot, Cursor and OpenCode. Patstack owns 104 selectable
-skill sources, a 37-skill everyday core, and 11 overlapping task sets. App,
+skill sources, a 26-skill everyday core, and 11 overlapping task sets. App,
 package, repository and vault skills retain their local owners.
 
 Start with [the task-stack guide](docs/SKILL-GROUPS.md) and
@@ -61,7 +61,7 @@ Gitea runs source validation and the disposable installer/selection tests on PRs
 
 Edit authored sources here; never maintain installed copies as the source of truth. Keep task descriptions concise and put substantial procedures in conditionally loaded references. Preserve plan-only, read-only review, explicit strict review, explicit TypeScript boundary setup, and separate publishing/deployment scope. New capabilities need a concrete trigger, resource links, and an acceptance fixture. General principles belong in relevant conditional references, not new globally discovered entrypoints.
 
-`build_collection.py` is the historical one-time import recipe, not an update command: rerunning it is unsupported after curation. Update the catalog and capability map explicitly when changing ownership. Preserve provenance and licenses when moving resources. The frontend CSV dataset is pinned to MIT-licensed upstream revision `363cd8911f210ec640704101ee820e6e64a63c3b`; its per-file hashes and notices are in `skills/ui-craft/scripts/data/provenance.json` and `notices/`.
+`build_collection.py` is the historical one-time import recipe, not an update command: rerunning it is unsupported after curation. Update the catalog and capability map explicitly when changing ownership. Preserve provenance and licenses when moving resources. The frontend CSV dataset is pinned to MIT-licensed upstream revision `363cd8911f210ec640704101ee820e6e64a63c3b`; its per-file hashes and notices are in `skills/style-web-ui/scripts/data/provenance.json` and `notices/`.
 
 Before each release, run validation and focused helper tests, then bounded behavior fixtures. Permit at most one repair-and-retest round per failed behavioral case. Capture fresh `skills/list` in Blacktower and an unrelated repository with `scripts/discovery.py`. Confirm shared owners appear once, retired names are absent, and the Blacktower skill stays local. Source character budgets and runtime metadata measurements are distinct from model token billing; report unavailable token usage explicitly.
 
@@ -83,7 +83,7 @@ System and plugin directories retain their owners. Existing installer-managed ro
 
 ## Subsets task stacks
 
-`core` is the complete everyday default, with 42 skills. Additional stacks mix
+`core` is the complete everyday default, with 26 skills. Additional stacks mix
 planning, implementation, verification, research and communication around a task.
 They overlap deliberately and can be combined. There is no hidden, separately
 installed personal base.

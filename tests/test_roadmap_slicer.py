@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / "skills/roadmap-slicer"
+SKILL = ROOT / "skills/manage-roadmaps-and-issues"
 spec = importlib.util.spec_from_file_location("roadmap", SKILL / "scripts/roadmap.py")
 roadmap = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(roadmap)

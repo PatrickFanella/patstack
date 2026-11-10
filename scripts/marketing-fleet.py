@@ -14,7 +14,7 @@ import sys
 from urllib.parse import quote, unquote
 
 ROOT = Path(__file__).resolve().parents[1]
-NAMES = ('voice-ledger', 'content-recaster', 'launch-dossier')
+NAMES = ('build-writing-voice-guide', 'prepare-product-launch')
 
 
 def receive(command, payload, home=None):

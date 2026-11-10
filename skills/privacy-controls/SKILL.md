@@ -19,3 +19,5 @@ Implement GDPR-compliant data handling with consent management, data subject rig
 ## Resources
 
 - `references/detailed-guide.md` — detailed framework and edge cases; load only the sections needed for the task.
+
+Load [companion procedures](references/skill-routes.md) only when their stated condition applies.

@@ -1,6 +1,6 @@
 [
   {
-    "name": "api-contract-smith",
+    "name": "build-apis",
     "description": "'API contracts and backend protocols: REST/GraphQL, OpenAPI, Node services, and WebSocket lifecycle design.'",
     "scope": "personal",
     "sources": [
@@ -11,7 +11,7 @@
     ]
   },
   {
-    "name": "boundary-drafter",
+    "name": "design-architecture",
     "description": "Design or critique architecture and module boundaries, compare interface alternatives, or plan deeper modules.",
     "scope": "personal",
     "sources": [
@@ -23,7 +23,7 @@
     ]
   },
   {
-    "name": "auth-gatekeeper",
+    "name": "build-and-fix-auth",
     "description": "'Implement or debug authentication and authorization: sessions, OAuth, tokens, roles, and access checks.'",
     "scope": "personal",
     "sources": [
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "name": "ci-medic",
+    "name": "build-and-fix-ci",
     "description": "CI failures, pipelines, pre-commit hooks, and code scanning; distinguish local checks from hosted run results.",
     "scope": "personal",
     "sources": [
@@ -53,7 +53,7 @@
     ]
   },
   {
-    "name": "cli-contract-smith",
+    "name": "build-cli-tools",
     "description": "'CLI design and implementation: flags, subcommands, completions, interactive fallback, and automation contracts.'",
     "scope": "personal",
     "sources": [
@@ -62,7 +62,7 @@
     ]
   },
   {
-    "name": "diff-inspector",
+    "name": "review-code-changes",
     "description": "Review a working-tree, branch, commit or PR diff for defects, downstream impact or a requested review walkthrough.",
     "scope": "personal",
     "sources": [
@@ -74,7 +74,7 @@
     ]
   },
   {
-    "name": "repo-atlas",
+    "name": "map-codebase",
     "description": "Orient in a repository or create and incrementally refresh its codemaps when requested.",
     "scope": "personal",
     "sources": [
@@ -82,7 +82,7 @@
     ]
   },
   {
-    "name": "dep-upgrade-pilot",
+    "name": "upgrade-major-versions",
     "description": "Upgrade dependencies with lockfile evidence, breaking-change analysis, proportional testing, and rollback.",
     "scope": "personal",
     "sources": [
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "name": "userscript-workshop",
+    "name": "build-userscripts",
     "description": "'Userscript implementation and debugging: page lifecycle, browser permissions, injection, and update behavior.'",
     "scope": "optional",
     "sources": [
@@ -106,7 +106,7 @@
     ]
   },
   {
-    "name": "ui-craft",
+    "name": "style-web-ui",
     "description": "Implement or refine web interface visuals, responsive layouts, and interaction states within the product design.",
     "scope": "personal",
     "sources": [
@@ -122,7 +122,7 @@
     ]
   },
   {
-    "name": "git-surgery",
+    "name": "manage-git-and-prs",
     "description": "Manage Git history and worktrees or prepare and ship a focused branch through its authorized PR workflow.",
     "scope": "personal",
     "sources": [
@@ -134,7 +134,7 @@
     ]
   },
   {
-    "name": "go-craft",
+    "name": "golang",
     "description": "Go concurrency, interfaces, errors, profiling, and tests; use relevant patterns for the existing application.",
     "scope": "personal",
     "sources": [
@@ -142,19 +142,19 @@
     ]
   },
   {
-    "name": "build-sequencer",
+    "name": "plan-and-implement-changes",
     "description": "Plan or execute a feature, specification, migration or multi-session implementation sequence.",
     "scope": "personal",
     "sources": []
   },
   {
-    "name": "roadmap-slicer",
+    "name": "manage-roadmaps-and-issues",
     "description": "Create and maintain roadmaps and tracker issues, triage reports, or configure repository contribution workflows.",
     "scope": "personal",
     "sources": []
   },
   {
-    "name": "tv-candle-charts",
+    "name": "tradingview-lightweight-charts",
     "description": "'TradingView Lightweight Charts implementation: series, time scales, live updates, plugins, and framework integration.'",
     "scope": "optional",
     "sources": [
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "name": "eval-bench",
+    "name": "evaluate-llm-behavior",
     "description": "Evaluate LLM behavior with representative datasets, baselines, task metrics, and reproducible results.",
     "scope": "personal",
     "sources": [
@@ -170,7 +170,7 @@
     ]
   },
   {
-    "name": "mcp-server-forge",
+    "name": "build-mcp-servers",
     "description": "Build MCP servers with explicit tool contracts, transports, errors, and executable interoperability checks.",
     "scope": "personal",
     "sources": [
@@ -178,7 +178,7 @@
     ]
   },
   {
-    "name": "mcp-wire-tracer",
+    "name": "fix-mcp-connections",
     "description": "Diagnose MCP registration, transport, initialization, catalog, auth, and reload boundaries in the active client.",
     "scope": "personal",
     "sources": [
@@ -186,7 +186,7 @@
     ]
   },
   {
-    "name": "telemetry-signal-forge",
+    "name": "build-and-fix-observability",
     "description": "Metrics, traces, dashboards, and SLOs; implement telemetry or diagnose a specific monitoring gap.",
     "scope": "personal",
     "sources": [
@@ -205,7 +205,7 @@
     ]
   },
   {
-    "name": "opentui-screens",
+    "name": "build-opentui-apps",
     "description": "Build OpenTUI terminal interfaces with the correct renderer lifecycle, input handling, and framework bindings.",
     "scope": "optional",
     "sources": [
@@ -213,7 +213,7 @@
     ]
   },
   {
-    "name": "perf-hotpath-probe",
+    "name": "improve-performance",
     "description": "Diagnose measured latency, CPU, memory, or throughput regressions using comparable profiles and benchmarks.",
     "scope": "personal",
     "sources": [
@@ -229,7 +229,7 @@
     ]
   },
   {
-    "name": "python-uv-workbench",
+    "name": "python-projects",
     "description": "Python tooling, packaging, settings, uv environments, and pytest; select the procedure for the requested change.",
     "scope": "personal",
     "sources": [
@@ -241,7 +241,7 @@
     ]
   },
   {
-    "name": "retrieval-pipeline",
+    "name": "build-rag-pipelines",
     "description": "'Retrieval systems: ingestion, vector/keyword search, ranking, citations, and retrieval-quality measurement.'",
     "scope": "personal",
     "sources": [
@@ -250,7 +250,7 @@
     ]
   },
   {
-    "name": "rn-expo-builder",
+    "name": "react-native-expo",
     "description": "'React Native/Expo implementation: navigation, native integration, offline behavior, lists, and mobile performance.'",
     "scope": "optional",
     "sources": [
@@ -258,7 +258,7 @@
     ]
   },
   {
-    "name": "react-render-tuner",
+    "name": "react-and-nextjs",
     "description": "React/Next.js state, rendering, data loading, component APIs, and performance within the existing application.",
     "scope": "personal",
     "sources": [
@@ -266,7 +266,7 @@
     ]
   },
   {
-    "name": "safe-refactor-pass",
+    "name": "refactor-code",
     "description": "Refactor without changing behavior or perform a requested mechanical change across many files.",
     "scope": "personal",
     "sources": [
@@ -277,7 +277,7 @@
     ]
   },
   {
-    "name": "test-suite-pruner",
+    "name": "clean-up-test-suites",
     "description": "Maintain an oversized or brittle repository test suite while preserving crucial behavior and removing obsolete work.",
     "scope": "personal",
     "sources": [
@@ -285,7 +285,7 @@
     ]
   },
   {
-    "name": "binary-dissector",
+    "name": "reverse-engineer-binaries-protocols",
     "description": "Analyze executable binaries or network protocols; select disassembly or packet-analysis procedures as needed.",
     "scope": "optional",
     "sources": [
@@ -294,7 +294,7 @@
     ]
   },
   {
-    "name": "rust-ownership-async",
+    "name": "rust",
     "description": "Rust ownership, async execution, errors, concurrency, and systems integration within the existing crate design.",
     "scope": "personal",
     "sources": [
@@ -302,15 +302,15 @@
     ]
   },
   {
-    "name": "secret-rotation-flow",
-    "description": "Implement CI/runtime secret storage, delivery, and rotation using the environment’s existing secret provider.",
+    "name": "manage-deployment-secrets",
+    "description": "Implement CI/runtime secret storage, delivery, and rotation using the environment\u2019s existing secret provider.",
     "scope": "personal",
     "sources": [
       "secrets-management"
     ]
   },
   {
-    "name": "secure-code-audit",
+    "name": "secure-web-code",
     "description": "Requested security review or secure coding guidance for Python, JavaScript/TypeScript, and Go.",
     "scope": "personal",
     "sources": [
@@ -318,7 +318,7 @@
     ]
   },
   {
-    "name": "bus-factor-map",
+    "name": "analyze-code-ownership",
     "description": "Requested security ownership and bus-factor analysis from Git history; identify sensitive-code ownership gaps.",
     "scope": "personal",
     "sources": [
@@ -326,7 +326,7 @@
     ]
   },
   {
-    "name": "stride-threat-map",
+    "name": "threat-modeling",
     "description": "'Requested repository threat model: assets, trust boundaries, attacker paths, and prioritized mitigations.'",
     "scope": "personal",
     "sources": [
@@ -334,7 +334,7 @@
     ]
   },
   {
-    "name": "bash-script-craft",
+    "name": "bash-scripts",
     "description": "Shell scripting, ShellCheck linting, and Bats tests; preserve exit status, quoting, cleanup, and portability.",
     "scope": "personal",
     "sources": [
@@ -344,7 +344,7 @@
     ]
   },
   {
-    "name": "stripe-billing-guard",
+    "name": "manage-stripe-account",
     "description": "Perform Stripe billing operations such as invoice drafts, refunds and subscription changes. Check account and test/live mode, prevent duplicates, reuse existing authorization, and verify provider receipts.",
     "scope": "personal",
     "sources": [
@@ -352,7 +352,7 @@
     ]
   },
   {
-    "name": "bug-tracer",
+    "name": "fix-bugs",
     "description": "Reproduce and diagnose a defect; choose a tight failing check, isolate the cause, and verify the repair.",
     "scope": "personal",
     "sources": [
@@ -362,7 +362,7 @@
     ]
   },
   {
-    "name": "red-green-loop",
+    "name": "test-driven-development",
     "description": "'Test-first implementation when requested: red-green-refactor, test boundaries, fixtures, and meaningful assertions.'",
     "scope": "personal",
     "sources": [
@@ -370,7 +370,7 @@
     ]
   },
   {
-    "name": "ts-type-design",
+    "name": "typescript",
     "description": "TypeScript type design, compiler configuration, and migrations; load framework guidance only for framework-specific work.",
     "scope": "personal",
     "sources": [
@@ -381,7 +381,7 @@
     ]
   },
   {
-    "name": "prose-unslop",
+    "name": "write-plainly",
     "description": "Required for user-facing prose and documentation: remove filler, preserve meaning and restate explanations that did not land.",
     "scope": "personal",
     "sources": [
@@ -389,7 +389,7 @@
     ]
   },
   {
-    "name": "behavior-proof",
+    "name": "verify-implementation",
     "description": "Verify an implementation, assess repository readiness, or create and maintain a project-specific verification workflow.",
     "scope": "personal",
     "sources": [
@@ -401,7 +401,7 @@
     ]
   },
   {
-    "name": "vscode-extension-lab",
+    "name": "build-vscode-extensions",
     "description": "VS Code extension commands, menus, contribution visibility, and localized user-facing strings.",
     "scope": "optional",
     "sources": [
@@ -409,7 +409,7 @@
     ]
   },
   {
-    "name": "fleet-ops-router",
+    "name": "manage-infrastructure",
     "scope": "optional",
     "description": "Operate homelab services or use the matching infrastructure, repository-administration or host-runtime runbook.",
     "sources": [
@@ -419,7 +419,7 @@
     ]
   },
   {
-    "name": "voice-ledger",
+    "name": "build-writing-voice-guide",
     "description": "Extract or maintain a personal or product writing-voice guide from real source samples.",
     "scope": "shared",
     "sources": [
@@ -427,7 +427,7 @@
     ]
   },
   {
-    "name": "launch-dossier",
+    "name": "prepare-product-launch",
     "description": "Prepare a product marketing packet or a requested product, feature or beta launch plan.",
     "scope": "shared",
     "sources": [
@@ -437,13 +437,13 @@
     ]
   },
   {
-    "name": "skill-stack-router",
+    "name": "find-and-load-skills",
     "description": "Route default and optional companion skills through the managed library without switching the active Subsets selection.",
     "scope": "shared",
     "sources": []
   },
   {
-    "name": "relay-baton",
+    "name": "handoff-and-recall-work",
     "description": "Recall recent work or record a handoff before a context reset, session continuation or explicitly requested background handoff.",
     "scope": "shared",
     "sources": [
@@ -452,7 +452,7 @@
     ]
   },
   {
-    "name": "scope-grill",
+    "name": "define-requirements",
     "description": "Resolve requirements and produce a requested PRD, recurring-workflow specification or decision questionnaire.",
     "scope": "shared",
     "sources": [
@@ -461,13 +461,13 @@
     ]
   },
   {
-    "name": "studio-brand-system",
+    "name": "create-subcult-branding",
     "description": "Compare visual directions, write brand guides and tokens, produce asset packs, or launch a SUBCULT product's brand, marketing and small site.",
     "scope": "personal",
     "sources": []
   },
   {
-    "name": "repo-research-trail",
+    "name": "investigate-code",
     "description": "Investigate a codebase, explain a flow or design decision, or inspect a lockfile-pinned dependency implementation.",
     "scope": "optional",
     "sources": [
@@ -478,7 +478,7 @@
     ]
   },
   {
-    "name": "commit-recap",
+    "name": "summarize-commits",
     "description": "Summarize authored commits for a requested date range as a short status update or weekly review.",
     "scope": "optional",
     "sources": [
@@ -487,7 +487,7 @@
     ]
   },
   {
-    "name": "browser-workbench",
+    "name": "control-browser-and-desktop",
     "description": "Operate a permitted browser or isolated desktop, or capture a requested host screenshot using the current client tools.",
     "scope": "personal",
     "sources": [
@@ -498,7 +498,7 @@
     ]
   },
   {
-    "name": "postgres-workbench",
+    "name": "postgres",
     "description": "Diagnose PostgreSQL queries, locks and indexes, or plan and apply requested schema migrations and backfills.",
     "scope": "personal",
     "sources": [
@@ -516,7 +516,7 @@
     ]
   },
   {
-    "name": "agent-fanout-plan",
+    "name": "coordinate-parallel-agents",
     "description": "Coordinate authorized parallel agent work, candidate comparisons or a supported multi-phase agent workflow.",
     "scope": "optional",
     "sources": [
@@ -527,7 +527,7 @@
     ]
   },
   {
-    "name": "opencode-config-tuner",
+    "name": "configure-opencode",
     "description": "Configure OpenCode agents, skills, plugins, MCP, permissions or its supported scheduler.",
     "scope": "optional",
     "sources": [
@@ -536,7 +536,7 @@
     ]
   },
   {
-    "name": "skill-forge",
+    "name": "manage-skills-and-plugins",
     "description": "Create or evaluate agent skills, install an explicitly requested unmanaged skill, or scaffold a Codex or Cursor plugin.",
     "scope": "optional",
     "sources": [
@@ -557,7 +557,7 @@
     ]
   },
   {
-    "name": "friction-miner",
+    "name": "improve-workflow-from-sessions",
     "description": "Review recent sessions for durable working preferences and repeated friction, then propose or author the requested workflow improvement.",
     "scope": "optional",
     "sources": [
@@ -567,7 +567,7 @@
     ]
   },
   {
-    "name": "super-productivity-workflow",
+    "name": "manage-super-productivity",
     "description": "Plan tasks and routines or diagnose the Super Productivity MCP and plugin bridge.",
     "scope": "optional",
     "sources": [
@@ -577,7 +577,7 @@
     ]
   },
   {
-    "name": "primary-source-notes",
+    "name": "research-with-sources",
     "description": "Research a question through quick web lookup, cited primary-source investigation, official OpenAI docs or a supplied ebook collection.",
     "scope": "optional",
     "sources": [
@@ -588,7 +588,7 @@
     ]
   },
   {
-    "name": "claim-verifier",
+    "name": "verify-claims",
     "description": "Check claims in generated text or a public narrative against cited sources as a separate verification pass.",
     "scope": "optional",
     "sources": [
@@ -597,7 +597,7 @@
     ]
   },
   {
-    "name": "writing-workbench",
+    "name": "write-and-revise-nonfiction",
     "description": "Develop or revise nonfiction, technical documentation, summaries or spoken adaptations from the supplied material.",
     "scope": "optional",
     "sources": [
@@ -613,7 +613,7 @@
     ]
   },
   {
-    "name": "page-copy-forge",
+    "name": "write-and-adapt-copy",
     "description": "Write or adapt requested marketing pages, social posts, email sequences, internal updates, book blurbs or comparison copy.",
     "scope": "optional",
     "sources": [
@@ -627,7 +627,7 @@
     ]
   },
   {
-    "name": "market-position-map",
+    "name": "research-market-positioning",
     "description": "Research customers and competitors and develop evidence-backed product positioning.",
     "scope": "optional",
     "sources": [
@@ -637,7 +637,7 @@
     ]
   },
   {
-    "name": "landing-page-cro",
+    "name": "improve-conversion-rates",
     "description": "Analyze a marketing page or plan a conversion experiment and its behavioral hypothesis.",
     "scope": "optional",
     "sources": [
@@ -647,7 +647,7 @@
     ]
   },
   {
-    "name": "pptx-forge",
+    "name": "slide-decks",
     "description": "Design, create, revise or inspect a presentation, including PowerPoint files and slide narrative.",
     "scope": "optional",
     "sources": [
@@ -656,7 +656,7 @@
     ]
   },
   {
-    "name": "raster-image-gen",
+    "name": "generate-and-edit-images",
     "description": "Generate or edit raster images, prepare marketing graphics or package an explicitly requested animated pet.",
     "scope": "optional",
     "sources": [
@@ -666,7 +666,7 @@
     ]
   },
   {
-    "name": "story-workbench",
+    "name": "develop-and-draft-fiction",
     "description": "Develop a story through diagnosis, coaching, premises or requested prose and chapter drafting.",
     "scope": "optional",
     "sources": [
@@ -680,7 +680,7 @@
     ]
   },
   {
-    "name": "fiction-editor",
+    "name": "edit-fiction",
     "description": "Edit fiction for character, dialogue, prose, representation, humor or predictable story elements.",
     "scope": "optional",
     "sources": [
@@ -694,7 +694,7 @@
     ]
   },
   {
-    "name": "story-dna-extractor",
+    "name": "analyze-and-adapt-stories",
     "description": "Analyze a source story's functional structure or adapt that structure into a requested new context.",
     "scope": "optional",
     "sources": [
@@ -704,7 +704,7 @@
     ]
   },
   {
-    "name": "world-bible",
+    "name": "fictional-worldbuilding",
     "description": "Maintain or diagnose a fictional world, its canon and persistent world-state, or generate requested creative randomization resources.",
     "scope": "optional",
     "sources": [
@@ -715,7 +715,7 @@
     ]
   },
   {
-    "name": "conlang-forge",
+    "name": "design-fictional-languages",
     "description": "Design fictional naming languages, full conlangs, language families, dialects or historical sound changes.",
     "scope": "optional",
     "sources": [
@@ -724,7 +724,7 @@
     ]
   },
   {
-    "name": "rpg-game-master",
+    "name": "run-rpg-sessions",
     "description": "Run a requested tabletop or solo narrative RPG session or adjust its narration and table tone.",
     "scope": "optional",
     "sources": [
@@ -733,7 +733,7 @@
     ]
   },
   {
-    "name": "lesson-workspace",
+    "name": "plan-and-teach-lessons",
     "description": "Plan or teach a course, tutor a concept, scaffold requested exercises or review learning progress.",
     "scope": "optional",
     "sources": [

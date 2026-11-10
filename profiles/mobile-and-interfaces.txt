@@ -1,13 +1,14 @@
 # Build and test mobile, terminal, editor, browser and interactive interfaces.
-auth-gatekeeper
-behavior-proof
-browser-workbench
-opentui-screens
-react-render-tuner
-rn-expo-builder
-ts-type-design
-tv-candle-charts
-ui-craft
-userscript-workshop
-vscode-extension-lab
-web-game-loop
+build-and-fix-auth
+build-opentui-apps
+build-userscripts
+build-vscode-extensions
+build-web-games
+control-browser-and-desktop
+improve-game-design
+react-and-nextjs
+react-native-expo
+style-web-ui
+tradingview-lightweight-charts
+typescript
+verify-implementation

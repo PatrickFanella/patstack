@@ -101,7 +101,8 @@ The local Claude launcher retains mise selection; see its source script.
 
 ## Skill names
 
-Use distinct names such as `bug-tracer`, `prose-unslop` and `behavior-proof`.
+Name a skill for what it does, in plain words: `fix-bugs`, `write-plainly`,
+`verify-implementation`. Avoid metaphors and coined names.
 `catalog/retired-names.json` records earlier names, canonical owners and
 procedures. Do not regenerate the historical collection builder over curated
 sources or add discovery aliases for retired names. Project/vault skill names
@@ -109,7 +110,7 @@ retain their deployer ownership until those deployers can retire old paths.
 
 ## Public edition
 
-`catalog/public-edition.json` lists the 42 skills exported to the
+`catalog/public-edition.json` lists the 41 skills exported to the
 `generic-skills` repository and the `@subcult/patstack` npm package, which
 Subsets offers as its default optional pack. `generic-skills` has been private
 on Gitea since 2026-11-03; its older public GitHub copy is retained but no
@@ -216,7 +217,7 @@ Keep infrastructure history and operating notes in Machinum. Keep executable con
 
 ## Required prose policy across hosts
 
-The canonical Agent Documentation Policy in Machinum requires `prose-unslop` for every prose response and documentation edit, regardless of the selected task stack. It includes direct file paths so the requirement also works when a client does not automatically select the skill. Load once per session. `prose-unslop` is in the core profile, so every host receives it through its Subsets deployment. The older `~/.codex/skill-installations/required-unslop.json` receipts on Almaz, Dozor and NUC record the pre-Subsets copies and are historical.
+The canonical Agent Documentation Policy in Machinum requires `write-plainly` for every prose response and documentation edit, regardless of the selected task stack. It includes direct file paths so the requirement also works when a client does not automatically select the skill. Load once per session. `write-plainly` is in the core profile, so every host receives it through its Subsets deployment. The older `~/.codex/skill-installations/required-unslop.json` receipts on Almaz, Dozor and NUC record the pre-Subsets copies and are historical.
 
 ## Updating a user skill
 
@@ -243,7 +244,7 @@ The personal vault retains eight skills. SUBCULT has its planning skill and
 Patreon manager; Machinum and Archivum each have one focused skill. The old
 personal OpenCode Patreon entrypoint remains compatible but routes to Studio.
 Copied instructions inside Archivum reference collections are not deployment
-targets. Test new skills with the skill-forge validator and check routing
+targets. Test new skills with the manage-skills-and-plugins validator and check routing
 against the positive and near-miss cases in `vault-agents/acceptance.md`.
 
 ## Tadooer assistant integration

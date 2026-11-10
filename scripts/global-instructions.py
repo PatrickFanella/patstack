@@ -71,8 +71,8 @@ def render(host, client, revision, source=ROOT / 'instructions'):
     host_lines.append('Skill, profile and global-instruction changes are authored in patstack (`' + authoring +
                       '`' + where + '); read its AGENTS.md and `docs/OPERATING-MODEL.md`. '
                       'Installed skills and this file are deployment targets.')
-    host_lines.append('Load the `prose-unslop` skill once per session and apply it to user-facing prose and documentation edits.')
-    host_lines.append('For a requested `grill-me` or `grill-with-docs`, use the matching mode of `scope-grill`.')
+    host_lines.append('Load the `write-plainly` skill once per session and apply it to user-facing prose and documentation edits.')
+    host_lines.append('For a requested `grill-me` or `grill-with-docs`, use the matching mode of `define-requirements`.')
     if client == 'claude':
         host_lines.append('Many fleet skills were written for Codex. When a skill needs a tool Claude Code lacks, '
                           'say so and use a supported equivalent; reading a skill does not install its tools.')

@@ -1,6 +1,6 @@
 # Plan learning, study examples, tutor, build exercises and review progress.
-lesson-workspace
-primary-source-notes
-red-green-loop
-repo-research-trail
-story-dna-extractor
+analyze-and-adapt-stories
+investigate-code
+plan-and-teach-lessons
+research-with-sources
+test-driven-development

@@ -17,7 +17,7 @@ def main():
    if phase=='after':
     assert {s['name'] for s in personal}==target
     assert not set(names)&retired
-    assert names.count('scope-grill')==names.count('relay-baton')==1
+    assert names.count('define-requirements')==names.count('handoff-and-recall-work')==1
     assert ('blacktower-development' in names)==(pathlib.Path(row['cwd']).name=='blacktower')
     assert all(s['enabled'] for s in personal)
    report['contexts'].setdefault(row['cwd'],{})[phase]={'entrypoints':len(skills),'personalEntrypoints':len(personal),'descriptionCharacters':sum(len(s['description']) for s in skills),'nameAndDescriptionCharacters':sum(len(s['name'])+len(s['description']) for s in skills),'personalDescriptionCharacters':sum(len(s['description']) for s in personal),'personalNameAndDescriptionCharacters':sum(len(s['name'])+len(s['description']) for s in personal),'names':[s['name'] for s in skills]}

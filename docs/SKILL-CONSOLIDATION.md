@@ -7,14 +7,14 @@ library remains available without exposing every workflow stage as another skill
 
 ## Explicit decisions
 
-- Keep `ui-craft`, `studio-brand-system`, `opentui-screens` and `tv-candle-charts`.
+- Keep `style-web-ui`, `create-subcult-branding`, `build-opentui-apps` and `tradingview-lightweight-charts`.
 - Remove `ui-cliche-audit`, `wcag-a11y-audit`, `brutal-hud-kit` and
   `solidity-audit` from discovery, profiles, relationships and public exports.
   Recoverable originals are under `archive/removed-skills-2026-11-09/` and are
   excluded from the runtime bundle.
-- Combine PostgreSQL inspection and schema migration in `postgres-workbench`.
+- Combine PostgreSQL inspection and schema migration in `postgres`.
 - Combine Temporal design and Python testing in `temporal-workflows`.
-- Keep `prose-unslop` separate and in core; plain restatement is a conditional
+- Keep `write-plainly` separate and in core; plain restatement is a conditional
   procedure under that owner.
 
 ## Consolidation model
@@ -30,7 +30,7 @@ browser adapters, operations, orchestration, skills, session context, research,
 writing, marketing, media, fiction and learning. Language-specific, security,
 forensic, authentication, privacy and payment-operation expertise stays distinct.
 
-Platform and host runbooks load conditionally through `fleet-ops-router`.
+Platform and host runbooks load conditionally through `manage-infrastructure`.
 PostgreSQL analysis does not authorize a migration; infrastructure artifacts do
 not authorize application. Review modes remain read-only unless a separate task
 authorizes changes. Strict and multi-model reviews retain explicit invocation

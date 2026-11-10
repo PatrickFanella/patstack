@@ -4,5 +4,6 @@ Load a companion only under its stated condition. Current authorization and clie
 
 | Skill | Relationship | When to load it |
 |---|---|---|
-| `postgres-workbench` | optional | When workflow evolution changes persisted application data. |
-| `bug-tracer` | optional | When a failure or replay mismatch needs isolation. |
+| `postgres` | optional | When workflow evolution changes persisted application data. |
+| `fix-bugs` | optional | When a failure or replay mismatch needs isolation. |
+| `python-projects` | optional | When replay tests need uv environment, pytest configuration or packaging changes. |

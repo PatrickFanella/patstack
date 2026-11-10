@@ -1,12 +1,10 @@
 # Plan and produce visual, audio, video or slide material with a coherent voice and delivery format.
-game-fun-theory
-lyric-doctor
-page-copy-forge
-pptx-forge
-raster-image-gen
-sonic-fingerprint
-ui-craft
-video-production-lab
-voice-ledger
-web-game-loop
-writing-workbench
+build-writing-voice-guide
+create-videos
+describe-artist-sound
+diagnose-song-lyrics
+generate-and-edit-images
+slide-decks
+style-web-ui
+write-and-adapt-copy
+write-and-revise-nonfiction

@@ -1,6 +1,6 @@
 # Task profiles
 
-Subsets selects `core` plus the union of requested task sets. Core contains 42
+Subsets selects `core` plus the union of requested task sets. Core contains 26
 skills for everyday work; the 11 other sets combine disciplines around an
 outcome. There is no separate always-installed personal or shared layer.
 

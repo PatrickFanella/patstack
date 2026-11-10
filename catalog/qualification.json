@@ -3,8 +3,8 @@
   "proofPolicy": "Supported clients declare procedure/deployment contracts; structure and selection evidence do not establish live task behavior. Unreviewed sources are retained for review, not endorsed. Blocked entries cannot be activated through profiles.",
   "skills": {
     "split-test-planner": {
-      "canonicalSource": "library/skills/landing-page-cro/references/modes/split-test-planner/guide.md",
-      "owner": "landing-page-cro",
+      "canonicalSource": "library/skills/improve-conversion-rates/references/modes/split-test-planner/guide.md",
+      "owner": "improve-conversion-rates",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -17,8 +17,8 @@
       "nearMiss": null
     },
     "story-dna-adapter": {
-      "canonicalSource": "library/skills/story-dna-extractor/references/modes/story-dna-adapter/guide.md",
-      "owner": "story-dna-extractor",
+      "canonicalSource": "library/skills/analyze-and-adapt-stories/references/modes/story-dna-adapter/guide.md",
+      "owner": "analyze-and-adapt-stories",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -31,8 +31,8 @@
       "nearMiss": null
     },
     "ref-snapshot-browser": {
-      "canonicalSource": "skills/browser-workbench/references/modes/ref-snapshot-browser/guide.md",
-      "owner": "browser-workbench",
+      "canonicalSource": "skills/control-browser-and-desktop/references/modes/ref-snapshot-browser/guide.md",
+      "owner": "control-browser-and-desktop",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -45,8 +45,8 @@
       "nearMiss": null
     },
     "sandbox-desktop": {
-      "canonicalSource": "skills/browser-workbench/references/base-workflow.md",
-      "owner": "browser-workbench",
+      "canonicalSource": "skills/control-browser-and-desktop/references/base-workflow.md",
+      "owner": "control-browser-and-desktop",
       "scope": "personal",
       "status": "archived",
       "supportedClients": [],
@@ -76,7 +76,7 @@
     },
     "api-design-principles": {
       "canonicalSource": "library/skills/api-design-principles",
-      "owner": "api-contract-smith",
+      "owner": "build-apis",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -89,8 +89,8 @@
       "nearMiss": null
     },
     "sketch-first-design": {
-      "canonicalSource": "skills/boundary-drafter/references/modes/sketch-first-design/guide.md",
-      "owner": "boundary-drafter",
+      "canonicalSource": "skills/design-architecture/references/modes/sketch-first-design/guide.md",
+      "owner": "design-architecture",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -102,8 +102,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "boundary-drafter": {
-      "canonicalSource": "skills/boundary-drafter",
+    "design-architecture": {
+      "canonicalSource": "skills/design-architecture",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -123,8 +123,8 @@
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "candidate-arena": {
-      "canonicalSource": "library/skills/agent-fanout-plan/references/modes/candidate-arena/guide.md",
-      "owner": "agent-fanout-plan",
+      "canonicalSource": "library/skills/coordinate-parallel-agents/references/modes/candidate-arena/guide.md",
+      "owner": "coordinate-parallel-agents",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -232,8 +232,8 @@
       "nearMiss": "Work owned by another vault."
     },
     "pocock-flow-router": {
-      "canonicalSource": "skills/build-sequencer/references/modes/pocock-flow-router/guide.md",
-      "owner": "build-sequencer",
+      "canonicalSource": "skills/plan-and-implement-changes/references/modes/pocock-flow-router/guide.md",
+      "owner": "plan-and-implement-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -245,8 +245,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "auth-gatekeeper": {
-      "canonicalSource": "skills/auth-gatekeeper",
+    "build-and-fix-auth": {
+      "canonicalSource": "skills/build-and-fix-auth",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -265,8 +265,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "mode-skill-miner": {
-      "canonicalSource": "library/skills/friction-miner/references/modes/mode-skill-miner/guide.md",
-      "owner": "friction-miner",
+      "canonicalSource": "library/skills/improve-workflow-from-sessions/references/modes/mode-skill-miner/guide.md",
+      "owner": "improve-workflow-from-sessions",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -278,8 +278,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "strategy-backtester": {
-      "canonicalSource": "library/skills/strategy-backtester",
+    "backtest-trading-strategies": {
+      "canonicalSource": "library/skills/backtest-trading-strategies",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -298,7 +298,7 @@
     },
     "bash-defensive-patterns": {
       "canonicalSource": "library/skills/bash-defensive-patterns",
-      "owner": "bash-script-craft",
+      "owner": "bash-scripts",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -312,7 +312,7 @@
     },
     "bats-testing-patterns": {
       "canonicalSource": "library/skills/bats-testing-patterns",
-      "owner": "bash-script-craft",
+      "owner": "bash-scripts",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -326,7 +326,7 @@
     },
     "binary-analysis-patterns": {
       "canonicalSource": "library/skills/binary-analysis-patterns",
-      "owner": "binary-dissector",
+      "owner": "reverse-engineer-binaries-protocols",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -358,8 +358,8 @@
       "nearMiss": "Select a general personal task set or configure an unrelated MCP server."
     },
     "change-blast-check": {
-      "canonicalSource": "skills/diff-inspector/references/modes/change-blast-check/guide.md",
-      "owner": "diff-inspector",
+      "canonicalSource": "skills/review-code-changes/references/modes/change-blast-check/guide.md",
+      "owner": "review-code-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -372,8 +372,8 @@
       "nearMiss": null
     },
     "nonfiction-gap-finder": {
-      "canonicalSource": "library/skills/writing-workbench/references/modes/nonfiction-gap-finder/guide.md",
-      "owner": "writing-workbench",
+      "canonicalSource": "library/skills/write-and-revise-nonfiction/references/modes/nonfiction-gap-finder/guide.md",
+      "owner": "write-and-revise-nonfiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -386,8 +386,8 @@
       "nearMiss": null
     },
     "book-blurb-doctor": {
-      "canonicalSource": "library/skills/page-copy-forge/references/modes/book-blurb-doctor/guide.md",
-      "owner": "page-copy-forge",
+      "canonicalSource": "library/skills/write-and-adapt-copy/references/modes/book-blurb-doctor/guide.md",
+      "owner": "write-and-adapt-copy",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -400,8 +400,8 @@
       "nearMiss": null
     },
     "plain-restate": {
-      "canonicalSource": "skills/prose-unslop/references/modes/plain-restate/guide.md",
-      "owner": "prose-unslop",
+      "canonicalSource": "skills/write-plainly/references/modes/plain-restate/guide.md",
+      "owner": "write-plainly",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -428,8 +428,8 @@
       "nearMiss": null
     },
     "codemap-atlas": {
-      "canonicalSource": "skills/repo-atlas/references/modes/codemap-atlas/guide.md",
-      "owner": "repo-atlas",
+      "canonicalSource": "skills/map-codebase/references/modes/codemap-atlas/guide.md",
+      "owner": "map-codebase",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -443,7 +443,7 @@
     },
     "changelog-automation": {
       "canonicalSource": "library/skills/changelog-automation",
-      "owner": "git-surgery",
+      "owner": "manage-git-and-prs",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -456,8 +456,8 @@
       "nearMiss": null
     },
     "outline-to-chapter": {
-      "canonicalSource": "library/skills/story-workbench/references/modes/outline-to-chapter/guide.md",
-      "owner": "story-workbench",
+      "canonicalSource": "library/skills/develop-and-draft-fiction/references/modes/outline-to-chapter/guide.md",
+      "owner": "develop-and-draft-fiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -470,8 +470,8 @@
       "nearMiss": null
     },
     "character-arc-doctor": {
-      "canonicalSource": "library/skills/fiction-editor/references/modes/character-arc-doctor/guide.md",
-      "owner": "fiction-editor",
+      "canonicalSource": "library/skills/edit-fiction/references/modes/character-arc-doctor/guide.md",
+      "owner": "edit-fiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -506,7 +506,7 @@
     },
     "check-compiler-errors": {
       "canonicalSource": "library/skills/check-compiler-errors",
-      "owner": "behavior-proof",
+      "owner": "verify-implementation",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -519,8 +519,8 @@
       "nearMiss": null
     },
     "viral-claim-probe": {
-      "canonicalSource": "library/skills/claim-verifier/references/modes/viral-claim-probe/guide.md",
-      "owner": "claim-verifier",
+      "canonicalSource": "library/skills/verify-claims/references/modes/viral-claim-probe/guide.md",
+      "owner": "verify-claims",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -533,8 +533,8 @@
       "nearMiss": null
     },
     "claude-bg-handoff": {
-      "canonicalSource": "shared/relay-baton/references/modes/claude-bg-handoff/guide.md",
-      "owner": "relay-baton",
+      "canonicalSource": "shared/handoff-and-recall-work/references/modes/claude-bg-handoff/guide.md",
+      "owner": "handoff-and-recall-work",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -546,8 +546,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "cli-contract-smith": {
-      "canonicalSource": "skills/cli-contract-smith",
+    "build-cli-tools": {
+      "canonicalSource": "skills/build-cli-tools",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -567,7 +567,7 @@
     },
     "cli-for-agents": {
       "canonicalSource": "library/skills/cli-for-agents",
-      "owner": "cli-contract-smith",
+      "owner": "build-cli-tools",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -580,8 +580,8 @@
       "nearMiss": null
     },
     "trope-refresher": {
-      "canonicalSource": "library/skills/fiction-editor/references/modes/trope-refresher/guide.md",
-      "owner": "fiction-editor",
+      "canonicalSource": "library/skills/edit-fiction/references/modes/trope-refresher/guide.md",
+      "owner": "edit-fiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -594,8 +594,8 @@
       "nearMiss": null
     },
     "dep-source-clone": {
-      "canonicalSource": "library/skills/repo-research-trail/references/modes/dep-source-clone/guide.md",
-      "owner": "repo-research-trail",
+      "canonicalSource": "library/skills/investigate-code/references/modes/dep-source-clone/guide.md",
+      "owner": "investigate-code",
       "scope": "personal",
       "status": "archived",
       "supportedClients": [],
@@ -610,8 +610,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "cf-edge-deploy": {
-      "canonicalSource": "library/skills/fleet-ops-router/references/modes/cf-edge-deploy/guide.md",
-      "owner": "fleet-ops-router",
+      "canonicalSource": "library/skills/manage-infrastructure/references/modes/cf-edge-deploy/guide.md",
+      "owner": "manage-infrastructure",
       "scope": "personal",
       "status": "archived",
       "supportedClients": [],
@@ -625,8 +625,8 @@
       "positiveTask": "Cloudflare Workers and Pages deployment; follow the selected product and verify the deployed artifact.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "diff-inspector": {
-      "canonicalSource": "skills/diff-inspector",
+    "review-code-changes": {
+      "canonicalSource": "skills/review-code-changes",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -647,7 +647,7 @@
     },
     "codebase-design": {
       "canonicalSource": "library/skills/codebase-design",
-      "owner": "boundary-drafter",
+      "owner": "design-architecture",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -659,8 +659,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "repo-atlas": {
-      "canonicalSource": "skills/repo-atlas",
+    "map-codebase": {
+      "canonicalSource": "skills/map-codebase",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -680,8 +680,8 @@
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "sweep-rewriter": {
-      "canonicalSource": "skills/safe-refactor-pass/references/modes/sweep-rewriter/guide.md",
-      "owner": "safe-refactor-pass",
+      "canonicalSource": "skills/refactor-code/references/modes/sweep-rewriter/guide.md",
+      "owner": "refactor-code",
       "scope": "personal",
       "status": "archived",
       "supportedClients": [],
@@ -696,8 +696,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "codex-desktop-audit": {
-      "canonicalSource": "library/skills/fleet-ops-router/references/modes/codex-desktop-audit/guide.md",
-      "owner": "fleet-ops-router",
+      "canonicalSource": "library/skills/manage-infrastructure/references/modes/codex-desktop-audit/guide.md",
+      "owner": "manage-infrastructure",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -751,8 +751,8 @@
       "positiveTask": "Establish an evidence-based coding baseline, generate adaptive original programming challenges, review attempts, diagnose bottlenecks, and maintain the Ars Malefica coding-practice ledger. Use when the user asks to assess their coding level, start or continue coding challenges, get a hint or code review on an active challenge, practice algorithms or software-engineering skills, review progress, or build the next challenge block. Do not use for ordinary implementation work where the user wants the agent to write the solution rather than coach their attempt.",
       "nearMiss": "Work owned by another vault."
     },
-    "market-position-map": {
-      "canonicalSource": "library/skills/market-position-map",
+    "research-market-positioning": {
+      "canonicalSource": "library/skills/research-market-positioning",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -771,8 +771,8 @@
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "vs-page-writer": {
-      "canonicalSource": "library/skills/page-copy-forge/references/modes/vs-page-writer/guide.md",
-      "owner": "page-copy-forge",
+      "canonicalSource": "library/skills/write-and-adapt-copy/references/modes/vs-page-writer/guide.md",
+      "owner": "write-and-adapt-copy",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -785,8 +785,8 @@
       "nearMiss": null
     },
     "rival-dossier": {
-      "canonicalSource": "library/skills/market-position-map/references/modes/rival-dossier/guide.md",
-      "owner": "market-position-map",
+      "canonicalSource": "library/skills/research-market-positioning/references/modes/rival-dossier/guide.md",
+      "owner": "research-market-positioning",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -798,8 +798,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "conlang-forge": {
-      "canonicalSource": "library/skills/conlang-forge",
+    "design-fictional-languages": {
+      "canonicalSource": "library/skills/design-fictional-languages",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -817,8 +817,8 @@
       "positiveTask": "Design fictional naming languages, full conlangs, language families, dialects or historical sound changes.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "editorial-roadmap": {
-      "canonicalSource": "library/skills/editorial-roadmap",
+    "plan-content-strategy": {
+      "canonicalSource": "library/skills/plan-content-strategy",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -850,7 +850,7 @@
     },
     "control-cli": {
       "canonicalSource": "library/skills/control-cli",
-      "owner": "behavior-proof",
+      "owner": "verify-implementation",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -878,7 +878,7 @@
     },
     "control-ui": {
       "canonicalSource": "library/skills/control-ui",
-      "owner": "behavior-proof",
+      "owner": "verify-implementation",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -890,8 +890,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "page-copy-forge": {
-      "canonicalSource": "library/skills/page-copy-forge",
+    "write-and-adapt-copy": {
+      "canonicalSource": "library/skills/write-and-adapt-copy",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -911,7 +911,7 @@
     },
     "cqrs-implementation": {
       "canonicalSource": "library/skills/cqrs-implementation",
-      "owner": "boundary-drafter",
+      "owner": "design-architecture",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -924,8 +924,8 @@
       "nearMiss": null
     },
     "learning-roadmap": {
-      "canonicalSource": "library/skills/lesson-workspace/references/modes/learning-roadmap/guide.md",
-      "owner": "lesson-workspace",
+      "canonicalSource": "library/skills/plan-and-teach-lessons/references/modes/learning-roadmap/guide.md",
+      "owner": "plan-and-teach-lessons",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -938,8 +938,8 @@
       "nearMiss": null
     },
     "cursor-plugin-forge": {
-      "canonicalSource": "library/skills/skill-forge/references/modes/cursor-plugin-forge/guide.md",
-      "owner": "skill-forge",
+      "canonicalSource": "library/skills/manage-skills-and-plugins/references/modes/cursor-plugin-forge/guide.md",
+      "owner": "manage-skills-and-plugins",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -952,8 +952,8 @@
       "nearMiss": null
     },
     "verify-skill-forge": {
-      "canonicalSource": "skills/behavior-proof/references/modes/verify-skill-forge/guide.md",
-      "owner": "behavior-proof",
+      "canonicalSource": "skills/verify-implementation/references/modes/verify-skill-forge/guide.md",
+      "owner": "verify-implementation",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -965,8 +965,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "cursor-sdk-builder": {
-      "canonicalSource": "library/skills/cursor-sdk-builder",
+    "build-with-cursor-sdk": {
+      "canonicalSource": "library/skills/build-with-cursor-sdk",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -984,8 +984,8 @@
       "nearMiss": null
     },
     "customer-voice-miner": {
-      "canonicalSource": "library/skills/market-position-map/references/modes/customer-voice-miner/guide.md",
-      "owner": "market-position-map",
+      "canonicalSource": "library/skills/research-market-positioning/references/modes/customer-voice-miner/guide.md",
+      "owner": "research-market-positioning",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -997,8 +997,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "opencode-config-tuner": {
-      "canonicalSource": "library/skills/opencode-config-tuner",
+    "configure-opencode": {
+      "canonicalSource": "library/skills/configure-opencode",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1016,8 +1016,8 @@
       "positiveTask": "Configure OpenCode agents, skills, plugins, MCP, permissions or its supported scheduler.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "data-narrative": {
-      "canonicalSource": "library/skills/data-narrative",
+    "present-data-findings": {
+      "canonicalSource": "library/skills/present-data-findings",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1035,8 +1035,8 @@
       "nearMiss": null
     },
     "schema-migrator": {
-      "canonicalSource": "skills/postgres-workbench/references/modes/schema-migrator/guide.md",
-      "owner": "postgres-workbench",
+      "canonicalSource": "skills/postgres/references/modes/schema-migrator/guide.md",
+      "owner": "postgres",
       "scope": "personal",
       "status": "archived",
       "supportedClients": [],
@@ -1050,8 +1050,8 @@
       "positiveTask": "'Database schema and data migrations: compatibility, backfills, validation, cutover, and rollback.'",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "repo-research-trail": {
-      "canonicalSource": "library/skills/repo-research-trail",
+    "investigate-code": {
+      "canonicalSource": "library/skills/investigate-code",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1070,8 +1070,8 @@
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "opencode-deepwork": {
-      "canonicalSource": "library/skills/agent-fanout-plan/references/modes/opencode-deepwork/guide.md",
-      "owner": "agent-fanout-plan",
+      "canonicalSource": "library/skills/coordinate-parallel-agents/references/modes/opencode-deepwork/guide.md",
+      "owner": "coordinate-parallel-agents",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1083,8 +1083,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "dep-upgrade-pilot": {
-      "canonicalSource": "skills/dep-upgrade-pilot",
+    "upgrade-major-versions": {
+      "canonicalSource": "skills/upgrade-major-versions",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -1104,7 +1104,7 @@
     },
     "deployment-pipeline-design": {
       "canonicalSource": "library/skills/deployment-pipeline-design",
-      "owner": "ci-medic",
+      "owner": "build-and-fix-ci",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1117,8 +1117,8 @@
       "nearMiss": null
     },
     "interface-design-twice": {
-      "canonicalSource": "skills/boundary-drafter/references/modes/interface-design-twice/guide.md",
-      "owner": "boundary-drafter",
+      "canonicalSource": "skills/design-architecture/references/modes/interface-design-twice/guide.md",
+      "owner": "design-architecture",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1132,7 +1132,7 @@
     },
     "deslop": {
       "canonicalSource": "library/skills/deslop",
-      "owner": "safe-refactor-pass",
+      "owner": "refactor-code",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1144,8 +1144,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "userscript-workshop": {
-      "canonicalSource": "library/skills/userscript-workshop",
+    "build-userscripts": {
+      "canonicalSource": "library/skills/build-userscripts",
       "owner": "patstack",
       "scope": "optional",
       "status": "selection-tested",
@@ -1165,8 +1165,8 @@
       "positiveTask": "'Userscript implementation and debugging: page lifecycle, browser permissions, injection, and update behavior.'",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "web-game-loop": {
-      "canonicalSource": "library/skills/web-game-loop",
+    "build-web-games": {
+      "canonicalSource": "library/skills/build-web-games",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1197,7 +1197,7 @@
     },
     "diagnosing-bugs": {
       "canonicalSource": "library/skills/diagnosing-bugs",
-      "owner": "bug-tracer",
+      "owner": "fix-bugs",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1210,8 +1210,8 @@
       "nearMiss": null
     },
     "dialogue-doctor": {
-      "canonicalSource": "library/skills/fiction-editor/references/modes/dialogue-doctor/guide.md",
-      "owner": "fiction-editor",
+      "canonicalSource": "library/skills/edit-fiction/references/modes/dialogue-doctor/guide.md",
+      "owner": "edit-fiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1225,7 +1225,7 @@
     },
     "distributed-tracing": {
       "canonicalSource": "library/skills/distributed-tracing",
-      "owner": "telemetry-signal-forge",
+      "owner": "build-and-fix-observability",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1237,8 +1237,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "story-dna-extractor": {
-      "canonicalSource": "library/skills/story-dna-extractor",
+    "analyze-and-adapt-stories": {
+      "canonicalSource": "library/skills/analyze-and-adapt-stories",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1256,8 +1256,8 @@
       "positiveTask": "Analyze a source story's functional structure or adapt that structure into a requested new context.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "docx-editor": {
-      "canonicalSource": "library/skills/docx-editor",
+    "docx-files": {
+      "canonicalSource": "library/skills/docx-files",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1288,7 +1288,7 @@
     },
     "domain-modeling": {
       "canonicalSource": "library/skills/domain-modeling",
-      "owner": "boundary-drafter",
+      "owner": "design-architecture",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1301,8 +1301,8 @@
       "nearMiss": null
     },
     "draft-unblocker": {
-      "canonicalSource": "library/skills/story-workbench/references/modes/draft-unblocker/guide.md",
-      "owner": "story-workbench",
+      "canonicalSource": "library/skills/develop-and-draft-fiction/references/modes/draft-unblocker/guide.md",
+      "owner": "develop-and-draft-fiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1315,8 +1315,8 @@
       "nearMiss": null
     },
     "ebook-concept-miner": {
-      "canonicalSource": "library/skills/primary-source-notes/references/modes/ebook-concept-miner/guide.md",
-      "owner": "primary-source-notes",
+      "canonicalSource": "library/skills/research-with-sources/references/modes/ebook-concept-miner/guide.md",
+      "owner": "research-with-sources",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1329,8 +1329,8 @@
       "nearMiss": null
     },
     "article-restructure": {
-      "canonicalSource": "library/skills/writing-workbench/references/modes/article-restructure/guide.md",
-      "owner": "writing-workbench",
+      "canonicalSource": "library/skills/write-and-revise-nonfiction/references/modes/article-restructure/guide.md",
+      "owner": "write-and-revise-nonfiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1343,8 +1343,8 @@
       "nearMiss": null
     },
     "drip-sequence-planner": {
-      "canonicalSource": "library/skills/page-copy-forge/references/modes/drip-sequence-planner/guide.md",
-      "owner": "page-copy-forge",
+      "canonicalSource": "library/skills/write-and-adapt-copy/references/modes/drip-sequence-planner/guide.md",
+      "owner": "write-and-adapt-copy",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1356,8 +1356,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "claim-verifier": {
-      "canonicalSource": "library/skills/claim-verifier",
+    "verify-claims": {
+      "canonicalSource": "library/skills/verify-claims",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1379,7 +1379,7 @@
     },
     "failure-anthropologist": {
       "canonicalSource": "library/skills/failure-anthropologist",
-      "owner": "bug-tracer",
+      "owner": "fix-bugs",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1392,8 +1392,8 @@
       "nearMiss": null
     },
     "playbook-designer": {
-      "canonicalSource": "skills/build-sequencer/references/modes/playbook-designer/guide.md",
-      "owner": "build-sequencer",
+      "canonicalSource": "skills/plan-and-implement-changes/references/modes/playbook-designer/guide.md",
+      "owner": "plan-and-implement-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1407,7 +1407,7 @@
     },
     "fix-merge-conflicts": {
       "canonicalSource": "library/skills/fix-merge-conflicts",
-      "owner": "git-surgery",
+      "owner": "manage-git-and-prs",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1419,8 +1419,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "ui-craft": {
-      "canonicalSource": "skills/ui-craft",
+    "style-web-ui": {
+      "canonicalSource": "skills/style-web-ui",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -1442,8 +1442,8 @@
       "positiveTask": "Implement a product-specific UI using existing brand tokens; scan before and after authorized edits and explain remaining deliberate choices.",
       "nearMiss": "Just audit this page and report its generic patterns; do not edit code or generate DESIGN.md."
     },
-    "game-fun-theory": {
-      "canonicalSource": "library/skills/game-fun-theory",
+    "improve-game-design": {
+      "canonicalSource": "library/skills/improve-game-design",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1460,8 +1460,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "rpg-game-master": {
-      "canonicalSource": "library/skills/rpg-game-master",
+    "run-rpg-sessions": {
+      "canonicalSource": "library/skills/run-rpg-sessions",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1499,8 +1499,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "genre-promise-check": {
-      "canonicalSource": "library/skills/story-workbench/references/modes/genre-promise-check/guide.md",
-      "owner": "story-workbench",
+      "canonicalSource": "library/skills/develop-and-draft-fiction/references/modes/genre-promise-check/guide.md",
+      "owner": "develop-and-draft-fiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1513,8 +1513,8 @@
       "nearMiss": null
     },
     "patient-tutor": {
-      "canonicalSource": "library/skills/lesson-workspace/references/modes/patient-tutor/guide.md",
-      "owner": "lesson-workspace",
+      "canonicalSource": "library/skills/plan-and-teach-lessons/references/modes/patient-tutor/guide.md",
+      "owner": "plan-and-teach-lessons",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1526,8 +1526,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "git-surgery": {
-      "canonicalSource": "skills/git-surgery",
+    "manage-git-and-prs": {
+      "canonicalSource": "skills/manage-git-and-prs",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -1546,8 +1546,8 @@
       "positiveTask": "Manage Git history and worktrees or prepare and ship a focused branch through its authorized PR workflow.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "claude-git-guardrails": {
-      "canonicalSource": "library/skills/claude-git-guardrails",
+    "claude-code-git-safety": {
+      "canonicalSource": "library/skills/claude-code-git-safety",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1563,8 +1563,8 @@
       "nearMiss": null
     },
     "gitea-fleet-tidy": {
-      "canonicalSource": "library/skills/fleet-ops-router/references/modes/gitea-fleet-tidy/guide.md",
-      "owner": "fleet-ops-router",
+      "canonicalSource": "library/skills/manage-infrastructure/references/modes/gitea-fleet-tidy/guide.md",
+      "owner": "manage-infrastructure",
       "scope": "personal",
       "status": "archived",
       "supportedClients": [],
@@ -1580,7 +1580,7 @@
     },
     "github-pro": {
       "canonicalSource": "library/skills/github-pro",
-      "owner": "git-surgery",
+      "owner": "manage-git-and-prs",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1592,8 +1592,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "go-craft": {
-      "canonicalSource": "skills/go-craft",
+    "golang": {
+      "canonicalSource": "skills/golang",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -1611,8 +1611,8 @@
       "positiveTask": "Go concurrency, interfaces, errors, profiling, and tests; use relevant patterns for the existing application.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "thinking-audit": {
-      "canonicalSource": "library/skills/thinking-audit",
+    "diagnose-reasoning": {
+      "canonicalSource": "library/skills/diagnose-reasoning",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1631,7 +1631,7 @@
     },
     "grafana-dashboards": {
       "canonicalSource": "library/skills/grafana-dashboards",
-      "owner": "telemetry-signal-forge",
+      "owner": "build-and-fix-observability",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1645,7 +1645,7 @@
     },
     "grilling": {
       "canonicalSource": "library/skills/grilling",
-      "owner": "scope-grill",
+      "owner": "define-requirements",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1678,7 +1678,7 @@
     },
     "handoff": {
       "canonicalSource": "library/skills/handoff",
-      "owner": "relay-baton",
+      "owner": "handoff-and-recall-work",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1718,8 +1718,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "fleet-ops-router": {
-      "canonicalSource": "library/skills/fleet-ops-router",
+    "manage-infrastructure": {
+      "canonicalSource": "library/skills/manage-infrastructure",
       "owner": "patstack",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1740,8 +1740,8 @@
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "code-walkthrough": {
-      "canonicalSource": "library/skills/repo-research-trail/references/modes/code-walkthrough/guide.md",
-      "owner": "repo-research-trail",
+      "canonicalSource": "library/skills/investigate-code/references/modes/code-walkthrough/guide.md",
+      "owner": "investigate-code",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1755,7 +1755,7 @@
     },
     "hybrid-search-implementation": {
       "canonicalSource": "library/skills/hybrid-search-implementation",
-      "owner": "retrieval-pipeline",
+      "owner": "build-rag-pipelines",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1768,8 +1768,8 @@
       "nearMiss": null
     },
     "marketing-imagery": {
-      "canonicalSource": "library/skills/raster-image-gen/references/modes/marketing-imagery/guide.md",
-      "owner": "raster-image-gen",
+      "canonicalSource": "library/skills/generate-and-edit-images/references/modes/marketing-imagery/guide.md",
+      "owner": "generate-and-edit-images",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1781,8 +1781,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "raster-image-gen": {
-      "canonicalSource": "library/skills/raster-image-gen",
+    "generate-and-edit-images": {
+      "canonicalSource": "library/skills/generate-and-edit-images",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1801,8 +1801,8 @@
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "spec-implementer": {
-      "canonicalSource": "skills/build-sequencer/references/modes/spec-implementer/guide.md",
-      "owner": "build-sequencer",
+      "canonicalSource": "skills/plan-and-implement-changes/references/modes/spec-implementer/guide.md",
+      "owner": "plan-and-implement-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1815,8 +1815,8 @@
       "nearMiss": null
     },
     "module-deepener": {
-      "canonicalSource": "skills/boundary-drafter/references/modes/module-deepener/guide.md",
-      "owner": "boundary-drafter",
+      "canonicalSource": "skills/design-architecture/references/modes/module-deepener/guide.md",
+      "owner": "design-architecture",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1828,8 +1828,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "branch-doctor": {
-      "canonicalSource": "library/skills/branch-doctor",
+    "diagnose-branching-stories": {
+      "canonicalSource": "library/skills/diagnose-branching-stories",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1847,8 +1847,8 @@
       "nearMiss": null
     },
     "status-memo-writer": {
-      "canonicalSource": "library/skills/page-copy-forge/references/modes/status-memo-writer/guide.md",
-      "owner": "page-copy-forge",
+      "canonicalSource": "library/skills/write-and-adapt-copy/references/modes/status-memo-writer/guide.md",
+      "owner": "write-and-adapt-copy",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1861,8 +1861,8 @@
       "nearMiss": null
     },
     "model-crossfire": {
-      "canonicalSource": "skills/diff-inspector/references/modes/model-crossfire/guide.md",
-      "owner": "diff-inspector",
+      "canonicalSource": "skills/review-code-changes/references/modes/model-crossfire/guide.md",
+      "owner": "review-code-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1875,8 +1875,8 @@
       "nearMiss": null
     },
     "punchline-lab": {
-      "canonicalSource": "library/skills/fiction-editor/references/modes/punchline-lab/guide.md",
-      "owner": "fiction-editor",
+      "canonicalSource": "library/skills/edit-fiction/references/modes/punchline-lab/guide.md",
+      "owner": "edit-fiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1935,8 +1935,8 @@
       "nearMiss": null
     },
     "kube-artifact-smith": {
-      "canonicalSource": "library/skills/fleet-ops-router/references/modes/kube-artifact-smith/guide.md",
-      "owner": "fleet-ops-router",
+      "canonicalSource": "library/skills/manage-infrastructure/references/modes/kube-artifact-smith/guide.md",
+      "owner": "manage-infrastructure",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1951,8 +1951,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "conlang-drift": {
-      "canonicalSource": "library/skills/conlang-forge/references/modes/conlang-drift/guide.md",
-      "owner": "conlang-forge",
+      "canonicalSource": "library/skills/design-fictional-languages/references/modes/conlang-drift/guide.md",
+      "owner": "design-fictional-languages",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1965,8 +1965,8 @@
       "nearMiss": null
     },
     "launch-runway": {
-      "canonicalSource": "shared/launch-dossier/references/modes/launch-runway/guide.md",
-      "owner": "launch-dossier",
+      "canonicalSource": "shared/prepare-product-launch/references/modes/launch-runway/guide.md",
+      "owner": "prepare-product-launch",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -1978,8 +1978,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "tv-candle-charts": {
-      "canonicalSource": "library/skills/tv-candle-charts",
+    "tradingview-lightweight-charts": {
+      "canonicalSource": "library/skills/tradingview-lightweight-charts",
       "owner": "patstack",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -1999,8 +1999,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "entropy-lists": {
-      "canonicalSource": "library/skills/world-bible/references/modes/entropy-lists/guide.md",
-      "owner": "world-bible",
+      "canonicalSource": "library/skills/fictional-worldbuilding/references/modes/entropy-lists/guide.md",
+      "owner": "fictional-worldbuilding",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2026,8 +2026,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "eval-bench": {
-      "canonicalSource": "skills/eval-bench",
+    "evaluate-llm-behavior": {
+      "canonicalSource": "skills/evaluate-llm-behavior",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -2047,7 +2047,7 @@
     },
     "local-change-quality-gate": {
       "canonicalSource": "library/skills/local-change-quality-gate",
-      "owner": "diff-inspector",
+      "owner": "review-code-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2060,8 +2060,8 @@
       "nearMiss": null
     },
     "loop-spec-grill": {
-      "canonicalSource": "shared/scope-grill/references/modes/loop-spec-grill/guide.md",
-      "owner": "scope-grill",
+      "canonicalSource": "shared/define-requirements/references/modes/loop-spec-grill/guide.md",
+      "owner": "define-requirements",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2075,7 +2075,7 @@
     },
     "loop-on-ci": {
       "canonicalSource": "library/skills/loop-on-ci",
-      "owner": "ci-medic",
+      "owner": "build-and-fix-ci",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2087,8 +2087,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "lyric-doctor": {
-      "canonicalSource": "library/skills/lyric-doctor",
+    "diagnose-song-lyrics": {
+      "canonicalSource": "library/skills/diagnose-song-lyrics",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -2106,8 +2106,8 @@
       "nearMiss": null
     },
     "verify-skill-audit": {
-      "canonicalSource": "skills/behavior-proof/references/modes/verify-skill-audit/guide.md",
-      "owner": "behavior-proof",
+      "canonicalSource": "skills/verify-implementation/references/modes/verify-skill-audit/guide.md",
+      "owner": "verify-implementation",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2121,7 +2121,7 @@
     },
     "make-pr-easy-to-review": {
       "canonicalSource": "library/skills/make-pr-easy-to-review",
-      "owner": "git-surgery",
+      "owner": "manage-git-and-prs",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2134,8 +2134,8 @@
       "nearMiss": null
     },
     "persuasion-levers": {
-      "canonicalSource": "library/skills/landing-page-cro/references/modes/persuasion-levers/guide.md",
-      "owner": "landing-page-cro",
+      "canonicalSource": "library/skills/improve-conversion-rates/references/modes/persuasion-levers/guide.md",
+      "owner": "improve-conversion-rates",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2147,8 +2147,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "mcp-server-forge": {
-      "canonicalSource": "skills/mcp-server-forge",
+    "build-mcp-servers": {
+      "canonicalSource": "skills/build-mcp-servers",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -2167,8 +2167,8 @@
       "positiveTask": "Build MCP servers with explicit tool contracts, transports, errors, and executable interoperability checks.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "mcp-wire-tracer": {
-      "canonicalSource": "skills/mcp-wire-tracer",
+    "fix-mcp-connections": {
+      "canonicalSource": "skills/fix-mcp-connections",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -2186,8 +2186,8 @@
       "positiveTask": "Diagnose MCP registration, transport, initialization, catalog, auth, and reload boundaries in the active client.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "ram-dump-sleuth": {
-      "canonicalSource": "library/skills/ram-dump-sleuth",
+    "analyze-ram-dumps": {
+      "canonicalSource": "library/skills/analyze-ram-dumps",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -2206,7 +2206,7 @@
     },
     "migrate-to-shoehorn": {
       "canonicalSource": "library/skills/migrate-to-shoehorn",
-      "owner": "ts-type-design",
+      "owner": "typescript",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2219,8 +2219,8 @@
       "nearMiss": null
     },
     "mtls-trust-chain": {
-      "canonicalSource": "library/skills/fleet-ops-router/references/modes/mtls-trust-chain/guide.md",
-      "owner": "fleet-ops-router",
+      "canonicalSource": "library/skills/manage-infrastructure/references/modes/mtls-trust-chain/guide.md",
+      "owner": "manage-infrastructure",
       "scope": "personal",
       "status": "archived",
       "supportedClients": [],
@@ -2234,8 +2234,8 @@
       "positiveTask": "'Configure and diagnose mutual TLS: certificate identity, trust chains, rotation, and service authentication.'",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "agent-fanout-plan": {
-      "canonicalSource": "library/skills/agent-fanout-plan",
+    "coordinate-parallel-agents": {
+      "canonicalSource": "library/skills/coordinate-parallel-agents",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -2255,7 +2255,7 @@
     },
     "multi-reviewer-patterns": {
       "canonicalSource": "library/skills/multi-reviewer-patterns",
-      "owner": "diff-inspector",
+      "owner": "review-code-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2267,8 +2267,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "sonic-fingerprint": {
-      "canonicalSource": "library/skills/sonic-fingerprint",
+    "describe-artist-sound": {
+      "canonicalSource": "library/skills/describe-artist-sound",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -2285,8 +2285,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "name-forge": {
-      "canonicalSource": "library/skills/name-forge",
+    "diagnose-and-generate-names": {
+      "canonicalSource": "library/skills/diagnose-and-generate-names",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -2331,7 +2331,7 @@
     },
     "nodejs-backend-patterns": {
       "canonicalSource": "library/skills/nodejs-backend-patterns",
-      "owner": "api-contract-smith",
+      "owner": "build-apis",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2357,8 +2357,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "observe-tune-loop": {
-      "canonicalSource": "library/skills/observe-tune-loop",
+    "check-and-tune-systems": {
+      "canonicalSource": "library/skills/check-and-tune-systems",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -2375,8 +2375,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "obsidian-cli-driver": {
-      "canonicalSource": "library/skills/obsidian-cli-driver",
+    "use-obsidian-cli": {
+      "canonicalSource": "library/skills/use-obsidian-cli",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -2420,8 +2420,8 @@
       "nearMiss": null
     },
     "openai-doc-lookup": {
-      "canonicalSource": "library/skills/primary-source-notes/references/modes/openai-doc-lookup/guide.md",
-      "owner": "primary-source-notes",
+      "canonicalSource": "library/skills/research-with-sources/references/modes/openai-doc-lookup/guide.md",
+      "owner": "research-with-sources",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2435,7 +2435,7 @@
     },
     "openapi-spec-generation": {
       "canonicalSource": "library/skills/openapi-spec-generation",
-      "owner": "api-contract-smith",
+      "owner": "build-apis",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2448,8 +2448,8 @@
       "nearMiss": null
     },
     "oss-maintainer-coach": {
-      "canonicalSource": "skills/roadmap-slicer/references/modes/oss-maintainer-coach/guide.md",
-      "owner": "roadmap-slicer",
+      "canonicalSource": "skills/manage-roadmaps-and-issues/references/modes/oss-maintainer-coach/guide.md",
+      "owner": "manage-roadmaps-and-issues",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2461,8 +2461,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "opentui-screens": {
-      "canonicalSource": "library/skills/opentui-screens",
+    "build-opentui-apps": {
+      "canonicalSource": "library/skills/build-opentui-apps",
       "owner": "patstack",
       "scope": "optional",
       "status": "selection-tested",
@@ -2494,8 +2494,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "landing-page-cro": {
-      "canonicalSource": "library/skills/landing-page-cro",
+    "improve-conversion-rates": {
+      "canonicalSource": "library/skills/improve-conversion-rates",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -2513,8 +2513,8 @@
       "positiveTask": "Analyze a marketing page or plan a conversion experiment and its behavioral hypothesis.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "paid-media-plan": {
-      "canonicalSource": "library/skills/paid-media-plan",
+    "plan-ad-campaigns": {
+      "canonicalSource": "library/skills/plan-ad-campaigns",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -2551,8 +2551,8 @@
       "positiveTask": "Prepare a supporter draft from current Studio offer and project evidence.",
       "nearMiss": "Work owned by another vault."
     },
-    "pci-scope-check": {
-      "canonicalSource": "library/skills/pci-scope-check",
+    "pci-dss-compliance": {
+      "canonicalSource": "library/skills/pci-dss-compliance",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -2569,8 +2569,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "pdf-render-check": {
-      "canonicalSource": "library/skills/pdf-render-check",
+    "pdf-files": {
+      "canonicalSource": "library/skills/pdf-files",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -2587,8 +2587,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "perf-hotpath-probe": {
-      "canonicalSource": "skills/perf-hotpath-probe",
+    "improve-performance": {
+      "canonicalSource": "skills/improve-performance",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -2629,8 +2629,8 @@
       "nearMiss": "Unrelated repository work."
     },
     "playwright-cli-driver": {
-      "canonicalSource": "skills/browser-workbench/references/modes/playwright-cli-driver/guide.md",
-      "owner": "browser-workbench",
+      "canonicalSource": "skills/control-browser-and-desktop/references/modes/playwright-cli-driver/guide.md",
+      "owner": "control-browser-and-desktop",
       "scope": "personal",
       "status": "archived",
       "supportedClients": [],
@@ -2645,8 +2645,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "codex-plugin-scaffold": {
-      "canonicalSource": "library/skills/skill-forge/references/modes/codex-plugin-scaffold/guide.md",
-      "owner": "skill-forge",
+      "canonicalSource": "library/skills/manage-skills-and-plugins/references/modes/codex-plugin-scaffold/guide.md",
+      "owner": "manage-skills-and-plugins",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2687,8 +2687,8 @@
       "nearMiss": null
     },
     "pg-plan-reader": {
-      "canonicalSource": "skills/postgres-workbench/references/base-workflow.md",
-      "owner": "postgres-workbench",
+      "canonicalSource": "skills/postgres/references/base-workflow.md",
+      "owner": "postgres",
       "scope": "personal",
       "status": "archived",
       "supportedClients": [],
@@ -2717,8 +2717,8 @@
       "nearMiss": null,
       "blockedReason": "Original personal-style import is not qualified for activation; it depends on Cursor and pstack features and was retired on 2026-11-03."
     },
-    "pptx-forge": {
-      "canonicalSource": "library/skills/pptx-forge",
+    "slide-decks": {
+      "canonicalSource": "library/skills/slide-decks",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -2737,8 +2737,8 @@
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "diff-walkthrough": {
-      "canonicalSource": "skills/diff-inspector/references/modes/diff-walkthrough/guide.md",
-      "owner": "diff-inspector",
+      "canonicalSource": "skills/review-code-changes/references/modes/diff-walkthrough/guide.md",
+      "owner": "review-code-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2751,8 +2751,8 @@
       "nearMiss": null
     },
     "slide-story-design": {
-      "canonicalSource": "library/skills/pptx-forge/references/modes/slide-story-design/guide.md",
-      "owner": "pptx-forge",
+      "canonicalSource": "library/skills/slide-decks/references/modes/slide-story-design/guide.md",
+      "owner": "slide-decks",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2766,7 +2766,7 @@
     },
     "principle-boundary-discipline": {
       "canonicalSource": "library/skills/principle-boundary-discipline",
-      "owner": "boundary-drafter",
+      "owner": "design-architecture",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2808,7 +2808,7 @@
     },
     "principle-exhaust-the-design-space": {
       "canonicalSource": "library/skills/principle-exhaust-the-design-space",
-      "owner": "boundary-drafter",
+      "owner": "design-architecture",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2822,7 +2822,7 @@
     },
     "principle-experience-first": {
       "canonicalSource": "library/skills/principle-experience-first",
-      "owner": "boundary-drafter",
+      "owner": "design-architecture",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2836,7 +2836,7 @@
     },
     "principle-fix-root-causes": {
       "canonicalSource": "library/skills/principle-fix-root-causes",
-      "owner": "bug-tracer",
+      "owner": "fix-bugs",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2850,7 +2850,7 @@
     },
     "principle-foundational-thinking": {
       "canonicalSource": "library/skills/principle-foundational-thinking",
-      "owner": "boundary-drafter",
+      "owner": "design-architecture",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2864,7 +2864,7 @@
     },
     "principle-guard-the-context-window": {
       "canonicalSource": "library/skills/principle-guard-the-context-window",
-      "owner": "build-sequencer",
+      "owner": "plan-and-implement-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2878,7 +2878,7 @@
     },
     "principle-laziness-protocol": {
       "canonicalSource": "library/skills/principle-laziness-protocol",
-      "owner": "safe-refactor-pass",
+      "owner": "refactor-code",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2892,7 +2892,7 @@
     },
     "principle-make-operations-idempotent": {
       "canonicalSource": "library/skills/principle-make-operations-idempotent",
-      "owner": "behavior-proof",
+      "owner": "verify-implementation",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2906,7 +2906,7 @@
     },
     "principle-migrate-callers-then-delete-legacy-apis": {
       "canonicalSource": "library/skills/principle-migrate-callers-then-delete-legacy-apis",
-      "owner": "safe-refactor-pass",
+      "owner": "refactor-code",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2920,7 +2920,7 @@
     },
     "principle-minimize-reader-load": {
       "canonicalSource": "library/skills/principle-minimize-reader-load",
-      "owner": "safe-refactor-pass",
+      "owner": "refactor-code",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2934,7 +2934,7 @@
     },
     "principle-model-the-domain": {
       "canonicalSource": "library/skills/principle-model-the-domain",
-      "owner": "boundary-drafter",
+      "owner": "design-architecture",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2948,7 +2948,7 @@
     },
     "principle-never-block-on-the-human": {
       "canonicalSource": "library/skills/principle-never-block-on-the-human",
-      "owner": "build-sequencer",
+      "owner": "plan-and-implement-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2962,7 +2962,7 @@
     },
     "principle-outcome-oriented-execution": {
       "canonicalSource": "library/skills/principle-outcome-oriented-execution",
-      "owner": "build-sequencer",
+      "owner": "plan-and-implement-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2976,7 +2976,7 @@
     },
     "principle-prove-it-works": {
       "canonicalSource": "library/skills/principle-prove-it-works",
-      "owner": "behavior-proof",
+      "owner": "verify-implementation",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -2990,7 +2990,7 @@
     },
     "principle-redesign-from-first-principles": {
       "canonicalSource": "library/skills/principle-redesign-from-first-principles",
-      "owner": "boundary-drafter",
+      "owner": "design-architecture",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3004,7 +3004,7 @@
     },
     "principle-separate-before-serializing-shared-state": {
       "canonicalSource": "library/skills/principle-separate-before-serializing-shared-state",
-      "owner": "boundary-drafter",
+      "owner": "design-architecture",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3018,7 +3018,7 @@
     },
     "principle-sequence-verifiable-units": {
       "canonicalSource": "library/skills/principle-sequence-verifiable-units",
-      "owner": "build-sequencer",
+      "owner": "plan-and-implement-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3032,7 +3032,7 @@
     },
     "principle-subtract-before-you-add": {
       "canonicalSource": "library/skills/principle-subtract-before-you-add",
-      "owner": "safe-refactor-pass",
+      "owner": "refactor-code",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3046,7 +3046,7 @@
     },
     "principle-type-system-discipline": {
       "canonicalSource": "library/skills/principle-type-system-discipline",
-      "owner": "ts-type-design",
+      "owner": "typescript",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3060,7 +3060,7 @@
     },
     "prometheus-configuration": {
       "canonicalSource": "library/skills/prometheus-configuration",
-      "owner": "telemetry-signal-forge",
+      "owner": "build-and-fix-observability",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3073,8 +3073,8 @@
       "nearMiss": null
     },
     "fiction-line-edit": {
-      "canonicalSource": "library/skills/fiction-editor/references/base-workflow.md",
-      "owner": "fiction-editor",
+      "canonicalSource": "library/skills/edit-fiction/references/base-workflow.md",
+      "owner": "edit-fiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3088,7 +3088,7 @@
     },
     "protocol-reverse-engineering": {
       "canonicalSource": "library/skills/protocol-reverse-engineering",
-      "owner": "binary-dissector",
+      "owner": "reverse-engineer-binaries-protocols",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3121,7 +3121,7 @@
     },
     "python-configuration": {
       "canonicalSource": "library/skills/python-configuration",
-      "owner": "python-uv-workbench",
+      "owner": "python-projects",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3135,7 +3135,7 @@
     },
     "python-packaging": {
       "canonicalSource": "library/skills/python-packaging",
-      "owner": "python-uv-workbench",
+      "owner": "python-projects",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3149,7 +3149,7 @@
     },
     "python-testing-patterns": {
       "canonicalSource": "library/skills/python-testing-patterns",
-      "owner": "python-uv-workbench",
+      "owner": "python-projects",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3163,7 +3163,7 @@
     },
     "python-tooling-patterns": {
       "canonicalSource": "library/skills/python-tooling-patterns",
-      "owner": "python-uv-workbench",
+      "owner": "python-projects",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3176,8 +3176,8 @@
       "nearMiss": null
     },
     "bug-intake-session": {
-      "canonicalSource": "skills/roadmap-slicer/references/modes/bug-intake-session/guide.md",
-      "owner": "roadmap-slicer",
+      "canonicalSource": "skills/manage-roadmaps-and-issues/references/modes/bug-intake-session/guide.md",
+      "owner": "manage-roadmaps-and-issues",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3189,8 +3189,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "retrieval-pipeline": {
-      "canonicalSource": "skills/retrieval-pipeline",
+    "build-rag-pipelines": {
+      "canonicalSource": "skills/build-rag-pipelines",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -3236,8 +3236,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "rn-expo-builder": {
-      "canonicalSource": "library/skills/rn-expo-builder",
+    "react-native-expo": {
+      "canonicalSource": "library/skills/react-native-expo",
       "owner": "patstack",
       "scope": "optional",
       "status": "selection-tested",
@@ -3258,8 +3258,8 @@
       "positiveTask": "'React Native/Expo implementation: navigation, native integration, offline behavior, lists, and mobile performance.'",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "react-render-tuner": {
-      "canonicalSource": "skills/react-render-tuner",
+    "react-and-nextjs": {
+      "canonicalSource": "skills/react-and-nextjs",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -3292,8 +3292,8 @@
       "nearMiss": null
     },
     "context-recall": {
-      "canonicalSource": "shared/relay-baton/references/modes/context-recall/guide.md",
-      "owner": "relay-baton",
+      "canonicalSource": "shared/handoff-and-recall-work/references/modes/context-recall/guide.md",
+      "owner": "handoff-and-recall-work",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3305,8 +3305,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "safe-refactor-pass": {
-      "canonicalSource": "skills/safe-refactor-pass",
+    "refactor-code": {
+      "canonicalSource": "skills/refactor-code",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -3325,8 +3325,8 @@
       "positiveTask": "Refactor without changing behavior or perform a requested mechanical change across many files.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "friction-miner": {
-      "canonicalSource": "library/skills/friction-miner",
+    "improve-workflow-from-sessions": {
+      "canonicalSource": "library/skills/improve-workflow-from-sessions",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -3359,8 +3359,8 @@
       "nearMiss": null
     },
     "ship-check": {
-      "canonicalSource": "skills/behavior-proof/references/modes/ship-check/guide.md",
-      "owner": "behavior-proof",
+      "canonicalSource": "skills/verify-implementation/references/modes/ship-check/guide.md",
+      "owner": "verify-implementation",
       "scope": "personal",
       "status": "archived",
       "supportedClients": [],
@@ -3388,7 +3388,7 @@
     },
     "request-refactor-plan": {
       "canonicalSource": "library/skills/request-refactor-plan",
-      "owner": "safe-refactor-pass",
+      "owner": "refactor-code",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3400,8 +3400,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "scope-grill": {
-      "canonicalSource": "shared/scope-grill",
+    "define-requirements": {
+      "canonicalSource": "shared/define-requirements",
       "owner": "shared-core",
       "scope": "shared",
       "status": "structure-reviewed",
@@ -3420,8 +3420,8 @@
       "positiveTask": "Resolve requirements and produce a requested PRD, recurring-workflow specification or decision questionnaire.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "primary-source-notes": {
-      "canonicalSource": "library/skills/primary-source-notes",
+    "research-with-sources": {
+      "canonicalSource": "library/skills/research-with-sources",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -3439,8 +3439,8 @@
       "positiveTask": "Research a question through quick web lookup, cited primary-source investigation, official OpenAI docs or a supplied ebook collection.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "binary-dissector": {
-      "canonicalSource": "library/skills/binary-dissector",
+    "reverse-engineer-binaries-protocols": {
+      "canonicalSource": "library/skills/reverse-engineer-binaries-protocols",
       "owner": "patstack",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -3460,8 +3460,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "book-outliner": {
-      "canonicalSource": "library/skills/story-dna-extractor/references/modes/book-outliner/guide.md",
-      "owner": "story-dna-extractor",
+      "canonicalSource": "library/skills/analyze-and-adapt-stories/references/modes/book-outliner/guide.md",
+      "owner": "analyze-and-adapt-stories",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3474,8 +3474,8 @@
       "nearMiss": null
     },
     "diff-auditor": {
-      "canonicalSource": "skills/diff-inspector/references/modes/diff-auditor/guide.md",
-      "owner": "diff-inspector",
+      "canonicalSource": "skills/review-code-changes/references/modes/diff-auditor/guide.md",
+      "owner": "review-code-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3488,8 +3488,8 @@
       "nearMiss": null
     },
     "branch-shipper": {
-      "canonicalSource": "skills/git-surgery/references/modes/branch-shipper/guide.md",
-      "owner": "git-surgery",
+      "canonicalSource": "skills/manage-git-and-prs/references/modes/branch-shipper/guide.md",
+      "owner": "manage-git-and-prs",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3529,7 +3529,7 @@
     },
     "review-quality": {
       "canonicalSource": "library/skills/review-quality",
-      "owner": "diff-inspector",
+      "owner": "review-code-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3542,8 +3542,8 @@
       "nearMiss": null
     },
     "draft-reviser": {
-      "canonicalSource": "library/skills/writing-workbench/references/modes/draft-reviser/guide.md",
-      "owner": "writing-workbench",
+      "canonicalSource": "library/skills/write-and-revise-nonfiction/references/modes/draft-reviser/guide.md",
+      "owner": "write-and-revise-nonfiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3555,8 +3555,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "lead-pipeline-ops": {
-      "canonicalSource": "library/skills/lead-pipeline-ops",
+    "manage-sales-pipeline": {
+      "canonicalSource": "library/skills/manage-sales-pipeline",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -3574,8 +3574,8 @@
       "nearMiss": null
     },
     "learning-retro": {
-      "canonicalSource": "library/skills/lesson-workspace/references/modes/learning-retro/guide.md",
-      "owner": "lesson-workspace",
+      "canonicalSource": "library/skills/plan-and-teach-lessons/references/modes/learning-retro/guide.md",
+      "owner": "plan-and-teach-lessons",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3587,8 +3587,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "rust-ownership-async": {
-      "canonicalSource": "skills/rust-ownership-async",
+    "rust": {
+      "canonicalSource": "skills/rust",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -3606,8 +3606,8 @@
       "positiveTask": "Rust ownership, async execution, errors, concurrency, and systems integration within the existing crate design.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "sales-collateral": {
-      "canonicalSource": "library/skills/sales-collateral",
+    "create-sales-materials": {
+      "canonicalSource": "library/skills/create-sales-materials",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -3626,7 +3626,7 @@
     },
     "sast-configuration": {
       "canonicalSource": "library/skills/sast-configuration",
-      "owner": "ci-medic",
+      "owner": "build-and-fix-ci",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3639,8 +3639,8 @@
       "nearMiss": null
     },
     "exercise-scaffold": {
-      "canonicalSource": "library/skills/lesson-workspace/references/modes/exercise-scaffold/guide.md",
-      "owner": "lesson-workspace",
+      "canonicalSource": "library/skills/plan-and-teach-lessons/references/modes/exercise-scaffold/guide.md",
+      "owner": "plan-and-teach-lessons",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3655,8 +3655,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "opencode-cron": {
-      "canonicalSource": "library/skills/opencode-config-tuner/references/modes/opencode-cron/guide.md",
-      "owner": "opencode-config-tuner",
+      "canonicalSource": "library/skills/configure-opencode/references/modes/opencode-cron/guide.md",
+      "owner": "configure-opencode",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3669,8 +3669,8 @@
       "nearMiss": null
     },
     "desktop-capture": {
-      "canonicalSource": "skills/browser-workbench/references/modes/desktop-capture/guide.md",
-      "owner": "browser-workbench",
+      "canonicalSource": "skills/control-browser-and-desktop/references/modes/desktop-capture/guide.md",
+      "owner": "control-browser-and-desktop",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3682,8 +3682,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "secret-rotation-flow": {
-      "canonicalSource": "skills/secret-rotation-flow",
+    "manage-deployment-secrets": {
+      "canonicalSource": "skills/manage-deployment-secrets",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -3702,8 +3702,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "web-host-hardening": {
-      "canonicalSource": "library/skills/fleet-ops-router/references/modes/web-host-hardening/guide.md",
-      "owner": "fleet-ops-router",
+      "canonicalSource": "library/skills/manage-infrastructure/references/modes/web-host-hardening/guide.md",
+      "owner": "manage-infrastructure",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3715,8 +3715,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "secure-code-audit": {
-      "canonicalSource": "skills/secure-code-audit",
+    "secure-web-code": {
+      "canonicalSource": "skills/secure-web-code",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -3734,8 +3734,8 @@
       "positiveTask": "Requested security review or secure coding guidance for Python, JavaScript/TypeScript, and Go.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "bus-factor-map": {
-      "canonicalSource": "skills/bus-factor-map",
+    "analyze-code-ownership": {
+      "canonicalSource": "skills/analyze-code-ownership",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -3753,8 +3753,8 @@
       "positiveTask": "Requested security ownership and bus-factor analysis from Git history; identify sensitive-code ownership gaps.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "stride-threat-map": {
-      "canonicalSource": "skills/stride-threat-map",
+    "threat-modeling": {
+      "canonicalSource": "skills/threat-modeling",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -3773,8 +3773,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "sensitivity-read": {
-      "canonicalSource": "library/skills/fiction-editor/references/modes/sensitivity-read/guide.md",
-      "owner": "fiction-editor",
+      "canonicalSource": "library/skills/edit-fiction/references/modes/sensitivity-read/guide.md",
+      "owner": "edit-fiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3786,8 +3786,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "search-rank-audit": {
-      "canonicalSource": "library/skills/search-rank-audit",
+    "improve-seo": {
+      "canonicalSource": "library/skills/improve-seo",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -3804,8 +3804,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "relay-baton": {
-      "canonicalSource": "shared/relay-baton",
+    "handoff-and-recall-work": {
+      "canonicalSource": "shared/handoff-and-recall-work",
       "owner": "shared-core",
       "scope": "shared",
       "status": "structure-reviewed",
@@ -3851,8 +3851,8 @@
       "nearMiss": null
     },
     "tracker-bootstrap": {
-      "canonicalSource": "skills/roadmap-slicer/references/modes/tracker-bootstrap/guide.md",
-      "owner": "roadmap-slicer",
+      "canonicalSource": "skills/manage-roadmaps-and-issues/references/modes/tracker-bootstrap/guide.md",
+      "owner": "manage-roadmaps-and-issues",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3866,7 +3866,7 @@
     },
     "setup-pre-commit": {
       "canonicalSource": "library/skills/setup-pre-commit",
-      "owner": "ci-medic",
+      "owner": "build-and-fix-ci",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3892,7 +3892,7 @@
     },
     "setup-ts-deep-modules": {
       "canonicalSource": "library/skills/setup-ts-deep-modules",
-      "owner": "ts-type-design",
+      "owner": "typescript",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3904,8 +3904,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "world-bible": {
-      "canonicalSource": "library/skills/world-bible",
+    "fictional-worldbuilding": {
+      "canonicalSource": "library/skills/fictional-worldbuilding",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -3925,7 +3925,7 @@
     },
     "shellcheck-configuration": {
       "canonicalSource": "library/skills/shellcheck-configuration",
-      "owner": "bash-script-craft",
+      "owner": "bash-scripts",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3939,7 +3939,7 @@
     },
     "show-me-your-work": {
       "canonicalSource": "library/skills/show-me-your-work",
-      "owner": "build-sequencer",
+      "owner": "plan-and-implement-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3953,7 +3953,7 @@
     },
     "simplify": {
       "canonicalSource": "library/skills/simplify",
-      "owner": "safe-refactor-pass",
+      "owner": "refactor-code",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -3965,8 +3965,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "skill-forge": {
-      "canonicalSource": "library/skills/skill-forge",
+    "manage-skills-and-plugins": {
+      "canonicalSource": "library/skills/manage-skills-and-plugins",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -3985,8 +3985,8 @@
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "codex-skill-fetch": {
-      "canonicalSource": "library/skills/skill-forge/references/modes/codex-skill-fetch/guide.md",
-      "owner": "skill-forge",
+      "canonicalSource": "library/skills/manage-skills-and-plugins/references/modes/codex-skill-fetch/guide.md",
+      "owner": "manage-skills-and-plugins",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4014,7 +4014,7 @@
     },
     "slo-implementation": {
       "canonicalSource": "library/skills/slo-implementation",
-      "owner": "telemetry-signal-forge",
+      "owner": "build-and-fix-observability",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4027,8 +4027,8 @@
       "nearMiss": null
     },
     "social-post-craft": {
-      "canonicalSource": "library/skills/page-copy-forge/references/modes/social-post-craft/guide.md",
-      "owner": "page-copy-forge",
+      "canonicalSource": "library/skills/write-and-adapt-copy/references/modes/social-post-craft/guide.md",
+      "owner": "write-and-adapt-copy",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4057,8 +4057,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "speech-shaper": {
-      "canonicalSource": "library/skills/writing-workbench/references/modes/speech-shaper/guide.md",
-      "owner": "writing-workbench",
+      "canonicalSource": "library/skills/write-and-revise-nonfiction/references/modes/speech-shaper/guide.md",
+      "owner": "write-and-revise-nonfiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4070,8 +4070,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "sheet-wrangler": {
-      "canonicalSource": "library/skills/sheet-wrangler",
+    "spreadsheet-files": {
+      "canonicalSource": "library/skills/spreadsheet-files",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -4088,8 +4088,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "runway-modeler": {
-      "canonicalSource": "library/skills/runway-modeler",
+    "model-startup-finances": {
+      "canonicalSource": "library/skills/model-startup-finances",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -4107,8 +4107,8 @@
       "nearMiss": null
     },
     "cliche-escape": {
-      "canonicalSource": "library/skills/fiction-editor/references/modes/cliche-escape/guide.md",
-      "owner": "fiction-editor",
+      "canonicalSource": "library/skills/edit-fiction/references/modes/cliche-escape/guide.md",
+      "owner": "edit-fiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4121,8 +4121,8 @@
       "nearMiss": null
     },
     "story-mentor": {
-      "canonicalSource": "library/skills/story-workbench/references/modes/story-mentor/guide.md",
-      "owner": "story-workbench",
+      "canonicalSource": "library/skills/develop-and-draft-fiction/references/modes/story-mentor/guide.md",
+      "owner": "develop-and-draft-fiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4135,8 +4135,8 @@
       "nearMiss": null
     },
     "story-cowriter": {
-      "canonicalSource": "library/skills/story-workbench/references/modes/story-cowriter/guide.md",
-      "owner": "story-workbench",
+      "canonicalSource": "library/skills/develop-and-draft-fiction/references/modes/story-cowriter/guide.md",
+      "owner": "develop-and-draft-fiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4149,8 +4149,8 @@
       "nearMiss": null
     },
     "premise-forge": {
-      "canonicalSource": "library/skills/story-workbench/references/modes/premise-forge/guide.md",
-      "owner": "story-workbench",
+      "canonicalSource": "library/skills/develop-and-draft-fiction/references/modes/premise-forge/guide.md",
+      "owner": "develop-and-draft-fiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4163,8 +4163,8 @@
       "nearMiss": null
     },
     "story-diagnosis": {
-      "canonicalSource": "library/skills/story-workbench/references/base-workflow.md",
-      "owner": "story-workbench",
+      "canonicalSource": "library/skills/develop-and-draft-fiction/references/base-workflow.md",
+      "owner": "develop-and-draft-fiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4178,7 +4178,7 @@
     },
     "stripe": {
       "canonicalSource": "library/skills/stripe",
-      "owner": "stripe-billing-guard",
+      "owner": "manage-stripe-account",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4190,8 +4190,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "stripe-checkout-wiring": {
-      "canonicalSource": "library/skills/stripe-checkout-wiring",
+    "integrate-stripe-payments": {
+      "canonicalSource": "library/skills/integrate-stripe-payments",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -4224,7 +4224,7 @@
     },
     "subcult-visual-design": {
       "canonicalSource": "library/skills/subcult-visual-design",
-      "owner": "studio-brand-system",
+      "owner": "create-subcult-branding",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4238,7 +4238,7 @@
     },
     "subcult-worldbuilding": {
       "canonicalSource": "library/skills/subcult-worldbuilding",
-      "owner": "studio-brand-system",
+      "owner": "create-subcult-branding",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4251,8 +4251,8 @@
       "nearMiss": null
     },
     "digest-distiller": {
-      "canonicalSource": "library/skills/writing-workbench/references/modes/digest-distiller/guide.md",
-      "owner": "writing-workbench",
+      "canonicalSource": "library/skills/write-and-revise-nonfiction/references/modes/digest-distiller/guide.md",
+      "owner": "write-and-revise-nonfiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4267,8 +4267,8 @@
       "nearMiss": "An unrelated task without the named source review or synthesis request."
     },
     "sp-upkeep-router": {
-      "canonicalSource": "library/skills/super-productivity-workflow/references/base-workflow.md",
-      "owner": "super-productivity-workflow",
+      "canonicalSource": "library/skills/manage-super-productivity/references/base-workflow.md",
+      "owner": "manage-super-productivity",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4281,8 +4281,8 @@
       "nearMiss": null
     },
     "sp-mcp-doctor": {
-      "canonicalSource": "library/skills/super-productivity-workflow/references/modes/sp-mcp-doctor/guide.md",
-      "owner": "super-productivity-workflow",
+      "canonicalSource": "library/skills/manage-super-productivity/references/modes/sp-mcp-doctor/guide.md",
+      "owner": "manage-super-productivity",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4295,8 +4295,8 @@
       "nearMiss": null
     },
     "sp-day-planner": {
-      "canonicalSource": "library/skills/super-productivity-workflow/references/modes/sp-day-planner/guide.md",
-      "owner": "super-productivity-workflow",
+      "canonicalSource": "library/skills/manage-super-productivity/references/modes/sp-day-planner/guide.md",
+      "owner": "manage-super-productivity",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4309,8 +4309,8 @@
       "nearMiss": null
     },
     "worker-swarm-fanout": {
-      "canonicalSource": "library/skills/agent-fanout-plan/references/modes/worker-swarm-fanout/guide.md",
-      "owner": "agent-fanout-plan",
+      "canonicalSource": "library/skills/coordinate-parallel-agents/references/modes/worker-swarm-fanout/guide.md",
+      "owner": "coordinate-parallel-agents",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4323,8 +4323,8 @@
       "nearMiss": null
     },
     "switchyard-runtime-desk": {
-      "canonicalSource": "library/skills/fleet-ops-router/references/modes/switchyard-runtime-desk/guide.md",
-      "owner": "fleet-ops-router",
+      "canonicalSource": "library/skills/manage-infrastructure/references/modes/switchyard-runtime-desk/guide.md",
+      "owner": "manage-infrastructure",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4336,8 +4336,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "bug-tracer": {
-      "canonicalSource": "skills/bug-tracer",
+    "fix-bugs": {
+      "canonicalSource": "skills/fix-bugs",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -4357,8 +4357,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "table-tone-tuner": {
-      "canonicalSource": "library/skills/rpg-game-master/references/modes/table-tone-tuner/guide.md",
-      "owner": "rpg-game-master",
+      "canonicalSource": "library/skills/run-rpg-sessions/references/modes/table-tone-tuner/guide.md",
+      "owner": "run-rpg-sessions",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4370,8 +4370,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "red-green-loop": {
-      "canonicalSource": "skills/red-green-loop",
+    "test-driven-development": {
+      "canonicalSource": "skills/test-driven-development",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -4389,8 +4389,8 @@
       "positiveTask": "'Test-first implementation when requested: red-green-refactor, test boundaries, fixtures, and meaningful assertions.'",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "lesson-workspace": {
-      "canonicalSource": "library/skills/lesson-workspace",
+    "plan-and-teach-lessons": {
+      "canonicalSource": "library/skills/plan-and-teach-lessons",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -4409,8 +4409,8 @@
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "tech-doc-writer": {
-      "canonicalSource": "library/skills/writing-workbench/references/modes/tech-doc-writer/guide.md",
-      "owner": "writing-workbench",
+      "canonicalSource": "library/skills/write-and-revise-nonfiction/references/modes/tech-doc-writer/guide.md",
+      "owner": "write-and-revise-nonfiction",
       "scope": "personal",
       "status": "archived",
       "supportedClients": [],
@@ -4424,8 +4424,8 @@
       "positiveTask": "Technical docs, RFCs, README localization, and docs-versus-code checks; preserve source meaning and working links.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "tetrad-impact-lens": {
-      "canonicalSource": "library/skills/tetrad-impact-lens",
+    "analyze-technology-impact": {
+      "canonicalSource": "library/skills/analyze-technology-impact",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -4459,8 +4459,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "terraform-module-smith": {
-      "canonicalSource": "library/skills/fleet-ops-router/references/modes/terraform-module-smith/guide.md",
-      "owner": "fleet-ops-router",
+      "canonicalSource": "library/skills/manage-infrastructure/references/modes/terraform-module-smith/guide.md",
+      "owner": "manage-infrastructure",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4476,7 +4476,7 @@
     },
     "thermo-nuclear-code-quality-review": {
       "canonicalSource": "library/skills/thermo-nuclear-code-quality-review",
-      "owner": "diff-inspector",
+      "owner": "review-code-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4490,7 +4490,7 @@
     },
     "thermo-nuclear-review": {
       "canonicalSource": "library/skills/thermo-nuclear-review",
-      "owner": "diff-inspector",
+      "owner": "review-code-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4503,8 +4503,8 @@
       "nearMiss": null
     },
     "thermo-twin-audit": {
-      "canonicalSource": "skills/diff-inspector/references/modes/thermo-twin-audit/guide.md",
-      "owner": "diff-inspector",
+      "canonicalSource": "skills/review-code-changes/references/modes/thermo-twin-audit/guide.md",
+      "owner": "review-code-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4517,8 +4517,8 @@
       "nearMiss": null
     },
     "prd-from-context": {
-      "canonicalSource": "shared/scope-grill/references/modes/prd-from-context/guide.md",
-      "owner": "scope-grill",
+      "canonicalSource": "shared/define-requirements/references/modes/prd-from-context/guide.md",
+      "owner": "define-requirements",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4531,8 +4531,8 @@
       "nearMiss": null
     },
     "decision-questionnaire": {
-      "canonicalSource": "shared/scope-grill/references/modes/decision-questionnaire/guide.md",
-      "owner": "scope-grill",
+      "canonicalSource": "shared/define-requirements/references/modes/decision-questionnaire/guide.md",
+      "owner": "define-requirements",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4545,8 +4545,8 @@
       "nearMiss": null
     },
     "tracer-ticket-split": {
-      "canonicalSource": "skills/roadmap-slicer/references/modes/tracer-ticket-split/guide.md",
-      "owner": "roadmap-slicer",
+      "canonicalSource": "skills/manage-roadmaps-and-issues/references/modes/tracer-ticket-split/guide.md",
+      "owner": "manage-roadmaps-and-issues",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4559,8 +4559,8 @@
       "nearMiss": null
     },
     "issue-state-triage": {
-      "canonicalSource": "skills/roadmap-slicer/references/modes/issue-state-triage/guide.md",
-      "owner": "roadmap-slicer",
+      "canonicalSource": "skills/manage-roadmaps-and-issues/references/modes/issue-state-triage/guide.md",
+      "owner": "manage-roadmaps-and-issues",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4586,7 +4586,7 @@
     },
     "typescript-best-practices": {
       "canonicalSource": "library/skills/typescript-best-practices",
-      "owner": "ts-type-design",
+      "owner": "typescript",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4598,8 +4598,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "ts-type-design": {
-      "canonicalSource": "skills/ts-type-design",
+    "typescript": {
+      "canonicalSource": "skills/typescript",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -4619,7 +4619,7 @@
     },
     "ubiquitous-language": {
       "canonicalSource": "library/skills/ubiquitous-language",
-      "owner": "boundary-drafter",
+      "owner": "design-architecture",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4631,8 +4631,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "prose-unslop": {
-      "canonicalSource": "skills/prose-unslop",
+    "write-plainly": {
+      "canonicalSource": "skills/write-plainly",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -4653,7 +4653,7 @@
     },
     "use-my-browser": {
       "canonicalSource": "library/skills/use-my-browser",
-      "owner": "behavior-proof",
+      "owner": "verify-implementation",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4667,7 +4667,7 @@
     },
     "uv-package-manager": {
       "canonicalSource": "library/skills/uv-package-manager",
-      "owner": "python-uv-workbench",
+      "owner": "python-projects",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4700,7 +4700,7 @@
     },
     "verify-this": {
       "canonicalSource": "library/skills/verify-this",
-      "owner": "behavior-proof",
+      "owner": "verify-implementation",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4712,8 +4712,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "video-production-lab": {
-      "canonicalSource": "library/skills/video-production-lab",
+    "create-videos": {
+      "canonicalSource": "library/skills/create-videos",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -4731,8 +4731,8 @@
       "nearMiss": null
     },
     "voice-fingerprint": {
-      "canonicalSource": "shared/voice-ledger/references/modes/voice-fingerprint/guide.md",
-      "owner": "voice-ledger",
+      "canonicalSource": "shared/build-writing-voice-guide/references/modes/voice-fingerprint/guide.md",
+      "owner": "build-writing-voice-guide",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4744,8 +4744,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "vscode-extension-lab": {
-      "canonicalSource": "library/skills/vscode-extension-lab",
+    "build-vscode-extensions": {
+      "canonicalSource": "library/skills/build-vscode-extensions",
       "owner": "patstack",
       "scope": "optional",
       "status": "selection-tested",
@@ -4767,7 +4767,7 @@
     },
     "wait-what": {
       "canonicalSource": "library/skills/wait-what",
-      "owner": "prose-unslop",
+      "owner": "write-plainly",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4780,8 +4780,8 @@
       "nearMiss": null
     },
     "wayfinder-map": {
-      "canonicalSource": "skills/build-sequencer/references/modes/wayfinder-map/guide.md",
-      "owner": "build-sequencer",
+      "canonicalSource": "skills/plan-and-implement-changes/references/modes/wayfinder-map/guide.md",
+      "owner": "plan-and-implement-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4810,8 +4810,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "web-lookup": {
-      "canonicalSource": "library/skills/primary-source-notes/references/modes/web-lookup/guide.md",
-      "owner": "primary-source-notes",
+      "canonicalSource": "library/skills/research-with-sources/references/modes/web-lookup/guide.md",
+      "owner": "research-with-sources",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4827,7 +4827,7 @@
     },
     "webapp-testing": {
       "canonicalSource": "library/skills/webapp-testing",
-      "owner": "behavior-proof",
+      "owner": "verify-implementation",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4841,7 +4841,7 @@
     },
     "websocket-engineer": {
       "canonicalSource": "library/skills/websocket-engineer",
-      "owner": "api-contract-smith",
+      "owner": "build-apis",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4854,8 +4854,8 @@
       "nearMiss": null
     },
     "weekly-commit-recap": {
-      "canonicalSource": "library/skills/commit-recap/references/modes/weekly-commit-recap/guide.md",
-      "owner": "commit-recap",
+      "canonicalSource": "library/skills/summarize-commits/references/modes/weekly-commit-recap/guide.md",
+      "owner": "summarize-commits",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4867,8 +4867,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "commit-recap": {
-      "canonicalSource": "library/skills/commit-recap",
+    "summarize-commits": {
+      "canonicalSource": "library/skills/summarize-commits",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -4887,8 +4887,8 @@
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "rationale-dig": {
-      "canonicalSource": "library/skills/repo-research-trail/references/modes/rationale-dig/guide.md",
-      "owner": "repo-research-trail",
+      "canonicalSource": "library/skills/investigate-code/references/modes/rationale-dig/guide.md",
+      "owner": "investigate-code",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4901,8 +4901,8 @@
       "nearMiss": null
     },
     "setup-wizard-script": {
-      "canonicalSource": "library/skills/fleet-ops-router/references/modes/setup-wizard-script/guide.md",
-      "owner": "fleet-ops-router",
+      "canonicalSource": "library/skills/manage-infrastructure/references/modes/setup-wizard-script/guide.md",
+      "owner": "manage-infrastructure",
       "scope": "personal",
       "status": "archived",
       "supportedClients": [],
@@ -4917,8 +4917,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "chat-preference-miner": {
-      "canonicalSource": "library/skills/friction-miner/references/modes/chat-preference-miner/guide.md",
-      "owner": "friction-miner",
+      "canonicalSource": "library/skills/improve-workflow-from-sessions/references/modes/chat-preference-miner/guide.md",
+      "owner": "improve-workflow-from-sessions",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4947,8 +4947,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "worktree-lanes": {
-      "canonicalSource": "skills/git-surgery/references/modes/worktree-lanes/guide.md",
-      "owner": "git-surgery",
+      "canonicalSource": "skills/manage-git-and-prs/references/modes/worktree-lanes/guide.md",
+      "owner": "manage-git-and-prs",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4961,8 +4961,8 @@
       "nearMiss": null
     },
     "world-fate-ledger": {
-      "canonicalSource": "library/skills/world-bible/references/modes/world-fate-ledger/guide.md",
-      "owner": "world-bible",
+      "canonicalSource": "library/skills/fictional-worldbuilding/references/modes/world-fate-ledger/guide.md",
+      "owner": "fictional-worldbuilding",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4975,8 +4975,8 @@
       "nearMiss": null
     },
     "world-diagnostics": {
-      "canonicalSource": "library/skills/world-bible/references/modes/world-diagnostics/guide.md",
-      "owner": "world-bible",
+      "canonicalSource": "library/skills/fictional-worldbuilding/references/modes/world-diagnostics/guide.md",
+      "owner": "fictional-worldbuilding",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -4989,8 +4989,8 @@
       "nearMiss": null
     },
     "article-beat-path": {
-      "canonicalSource": "library/skills/writing-workbench/references/modes/article-beat-path/guide.md",
-      "owner": "writing-workbench",
+      "canonicalSource": "library/skills/write-and-revise-nonfiction/references/modes/article-beat-path/guide.md",
+      "owner": "write-and-revise-nonfiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -5017,8 +5017,8 @@
       "nearMiss": null
     },
     "fragment-harvest": {
-      "canonicalSource": "library/skills/writing-workbench/references/modes/fragment-harvest/guide.md",
-      "owner": "writing-workbench",
+      "canonicalSource": "library/skills/write-and-revise-nonfiction/references/modes/fragment-harvest/guide.md",
+      "owner": "write-and-revise-nonfiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -5031,8 +5031,8 @@
       "nearMiss": null
     },
     "build-plan-writer": {
-      "canonicalSource": "skills/build-sequencer/references/modes/build-plan-writer/guide.md",
-      "owner": "build-sequencer",
+      "canonicalSource": "skills/plan-and-implement-changes/references/modes/build-plan-writer/guide.md",
+      "owner": "plan-and-implement-changes",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -5045,8 +5045,8 @@
       "nearMiss": null
     },
     "article-shaping": {
-      "canonicalSource": "library/skills/writing-workbench/references/base-workflow.md",
-      "owner": "writing-workbench",
+      "canonicalSource": "library/skills/write-and-revise-nonfiction/references/base-workflow.md",
+      "owner": "write-and-revise-nonfiction",
       "scope": "optional",
       "status": "archived",
       "supportedClients": [],
@@ -5058,8 +5058,8 @@
       "positiveTask": null,
       "nearMiss": null
     },
-    "api-contract-smith": {
-      "canonicalSource": "skills/api-contract-smith",
+    "build-apis": {
+      "canonicalSource": "skills/build-apis",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -5077,8 +5077,8 @@
       "positiveTask": "'API contracts and backend protocols: REST/GraphQL, OpenAPI, Node services, and WebSocket lifecycle design.'",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "ci-medic": {
-      "canonicalSource": "skills/ci-medic",
+    "build-and-fix-ci": {
+      "canonicalSource": "skills/build-and-fix-ci",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -5097,8 +5097,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "pet-hatchery": {
-      "canonicalSource": "library/skills/raster-image-gen/references/modes/pet-hatchery/guide.md",
-      "owner": "raster-image-gen",
+      "canonicalSource": "library/skills/generate-and-edit-images/references/modes/pet-hatchery/guide.md",
+      "owner": "generate-and-edit-images",
       "scope": "personal",
       "status": "archived",
       "supportedClients": [],
@@ -5112,8 +5112,8 @@
       "positiveTask": "Create or repair Codex v2 animated pets; validate atlas geometry, directions, transparency, and packaging.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "build-sequencer": {
-      "canonicalSource": "skills/build-sequencer",
+    "plan-and-implement-changes": {
+      "canonicalSource": "skills/plan-and-implement-changes",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -5132,8 +5132,8 @@
       "positiveTask": "Plan or execute a feature, specification, migration or multi-session implementation sequence.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "roadmap-slicer": {
-      "canonicalSource": "skills/roadmap-slicer",
+    "manage-roadmaps-and-issues": {
+      "canonicalSource": "skills/manage-roadmaps-and-issues",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -5170,8 +5170,8 @@
       "positiveTask": "Audit src/Page.tsx for generic frontend design patterns; scan and report rule IDs and source locations without changing files.",
       "nearMiss": "Keep an approved Inter/purple design system intact; fix a backend API bug without changing frontend visuals."
     },
-    "telemetry-signal-forge": {
-      "canonicalSource": "skills/telemetry-signal-forge",
+    "build-and-fix-observability": {
+      "canonicalSource": "skills/build-and-fix-observability",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -5189,8 +5189,8 @@
       "positiveTask": "Metrics, traces, dashboards, and SLOs; implement telemetry or diagnose a specific monitoring gap.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "python-uv-workbench": {
-      "canonicalSource": "skills/python-uv-workbench",
+    "python-projects": {
+      "canonicalSource": "skills/python-projects",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -5208,8 +5208,8 @@
       "positiveTask": "Python tooling, packaging, settings, uv environments, and pytest; select the procedure for the requested change.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "test-suite-pruner": {
-      "canonicalSource": "skills/test-suite-pruner",
+    "clean-up-test-suites": {
+      "canonicalSource": "skills/clean-up-test-suites",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -5227,8 +5227,8 @@
       "positiveTask": "Maintain an oversized or brittle repository test suite while preserving crucial behavior and removing obsolete work.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "bash-script-craft": {
-      "canonicalSource": "skills/bash-script-craft",
+    "bash-scripts": {
+      "canonicalSource": "skills/bash-scripts",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -5246,8 +5246,8 @@
       "positiveTask": "Shell scripting, ShellCheck linting, and Bats tests; preserve exit status, quoting, cleanup, and portability.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "stripe-billing-guard": {
-      "canonicalSource": "skills/stripe-billing-guard",
+    "manage-stripe-account": {
+      "canonicalSource": "skills/manage-stripe-account",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -5266,8 +5266,8 @@
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
     "t3-repo-onboard": {
-      "canonicalSource": "library/skills/fleet-ops-router/references/modes/t3-repo-onboard/guide.md",
-      "owner": "fleet-ops-router",
+      "canonicalSource": "library/skills/manage-infrastructure/references/modes/t3-repo-onboard/guide.md",
+      "owner": "manage-infrastructure",
       "scope": "personal",
       "status": "archived",
       "supportedClients": [],
@@ -5281,8 +5281,8 @@
       "positiveTask": "Onboard a repository into T3 development environments with isolated previews, local tests, and project actions.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "behavior-proof": {
-      "canonicalSource": "skills/behavior-proof",
+    "verify-implementation": {
+      "canonicalSource": "skills/verify-implementation",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -5396,10 +5396,10 @@
         "project-agents/subcult-tv/skills/social-craft/references/runtime.md"
       ],
       "positiveTask": "Draft or critique a SUBCULT caption, devlog entry, supporter page or post image so a stranger stops and reads.",
-      "nearMiss": "Brand system or asset production (studio-brand-system); product implementation."
+      "nearMiss": "Brand system or asset production (create-subcult-branding); product implementation."
     },
-    "studio-brand-system": {
-      "canonicalSource": "skills/studio-brand-system",
+    "create-subcult-branding": {
+      "canonicalSource": "skills/create-subcult-branding",
       "owner": "Studio",
       "scope": "personal",
       "status": "authored",
@@ -5417,8 +5417,8 @@
       ],
       "lastReviewed": "2026-11-08",
       "evidence": [
-        "skills/studio-brand-system/references/workflow.md",
-        "skills/studio-brand-system/references/product-launch.md"
+        "skills/create-subcult-branding/references/workflow.md",
+        "skills/create-subcult-branding/references/product-launch.md"
       ],
       "positiveTask": "Pick twelve design references for a new SUBCULT product, review mixed directions with the owner, then create its brand pack, marketing packet and product site.",
       "nearMiss": "Write a weekly caption (social-craft), catalog a reference (studio-reference-study), audit an existing brand (studio-brand-audit), or integrate a selected pack (studio-brand-handoff)."
@@ -5445,7 +5445,7 @@
         "project-agents/subcult-tv/skills/studio-reference-study/SKILL.md"
       ],
       "positiveTask": "Create a source-linked reference study and register it in the private Studio catalog.",
-      "nearMiss": "Choose a production identity (studio-brand-system) or copy a reference into public assets."
+      "nearMiss": "Choose a production identity (create-subcult-branding) or copy a reference into public assets."
     },
     "studio-brand-audit": {
       "canonicalSource": "project-agents/subcult-tv/skills/studio-brand-audit",
@@ -5469,7 +5469,7 @@
         "project-agents/subcult-tv/skills/studio-brand-audit/SKILL.md"
       ],
       "positiveTask": "Audit the implemented product and promotional exports against the selected Studio brand with visual evidence.",
-      "nearMiss": "Explore a replacement identity (studio-brand-system) or make an unrelated backend change."
+      "nearMiss": "Explore a replacement identity (create-subcult-branding) or make an unrelated backend change."
     },
     "studio-brand-handoff": {
       "canonicalSource": "project-agents/subcult-tv/skills/studio-brand-handoff",
@@ -5493,7 +5493,7 @@
         "project-agents/subcult-tv/skills/studio-brand-handoff/SKILL.md"
       ],
       "positiveTask": "Integrate a selected Studio brand pack into its product with exact asset mappings, hashes and verified exports.",
-      "nearMiss": "Create a new identity (studio-brand-system) or deploy a site without a handoff request."
+      "nearMiss": "Create a new identity (create-subcult-branding) or deploy a site without a handoff request."
     },
     "tadooer-workflow": {
       "canonicalSource": "integrations/tadooer/plugin/skills/tadooer-workflow",
@@ -5516,8 +5516,8 @@
       "positiveTask": "Read my Tadooer tasks and plan tomorrow; confirm requested ordinary changes through the advertised tool policy.",
       "nearMiss": "Review local source code without using Tadooer, or install a desktop app without authorization to edit tasks."
     },
-    "voice-ledger": {
-      "canonicalSource": "shared/voice-ledger",
+    "build-writing-voice-guide": {
+      "canonicalSource": "shared/build-writing-voice-guide",
       "owner": "patstack",
       "scope": "shared",
       "status": "structure-reviewed",
@@ -5535,8 +5535,8 @@
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
     "content-recaster": {
-      "canonicalSource": "library/skills/page-copy-forge/references/modes/content-recaster/guide.md",
-      "owner": "page-copy-forge",
+      "canonicalSource": "library/skills/write-and-adapt-copy/references/modes/content-recaster/guide.md",
+      "owner": "write-and-adapt-copy",
       "scope": "shared",
       "status": "archived",
       "supportedClients": [],
@@ -5548,8 +5548,8 @@
       "positiveTask": "Adapt the approved Subsets product brief into social, newsletter, community, and demo formats, preserving claim IDs.",
       "nearMiss": "Invent an acquisition campaign with no source product facts or source asset."
     },
-    "launch-dossier": {
-      "canonicalSource": "shared/launch-dossier",
+    "prepare-product-launch": {
+      "canonicalSource": "shared/prepare-product-launch",
       "owner": "patstack",
       "scope": "shared",
       "status": "structure-reviewed",
@@ -5566,8 +5566,8 @@
       "positiveTask": "Prepare a product marketing packet or a requested product, feature or beta launch plan.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "skill-stack-router": {
-      "canonicalSource": "shared/skill-stack-router",
+    "find-and-load-skills": {
+      "canonicalSource": "shared/find-and-load-skills",
       "owner": "patstack",
       "scope": "shared",
       "status": "selection-tested",
@@ -5589,8 +5589,8 @@
       "positiveTask": "Resolve a React Native specialist and its verification companion while keeping the core selection unchanged.",
       "nearMiss": "Load every library skill, auto-switch profiles, run an explicit-only workflow without a request, or grant a missing tool."
     },
-    "browser-workbench": {
-      "canonicalSource": "skills/browser-workbench",
+    "control-browser-and-desktop": {
+      "canonicalSource": "skills/control-browser-and-desktop",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -5609,8 +5609,8 @@
       "positiveTask": "Operate a permitted browser or isolated desktop, or capture a requested host screenshot using the current client tools.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "postgres-workbench": {
-      "canonicalSource": "skills/postgres-workbench",
+    "postgres": {
+      "canonicalSource": "skills/postgres",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",
@@ -5669,8 +5669,8 @@
       "positiveTask": "Explain, start or stop a Ralph iteration loop when explicitly requested and supported by the current client.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "super-productivity-workflow": {
-      "canonicalSource": "library/skills/super-productivity-workflow",
+    "manage-super-productivity": {
+      "canonicalSource": "library/skills/manage-super-productivity",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -5688,8 +5688,8 @@
       "positiveTask": "Plan tasks and routines or diagnose the Super Productivity MCP and plugin bridge.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "writing-workbench": {
-      "canonicalSource": "library/skills/writing-workbench",
+    "write-and-revise-nonfiction": {
+      "canonicalSource": "library/skills/write-and-revise-nonfiction",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -5707,8 +5707,8 @@
       "positiveTask": "Develop or revise nonfiction, technical documentation, summaries or spoken adaptations from the supplied material.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "story-workbench": {
-      "canonicalSource": "library/skills/story-workbench",
+    "develop-and-draft-fiction": {
+      "canonicalSource": "library/skills/develop-and-draft-fiction",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",
@@ -5726,8 +5726,8 @@
       "positiveTask": "Develop a story through diagnosis, coaching, premises or requested prose and chapter drafting.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."
     },
-    "fiction-editor": {
-      "canonicalSource": "library/skills/fiction-editor",
+    "edit-fiction": {
+      "canonicalSource": "library/skills/edit-fiction",
       "owner": "optional-library",
       "scope": "optional",
       "status": "structure-reviewed",

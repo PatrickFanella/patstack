@@ -1,6 +1,6 @@
 # SUBCULT vault
 
-Use `rtk` for shell commands. Read `~/.codex/RTK.md` and the current `~/.homelab/HOMELAB.md` when not already supplied. Apply `prose-unslop` to user-facing prose and documentation. Preserve unrelated work, source provenance, and secrets.
+Use `rtk` for shell commands. Read `~/.codex/RTK.md` and the current `~/.homelab/HOMELAB.md` when not already supplied. Apply `write-plainly` to user-facing prose and documentation. Preserve unrelated work, source provenance, and secrets.
 
 The four vaults are siblings under `~/Work/Vaults` on Kvant. Confirm actual vault roots on other devices. Ars Malefica owns personal life and independent creative work; SUBCULT owns business, products and publishing plans; Machinum owns maintained homelab documentation; Archivum owns imported references and mirrors. Use explicit Obsidian URI links across vaults. Do not recreate moved trees because old instructions or validators refer to them.
 
@@ -18,4 +18,4 @@ For the maintained setup, workflow owners and device checks, read Machinum’s `
 
 For note search, creation or organization, read [note discovery and linking](.agents/references/note-discovery.md). Keep this vault's own layout and metadata rules.
 
-For posts, captions, devlog entries, Patreon editions or supporter copy, read subcult-tv's `.agents/skills/social-craft/SKILL.md`; for brand systems and assets, `.agents/skills/studio-brand-system/SKILL.md`. Keep planning here and physical content in Studio.
+For posts, captions, devlog entries, Patreon editions or supporter copy, read subcult-tv's `.agents/skills/social-craft/SKILL.md`; for brand systems and assets, the `create-subcult-branding` skill from the Subsets core. Keep planning here and physical content in Studio.
