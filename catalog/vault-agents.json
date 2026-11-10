@@ -10,7 +10,7 @@
     {
       "source": "vault-agents/ars-malefica/AGENTS.md",
       "destination": "/home/onnwee/Work/Vaults/Ars Malefica/AGENTS.md",
-      "previous_sha256": "ca3c79850a814f4e257198c048b7dcf7a2f0505ce61694e545c8162bcc48234f"
+      "previous_sha256": "7f372c4ed569bc693b58ab9059491dc1b04a66e55dc1b86b15bc73142cf28c97"
     },
     {
       "source": "vault-agents/ars-malefica/skills/vault-monthly-maintenance/SKILL.md",
@@ -355,7 +355,7 @@
     {
       "source": "vault-agents/SUBCULT/AGENTS.md",
       "destination": "/home/onnwee/Work/Vaults/SUBCULT/AGENTS.md",
-      "previous_sha256": "aad1f8d930a1f18cb43952d7b531eb0c4abfd93661381a7503159a15fb6cb3ce"
+      "previous_sha256": "a101e43f10cd86bb2b0aaef1d5ea92d88f613cd73a4bc6dd0c1c217f902f1df0"
     },
     {
       "source": "vault-agents/SUBCULT/skills/patreon-manager/SKILL.md",
@@ -540,7 +540,7 @@
     {
       "source": "vault-agents/Machinum/AGENTS.md",
       "destination": "/home/onnwee/Work/Vaults/Machinum/AGENTS.md",
-      "previous_sha256": "6734fcfb567b5323e3c98a42f6a05ee6b301762c1718effb55b722f4da26501f"
+      "previous_sha256": "0c96055be47eb29aab1fa542afc286b2db293d5a86bc291194d6027adfbee4c6"
     },
     {
       "source": "vault-agents/Machinum/skills/operations-vault/SKILL.md",
@@ -555,7 +555,7 @@
     {
       "source": "vault-agents/Archivum/AGENTS.md",
       "destination": "/home/onnwee/Work/Vaults/Archivum/AGENTS.md",
-      "previous_sha256": "63ed5c72230f0288089b1fdefbb968f20fbebb8938f351fc53d1d4672b909194"
+      "previous_sha256": "ff88e5aaf786eb7f05ca32329180fed8cbd7513e01b51603635cb79c4c884b2a"
     },
     {
       "source": "vault-agents/Archivum/skills/library-vault/SKILL.md",
