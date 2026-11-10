@@ -1,0 +1,62 @@
+name: Mirror CI
+run-name: Mirror CI ${{ github.sha }}
+
+# Pull-request verification for the canonical Gitea repository. Gitea pushes
+# every branch here; the Kvant bridge reports the "Mirror CI gate" result back
+# to the Gitea pull request head. main is validated on Gitea after merge.
+on:
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    if: github.repository == 'subculture-collective/patstack'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          # The validator dependency is pinned in this file, so it keys the cache.
+          cache-dependency-path: .github/workflows/mirror-ci.yml
+      - name: Install validator dependency
+        run: python -m pip install PyYAML==6.0.3
+      - name: Validate catalog, provenance, resources and syntax
+        run: python -B scripts/validate.py --source-only
+      - name: Check generated task-stack guides
+        run: python -B scripts/stack-catalog.py --check
+      - name: Test installer and selection safeguards in disposable fixtures
+        run: python -B -m unittest discover -s tests -v
+
+  mirror-gate:
+    name: Mirror CI gate
+    if: always() && github.repository == 'subculture-collective/patstack'
+    needs:
+      - validate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Require every verification job
+        env:
+          RESULTS: ${{ toJSON(needs) }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          results = json.loads(os.environ["RESULTS"])
+          expected = {'validate'}
+          assert set(results) == expected, results
+          for name, result in results.items():
+              assert result["result"] == "success", name + " did not pass"
+          PY

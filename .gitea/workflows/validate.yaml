@@ -3,16 +3,16 @@ name: Source validation
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
 
+# Pull-request validation runs on the GitHub organization copy
+# (.github/workflows/mirror-ci.yml); Gitea validates main after merge.
 concurrency:
   group: patstack-${{ gitea.ref }}
-  cancel-in-progress: ${{ gitea.event_name == 'pull_request' }}
+  cancel-in-progress: true
 
 jobs:
   validate:
