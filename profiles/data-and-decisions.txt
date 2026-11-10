@@ -1,13 +1,13 @@
 # Investigate evidence, analyze data, compare alternatives and communicate a decision.
-claim-verifier
-data-narrative
-eval-bench
-landing-page-cro
-postgres-workbench
-primary-source-notes
-retrieval-pipeline
-runway-modeler
-sheet-wrangler
-strategy-backtester
-tetrad-impact-lens
-thinking-audit
+analyze-code-ownership
+analyze-technology-impact
+backtest-trading-strategies
+diagnose-reasoning
+evaluate-llm-behavior
+improve-conversion-rates
+model-startup-finances
+postgres
+present-data-findings
+research-with-sources
+spreadsheet-files
+verify-claims

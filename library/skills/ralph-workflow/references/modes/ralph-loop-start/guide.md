@@ -13,7 +13,7 @@ The user wants to start a Ralph loop. An iterative development loop where the sa
 The loop only works when the client has a Ralph stop hook installed. Check before promising a loop:
 
 - **Cursor** with the Ralph plugin: follow the workflow below (`.cursor/ralph/scratchpad.md`).
-- **Claude Code** with the official `ralph-workflow` plugin: run its `/ralph-loop "<prompt>" --max-iterations N --completion-promise "TEXT"` command instead. Its state file is `.claude/ralph-loop.local.md`; do not write the Cursor file.
+- **Claude Code** with the official `ralph-loop` plugin: run its `/ralph-loop "<prompt>" --max-iterations N --completion-promise "TEXT"` command instead. Its state file is `.claude/ralph-loop.local.md`; do not write the Cursor file.
 - **Codex or OpenCode**, or no plugin installed: no stop hook re-feeds the prompt. Say so, then offer to work the task to completion in this turn, or suggest an external loop such as `while :; do codex exec "$(cat PROMPT.md)"; done` with an iteration cap.
 
 ## Workflow (Cursor)

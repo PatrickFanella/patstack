@@ -13,7 +13,7 @@ Make a selected Studio system usable by its product without introducing competin
 - **Integrate:** carry an authorized handoff into the target repository and verify the resulting behavior.
 - **Refresh:** update an existing integration using its recorded source hashes and exporter; preserve later product edits and report drift.
 
-Use `studio-brand-system` to select/create a system and `studio-brand-audit` to review it. Preparation ends with mappings and previews. Integration authorizes scoped local edits; preserve the requested stopping point.
+Use `create-subcult-branding` to select/create a system and `studio-brand-audit` to review it. Preparation ends with mappings and previews. Integration authorizes scoped local edits; preserve the requested stopping point.
 
 ## Resolve the sources and consumer
 

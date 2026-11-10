@@ -53,7 +53,7 @@ def prepare(root=ROOT,state=DEFAULT_STATE,only_skills=None,only_shared=None):
  for p in (root/'skills').iterdir():
   if (p/'SKILL.md').exists():
    d=str(Path(config['personalRoot'])/p.name);destinations[d]=str(p)
-   groups[d]=1 if p.name=='ui-craft' else (3 if p.name in {'pet-hatchery','dep-upgrade-pilot','opentui-screens','tech-doc-writer'} else 2)
+   groups[d]=1 if p.name=='style-web-ui' else (3 if p.name in {'pet-hatchery','upgrade-major-versions','build-opentui-apps','tech-doc-writer'} else 2)
  for p in (root/'shared').iterdir():destinations[str(Path(config['sharedRoot'])/p.name)]=str(p);groups[str(Path(config['sharedRoot'])/p.name)]=1
  target=str(Path(config['blacktowerRoot'])/'.agents/skills/blacktower-development')
  destinations[target]=str(root/'repository-skills/blacktower-development');groups[target]=3
@@ -68,7 +68,7 @@ def prepare(root=ROOT,state=DEFAULT_STATE,only_skills=None,only_shared=None):
    destinations[p]=None;groups[p]=1
  for p in baseline.keys() | installed['paths'].keys():
   q=Path(p)
-  if q.parent==personal and q.name not in keep and q.name!='.system':destinations[p]=None;groups[p]=3 if q.name.startswith('principle-') or q.name=='writing-for-agents' else (1 if q.name in {'scope-grill','relay-baton','diff-auditor'} else 2)
+  if q.parent==personal and q.name not in keep and q.name!='.system':destinations[p]=None;groups[p]=3 if q.name.startswith('principle-') or q.name=='writing-for-agents' else (1 if q.name in {'define-requirements','handoff-and-recall-work','diff-auditor'} else 2)
  # Exclude only this private repo-local installation; preserve all pre-existing text.
  exclude=config['excludePath'];original=Path(exclude).read_text() if Path(exclude).exists() else ''
  marker='/.agents/skills/blacktower-development/'

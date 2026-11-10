@@ -1,6 +1,6 @@
 ---
 name: studio-brand-audit
-description: "Studio brand audit. Use to check a SUBCULT product's site or promo assets against its selected Studio brand pack, verify fixes, or repair drift. Not for choosing a new direction (studio-brand-system)."
+description: "Studio brand audit. Use to check a SUBCULT product's site or promo assets against its selected Studio brand pack, verify fixes, or repair drift. Not for choosing a new direction (create-subcult-branding)."
 ---
 
 # Studio brand audit
@@ -13,7 +13,7 @@ Check whether an implementation and its artwork agree with the selected system. 
 - **Verify fixes:** revisit specified findings against the changed sources and rendered result.
 - **Audit and repair:** apply requested repairs to the owning sources, rebuild the affected exports and verify them.
 
-A review request authorizes inspection and a report. A request to repair authorizes scoped fixes. Selecting a replacement system belongs to `studio-brand-system`; preparing product integration belongs to `studio-brand-handoff`. Use existing interface and accessibility review skills for those checks when available and relevant.
+A review request authorizes inspection and a report. A request to repair authorizes scoped fixes. Selecting a replacement system belongs to `create-subcult-branding`; preparing product integration belongs to `studio-brand-handoff`. Use existing interface and accessibility review skills for those checks when available and relevant.
 
 ## Resolve the baseline
 

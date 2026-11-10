@@ -20,248 +20,243 @@ See [the guide](../docs/SKILL-GROUPS.md) for selection, ownership and recovery.
 
 ## core
 
-Everyday repository work, debugging, delivery, web/API changes, tools, documentation and basic operations.
+Everyday repository work, debugging, delivery, web/API changes, documentation and basic operations.
 
-37 core members; 37 selected in total.
+26 core members; 26 selected in total.
 
 | Skill | Purpose |
 |---|---|
-| [`api-contract-smith`](../skills/api-contract-smith/SKILL.md) | Use when designing or changing REST or GraphQL contracts, OpenAPI specs, Node.js (Express/Fastify) services, or WebSocket/Socket.IO APIs. Not for login or access control; use auth-gatekeeper. |
-| [`auth-gatekeeper`](../skills/auth-gatekeeper/SKILL.md) | Use when implementing or debugging login, sessions, JWT or refresh tokens, OAuth2/OIDC, RBAC, or object-level access checks. Not for secret storage (secret-rotation-flow) or broad security audits. |
-| [`bash-script-craft`](../skills/bash-script-craft/SKILL.md) | Use when writing or fixing Bash/POSIX scripts, configuring ShellCheck, or adding Bats tests: quoting, exit status, traps and cleanup, Linux/macOS portability. |
-| [`behavior-proof`](../skills/behavior-proof/SKILL.md) | Verify an implementation, assess repository readiness, or create and maintain a project-specific verification workflow. |
-| [`boundary-drafter`](../skills/boundary-drafter/SKILL.md) | Design or critique architecture and module boundaries, compare interface alternatives, or plan deeper modules. |
-| [`bug-tracer`](../skills/bug-tracer/SKILL.md) | Use when a bug or reproducible failing test needs a root cause: reproduce, isolate one variable at a time, verify the fix; also recurring-failure postmortems. A red CI check starts in ci-medic; slowness goes to perf-hotpath-probe. |
-| [`build-sequencer`](../skills/build-sequencer/SKILL.md) | Plan or execute a feature, specification, migration or multi-session implementation sequence. |
-| [`ci-medic`](../skills/ci-medic/SKILL.md) | Use when a CI run or PR check fails, when watching checks until green on Gitea Actions or GitHub, or when designing pipelines, SAST scanning or pre-commit hooks. Not for test-suite design, or root-causing a test that also fails locally (bug-tracer). |
-| [`claim-verifier`](../library/skills/claim-verifier/SKILL.md) | Check claims in generated text or a public narrative against cited sources as a separate verification pass. |
-| [`cli-contract-smith`](../skills/cli-contract-smith/SKILL.md) | Use when designing or building a command-line tool: argument parsing, subcommands, completions, prompts, exit codes, or agent-safe noninteractive use. Not for shell scripts; use bash-script-craft. |
-| [`dep-upgrade-pilot`](../skills/dep-upgrade-pilot/SKILL.md) | Use when upgrading a dependency or framework across a major version, with breaking-change analysis, lockfile review and rollback. Not for a routine uv bump; use python-uv-workbench. |
-| [`diff-inspector`](../skills/diff-inspector/SKILL.md) | Review a working-tree, branch, commit or PR diff for defects, downstream impact or a requested review walkthrough. |
-| [`git-surgery`](../skills/git-surgery/SKILL.md) | Manage Git history and worktrees or prepare and ship a focused branch through its authorized PR workflow. |
-| [`go-craft`](../skills/go-craft/SKILL.md) | Use when writing, testing or profiling Go code: goroutines and channels, interfaces, generics, error handling, project layout, gRPC. Not for MCP server design; use mcp-server-forge. |
-| [`mcp-server-forge`](../skills/mcp-server-forge/SKILL.md) | Use when building or extending an MCP server in Go, TypeScript or Python: tool contracts, transports, errors, evaluation harnesses. Not for client registration; use mcp-wire-tracer. |
-| [`mcp-wire-tracer`](../skills/mcp-wire-tracer/SKILL.md) | Use when an MCP server fails to register, connect, initialize, list tools, authenticate or reload in Codex, Claude Code or OpenCode. Not for building a new server (mcp-server-forge). |
-| [`perf-hotpath-probe`](../skills/perf-hotpath-probe/SKILL.md) | Use when latency, CPU, memory, throughput or build time regressed or must improve: reproduce, profile, change one factor, re-measure. Not for functional bugs (bug-tracer). |
-| [`postgres-workbench`](../skills/postgres-workbench/SKILL.md) | Diagnose PostgreSQL queries, locks and indexes, or plan and apply requested schema migrations and backfills. |
-| [`primary-source-notes`](../library/skills/primary-source-notes/SKILL.md) | Research a question through quick web lookup, cited primary-source investigation, official OpenAI docs or a supplied ebook collection. |
-| [`privacy-controls`](../skills/privacy-controls/SKILL.md) | Use when building personal-data controls: consent, retention, deletion, export and portability, data-subject requests, audit trails. Not legal advice, and not for secrets or auth. |
-| [`prose-unslop`](../skills/prose-unslop/SKILL.md) | Required for user-facing prose and documentation: remove filler, preserve meaning and restate explanations that did not land. |
-| [`python-uv-workbench`](../skills/python-uv-workbench/SKILL.md) | Use for Python project work: uv environments and dependencies, pyproject packaging, typed settings, pytest suites, small utility scripts. Keeps the project's existing tooling. |
-| [`react-render-tuner`](../skills/react-render-tuner/SKILL.md) | Use for React or Next.js code: component APIs, server/client boundaries, state and data loading, rerenders, bundle size. Not for visual design direction (ui-craft). |
-| [`relay-baton`](../shared/relay-baton/SKILL.md) | Recall recent work or record a handoff before a context reset, session continuation or explicitly requested background handoff. |
-| [`repo-atlas`](../skills/repo-atlas/SKILL.md) | Orient in a repository or create and incrementally refresh its codemaps when requested. |
-| [`repo-research-trail`](../library/skills/repo-research-trail/SKILL.md) | Investigate a codebase, explain a flow or design decision, or inspect a lockfile-pinned dependency implementation. |
-| [`roadmap-slicer`](../skills/roadmap-slicer/SKILL.md) | Create and maintain roadmaps and tracker issues, triage reports, or configure repository contribution workflows. |
-| [`safe-refactor-pass`](../skills/safe-refactor-pass/SKILL.md) | Refactor without changing behavior or perform a requested mechanical change across many files. |
-| [`scope-grill`](../shared/scope-grill/SKILL.md) | Resolve requirements and produce a requested PRD, recurring-workflow specification or decision questionnaire. |
-| [`secret-rotation-flow`](../skills/secret-rotation-flow/SKILL.md) | Use when moving, injecting or rotating credentials for CI or runtime: Gitea or GitHub Actions secrets, Vault or cloud secret managers, leak scanning. |
-| [`secure-code-audit`](../skills/secure-code-audit/SKILL.md) | Use only when asked for a security review or secure-by-default code in Python, JavaScript/TypeScript or Go web stacks. Not for general code review or threat models. |
-| [`skill-stack-router`](../shared/skill-stack-router/SKILL.md) | Use when a task needs skills beyond the active list, or a procedure has required or optional companion skills. Route through default owners and load qualified specialists on demand; keep the current Subsets selection unless a different working stack is requested. |
-| [`studio-brand-system`](../skills/studio-brand-system/SKILL.md) | Studio brand system. Use to compare visual directions, write brand guides and tokens, produce asset packs, or take a SUBCULT product through branding, marketing and a small product site, working from subcult-tv/studio. Not for routine UI fixes. |
-| [`telemetry-signal-forge`](../skills/telemetry-signal-forge/SKILL.md) | Use when adding or fixing metrics, traces, dashboards, alerts or SLOs: Prometheus, Grafana, OpenTelemetry, Jaeger/Tempo, error budgets. Not for profiling slow code (perf-hotpath-probe). |
-| [`ts-type-design`](../skills/ts-type-design/SKILL.md) | Use for TypeScript type design, tsconfig and module settings, or JS-to-TS work; on request, shoehorn test migration or dependency-cruiser deep modules. Not for React (react-render-tuner) or choosing module boundaries (boundary-drafter). |
-| [`ui-craft`](../skills/ui-craft/SKILL.md) | Use when implementing or refining web UI visuals: layout, typography, color, motion, responsive and interaction states. Not for React state or architecture (react-render-tuner) or originality audits. |
-| [`writing-workbench`](../library/skills/writing-workbench/SKILL.md) | Develop or revise nonfiction, technical documentation, summaries or spoken adaptations from the supplied material. |
+| [`bash-scripts`](../skills/bash-scripts/SKILL.md) | Use when writing or fixing Bash/POSIX scripts, configuring ShellCheck, or adding Bats tests: quoting, exit status, traps and cleanup, Linux/macOS portability. |
+| [`build-and-fix-auth`](../skills/build-and-fix-auth/SKILL.md) | Use when implementing or debugging login, sessions, JWT or refresh tokens, OAuth2/OIDC, RBAC, or object-level access checks. Not for secret storage (manage-deployment-secrets) or broad security audits. |
+| [`build-and-fix-ci`](../skills/build-and-fix-ci/SKILL.md) | Use when a CI run or PR check fails, when watching checks until green on Gitea Actions or GitHub, or when designing pipelines, SAST scanning or pre-commit hooks. Not for test-suite design, or root-causing a test that also fails locally (fix-bugs). |
+| [`build-apis`](../skills/build-apis/SKILL.md) | Use when designing or changing REST or GraphQL contracts, OpenAPI specs, Node.js (Express/Fastify) services, or WebSocket/Socket.IO APIs. Not for login or access control; use build-and-fix-auth. |
+| [`create-subcult-branding`](../skills/create-subcult-branding/SKILL.md) | Studio brand system. Use to compare visual directions, write brand guides and tokens, produce asset packs, or take a SUBCULT product through branding, marketing and a small product site, working from subcult-tv/studio. Not for routine UI fixes. |
+| [`define-requirements`](../shared/define-requirements/SKILL.md) | Resolve requirements and produce a requested PRD, recurring-workflow specification or decision questionnaire. |
+| [`find-and-load-skills`](../shared/find-and-load-skills/SKILL.md) | Use when a task needs skills beyond the active list, or a procedure has required or optional companion skills. Route through default owners and load qualified specialists on demand; keep the current Subsets selection unless a different working stack is requested. |
+| [`fix-bugs`](../skills/fix-bugs/SKILL.md) | Use when a bug or reproducible failing test needs a root cause: reproduce, isolate one variable at a time, verify the fix; also recurring-failure postmortems. A red CI check starts in build-and-fix-ci; slowness goes to improve-performance. |
+| [`golang`](../skills/golang/SKILL.md) | Use when writing, testing or profiling Go code: goroutines and channels, interfaces, generics, error handling, project layout, gRPC. Not for MCP server design; use build-mcp-servers. |
+| [`handoff-and-recall-work`](../shared/handoff-and-recall-work/SKILL.md) | Recall recent work or record a handoff before a context reset, session continuation or explicitly requested background handoff. |
+| [`improve-performance`](../skills/improve-performance/SKILL.md) | Use when latency, CPU, memory, throughput or build time regressed or must improve: reproduce, profile, change one factor, re-measure. Not for functional bugs (fix-bugs). |
+| [`investigate-code`](../library/skills/investigate-code/SKILL.md) | Investigate a codebase, explain a flow or design decision, or inspect a lockfile-pinned dependency implementation. |
+| [`manage-deployment-secrets`](../skills/manage-deployment-secrets/SKILL.md) | Use when moving, injecting or rotating credentials for CI or runtime: Gitea or GitHub Actions secrets, Vault or cloud secret managers, leak scanning. |
+| [`manage-git-and-prs`](../skills/manage-git-and-prs/SKILL.md) | Manage Git history and worktrees or prepare and ship a focused branch through its authorized PR workflow. |
+| [`manage-roadmaps-and-issues`](../skills/manage-roadmaps-and-issues/SKILL.md) | Create and maintain roadmaps and tracker issues, triage reports, or configure repository contribution workflows. |
+| [`plan-and-implement-changes`](../skills/plan-and-implement-changes/SKILL.md) | Plan or execute a feature, specification, migration or multi-session implementation sequence. |
+| [`postgres`](../skills/postgres/SKILL.md) | Diagnose PostgreSQL queries, locks and indexes, or plan and apply requested schema migrations and backfills. |
+| [`python-projects`](../skills/python-projects/SKILL.md) | Use for Python project work: uv environments and dependencies, pyproject packaging, typed settings, pytest suites, small utility scripts. Keeps the project's existing tooling. |
+| [`react-and-nextjs`](../skills/react-and-nextjs/SKILL.md) | Use for React or Next.js code: component APIs, server/client boundaries, state and data loading, rerenders, bundle size. Not for visual design direction (style-web-ui). |
+| [`research-with-sources`](../library/skills/research-with-sources/SKILL.md) | Research a question through quick web lookup, cited primary-source investigation, official OpenAI docs or a supplied ebook collection. |
+| [`review-code-changes`](../skills/review-code-changes/SKILL.md) | Review a working-tree, branch, commit or PR diff for defects, downstream impact or a requested review walkthrough. |
+| [`style-web-ui`](../skills/style-web-ui/SKILL.md) | Use when implementing or refining web UI visuals: layout, typography, color, motion, responsive and interaction states. Not for React state or architecture (react-and-nextjs) or originality audits. |
+| [`typescript`](../skills/typescript/SKILL.md) | Use for TypeScript type design, tsconfig and module settings, or JS-to-TS work; on request, shoehorn test migration or dependency-cruiser deep modules. Not for React (react-and-nextjs) or choosing module boundaries (design-architecture). |
+| [`verify-implementation`](../skills/verify-implementation/SKILL.md) | Verify an implementation, assess repository readiness, or create and maintain a project-specific verification workflow. |
+| [`write-and-revise-nonfiction`](../library/skills/write-and-revise-nonfiction/SKILL.md) | Develop or revise nonfiction, technical documentation, summaries or spoken adaptations from the supplied material. |
+| [`write-plainly`](../skills/write-plainly/SKILL.md) | Required for user-facing prose and documentation: remove filler, preserve meaning and restate explanations that did not land. |
 
 ## build-agent-tools
 
 Build and configure agents, MCP servers, CLIs, retrieval, evaluations and development environments.
 
-9 additions; 46 selected in total.
+13 additions; 39 selected in total.
 
 | Skill | Purpose |
 |---|---|
-| [`agent-fanout-plan`](../library/skills/agent-fanout-plan/SKILL.md) | Coordinate authorized parallel agent work, candidate comparisons or a supported multi-phase agent workflow. |
-| [`cursor-sdk-builder`](../library/skills/cursor-sdk-builder/SKILL.md) | Cursor SDK (`@cursor/sdk`): write scripts, CI jobs or services that run Cursor agents programmatically, pick local or cloud runtime, or handle streaming and errors. Not for using the Cursor IDE. |
-| [`eval-bench`](../skills/eval-bench/SKILL.md) | Use when measuring LLM or prompt behavior: eval datasets, baselines, task metrics, LLM-as-judge rubrics, regression comparisons. Not for retrieval quality; use retrieval-pipeline. |
-| [`fleet-ops-router`](../library/skills/fleet-ops-router/SKILL.md) | Operate homelab services or use the matching infrastructure, repository-administration or host-runtime runbook. |
-| [`friction-miner`](../library/skills/friction-miner/SKILL.md) | Review recent sessions for durable working preferences and repeated friction, then propose or author the requested workflow improvement. |
-| [`opencode-config-tuner`](../library/skills/opencode-config-tuner/SKILL.md) | Configure OpenCode agents, skills, plugins, MCP, permissions or its supported scheduler. |
+| [`build-cli-tools`](../skills/build-cli-tools/SKILL.md) | Use when designing or building a command-line tool: argument parsing, subcommands, completions, prompts, exit codes, or agent-safe noninteractive use. Not for shell scripts; use bash-scripts. |
+| [`build-mcp-servers`](../skills/build-mcp-servers/SKILL.md) | Use when building or extending an MCP server in Go, TypeScript or Python: tool contracts, transports, errors, evaluation harnesses. Not for client registration; use fix-mcp-connections. |
+| [`build-rag-pipelines`](../skills/build-rag-pipelines/SKILL.md) | Use when building or tuning retrieval for LLM answers: ingestion and chunking, vector, keyword or hybrid search, reranking, citations, retrieval evaluation. |
+| [`build-with-cursor-sdk`](../library/skills/build-with-cursor-sdk/SKILL.md) | Cursor SDK (`@cursor/sdk`): write scripts, CI jobs or services that run Cursor agents programmatically, pick local or cloud runtime, or handle streaming and errors. Not for using the Cursor IDE. |
+| [`claude-code-git-safety`](../library/skills/claude-code-git-safety/SKILL.md) | Claude Code git guardrails: install a PreToolUse hook that blocks git push, reset --hard, clean -f, branch -D and similar commands. Claude Code only. |
+| [`configure-opencode`](../library/skills/configure-opencode/SKILL.md) | Configure OpenCode agents, skills, plugins, MCP, permissions or its supported scheduler. |
+| [`coordinate-parallel-agents`](../library/skills/coordinate-parallel-agents/SKILL.md) | Coordinate authorized parallel agent work, candidate comparisons or a supported multi-phase agent workflow. |
+| [`evaluate-llm-behavior`](../skills/evaluate-llm-behavior/SKILL.md) | Use when measuring LLM or prompt behavior: eval datasets, baselines, task metrics, LLM-as-judge rubrics, regression comparisons. Not for retrieval quality; use build-rag-pipelines. |
+| [`fix-mcp-connections`](../skills/fix-mcp-connections/SKILL.md) | Use when an MCP server fails to register, connect, initialize, list tools, authenticate or reload in Codex, Claude Code or OpenCode. Not for building a new server (build-mcp-servers). |
+| [`improve-workflow-from-sessions`](../library/skills/improve-workflow-from-sessions/SKILL.md) | Review recent sessions for durable working preferences and repeated friction, then propose or author the requested workflow improvement. |
+| [`manage-infrastructure`](../library/skills/manage-infrastructure/SKILL.md) | Operate homelab services or use the matching infrastructure, repository-administration or host-runtime runbook. |
+| [`manage-skills-and-plugins`](../library/skills/manage-skills-and-plugins/SKILL.md) | Create or evaluate agent skills, install an explicitly requested unmanaged skill, or scaffold a Codex or Cursor plugin. |
 | [`ralph-workflow`](../library/skills/ralph-workflow/SKILL.md) | Explain, start or stop a Ralph iteration loop when explicitly requested and supported by the current client. |
-| [`retrieval-pipeline`](../skills/retrieval-pipeline/SKILL.md) | Use when building or tuning retrieval for LLM answers: ingestion and chunking, vector, keyword or hybrid search, reranking, citations, retrieval evaluation. |
-| [`skill-forge`](../library/skills/skill-forge/SKILL.md) | Create or evaluate agent skills, install an explicitly requested unmanaged skill, or scaffold a Codex or Cursor plugin. |
 
 ## build-and-ship
 
 Take a feature from understanding and design through implementation, review, tests and a PR.
 
-10 additions; 47 selected in total.
+16 additions; 42 selected in total.
 
 | Skill | Purpose |
 |---|---|
-| [`commit-recap`](../library/skills/commit-recap/SKILL.md) | Summarize authored commits for a requested date range as a short status update or weekly review. |
-| [`fleet-ops-router`](../library/skills/fleet-ops-router/SKILL.md) | Operate homelab services or use the matching infrastructure, repository-administration or host-runtime runbook. |
-| [`observe-tune-loop`](../library/skills/observe-tune-loop/SKILL.md) | Observation loop for a running system: check recent activity, output quality and goal fit, then make surgical fixes. Use for "observe", "tune", or recurring health checks. |
-| [`red-green-loop`](../skills/red-green-loop/SKILL.md) | Use when asked for test-first work: red-green-refactor in vertical slices, test boundaries, mocks only at system edges. Not for pruning an existing suite (test-suite-pruner). |
-| [`rust-ownership-async`](../skills/rust-ownership-async/SKILL.md) | Use for Rust code: ownership, lifetimes and smart pointers, async/Tokio and cancellation, concurrency, error handling, within the existing crate design. |
-| [`stride-threat-map`](../skills/stride-threat-map/SKILL.md) | Use only when asked to threat-model a repository or system: assets, trust boundaries, STRIDE, attack trees, prioritized mitigations. Not for line-level code review. |
-| [`stripe-checkout-wiring`](../library/skills/stripe-checkout-wiring/SKILL.md) | Stripe integration code: Checkout, Payment Intents, subscriptions, customer portal and signed webhooks. Use when adding or fixing Stripe payment flows in an app. Not for account operations; use stripe-billing-guard. |
+| [`clean-up-test-suites`](../skills/clean-up-test-suites/SKILL.md) | Use when a test suite is oversized, slow, flaky or brittle: baseline it, delete obsolete tests with evidence, reshape around contracts. Not for test-first work (test-driven-development). |
+| [`design-architecture`](../skills/design-architecture/SKILL.md) | Design or critique architecture and module boundaries, compare interface alternatives, or plan deeper modules. |
+| [`integrate-stripe-payments`](../library/skills/integrate-stripe-payments/SKILL.md) | Stripe integration code: Checkout, Payment Intents, subscriptions, customer portal and signed webhooks. Use when adding or fixing Stripe payment flows in an app. Not for account operations; use manage-stripe-account. |
+| [`manage-infrastructure`](../library/skills/manage-infrastructure/SKILL.md) | Operate homelab services or use the matching infrastructure, repository-administration or host-runtime runbook. |
+| [`map-codebase`](../skills/map-codebase/SKILL.md) | Orient in a repository or create and incrementally refresh its codemaps when requested. |
+| [`pci-dss-compliance`](../library/skills/pci-dss-compliance/SKILL.md) | PCI DSS work for card payment systems: scope reduction, tokenization, cardholder data handling, segmentation and audit evidence. Use when building or reviewing payment flows. |
+| [`privacy-controls`](../skills/privacy-controls/SKILL.md) | Use when building personal-data controls: consent, retention, deletion, export and portability, data-subject requests, audit trails. Not legal advice, and not for secrets or auth. |
+| [`refactor-code`](../skills/refactor-code/SKILL.md) | Refactor without changing behavior or perform a requested mechanical change across many files. |
+| [`rust`](../skills/rust/SKILL.md) | Use for Rust code: ownership, lifetimes and smart pointers, async/Tokio and cancellation, concurrency, error handling, within the existing crate design. |
+| [`secure-web-code`](../skills/secure-web-code/SKILL.md) | Use only when asked for a security review or secure-by-default code in Python, JavaScript/TypeScript or Go web stacks. Not for general code review or threat models. |
+| [`summarize-commits`](../library/skills/summarize-commits/SKILL.md) | Summarize authored commits for a requested date range as a short status update or weekly review. |
 | [`temporal-workflows`](../library/skills/temporal-workflows/SKILL.md) | Design durable Temporal workflows and verify Python replay, timers, activities and determinism. |
-| [`test-suite-pruner`](../skills/test-suite-pruner/SKILL.md) | Use when a test suite is oversized, slow, flaky or brittle: baseline it, delete obsolete tests with evidence, reshape around contracts. Not for test-first work (red-green-loop). |
+| [`test-driven-development`](../skills/test-driven-development/SKILL.md) | Use when asked for test-first work: red-green-refactor in vertical slices, test boundaries, mocks only at system edges. Not for pruning an existing suite (clean-up-test-suites). |
+| [`threat-modeling`](../skills/threat-modeling/SKILL.md) | Use only when asked to threat-model a repository or system: assets, trust boundaries, STRIDE, attack trees, prioritized mitigations. Not for line-level code review. |
 | [`throwaway-prototype`](../skills/throwaway-prototype/SKILL.md) | Use when a design question needs a throwaway runnable answer: a terminal app that exercises a state model, or switchable UI variants on one route. Not for production code. |
+| [`upgrade-major-versions`](../skills/upgrade-major-versions/SKILL.md) | Use when upgrading a dependency or framework across a major version, with breaking-change analysis, lockfile review and rollback. Not for a routine uv bump; use python-projects. |
 
 ## creative-production
 
 Plan and produce visual, audio, video or slide material with a coherent voice and delivery format.
 
-9 additions; 46 selected in total.
+7 additions; 33 selected in total.
 
 | Skill | Purpose |
 |---|---|
-| [`game-fun-theory`](../library/skills/game-fun-theory/SKILL.md) | Game design theory: apply MDA, player psychology, balance and progression principles to explain or improve why a game is fun. Not for building the game (web-game-loop). |
-| [`lyric-doctor`](../library/skills/lyric-doctor/SKILL.md) | Lyric diagnosis across prosody, rhyme, meaning, register, sound and structure. Use when human or AI-written lyrics feel flat, cliched, awkward or mismatched. |
-| [`page-copy-forge`](../library/skills/page-copy-forge/SKILL.md) | Write or adapt requested marketing pages, social posts, email sequences, internal updates, book blurbs or comparison copy. |
-| [`pptx-forge`](../library/skills/pptx-forge/SKILL.md) | Design, create, revise or inspect a presentation, including PowerPoint files and slide narrative. |
-| [`raster-image-gen`](../library/skills/raster-image-gen/SKILL.md) | Generate or edit raster images, prepare marketing graphics or package an explicitly requested animated pet. |
-| [`sonic-fingerprint`](../library/skills/sonic-fingerprint/SKILL.md) | Artist sound description without names. Use to extract an artist's or band's sonic traits into vocabulary for AI music prompts, music writing or creative recombination. |
-| [`video-production-lab`](../library/skills/video-production-lab/SKILL.md) | Video production: create or generate video with AI tools (Veo, Runway, Kling, HeyGen, Synthesia) or code (Remotion, Hyperframes). Not for deciding what to post; use social-post-craft. |
-| [`voice-ledger`](../shared/voice-ledger/SKILL.md) | Extract or maintain a personal or product writing-voice guide from real source samples. |
-| [`web-game-loop`](../library/skills/web-game-loop/SKILL.md) | Web game loop: build or iterate on an HTML/JS canvas game, running a Playwright action-and-screenshot check with render_game_to_text after each small change. |
+| [`build-writing-voice-guide`](../shared/build-writing-voice-guide/SKILL.md) | Extract or maintain a personal or product writing-voice guide from real source samples. |
+| [`create-videos`](../library/skills/create-videos/SKILL.md) | Video production: create or generate video with AI tools (Veo, Runway, Kling, HeyGen, Synthesia) or code (Remotion, Hyperframes). Not for deciding what to post; use the social-post-craft mode of write-and-adapt-copy. |
+| [`describe-artist-sound`](../library/skills/describe-artist-sound/SKILL.md) | Artist sound description without names. Use to extract an artist's or band's sonic traits into vocabulary for AI music prompts, music writing or creative recombination. |
+| [`diagnose-song-lyrics`](../library/skills/diagnose-song-lyrics/SKILL.md) | Lyric diagnosis across prosody, rhyme, meaning, register, sound and structure. Use when human or AI-written lyrics feel flat, cliched, awkward or mismatched. |
+| [`generate-and-edit-images`](../library/skills/generate-and-edit-images/SKILL.md) | Generate or edit raster images, prepare marketing graphics or package an explicitly requested animated pet. |
+| [`slide-decks`](../library/skills/slide-decks/SKILL.md) | Design, create, revise or inspect a presentation, including PowerPoint files and slide narrative. |
+| [`write-and-adapt-copy`](../library/skills/write-and-adapt-copy/SKILL.md) | Write or adapt requested marketing pages, social posts, email sequences, internal updates, book blurbs or comparison copy. |
 
 ## data-and-decisions
 
 Investigate evidence, analyze data, compare alternatives and communicate a decision.
 
-9 additions; 46 selected in total.
+10 additions; 36 selected in total.
 
 | Skill | Purpose |
 |---|---|
-| [`data-narrative`](../library/skills/data-narrative/SKILL.md) | Data narrative: turn analysis results into a stakeholder report or presentation with context, chosen charts and a clear recommendation. |
-| [`eval-bench`](../skills/eval-bench/SKILL.md) | Use when measuring LLM or prompt behavior: eval datasets, baselines, task metrics, LLM-as-judge rubrics, regression comparisons. Not for retrieval quality; use retrieval-pipeline. |
-| [`landing-page-cro`](../library/skills/landing-page-cro/SKILL.md) | Analyze a marketing page or plan a conversion experiment and its behavioral hypothesis. |
-| [`retrieval-pipeline`](../skills/retrieval-pipeline/SKILL.md) | Use when building or tuning retrieval for LLM answers: ingestion and chunking, vector, keyword or hybrid search, reranking, citations, retrieval evaluation. |
-| [`runway-modeler`](../library/skills/runway-modeler/SKILL.md) | Startup finance: financial models, burn and runway, fundraising scenarios, TAM/SAM/SOM sizing, SaaS metrics dashboards. Use when modeling a startup's numbers. Not for accounting close. |
-| [`sheet-wrangler`](../library/skills/sheet-wrangler/SKILL.md) | Create, edit, analyze or format .xlsx, .csv or .tsv with openpyxl and pandas while preserving formulas and formatting; render via LibreOffice for checks. Use for spreadsheet file work. |
-| [`strategy-backtester`](../library/skills/strategy-backtester/SKILL.md) | Trading backtests: build or review a strategy backtester, avoid look-ahead and survivorship bias, model transaction costs, and run walk-forward validation. |
-| [`tetrad-impact-lens`](../library/skills/tetrad-impact-lens/SKILL.md) | Technology impact: analyze a technology's societal effects with McLuhan's tetrad when evaluating adoption, policy or a new tool. Not for vendor or cost comparisons. |
-| [`thinking-audit`](../library/skills/thinking-audit/SKILL.md) | Thinking audit: diagnose a stuck or distorted reasoning process by checking cognitive orientation and the balance of thinking operations. |
+| [`analyze-code-ownership`](../skills/analyze-code-ownership/SKILL.md) | Use only when asked for security ownership or bus-factor analysis from Git history: orphaned sensitive code, CODEOWNERS reality checks, ownership clusters. |
+| [`analyze-technology-impact`](../library/skills/analyze-technology-impact/SKILL.md) | Technology impact: analyze a technology's societal effects with McLuhan's tetrad when evaluating adoption, policy or a new tool. Not for vendor or cost comparisons. |
+| [`backtest-trading-strategies`](../library/skills/backtest-trading-strategies/SKILL.md) | Trading backtests: build or review a strategy backtester, avoid look-ahead and survivorship bias, model transaction costs, and run walk-forward validation. |
+| [`diagnose-reasoning`](../library/skills/diagnose-reasoning/SKILL.md) | Thinking audit: diagnose a stuck or distorted reasoning process by checking cognitive orientation and the balance of thinking operations. |
+| [`evaluate-llm-behavior`](../skills/evaluate-llm-behavior/SKILL.md) | Use when measuring LLM or prompt behavior: eval datasets, baselines, task metrics, LLM-as-judge rubrics, regression comparisons. Not for retrieval quality; use build-rag-pipelines. |
+| [`improve-conversion-rates`](../library/skills/improve-conversion-rates/SKILL.md) | Analyze a marketing page or plan a conversion experiment and its behavioral hypothesis. |
+| [`model-startup-finances`](../library/skills/model-startup-finances/SKILL.md) | Startup finance: financial models, burn and runway, fundraising scenarios, TAM/SAM/SOM sizing, SaaS metrics dashboards. Use when modeling a startup's numbers. Not for accounting close. |
+| [`present-data-findings`](../library/skills/present-data-findings/SKILL.md) | Data narrative: turn analysis results into a stakeholder report or presentation with context, chosen charts and a clear recommendation. |
+| [`spreadsheet-files`](../library/skills/spreadsheet-files/SKILL.md) | Create, edit, analyze or format .xlsx, .csv or .tsv with openpyxl and pandas while preserving formulas and formatting; render via LibreOffice for checks. Use for spreadsheet file work. |
+| [`verify-claims`](../library/skills/verify-claims/SKILL.md) | Check claims in generated text or a public narrative against cited sources as a separate verification pass. |
 
 ## diagnose-and-repair
 
 Reproduce a failure, inspect code/runtime evidence, repair it and prove the result.
 
-9 additions; 46 selected in total.
+7 additions; 33 selected in total.
 
 | Skill | Purpose |
 |---|---|
-| [`binary-dissector`](../library/skills/binary-dissector/SKILL.md) | Reverse-engineer executable binaries or network protocols: disassembly, decompilation, control flow, packet dissection. Use for authorized analysis of compiled code or wire formats. Not for book outlines. |
-| [`bus-factor-map`](../skills/bus-factor-map/SKILL.md) | Use only when asked for security ownership or bus-factor analysis from Git history: orphaned sensitive code, CODEOWNERS reality checks, ownership clusters. |
-| [`fleet-ops-router`](../library/skills/fleet-ops-router/SKILL.md) | Operate homelab services or use the matching infrastructure, repository-administration or host-runtime runbook. |
-| [`pci-scope-check`](../library/skills/pci-scope-check/SKILL.md) | PCI DSS work for card payment systems: scope reduction, tokenization, cardholder data handling, segmentation and audit evidence. Use when building or reviewing payment flows. |
-| [`ram-dump-sleuth`](../library/skills/ram-dump-sleuth/SKILL.md) | Memory forensics on RAM captures: acquisition, Volatility 3 process and network analysis, artifact extraction and malware triage. Use during incident response or dump analysis. |
-| [`strategy-backtester`](../library/skills/strategy-backtester/SKILL.md) | Trading backtests: build or review a strategy backtester, avoid look-ahead and survivorship bias, model transaction costs, and run walk-forward validation. |
-| [`stripe-checkout-wiring`](../library/skills/stripe-checkout-wiring/SKILL.md) | Stripe integration code: Checkout, Payment Intents, subscriptions, customer portal and signed webhooks. Use when adding or fixing Stripe payment flows in an app. Not for account operations; use stripe-billing-guard. |
-| [`temporal-workflows`](../library/skills/temporal-workflows/SKILL.md) | Design durable Temporal workflows and verify Python replay, timers, activities and determinism. |
-| [`test-suite-pruner`](../skills/test-suite-pruner/SKILL.md) | Use when a test suite is oversized, slow, flaky or brittle: baseline it, delete obsolete tests with evidence, reshape around contracts. Not for test-first work (red-green-loop). |
+| [`analyze-ram-dumps`](../library/skills/analyze-ram-dumps/SKILL.md) | Memory forensics on RAM captures: acquisition, Volatility 3 process and network analysis, artifact extraction and malware triage. Use during incident response or dump analysis. |
+| [`build-and-fix-observability`](../skills/build-and-fix-observability/SKILL.md) | Use when adding or fixing metrics, traces, dashboards, alerts or SLOs: Prometheus, Grafana, OpenTelemetry, Jaeger/Tempo, error budgets. Not for profiling slow code (improve-performance). |
+| [`clean-up-test-suites`](../skills/clean-up-test-suites/SKILL.md) | Use when a test suite is oversized, slow, flaky or brittle: baseline it, delete obsolete tests with evidence, reshape around contracts. Not for test-first work (test-driven-development). |
+| [`design-architecture`](../skills/design-architecture/SKILL.md) | Design or critique architecture and module boundaries, compare interface alternatives, or plan deeper modules. |
+| [`fix-mcp-connections`](../skills/fix-mcp-connections/SKILL.md) | Use when an MCP server fails to register, connect, initialize, list tools, authenticate or reload in Codex, Claude Code or OpenCode. Not for building a new server (build-mcp-servers). |
+| [`manage-infrastructure`](../library/skills/manage-infrastructure/SKILL.md) | Operate homelab services or use the matching infrastructure, repository-administration or host-runtime runbook. |
+| [`reverse-engineer-binaries-protocols`](../library/skills/reverse-engineer-binaries-protocols/SKILL.md) | Reverse-engineer executable binaries or network protocols: disassembly, decompilation, control flow, packet dissection. Use for authorized analysis of compiled code or wire formats. Not for book outlines. |
 
 ## fiction-and-worlds
 
 Develop stories and settings, draft scenes, revise character/dialogue, and maintain continuity.
 
-11 additions; 48 selected in total.
+9 additions; 35 selected in total.
 
 | Skill | Purpose |
 |---|---|
-| [`branch-doctor`](../library/skills/branch-doctor/SKILL.md) | Branching narrative diagnosis. Use when player choices feel meaningless, branches grow unmanageable, agency fights the authored story, or interactive elements break narrative flow. |
-| [`conlang-forge`](../library/skills/conlang-forge/SKILL.md) | Design fictional naming languages, full conlangs, language families, dialects or historical sound changes. |
-| [`fiction-editor`](../library/skills/fiction-editor/SKILL.md) | Edit fiction for character, dialogue, prose, representation, humor or predictable story elements. |
-| [`lyric-doctor`](../library/skills/lyric-doctor/SKILL.md) | Lyric diagnosis across prosody, rhyme, meaning, register, sound and structure. Use when human or AI-written lyrics feel flat, cliched, awkward or mismatched. |
-| [`name-forge`](../library/skills/name-forge/SKILL.md) | Naming diagnosis and generation for brands, products, characters, places and titles. Use when a name feels off or a set of names needs a systematic method. |
-| [`page-copy-forge`](../library/skills/page-copy-forge/SKILL.md) | Write or adapt requested marketing pages, social posts, email sequences, internal updates, book blurbs or comparison copy. |
-| [`rpg-game-master`](../library/skills/rpg-game-master/SKILL.md) | Run a requested tabletop or solo narrative RPG session or adjust its narration and table tone. |
-| [`story-dna-extractor`](../library/skills/story-dna-extractor/SKILL.md) | Analyze a source story's functional structure or adapt that structure into a requested new context. |
-| [`story-workbench`](../library/skills/story-workbench/SKILL.md) | Develop a story through diagnosis, coaching, premises or requested prose and chapter drafting. |
-| [`voice-ledger`](../shared/voice-ledger/SKILL.md) | Extract or maintain a personal or product writing-voice guide from real source samples. |
-| [`world-bible`](../library/skills/world-bible/SKILL.md) | Maintain or diagnose a fictional world, its canon and persistent world-state, or generate requested creative randomization resources. |
+| [`analyze-and-adapt-stories`](../library/skills/analyze-and-adapt-stories/SKILL.md) | Analyze a source story's functional structure or adapt that structure into a requested new context. |
+| [`build-writing-voice-guide`](../shared/build-writing-voice-guide/SKILL.md) | Extract or maintain a personal or product writing-voice guide from real source samples. |
+| [`design-fictional-languages`](../library/skills/design-fictional-languages/SKILL.md) | Design fictional naming languages, full conlangs, language families, dialects or historical sound changes. |
+| [`develop-and-draft-fiction`](../library/skills/develop-and-draft-fiction/SKILL.md) | Develop a story through diagnosis, coaching, premises or requested prose and chapter drafting. |
+| [`diagnose-and-generate-names`](../library/skills/diagnose-and-generate-names/SKILL.md) | Naming diagnosis and generation for brands, products, characters, places and titles. Use when a name feels off or a set of names needs a systematic method. |
+| [`diagnose-branching-stories`](../library/skills/diagnose-branching-stories/SKILL.md) | Branching narrative diagnosis. Use when player choices feel meaningless, branches grow unmanageable, agency fights the authored story, or interactive elements break narrative flow. |
+| [`edit-fiction`](../library/skills/edit-fiction/SKILL.md) | Edit fiction for character, dialogue, prose, representation, humor or predictable story elements. |
+| [`fictional-worldbuilding`](../library/skills/fictional-worldbuilding/SKILL.md) | Maintain or diagnose a fictional world, its canon and persistent world-state, or generate requested creative randomization resources. |
+| [`run-rpg-sessions`](../library/skills/run-rpg-sessions/SKILL.md) | Run a requested tabletop or solo narrative RPG session or adjust its narration and table tone. |
 
 ## learn-and-practice
 
 Plan learning, study examples, tutor, build exercises and review progress.
 
-3 additions; 40 selected in total.
+3 additions; 29 selected in total.
 
 | Skill | Purpose |
 |---|---|
-| [`lesson-workspace`](../library/skills/lesson-workspace/SKILL.md) | Plan or teach a course, tutor a concept, scaffold requested exercises or review learning progress. |
-| [`red-green-loop`](../skills/red-green-loop/SKILL.md) | Use when asked for test-first work: red-green-refactor in vertical slices, test boundaries, mocks only at system edges. Not for pruning an existing suite (test-suite-pruner). |
-| [`story-dna-extractor`](../library/skills/story-dna-extractor/SKILL.md) | Analyze a source story's functional structure or adapt that structure into a requested new context. |
+| [`analyze-and-adapt-stories`](../library/skills/analyze-and-adapt-stories/SKILL.md) | Analyze a source story's functional structure or adapt that structure into a requested new context. |
+| [`plan-and-teach-lessons`](../library/skills/plan-and-teach-lessons/SKILL.md) | Plan or teach a course, tutor a concept, scaffold requested exercises or review learning progress. |
+| [`test-driven-development`](../skills/test-driven-development/SKILL.md) | Use when asked for test-first work: red-green-refactor in vertical slices, test boundaries, mocks only at system edges. Not for pruning an existing suite (clean-up-test-suites). |
 
 ## mobile-and-interfaces
 
 Build and test mobile, terminal, editor, browser and interactive interfaces.
 
-7 additions; 44 selected in total.
+8 additions; 34 selected in total.
 
 | Skill | Purpose |
 |---|---|
-| [`browser-workbench`](../skills/browser-workbench/SKILL.md) | Operate a permitted browser or isolated desktop, or capture a requested host screenshot using the current client tools. |
-| [`opentui-screens`](../library/skills/opentui-screens/SKILL.md) | OpenTUI terminal UI code: renderer lifecycle, layout, keyboard input, components, testing, and React or Solid bindings. Not for other TUI frameworks. |
-| [`rn-expo-builder`](../library/skills/rn-expo-builder/SKILL.md) | Use for React Native or Expo work: navigation, native modules, offline sync, list and animation performance, mobile styling. Not for web React (react-render-tuner). |
-| [`tv-candle-charts`](../library/skills/tv-candle-charts/SKILL.md) | TradingView Lightweight Charts v5 code: series, time and price scales, realtime updates, markers, panes, plugins and primitives, React or Vue wrappers. Not for other chart libraries. |
-| [`userscript-workshop`](../library/skills/userscript-workshop/SKILL.md) | Userscripts: build or debug browser userscripts, covering page lifecycle, injection, manager permissions and update behavior. Not for full browser extensions. |
-| [`vscode-extension-lab`](../library/skills/vscode-extension-lab/SKILL.md) | VS Code extensions: commands, menus, contribution points, when-clause visibility and localized user-facing strings. |
-| [`web-game-loop`](../library/skills/web-game-loop/SKILL.md) | Web game loop: build or iterate on an HTML/JS canvas game, running a Playwright action-and-screenshot check with render_game_to_text after each small change. |
+| [`build-opentui-apps`](../library/skills/build-opentui-apps/SKILL.md) | OpenTUI terminal UI code: renderer lifecycle, layout, keyboard input, components, testing, and React or Solid bindings. Not for other TUI frameworks. |
+| [`build-userscripts`](../library/skills/build-userscripts/SKILL.md) | Userscripts: build or debug browser userscripts, covering page lifecycle, injection, manager permissions and update behavior. Not for full browser extensions. |
+| [`build-vscode-extensions`](../library/skills/build-vscode-extensions/SKILL.md) | VS Code extensions: commands, menus, contribution points, when-clause visibility and localized user-facing strings. |
+| [`build-web-games`](../library/skills/build-web-games/SKILL.md) | Web game loop: build or iterate on an HTML/JS canvas game, running a Playwright action-and-screenshot check with render_game_to_text after each small change. |
+| [`control-browser-and-desktop`](../skills/control-browser-and-desktop/SKILL.md) | Operate a permitted browser or isolated desktop, or capture a requested host screenshot using the current client tools. |
+| [`improve-game-design`](../library/skills/improve-game-design/SKILL.md) | Game design theory: apply MDA, player psychology, balance and progression principles to explain or improve why a game is fun. Not for building the game (build-web-games). |
+| [`react-native-expo`](../library/skills/react-native-expo/SKILL.md) | Use for React Native or Expo work: navigation, native modules, offline sync, list and animation performance, mobile styling. Not for web React (react-and-nextjs). |
+| [`tradingview-lightweight-charts`](../library/skills/tradingview-lightweight-charts/SKILL.md) | TradingView Lightweight Charts v5 code: series, time and price scales, realtime updates, markers, panes, plugins and primitives, React or Vue wrappers. Not for other chart libraries. |
 
 ## operate-homelab
 
 Operate services and personal tools, investigate incidents, change infrastructure and verify recovery.
 
-11 additions; 48 selected in total.
+9 additions; 35 selected in total.
 
 | Skill | Purpose |
 |---|---|
-| [`browser-workbench`](../skills/browser-workbench/SKILL.md) | Operate a permitted browser or isolated desktop, or capture a requested host screenshot using the current client tools. |
-| [`claude-git-guardrails`](../library/skills/claude-git-guardrails/SKILL.md) | Claude Code git guardrails: install a PreToolUse hook that blocks git push, reset --hard, clean -f, branch -D and similar commands. Claude Code only. |
-| [`fleet-ops-router`](../library/skills/fleet-ops-router/SKILL.md) | Operate homelab services or use the matching infrastructure, repository-administration or host-runtime runbook. |
+| [`build-and-fix-observability`](../skills/build-and-fix-observability/SKILL.md) | Use when adding or fixing metrics, traces, dashboards, alerts or SLOs: Prometheus, Grafana, OpenTelemetry, Jaeger/Tempo, error budgets. Not for profiling slow code (improve-performance). |
+| [`check-and-tune-systems`](../library/skills/check-and-tune-systems/SKILL.md) | Observation loop for a running system: check recent activity, output quality and goal fit, then make surgical fixes. Use for "observe", "tune", or recurring health checks. |
+| [`configure-opencode`](../library/skills/configure-opencode/SKILL.md) | Configure OpenCode agents, skills, plugins, MCP, permissions or its supported scheduler. |
+| [`control-browser-and-desktop`](../skills/control-browser-and-desktop/SKILL.md) | Operate a permitted browser or isolated desktop, or capture a requested host screenshot using the current client tools. |
 | [`karakeep-bookmarks`](../library/skills/karakeep-bookmarks/SKILL.md) | Karakeep bookmark manager through its CLI or API: add, search and tag bookmarks, manage lists, highlights and rules. Requires KARAKEEP_API_KEY and the server address. |
-| [`obsidian-cli-driver`](../library/skills/obsidian-cli-driver/SKILL.md) | Obsidian CLI against a running Obsidian app: read, create, search and edit notes, tasks and properties; reload plugins, run JS, capture errors and inspect the DOM during plugin work. |
-| [`opencode-config-tuner`](../library/skills/opencode-config-tuner/SKILL.md) | Configure OpenCode agents, skills, plugins, MCP, permissions or its supported scheduler. |
-| [`strategy-backtester`](../library/skills/strategy-backtester/SKILL.md) | Trading backtests: build or review a strategy backtester, avoid look-ahead and survivorship bias, model transaction costs, and run walk-forward validation. |
-| [`stride-threat-map`](../skills/stride-threat-map/SKILL.md) | Use only when asked to threat-model a repository or system: assets, trust boundaries, STRIDE, attack trees, prioritized mitigations. Not for line-level code review. |
-| [`stripe-checkout-wiring`](../library/skills/stripe-checkout-wiring/SKILL.md) | Stripe integration code: Checkout, Payment Intents, subscriptions, customer portal and signed webhooks. Use when adding or fixing Stripe payment flows in an app. Not for account operations; use stripe-billing-guard. |
-| [`super-productivity-workflow`](../library/skills/super-productivity-workflow/SKILL.md) | Plan tasks and routines or diagnose the Super Productivity MCP and plugin bridge. |
-| [`temporal-workflows`](../library/skills/temporal-workflows/SKILL.md) | Design durable Temporal workflows and verify Python replay, timers, activities and determinism. |
+| [`manage-infrastructure`](../library/skills/manage-infrastructure/SKILL.md) | Operate homelab services or use the matching infrastructure, repository-administration or host-runtime runbook. |
+| [`manage-super-productivity`](../library/skills/manage-super-productivity/SKILL.md) | Plan tasks and routines or diagnose the Super Productivity MCP and plugin bridge. |
+| [`threat-modeling`](../skills/threat-modeling/SKILL.md) | Use only when asked to threat-model a repository or system: assets, trust boundaries, STRIDE, attack trees, prioritized mitigations. Not for line-level code review. |
+| [`use-obsidian-cli`](../library/skills/use-obsidian-cli/SKILL.md) | Obsidian CLI against a running Obsidian app: read, create, search and edit notes, tasks and properties; reload plugins, run JS, capture errors and inspect the DOM during plugin work. |
 
 ## product-and-launch
 
 Research a market, choose positioning, prepare brand/product copy, refine the interface and plan a launch.
 
-14 additions; 51 selected in total.
+16 additions; 42 selected in total.
 
 | Skill | Purpose |
 |---|---|
-| [`data-narrative`](../library/skills/data-narrative/SKILL.md) | Data narrative: turn analysis results into a stakeholder report or presentation with context, chosen charts and a clear recommendation. |
-| [`editorial-roadmap`](../library/skills/editorial-roadmap/SKILL.md) | Content strategy: decide what to publish and plan topic clusters, pillars or an editorial calendar. Not for writing one piece (page-copy-forge) or social posts (social-post-craft). |
-| [`landing-page-cro`](../library/skills/landing-page-cro/SKILL.md) | Analyze a marketing page or plan a conversion experiment and its behavioral hypothesis. |
-| [`launch-dossier`](../shared/launch-dossier/SKILL.md) | Prepare a product marketing packet or a requested product, feature or beta launch plan. |
-| [`lead-pipeline-ops`](../library/skills/lead-pipeline-ops/SKILL.md) | RevOps systems: lead lifecycle, scoring, routing, MQL/SQL handoff, pipeline stages, deal desk, CRM automation and hygiene. Use when marketing-to-sales flow breaks. Not for drip sequences (drip-sequence-planner). |
-| [`market-position-map`](../library/skills/market-position-map/SKILL.md) | Research customers and competitors and develop evidence-backed product positioning. |
-| [`page-copy-forge`](../library/skills/page-copy-forge/SKILL.md) | Write or adapt requested marketing pages, social posts, email sequences, internal updates, book blurbs or comparison copy. |
-| [`paid-media-plan`](../library/skills/paid-media-plan/SKILL.md) | Paid ad campaigns on Google, Meta, LinkedIn, X and others: strategy, audiences, bidding, budgets, tracking, ROAS and CPA. Not for bulk creative (ad-creative) or landing pages (landing-page-cro). |
-| [`pptx-forge`](../library/skills/pptx-forge/SKILL.md) | Design, create, revise or inspect a presentation, including PowerPoint files and slide narrative. |
-| [`runway-modeler`](../library/skills/runway-modeler/SKILL.md) | Startup finance: financial models, burn and runway, fundraising scenarios, TAM/SAM/SOM sizing, SaaS metrics dashboards. Use when modeling a startup's numbers. Not for accounting close. |
-| [`sales-collateral`](../library/skills/sales-collateral/SKILL.md) | Sales collateral: pitch decks, one-pagers, objection handling, demo scripts, talk tracks, playbooks, ROI cases. Use for assets that help a sales team close. Not for battle cards (vs-page-writer). |
-| [`search-rank-audit`](../library/skills/search-rank-audit/SKILL.md) | SEO work: technical audits, indexing and crawlability, metadata, schema/JSON-LD, AI-search citations, programmatic SEO pages. Use for ranking or traffic problems or SEO implementation. |
-| [`stripe-billing-guard`](../skills/stripe-billing-guard/SKILL.md) | Use before any Stripe account action: invoices, refunds, subscriptions, customers or prices. Confirms account and test/live mode, prevents duplicate effects, reads back results. |
-| [`voice-ledger`](../shared/voice-ledger/SKILL.md) | Extract or maintain a personal or product writing-voice guide from real source samples. |
+| [`build-writing-voice-guide`](../shared/build-writing-voice-guide/SKILL.md) | Extract or maintain a personal or product writing-voice guide from real source samples. |
+| [`create-sales-materials`](../library/skills/create-sales-materials/SKILL.md) | Sales collateral: pitch decks, one-pagers, objection handling, demo scripts, talk tracks, playbooks, ROI cases. Use for assets that help a sales team close. Not for public comparison pages (write-and-adapt-copy, vs-page-writer mode). |
+| [`diagnose-and-generate-names`](../library/skills/diagnose-and-generate-names/SKILL.md) | Naming diagnosis and generation for brands, products, characters, places and titles. Use when a name feels off or a set of names needs a systematic method. |
+| [`improve-conversion-rates`](../library/skills/improve-conversion-rates/SKILL.md) | Analyze a marketing page or plan a conversion experiment and its behavioral hypothesis. |
+| [`improve-seo`](../library/skills/improve-seo/SKILL.md) | SEO work: technical audits, indexing and crawlability, metadata, schema/JSON-LD, AI-search citations, programmatic SEO pages. Use for ranking or traffic problems or SEO implementation. |
+| [`manage-sales-pipeline`](../library/skills/manage-sales-pipeline/SKILL.md) | RevOps systems: lead lifecycle, scoring, routing, MQL/SQL handoff, pipeline stages, deal desk, CRM automation and hygiene. Use when marketing-to-sales flow breaks. Not for drip sequences (write-and-adapt-copy). |
+| [`manage-stripe-account`](../skills/manage-stripe-account/SKILL.md) | Use before any Stripe account action: invoices, refunds, subscriptions, customers or prices. Confirms account and test/live mode, prevents duplicate effects, reads back results. |
+| [`model-startup-finances`](../library/skills/model-startup-finances/SKILL.md) | Startup finance: financial models, burn and runway, fundraising scenarios, TAM/SAM/SOM sizing, SaaS metrics dashboards. Use when modeling a startup's numbers. Not for accounting close. |
+| [`plan-ad-campaigns`](../library/skills/plan-ad-campaigns/SKILL.md) | Paid ad campaigns on Google, Meta, LinkedIn, X and others: strategy, audiences, bidding, budgets, tracking, ROAS and CPA. Not for landing pages (improve-conversion-rates). |
+| [`plan-content-strategy`](../library/skills/plan-content-strategy/SKILL.md) | Content strategy: decide what to publish and plan topic clusters, pillars or an editorial calendar. Not for writing one piece or social posts (write-and-adapt-copy). |
+| [`prepare-product-launch`](../shared/prepare-product-launch/SKILL.md) | Prepare a product marketing packet or a requested product, feature or beta launch plan. |
+| [`present-data-findings`](../library/skills/present-data-findings/SKILL.md) | Data narrative: turn analysis results into a stakeholder report or presentation with context, chosen charts and a clear recommendation. |
+| [`research-market-positioning`](../library/skills/research-market-positioning/SKILL.md) | Research customers and competitors and develop evidence-backed product positioning. |
+| [`slide-decks`](../library/skills/slide-decks/SKILL.md) | Design, create, revise or inspect a presentation, including PowerPoint files and slide narrative. |
+| [`verify-claims`](../library/skills/verify-claims/SKILL.md) | Check claims in generated text or a public narrative against cited sources as a separate verification pass. |
+| [`write-and-adapt-copy`](../library/skills/write-and-adapt-copy/SKILL.md) | Write or adapt requested marketing pages, social posts, email sequences, internal updates, book blurbs or comparison copy. |
 
 ## research-and-write
 
 Find and check sources, develop an argument, write or revise, and produce documents.
 
-11 additions; 48 selected in total.
+11 additions; 37 selected in total.
 
 | Skill | Purpose |
 |---|---|
-| [`data-narrative`](../library/skills/data-narrative/SKILL.md) | Data narrative: turn analysis results into a stakeholder report or presentation with context, chosen charts and a clear recommendation. |
-| [`docx-editor`](../library/skills/docx-editor/SKILL.md) | DOCX files: read, create or edit .docx documents with python-docx and render pages to check layout. Not for PDFs or Markdown docs. |
-| [`editorial-roadmap`](../library/skills/editorial-roadmap/SKILL.md) | Content strategy: decide what to publish and plan topic clusters, pillars or an editorial calendar. Not for writing one piece (page-copy-forge) or social posts (social-post-craft). |
-| [`name-forge`](../library/skills/name-forge/SKILL.md) | Naming diagnosis and generation for brands, products, characters, places and titles. Use when a name feels off or a set of names needs a systematic method. |
-| [`page-copy-forge`](../library/skills/page-copy-forge/SKILL.md) | Write or adapt requested marketing pages, social posts, email sequences, internal updates, book blurbs or comparison copy. |
-| [`pdf-render-check`](../library/skills/pdf-render-check/SKILL.md) | PDF reading, creation or review where layout matters: render pages with Poppler to check visually; generate with reportlab; extract with pdfplumber or pypdf. |
-| [`pptx-forge`](../library/skills/pptx-forge/SKILL.md) | Design, create, revise or inspect a presentation, including PowerPoint files and slide narrative. |
-| [`sheet-wrangler`](../library/skills/sheet-wrangler/SKILL.md) | Create, edit, analyze or format .xlsx, .csv or .tsv with openpyxl and pandas while preserving formulas and formatting; render via LibreOffice for checks. Use for spreadsheet file work. |
-| [`tetrad-impact-lens`](../library/skills/tetrad-impact-lens/SKILL.md) | Technology impact: analyze a technology's societal effects with McLuhan's tetrad when evaluating adoption, policy or a new tool. Not for vendor or cost comparisons. |
-| [`thinking-audit`](../library/skills/thinking-audit/SKILL.md) | Thinking audit: diagnose a stuck or distorted reasoning process by checking cognitive orientation and the balance of thinking operations. |
-| [`voice-ledger`](../shared/voice-ledger/SKILL.md) | Extract or maintain a personal or product writing-voice guide from real source samples. |
+| [`analyze-technology-impact`](../library/skills/analyze-technology-impact/SKILL.md) | Technology impact: analyze a technology's societal effects with McLuhan's tetrad when evaluating adoption, policy or a new tool. Not for vendor or cost comparisons. |
+| [`build-writing-voice-guide`](../shared/build-writing-voice-guide/SKILL.md) | Extract or maintain a personal or product writing-voice guide from real source samples. |
+| [`diagnose-reasoning`](../library/skills/diagnose-reasoning/SKILL.md) | Thinking audit: diagnose a stuck or distorted reasoning process by checking cognitive orientation and the balance of thinking operations. |
+| [`docx-files`](../library/skills/docx-files/SKILL.md) | DOCX files: read, create or edit .docx documents with python-docx and render pages to check layout. Not for PDFs or Markdown docs. |
+| [`pdf-files`](../library/skills/pdf-files/SKILL.md) | PDF reading, creation or review where layout matters: render pages with Poppler to check visually; generate with reportlab; extract with pdfplumber or pypdf. |
+| [`plan-content-strategy`](../library/skills/plan-content-strategy/SKILL.md) | Content strategy: decide what to publish and plan topic clusters, pillars or an editorial calendar. Not for writing one piece or social posts (write-and-adapt-copy). |
+| [`present-data-findings`](../library/skills/present-data-findings/SKILL.md) | Data narrative: turn analysis results into a stakeholder report or presentation with context, chosen charts and a clear recommendation. |
+| [`slide-decks`](../library/skills/slide-decks/SKILL.md) | Design, create, revise or inspect a presentation, including PowerPoint files and slide narrative. |
+| [`spreadsheet-files`](../library/skills/spreadsheet-files/SKILL.md) | Create, edit, analyze or format .xlsx, .csv or .tsv with openpyxl and pandas while preserving formulas and formatting; render via LibreOffice for checks. Use for spreadsheet file work. |
+| [`verify-claims`](../library/skills/verify-claims/SKILL.md) | Check claims in generated text or a public narrative against cited sources as a separate verification pass. |
+| [`write-and-adapt-copy`](../library/skills/write-and-adapt-copy/SKILL.md) | Write or adapt requested marketing pages, social posts, email sequences, internal updates, book blurbs or comparison copy. |

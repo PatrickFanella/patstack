@@ -176,7 +176,7 @@ class UnifiedStackTests(unittest.TestCase):
                 names, _ = stack_selection.selection(ROOT, [profile.stem])
                 coverage.update(names)
             self.assertEqual(coverage, set(all_sources))
-            self.assertEqual(len(stack_selection.selection(ROOT, [])[0]), 37)
+            self.assertEqual(len(stack_selection.selection(ROOT, [])[0]), 26)
         finally:
             sys.path.remove(str(ROOT / 'scripts'))
             sys.path.remove(str(module))

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fix MCP Connections"
+  short_description: "Add and diagnose MCP server integrations"
+  default_prompt: "Use $fix-mcp-connections to add or diagnose this MCP server and verify its complete client lifecycle."

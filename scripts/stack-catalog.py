@@ -38,9 +38,9 @@ def render(root=ROOT):
         '- [Required and optional companions](#required-and-optional-companions)',
         '- [Selection and recovery](#selection-and-recovery)', '',
         '## Everyday core', '',
-        f'`core` selects **{len(core)} skills** for frequent repository, web/API, agent-tool,',
+        f'`core` selects **{len(core)} skills** for frequent repository, web/API,',
         'documentation and operations work. It includes planning, debugging, review,',
-        'Git/CI delivery, UI quality, common languages, MCP, data changes, research,',
+        'Git/CI delivery, UI quality, common languages, data changes, research,',
         'verification and continuation. Related workflows load conditional procedures',
         'from their canonical owner; removed skills have no discovery entrypoints.', '',
         'Core is a working toolkit, not a request to load every skill body. Agents',
@@ -122,7 +122,7 @@ def render(root=ROOT):
     routes += [f"| `{name}` | {config['stackDescriptions'][name]} |" for name in order]
     return {'docs/SKILL-GROUPS.md': '\n'.join(guide),
             'profiles/CATALOG.md': '\n'.join(catalog) + '\n',
-            'shared/skill-stack-router/references/groups.md': '\n'.join(routes) + '\n'}
+            'shared/find-and-load-skills/references/groups.md': '\n'.join(routes) + '\n'}
 
 
 if __name__ == '__main__':

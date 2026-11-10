@@ -39,7 +39,7 @@ Options:
 - `--completion-promise "TEXT"` — phrase to signal completion
 
 How it works:
-1. Creates a state file (`.cursor/ralph/scratchpad.md` in Cursor, `.claude/ralph-loop.local.md` with the Claude Code `ralph-workflow` plugin; Codex and OpenCode have no stop hook, so the loop needs an external script)
+1. Creates a state file (`.cursor/ralph/scratchpad.md` in Cursor, `.claude/ralph-loop.local.md` with the Claude Code `ralph-loop` plugin; Codex and OpenCode have no stop hook, so the loop needs an external script)
 2. Agent works on the task
 3. Stop hook intercepts exit and feeds the same prompt back
 4. Agent sees its previous work and iterates

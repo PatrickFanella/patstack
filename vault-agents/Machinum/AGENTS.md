@@ -1,6 +1,6 @@
 # Machinum vault
 
-Use `rtk` for shell commands. Read `~/.codex/RTK.md` and the current `~/.homelab/HOMELAB.md` when not already supplied. Apply `prose-unslop` to user-facing prose and documentation. Preserve unrelated work, source provenance, and secrets.
+Use `rtk` for shell commands. Read `~/.codex/RTK.md` and the current `~/.homelab/HOMELAB.md` when not already supplied. Apply `write-plainly` to user-facing prose and documentation. Preserve unrelated work, source provenance, and secrets.
 
 The four vaults are siblings under `~/Work/Vaults` on Kvant. Confirm actual vault roots on other devices. Ars Malefica owns personal life and independent creative work; SUBCULT owns business, products and publishing plans; Machinum owns maintained homelab documentation; Archivum owns imported references and mirrors. Use explicit Obsidian URI links across vaults. Do not recreate moved trees because old instructions or validators refer to them.
 

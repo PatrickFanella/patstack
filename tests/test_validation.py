@@ -91,7 +91,7 @@ class SourceReferenceTests(unittest.TestCase):
             self.assertEqual(validation.link_errors(), ['broken link README.md -> docs/missing.md'])
 
     def test_retired_skill_reference_is_reported_but_external_owner_is_not(self):
-        retired = {'oldname': {'owner': 'newname'}, 'frontend-design': {'owner': 'ui-craft'}}
+        retired = {'oldname': {'owner': 'newname'}, 'frontend-design': {'owner': 'style-web-ui'}}
         with tempfile.TemporaryDirectory() as directory, patch.object(validation, 'ROOT', self.fixture(directory)):
             errors = validation.retired_reference_errors(retired)
         self.assertEqual(errors, ['retired skill name skills/alpha/SKILL.md:1: oldname -> newname'])

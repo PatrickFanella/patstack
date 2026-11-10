@@ -8,7 +8,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = json.loads((ROOT / 'catalog/consolidation-2026-11-09.json').read_text())
-spec = importlib.util.spec_from_file_location('consolidated_lookup', ROOT / 'shared/skill-stack-router/scripts/lookup.py')
+spec = importlib.util.spec_from_file_location('consolidated_lookup', ROOT / 'shared/find-and-load-skills/scripts/lookup.py')
 router = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(router)
 
@@ -64,23 +64,23 @@ class ConsolidationTests(unittest.TestCase):
             self.assertEqual(selected, set(names))
             self.assertEqual(len(selected), 104)
             core = selection(ROOT, [])[0]
-            self.assertEqual(len(core), 37)
-            self.assertIn('prose-unslop', core)
-            self.assertIn('studio-brand-system', core)
-            self.assertIn('ui-craft', core)
-            self.assertIn('postgres-workbench', core)
+            self.assertEqual(len(core), 26)
+            self.assertIn('write-plainly', core)
+            self.assertIn('create-subcult-branding', core)
+            self.assertIn('style-web-ui', core)
+            self.assertIn('postgres', core)
         finally:
             del sys.path[:2]
 
     def test_common_owner_does_not_erase_explicit_or_coaching_modes(self):
         # A general implementation request can select the owner, while the
         # former explicit /implement workflow remains conditional.
-        self.assertFalse(router.resolve(ROOT, 'build-sequencer', 'codex')['explicitOnly'])
-        record = LEDGER['owners']['build-sequencer']
+        self.assertFalse(router.resolve(ROOT, 'plan-and-implement-changes', 'codex')['explicitOnly'])
+        record = LEDGER['owners']['plan-and-implement-changes']
         self.assertTrue((ROOT / record['procedures']['spec-implementer']).is_file())
-        record = LEDGER['owners']['story-workbench']
+        record = LEDGER['owners']['develop-and-draft-fiction']
         self.assertTrue((ROOT / record['procedures']['story-mentor']).is_file())
         self.assertTrue((ROOT / record['procedures']['story-cowriter']).is_file())
         # Provider-specific procedures do not make a missing provider callable.
-        record = LEDGER['owners']['agent-fanout-plan']
+        record = LEDGER['owners']['coordinate-parallel-agents']
         self.assertEqual(record['formerOwners']['opencode-deepwork']['qualification']['supportedClients'], ['opencode'])

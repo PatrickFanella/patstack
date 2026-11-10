@@ -8,7 +8,7 @@
   ],
   "core": "core",
   "stackDescriptions": {
-    "core": "Everyday repository work, debugging, delivery, web/API changes, tools, documentation and basic operations.",
+    "core": "Everyday repository work, debugging, delivery, web/API changes, documentation and basic operations.",
     "build-and-ship": "Take a feature from understanding and design through implementation, review, tests and a PR.",
     "diagnose-and-repair": "Reproduce a failure, inspect code/runtime evidence, repair it and prove the result.",
     "operate-homelab": "Operate services and personal tools, investigate incidents, change infrastructure and verify recovery.",

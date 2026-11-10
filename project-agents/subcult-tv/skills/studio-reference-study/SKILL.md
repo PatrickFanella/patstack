@@ -13,7 +13,7 @@ Turn design evidence into a study someone can reuse without mistaking interpreta
 - **Refresh:** compare a dated study with fresh evidence, preserving the earlier capture and explaining material changes.
 - **Catalog:** register an existing authored study and verify its private export.
 
-Read `studio/references/README.md`, `USAGE.md`, the relevant collection and its source records. Search the [authenticated reference library](https://subcult.tv/admin/studio/references) and local catalogs for an existing study before creating another. Selecting a production identity belongs to `studio-brand-system`; checking a product against its brand belongs to `studio-brand-audit`.
+Read `studio/references/README.md`, `USAGE.md`, the relevant collection and its source records. Search the [authenticated reference library](https://subcult.tv/admin/studio/references) and local catalogs for an existing study before creating another. Selecting a production identity belongs to `create-subcult-branding`; checking a product against its brand belongs to `studio-brand-audit`.
 
 ## Study the evidence
 

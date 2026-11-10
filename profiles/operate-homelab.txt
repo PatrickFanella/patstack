@@ -1,15 +1,13 @@
 # Operate services and personal tools, investigate incidents, change infrastructure and verify recovery.
-browser-workbench
-claude-git-guardrails
-fleet-ops-router
+build-and-fix-observability
+check-and-tune-systems
+configure-opencode
+control-browser-and-desktop
+define-requirements
 karakeep-bookmarks
-obsidian-cli-driver
-opencode-config-tuner
-roadmap-slicer
-scope-grill
-secret-rotation-flow
-strategy-backtester
-stride-threat-map
-stripe-checkout-wiring
-super-productivity-workflow
-temporal-workflows
+manage-deployment-secrets
+manage-infrastructure
+manage-roadmaps-and-issues
+manage-super-productivity
+threat-modeling
+use-obsidian-cli

@@ -3,15 +3,15 @@
   "sourceRevision": "87ddaec5587c02f166a33ba48561d4dffa6d7802",
   "policy": "User-approved consolidation. Retired names have no discovery aliases; resources load only through the selected mode. App, plugin, system, project and vault owners retain their own deployments.",
   "owners": {
-    "scope-grill": {
-      "source": "shared/scope-grill",
+    "define-requirements": {
+      "source": "shared/define-requirements",
       "description": "Resolve requirements and produce a requested PRD, recurring-workflow specification or decision questionnaire.",
       "constraint": "Planning and interviewing do not authorize implementation or tracker publication. Select the requested deliverable before proceeding.",
       "procedures": {
-        "scope-grill": "shared/scope-grill/references/base-workflow.md",
-        "prd-from-context": "shared/scope-grill/references/modes/prd-from-context/guide.md",
-        "loop-spec-grill": "shared/scope-grill/references/modes/loop-spec-grill/guide.md",
-        "decision-questionnaire": "shared/scope-grill/references/modes/decision-questionnaire/guide.md"
+        "scope-grill": "shared/define-requirements/references/base-workflow.md",
+        "prd-from-context": "shared/define-requirements/references/modes/prd-from-context/guide.md",
+        "loop-spec-grill": "shared/define-requirements/references/modes/loop-spec-grill/guide.md",
+        "decision-questionnaire": "shared/define-requirements/references/modes/decision-questionnaire/guide.md"
       },
       "formerOwners": {
         "scope-grill": {
@@ -123,17 +123,17 @@
         }
       }
     },
-    "build-sequencer": {
-      "source": "skills/build-sequencer",
+    "plan-and-implement-changes": {
+      "source": "skills/plan-and-implement-changes",
       "description": "Plan or execute a feature, specification, migration or multi-session implementation sequence.",
       "constraint": "A plan-only request stops at the plan. Spec execution, unusual playbooks and multi-session maps are conditional modes; do not impose test-first work or extra commits on every task.",
       "procedures": {
-        "build-sequencer": "skills/build-sequencer/references/base-workflow.md",
-        "build-plan-writer": "skills/build-sequencer/references/modes/build-plan-writer/guide.md",
-        "spec-implementer": "skills/build-sequencer/references/modes/spec-implementer/guide.md",
-        "playbook-designer": "skills/build-sequencer/references/modes/playbook-designer/guide.md",
-        "wayfinder-map": "skills/build-sequencer/references/modes/wayfinder-map/guide.md",
-        "pocock-flow-router": "skills/build-sequencer/references/modes/pocock-flow-router/guide.md"
+        "build-sequencer": "skills/plan-and-implement-changes/references/base-workflow.md",
+        "build-plan-writer": "skills/plan-and-implement-changes/references/modes/build-plan-writer/guide.md",
+        "spec-implementer": "skills/plan-and-implement-changes/references/modes/spec-implementer/guide.md",
+        "playbook-designer": "skills/plan-and-implement-changes/references/modes/playbook-designer/guide.md",
+        "wayfinder-map": "skills/plan-and-implement-changes/references/modes/wayfinder-map/guide.md",
+        "pocock-flow-router": "skills/plan-and-implement-changes/references/modes/pocock-flow-router/guide.md"
       },
       "formerOwners": {
         "build-sequencer": {
@@ -298,17 +298,17 @@
         }
       }
     },
-    "roadmap-slicer": {
-      "source": "skills/roadmap-slicer",
+    "manage-roadmaps-and-issues": {
+      "source": "skills/manage-roadmaps-and-issues",
       "description": "Create and maintain roadmaps and tracker issues, triage reports, or configure repository contribution workflows.",
       "constraint": "Choose intake, triage, setup, roadmap publication or maintainer guidance from the request. Filing a bug does not authorize fixing it. Read back authorized tracker writes.",
       "procedures": {
-        "roadmap-slicer": "skills/roadmap-slicer/references/base-workflow.md",
-        "tracer-ticket-split": "skills/roadmap-slicer/references/modes/tracer-ticket-split/guide.md",
-        "tracker-bootstrap": "skills/roadmap-slicer/references/modes/tracker-bootstrap/guide.md",
-        "issue-state-triage": "skills/roadmap-slicer/references/modes/issue-state-triage/guide.md",
-        "bug-intake-session": "skills/roadmap-slicer/references/modes/bug-intake-session/guide.md",
-        "oss-maintainer-coach": "skills/roadmap-slicer/references/modes/oss-maintainer-coach/guide.md"
+        "roadmap-slicer": "skills/manage-roadmaps-and-issues/references/base-workflow.md",
+        "tracer-ticket-split": "skills/manage-roadmaps-and-issues/references/modes/tracer-ticket-split/guide.md",
+        "tracker-bootstrap": "skills/manage-roadmaps-and-issues/references/modes/tracker-bootstrap/guide.md",
+        "issue-state-triage": "skills/manage-roadmaps-and-issues/references/modes/issue-state-triage/guide.md",
+        "bug-intake-session": "skills/manage-roadmaps-and-issues/references/modes/bug-intake-session/guide.md",
+        "oss-maintainer-coach": "skills/manage-roadmaps-and-issues/references/modes/oss-maintainer-coach/guide.md"
       },
       "formerOwners": {
         "roadmap-slicer": {
@@ -346,7 +346,7 @@
             "references/gitea.md": "004cd0cb4df193502b3ace85ace84007a0e8431086d1049015d52bc57b5c609e",
             "references/plan-format.md": "231564d583ec8780066efd2cc9852b7494fcd5279cebc778432500675a7f176e",
             "references/skill-routes.md": "d5e863f1a889573ebfacf4e27aad5198fc8a17df0bc2e911b74c08e9084621f4",
-            "scripts/roadmap.py": "1757e17d7994cc6bd8e13ffe9597f0da4998d4305cab3fd23c4e74e295c8cfc2"
+            "scripts/roadmap.py": "afee967b70d4d987663e07be4b628ceaa8a1fb2ece321a4d5081cbc75b352c3d"
           }
         },
         "tracer-ticket-split": {
@@ -484,15 +484,15 @@
         }
       }
     },
-    "boundary-drafter": {
-      "source": "skills/boundary-drafter",
+    "design-architecture": {
+      "source": "skills/design-architecture",
       "description": "Design or critique architecture and module boundaries, compare interface alternatives, or plan deeper modules.",
       "constraint": "Keep design and implementation separate when the user asks for design only. Parallel alternatives require an explicit delegation request or applicable authorization.",
       "procedures": {
-        "boundary-drafter": "skills/boundary-drafter/references/base-workflow.md",
-        "module-deepener": "skills/boundary-drafter/references/modes/module-deepener/guide.md",
-        "interface-design-twice": "skills/boundary-drafter/references/modes/interface-design-twice/guide.md",
-        "sketch-first-design": "skills/boundary-drafter/references/modes/sketch-first-design/guide.md"
+        "boundary-drafter": "skills/design-architecture/references/base-workflow.md",
+        "module-deepener": "skills/design-architecture/references/modes/module-deepener/guide.md",
+        "interface-design-twice": "skills/design-architecture/references/modes/interface-design-twice/guide.md",
+        "sketch-first-design": "skills/design-architecture/references/modes/sketch-first-design/guide.md"
       },
       "formerOwners": {
         "boundary-drafter": {
@@ -633,13 +633,13 @@
         }
       }
     },
-    "repo-atlas": {
-      "source": "skills/repo-atlas",
+    "map-codebase": {
+      "source": "skills/map-codebase",
       "description": "Orient in a repository or create and incrementally refresh its codemaps when requested.",
       "constraint": "Orientation is read-only. Write codemaps or register them in AGENTS.md only when requested; use one state engine per map.",
       "procedures": {
-        "repo-atlas": "skills/repo-atlas/references/base-workflow.md",
-        "codemap-atlas": "skills/repo-atlas/references/modes/codemap-atlas/guide.md"
+        "repo-atlas": "skills/map-codebase/references/base-workflow.md",
+        "codemap-atlas": "skills/map-codebase/references/modes/codemap-atlas/guide.md"
       },
       "formerOwners": {
         "repo-atlas": {
@@ -708,15 +708,15 @@
         }
       }
     },
-    "repo-research-trail": {
-      "source": "library/skills/repo-research-trail",
+    "investigate-code": {
+      "source": "library/skills/investigate-code",
       "description": "Investigate a codebase, explain a flow or design decision, or inspect a lockfile-pinned dependency implementation.",
       "constraint": "Return cited source findings without editing. Explain what the code does separately from evidence of why it was chosen. Dependency research must use the pinned version.",
       "procedures": {
-        "repo-research-trail": "library/skills/repo-research-trail/references/base-workflow.md",
-        "code-walkthrough": "library/skills/repo-research-trail/references/modes/code-walkthrough/guide.md",
-        "rationale-dig": "library/skills/repo-research-trail/references/modes/rationale-dig/guide.md",
-        "dep-source-clone": "library/skills/repo-research-trail/references/modes/dep-source-clone/guide.md"
+        "repo-research-trail": "library/skills/investigate-code/references/base-workflow.md",
+        "code-walkthrough": "library/skills/investigate-code/references/modes/code-walkthrough/guide.md",
+        "rationale-dig": "library/skills/investigate-code/references/modes/rationale-dig/guide.md",
+        "dep-source-clone": "library/skills/investigate-code/references/modes/dep-source-clone/guide.md"
       },
       "formerOwners": {
         "repo-research-trail": {
@@ -845,17 +845,17 @@
         }
       }
     },
-    "diff-inspector": {
-      "source": "skills/diff-inspector",
+    "review-code-changes": {
+      "source": "skills/review-code-changes",
       "description": "Review a working-tree, branch, commit or PR diff for defects, downstream impact or a requested review walkthrough.",
       "constraint": "Default to a read-only, single-reviewer defect review. Delegated reviews remain read-only. Strict, multi-model and parallel review modes require the corresponding explicit request; a review does not authorize fixes or posting.",
       "procedures": {
-        "diff-inspector": "skills/diff-inspector/references/base-workflow.md",
-        "diff-auditor": "skills/diff-inspector/references/modes/diff-auditor/guide.md",
-        "diff-walkthrough": "skills/diff-inspector/references/modes/diff-walkthrough/guide.md",
-        "change-blast-check": "skills/diff-inspector/references/modes/change-blast-check/guide.md",
-        "thermo-twin-audit": "skills/diff-inspector/references/modes/thermo-twin-audit/guide.md",
-        "model-crossfire": "skills/diff-inspector/references/modes/model-crossfire/guide.md"
+        "diff-inspector": "skills/review-code-changes/references/base-workflow.md",
+        "diff-auditor": "skills/review-code-changes/references/modes/diff-auditor/guide.md",
+        "diff-walkthrough": "skills/review-code-changes/references/modes/diff-walkthrough/guide.md",
+        "change-blast-check": "skills/review-code-changes/references/modes/change-blast-check/guide.md",
+        "thermo-twin-audit": "skills/review-code-changes/references/modes/thermo-twin-audit/guide.md",
+        "model-crossfire": "skills/review-code-changes/references/modes/model-crossfire/guide.md"
       },
       "formerOwners": {
         "diff-inspector": {
@@ -1036,15 +1036,15 @@
         }
       }
     },
-    "behavior-proof": {
-      "source": "skills/behavior-proof",
+    "verify-implementation": {
+      "source": "skills/verify-implementation",
       "description": "Verify an implementation, assess repository readiness, or create and maintain a project-specific verification workflow.",
       "constraint": "Distinguish proof of one changed behavior from whole-repository readiness. Report PASS, FAIL or INCONCLUSIVE with evidence; do not infer deployed behavior from local tests.",
       "procedures": {
-        "behavior-proof": "skills/behavior-proof/references/base-workflow.md",
-        "ship-check": "skills/behavior-proof/references/modes/ship-check/guide.md",
-        "verify-skill-forge": "skills/behavior-proof/references/modes/verify-skill-forge/guide.md",
-        "verify-skill-audit": "skills/behavior-proof/references/modes/verify-skill-audit/guide.md"
+        "behavior-proof": "skills/verify-implementation/references/base-workflow.md",
+        "ship-check": "skills/verify-implementation/references/modes/ship-check/guide.md",
+        "verify-skill-forge": "skills/verify-implementation/references/modes/verify-skill-forge/guide.md",
+        "verify-skill-audit": "skills/verify-implementation/references/modes/verify-skill-audit/guide.md"
       },
       "formerOwners": {
         "behavior-proof": {
@@ -1193,13 +1193,13 @@
         }
       }
     },
-    "safe-refactor-pass": {
-      "source": "skills/safe-refactor-pass",
+    "refactor-code": {
+      "source": "skills/refactor-code",
       "description": "Refactor without changing behavior or perform a requested mechanical change across many files.",
       "constraint": "Choose semantic restructuring or mechanical rewriting. Establish a baseline and scan for leftovers; preserve unrelated work.",
       "procedures": {
-        "safe-refactor-pass": "skills/safe-refactor-pass/references/base-workflow.md",
-        "sweep-rewriter": "skills/safe-refactor-pass/references/modes/sweep-rewriter/guide.md"
+        "safe-refactor-pass": "skills/refactor-code/references/base-workflow.md",
+        "sweep-rewriter": "skills/refactor-code/references/modes/sweep-rewriter/guide.md"
       },
       "formerOwners": {
         "safe-refactor-pass": {
@@ -1277,14 +1277,14 @@
         }
       }
     },
-    "git-surgery": {
-      "source": "skills/git-surgery",
+    "manage-git-and-prs": {
+      "source": "skills/manage-git-and-prs",
       "description": "Manage Git history and worktrees or prepare and ship a focused branch through its authorized PR workflow.",
       "constraint": "Inspect the exact checkout, common directory, remotes and dirty state first. A PR request does not authorize merging, deployment or destructive history changes.",
       "procedures": {
-        "git-surgery": "skills/git-surgery/references/base-workflow.md",
-        "branch-shipper": "skills/git-surgery/references/modes/branch-shipper/guide.md",
-        "worktree-lanes": "skills/git-surgery/references/modes/worktree-lanes/guide.md"
+        "git-surgery": "skills/manage-git-and-prs/references/base-workflow.md",
+        "branch-shipper": "skills/manage-git-and-prs/references/modes/branch-shipper/guide.md",
+        "worktree-lanes": "skills/manage-git-and-prs/references/modes/worktree-lanes/guide.md"
       },
       "formerOwners": {
         "git-surgery": {
@@ -1396,13 +1396,13 @@
         }
       }
     },
-    "commit-recap": {
-      "source": "library/skills/commit-recap",
+    "summarize-commits": {
+      "source": "library/skills/summarize-commits",
       "description": "Summarize authored commits for a requested date range as a short status update or weekly review.",
       "constraint": "Resolve the actual date range and Git author. Describe evidenced changes, excluding merge noise; do not infer shipped or deployed state from commits.",
       "procedures": {
-        "commit-recap": "library/skills/commit-recap/references/base-workflow.md",
-        "weekly-commit-recap": "library/skills/commit-recap/references/modes/weekly-commit-recap/guide.md"
+        "commit-recap": "library/skills/summarize-commits/references/base-workflow.md",
+        "weekly-commit-recap": "library/skills/summarize-commits/references/modes/weekly-commit-recap/guide.md"
       },
       "formerOwners": {
         "commit-recap": {
@@ -1455,15 +1455,15 @@
         }
       }
     },
-    "browser-workbench": {
-      "source": "skills/browser-workbench",
+    "control-browser-and-desktop": {
+      "source": "skills/control-browser-and-desktop",
       "description": "Operate a permitted browser or isolated desktop, or capture a requested host screenshot using the current client tools.",
       "constraint": "Prefer the current client-native browser contract. Keep authenticated sessions, isolated desktops and host capture distinct. Use a named CLI only when applicable; do not switch backends or install tools merely because a reference describes them.",
       "procedures": {
-        "sandbox-desktop": "skills/browser-workbench/references/base-workflow.md",
-        "playwright-cli-driver": "skills/browser-workbench/references/modes/playwright-cli-driver/guide.md",
-        "ref-snapshot-browser": "skills/browser-workbench/references/modes/ref-snapshot-browser/guide.md",
-        "desktop-capture": "skills/browser-workbench/references/modes/desktop-capture/guide.md"
+        "sandbox-desktop": "skills/control-browser-and-desktop/references/base-workflow.md",
+        "playwright-cli-driver": "skills/control-browser-and-desktop/references/modes/playwright-cli-driver/guide.md",
+        "ref-snapshot-browser": "skills/control-browser-and-desktop/references/modes/ref-snapshot-browser/guide.md",
+        "desktop-capture": "skills/control-browser-and-desktop/references/modes/desktop-capture/guide.md"
       },
       "formerOwners": {
         "sandbox-desktop": {
@@ -1591,13 +1591,13 @@
         }
       }
     },
-    "postgres-workbench": {
-      "source": "skills/postgres-workbench",
+    "postgres": {
+      "source": "skills/postgres",
       "description": "Diagnose PostgreSQL queries, locks and indexes, or plan and apply requested schema migrations and backfills.",
       "constraint": "Select diagnosis, tuning or migration from the request. Inspect the real schema and baseline first. Use expand/backfill/contract when appropriate, with explicit rollback and data checks; read-only analysis does not authorize database writes.",
       "procedures": {
-        "pg-plan-reader": "skills/postgres-workbench/references/base-workflow.md",
-        "schema-migrator": "skills/postgres-workbench/references/modes/schema-migrator/guide.md"
+        "pg-plan-reader": "skills/postgres/references/base-workflow.md",
+        "schema-migrator": "skills/postgres/references/modes/schema-migrator/guide.md"
       },
       "formerOwners": {
         "pg-plan-reader": {
@@ -1746,22 +1746,22 @@
         }
       }
     },
-    "fleet-ops-router": {
-      "source": "library/skills/fleet-ops-router",
+    "manage-infrastructure": {
+      "source": "library/skills/manage-infrastructure",
       "description": "Operate homelab services or use the matching infrastructure, repository-administration or host-runtime runbook.",
       "constraint": "Read current Machinum inventory and the target host briefing first. Load only the matching platform or host runbook. Authoring infrastructure, certificates or configuration does not authorize applying it; preserve unrelated host state, credentials and recovery evidence.",
       "procedures": {
-        "fleet-ops-router": "library/skills/fleet-ops-router/references/base-workflow.md",
-        "cf-edge-deploy": "library/skills/fleet-ops-router/references/modes/cf-edge-deploy/guide.md",
-        "web-host-hardening": "library/skills/fleet-ops-router/references/modes/web-host-hardening/guide.md",
-        "kube-artifact-smith": "library/skills/fleet-ops-router/references/modes/kube-artifact-smith/guide.md",
-        "terraform-module-smith": "library/skills/fleet-ops-router/references/modes/terraform-module-smith/guide.md",
-        "gitea-fleet-tidy": "library/skills/fleet-ops-router/references/modes/gitea-fleet-tidy/guide.md",
-        "mtls-trust-chain": "library/skills/fleet-ops-router/references/modes/mtls-trust-chain/guide.md",
-        "setup-wizard-script": "library/skills/fleet-ops-router/references/modes/setup-wizard-script/guide.md",
-        "codex-desktop-audit": "library/skills/fleet-ops-router/references/modes/codex-desktop-audit/guide.md",
-        "switchyard-runtime-desk": "library/skills/fleet-ops-router/references/modes/switchyard-runtime-desk/guide.md",
-        "t3-repo-onboard": "library/skills/fleet-ops-router/references/modes/t3-repo-onboard/guide.md"
+        "fleet-ops-router": "library/skills/manage-infrastructure/references/base-workflow.md",
+        "cf-edge-deploy": "library/skills/manage-infrastructure/references/modes/cf-edge-deploy/guide.md",
+        "web-host-hardening": "library/skills/manage-infrastructure/references/modes/web-host-hardening/guide.md",
+        "kube-artifact-smith": "library/skills/manage-infrastructure/references/modes/kube-artifact-smith/guide.md",
+        "terraform-module-smith": "library/skills/manage-infrastructure/references/modes/terraform-module-smith/guide.md",
+        "gitea-fleet-tidy": "library/skills/manage-infrastructure/references/modes/gitea-fleet-tidy/guide.md",
+        "mtls-trust-chain": "library/skills/manage-infrastructure/references/modes/mtls-trust-chain/guide.md",
+        "setup-wizard-script": "library/skills/manage-infrastructure/references/modes/setup-wizard-script/guide.md",
+        "codex-desktop-audit": "library/skills/manage-infrastructure/references/modes/codex-desktop-audit/guide.md",
+        "switchyard-runtime-desk": "library/skills/manage-infrastructure/references/modes/switchyard-runtime-desk/guide.md",
+        "t3-repo-onboard": "library/skills/manage-infrastructure/references/modes/t3-repo-onboard/guide.md"
       },
       "formerOwners": {
         "fleet-ops-router": {
@@ -2404,15 +2404,15 @@
         }
       }
     },
-    "agent-fanout-plan": {
-      "source": "library/skills/agent-fanout-plan",
+    "coordinate-parallel-agents": {
+      "source": "library/skills/coordinate-parallel-agents",
       "description": "Coordinate authorized parallel agent work, candidate comparisons or a supported multi-phase agent workflow.",
       "constraint": "Delegation requires the current task authorization. Respect client orchestration contracts, ownership and integration checks. OpenCode deepwork requires its actual Blacktower runtime; never invent agent types or providers.",
       "procedures": {
-        "agent-fanout-plan": "library/skills/agent-fanout-plan/references/base-workflow.md",
-        "worker-swarm-fanout": "library/skills/agent-fanout-plan/references/modes/worker-swarm-fanout/guide.md",
-        "candidate-arena": "library/skills/agent-fanout-plan/references/modes/candidate-arena/guide.md",
-        "opencode-deepwork": "library/skills/agent-fanout-plan/references/modes/opencode-deepwork/guide.md"
+        "agent-fanout-plan": "library/skills/coordinate-parallel-agents/references/base-workflow.md",
+        "worker-swarm-fanout": "library/skills/coordinate-parallel-agents/references/modes/worker-swarm-fanout/guide.md",
+        "candidate-arena": "library/skills/coordinate-parallel-agents/references/modes/candidate-arena/guide.md",
+        "opencode-deepwork": "library/skills/coordinate-parallel-agents/references/modes/opencode-deepwork/guide.md"
       },
       "formerOwners": {
         "agent-fanout-plan": {
@@ -2517,13 +2517,13 @@
         }
       }
     },
-    "opencode-config-tuner": {
-      "source": "library/skills/opencode-config-tuner",
+    "configure-opencode": {
+      "source": "library/skills/configure-opencode",
       "description": "Configure OpenCode agents, skills, plugins, MCP, permissions or its supported scheduler.",
       "constraint": "Use the scheduling mode only with the actual OpenCode scheduler plugin. It is not a T3 or Claude scheduler. Preserve existing permissions, authentication and unrelated configuration.",
       "procedures": {
-        "opencode-config-tuner": "library/skills/opencode-config-tuner/references/base-workflow.md",
-        "opencode-cron": "library/skills/opencode-config-tuner/references/modes/opencode-cron/guide.md"
+        "opencode-config-tuner": "library/skills/configure-opencode/references/base-workflow.md",
+        "opencode-cron": "library/skills/configure-opencode/references/modes/opencode-cron/guide.md"
       },
       "formerOwners": {
         "opencode-config-tuner": {
@@ -2574,15 +2574,15 @@
         }
       }
     },
-    "skill-forge": {
-      "source": "library/skills/skill-forge",
+    "manage-skills-and-plugins": {
+      "source": "library/skills/manage-skills-and-plugins",
       "description": "Create or evaluate agent skills, install an explicitly requested unmanaged skill, or scaffold a Codex or Cursor plugin.",
       "constraint": "Prefer a current system or plugin owner when available. Preserve source ownership: installed caches and Patstack-managed selections are not authoring targets. Select the correct client packaging contract before creating files.",
       "procedures": {
-        "skill-forge": "library/skills/skill-forge/references/base-workflow.md",
-        "codex-skill-fetch": "library/skills/skill-forge/references/modes/codex-skill-fetch/guide.md",
-        "codex-plugin-scaffold": "library/skills/skill-forge/references/modes/codex-plugin-scaffold/guide.md",
-        "cursor-plugin-forge": "library/skills/skill-forge/references/modes/cursor-plugin-forge/guide.md"
+        "skill-forge": "library/skills/manage-skills-and-plugins/references/base-workflow.md",
+        "codex-skill-fetch": "library/skills/manage-skills-and-plugins/references/modes/codex-skill-fetch/guide.md",
+        "codex-plugin-scaffold": "library/skills/manage-skills-and-plugins/references/modes/codex-plugin-scaffold/guide.md",
+        "cursor-plugin-forge": "library/skills/manage-skills-and-plugins/references/modes/cursor-plugin-forge/guide.md"
       },
       "formerOwners": {
         "skill-forge": {
@@ -2807,14 +2807,14 @@
         }
       }
     },
-    "relay-baton": {
-      "source": "shared/relay-baton",
+    "handoff-and-recall-work": {
+      "source": "shared/handoff-and-recall-work",
       "description": "Recall recent work or record a handoff before a context reset, session continuation or explicitly requested background handoff.",
       "constraint": "Recalling work is read-only. Preserve source provenance, unfinished changes and next steps. Starting a background session is a separate explicit request and uses the current client contract.",
       "procedures": {
-        "relay-baton": "shared/relay-baton/references/base-workflow.md",
-        "context-recall": "shared/relay-baton/references/modes/context-recall/guide.md",
-        "claude-bg-handoff": "shared/relay-baton/references/modes/claude-bg-handoff/guide.md"
+        "relay-baton": "shared/handoff-and-recall-work/references/base-workflow.md",
+        "context-recall": "shared/handoff-and-recall-work/references/modes/context-recall/guide.md",
+        "claude-bg-handoff": "shared/handoff-and-recall-work/references/modes/claude-bg-handoff/guide.md"
       },
       "formerOwners": {
         "relay-baton": {
@@ -2901,14 +2901,14 @@
         }
       }
     },
-    "friction-miner": {
-      "source": "library/skills/friction-miner",
+    "improve-workflow-from-sessions": {
+      "source": "library/skills/improve-workflow-from-sessions",
       "description": "Review recent sessions for durable working preferences and repeated friction, then propose or author the requested workflow improvement.",
       "constraint": "Separate transcript observations from inferred preferences. Suggestions do not authorize editing memory, global instructions or deployed skills; use the canonical source and current authorization.",
       "procedures": {
-        "friction-miner": "library/skills/friction-miner/references/base-workflow.md",
-        "chat-preference-miner": "library/skills/friction-miner/references/modes/chat-preference-miner/guide.md",
-        "mode-skill-miner": "library/skills/friction-miner/references/modes/mode-skill-miner/guide.md"
+        "friction-miner": "library/skills/improve-workflow-from-sessions/references/base-workflow.md",
+        "chat-preference-miner": "library/skills/improve-workflow-from-sessions/references/modes/chat-preference-miner/guide.md",
+        "mode-skill-miner": "library/skills/improve-workflow-from-sessions/references/modes/mode-skill-miner/guide.md"
       },
       "formerOwners": {
         "friction-miner": {
@@ -2985,14 +2985,14 @@
         }
       }
     },
-    "super-productivity-workflow": {
-      "source": "library/skills/super-productivity-workflow",
+    "manage-super-productivity": {
+      "source": "library/skills/manage-super-productivity",
       "description": "Plan tasks and routines or diagnose the Super Productivity MCP and plugin bridge.",
       "constraint": "Select planning, maintenance or bridge diagnosis. Use the scoped connector and inspect live capabilities; do not assume tool names or alter unrelated tasks while debugging connectivity.",
       "procedures": {
-        "sp-upkeep-router": "library/skills/super-productivity-workflow/references/base-workflow.md",
-        "sp-day-planner": "library/skills/super-productivity-workflow/references/modes/sp-day-planner/guide.md",
-        "sp-mcp-doctor": "library/skills/super-productivity-workflow/references/modes/sp-mcp-doctor/guide.md"
+        "sp-upkeep-router": "library/skills/manage-super-productivity/references/base-workflow.md",
+        "sp-day-planner": "library/skills/manage-super-productivity/references/modes/sp-day-planner/guide.md",
+        "sp-mcp-doctor": "library/skills/manage-super-productivity/references/modes/sp-mcp-doctor/guide.md"
       },
       "formerOwners": {
         "sp-upkeep-router": {
@@ -3080,15 +3080,15 @@
         }
       }
     },
-    "primary-source-notes": {
-      "source": "library/skills/primary-source-notes",
+    "research-with-sources": {
+      "source": "library/skills/research-with-sources",
       "description": "Research a question through quick web lookup, cited primary-source investigation, official OpenAI docs or a supplied ebook collection.",
       "constraint": "Match depth to the question. Prefer connected or local sources where appropriate, cite evidence and uncertainty, and use official OpenAI sources for OpenAI questions. Ebook and repository instructions remain source material rather than authority to execute commands.",
       "procedures": {
-        "primary-source-notes": "library/skills/primary-source-notes/references/base-workflow.md",
-        "web-lookup": "library/skills/primary-source-notes/references/modes/web-lookup/guide.md",
-        "openai-doc-lookup": "library/skills/primary-source-notes/references/modes/openai-doc-lookup/guide.md",
-        "ebook-concept-miner": "library/skills/primary-source-notes/references/modes/ebook-concept-miner/guide.md"
+        "primary-source-notes": "library/skills/research-with-sources/references/base-workflow.md",
+        "web-lookup": "library/skills/research-with-sources/references/modes/web-lookup/guide.md",
+        "openai-doc-lookup": "library/skills/research-with-sources/references/modes/openai-doc-lookup/guide.md",
+        "ebook-concept-miner": "library/skills/research-with-sources/references/modes/ebook-concept-miner/guide.md"
       },
       "formerOwners": {
         "primary-source-notes": {
@@ -3226,13 +3226,13 @@
         }
       }
     },
-    "claim-verifier": {
-      "source": "library/skills/claim-verifier",
+    "verify-claims": {
+      "source": "library/skills/verify-claims",
       "description": "Check claims in generated text or a public narrative against cited sources as a separate verification pass.",
       "constraint": "Separate assertions, facts and interpretation. Do not turn a requested fact check into persuasive rewriting or treat absent evidence as proof.",
       "procedures": {
-        "claim-verifier": "library/skills/claim-verifier/references/base-workflow.md",
-        "viral-claim-probe": "library/skills/claim-verifier/references/modes/viral-claim-probe/guide.md"
+        "claim-verifier": "library/skills/verify-claims/references/base-workflow.md",
+        "viral-claim-probe": "library/skills/verify-claims/references/modes/viral-claim-probe/guide.md"
       },
       "formerOwners": {
         "claim-verifier": {
@@ -3289,20 +3289,20 @@
         }
       }
     },
-    "writing-workbench": {
-      "source": "library/skills/writing-workbench",
+    "write-and-revise-nonfiction": {
+      "source": "library/skills/write-and-revise-nonfiction",
       "description": "Develop or revise nonfiction, technical documentation, summaries or spoken adaptations from the supplied material.",
       "constraint": "Select intake, drafting, revision, technical documentation, summary or spoken adaptation. Preserve sources, user voice and uncertainty. A summary does not authorize invention; technical claims must agree with code. Use prose-unslop for the separate prose-quality pass.",
       "procedures": {
-        "article-shaping": "library/skills/writing-workbench/references/base-workflow.md",
-        "article-beat-path": "library/skills/writing-workbench/references/modes/article-beat-path/guide.md",
-        "article-restructure": "library/skills/writing-workbench/references/modes/article-restructure/guide.md",
-        "fragment-harvest": "library/skills/writing-workbench/references/modes/fragment-harvest/guide.md",
-        "draft-reviser": "library/skills/writing-workbench/references/modes/draft-reviser/guide.md",
-        "nonfiction-gap-finder": "library/skills/writing-workbench/references/modes/nonfiction-gap-finder/guide.md",
-        "speech-shaper": "library/skills/writing-workbench/references/modes/speech-shaper/guide.md",
-        "tech-doc-writer": "library/skills/writing-workbench/references/modes/tech-doc-writer/guide.md",
-        "digest-distiller": "library/skills/writing-workbench/references/modes/digest-distiller/guide.md"
+        "article-shaping": "library/skills/write-and-revise-nonfiction/references/base-workflow.md",
+        "article-beat-path": "library/skills/write-and-revise-nonfiction/references/modes/article-beat-path/guide.md",
+        "article-restructure": "library/skills/write-and-revise-nonfiction/references/modes/article-restructure/guide.md",
+        "fragment-harvest": "library/skills/write-and-revise-nonfiction/references/modes/fragment-harvest/guide.md",
+        "draft-reviser": "library/skills/write-and-revise-nonfiction/references/modes/draft-reviser/guide.md",
+        "nonfiction-gap-finder": "library/skills/write-and-revise-nonfiction/references/modes/nonfiction-gap-finder/guide.md",
+        "speech-shaper": "library/skills/write-and-revise-nonfiction/references/modes/speech-shaper/guide.md",
+        "tech-doc-writer": "library/skills/write-and-revise-nonfiction/references/modes/tech-doc-writer/guide.md",
+        "digest-distiller": "library/skills/write-and-revise-nonfiction/references/modes/digest-distiller/guide.md"
       },
       "formerOwners": {
         "article-shaping": {
@@ -3564,13 +3564,13 @@
         }
       }
     },
-    "prose-unslop": {
-      "source": "skills/prose-unslop",
+    "write-plainly": {
+      "source": "skills/write-plainly",
       "description": "Required for user-facing prose and documentation: remove filler, preserve meaning and restate explanations that did not land.",
       "constraint": "Keep facts, qualifications, citations, quotations and the author's voice. Restating or polishing prose does not authorize changing code behavior or publishing it.",
       "procedures": {
-        "prose-unslop": "skills/prose-unslop/references/base-workflow.md",
-        "plain-restate": "skills/prose-unslop/references/modes/plain-restate/guide.md"
+        "prose-unslop": "skills/write-plainly/references/base-workflow.md",
+        "plain-restate": "skills/write-plainly/references/modes/plain-restate/guide.md"
       },
       "formerOwners": {
         "prose-unslop": {
@@ -3627,13 +3627,13 @@
         }
       }
     },
-    "voice-ledger": {
-      "source": "shared/voice-ledger",
+    "build-writing-voice-guide": {
+      "source": "shared/build-writing-voice-guide",
       "description": "Extract or maintain a personal or product writing-voice guide from real source samples.",
       "constraint": "Distinguish a person's writing patterns from product voice rules. Record evidence and uncertainty; do not invent a brand personality or author experience.",
       "procedures": {
-        "voice-ledger": "shared/voice-ledger/references/base-workflow.md",
-        "voice-fingerprint": "shared/voice-ledger/references/modes/voice-fingerprint/guide.md"
+        "voice-ledger": "shared/build-writing-voice-guide/references/base-workflow.md",
+        "voice-fingerprint": "shared/build-writing-voice-guide/references/modes/voice-fingerprint/guide.md"
       },
       "formerOwners": {
         "voice-ledger": {
@@ -3687,18 +3687,18 @@
         }
       }
     },
-    "page-copy-forge": {
-      "source": "library/skills/page-copy-forge",
+    "write-and-adapt-copy": {
+      "source": "library/skills/write-and-adapt-copy",
       "description": "Write or adapt requested marketing pages, social posts, email sequences, internal updates, book blurbs or comparison copy.",
       "constraint": "Choose the audience, channel and output format first. Use verified product claims and existing voice guidance. Drafting does not authorize sending, scheduling, publishing or changing an account.",
       "procedures": {
-        "page-copy-forge": "library/skills/page-copy-forge/references/base-workflow.md",
-        "social-post-craft": "library/skills/page-copy-forge/references/modes/social-post-craft/guide.md",
-        "drip-sequence-planner": "library/skills/page-copy-forge/references/modes/drip-sequence-planner/guide.md",
-        "content-recaster": "library/skills/page-copy-forge/references/modes/content-recaster/guide.md",
-        "status-memo-writer": "library/skills/page-copy-forge/references/modes/status-memo-writer/guide.md",
-        "book-blurb-doctor": "library/skills/page-copy-forge/references/modes/book-blurb-doctor/guide.md",
-        "vs-page-writer": "library/skills/page-copy-forge/references/modes/vs-page-writer/guide.md"
+        "page-copy-forge": "library/skills/write-and-adapt-copy/references/base-workflow.md",
+        "social-post-craft": "library/skills/write-and-adapt-copy/references/modes/social-post-craft/guide.md",
+        "drip-sequence-planner": "library/skills/write-and-adapt-copy/references/modes/drip-sequence-planner/guide.md",
+        "content-recaster": "library/skills/write-and-adapt-copy/references/modes/content-recaster/guide.md",
+        "status-memo-writer": "library/skills/write-and-adapt-copy/references/modes/status-memo-writer/guide.md",
+        "book-blurb-doctor": "library/skills/write-and-adapt-copy/references/modes/book-blurb-doctor/guide.md",
+        "vs-page-writer": "library/skills/write-and-adapt-copy/references/modes/vs-page-writer/guide.md"
       },
       "formerOwners": {
         "page-copy-forge": {
@@ -3723,7 +3723,7 @@
           },
           "resourceHashes": {
             "SKILL.md": "ec155b4d64a737ad2d6cd5854922425305657fcf2d12a35df9c17238bdf4ab0d",
-            "evals/evals.json": "45d2ca7247a2f180f66b5baf68ea2f9b856729bc589b106c798b5c1c5201cfae",
+            "evals/evals.json": "956a85f945c14904a0add72c66364e9f8a4e1f558e67729f81e3d6f53dfe222f",
             "references/copy-frameworks.md": "f387b6ed4b510efa9f0d3c459f4898971c8b0176e8c34185040cb264eca50186",
             "references/natural-transitions.md": "29849e520c1610ac22954f6ff0842574e1e4ee580d8fd9002d7ef5e9be1e4acd",
             "references/curated/copy-editing.md": "e040770475a782148d70c65ee6109cfebada2f3096e3237f0df2cf21bd286e41"
@@ -3900,13 +3900,13 @@
         }
       }
     },
-    "launch-dossier": {
-      "source": "shared/launch-dossier",
+    "prepare-product-launch": {
+      "source": "shared/prepare-product-launch",
       "description": "Prepare a product marketing packet or a requested product, feature or beta launch plan.",
       "constraint": "Ground positioning and launch claims in the current product and sources. A launch plan or packet is a draft deliverable, not publishing or account-operation authority.",
       "procedures": {
-        "launch-dossier": "shared/launch-dossier/references/base-workflow.md",
-        "launch-runway": "shared/launch-dossier/references/modes/launch-runway/guide.md"
+        "launch-dossier": "shared/prepare-product-launch/references/base-workflow.md",
+        "launch-runway": "shared/prepare-product-launch/references/modes/launch-runway/guide.md"
       },
       "formerOwners": {
         "launch-dossier": {
@@ -3973,14 +3973,14 @@
         }
       }
     },
-    "market-position-map": {
-      "source": "library/skills/market-position-map",
+    "research-market-positioning": {
+      "source": "library/skills/research-market-positioning",
       "description": "Research customers and competitors and develop evidence-backed product positioning.",
       "constraint": "Keep interview observations, competitor facts and strategic inference distinct. Preserve sources; do not manufacture customer quotes or competitive claims.",
       "procedures": {
-        "market-position-map": "library/skills/market-position-map/references/base-workflow.md",
-        "customer-voice-miner": "library/skills/market-position-map/references/modes/customer-voice-miner/guide.md",
-        "rival-dossier": "library/skills/market-position-map/references/modes/rival-dossier/guide.md"
+        "market-position-map": "library/skills/research-market-positioning/references/base-workflow.md",
+        "customer-voice-miner": "library/skills/research-market-positioning/references/modes/customer-voice-miner/guide.md",
+        "rival-dossier": "library/skills/research-market-positioning/references/modes/rival-dossier/guide.md"
       },
       "formerOwners": {
         "market-position-map": {
@@ -4067,14 +4067,14 @@
         }
       }
     },
-    "landing-page-cro": {
-      "source": "library/skills/landing-page-cro",
+    "improve-conversion-rates": {
+      "source": "library/skills/improve-conversion-rates",
       "description": "Analyze a marketing page or plan a conversion experiment and its behavioral hypothesis.",
       "constraint": "Use real product and measurement context. Distinguish a conversion diagnosis from a causal result; preserve sample-size, duration and guardrail checks for experiments.",
       "procedures": {
-        "landing-page-cro": "library/skills/landing-page-cro/references/base-workflow.md",
-        "persuasion-levers": "library/skills/landing-page-cro/references/modes/persuasion-levers/guide.md",
-        "split-test-planner": "library/skills/landing-page-cro/references/modes/split-test-planner/guide.md"
+        "landing-page-cro": "library/skills/improve-conversion-rates/references/base-workflow.md",
+        "persuasion-levers": "library/skills/improve-conversion-rates/references/modes/persuasion-levers/guide.md",
+        "split-test-planner": "library/skills/improve-conversion-rates/references/modes/split-test-planner/guide.md"
       },
       "formerOwners": {
         "landing-page-cro": {
@@ -4099,7 +4099,7 @@
           },
           "resourceHashes": {
             "SKILL.md": "52228e26bec6749287df112887e0db008b927af3a78ed743606b616666c2d5c5",
-            "evals/evals.json": "ba23ac7e14b30278233cf5133f72129d85a44d339207972c0f34617ea52c7954",
+            "evals/evals.json": "201b2c0b7b745e97c115c990518bb731987127c1d0ecae29b738dc27f867ef4f",
             "references/experiments.md": "bbcc356c0af36cfaa4556bf9e929deac30c65cafb37f909d7c51d4777fe254ca",
             "references/curated/form-cro.md": "5376a6f23d66d309cd9353c42f699f461f03123007b460ef5572a012bc818cfd",
             "references/curated/onboarding-cro.md": "610e03f4946daedadf332a8c4b61716b43a8d577b5b94026f07ef84bf02337b8",
@@ -4165,13 +4165,13 @@
         }
       }
     },
-    "pptx-forge": {
-      "source": "library/skills/pptx-forge",
+    "slide-decks": {
+      "source": "library/skills/slide-decks",
       "description": "Design, create, revise or inspect a presentation, including PowerPoint files and slide narrative.",
       "constraint": "Prefer the installed presentation owner when it covers the task. Preserve editable sources, templates and attribution; render and inspect generated slides before claiming visual quality.",
       "procedures": {
-        "pptx-forge": "library/skills/pptx-forge/references/base-workflow.md",
-        "slide-story-design": "library/skills/pptx-forge/references/modes/slide-story-design/guide.md"
+        "pptx-forge": "library/skills/slide-decks/references/base-workflow.md",
+        "slide-story-design": "library/skills/slide-decks/references/modes/slide-story-design/guide.md"
       },
       "formerOwners": {
         "pptx-forge": {
@@ -4235,14 +4235,14 @@
         }
       }
     },
-    "raster-image-gen": {
-      "source": "library/skills/raster-image-gen",
+    "generate-and-edit-images": {
+      "source": "library/skills/generate-and-edit-images",
       "description": "Generate or edit raster images, prepare marketing graphics or package an explicitly requested animated pet.",
       "constraint": "Use the current image tool contract and preserve requested transparency and references. Pet atlas validation and activation are conditional; image generation does not authorize uploading or publishing.",
       "procedures": {
-        "raster-image-gen": "library/skills/raster-image-gen/references/base-workflow.md",
-        "marketing-imagery": "library/skills/raster-image-gen/references/modes/marketing-imagery/guide.md",
-        "pet-hatchery": "library/skills/raster-image-gen/references/modes/pet-hatchery/guide.md"
+        "raster-image-gen": "library/skills/generate-and-edit-images/references/base-workflow.md",
+        "marketing-imagery": "library/skills/generate-and-edit-images/references/modes/marketing-imagery/guide.md",
+        "pet-hatchery": "library/skills/generate-and-edit-images/references/modes/pet-hatchery/guide.md"
       },
       "formerOwners": {
         "raster-image-gen": {
@@ -4369,7 +4369,7 @@
             "scripts/make_direction_blind_qa_sheet.py": "52f2a29251872449fed51c7744c3f9f503274ee288eb23efc29a2c568b0d52bd",
             "scripts/make_direction_qa_sheet.py": "823e81e0aece24d1d6537889c9daaa2660208ff52604509b24fd5e24e7302acb",
             "scripts/measure_direction_continuity.py": "e24b7065af82eab5638f1fcdeb627d497391a2f1e9ba19801827d1db3a6d8c2d",
-            "scripts/prepare_pet_run.py": "5da7fe1fbf34e100b4a688858be83bf4f5e0eca91d3cac433b5a5f7c3b837f10",
+            "scripts/prepare_pet_run.py": "35ec10955360400f0debd9130f0fd4e7c1b5748c5c0fb336952171244e1404bf",
             "scripts/render_animation_previews.py": "911e8813e1b79b7f9da44fae8a667c044818e8c71f41eaa4b280e91c78cde61e",
             "scripts/validate_atlas.py": "ebbbc77cfbd27ef8476ac6fda716e864cf372a2ed4c2beb27ebdb2487e972194",
             "scripts/validate_direction_blind_verdicts.py": "7871667432918e0ffcdbb9beaf88a01c0af4b9e2809c5000f7b533a9ddc6e13d",
@@ -4381,18 +4381,18 @@
         }
       }
     },
-    "story-workbench": {
-      "source": "library/skills/story-workbench",
+    "develop-and-draft-fiction": {
+      "source": "library/skills/develop-and-draft-fiction",
       "description": "Develop a story through diagnosis, coaching, premises or requested prose and chapter drafting.",
       "constraint": "Choose coaching versus co-writing before proceeding. Coaching generates no story prose or dialogue. Draft only when requested, preserve the writer's choices, and keep genre, premise and outline constraints explicit.",
       "procedures": {
-        "story-diagnosis": "library/skills/story-workbench/references/base-workflow.md",
-        "story-mentor": "library/skills/story-workbench/references/modes/story-mentor/guide.md",
-        "story-cowriter": "library/skills/story-workbench/references/modes/story-cowriter/guide.md",
-        "premise-forge": "library/skills/story-workbench/references/modes/premise-forge/guide.md",
-        "genre-promise-check": "library/skills/story-workbench/references/modes/genre-promise-check/guide.md",
-        "draft-unblocker": "library/skills/story-workbench/references/modes/draft-unblocker/guide.md",
-        "outline-to-chapter": "library/skills/story-workbench/references/modes/outline-to-chapter/guide.md"
+        "story-diagnosis": "library/skills/develop-and-draft-fiction/references/base-workflow.md",
+        "story-mentor": "library/skills/develop-and-draft-fiction/references/modes/story-mentor/guide.md",
+        "story-cowriter": "library/skills/develop-and-draft-fiction/references/modes/story-cowriter/guide.md",
+        "premise-forge": "library/skills/develop-and-draft-fiction/references/modes/premise-forge/guide.md",
+        "genre-promise-check": "library/skills/develop-and-draft-fiction/references/modes/genre-promise-check/guide.md",
+        "draft-unblocker": "library/skills/develop-and-draft-fiction/references/modes/draft-unblocker/guide.md",
+        "outline-to-chapter": "library/skills/develop-and-draft-fiction/references/modes/outline-to-chapter/guide.md"
       },
       "formerOwners": {
         "story-diagnosis": {
@@ -4598,18 +4598,18 @@
         }
       }
     },
-    "fiction-editor": {
-      "source": "library/skills/fiction-editor",
+    "edit-fiction": {
+      "source": "library/skills/edit-fiction",
       "description": "Edit fiction for character, dialogue, prose, representation, humor or predictable story elements.",
       "constraint": "Choose the requested editing pass. Preserve the story's emotional function and author intent; representation review is evidence-aware advice, not a guarantee. Do not rewrite beyond the authorized scope.",
       "procedures": {
-        "fiction-line-edit": "library/skills/fiction-editor/references/base-workflow.md",
-        "character-arc-doctor": "library/skills/fiction-editor/references/modes/character-arc-doctor/guide.md",
-        "dialogue-doctor": "library/skills/fiction-editor/references/modes/dialogue-doctor/guide.md",
-        "sensitivity-read": "library/skills/fiction-editor/references/modes/sensitivity-read/guide.md",
-        "punchline-lab": "library/skills/fiction-editor/references/modes/punchline-lab/guide.md",
-        "cliche-escape": "library/skills/fiction-editor/references/modes/cliche-escape/guide.md",
-        "trope-refresher": "library/skills/fiction-editor/references/modes/trope-refresher/guide.md"
+        "fiction-line-edit": "library/skills/edit-fiction/references/base-workflow.md",
+        "character-arc-doctor": "library/skills/edit-fiction/references/modes/character-arc-doctor/guide.md",
+        "dialogue-doctor": "library/skills/edit-fiction/references/modes/dialogue-doctor/guide.md",
+        "sensitivity-read": "library/skills/edit-fiction/references/modes/sensitivity-read/guide.md",
+        "punchline-lab": "library/skills/edit-fiction/references/modes/punchline-lab/guide.md",
+        "cliche-escape": "library/skills/edit-fiction/references/modes/cliche-escape/guide.md",
+        "trope-refresher": "library/skills/edit-fiction/references/modes/trope-refresher/guide.md"
       },
       "formerOwners": {
         "fiction-line-edit": {
@@ -4795,14 +4795,14 @@
         }
       }
     },
-    "story-dna-extractor": {
-      "source": "library/skills/story-dna-extractor",
+    "analyze-and-adapt-stories": {
+      "source": "library/skills/analyze-and-adapt-stories",
       "description": "Analyze a source story's functional structure or adapt that structure into a requested new context.",
       "constraint": "Separate structural necessity from stylistic choices and preserve source provenance. An analysis request does not authorize generating an adaptation.",
       "procedures": {
-        "story-dna-extractor": "library/skills/story-dna-extractor/references/base-workflow.md",
-        "story-dna-adapter": "library/skills/story-dna-extractor/references/modes/story-dna-adapter/guide.md",
-        "book-outliner": "library/skills/story-dna-extractor/references/modes/book-outliner/guide.md"
+        "story-dna-extractor": "library/skills/analyze-and-adapt-stories/references/base-workflow.md",
+        "story-dna-adapter": "library/skills/analyze-and-adapt-stories/references/modes/story-dna-adapter/guide.md",
+        "book-outliner": "library/skills/analyze-and-adapt-stories/references/modes/book-outliner/guide.md"
       },
       "formerOwners": {
         "story-dna-extractor": {
@@ -4903,15 +4903,15 @@
         }
       }
     },
-    "world-bible": {
-      "source": "library/skills/world-bible",
+    "fictional-worldbuilding": {
+      "source": "library/skills/fictional-worldbuilding",
       "description": "Maintain or diagnose a fictional world, its canon and persistent world-state, or generate requested creative randomization resources.",
       "constraint": "Preserve established canon, uncertainty and source provenance. World-state changes and random tables should follow the writer's requested rules; do not silently normalize ambiguous material.",
       "procedures": {
-        "world-bible": "library/skills/world-bible/references/base-workflow.md",
-        "world-diagnostics": "library/skills/world-bible/references/modes/world-diagnostics/guide.md",
-        "world-fate-ledger": "library/skills/world-bible/references/modes/world-fate-ledger/guide.md",
-        "entropy-lists": "library/skills/world-bible/references/modes/entropy-lists/guide.md"
+        "world-bible": "library/skills/fictional-worldbuilding/references/base-workflow.md",
+        "world-diagnostics": "library/skills/fictional-worldbuilding/references/modes/world-diagnostics/guide.md",
+        "world-fate-ledger": "library/skills/fictional-worldbuilding/references/modes/world-fate-ledger/guide.md",
+        "entropy-lists": "library/skills/fictional-worldbuilding/references/modes/entropy-lists/guide.md"
       },
       "formerOwners": {
         "world-bible": {
@@ -5051,13 +5051,13 @@
         }
       }
     },
-    "conlang-forge": {
-      "source": "library/skills/conlang-forge",
+    "design-fictional-languages": {
+      "source": "library/skills/design-fictional-languages",
       "description": "Design fictional naming languages, full conlangs, language families, dialects or historical sound changes.",
       "constraint": "Match linguistic detail to the story's needs; preserve existing phonology and naming conventions and distinguish invented history from source canon.",
       "procedures": {
-        "conlang-forge": "library/skills/conlang-forge/references/base-workflow.md",
-        "conlang-drift": "library/skills/conlang-forge/references/modes/conlang-drift/guide.md"
+        "conlang-forge": "library/skills/design-fictional-languages/references/base-workflow.md",
+        "conlang-drift": "library/skills/design-fictional-languages/references/modes/conlang-drift/guide.md"
       },
       "formerOwners": {
         "conlang-forge": {
@@ -5116,13 +5116,13 @@
         }
       }
     },
-    "rpg-game-master": {
-      "source": "library/skills/rpg-game-master",
+    "run-rpg-sessions": {
+      "source": "library/skills/run-rpg-sessions",
       "description": "Run a requested tabletop or solo narrative RPG session or adjust its narration and table tone.",
       "constraint": "Preserve player agency, established rules and continuity. A tone review does not start or advance a session unless requested.",
       "procedures": {
-        "rpg-game-master": "library/skills/rpg-game-master/references/base-workflow.md",
-        "table-tone-tuner": "library/skills/rpg-game-master/references/modes/table-tone-tuner/guide.md"
+        "rpg-game-master": "library/skills/run-rpg-sessions/references/base-workflow.md",
+        "table-tone-tuner": "library/skills/run-rpg-sessions/references/modes/table-tone-tuner/guide.md"
       },
       "formerOwners": {
         "rpg-game-master": {
@@ -5183,16 +5183,16 @@
         }
       }
     },
-    "lesson-workspace": {
-      "source": "library/skills/lesson-workspace",
+    "plan-and-teach-lessons": {
+      "source": "library/skills/plan-and-teach-lessons",
       "description": "Plan or teach a course, tutor a concept, scaffold requested exercises or review learning progress.",
       "constraint": "Select planning, tutoring, course delivery, exercise scaffolding or retrospective. Help the learner build understanding; use course-specific repository formats only when the target uses them.",
       "procedures": {
-        "lesson-workspace": "library/skills/lesson-workspace/references/base-workflow.md",
-        "learning-roadmap": "library/skills/lesson-workspace/references/modes/learning-roadmap/guide.md",
-        "patient-tutor": "library/skills/lesson-workspace/references/modes/patient-tutor/guide.md",
-        "learning-retro": "library/skills/lesson-workspace/references/modes/learning-retro/guide.md",
-        "exercise-scaffold": "library/skills/lesson-workspace/references/modes/exercise-scaffold/guide.md"
+        "lesson-workspace": "library/skills/plan-and-teach-lessons/references/base-workflow.md",
+        "learning-roadmap": "library/skills/plan-and-teach-lessons/references/modes/learning-roadmap/guide.md",
+        "patient-tutor": "library/skills/plan-and-teach-lessons/references/modes/patient-tutor/guide.md",
+        "learning-retro": "library/skills/plan-and-teach-lessons/references/modes/learning-retro/guide.md",
+        "exercise-scaffold": "library/skills/plan-and-teach-lessons/references/modes/exercise-scaffold/guide.md"
       },
       "formerOwners": {
         "lesson-workspace": {

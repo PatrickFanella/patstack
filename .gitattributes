@@ -3,4 +3,4 @@
 # Preserve byte-exact upstream license notices and pinned dataset hashes.
 **/notices/** -whitespace
 **/LICENSE.txt -whitespace
-skills/ui-craft/scripts/data/** -whitespace
+skills/style-web-ui/scripts/data/** -whitespace

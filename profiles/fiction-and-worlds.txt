@@ -1,14 +1,12 @@
 # Develop stories and settings, draft scenes, revise character/dialogue, and maintain continuity.
-branch-doctor
-conlang-forge
-fiction-editor
-lyric-doctor
-name-forge
-page-copy-forge
-prose-unslop
-rpg-game-master
-story-dna-extractor
-story-workbench
-voice-ledger
-world-bible
-writing-workbench
+analyze-and-adapt-stories
+build-writing-voice-guide
+design-fictional-languages
+develop-and-draft-fiction
+diagnose-and-generate-names
+diagnose-branching-stories
+edit-fiction
+fictional-worldbuilding
+run-rpg-sessions
+write-and-revise-nonfiction
+write-plainly
