@@ -14,7 +14,7 @@ In Codex, Claude Code or OpenCode there is no Canvas SDK. Produce the same group
 
 ## Gather the diff
 
-Expect a PR link or number. Most repositories here live on Gitea (`https://git.subcult.tv/<owner>/<repo>/pulls/<n>`): fetch the diff with `tea api --login subcult-agent /repos/<owner>/<repo>/pulls/<n>.diff`. For a GitHub PR (`https://github.com/<owner>/<repo>/pull/<n>`), use `gh pr diff <pr>`. Collect every file's path, additions, deletions, and hunks.
+Expect a PR link or number. Organization repositories (`subculture-collective`) take their PRs on GitHub since 2026-11-10. For a GitHub PR (`https://github.com/<owner>/<repo>/pull/<n>`), use `gh pr diff <pr>`. For a Gitea PR (`https://git.subcult.tv/<owner>/<repo>/pulls/<n>`), from a repository that exists only on Gitea or from before the move, fetch the diff with `tea api --login subcult-agent /repos/<owner>/<repo>/pulls/<n>.diff`. Collect every file's path, additions, deletions, and hunks.
 
 **If the user didn't provide a PR link, stop and ask.** Do not guess at the current branch, infer from recent history, or fall back to a local `git diff`. Ask the user which diff they want to review — a specific PR URL or number — and wait for their reply before continuing.
 

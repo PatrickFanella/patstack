@@ -105,7 +105,10 @@ Use this order:
 1. If Gitea `main` equals GitHub/main or configured upstream, mark fresh.
 2. If GitHub/main is ahead and Gitea can fast-forward, propose or perform
    fast-forward depending on mutation mode.
-3. If Gitea/main is ahead, verify push mirror state and avoid overwriting it.
+3. If Gitea/main is ahead of GitHub on an organization repository, a commit was
+   made on the mirror and will never be copied back; classify yellow and report
+   it. On a Gitea-only repository, verify push mirror state and avoid
+   overwriting it.
 4. If both have unique commits, classify yellow and request user approval.
 5. If only `master` exists and no `main`, classify yellow before changing
    default branch.
@@ -119,7 +122,7 @@ Never force-push or rewrite history without explicit approval.
 Target baseline for active repos:
 
 - Issues enabled.
-- Pull requests enabled.
+- Pull requests enabled, except on organization mirrors, where they stay off.
 - Wiki enabled when docs are worth publishing separately.
 - Projects enabled when there is active multi-issue work.
 - Actions enabled only after checking existing workflow files. If deploy,
@@ -128,7 +131,9 @@ Target baseline for active repos:
 - Packages enabled unless there is a reason to disable.
 - Soft branch protection on default branch for active repos: direct pushes still
   allowed, force-push disabled, no required checks/reviews initially.
-- Push mirror configured if GitHub backup/public mirror is desired.
+- Push mirror configured if GitHub backup/public mirror is desired, on
+  Gitea-only repositories. Never add one to an organization mirror: a push
+  mirror force-pushes and prunes, and GitHub is the source there.
 
 Archived or dormant repos may use a lighter baseline: accurate README,
 description, topics, and issue tracker state, without projects/actions.

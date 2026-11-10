@@ -46,32 +46,112 @@
   ],
   "substitutions": [
     [
-      "Repositories on `git.subcult.tv` are Gitea: use `tea` with `--login subcult-agent` and the Gitea API.",
-      "Repositories on a Gitea or Forgejo host: use `tea` with `--login <login>` and the Gitea API."
+      "- Monitor PR checks on GitHub (`gh`, organization repositories) or Gitea (`tea`, Gitea-only repositories) and fix failures until green.",
+      "- Monitor PR checks on GitHub (`gh`) or Gitea (`tea`) and fix failures until green."
     ],
     [
-      "Gitea (`git.subcult.tv`):",
+      "Pick the host from `git remote get-url origin`. Since 2026-11-10 every `subculture-collective` organization repository uses GitHub as `origin`, and its PR checks run there; the required check is `CI gate` or `Mirror CI gate`. On GitHub, `gh pr checks` is the source of truth; it includes all PR-attached checks, while `gh run list` only covers GitHub Actions. After a merge, Kvant copies GitHub to the Gitea mirror within about five minutes, and main-branch deploy and release jobs not yet moved to GitHub Actions run on Gitea Actions there. Inspect those with the Gitea commands below, using the owner and name from the `gitea` remote. Repositories that exist only on Gitea (`origin` on `git.subcult.tv`) keep their PR checks on Gitea: use `tea` with `--login subcult-agent` and the Gitea API. `gh` does not work against Gitea.",
+      "Pick the host from `git remote get-url origin`. For GitHub repositories, `gh pr checks` is the source of truth; it includes all PR-attached checks, while `gh run list` only covers GitHub Actions. Repositories on a Gitea or Forgejo host: use `tea` with `--login <login>` and the Gitea API. `gh` does not work against Gitea."
+    ],
+    [
+      "Gitea (`git.subcult.tv`; PR commands apply to Gitea-only repositories, run commands also to organization mirrors):",
       "Gitea or Forgejo:"
     ],
     [
-      "Most repositories in this setup live on Gitea at `git.subcult.tv`, where `gh` does not work: use `tea --login subcult-agent` (or `tea api` for endpoints it lacks) and treat GitHub copies as mirrors.",
-      "For Gitea or Forgejo remotes `gh` does not work: use `tea --login <login>` (or `tea api` for endpoints it lacks)."
+      "(GitHub via gh for organization repositories, Gitea via tea for Gitea-only repositories)",
+      "(GitHub via gh, Gitea via tea)"
     ],
     [
-      "On Gitea (git.subcult.tv) use instead:",
-      "On Gitea or Forgejo use instead:"
+      "GitHub-hosted repositories, including every `subculture-collective` organization repository:",
+      "GitHub-hosted repositories:"
+    ],
+    [
+      "For repositories that exist only on Gitea use `tea",
+      "For Gitea or Forgejo repositories use `tea"
+    ],
+    [
+      "# GitHub remotes, including organization repositories",
+      "# GitHub remotes"
+    ],
+    [
+      "# Gitea-only repositories (git.subcult.tv)",
+      "# Gitea or Forgejo remotes"
+    ],
+    [
+      "Organization repositories (`subculture-collective`) use GitHub as `origin`: push the branch there and open the PR with `gh pr create`. A ready PR merges itself once its required check (`CI gate` or `Mirror CI gate`) passes and it has no conflicts; to hold it, open it as a draft or add the label `hold`. Never push an organization repository to its Gitea copy: Gitea is a fast-forward mirror, and the `gitea` remote is fetch-only. A fresh GitHub clone has no `gitea` remote, so commit with command-local `-c user.name='SUBCULT Agent' -c user.email='info@subcult.tv'`. ",
+      ""
+    ],
+    [
+      "Repositories that exist only on Gitea (`git.subcult.tv`) use `tea`",
+      "Gitea or Forgejo repositories use `tea`"
+    ],
+    [
+      "the commit status API on Gitea-only repositories.",
+      "the commit status API on Gitea."
+    ],
+    [
+      "# Create PR. Organization repositories use gh on GitHub. For a Gitea-only repository (git.subcult.tv) use instead:",
+      "# Create PR. On Gitea or Forgejo use instead:"
+    ],
+    [
+      "GitHub workflow procedure for repositories whose remote is `github.com`. Since 2026-11-10 that includes every `subculture-collective` organization repository: push branches and open PRs there. Use the `gh` CLI with non-interactive flags. Gitea at `git.subcult.tv` holds a fast-forward mirror of each organization repository; never push to it, and its pull requests are off. Public organization repositories take new issues on GitHub; older issues may still be on Gitea. Private organization repositories keep their issues on Gitea. Repositories that exist only on Gitea keep the Gitea workflow, where `gh` does not work: use `tea --login subcult-agent` (or `tea api` for endpoints it lacks). Some organization repositories also have a `PatrickFanella/<name>` copy on GitHub that is kept current automatically from the Gitea mirror; do not edit those copies.",
+      "GitHub workflow procedure for repositories whose remote is `github.com`. Use the `gh` CLI with non-interactive flags. For Gitea or Forgejo remotes `gh` does not work: use `tea --login <login>` (or `tea api` for endpoints it lacks)."
+    ],
+    [
+      "- **Gitea-only repositories and issues kept on Gitea:** `tea`, not `gh`.",
+      "- **Gitea:** `tea`, not `gh`."
+    ],
+    [
+      "# Gitea-only repositories: shows head and base branches",
+      "# Gitea: shows head and base branches"
+    ],
+    [
+      "should become tracker issues (Gitea, or GitHub for public organization repositories): a Roadmap",
+      "should become Gitea issues: a Roadmap"
+    ],
+    [
+      "\n## Where issues live\n\nSince 2026-11-10 every `subculture-collective` organization repository takes branches and PRs on GitHub, and Gitea holds a fast-forward mirror. Issues depend on visibility:\n\n- **Public organization repositories**: new issues go on GitHub, where Issues, Projects and (on products) Discussions are on. Older issues may still be on Gitea until they are moved.\n- **Private organization repositories and repositories that exist only on Gitea**: issues stay on Gitea.\n\n`scripts/roadmap.py` publishes to Gitea only. Use it where issues live on Gitea. For a public organization repository, do not publish to the Gitea copy: check the plan with the script as usual, then create the issues on GitHub with `gh issue create` in the printed order, using the `--preview` bodies, and record order with `Blocked by #n` lines. In a GitHub PR, `Closes #n` refers to GitHub's own issue numbers; link a work issue still on Gitea by its full URL.\n",
+      ""
+    ],
+    [
+      "Find the tracker. Public `subculture-collective` organization repositories take new issues on GitHub: use `gh issue create`. Private organization repositories and repositories that exist only on Gitea keep issues on Gitea (`git.subcult.tv`): use `tea issues create --login subcult-agent --repo <owner>/<repo> --title ... --description-file -`, with the owner and name from the `gitea` remote when `origin` is GitHub. Other GitHub repositories use `gh issue create`.",
+      "Check `git remote -v` to find the tracker. For Gitea or Forgejo, use `tea issues create --login <login> --repo <owner>/<repo> --title ... --description-file -`. For GitHub, use `gh issue create`."
+    ],
+    [
+      "(GitHub via `gh` for public organization repositories, Gitea via `tea --login subcult-agent` for private organization and Gitea-only repositories, Linear, …)",
+      "(Gitea via `tea --login <login>`, GitHub, Linear, …)"
+    ],
+    [
+      "For a public `subculture-collective` organization repository, propose GitHub: new issues go there since 2026-11-10, although older issues may still be on Gitea. For a private organization repository, or one whose only remote is the Gitea host `git.subcult.tv`, propose Gitea. If the repository is otherwise on GitHub, propose that.",
+      "If a `git remote` points at a Gitea or Forgejo host, propose Gitea. If it points at GitHub, propose that."
+    ],
+    [
+      " Organization repositories (`subculture-collective`) take their PRs on GitHub since 2026-11-10.",
+      ""
+    ],
+    [
+      ", from a repository that exists only on Gitea or from before the move,",
+      ","
+    ],
+    [
+      ", which holds the PRs of every `subculture-collective` organization repository since 2026-11-10,",
+      ""
+    ],
+    [
+      " on `git.subcult.tv`, which holds Gitea-only repositories, earlier organization PRs and issues not yet moved",
+      ""
+    ],
+    [
+      "Organization repositories (`subculture-collective`) run PR checks on GitHub Actions. Their main-branch deploy and release jobs still run on Gitea Actions (`https://git.subcult.tv`) after Kvant copies GitHub to the Gitea mirror, until each job moves to GitHub Actions, so check which workflow reads a secret before choosing where to set it. ",
+      ""
+    ],
+    [
+      "# Organization repositories: PRs merged before 2026-11-10 are on Gitea, later ones on GitHub.\n",
+      ""
     ],
     [
       "returns `login: subcult-agent`",
       "returns the expected account"
-    ],
-    [
-      "Most repositories here live on Gitea (`https://git.subcult.tv`); `gh secret` does not reach them.",
-      "For Gitea or Forgejo repositories, `gh secret` does not reach them."
-    ],
-    [
-      "The GitHub examples in the full guide apply only to GitHub mirrors and personal repos.",
-      "The GitHub examples in the full guide apply to GitHub repositories."
     ],
     [
       "(via tea, e.g. git.subcult.tv)",

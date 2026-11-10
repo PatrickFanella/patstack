@@ -53,9 +53,9 @@ Implement secure secret storage, injection, rotation, and scanning for CI/CD and
    - Add secret scanning in pre-commit + CI.
    - Ensure audit trail for reads/updates/deletes.
 
-## Gitea repositories
+## Gitea and GitHub repositories
 
-Most repositories here live on Gitea (`https://git.subcult.tv`); `gh secret` does not reach them. Use `tea actions secrets create --stdin <NAME>` and `tea actions variables set --stdin <NAME>` from the checkout (or the repository's Settings > Actions page), feeding values on stdin so they stay out of shell history and process lists. The GitHub examples in the full guide apply only to GitHub mirrors and personal repos.
+Organization repositories (`subculture-collective`) run PR checks on GitHub Actions. Their main-branch deploy and release jobs still run on Gitea Actions (`https://git.subcult.tv`) after Kvant copies GitHub to the Gitea mirror, until each job moves to GitHub Actions, so check which workflow reads a secret before choosing where to set it. For GitHub Actions, use `gh secret set <NAME> --repo <owner>/<repo>` and feed the value on stdin. `gh secret` does not reach Gitea Actions: use `tea actions secrets create --stdin <NAME>` and `tea actions variables set --stdin <NAME>` from the checkout (or the repository's Settings > Actions page), feeding values on stdin so they stay out of shell history and process lists. The GitHub examples in the full guide apply to GitHub repositories.
 
 ## Guardrails
 

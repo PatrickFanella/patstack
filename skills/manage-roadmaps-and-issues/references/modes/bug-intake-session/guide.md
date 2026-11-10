@@ -45,7 +45,7 @@ Keep as a single issue when:
 
 ### 4. File the issue(s)
 
-Check `git remote -v` to find the tracker. For Gitea (`git.subcult.tv`), use `tea issues create --login subcult-agent --repo <owner>/<repo> --title ... --description-file -`. For GitHub, use `gh issue create`. Do NOT ask the user to review first — just file and share URLs.
+Find the tracker. Public `subculture-collective` organization repositories take new issues on GitHub: use `gh issue create`. Private organization repositories and repositories that exist only on Gitea keep issues on Gitea (`git.subcult.tv`): use `tea issues create --login subcult-agent --repo <owner>/<repo> --title ... --description-file -`, with the owner and name from the `gitea` remote when `origin` is GitHub. Other GitHub repositories use `gh issue create`. Do NOT ask the user to review first — just file and share URLs.
 
 Issues must be **durable** — they should still make sense after major refactors. Write from the user's perspective.
 

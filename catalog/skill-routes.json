@@ -883,7 +883,7 @@
       {
         "skill": "manage-roadmaps-and-issues",
         "kind": "optional",
-        "when": "When the finished plan should be published as Gitea issues with a roadmap."
+        "when": "When the finished plan should be published as tracker issues with a roadmap."
       },
       {
         "skill": "test-driven-development",

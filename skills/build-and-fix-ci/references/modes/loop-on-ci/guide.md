@@ -8,7 +8,7 @@ When given a captured check payload or logs, inspect those locally first: identi
 
 Need to watch a branch or pull request and iterate on CI failures until all required checks are green.
 
-Pick the host from `git remote get-url origin`. Repositories on `git.subcult.tv` are Gitea: use `tea` with `--login subcult-agent` and the Gitea API. `gh` does not work against Gitea. For GitHub repositories, `gh pr checks` is the source of truth; it includes all PR-attached checks, while `gh run list` only covers GitHub Actions.
+Pick the host from `git remote get-url origin`. Since 2026-11-10 every `subculture-collective` organization repository uses GitHub as `origin`, and its PR checks run there; the required check is `CI gate` or `Mirror CI gate`. On GitHub, `gh pr checks` is the source of truth; it includes all PR-attached checks, while `gh run list` only covers GitHub Actions. After a merge, Kvant copies GitHub to the Gitea mirror within about five minutes, and main-branch deploy and release jobs not yet moved to GitHub Actions run on Gitea Actions there. Inspect those with the Gitea commands below, using the owner and name from the `gitea` remote. Repositories that exist only on Gitea (`origin` on `git.subcult.tv`) keep their PR checks on Gitea: use `tea` with `--login subcult-agent` and the Gitea API. `gh` does not work against Gitea.
 
 ## Workflow
 
@@ -20,7 +20,7 @@ Pick the host from `git remote get-url origin`. Repositories on `git.subcult.tv`
 
 ## Commands
 
-Gitea (`git.subcult.tv`):
+Gitea (`git.subcult.tv`; PR commands apply to Gitea-only repositories, run commands also to organization mirrors):
 
 ```bash
 # Resolve the active PR (index, head branch, URL)

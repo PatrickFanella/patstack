@@ -1,6 +1,6 @@
 # GitHub Pro
 
-GitHub workflow procedure for repositories whose remote is `github.com`. Use the `gh` CLI with non-interactive flags. Most repositories in this setup live on Gitea at `git.subcult.tv`, where `gh` does not work: use `tea --login subcult-agent` (or `tea api` for endpoints it lacks) and treat GitHub copies as mirrors.
+GitHub workflow procedure for repositories whose remote is `github.com`. Since 2026-11-10 that includes every `subculture-collective` organization repository: push branches and open PRs there. Use the `gh` CLI with non-interactive flags. Gitea at `git.subcult.tv` holds a fast-forward mirror of each organization repository; never push to it, and its pull requests are off. Public organization repositories take new issues on GitHub; older issues may still be on Gitea. Private organization repositories keep their issues on Gitea. Repositories that exist only on Gitea keep the Gitea workflow, where `gh` does not work: use `tea --login subcult-agent` (or `tea api` for endpoints it lacks). Some organization repositories also have a `PatrickFanella/<name>` copy on GitHub that is kept current automatically from the Gitea mirror; do not edit those copies.
 
 ## Use When
 
@@ -15,7 +15,7 @@ GitHub workflow procedure for repositories whose remote is `github.com`. Use the
 
 - **Primary:** `gh` CLI with non-interactive flags, after `gh auth status`.
 - **Optional:** a GitHub MCP server or plugin when the active client has one connected; do not use both for the same action.
-- **Gitea:** `tea`, not `gh`.
+- **Gitea-only repositories and issues kept on Gitea:** `tea`, not `gh`.
 
 ## Workflow
 

@@ -66,7 +66,7 @@ Implementation complete. You're on a detached HEAD (externally managed workspace
 # Verify tests on merged result
 <test command>
 
-# Create PR. On Gitea (git.subcult.tv) use instead:
+# Create PR. Organization repositories use gh on GitHub. For a Gitea-only repository (git.subcult.tv) use instead:
 #   tea pulls create --login subcult-agent --title "<title>" --description-file <body.md>
 gh pr create --title "<title>" --body "$(cat <<'EOF'
 ## Summary

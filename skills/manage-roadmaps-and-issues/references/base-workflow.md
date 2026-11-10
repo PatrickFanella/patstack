@@ -14,6 +14,15 @@ Turn a finished plan into issues that a person or an agent can work from top to 
 
 A PR is not an issue: it closes its work issue with `Closes #n`. Epics depend on their children and the roadmap depends on its epics, so tracking issues close last.
 
+## Where issues live
+
+Since 2026-11-10 every `subculture-collective` organization repository takes branches and PRs on GitHub, and Gitea holds a fast-forward mirror. Issues depend on visibility:
+
+- **Public organization repositories**: new issues go on GitHub, where Issues, Projects and (on products) Discussions are on. Older issues may still be on Gitea until they are moved.
+- **Private organization repositories and repositories that exist only on Gitea**: issues stay on Gitea.
+
+`scripts/roadmap.py` publishes to Gitea only. Use it where issues live on Gitea. For a public organization repository, do not publish to the Gitea copy: check the plan with the script as usual, then create the issues on GitHub with `gh issue create` in the printed order, using the `--preview` bodies, and record order with `Blocked by #n` lines. In a GitHub PR, `Closes #n` refers to GitHub's own issue numbers; link a work issue still on Gitea by its full URL.
+
 ## Workflow
 
 1. **Read the whole plan.** Finished means the goal, scope and product decisions are settled. If an open question can be answered by investigation, make it a spike. If it needs the user's judgement and changes the breakdown, ask or route to `define-requirements`. Never invent the decision.

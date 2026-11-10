@@ -70,7 +70,7 @@ Build static HTML with no build step or backend, in the product repository. Matc
 | `site/README.md` | Preview command, the source file behind each fact, and where the brand assets came from |
 | `deploy/` | Dockerfile on `nginx-unprivileged`, `nginx.conf`, `compose.yml` and `<product>.Caddyfile`, modeled on Pult's |
 
-The footer links docs, the Gitea repository, a GitHub mirror when one exists, support and `https://subcult.tv`, and carries the licence line. Follow `studio/content/patreon/support-redesign-2026-10/site-guidelines.md` for support: link `https://subcult.tv/support` by default, or Patreon directly from a block that names SUBCULT; one block after the explanation or demo, a quiet footer link, no prices or tiers, and no ask on the error page.
+The footer links docs, the source repository (GitHub `subculture-collective/<name>` for organization repositories; Gitea for a repository that exists only there), support and `https://subcult.tv`, and carries the licence line. Follow `studio/content/patreon/support-redesign-2026-10/site-guidelines.md` for support: link `https://subcult.tv/support` by default, or Patreon directly from a block that names SUBCULT; one block after the explanation or demo, a quiet footer link, no prices or tiers, and no ask on the error page.
 
 Every command, flag, key and count comes from the product's source. Preview the site locally and check 360 and 1280 pixel widths for overflow, console errors, font loading, keyboard use, contrast, the demo and every link. Run `studio-brand-audit` against the pack.
 

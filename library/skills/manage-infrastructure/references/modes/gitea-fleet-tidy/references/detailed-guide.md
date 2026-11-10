@@ -8,7 +8,14 @@ unless the user gives a narrower list.
 
 ## Operating stance
 
-- Treat Gitea as the primary remote and GitHub as mirror/upstream when present.
+- Know which side is the source. Since 2026-11-10 every `subculture-collective`
+  organization repository is sourced from GitHub; its Gitea copy is a
+  fast-forward mirror that Kvant updates every five minutes, with pull requests
+  off. Make code, workflow and docs changes there as GitHub PRs, never by
+  pushing to Gitea, and leave the mirror's `main` protection as it is. Public
+  organization repositories take new issues on GitHub. Repositories that exist
+  only on Gitea keep Gitea as the primary remote, with GitHub as mirror or
+  upstream when present.
 - Use aggressive automation for reversible enrichment and normalization.
 - Separate mutation levels: inventory-only, safe metadata, soft governance,
   default-branch migration, workflow PRs, and destructive/admin changes.
@@ -41,7 +48,10 @@ unless the user gives a narrower list.
    - Capture owner, name, default branch, clone URL, repo units, topics,
      visibility, mirror state, branch list, latest commits, issues, labels,
      milestones, wiki pages, releases, Actions workflows, and branch protection.
-   - Identify GitHub mirror/upstream if a `github` remote or push mirror exists.
+   - Identify the GitHub side: the source for organization repositories (listed
+     in Kvant's `~/.local/share/github-canonical-mirror/repos.tsv`), or a
+     mirror/upstream from a `github` remote or push mirror for Gitea-only
+     repositories.
 
 2. **Snapshot**
    - Save a machine-readable manifest outside the repo under `${TMPDIR:-/tmp}/gitea-overhaul/` or
@@ -91,8 +101,11 @@ unless the user gives a narrower list.
      user names them.
 
 7. **Code freshness checkpoint**
-   - Compare Gitea default branch against GitHub mirror/upstream and local clones.
-   - Prefer fast-forwarding Gitea from the trusted freshest branch.
+   - Compare Gitea default branch against GitHub and local clones.
+   - For organization repositories GitHub is the source; the mirror timer
+     fast-forwards Gitea, so report a Gitea-only commit instead of pushing.
+   - For Gitea-only repositories, prefer fast-forwarding Gitea from the trusted
+     freshest branch.
    - Stop for explicit user approval before force pushes, branch deletion,
      squashing, rebasing shared branches, or replacing history.
 

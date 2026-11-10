@@ -10,6 +10,7 @@ git log --follow -p -- <file>
 git log --oneline -20 -- <file>
 git log -1 --format=%B <commit>
 gh pr view <number> --json title,body,author,createdAt,mergedAt,labels,closingIssuesReferences,comments,reviews
+# Organization repositories: PRs merged before 2026-11-10 are on Gitea, later ones on GitHub.
 # Gitea (git.subcult.tv): tea pulls <number> --login subcult-agent, or
 # tea api --login subcult-agent /repos/<owner>/<repo>/pulls/<number> (and .../issues/<number>/comments)
 ```

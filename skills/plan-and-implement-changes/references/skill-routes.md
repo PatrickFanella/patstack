@@ -9,7 +9,7 @@ Load a companion only under its stated condition. Current authorization and clie
 | `temporal-workflows` | optional | When the feature contains durable Temporal workflows. |
 | `manage-infrastructure` | optional | When the requested deliverable includes Terraform modules. |
 | `react-native-expo` | optional | When implementing a React Native/Expo feature. |
-| `manage-roadmaps-and-issues` | optional | When the finished plan should be published as Gitea issues with a roadmap. |
+| `manage-roadmaps-and-issues` | optional | When the finished plan should be published as tracker issues with a roadmap. |
 | `test-driven-development` | required | For the explicitly requested test-first implementation flow. |
 | `review-code-changes` | required | For the final code review specified by this implementation flow. |
 | `map-codebase` | optional | When the target repository is unfamiliar and the plan needs its structure first. |

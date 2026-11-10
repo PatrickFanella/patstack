@@ -112,9 +112,11 @@ retain their deployer ownership until those deployers can retire old paths.
 
 `catalog/public-edition.json` lists the 41 skills exported to the
 `generic-skills` repository and the `@subcult/patstack` npm package, which
-Subsets offers as its default optional pack. `generic-skills` has been private
-on Gitea since 2026-11-03; its older public GitHub copy is retained but no
-longer receives updates. Export from a reviewed checkout:
+Subsets offers as its default optional pack. `generic-skills` is the public
+GitHub repository `subculture-collective/generic-skills`, which is its source
+since 2026-11-10; Gitea holds a mirror. The `PatrickFanella/generic-skills`
+copy is kept current automatically; do not edit it. Export from a reviewed
+checkout:
 
 ```sh
 python scripts/public-edition.py --check ../generic-skills   # stage and leak-check only

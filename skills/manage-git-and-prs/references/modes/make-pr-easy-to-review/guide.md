@@ -16,7 +16,7 @@ Only rewrite history when the user asks for it or agrees to the plan. Before rew
 
 ```bash
 gh pr view <PR> --json title,headRefName,baseRefName,state,commits   # GitHub
-tea pulls <PR> --login subcult-agent                                  # Gitea: shows head and base branches
+tea pulls <PR> --login subcult-agent                                  # Gitea-only repositories: shows head and base branches
 git fetch origin <headRefName> <baseRefName>
 ORIGINAL_TREE=$(git rev-parse origin/<headRefName>^{tree})
 ```

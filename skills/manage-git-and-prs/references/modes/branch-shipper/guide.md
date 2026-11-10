@@ -23,19 +23,19 @@ Reviewing changes before shipping. Close key issues, verify behavior, and open o
 git fetch origin main
 git diff origin/main...HEAD
 git status
-gh pr checks --json name,bucket,state,workflow,link   # GitHub remotes
-tea pulls list --login subcult-agent                   # Gitea remotes (git.subcult.tv)
+gh pr checks --json name,bucket,state,workflow,link   # GitHub remotes, including organization repositories
+tea pulls list --login subcult-agent                   # Gitea-only repositories (git.subcult.tv)
 tea actions runs list --login subcult-agent
 ```
 
-Check `git remote -v` first. Gitea repositories on `git.subcult.tv` use `tea` with the `subcult-agent` login (`tea pulls create`, `tea actions runs list`); `gh` does not work for them.
+Check `git remote -v` first. Organization repositories (`subculture-collective`) use GitHub as `origin`: push the branch there and open the PR with `gh pr create`. A ready PR merges itself once its required check (`CI gate` or `Mirror CI gate`) passes and it has no conflicts; to hold it, open it as a draft or add the label `hold`. Never push an organization repository to its Gitea copy: Gitea is a fast-forward mirror, and the `gitea` remote is fetch-only. A fresh GitHub clone has no `gitea` remote, so commit with command-local `-c user.name='SUBCULT Agent' -c user.email='info@subcult.tv'`. Repositories that exist only on Gitea (`git.subcult.tv`) use `tea` with the `subcult-agent` login (`tea pulls create`, `tea actions runs list`); `gh` does not work for them.
 
 ## Guardrails
 
 - Prioritize correctness, security, and regressions over style-only comments.
 - Keep commits focused and avoid unrelated file changes.
 - If pre-commit checks fail, fix the issues rather than bypassing hooks.
-- Judge PR readiness from the hosted check results on the head commit: `gh pr checks` on GitHub, `tea actions runs list` or the commit status API on Gitea.
+- Judge PR readiness from the hosted check results on the head commit: `gh pr checks` on GitHub, `tea actions runs list` or the commit status API on Gitea-only repositories.
 
 ## Output
 
