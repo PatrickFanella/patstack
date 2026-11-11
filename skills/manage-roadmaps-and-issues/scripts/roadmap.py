@@ -579,7 +579,9 @@ class GitHub:
         return {c["number"] for c in self.pages(f"{self.base}/issues/{n}/sub_issues")}
 
     def add_child(self, parent, child):
-        self.call("POST", f"{self.base}/issues/{parent}/sub_issues", {"sub_issue_id": self.issue_id(child)})
+        # An issue has one parent; replace_parent moves it when the plan moved it to another epic.
+        self.call("POST", f"{self.base}/issues/{parent}/sub_issues",
+                  {"sub_issue_id": self.issue_id(child), "replace_parent": True})
 
     def pin(self, n, out):
         node = self.call("GET", f"{self.base}/issues/{n}")["node_id"]
@@ -609,29 +611,36 @@ class GitHub:
         if not project:
             out("note: the repository has no linked Project; issues were not added to one")
             return
-        have, after = set(), None
+        have, after = {}, None  # issue number -> (item id, current Size)
         while True:
             d = self.graphql("query($p:ID!,$a:String){node(id:$p){... on ProjectV2{items(first:100,after:$a){"
-                             "pageInfo{hasNextPage endCursor} nodes{id content{... on Issue{number repository{name}}}}}}}}",
+                             "pageInfo{hasNextPage endCursor} nodes{id content{... on Issue{number repository{name}}} "
+                             "size:fieldValueByName(name:\"Size\"){... on ProjectV2ItemFieldSingleSelectValue{name}}}}}}}",
                              p=project["id"], a=after)["data"]["node"]["items"]
-            have |= {n["content"]["number"] for n in d["nodes"]
-                     if (n.get("content") or {}).get("repository", {}).get("name") == self.name}
+            for n in d["nodes"]:
+                c = n.get("content") or {}
+                if c.get("repository", {}).get("name") == self.name:
+                    have[c["number"]] = (n["id"], (n.get("size") or {}).get("name"))
             if not d["pageInfo"]["hasNextPage"]:
                 break
             after = d["pageInfo"]["endCursor"]
         size = {f["name"]: f for f in project["fields"]["nodes"] if f}.get("Size")
         size_opt = {o["name"]: o["id"] for o in (size or {}).get("options", [])}
         for ident, n in numbers.items():
-            if n in have:
-                continue
-            out(f"{act}add #{n} to Project {project['title']}")
-            if not apply:
-                continue
-            node = self.call("GET", f"{self.base}/issues/{n}")["node_id"]
-            item = self.graphql("mutation($p:ID!,$c:ID!){addProjectV2ItemById(input:{projectId:$p,contentId:$c}){item{id}}}",
-                                p=project["id"], c=node)["data"]["addProjectV2ItemById"]["item"]["id"]
-            opt = size_opt.get(self.SIZES.get(sizes.get(ident) or ""))
-            if opt:
+            want = self.SIZES.get(sizes.get(ident) or "")
+            item, current = have.get(n, (None, None))
+            if item is None:
+                out(f"{act}add #{n} to Project {project['title']}")
+                if not apply:
+                    continue
+                node = self.call("GET", f"{self.base}/issues/{n}")["node_id"]
+                item = self.graphql("mutation($p:ID!,$c:ID!){addProjectV2ItemById(input:{projectId:$p,contentId:$c}){item{id}}}",
+                                    p=project["id"], c=node)["data"]["addProjectV2ItemById"]["item"]["id"]
+            opt = size_opt.get(want)
+            if opt and current != want:  # also repairs a Size a failed earlier run left unset
+                out(f"{act}set Size {want} on #{n}")
+                if not apply:
+                    continue
                 self.graphql("mutation($p:ID!,$i:ID!,$f:ID!,$o:String!){updateProjectV2ItemFieldValue(input:{"
                              "projectId:$p,itemId:$i,fieldId:$f,value:{singleSelectOptionId:$o}}){projectV2Item{id}}}",
                              p=project["id"], i=item, f=size["id"], o=opt)

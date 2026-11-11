@@ -350,9 +350,9 @@
           },
           "resourceUpdates": {
             "scripts/roadmap.py": {
-              "date": "2026-11-10",
-              "sha256": "45fe4d708262c2e9a69aeb642b95c17747c0a593b85e638cdaef8d15ad192e37",
-              "reason": "GitHub publishing for organization repositories"
+              "date": "2026-11-11",
+              "sha256": "d0107740ab27ae88d3336f9b1ff52a77b731c929b55ce578dbdd4e0950efca5b",
+              "reason": "GitHub publishing for organization repositories; re-parenting and Project Size reconciliation"
             }
           }
         },

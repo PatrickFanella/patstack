@@ -19,6 +19,8 @@ class FakeGitHub:
     def __init__(self):
         self.issues, self.labels, self.milestones = {}, {'bug'}, {}
         self.subs, self.blocked_by, self.pinned, self.calls = {}, {}, [], []
+        self.project = None  # set to {} to give the repository a linked Project
+        self.items = {}  # issue number -> {'id': item id, 'size': option name}
 
     def issue_json(self, n):
         i = self.issues[n]
@@ -67,6 +69,10 @@ class FakeGitHub:
             if rest == '/sub_issues':
                 if method == 'POST':
                     child = by_id[body['sub_issue_id']]
+                    if body.get('replace_parent'):
+                        for c in self.subs.values():
+                            if child in c:
+                                c.remove(child)
                     assert all(child not in c for c in self.subs.values()), 'an issue has one parent'
                     self.subs.setdefault(n, []).append(child)
                 return [self.issue_json(c) for c in self.subs.get(n, [])]
@@ -79,7 +85,23 @@ class FakeGitHub:
                 self.pinned.append(body['variables']['i'])
                 return {'data': {}}
             if 'projectsV2' in body['query']:
-                return {'data': {'repository': {'projectsV2': {'nodes': []}}}}
+                nodes = [] if self.project is None else [{'id': 'P_1', 'title': 'demo', 'url': 'u', 'fields': {'nodes': [
+                    {'id': 'F_size', 'name': 'Size', 'options': [{'id': 'O_' + n, 'name': n} for n in ('XS', 'S', 'M', 'L', 'XL')]}]}}]
+                return {'data': {'repository': {'projectsV2': {'nodes': nodes}}}}
+            if 'items(first' in body['query']:
+                return {'data': {'node': {'items': {'pageInfo': {'hasNextPage': False, 'endCursor': None}, 'nodes': [
+                    {'id': i['id'], 'content': {'number': n, 'repository': {'name': 'demo'}},
+                     'size': {'name': i['size']} if i['size'] else None} for n, i in self.items.items()]}}}}
+            if 'addProjectV2ItemById' in body['query']:
+                n = int(body['variables']['c'][2:])
+                assert n not in self.items, 'Content already exists in this project'
+                self.items[n] = {'id': f'PI_{n}', 'size': None}
+                return {'data': {'addProjectV2ItemById': {'item': {'id': f'PI_{n}'}}}}
+            if 'updateProjectV2ItemFieldValue' in body['query']:
+                v = body['variables']
+                n = next(k for k, i in self.items.items() if i['id'] == v['i'])
+                self.items[n]['size'] = v['o'][2:]
+                return {'data': {}}
         raise AssertionError(f'unexpected {method} {path}')
 
 
@@ -117,6 +139,29 @@ class RoadmapGitHubTests(unittest.TestCase):
         roadmap.publish(self.plan, self.api, apply=True, out=self.log.append)
         after = len(self.gh.issues), sum(map(len, self.gh.subs.values())), sum(map(len, self.gh.blocked_by.values()))
         self.assertEqual(before, after)
+
+    def test_moving_an_issue_to_another_epic_reparents_it(self):
+        numbers = roadmap.publish(self.plan, self.api, apply=True, out=self.log.append)
+        moved = next(i for i in self.plan['issues'] if i.get('epic'))
+        other = next(e['key'] for e in self.plan['epics'] if e['key'] != moved['epic'])
+        moved['epic'] = other
+        roadmap.publish(self.plan, self.api, apply=True, out=self.log.append)
+        n = numbers['issue:' + moved['key']]
+        self.assertIn(n, self.gh.subs[numbers['epic:' + other]])
+        self.assertEqual(sum(n in c for c in self.gh.subs.values()), 1)
+        self.assertEqual(roadmap.verify(self.plan, self.api, out=self.log.append), 0, self.log)
+
+    def test_project_items_get_their_size_and_reruns_repair_it(self):
+        self.gh.project = {}
+        numbers = roadmap.publish(self.plan, self.api, apply=True, out=self.log.append)
+        self.assertEqual(set(self.gh.items), set(numbers.values()))
+        sized = {i['key']: i.get('size', 'M') for i in self.plan['issues']}
+        for key, size in sized.items():
+            self.assertEqual(self.gh.items[numbers['issue:' + key]]['size'], size)
+        key = next(iter(sized))
+        self.gh.items[numbers['issue:' + key]]['size'] = None  # an earlier run failed before setting it
+        roadmap.publish(self.plan, self.api, apply=True, out=self.log.append)
+        self.assertEqual(self.gh.items[numbers['issue:' + key]]['size'], sized[key])
 
     def test_dry_run_writes_nothing(self):
         roadmap.publish(self.plan, self.api, apply=False, out=self.log.append)
