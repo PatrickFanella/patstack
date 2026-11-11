@@ -614,12 +614,13 @@ class GitHub:
         have, after = {}, None  # issue number -> (item id, current Size)
         while True:
             d = self.graphql("query($p:ID!,$a:String){node(id:$p){... on ProjectV2{items(first:100,after:$a){"
-                             "pageInfo{hasNextPage endCursor} nodes{id content{... on Issue{number repository{name}}} "
+                             "pageInfo{hasNextPage endCursor} nodes{id content{... on Issue{number repository{nameWithOwner}}} "
                              "size:fieldValueByName(name:\"Size\"){... on ProjectV2ItemFieldSingleSelectValue{name}}}}}}}",
                              p=project["id"], a=after)["data"]["node"]["items"]
             for n in d["nodes"]:
                 c = n.get("content") or {}
-                if c.get("repository", {}).get("name") == self.name:
+                # Match the owner too: a Project can hold a same-named repository from another owner (a fork).
+                if (c.get("repository") or {}).get("nameWithOwner", "").lower() == f"{self.owner}/{self.name}".lower():
                     have[c["number"]] = (n["id"], (n.get("size") or {}).get("name"))
             if not d["pageInfo"]["hasNextPage"]:
                 break

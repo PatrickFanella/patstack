@@ -90,7 +90,7 @@ class FakeGitHub:
                 return {'data': {'repository': {'projectsV2': {'nodes': nodes}}}}
             if 'items(first' in body['query']:
                 return {'data': {'node': {'items': {'pageInfo': {'hasNextPage': False, 'endCursor': None}, 'nodes': [
-                    {'id': i['id'], 'content': {'number': n, 'repository': {'name': 'demo'}},
+                    {'id': i['id'], 'content': {'number': i.get('number', n), 'repository': {'nameWithOwner': i.get('repo', 'subculture-collective/demo')}},
                      'size': {'name': i['size']} if i['size'] else None} for n, i in self.items.items()]}}}}
             if 'addProjectV2ItemById' in body['query']:
                 n = int(body['variables']['c'][2:])
@@ -162,6 +162,18 @@ class RoadmapGitHubTests(unittest.TestCase):
         self.gh.items[numbers['issue:' + key]]['size'] = None  # an earlier run failed before setting it
         roadmap.publish(self.plan, self.api, apply=True, out=self.log.append)
         self.assertEqual(self.gh.items[numbers['issue:' + key]]['size'], sized[key])
+
+    def test_size_ignores_a_same_named_repository_from_another_owner(self):
+        self.gh.project = {}
+        numbers = roadmap.publish(self.plan, self.api, apply=True, out=self.log.append)
+        first = self.plan['issues'][0]
+        n = numbers['issue:' + first['key']]
+        self.gh.items[n]['size'] = None
+        # a fork's issue with the same number, already in the Project
+        self.gh.items[10_000] = {'id': 'PI_fork', 'size': 'XL', 'repo': 'someone/demo', 'number': n}
+        roadmap.publish(self.plan, self.api, apply=True, out=self.log.append)
+        self.assertEqual(self.gh.items[10_000]['size'], 'XL')
+        self.assertEqual(self.gh.items[n]['size'], first.get('size', 'M'))
 
     def test_dry_run_writes_nothing(self):
         roadmap.publish(self.plan, self.api, apply=False, out=self.log.append)
