@@ -39,7 +39,7 @@ Lead each section with the recommended answer so the user can accept it in a wor
 
 > Explainer: The "issue tracker" is where issues live for this repo. Procedures like `tracer-ticket-split`, `issue-state-triage` and the `prd-from-context` mode of `define-requirements` read from and write to it. They need to know whether to call `gh issue create`, write a markdown file under `.scratch/`, or follow some other workflow you describe. Pick the place you actually track work for this repo.
 
-Default posture: these skills were designed for GitHub. For a public `subculture-collective` organization repository, propose GitHub: new issues go there since 2026-11-10, although older issues may still be on Gitea. For a private organization repository, or one whose only remote is the Gitea host `git.subcult.tv`, propose Gitea. If the repository is otherwise on GitHub, propose that. If it points at GitLab (`gitlab.com` or a self-hosted host), propose GitLab. Otherwise (or if the user prefers), offer:
+Default posture: these skills were designed for GitHub. For a `subculture-collective` organization repository, public or private, propose GitHub: its issues moved there on 2026-11-10 and Gitea issues are off. For a repository whose only remote is the Gitea host `git.subcult.tv`, propose Gitea. If the repository is otherwise on GitHub, propose that. If it points at GitLab (`gitlab.com` or a self-hosted host), propose GitLab. Otherwise (or if the user prefers), offer:
 
 - **Gitea**: issues live in the repo's Gitea Issues on `git.subcult.tv` (uses the `tea` CLI with `--login subcult-agent`; `gh` does not work here)
 - **GitHub**: issues live in the repo's GitHub Issues (uses the `gh` CLI)

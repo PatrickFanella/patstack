@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
-"""Order a plan breakdown and publish it to Gitea as a Roadmap with Epic and Single-PR issues.
+"""Order a plan breakdown and publish it to GitHub or Gitea as a Roadmap with Epic and Single-PR issues.
 
   check   PLAN [--preview]                      validate and order; no network
   publish PLAN --repo OWNER/NAME [--apply]      dry run unless --apply; reruns skip existing issues
-  verify  PLAN --repo OWNER/NAME                read back issues, labels and dependencies
+  verify  PLAN --repo OWNER/NAME                read back issues, labels, hierarchy and dependencies
   refresh --repo OWNER/NAME --roadmap N [--apply]  tick closed issues in tracking bodies; list the frontier
 
-Network calls go through `tea api`, so tea's login handles authentication (pass --login to choose one).
+subculture-collective/* repositories publish to GitHub through `gh api` (gh's active account);
+others publish to Gitea through `tea api` (pass --login to choose a tea login). --host overrides.
+On GitHub, epics and the roadmap hold their children as sub-issues, work issues get blocked-by
+links and an issue type, and every issue joins the repository's linked Project with its Size.
 The plan format is described in references/plan-format.md.
 """
 import argparse
@@ -400,19 +403,80 @@ def summary(plan, sched):
     return "\n".join(lines)
 
 
-# ---------------------------------------------------------------- Gitea
+# ---------------------------------------------------------------- trackers
 
 class ApiError(Exception):
     pass
 
 
 class Gitea:
+    """Gitea through `tea api`. No sub-issues: the hierarchy is dependencies and checklists."""
+    host = "gitea"
+    milestone_key = "id"
+    native_hierarchy = False
+
     def __init__(self, repo, login=None, runner=subprocess.run):
         if not re.match(r"^[\w.-]+/[\w.-]+$", repo or ""):
             raise PlanError("--repo must be OWNER/NAME")
         self.owner, self.name = repo.split("/")
         self.base = f"/repos/{self.owner}/{self.name}"
         self.login, self.runner = login, runner
+
+    def check_repo(self, repo):
+        if not (repo.get("internal_tracker") or {}).get("enable_issue_dependencies"):
+            raise PlanError("issue dependencies are disabled for this repository; enable them in its settings "
+                            "(internal_tracker.enable_issue_dependencies) or ask the owner")
+
+    def issues_path(self):
+        return f"{self.base}/issues?state=all&type=issues"
+
+    def label_map(self):
+        labels = {l["name"]: l["id"] for l in self.pages(f"{self.base}/labels")}
+        try:
+            for l in self.pages(f"/orgs/{self.owner}/labels"):
+                labels.setdefault(l["name"], l["id"])
+        except ApiError:
+            pass  # user-owned repository
+        return labels
+
+    def create_label(self, name, color, desc):
+        return self.call("POST", f"{self.base}/labels",
+                         {"name": name, "color": color, "description": desc, "exclusive": True})["id"]
+
+    def issue_type(self, role):
+        return None
+
+    def blockers(self, n):
+        return self.call("GET", f"{self.base}/issues/{n}/dependencies") or []
+
+    def add_blocker(self, n, blocker):
+        self.call("POST", f"{self.base}/issues/{n}/dependencies",
+                  {"owner": self.owner, "repo": self.name, "index": blocker})
+
+    def children(self, n):
+        return None  # no sub-issues
+
+    def add_child(self, parent, child):
+        raise NotImplementedError
+
+    def pin(self, n, out):
+        allowed = self.call("GET", f"{self.base}/new_pin_allowed") or {}
+        if not allowed.get("issues"):
+            out("note: no free pin slot; the roadmap will not be pinned")
+            return
+        self.call("POST", f"{self.base}/issues/{n}/pin")
+
+    def add_to_project(self, numbers, sizes, apply, out):
+        pass
+
+    def merged_closing_prs(self, n):
+        prs = []
+        for event in self.pages(f"{self.base}/issues/{n}/timeline"):
+            ref = event.get("ref_issue") or {}
+            if event.get("type") == "pull_ref" and event.get("ref_action") == "closes" \
+                    and (ref.get("pull_request") or {}).get("merged"):
+                prs.append(f"!{ref['number']}")
+        return prs
 
     def call(self, method, path, body=None):
         cmd = ["tea", "api", "-i", "-X", method]
@@ -439,24 +503,159 @@ class Gitea:
             page += 1
 
 
+class GitHub:
+    """GitHub through `gh api`: native sub-issues, blocked-by links, issue types and Projects."""
+    host = "github"
+    milestone_key = "number"
+    native_hierarchy = True
+    TYPES = {"roadmap": "Feature", "epic": "Feature", "task": "Task", "spike": "Task"}
+    SIZES = {"S": "S", "M": "M", "L": "L"}
+
+    def __init__(self, repo, login=None, runner=subprocess.run):
+        if not re.match(r"^[\w.-]+/[\w.-]+$", repo or ""):
+            raise PlanError("--repo must be OWNER/NAME")
+        if login:
+            raise PlanError("--login applies to Gitea only; gh uses its active account")
+        self.owner, self.name = repo.split("/")
+        self.base = f"/repos/{self.owner}/{self.name}"
+        self.runner = runner
+        self._ids, self._types = {}, None
+
+    def call(self, method, path, body=None):
+        cmd = ["gh", "api", "-X", method, "-H", "X-GitHub-Api-Version: 2022-11-28", path]
+        if body is not None:
+            cmd += ["--input", "-"]
+        proc = self.runner(cmd, input=None if body is None else json.dumps(body), capture_output=True, text=True)
+        if proc.returncode != 0:
+            raise ApiError(f"{method} {path}: {(proc.stdout or proc.stderr or '').strip()[:300]}")
+        return json.loads(proc.stdout) if (proc.stdout or "").strip() else None
+
+    def graphql(self, query, **variables):
+        return self.call("POST", "graphql", {"query": query, "variables": variables})
+
+    def pages(self, path):
+        out, page = [], 1
+        sep = "&" if "?" in path else "?"
+        while True:
+            batch = self.call("GET", f"{path}{sep}per_page=100&page={page}") or []
+            out += batch
+            if len(batch) < 100:
+                return out
+            page += 1
+
+    def check_repo(self, repo):
+        pass  # sub-issues and dependencies are always available
+
+    def issues_path(self):
+        return f"{self.base}/issues?state=all"
+
+    def label_map(self):
+        return {l["name"]: l["name"] for l in self.pages(f"{self.base}/labels")}
+
+    def create_label(self, name, color, desc):
+        return self.call("POST", f"{self.base}/labels", {"name": name, "color": color, "description": desc})["name"]
+
+    def issue_type(self, role):
+        if self._types is None:
+            try:
+                self._types = {t["name"] for t in self.call("GET", f"/orgs/{self.owner}/issue-types") or []}
+            except ApiError:
+                self._types = set()  # user-owned repository: no issue types
+        name = self.TYPES[role]
+        return name if name in self._types else None
+
+    def issue_id(self, n):
+        if n not in self._ids:
+            self._ids[n] = self.call("GET", f"{self.base}/issues/{n}")["id"]
+        return self._ids[n]
+
+    def blockers(self, n):
+        return self.pages(f"{self.base}/issues/{n}/dependencies/blocked_by")
+
+    def add_blocker(self, n, blocker):
+        self.call("POST", f"{self.base}/issues/{n}/dependencies/blocked_by", {"issue_id": self.issue_id(blocker)})
+
+    def children(self, n):
+        return {c["number"] for c in self.pages(f"{self.base}/issues/{n}/sub_issues")}
+
+    def add_child(self, parent, child):
+        self.call("POST", f"{self.base}/issues/{parent}/sub_issues", {"sub_issue_id": self.issue_id(child)})
+
+    def pin(self, n, out):
+        node = self.call("GET", f"{self.base}/issues/{n}")["node_id"]
+        try:
+            self.graphql("mutation($i:ID!){pinIssue(input:{issueId:$i}){issue{number}}}", i=node)
+        except ApiError as exc:
+            out(f"note: the roadmap was not pinned ({exc})")
+
+    def project(self):
+        """The organization Project named after the repository and linked to it, if any."""
+        d = self.graphql("query($o:String!,$n:String!){repository(owner:$o,name:$n){projectsV2(first:20){nodes{"
+                         "id title url fields(first:50){nodes{... on ProjectV2SingleSelectField{id name options{id name}}}}}}}}",
+                         o=self.owner, n=self.name)
+        nodes = d["data"]["repository"]["projectsV2"]["nodes"]
+        named = [p for p in nodes if p["title"] == self.name]
+        if named:
+            return named[0]
+        return nodes[0] if len(nodes) == 1 else None
+
+    def add_to_project(self, numbers, sizes, apply, out):
+        act = "" if apply else "would "
+        try:
+            project = self.project()
+        except (ApiError, KeyError, TypeError) as exc:
+            out(f"note: Projects not checked ({str(exc)[:200]}); gh needs the project scope")
+            return
+        if not project:
+            out("note: the repository has no linked Project; issues were not added to one")
+            return
+        have, after = set(), None
+        while True:
+            d = self.graphql("query($p:ID!,$a:String){node(id:$p){... on ProjectV2{items(first:100,after:$a){"
+                             "pageInfo{hasNextPage endCursor} nodes{id content{... on Issue{number repository{name}}}}}}}}",
+                             p=project["id"], a=after)["data"]["node"]["items"]
+            have |= {n["content"]["number"] for n in d["nodes"]
+                     if (n.get("content") or {}).get("repository", {}).get("name") == self.name}
+            if not d["pageInfo"]["hasNextPage"]:
+                break
+            after = d["pageInfo"]["endCursor"]
+        size = {f["name"]: f for f in project["fields"]["nodes"] if f}.get("Size")
+        size_opt = {o["name"]: o["id"] for o in (size or {}).get("options", [])}
+        for ident, n in numbers.items():
+            if n in have:
+                continue
+            out(f"{act}add #{n} to Project {project['title']}")
+            if not apply:
+                continue
+            node = self.call("GET", f"{self.base}/issues/{n}")["node_id"]
+            item = self.graphql("mutation($p:ID!,$c:ID!){addProjectV2ItemById(input:{projectId:$p,contentId:$c}){item{id}}}",
+                                p=project["id"], c=node)["data"]["addProjectV2ItemById"]["item"]["id"]
+            opt = size_opt.get(self.SIZES.get(sizes.get(ident) or ""))
+            if opt:
+                self.graphql("mutation($p:ID!,$i:ID!,$f:ID!,$o:String!){updateProjectV2ItemFieldValue(input:{"
+                             "projectId:$p,itemId:$i,fieldId:$f,value:{singleSelectOptionId:$o}}){projectV2Item{id}}}",
+                             p=project["id"], i=item, f=size["id"], o=opt)
+
+    def merged_closing_prs(self, n):
+        return []  # GitHub closes an issue from a merged PR even while it has open blockers
+
+
+def tracker(repo, login=None, host=None, runner=subprocess.run):
+    """GitHub for subculture-collective organization repositories, Gitea otherwise, unless --host says."""
+    host = host or ("github" if (repo or "").split("/")[0] == "subculture-collective" else "gitea")
+    return (GitHub if host == "github" else Gitea)(repo, login, runner)
+
+
 def find_existing(api, slug):
     found = {}
     pattern = re.compile(r"<!-- roadmap-slicer:" + re.escape(slug) + r":(\S+) -->")
-    for issue in api.pages(f"{api.base}/issues?state=all&type=issues"):
+    for issue in api.pages(api.issues_path()):
+        if issue.get("pull_request"):
+            continue
         m = pattern.search(issue.get("body") or "")
         if m:
             found[m.group(1)] = issue
     return found
-
-
-def label_ids(api):
-    labels = {l["name"]: l["id"] for l in api.pages(f"{api.base}/labels")}
-    try:
-        for l in api.pages(f"/orgs/{api.owner}/labels"):
-            labels.setdefault(l["name"], l["id"])
-    except ApiError:
-        pass  # user-owned repository
-    return labels
 
 
 def wanted_labels(plan):
@@ -478,16 +677,14 @@ def publish(plan, api, apply, update=False, pin=True, out=print):
     repo = api.call("GET", api.base)
     if not repo.get("has_issues", True):
         raise PlanError(f"{api.owner}/{api.name} has issues disabled")
-    if not (repo.get("internal_tracker") or {}).get("enable_issue_dependencies"):
-        raise PlanError("issue dependencies are disabled for this repository; enable them in its settings "
-                        "(internal_tracker.enable_issue_dependencies) or ask the owner")
+    api.check_repo(repo)
     existing = find_existing(api, plan["slug"])
-    labels = label_ids(api)
+    labels = api.label_map()
     roles, named = wanted_labels(plan)
     missing_named = sorted(n for n in named if n not in labels)
     if missing_named:
         raise PlanError("labels not in the repository (pick existing names or create them first): " + ", ".join(missing_named))
-    milestones = {m["title"]: m["id"] for m in api.pages(f"{api.base}/milestones?state=all")}
+    milestones = {m["title"]: m[api.milestone_key] for m in api.pages(f"{api.base}/milestones?state=all")}
     wanted_ms = {x.get("milestone") for x in [plan["roadmap"]] + plan["epics"] + plan["issues"]} - {None, ""}
     act = "" if apply else "would "
     for role in sorted(roles):
@@ -495,12 +692,11 @@ def publish(plan, api, apply, update=False, pin=True, out=print):
         if name not in labels:
             out(f"{act}create label {name}")
             if apply:
-                labels[name] = api.call("POST", f"{api.base}/labels",
-                                        {"name": name, "color": color, "description": desc, "exclusive": True})["id"]
+                labels[name] = api.create_label(name, color, desc)
     for title in sorted(wanted_ms - milestones.keys()):
         out(f"{act}create milestone {title}")
         if apply:
-            milestones[title] = api.call("POST", f"{api.base}/milestones", {"title": title})["id"]
+            milestones[title] = api.call("POST", f"{api.base}/milestones", {"title": title})[api.milestone_key]
 
     numbers = {ident: issue["number"] for ident, issue in existing.items()}
     closed = {ident for ident, issue in existing.items() if issue.get("state") == "closed"}
@@ -531,11 +727,13 @@ def publish(plan, api, apply, update=False, pin=True, out=print):
     for ident in idents:  # tracking issues first, then work in execution order
         if ident in numbers:
             continue
-        data, _ = item(ident)
+        data, role = item(ident)
         payload = {"title": book.title(ident), "labels": label_list(ident),
                    "body": book.marker(ident) + "\n\nBeing populated by manage-roadmaps-and-issues." if is_tracking(ident) else body(ident)}
-        if data.get("milestone"):
-            payload["milestone"] = milestones.get(data["milestone"], 0)
+        if data.get("milestone") and data["milestone"] in milestones:
+            payload["milestone"] = milestones[data["milestone"]]
+        if api.issue_type(role):
+            payload["type"] = api.issue_type(role)
         out(f"{act}create {ident}: {payload['title']}")
         if apply:
             numbers[ident] = api.call("POST", f"{api.base}/issues", payload)["number"]
@@ -551,24 +749,25 @@ def publish(plan, api, apply, update=False, pin=True, out=print):
             if update:
                 api.call("POST", f"{api.base}/issues/{numbers[ident]}/labels", {"labels": label_list(ident)})
     for ident, blockers in expected_edges(plan, book).items():
+        sub = api.native_hierarchy and is_tracking(ident)  # GitHub: tracking issues own their children as sub-issues
         have = set()
         if ident in numbers:
-            have = {d["number"] for d in api.call("GET", f"{api.base}/issues/{numbers[ident]}/dependencies") or []}
+            have = api.children(numbers[ident]) if sub else {d["number"] for d in api.blockers(numbers[ident])}
         for b in blockers:
             if numbers.get(b) in have:
                 continue
-            out(f"{act}make {ident} depend on {b}")
+            out(f"{act}add {b} as a sub-issue of {ident}" if sub else f"{act}make {ident} depend on {b}")
             if apply:
-                api.call("POST", f"{api.base}/issues/{numbers[ident]}/dependencies",
-                         {"owner": api.owner, "repo": api.name, "index": numbers[b]})
+                if sub:
+                    api.add_child(numbers[ident], numbers[b])
+                else:
+                    api.add_blocker(numbers[ident], numbers[b])
     if pin and ("roadmap" in created or "roadmap" in pending):
-        allowed = api.call("GET", f"{api.base}/new_pin_allowed") or {}
-        if allowed.get("issues"):
-            out(f"{act}pin the roadmap")
-            if apply:
-                api.call("POST", f"{api.base}/issues/{numbers['roadmap']}/pin")
-        else:
-            out("note: no free pin slot; the roadmap will not be pinned")
+        out(f"{act}pin the roadmap")
+        if apply:
+            api.pin(numbers["roadmap"], out)
+    sizes = {f"issue:{k}": i.get("size", "M") for k, i in book.issues.items()}
+    api.add_to_project({i: numbers[i] for i in idents if i in numbers}, sizes, apply, out)
     if not apply:
         out("dry run: nothing changed. Re-run with --apply to publish.")
         return None
@@ -608,10 +807,11 @@ def verify(plan, api, out=print):
         if ROLE_LABELS[role][0] not in {l["name"] for l in issue.get("labels", [])}:
             out(f"LABEL   #{issue['number']} lacks {ROLE_LABELS[role][0]}")
             problems += 1
-        have = {d["number"] for d in api.call("GET", f"{api.base}/issues/{issue['number']}/dependencies") or []}
+        sub = api.native_hierarchy and is_tracking(ident)
+        have = api.children(issue["number"]) if sub else {d["number"] for d in api.blockers(issue["number"])}
         want = {numbers[b] for b in blockers if b in numbers}
         if want - have:
-            out(f"DEPS    #{issue['number']} missing blockers {sorted(want - have)}")
+            out(f"{'SUBS ' if sub else 'DEPS '}   #{issue['number']} missing {'sub-issues' if sub else 'blockers'} {sorted(want - have)}")
             problems += 1
     out(f"{len(existing)} issues found, {problems} problem(s)")
     if "roadmap" in numbers:
@@ -649,9 +849,9 @@ def refresh(api, roadmap, apply, out=print):
     for n in sorted(work):
         if issue(n)["state"] != "open":
             continue
-        blockers = api.call("GET", f"{api.base}/issues/{n}/dependencies") or []
+        blockers = api.blockers(n)
         ready = all(b["state"] == "closed" for b in blockers)
-        merged = merged_closing_prs(api, n)
+        merged = api.merged_closing_prs(n)
         if merged and ready:
             # Gitea skips the closing keyword while blockers are open; finish what the PR asked for.
             out(("" if apply else "would ") + f"close #{n}: PR {', '.join(merged)} merged while it was still blocked")
@@ -674,16 +874,6 @@ def refresh(api, roadmap, apply, out=print):
     return frontier
 
 
-def merged_closing_prs(api, n):
-    prs = []
-    for event in api.pages(f"{api.base}/issues/{n}/timeline"):
-        ref = event.get("ref_issue") or {}
-        if event.get("type") == "pull_ref" and event.get("ref_action") == "closes" \
-                and (ref.get("pull_request") or {}).get("merged"):
-            prs.append(f"!{ref['number']}")
-    return prs
-
-
 # ---------------------------------------------------------------- CLI
 
 def main(argv=None):
@@ -692,18 +882,21 @@ def main(argv=None):
     c = sub.add_parser("check")
     c.add_argument("plan")
     c.add_argument("--preview", action="store_true", help="print every issue body with placeholder numbers")
+    host_help = "tracker: github for subculture-collective/* by default, gitea otherwise"
     for name in ("publish", "verify"):
         s = sub.add_parser(name)
         s.add_argument("plan")
         s.add_argument("--repo", required=True)
-        s.add_argument("--login")
+        s.add_argument("--login", help="tea login (Gitea only)")
+        s.add_argument("--host", choices=("github", "gitea"), help=host_help)
         if name == "publish":
             s.add_argument("--apply", action="store_true")
             s.add_argument("--update", action="store_true", help="also rewrite titles, bodies and labels of existing issues")
             s.add_argument("--no-pin", action="store_true")
     r = sub.add_parser("refresh")
     r.add_argument("--repo", required=True)
-    r.add_argument("--login")
+    r.add_argument("--login", help="tea login (Gitea only)")
+    r.add_argument("--host", choices=("github", "gitea"), help=host_help)
     r.add_argument("--roadmap", type=int, required=True)
     r.add_argument("--apply", action="store_true")
     a = p.parse_args(argv)
@@ -721,7 +914,7 @@ def main(argv=None):
             if a.preview:
                 print("\n" + preview(plan, sched))
             return 0
-        api = Gitea(a.repo, a.login)
+        api = tracker(a.repo, a.login, a.host)
         if a.cmd == "publish":
             numbers = publish(load_plan(a.plan), api, a.apply, a.update, not a.no_pin)
             if numbers:

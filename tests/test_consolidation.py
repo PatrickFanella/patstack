@@ -32,7 +32,9 @@ class ConsolidationTests(unittest.TestCase):
         for owner, row in LEDGER['owners'].items():
             for i, (old, former) in enumerate(row['formerOwners'].items()):
                 target = ROOT / row['source'] if i == 0 else (ROOT / row['procedures'][old]).parent
+                updates = former.get('resourceUpdates', {})  # later, recorded edits to a moved resource
                 for relative, digest in former['resourceHashes'].items():
+                    digest = updates.get(relative, {}).get('sha256', digest)
                     # Entry text and navigation intentionally change. Executable
                     # resources, data, licenses and assets must remain intact.
                     if Path(relative).suffix in {'.md', '.yaml', '.yml'} or '__pycache__' in Path(relative).parts:
