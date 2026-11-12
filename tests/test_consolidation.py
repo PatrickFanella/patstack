@@ -64,9 +64,9 @@ class ConsolidationTests(unittest.TestCase):
             for p in (ROOT / 'profiles').glob('*.txt'):
                 selected.update(selection(ROOT, [p.stem])[0])
             self.assertEqual(selected, set(names))
-            self.assertEqual(len(selected), 104)
+            self.assertEqual(len(selected), 105)
             core = selection(ROOT, [])[0]
-            self.assertEqual(len(core), 26)
+            self.assertEqual(len(core), 27)
             self.assertIn('write-plainly', core)
             self.assertIn('create-subcult-branding', core)
             self.assertIn('style-web-ui', core)

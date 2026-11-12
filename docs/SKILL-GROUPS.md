@@ -15,7 +15,7 @@ there is no separate always-installed personal layer.
 
 ## Everyday core
 
-`core` selects **26 skills** for frequent repository, web/API,
+`core` selects **27 skills** for frequent repository, web/API,
 documentation and operations work. It includes planning, debugging, review,
 Git/CI delivery, UI quality, common languages, data changes, research,
 verification and continuation. Related workflows load conditional procedures
@@ -30,23 +30,23 @@ inactive sources from the same library.
 
 The **11 task sets** combine disciplines around an outcome. Core is always
 included. Sets overlap deliberately; they are not exclusive professional
-categories. Several can be combined. All **104 selectable owners**
+categories. Several can be combined. All **105 selectable owners**
 belong to at least one set, including core.
 
 | Stack | Added beyond core | Total selected | Use it for |
 |---|---|---|---|
-| [`core`](../profiles/CATALOG.md#core) | 0 | 26 | Everyday repository work, debugging, delivery, web/API changes, documentation and basic operations. |
-| [`build-agent-tools`](../profiles/CATALOG.md#build-agent-tools) | 13 | 39 | Build and configure agents, MCP servers, CLIs, retrieval, evaluations and development environments. |
-| [`build-and-ship`](../profiles/CATALOG.md#build-and-ship) | 16 | 42 | Take a feature from understanding and design through implementation, review, tests and a PR. |
-| [`creative-production`](../profiles/CATALOG.md#creative-production) | 7 | 33 | Plan and produce visual, audio, video or slide material with a coherent voice and delivery format. |
-| [`data-and-decisions`](../profiles/CATALOG.md#data-and-decisions) | 10 | 36 | Investigate evidence, analyze data, compare alternatives and communicate a decision. |
-| [`diagnose-and-repair`](../profiles/CATALOG.md#diagnose-and-repair) | 7 | 33 | Reproduce a failure, inspect code/runtime evidence, repair it and prove the result. |
-| [`fiction-and-worlds`](../profiles/CATALOG.md#fiction-and-worlds) | 9 | 35 | Develop stories and settings, draft scenes, revise character/dialogue, and maintain continuity. |
-| [`learn-and-practice`](../profiles/CATALOG.md#learn-and-practice) | 3 | 29 | Plan learning, study examples, tutor, build exercises and review progress. |
-| [`mobile-and-interfaces`](../profiles/CATALOG.md#mobile-and-interfaces) | 8 | 34 | Build and test mobile, terminal, editor, browser and interactive interfaces. |
-| [`operate-homelab`](../profiles/CATALOG.md#operate-homelab) | 9 | 35 | Operate services and personal tools, investigate incidents, change infrastructure and verify recovery. |
-| [`product-and-launch`](../profiles/CATALOG.md#product-and-launch) | 16 | 42 | Research a market, choose positioning, prepare brand/product copy, refine the interface and plan a launch. |
-| [`research-and-write`](../profiles/CATALOG.md#research-and-write) | 11 | 37 | Find and check sources, develop an argument, write or revise, and produce documents. |
+| [`core`](../profiles/CATALOG.md#core) | 0 | 27 | Everyday repository work, debugging, delivery, web/API changes, documentation and basic operations. |
+| [`build-agent-tools`](../profiles/CATALOG.md#build-agent-tools) | 13 | 40 | Build and configure agents, MCP servers, CLIs, retrieval, evaluations and development environments. |
+| [`build-and-ship`](../profiles/CATALOG.md#build-and-ship) | 16 | 43 | Take a feature from understanding and design through implementation, review, tests and a PR. |
+| [`creative-production`](../profiles/CATALOG.md#creative-production) | 7 | 34 | Plan and produce visual, audio, video or slide material with a coherent voice and delivery format. |
+| [`data-and-decisions`](../profiles/CATALOG.md#data-and-decisions) | 10 | 37 | Investigate evidence, analyze data, compare alternatives and communicate a decision. |
+| [`diagnose-and-repair`](../profiles/CATALOG.md#diagnose-and-repair) | 7 | 34 | Reproduce a failure, inspect code/runtime evidence, repair it and prove the result. |
+| [`fiction-and-worlds`](../profiles/CATALOG.md#fiction-and-worlds) | 9 | 36 | Develop stories and settings, draft scenes, revise character/dialogue, and maintain continuity. |
+| [`learn-and-practice`](../profiles/CATALOG.md#learn-and-practice) | 3 | 30 | Plan learning, study examples, tutor, build exercises and review progress. |
+| [`mobile-and-interfaces`](../profiles/CATALOG.md#mobile-and-interfaces) | 8 | 35 | Build and test mobile, terminal, editor, browser and interactive interfaces. |
+| [`operate-homelab`](../profiles/CATALOG.md#operate-homelab) | 9 | 36 | Operate services and personal tools, investigate incidents, change infrastructure and verify recovery. |
+| [`product-and-launch`](../profiles/CATALOG.md#product-and-launch) | 16 | 43 | Research a market, choose positioning, prepare brand/product copy, refine the interface and plan a launch. |
+| [`research-and-write`](../profiles/CATALOG.md#research-and-write) | 11 | 38 | Find and check sources, develop an argument, write or revise, and produce documents. |
 
 The [membership reference](../profiles/CATALOG.md) lists the core and every
 set's additions with source links and descriptions. The additions exclude

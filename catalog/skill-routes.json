@@ -639,6 +639,33 @@
         "when": "When Core Web Vitals or page speed is the ranking problem."
       }
     ],
+    "improve-to-a-target-score": [
+      {
+        "skill": "style-web-ui",
+        "kind": "optional",
+        "when": "When the panel's fixes change web UI styling, layout or components."
+      },
+      {
+        "skill": "verify-implementation",
+        "kind": "optional",
+        "when": "When capturing UI screenshots or proving the improved work still behaves correctly."
+      },
+      {
+        "skill": "evaluate-llm-behavior",
+        "kind": "optional",
+        "when": "When the ruler is an eval of model or agent behavior that must be built first."
+      },
+      {
+        "skill": "review-code-changes",
+        "kind": "optional",
+        "when": "When the user wants a one-time multi-model verdict without changes."
+      },
+      {
+        "skill": "manage-git-and-prs",
+        "kind": "optional",
+        "when": "When kept changes go into a commit or pull request."
+      }
+    ],
     "improve-workflow-from-sessions": [
       {
         "skill": "manage-skills-and-plugins",

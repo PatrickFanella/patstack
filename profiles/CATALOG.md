@@ -22,7 +22,7 @@ See [the guide](../docs/SKILL-GROUPS.md) for selection, ownership and recovery.
 
 Everyday repository work, debugging, delivery, web/API changes, documentation and basic operations.
 
-26 core members; 26 selected in total.
+27 core members; 27 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -37,6 +37,7 @@ Everyday repository work, debugging, delivery, web/API changes, documentation an
 | [`golang`](../skills/golang/SKILL.md) | Use when writing, testing or profiling Go code: goroutines and channels, interfaces, generics, error handling, project layout, gRPC. Not for MCP server design; use build-mcp-servers. |
 | [`handoff-and-recall-work`](../shared/handoff-and-recall-work/SKILL.md) | Recall recent work or record a handoff before a context reset, session continuation or explicitly requested background handoff. |
 | [`improve-performance`](../skills/improve-performance/SKILL.md) | Use when latency, CPU, memory, throughput or build time regressed or must improve: reproduce, profile, change one factor, re-measure. Not for functional bugs (fix-bugs). |
+| [`improve-to-a-target-score`](../skills/improve-to-a-target-score/SKILL.md) | Improve work in scored rounds until it reaches a target: a panel of models from three providers scores it out of 10 (UI, design, copy, code), or a program measures it (eval, test pass count, size, time). Use for "council", "hill climb" or "keep going until it scores 9/10". Not for a one-off review (review-code-changes). |
 | [`investigate-code`](../library/skills/investigate-code/SKILL.md) | Investigate a codebase, explain a flow or design decision, or inspect a lockfile-pinned dependency implementation. |
 | [`manage-deployment-secrets`](../skills/manage-deployment-secrets/SKILL.md) | Use when moving, injecting or rotating credentials for CI or runtime: Gitea or GitHub Actions secrets, Vault or cloud secret managers, leak scanning. |
 | [`manage-git-and-prs`](../skills/manage-git-and-prs/SKILL.md) | Manage Git history and worktrees or prepare and ship a focused branch through its authorized PR workflow. |
@@ -57,7 +58,7 @@ Everyday repository work, debugging, delivery, web/API changes, documentation an
 
 Build and configure agents, MCP servers, CLIs, retrieval, evaluations and development environments.
 
-13 additions; 39 selected in total.
+13 additions; 40 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -79,7 +80,7 @@ Build and configure agents, MCP servers, CLIs, retrieval, evaluations and develo
 
 Take a feature from understanding and design through implementation, review, tests and a PR.
 
-16 additions; 42 selected in total.
+16 additions; 43 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -104,7 +105,7 @@ Take a feature from understanding and design through implementation, review, tes
 
 Plan and produce visual, audio, video or slide material with a coherent voice and delivery format.
 
-7 additions; 33 selected in total.
+7 additions; 34 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -120,7 +121,7 @@ Plan and produce visual, audio, video or slide material with a coherent voice an
 
 Investigate evidence, analyze data, compare alternatives and communicate a decision.
 
-10 additions; 36 selected in total.
+10 additions; 37 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -139,7 +140,7 @@ Investigate evidence, analyze data, compare alternatives and communicate a decis
 
 Reproduce a failure, inspect code/runtime evidence, repair it and prove the result.
 
-7 additions; 33 selected in total.
+7 additions; 34 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -155,7 +156,7 @@ Reproduce a failure, inspect code/runtime evidence, repair it and prove the resu
 
 Develop stories and settings, draft scenes, revise character/dialogue, and maintain continuity.
 
-9 additions; 35 selected in total.
+9 additions; 36 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -173,7 +174,7 @@ Develop stories and settings, draft scenes, revise character/dialogue, and maint
 
 Plan learning, study examples, tutor, build exercises and review progress.
 
-3 additions; 29 selected in total.
+3 additions; 30 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -185,7 +186,7 @@ Plan learning, study examples, tutor, build exercises and review progress.
 
 Build and test mobile, terminal, editor, browser and interactive interfaces.
 
-8 additions; 34 selected in total.
+8 additions; 35 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -202,7 +203,7 @@ Build and test mobile, terminal, editor, browser and interactive interfaces.
 
 Operate services and personal tools, investigate incidents, change infrastructure and verify recovery.
 
-9 additions; 35 selected in total.
+9 additions; 36 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -220,7 +221,7 @@ Operate services and personal tools, investigate incidents, change infrastructur
 
 Research a market, choose positioning, prepare brand/product copy, refine the interface and plan a launch.
 
-16 additions; 42 selected in total.
+16 additions; 43 selected in total.
 
 | Skill | Purpose |
 |---|---|
@@ -245,7 +246,7 @@ Research a market, choose positioning, prepare brand/product copy, refine the in
 
 Find and check sources, develop an argument, write or revise, and produce documents.
 
-11 additions; 37 selected in total.
+11 additions; 38 selected in total.
 
 | Skill | Purpose |
 |---|---|

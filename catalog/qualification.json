@@ -2606,6 +2606,26 @@
       "positiveTask": "Diagnose measured latency, CPU, memory, or throughput regressions using comparable profiles and benchmarks.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
+    "improve-to-a-target-score": {
+      "canonicalSource": "skills/improve-to-a-target-score",
+      "owner": "patstack",
+      "scope": "personal",
+      "status": "structure-reviewed",
+      "supportedClients": [
+        "codex",
+        "claude"
+      ],
+      "requiredTools": [
+        "client subagent or T3 delegate_task tools for a cross-provider panel",
+        "client browser or preview tools for UI screenshots"
+      ],
+      "lastReviewed": "2026-11-11",
+      "evidence": [
+        "catalog/tstack-council-intake-2026-11-11.json"
+      ],
+      "positiveTask": "Keep improving the app UI until three models from different providers each score screenshots 9/10, comparing against two competitor apps.",
+      "nearMiss": "A single read-only multi-model review of a diff with no changes (review-code-changes model crossfire)."
+    },
     "play-edda": {
       "canonicalSource": "library/skills/play-edda",
       "owner": "Edda gameplay",
