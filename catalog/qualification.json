@@ -2606,8 +2606,8 @@
       "positiveTask": "Diagnose measured latency, CPU, memory, or throughput regressions using comparable profiles and benchmarks.",
       "nearMiss": "Unrelated work without this technology or requested procedure."
     },
-    "improve-to-a-target-score": {
-      "canonicalSource": "skills/improve-to-a-target-score",
+    "hillclimb": {
+      "canonicalSource": "skills/hillclimb",
       "owner": "patstack",
       "scope": "personal",
       "status": "structure-reviewed",

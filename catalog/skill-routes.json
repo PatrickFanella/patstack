@@ -639,7 +639,7 @@
         "when": "When Core Web Vitals or page speed is the ranking problem."
       }
     ],
-    "improve-to-a-target-score": [
+    "hillclimb": [
       {
         "skill": "style-web-ui",
         "kind": "optional",

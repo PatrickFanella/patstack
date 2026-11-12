@@ -9,8 +9,8 @@ find-and-load-skills
 fix-bugs
 golang
 handoff-and-recall-work
+hillclimb
 improve-performance
-improve-to-a-target-score
 investigate-code
 manage-deployment-secrets
 manage-git-and-prs

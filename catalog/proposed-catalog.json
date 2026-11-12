@@ -401,7 +401,7 @@
     ]
   },
   {
-    "name": "improve-to-a-target-score",
+    "name": "hillclimb",
     "description": "Improve work in scored rounds until it reaches a target: a panel of models from three providers scores it out of 10 (UI, design, copy, code), or a program measures it (eval, test pass count, size, time). Use for \"council\", \"hill climb\" or \"keep going until it scores 9/10\". Not for a one-off review (review-code-changes).",
     "scope": "personal",
     "sources": [

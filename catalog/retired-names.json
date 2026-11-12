@@ -2446,5 +2446,9 @@
   "writing-workbench": {
     "owner": "write-and-revise-nonfiction",
     "reason": "plain-name rename, 2026-11-09"
+  },
+  "improve-to-a-target-score": {
+    "owner": "hillclimb",
+    "reason": "renamed by user request before first deployment, 2026-11-11"
   }
 }

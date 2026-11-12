@@ -3,9 +3,9 @@
   "revision": "11e37a74d0a6868c121cd0910ab2b3bd9873b92a",
   "license": "MIT",
   "reviewed": "2026-11-11",
-  "owner": "improve-to-a-target-score",
+  "owner": "hillclimb",
   "context": "Requested from Theo Browne's video \"Agents Sucked At UI (Until Today)\" (https://www.youtube.com/watch?v=xq0eB8vxeqk, published 2026-11-03), which uses the council skill to score T3 Code screenshots against Claude Code and Codex until every model gave 9/10 or higher.",
-  "decision": "New core entrypoint with a plain name. Existing owners cover a one-time read-only verdict (review-code-changes model crossfire) and an explicit-only programmatic hillclimb (library poteto-mode); neither runs a scored improvement loop by default.",
+  "decision": "New core entrypoint, named hillclimb at the user's request (first named improve-to-a-target-score). Existing owners cover a one-time read-only verdict (review-code-changes model crossfire) and an explicit-only programmatic hillclimb (library poteto-mode); neither runs a scored improvement loop by default.",
   "files": [
     {
       "upstreamPath": "skills/council/SKILL.md",
@@ -17,11 +17,11 @@
       "upstreamPath": "LICENSE",
       "sha256": "8095f9a9f97d074131f6a2ce09b952d12c18b36f09f4e5df0517c4e64e82c851",
       "archivePath": "authoring/upstream/tstack/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/LICENSE",
-      "installedPath": "skills/improve-to-a-target-score/notices/tstack-MIT.txt"
+      "installedPath": "skills/hillclimb/notices/tstack-MIT.txt"
     }
   ],
   "adaptations": [
-    "Rename from council to a plain name and trigger on the request, not only on the word council.",
+    "Rename from council to hillclimb and trigger on the request, not only on the word council.",
     "Add a program ruler (eval, tests, size, time) with keep-or-revert per change and a gate for two-stage goals, as shown in the video's MCP description eval.",
     "Add round 0, reference screenshots of comparable products scored every round, and judging the gap rather than the absolute score, as shown in the video.",
     "Withhold the target score from panel members; the video observed scores drifting toward a stated target.",
@@ -30,6 +30,6 @@
     "Drop the upstream Gemini jester section."
   ],
   "evidence": [
-    "tests/test_improve_to_a_target_score.py"
+    "tests/test_hillclimb.py"
   ]
 }

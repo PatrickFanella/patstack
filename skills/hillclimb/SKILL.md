@@ -1,9 +1,9 @@
 ---
-name: improve-to-a-target-score
+name: hillclimb
 description: "Improve work in scored rounds until it reaches a target: a panel of models from three providers scores it out of 10 (UI, design, copy, code), or a program measures it (eval, test pass count, size, time). Use for \"council\", \"hill climb\" or \"keep going until it scores 9/10\". Not for a one-off review (review-code-changes)."
 ---
 
-# improve-to-a-target-score
+# hillclimb
 
 Turn the request into a score, then change the work and re-score it until every judge meets the target. The score decides, not your opinion of a change. A round's findings never widen the requested scope.
 
@@ -21,7 +21,7 @@ For UI, capture the same views every round with the client's browser or preview 
 
 ## 3. Run a panel round
 
-Use one strong model from each of three providers at high reasoning effort, unless the user names the members. In T3 Code, resolve them with `orchestrator_capabilities` and start one read-only `delegate_task` per member in parallel, a new one every round. Claude Code's `Agent` tool runs Claude models only; reach other providers through T3 or a read-only CLI such as `codex exec`. If three providers or a named member cannot be reached, say so; never substitute a model silently.
+No model is fixed. Use the members the user names; otherwise pick the strongest model each of three providers currently offers, at high reasoning effort. In T3 Code, resolve them with `orchestrator_capabilities` and start one read-only `delegate_task` per member in parallel, a new one every round. Claude Code's `Agent` tool runs Claude models only; reach other providers through T3 or a read-only CLI such as `codex exec`. If three providers or a named member cannot be reached, say so; never substitute a model silently.
 
 Send every member the same [panel brief](references/panel-brief.md). Do not tell members the target score: members who know it score toward it.
 

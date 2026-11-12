@@ -5,10 +5,10 @@ from pathlib import Path
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / 'skills/improve-to-a-target-score'
+SKILL = ROOT / 'skills/hillclimb'
 
 
-class ImproveToATargetScoreTests(unittest.TestCase):
+class HillclimbTests(unittest.TestCase):
     def test_pinned_resources_match_the_intake_ledger(self):
         ledger = json.loads((ROOT / 'catalog/tstack-council-intake-2026-11-11.json').read_text())
         self.assertEqual(ledger['license'], 'MIT')
@@ -21,7 +21,7 @@ class ImproveToATargetScoreTests(unittest.TestCase):
 
     def test_skill_is_in_core(self):
         core = (ROOT / 'profiles/core.txt').read_text().split()
-        self.assertIn('improve-to-a-target-score', core)
+        self.assertIn('hillclimb', core)
 
     def test_procedure_keeps_the_rules_the_video_found(self):
         body = (SKILL / 'SKILL.md').read_text()
@@ -46,7 +46,7 @@ class ImproveToATargetScoreTests(unittest.TestCase):
     def test_near_miss_routes_one_off_review_elsewhere(self):
         front = (SKILL / 'SKILL.md').read_text().split('---', 2)[1]
         self.assertIn('Not for a one-off review (review-code-changes)', front)
-        q = json.loads((ROOT / 'catalog/qualification.json').read_text())['skills']['improve-to-a-target-score']
+        q = json.loads((ROOT / 'catalog/qualification.json').read_text())['skills']['hillclimb']
         self.assertIn('review-code-changes', q['nearMiss'])
 
 
