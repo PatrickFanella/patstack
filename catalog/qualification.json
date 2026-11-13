@@ -4663,10 +4663,11 @@
       "requiredTools": [
         "task-specific project tools; see source procedure"
       ],
-      "lastReviewed": "2026-11-09",
+      "lastReviewed": "2026-11-13",
       "evidence": [
         "catalog/consolidation-2026-11-09.json",
-        "docs/SKILL-CONSOLIDATION.md"
+        "docs/SKILL-CONSOLIDATION.md",
+        "evaluations/acceptance.json"
       ],
       "positiveTask": "Required for user-facing prose and documentation: remove filler, preserve meaning and restate explanations that did not land.",
       "nearMiss": "Unrelated work, unsupported client tools, or a mode not authorized by the request."

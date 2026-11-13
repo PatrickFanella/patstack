@@ -25,9 +25,9 @@ Rule numbers are stable ids that other skills cite. A removed rule leaves a gap.
 
 ### Language
 
-7. **AI vocabulary.** Additionally, crucial, delve, enduring, enhance, fostering, garner, interplay, intricate, landscape (abstract), pivotal, showcase, tapestry (abstract), testament, underscore, vibrant. Replace with plain words.
+7. **AI vocabulary.** Additionally, crucial, delve, enduring, enhance, fostering, garner, interplay, intricate, landscape (abstract), pivotal, showcase, tapestry (abstract), testament, underscore, vibrant. Replace with plain words. Swapping in the nearest synonym ("delve into" becomes "dig into") leaves the sentence as empty as before. Say the specific thing instead: the number, the name, what happened. Keep a listed word when it carries a technical meaning, such as a `critical` alert severity or an "enhanced" mode that is the product's real name.
 8. **Fancy ways to say "is".** "serves as", "stands as", "boasts", "features". Just say "is" or "has".
-9. **"Not just X, but Y."** State the point directly instead.
+9. **Contrast formulas.** "Not just X, but Y." "It's not X, it's Y." "That's not X. That's Y." "Not because X, but because Y." "No X. No Y. Just Z." "Less X, more Y." "Forget X. Think Y." Each one knocks down a claim nobody made in order to state Y. State Y directly. Keep the contrast only when the reader actually believes X, for example when correcting a documented misconception.
 10. **Rule of three.** Forcing ideas into groups of three. Use the natural number.
 11. **Synonym cycling.** Protagonist, main character, central figure, hero all in one paragraph. Pick one, repeat it.
 12. **False ranges.** "from X to Y" where X and Y aren't on a meaningful scale. List topics directly.
@@ -66,3 +66,12 @@ Rule numbers are stable ids that other skills cite. A removed rule leaves a gap.
 31. **Prefer the plain word.** "utilize" becomes "use", "leverage" becomes "use", "facilitate" becomes "help", "numerous" becomes "many", "in the event that" becomes "if". The fancier synonym is rarely clearer.
 32. **Mannered prose.** Metaphor or flourish where a literal phrase exists: aphorisms ("wire it or delete it"), rhetorical fragments for effect, personified code ("the plan holds it"), figurative verbs ("rides along", "stands on"), stock framing phrases. "A dial worth turning" becomes "a parameter worth varying". Say what you mean. Rule 26 covers the metaphor nouns.
 33. **Over-compression.** Dropped articles, verbless fragments, symbol-speak, and abbreviations that make the reader decode instead of read. "Parser rejects bad date → exit 2, no write" becomes "The parser rejects a bad date, exits with code 2, and writes nothing." Write whole sentences with their articles and verbs, and spell out arrows and abbreviations.
+
+### Marketing and blog tells
+
+34. **Self-answered questions.** "The result? A 40% drop." "And the best part? It's free." "Ever wondered why builds fail?" "Picture this:". The question delays a fact the writer already has. Write the fact as a sentence: "Failures dropped 40%." Keep a question only when readers ask it, as in an FAQ.
+35. **Reveal lead-ins.** "Here's the deal", "Here's the kicker", "Here's the truth", "The hard truth is", "The elephant in the room". They announce a point instead of making it. Delete the lead-in and state the point.
+36. **Stock openers and sign-offs.** "In today's fast-paced world", "In the digital age", "In an era of", "In a world where", "Welcome to the world of", "Let's dive in", "a deep dive into", "In a nutshell", "In conclusion", "Stay tuned". Start with the first real fact and stop after the last one. Rule 25 covers the generic closing claim itself.
+37. **Hype verbs and idioms.** Unlock, unleash, supercharge, turbocharge, skyrocket, catapult, revolutionize, elevate, empower, game-changer, secret sauce, secret weapon, move the needle, cutting-edge, seamless, future-ready, drive impact. Each claims a large effect without naming it. Say what changed and by how much ("cuts setup from three steps to one"). If nothing measurable changed, cut the sentence.
+38. **Reception verbs.** "Resonates", "lands", "lands well", "falls flat", "misses the mark", "hits different", "grabs attention". They report how text was received without saying who reacted or how. Name the observed reaction: "three readers asked what X meant", "the open rate fell from 40% to 22%". If nobody has reacted yet, say what you expect and why.
+39. **Corporate abstractions.** Operational excellence, strategic alignment, continuous improvement, organizational efficiency, solution development, best-in-class, value creation. Name the practice or the change: "we review failed deploys every Friday" instead of "a culture of continuous improvement". Keep the term when quoting a document or writing for a compliance audience that uses it as a defined term.

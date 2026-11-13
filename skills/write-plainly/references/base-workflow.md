@@ -11,7 +11,7 @@ Apply to every user-facing prose response and documentation edit. Read this skil
 Read the supplied text and its intended audience. Preserve facts, uncertainty, citations, technical identifiers, quoted material, and the author's meaning.
 
 1. Replace vague praise and abstract claims with the specific action, mechanism, or measured result. Delete empty sentences.
-2. Use plain words, direct statements, and varied sentence lengths. Remove canned openings, repeated conclusions, forced contrasts, and decorative emphasis.
+2. Use plain words, direct statements, and varied sentence lengths. Remove canned openings, repeated conclusions, forced contrasts, self-answered questions, and decorative emphasis.
 3. Keep the author's tone. Add personality only where supported by the source; never invent experience, opinions, evidence, or measurements.
 4. Read the revision once as its audience. Remove remaining awkward phrasing and check that no claim became stronger or lost a qualification.
 

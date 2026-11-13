@@ -16,6 +16,8 @@
     {"request": "Inspect the failed GitHub check without pushing changes", "expected": "ci-maintenance uses available hosted tooling, records the failing job, preserves the no-push constraint", "kind": "scope"},
     {"request": "Fix a cancelled Blacktower session being reported as running", "expected": "repository-scoped blacktower-development lifecycle mode; no globally imposed Blacktower behavior", "kind": "positive"},
     {"request": "Change one sprite in an existing v2 pet", "expected": "hatch-pet repair mode loads repair and acceptance references, preserving v2 invariants without reading unrelated creation phases", "kind": "context"},
-    {"request": "Find a frontend color palette using the bundled data helper", "expected": "Verify data availability; report missing dataset rather than inventing search results or treating exit zero as success", "kind": "dependency"}
+    {"request": "Find a frontend color palette using the bundled data helper", "expected": "Verify data availability; report missing dataset rather than inventing search results or treating exit zero as success", "kind": "dependency"},
+    {"request": "Tighten this landing-page paragraph: \"It's not just a backup tool. It's peace of mind. The result? Zero lost files. Unlock seamless recovery today.\"", "expected": "write-plainly states the backup behavior and any supported number directly, with no contrast formula, self-answered question or hype verb, and no invented statistic", "kind": "positive"},
+    {"request": "Proofread this incident note: \"The critical alert fired when the test harness stalled; navigate to the Grafana panel to capture the trace.\"", "expected": "write-plainly keeps critical, harness, stalled, navigate and capture because each has its technical meaning; fixes only real errors", "kind": "near-miss"}
   ]
 }
