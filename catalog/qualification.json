@@ -5435,7 +5435,7 @@
         "current client browser for authenticated references and visual inspection",
         "affected brand generator dependencies for production"
       ],
-      "lastReviewed": "2026-11-08",
+      "lastReviewed": "2026-11-13",
       "evidence": [
         "skills/create-subcult-branding/references/workflow.md",
         "skills/create-subcult-branding/references/product-launch.md"
@@ -5483,7 +5483,7 @@
         "python3",
         "current client browser for source capture or rendered verification"
       ],
-      "lastReviewed": "2026-10-05",
+      "lastReviewed": "2026-11-13",
       "evidence": [
         "catalog/project-selections.json",
         "project-agents/subcult-tv/skills/studio-brand-audit/SKILL.md"
@@ -5507,7 +5507,7 @@
         "python3",
         "current client browser for source capture or rendered verification"
       ],
-      "lastReviewed": "2026-10-05",
+      "lastReviewed": "2026-11-13",
       "evidence": [
         "catalog/project-selections.json",
         "project-agents/subcult-tv/skills/studio-brand-handoff/SKILL.md"

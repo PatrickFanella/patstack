@@ -13,13 +13,13 @@ Make a selected Studio system usable by its product without introducing competin
 - **Integrate:** carry an authorized handoff into the target repository and verify the resulting behavior.
 - **Refresh:** update an existing integration using its recorded source hashes and exporter; preserve later product edits and report drift.
 
-Use `create-subcult-branding` to select/create a system and `studio-brand-audit` to review it. Preparation ends with mappings and previews. Integration authorizes scoped local edits; preserve the requested stopping point.
+Use `create-subcult-branding` to select/create a system and `studio-brand-audit` to review it. Preparation ends with mappings and previews; integration authorizes scoped local edits.
 
 ## Resolve the sources and consumer
 
 Read the target pack's guide, tokens, selection records, source provenance, font licenses and manifest. Inspect product assets, theme variables, font loading, icons, metadata, design docs and actual consumer paths.
 
-Confirm which direction and mark variants are selected. Keep pending choices proposed and continue independent inventory work; do not mark them approved. For product-owned interface systems, adapt promotional artwork to the recorded relationship rather than overwriting product tokens with Studio's palette.
+Confirm which direction and mark variants are selected; keep pending choices proposed and continue independent inventory work. For product-owned interface systems, adapt promotional artwork to the recorded relationship rather than overwriting product tokens with Studio's palette.
 
 ## Prepare the mapping
 
@@ -33,6 +33,6 @@ Inspect existing pack-specific exporters and provenance checks before choosing a
 
 When authorized, run or narrowly extend the owning exporter, integrate the selected files and token mappings, and update relevant product design docs and provenance. Keep an explicit reviewed public selection; updating a hash does not itself authorize adding a new public asset. Refuse unexpected destination drift rather than overwriting product edits or resetting a baseline.
 
-Verify copied and transformed hashes, font licenses and loading, icon sizing/crops, share metadata and representative wide/narrow rendered states. Run product checks appropriate to the changes and Studio checks when Studio sources changed. Check the public build context and resulting output for private Studio material. A local build proves local integration; a deployed site requires its own revision and browser evidence.
+Verify copied and transformed hashes, font licenses and loading, icon sizing/crops, share metadata and representative wide/narrow rendered states, then the [served-page list](references/served-page.md). Run product checks appropriate to the changes and Studio checks when Studio sources changed. Check the public build context and resulting output for private Studio material. A local build proves local integration; a deployed site requires its own revision and browser evidence.
 
 Finish with selected assets, source/destination mapping, implementation changes, build/update instructions and verification boundaries. Leave generated ZIPs and runtime bundles out of Git. A handoff is complete when the requested consumer can apply or rebuild the selected assets with one clear source owner and traceable exports.

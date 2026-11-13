@@ -46,7 +46,7 @@ Record the outcome in the study's README with the date and the owner's choice, i
 
 ## 4. Brand pack
 
-Follow Document and Produce in [the workflow](workflow.md). `studio/brands/pult/` with its `brand.json` and `build.py` is the current model for a standalone pack. Carry the recorded choice into `brand.json` (`direction_selection`, `mark_status`). Add the selected fonts with their OFL texts, add a row to `studio/brands/README.md`, and keep `asset_status` pending. Approval for website use and for social posts are separate owner decisions.
+Follow Document and Produce in [the workflow](workflow.md). `studio/brands/pult/` with its `brand.json` and `build.py` is the current model for a standalone pack. Carry the recorded choice into `brand.json` (`direction_selection`, `mark_status`). Draw the signature scene and the 16-pixel favicon from [the workflow](workflow.md) before the social layouts, since every layout is built around the scene. Add the selected fonts with their OFL texts, add a row to `studio/brands/README.md`, and keep `asset_status` pending. Approval for website use and for social posts are separate owner decisions.
 
 ## 5. Marketing
 
@@ -72,7 +72,7 @@ Build static HTML with no build step or backend, in the product repository. Matc
 
 The footer links docs, the source repository (GitHub `subculture-collective/<name>` for organization repositories; Gitea for a repository that exists only there), support and `https://subcult.tv`, and carries the licence line. Follow `studio/content/patreon/support-redesign-2026-10/site-guidelines.md` for support: link `https://subcult.tv/support` by default, or Patreon directly from a block that names SUBCULT; one block after the explanation or demo, a quiet footer link, no prices or tiers, and no ask on the error page.
 
-Every command, flag, key and count comes from the product's source. Preview the site locally and check 360 and 1280 pixel widths for overflow, console errors, font loading, keyboard use, contrast, the demo and every link. Run `studio-brand-audit` against the pack.
+Every command, flag, key and count comes from the product's source. Preview the site locally and check 360 and 1280 pixel widths for overflow, console errors, font loading, keyboard use, contrast, the demo and every link. Font loading means an `@font-face` rule for every family the CSS names; a `font-family` line alone falls back to system fonts, which happened on Kork, Left Field and Dedhed. Serve `/favicon.ico` beside the SVG icons. Run `studio-brand-audit` against the pack.
 
 ## 7. Handoff and deployment
 

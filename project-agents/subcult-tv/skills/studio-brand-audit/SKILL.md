@@ -13,7 +13,7 @@ Check whether an implementation and its artwork agree with the selected system. 
 - **Verify fixes:** revisit specified findings against the changed sources and rendered result.
 - **Audit and repair:** apply requested repairs to the owning sources, rebuild the affected exports and verify them.
 
-A review request authorizes inspection and a report. A request to repair authorizes scoped fixes. Selecting a replacement system belongs to `create-subcult-branding`; preparing product integration belongs to `studio-brand-handoff`. Use existing interface and accessibility review skills for those checks when available and relevant.
+A review request authorizes inspection and a report. A request to repair authorizes scoped fixes. Selecting a replacement system belongs to `create-subcult-branding`; preparing product integration belongs to `studio-brand-handoff`. Use interface and accessibility review skills where relevant.
 
 ## Resolve the baseline
 
@@ -23,11 +23,11 @@ Read `studio/content/VOICE.md` and the claims register when copy is in scope. Do
 
 ## Inspect representative surfaces
 
-Choose representative pages, component states and asset sizes for the requested scope. Use the current client's browser tools and record URL, viewport, inspected states and captures. Keep local, deployed and screenshot-only observations distinct; do not substitute source inspection for rendered proof.
+Choose representative pages, component states and asset sizes for the requested scope. Use the current client's browser tools and record URL, viewport, inspected states and captures. Keep local, deployed and screenshot-only observations distinct; source inspection never stands in for rendered proof.
 
-Compare marks and variant selection, font loading and fallback, semantic colors and contrast, hierarchy, spacing, layout, responsive wrapping, image/crop treatment, navigation and relevant focus/error/empty/loading states. Inspect small icons and phone-sized promotional exports. Verify copy against product evidence. Check source and exported asset hashes, licenses and obsolete references where they affect current consumers.
+For a deployed site, run [the live-site checks](references/live-site-checks.md). Compare marks and variant selection, font loading and fallback, semantic colors and contrast, hierarchy, spacing, layout, responsive wrapping, image/crop treatment, navigation and relevant focus/error/empty/loading states. Inspect small icons and phone-sized promotional exports. Verify copy against product evidence. Check asset hashes, licenses and obsolete references that affect current consumers.
 
-Measure relevant contrast pairs and inspect keyboard/focus behavior when the interface is in scope. Avoid blanket defects based on decorative artwork or rules for a different surface. Inspect generator/master ownership before proposing an export fix; do not edit a derivative PNG to conceal a generator problem.
+Measure relevant contrast pairs and inspect keyboard/focus behavior for interfaces in scope. Avoid blanket defects based on decorative artwork or rules for a different surface. Inspect generator/master ownership before proposing an export fix; do not edit a derivative PNG to conceal a generator problem.
 
 ## Report or repair
 
