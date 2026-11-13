@@ -16,7 +16,7 @@ Implement UI with clear priorities and coherent styling. Use for code-level visu
 ## Defaults
 
 - Target stack: TypeScript, React/Next.js, Tailwind, CSS, browser testing.
-- Treat familiar fonts, colors, cards, and effects as choices to justify against the product, not forbidden signs of AI authorship. Preserve established branding and usable conventions.
+- Do not introduce the fonts, palettes and patterns in [banned defaults](references/banned-defaults.md). An existing brand, an owner's brief or a listed job can keep one; record which. Preserve established branding and usable conventions, and never cite a match as proof of AI authorship.
 - Choose a coherent direction from the audience, content, task, and existing system; novelty alone is not a design goal.
 - Match complexity to the aesthetic: maximalist needs rich detail; minimalism needs precision.
 - Prefer real implementation over mockups: responsive, accessible, keyboard-safe, and testable.
@@ -25,6 +25,7 @@ Implement UI with clear priorities and coherent styling. Use for code-level visu
 
 1. Read available product and design context: primary task, audience language, supported capabilities, representative data, constraints, and existing design rules. Resolve missing information only when it changes the implementation.
 2. Explain how the hierarchy and visual direction serve the task. Choose sections and groupings from the content; do not impose a hero, three-card grid, bento layout, or generic KPI dashboard by default.
+3. Before editing, list the planned fonts, colors, radius, shadows and motion and check them against [banned defaults](references/banned-defaults.md).
 4. Check accessibility basics: contrast, labels, focus, keyboard, semantics.
 5. Inspect the rendered interface and exercise the main task when browser tools are available. Include relevant empty, loading, error, permission, long-content, and narrow-screen conditions. Report unavailable checks; a screenshot does not prove working interactions.
 6. If more design data is needed, consult merged `tool-ui-ux-pro-max` references/scripts.
@@ -35,6 +36,7 @@ Implement UI with clear priorities and coherent styling. Use for code-level visu
 - [ ] Typography, spacing, color, and motion are coherent.
 - [ ] Responsive states are handled.
 - [ ] Components and visual emphasis have a product or interaction reason.
+- [ ] Nothing from the banned defaults was added without a recorded reason.
 - [ ] Labels, claims, and resulting behavior agree; sample data and unverified proof are identified.
 - [ ] Accessibility basics pass.
 - [ ] Visual QA findings include source-file fixes, not just comments.
@@ -59,7 +61,7 @@ Former merged-skill dumps were distilled into these lookup files:
 
 ## Design-data lookup
 
-For a palette, typography, UX, or stack-guideline lookup, run `python scripts/tool-ui-ux-pro-max/search.py "query" --domain ux --json` from this skill directory. The pinned MIT dataset and checksums are in `scripts/data/provenance.json`. An error payload or nonzero exit is failure; never invent missing results.
+For a palette, typography, UX, or stack-guideline lookup, run `python scripts/tool-ui-ux-pro-max/search.py "query" --domain ux --json` from this skill directory. The pinned MIT dataset and checksums are in `scripts/data/provenance.json`. An error payload or nonzero exit is failure; never invent missing results. The dataset and the curated presets predate the ban list; drop any suggested font or palette that it names.
 
 ## Companion skills
 

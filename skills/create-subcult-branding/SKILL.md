@@ -20,9 +20,9 @@ Read [the workflow and deliverables](references/workflow.md) for the selected mo
 
 ## Start from Studio
 
-The authenticated [Studio reference library](https://subcult.tv/admin/studio/references) is the primary browsing resource: website studies, style studies, interface references and web history. Search by relevant layout, typography, era or product task; read the studies and evidence notes behind the screenshots. Use the current client's browser tools. If authentication is unavailable, use local sources and state the access limit; do not change accounts.
+The authenticated [Studio reference library](https://subcult.tv/admin/studio/references) is the primary browsing resource: website studies, style studies, interface references and web history. Search by layout, typography, era or product task; read the studies and evidence notes behind the screenshots. Use the current client's browser tools. Without authentication, use local sources, state the limit and do not change accounts.
 
-Read only the relevant local material:
+Read only the relevant files:
 
 - `studio/references/README.md`, `USAGE.md`, `catalog.json` and the shortlisted studies; curated history lives in `curated/web-history/` and archived interface exports in `refero-archive/`.
 - `studio/brands/README.md`, `studio/brand-tools/README.md` and `selected-directions.json`, and the target pack under `studio/brands/<brand>/`: `GUIDE.md`, tokens, source/selection records, manifest and `WEBSITE.md` where present.
@@ -33,10 +33,10 @@ Resolve current ownership and selection from these files. `studio/studies/archiv
 
 ## Working boundaries
 
-Keep each product's identity distinct. For SUBCULT, inspect the logo selection and preserved artwork before proposing changes. Do not redraw approved marks or replace owner selections as a side effect of asset generation.
+Keep each product distinct and clear of [banned brand defaults](references/banned-defaults.md). For SUBCULT, inspect the logo selection and preserved artwork before proposing changes. Do not redraw approved marks or replace owner selections as a side effect of asset generation.
 
 Edit the owning generator and authoritative master together; rebuild only the affected brand. Use `studio/brand-tools/starter-template/` only for a new pack, after reading its README.
 
-Keep sources, private packs and reference assets in Studio. Public exports require explicit file selection, source hashes and the repository's existing allowlist/export path. Brand selection, asset review, website deployment and social publication are separate outcomes; perform only the actions authorized by the request.
+Keep sources, private packs and reference assets in Studio. Public exports require explicit file selection, source hashes and the existing allowlist/export path. Brand selection, asset review, website deployment and social publication are separate outcomes; perform only those the request authorizes.
 
 Finish with links to the direction, docs, previews and assets; state checks run, missing items and any unresolved decision. Do not describe rendered samples as implemented product behavior.

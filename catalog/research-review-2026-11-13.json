@@ -1,0 +1,153 @@
+{
+  "reviewDate": "2026-11-13",
+  "kind": "research-informed ban list for existing UI and branding owners",
+  "decision": "Owner request: ban overused generated-interface and generated-brand defaults within reason. Reverses the 2026-10-02 rule that familiar fonts and effects are never forbidden; exceptions keep existing brands, owner selections and listed functional uses. No new discoverable skill.",
+  "sources": [
+    {
+      "id": "anthropic-frontend-design",
+      "source": "https://raw.githubusercontent.com/anthropics/skills/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/SKILL.md",
+      "revision": "commit 41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f (2026-09-03); fetched from main",
+      "owners": [
+        "style-web-ui",
+        "create-subcult-branding"
+      ],
+      "retrievedAt": "2026-11-13T19:23:29.871368+00:00",
+      "license": "Apache-2.0 upstream; facts cited, prose not copied.",
+      "adaptation": "Original ban-list synthesis; preserve study scope and uncertainty. No upstream skill prose copied.",
+      "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "byteLength": 9390
+    },
+    {
+      "id": "krebs-2026",
+      "source": "https://adriankrebs.ch/blog/design-slop/",
+      "revision": "published 2026-04-20; retrieved snapshot",
+      "owners": [
+        "style-web-ui",
+        "create-subcult-branding"
+      ],
+      "retrievedAt": "2026-11-13T19:23:29.871368+00:00",
+      "license": "Not imported or redistributed; source reuse license not asserted.",
+      "adaptation": "Original ban-list synthesis; preserve study scope and uncertainty. No upstream skill prose copied.",
+      "sha256": "dba06437d3eb1b63c50b719736b34866d57a6e5f238003e4feddf5142d5e06c2",
+      "byteLength": 12850
+    },
+    {
+      "id": "vibecoded-design-tells",
+      "source": "https://raw.githubusercontent.com/JCarterJohnson/vibecoded-design-tells/main/README.md",
+      "revision": "main branch README; retrieved snapshot",
+      "owners": [
+        "style-web-ui",
+        "create-subcult-branding"
+      ],
+      "retrievedAt": "2026-11-13T19:23:29.871368+00:00",
+      "license": "Not imported or redistributed; source reuse license not asserted.",
+      "adaptation": "Original ban-list synthesis; preserve study scope and uncertainty. No upstream skill prose copied.",
+      "sha256": "955eef7f8e1e703ef7dc3b64db8879ba7678956eed4bd992793aed1602ffe050",
+      "byteLength": 7922
+    },
+    {
+      "id": "laith-ban-list",
+      "source": "https://raw.githubusercontent.com/wiki/Laith0003/ux-skill/Anti-AI-slop-ban-list.md",
+      "revision": "wiki page; retrieved snapshot",
+      "owners": [
+        "style-web-ui"
+      ],
+      "retrievedAt": "2026-11-13T19:23:29.871368+00:00",
+      "license": "Not imported or redistributed; source reuse license not asserted.",
+      "adaptation": "Original ban-list synthesis; preserve study scope and uncertainty. No upstream skill prose copied.",
+      "sha256": "03208d2bdd564572a5b03fc34380e341233cba4239fc3e48dfd4133b85bfda66",
+      "byteLength": 23749
+    },
+    {
+      "id": "creative-boom-2026",
+      "source": "https://www.creativeboom.com/insight/10-trends-creatives-are-so-over-in-2026/",
+      "revision": "retrieved snapshot",
+      "owners": [
+        "style-web-ui"
+      ],
+      "retrievedAt": "2026-11-13T19:23:29.871368+00:00",
+      "license": "Not imported or redistributed; source reuse license not asserted.",
+      "adaptation": "Original ban-list synthesis; preserve study scope and uncertainty. No upstream skill prose copied.",
+      "sha256": "199bc661c84354c73f6f122359d4e14bf3bd65f80c7e6a9523c60035c11af37b",
+      "byteLength": 184420
+    },
+    {
+      "id": "web-almanac-2025-genai",
+      "source": "https://almanac.httparchive.org/en/2025/generative-ai",
+      "revision": "2025 edition; retrieved snapshot; counter-evidence",
+      "owners": [
+        "style-web-ui",
+        "create-subcult-branding"
+      ],
+      "retrievedAt": "2026-11-13T19:23:29.871368+00:00",
+      "license": "Not imported or redistributed; source reuse license not asserted.",
+      "adaptation": "Original ban-list synthesis; preserve study scope and uncertainty. No upstream skill prose copied.",
+      "sha256": "d5ab2eff8aecef8668eb94dde62efe184c693adc13923e1b79df07ec76e74835",
+      "byteLength": 159880
+    },
+    {
+      "id": "velvetshark-ai-logos",
+      "source": "https://velvetshark.com/ai-company-logos-that-look-like-buttholes",
+      "revision": "retrieved snapshot (includes July 2026 update)",
+      "owners": [
+        "create-subcult-branding"
+      ],
+      "retrievedAt": "2026-11-13T19:23:29.871368+00:00",
+      "license": "Not imported or redistributed; source reuse license not asserted.",
+      "adaptation": "Original ban-list synthesis; preserve study scope and uncertainty. No upstream skill prose copied.",
+      "sha256": "edbf337c30fc110c9b8190036f2ca908dd85230ffbba20e2d9771e9ec22e904d",
+      "byteLength": 70249
+    },
+    {
+      "id": "nngroup-sparkles",
+      "source": "https://www.nngroup.com/articles/ai-sparkles-icon-problem/",
+      "revision": "retrieved snapshot",
+      "owners": [
+        "create-subcult-branding"
+      ],
+      "retrievedAt": "2026-11-13T19:23:29.871368+00:00",
+      "license": "Not imported or redistributed; source reuse license not asserted.",
+      "adaptation": "Original ban-list synthesis; preserve study scope and uncertainty. No upstream skill prose copied.",
+      "sha256": "cd3e3df6f09483b48b31e079ba62f4ea761119bf7c9e62b8af6ec302c8111dce",
+      "byteLength": 131053
+    },
+    {
+      "id": "studio-output-sparkle",
+      "source": "https://www.studio-output.com/thought/when-did-ai-brands-become-just-a-sparkle/",
+      "revision": "retrieved snapshot",
+      "owners": [
+        "create-subcult-branding"
+      ],
+      "retrievedAt": "2026-11-13T19:23:29.871368+00:00",
+      "license": "Not imported or redistributed; source reuse license not asserted.",
+      "adaptation": "Original ban-list synthesis; preserve study scope and uncertainty. No upstream skill prose copied.",
+      "sha256": "a018f95eb4a2501b511094c9922fd284380f39b7e96f00733cf4d7130941bcba",
+      "byteLength": 24538
+    },
+    {
+      "id": "sologo-logo-mistakes",
+      "source": "https://www.sologo.ai/blog/12-common-startup-logo-mistakes--optimization",
+      "revision": "retrieved snapshot; vendor blog",
+      "owners": [
+        "create-subcult-branding"
+      ],
+      "retrievedAt": "2026-11-13T19:23:29.871368+00:00",
+      "license": "Not imported or redistributed; source reuse license not asserted.",
+      "adaptation": "Original ban-list synthesis; preserve study scope and uncertainty. No upstream skill prose copied.",
+      "sha256": "ff029bbd82f86c8a9fcfc46e9dc5f30d714a97de9bef423d793b730500e27808",
+      "byteLength": 59488
+    },
+    {
+      "id": "avoid-ai-design-archive",
+      "source": "https://github.com/funboy322/avoid-ai-design/tree/2b7c71836b06cdf6b3d73265b56490c1b75ad5aa",
+      "revision": "v0.4.0, commit 2b7c71836b06cdf6b3d73265b56490c1b75ad5aa; local copy archive/removed-skills-2026-11-09/ui-cliche-audit/references/avoid-ai-design/ai-tells-catalog.md",
+      "owners": [
+        "style-web-ui",
+        "create-subcult-branding"
+      ],
+      "license": "MIT (notice retained in the archive)",
+      "adaptation": "Original ban-list synthesis; preserve study scope and uncertainty. No upstream skill prose copied.",
+      "sha256": "91c064363c395ab74c3aff376a5efb57bbe9ba1fe62d948335978bfb89ab42e0"
+    }
+  ]
+}

@@ -33,7 +33,7 @@ The board has these parts, in order:
 3. **Three or four mixed directions.** Each names the references it mixes and shows an original mark, a house palette with roles and measured contrast, a type pairing, and the same sample content as the others: landing hero, docs excerpt and social card, at wide and phone widths.
 4. **Palette examples:** each house palette applied to real text, button and panel pairs. Where the product displays color itself, add a switcher that re-tints the directions.
 5. **Mix table:** palette, type, layout, mark and motif by source, so the owner can answer "B's palette with D's type".
-6. **Recommendation and collisions:** the pick, why, and every overlap with an existing pack.
+6. **Recommendation and collisions:** the pick, why, every overlap with an existing pack and every match with [the banned brand defaults](banned-defaults.md). A direction with an unexplained match does not go on the board.
 7. **Limits:** which fonts still need licences in `studio/brand-tools/fonts/`, what is illustrative, and that nothing is selected.
 
 Keep the board private, since reference screenshots grant no reuse rights. Put it where the owner can open it from another device: a private page when the client can publish one, otherwise the path and local preview command. Record the link in the study's README. End the turn with the board, the recommendation and what you need decided.
@@ -56,7 +56,7 @@ Replace the pack's sample layout copy with lines from the packet, then rebuild t
 
 ## 6. Product site
 
-Build static HTML with no build step or backend, in the product repository. Match Pult's structure and level of finish. Take the look and the page's central idea from the new brand, in the way Pult's remote and channel framing comes from its own. Use `<slug>.subcult.tv` as the canonical URL unless the product has its own domain.
+Build static HTML with no build step or backend, in the product repository. Match Pult's structure and level of finish, and check the page against the interface ban list in `style-web-ui`. Take the look and the page's central idea from the new brand, in the way Pult's remote and channel framing comes from its own. Use `<slug>.subcult.tv` as the canonical URL unless the product has its own domain.
 
 | Path | Contents |
 | --- | --- |
