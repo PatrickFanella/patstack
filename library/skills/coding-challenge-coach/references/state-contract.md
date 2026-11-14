@@ -14,6 +14,15 @@ Resolve paths relative to the Ars Malefica vault root.
 | Longitudinal evidence | `001 Projects/Threads/Programming/Practice/Challenge Progress Ledger.md` |
 | Challenge queue | `001 Projects/Threads/Programming/Practice/Challenge Library.md` |
 | Attempt schema | `001 Projects/Threads/Programming/Practice/Challenge Attempt Template.md` |
+| Language tracks | `001 Projects/Threads/Programming/Practice/Tracks/<Language> Track.md` |
+| Puzzle set index | `001 Projects/Threads/Programming/Practice/Puzzle Sets/Puzzle Sets.md` |
+| Puzzle set notes | `001 Projects/Threads/Programming/Practice/Puzzle Sets/Puzzle Set NN.md` |
+
+The practice workspace is `/home/onnwee/Work/Lab/practice`: one folder per track
+(`typescript/`, `go/`, `python/`) and `puzzles/set-NN/pNN-slug/<language>/` for
+puzzle sets. The practice-coach app (`/home/onnwee/Work/Lab/practice-coach`)
+reads these notes, writes puzzle set notes, and keeps a coach log at
+`~/.local/state/practice-coach/coach-log.jsonl`.
 
 Do not create an attempt or solution directory until a real challenge workspace
 is chosen. Store a stable absolute path or repository-relative reference to code
@@ -36,6 +45,43 @@ workspace: absolute path | pending
 
 Attempt count is a planning aid, not an advancement gate. The stable pointer has
 one `active-block` property and one wikilink to that block. Preserve history.
+
+The pointer names the shared baseline block. After the baseline, each track
+names its own block in its track note's `active-block`; the pointer's
+`active-block` may then be left empty, but only when every track note names an
+active block.
+
+## Track identity
+
+Every track note requires:
+
+```yaml
+track-id: typescript | go | python
+language: TypeScript | Go | Python
+toolchain: exact runtime and versions
+workspace: absolute path to the track folder
+active-challenge: challenge ID | pending
+phase: baseline | practice
+active-block: vault-relative block path   # optional during the shared baseline
+```
+
+and the sections `## Current state`, `## Dimensions` and `## Next instruction`.
+A track's `Dimensions` table changes only from attempts in that language.
+
+## Puzzle set identity
+
+The index has an `active-set` property (empty before the first set) and a table
+of sets. Every set note requires:
+
+```yaml
+set-id: set-NN
+status: active | complete
+workspace: absolute path to puzzles/set-NN
+```
+
+and the sections `## Puzzles`, `## Review` and `## Next set guidance`. A set is
+`complete` only after its review has been approved and written. Puzzle sets do
+not change track bands or count toward block gates.
 
 ## Evidence model
 
@@ -85,6 +131,9 @@ dedicated workspace unless the user explicitly selects an existing repository.
 - Treating tests as complete proof of correctness.
 - Counting assisted code as independent performance.
 - Raising several difficulty axes at once.
+- Counting evidence from one language toward another track.
+- Letting puzzle results change a track's bands.
+- Generating a puzzle that overlaps an active track challenge.
 - Optimizing for speed, streaks, or challenge volume.
 - Replacing the active pointer with history or overwriting completed blocks.
 - Copying proprietary prompts or test suites into the vault.

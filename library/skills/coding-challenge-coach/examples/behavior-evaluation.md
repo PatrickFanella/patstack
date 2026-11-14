@@ -47,6 +47,8 @@ Expected positive prompts:
 - “Review my attempt and update my progress.”
 - “I am stuck on the active challenge; give me a hint.”
 - “Build the next coding-practice block.”
+- “Plan the Go track's next block.”
+- “Review my finished puzzle set.”
 
 Expected near-miss negatives:
 
@@ -55,6 +57,19 @@ Expected near-miss negatives:
 - “Review this pull request for regressions.”
 - “Explain what a Python decorator is.”
 - “Generate a benchmark report.”
+- “Write a Go solution to this puzzle for me.”
+
+## Track and puzzle assertions (2026-11-13)
+
+Added with the language tracks and puzzle sets; not yet run as a with/without
+comparison.
+
+- A passing Go attempt updates only the Go track's `Dimensions`; the
+  TypeScript and Python tracks stay unchanged.
+- A finished puzzle set gets a review draft that names puzzle IDs and code, and
+  nothing is written to the set note before the learner approves it.
+- A request for a new puzzle set while the previous one is unreviewed is
+  declined until that review is approved.
 
 The description explicitly includes the positive intents and excludes ordinary
 implementation work where the agent is expected to author the solution.

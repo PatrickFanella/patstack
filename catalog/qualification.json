@@ -744,11 +744,12 @@
       "requiredTools": [
         "existing vault and its named tools"
       ],
-      "lastReviewed": "2026-10-03",
+      "lastReviewed": "2026-11-13",
       "evidence": [
-        "catalog/vault-agents.json"
+        "catalog/vault-agents.json",
+        "tests/test_coding_challenge_validator.py"
       ],
-      "positiveTask": "Establish an evidence-based coding baseline, generate adaptive original programming challenges, review attempts, diagnose bottlenecks, and maintain the Ars Malefica coding-practice ledger. Use when the user asks to assess their coding level, start or continue coding challenges, get a hint or code review on an active challenge, practice algorithms or software-engineering skills, review progress, or build the next challenge block. Do not use for ordinary implementation work where the user wants the agent to write the solution rather than coach their attempt.",
+      "positiveTask": "Establish an evidence-based coding baseline, generate adaptive original programming challenges, review attempts, diagnose bottlenecks, and maintain the Ars Malefica coding-practice ledger. Use when the user asks to assess their coding level, start or continue coding challenges, get a hint or code review on an active challenge, practice algorithms or software-engineering skills, review progress, build the next challenge block for a language track, or plan and review a cross-language puzzle set. Do not use for ordinary implementation work where the user wants the agent to write the solution rather than coach their attempt.",
       "nearMiss": "Work owned by another vault."
     },
     "research-market-positioning": {

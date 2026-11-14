@@ -42,6 +42,27 @@ class DeploymentGuardTests(unittest.TestCase):
             self.assertFalse(changes)
             self.assertTrue(errors)
 
+    def test_home_level_relocation_is_followed(self):
+        import os
+        from unittest import mock
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            home, shared = root / 'home', root / 'shared'
+            (shared / 'Work/Vault').mkdir(parents=True)
+            home.mkdir()
+            (home / 'Work').symlink_to(shared / 'Work', target_is_directory=True)
+            source = root / 'source'
+            source.write_text('new')
+            row = {'source': str(source), 'destination': str(home / 'Work/Vault/target'), 'previous_sha256': None}
+            with mock.patch.dict(os.environ, {'HOME': str(home)}):
+                self.assertEqual((len(module.plan([row])[0]), module.plan([row])[1]), (1, []))
+                (shared / 'Work/Vault/inner').mkdir()
+                (shared / 'Work/Vault/linked').symlink_to(shared / 'Work/Vault/inner', target_is_directory=True)
+                nested = dict(row, destination=str(home / 'Work/Vault/linked/target'))
+                changes, errors = module.plan([nested])
+                self.assertFalse(changes)
+                self.assertTrue(errors)
+
     def test_group_writable_target_is_normalized(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

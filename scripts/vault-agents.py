@@ -34,6 +34,16 @@ def uncommitted(rows):
     return [p for p, blob in zip(paths, blobs) if tree.get(p) != (oct(0o100000 | mode(ROOT / p))[2:], blob)]
 
 
+def unsafe_symlink(target):
+    """A symlink at or inside the destination tree could redirect a write.
+
+    A symlinked folder directly in the home directory (such as ~/Work pointing
+    to /home/shared/Work) relocates the whole tree, so it is followed.
+    """
+    home = Path.home()
+    return target.is_symlink() or any(p.is_symlink() and p.parent != home for p in target.parents)
+
+
 def plan(rows):
     changes, errors = [], []
     for row in rows:
@@ -42,7 +52,7 @@ def plan(rows):
         if not source.is_file() or source.is_symlink():
             errors.append(f'Invalid source: {source}')
             continue
-        if target.is_symlink() or any(p.is_symlink() for p in target.parents):
+        if unsafe_symlink(target):
             errors.append(f'Symlink destination: {target}')
             continue
         wanted, actual = digest(source), digest(target)

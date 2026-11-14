@@ -1,6 +1,6 @@
 ---
 name: coding-challenge-coach
-description: "Coding practice coach. Use to assess the user's coding baseline, give the next challenge or a hint, review an attempt, or plan the next block in the Ars Malefica ledger. Not when the agent should write the code."
+description: "Coding practice coach. Use to assess the user's coding baseline, give the next challenge or a hint, review an attempt, plan the next block for a language track, or plan and review a cross-language puzzle set in the Ars Malefica practice notes. Not when the agent should write the code."
 metadata:
   compatibility: Requires Python 3 for the bundled validator and a user-approved local workspace or repository for executable challenges. Network access is optional.
   blacktower-pack: personal-learning
@@ -33,8 +33,13 @@ years of experience, solved counts, elapsed time, or one lucky solution.
    - `Current Challenge Block.md` and its named block
    - `Challenge Progress Ledger.md`, newest review first
    - `Challenge Library.md`
+   - the track note in `Tracks/` for the language in question
+   - `Puzzle Sets/Puzzle Sets.md` and the active set note, for puzzle work
 4. Inspect the active challenge workspace, source, tests, and recent attempt
-   artifacts when available. Preserve unrelated worktree changes.
+   artifacts when available. Preserve unrelated worktree changes. When the
+   practice-coach app is in use, its coach log
+   (`~/.local/state/practice-coach/coach-log.jsonl`) records each coach turn with
+   the help level the model reported; treat it as evidence to check, not proof.
 
 If no attempt evidence exists, keep the state `baseline pending`. Never invent a
 score or promote the learner from conversation alone.
@@ -50,6 +55,39 @@ score or promote the learner from conversation alone.
   and choose `continue`, `narrow`, `vary`, or `advance`.
 - **Stall diagnosis:** identify one limiting mechanism and reduce one variable.
 - **Block review:** assess the evidence gates and create at most one successor.
+- **Puzzle set:** plan, review, or prepare the next cross-language puzzle set.
+
+## Language tracks
+
+Practice runs as one track per language: TypeScript, Go and Python. Each track
+has a note in `Tracks/` and a folder in the practice workspace. Assess each
+track on its own; evidence in one language never raises another track's band.
+
+- Name the track on every ledger entry and update only that track's
+  `Dimensions` table, `Current state` and `Next instruction`.
+- The Learner Profile's baseline table summarizes across tracks. Change a row
+  only when track evidence supports it, and name the track in the evidence.
+- During the shared baseline, Block 00 supplies each track's first challenge.
+  Once a track meets the baseline gates, create that track's own successor
+  block and set `active-block` in its track note. Advance one track per review.
+
+## Puzzle sets
+
+Puzzle sets run alongside the tracks and are usually driven by the
+practice-coach app. A set is a few small original puzzles, each solved in all
+three languages.
+
+- Keep every puzzle clear of the active track challenges, which are being
+  assessed.
+- Change at most one difficulty axis from the previous set, following its
+  approved review's guidance.
+- Prove each puzzle's tests against a reference solution, then discard it. The
+  tests must fail on the starter.
+- Review a set only after every solution passes. Judge correctness beyond the
+  visible tests, idiom in each language and what differed between languages.
+- Write a review into the set note only after the learner approves it.
+- Puzzle results never change track bands. Mention notable puzzle evidence in
+  a track review only as context.
 
 ## Establish the baseline
 
@@ -129,15 +167,16 @@ objective per challenge. A useful review may add no new challenge.
 
 For an attempt review:
 
-1. Add the attempt to `Challenge Progress Ledger.md`, newest first.
-2. Update the ledger's current-state snapshot and `Learner Profile.md` only from evidence.
+1. Add the attempt to `Challenge Progress Ledger.md`, newest first, with its track.
+2. Update the ledger's current-state snapshot, the track note and `Learner Profile.md` only from evidence.
 3. Update the named block when its next instruction or scope changes.
 4. Queue reusable or sourced prompts in `Challenge Library.md`; do not promote them merely because they are interesting.
 
 For a block review, assess every gate as `passed`, `partial`, `failed`, or
 `not evidenced`. Preserve completed blocks in `Practice/Blocks/`. If advancing,
-create exactly one successor, update the stable pointer and Programming MOC, and
-state which single difficulty axis changed.
+create exactly one successor, update the pointer (the track note's
+`active-block` after the shared baseline) and Programming MOC, and state which
+single difficulty axis changed.
 
 Generate original challenges by default. For external prompts, preserve title,
 author or publisher, URL, access conditions, and adaptation notes; link instead
